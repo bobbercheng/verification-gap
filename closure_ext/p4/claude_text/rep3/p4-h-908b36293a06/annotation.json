@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-908b36293a06",
+  "problem": "4",
+  "sha256": "908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e",
+  "path": "checkpoint_inputs_ext/908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "0c164fc0",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-0c164fc0-v1"
+  ],
+  "bytes": 9794,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6946,
+        "output_tokens": 1414,
+        "output_tokens_details": {
+          "thinking_tokens": 1110
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1414,
+            "cache_read_input_tokens": 6946,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 20.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "explicit cuts for θ=90° (one move) and θ=60° (≤2 moves); sketchy 'force 90° then split by θ' with admitted gaps for other θ",
+    "upper_bound_mechanism": "max-angle < θ invariant, valid only for θ > 90°",
+    "wrong_answer_stated": true,
+    "notes": "Answer stated as θ ≤ 90°, wrong. Winning direction fully proved only for 90° and 60°; the θ<60° and 60°<θ<90° arguments contain admitted gaps ('a detailed case analysis shows') and a bogus termination/measure claim. Avoidance argument is correct but only for θ>90°, missing all non-180/n values below 90°. Multiple-of-θ induction only sketched."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

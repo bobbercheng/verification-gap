@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-b80a6935fe6b",
+  "problem": "5",
+  "sha256": "b80a6935fe6bf68b50f195fd97b673037c2fb57241cd738f47c0f16ceff1d078",
+  "path": "checkpoint_inputs_ext/b80a6935fe6bf68b50f195fd97b673037c2fb57241cd738f47c0f16ceff1d078.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 1,
+  "record_ids": [
+    "p5-gpt-5.6-sol-xhigh-main-t001"
+  ],
+  "bytes": 675,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 262,
+        "output_tokens": 2023,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 24.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "RMS-AM-GM check for identity (c=0 only, asserted)",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Unsolved tracking file. Claims expected answer is f(x)=x (wrong, misses x+c for c>0); no proof, only a conjecture. Structural identity f(f(t))=2f(t)-t never derived; no necessity argument. Sufficiency merely asserted for the identity via RMS-AM-GM, not verified for all c>=0; f(x)=cx exclusion asserted, not proved."
+  },
+  "S": 0,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

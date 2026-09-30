@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-G",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "grade-claude__e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 17.6,
+  "input_tokens": 2,
+  "output_tokens": 1128,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 5487,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4529,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004619,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1128,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 5487,
+    "webSearchRequests": 0,
+    "costUSD": 0.08390149999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 807,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "no",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "established",
+  "repair_distance": "none",
+  "explanation": "Section 2 writes out the decisive content: the exchange step is proved by explicit computation in both cases (l<j and j<l), showing any pairing can be modified so that x1,x2 are paired without increasing cost. 'Induction therefore shows' then applies the same lemma to the remaining 2r-2 sorted lengths, with the trivial base r=1; this is a routine, fully determined recursion, not an unproved gap. The odd case is also handled explicitly by appending a length 0, and the text notes that pairing with 0 corresponds to the singleton; D is unchanged by appending 0. The pairing identity used in (4) and (8) therefore stands as written.",
+  "objection_severity": "none"
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e1"
+}

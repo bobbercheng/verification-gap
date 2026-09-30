@@ -1,0 +1,31 @@
+{
+ "task_id": "imo-2026-p1",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Move arithmetic: the two outputs have p-adic valuations (min(a,b), |a-b|), and lcm/gcd = mn/g^2 is an integer since g|m and g|n.",
+  "Lemma 2 case analysis re-derived independently: total Omega changes by -Omega(gcd(m,n)). Case g=1: outputs 1 and mn>1, so K drops by 1 and S is unchanged. Case g>1, m!=n: both outputs >1 (m!=n forces some |a-b|>0 by unique factorization), K unchanged, S drops by Omega(g)>=1. Case m=n (equal values at distinct positions is legal): outputs (m,1), K drops. Hence (K,S) strictly decreases lexicographically in every move.",
+  "Termination: lexicographic order on N^2 is well-founded (K<=2026 can drop only finitely often; while K is fixed, the nonnegative integer S strictly decreases), so every maximal play is finite.",
+  "Final state: a move requires two entries >1, so terminal iff K<=1; and every move outputs a nonunit (g if g>1, else mn), so by induction K>=1 always; hence the terminal board is exactly one integer M>1 plus 2025 ones.",
+  "Invariant: gcd(a,b) = gcd(min(a,b), |a-b|) for all a,b>=0 (including zeros, checked separately), so the gcd of the 2026-element multiset of p-exponents is preserved at every step.",
+  "Terminal exponent multiset {v_p(M), 0, ..., 0} has gcd v_p(M) (using gcd(x,0)=x), so v_p(M) = gcd_i v_p(a_i) for every prime p; the product is finite since g_p>0 only for primes dividing a_1...a_2026; consistency M>1 holds because any prime dividing a_1 forces g_p>=1. Hence M = prod_p p^{gcd_i v_p(a_i)} is forced, independent of move choices; this needs no confluence argument, only the fully characterized terminal state.",
+  "Independent simulations confirm both parts and the formula: {2,3} -> {1,6}, M=6; {4,8} -> {4,2} -> {2,2} -> {2,1}, M=2 = 2^gcd(2,3) (matching Remark 1: not gcd(4,8)=4); {8,12} -> ... -> 6; {12,18} -> {6,6} -> 6; {6,10,15} -> 30 along two different move orders; {4,4} -> 4; moves on equal values handled.",
+  "Remark 3: nothing in the argument uses 2026 specifically; it works for any N>=2 (and is vacuously consistent for N=1)."
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is correct, complete, and self-contained. Part 1 uses strict lexicographic descent of (number of nonunits, sum of Omega) on a well-founded order — each case re-derived, including the easy-to-miss legal move on two equal values, (m,m) -> (m,1) — plus the observation that every move outputs a nonunit, to pin the terminal state at exactly one integer >1. Part 2 uses the per-prime invariant gcd of exponent multisets (one Euclid step (a,b) -> (min,|a-b|)) evaluated at the fully characterized terminal state, forcing v_p(M) = gcd_i v_p(a_i) for all p; uniqueness of M follows without any confluence argument. Verified against multiple hand simulations. Only blemish: the motivational subsection 'Behaviour of p-adic valuations during the process' is superfluous, its 'consequently ... at most one positive valuation' step tacitly relies on Part 1's termination rather than the per-prime measure alone, and 'cannot get stuck for p' is vague; none of this is load-bearing, and the statements are true given Part 1, so no revision is required. Lemma 1 (product non-increase) is stated but unused; harmless.",
+ "transfer_assessment": [
+  "Reusable: encoding a gcd/lcm rewriting rule as (a,b) -> (min(a,b), |a-b|) on exponent vectors, i.e., one Euclidean-algorithm step per prime; the gcd of the exponent multiset is then an invariant.",
+  "Reusable: uniqueness-by-terminal-state-characterization: if termination yields a completely described normal form (here one nonunit plus ones), a single invariant evaluated there pins the answer, avoiding Newman's lemma/local confluence.",
+  "Reusable: termination via lexicographic pair (count of nonunits, total prime-multiplicity Omega) on a well-founded order, needed because the product alone (multiplied by 1/gcd <= 1) is not strictly decreasing when gcd = 1.",
+  "Misleading pitfall (which the draft flirts with in its superfluous paragraph): a per-prime potential decreasing only on moves touching two p-divisible entries does NOT by itself prove per-prime consolidation; global termination must be invoked. The correct proof rightly does not depend on that paragraph.",
+  "Misleading pitfall correctly flagged in Remark 1: the invariant is the gcd of the exponents, not the exponent of the gcd of the numbers (e.g., {4,8} ends at 2, not 4)."
+ ]
+}

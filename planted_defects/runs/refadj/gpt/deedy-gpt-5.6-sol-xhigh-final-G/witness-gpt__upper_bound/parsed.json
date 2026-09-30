@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-G",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "witness-gpt__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.7,
+  "input_tokens": 18574,
+  "output_tokens": 563,
+  "reasoning_output_tokens": 426,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The upper bound relies on (5), but the only justification explicitly leaves the cut count unproved. A single counting sentence would suffice: the A-row needs at most |B|-1 cuts from internal B-boundaries plus possibly one at q, while the B-row needs at most |A|-1 cuts from internal A-boundaries, totaling at most |A|+|B|-1. No other passage supplies this argument."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "upper_bound"
+}

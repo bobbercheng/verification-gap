@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-eb62923f791f",
+  "problem": "3",
+  "sha256": "eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6",
+  "path": "checkpoint_inputs/eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round1",
+  "turn": 8,
+  "record_ids": [
+    "kimi-k3-round1-t008"
+  ],
+  "bytes": 2684,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2634,
+        "output_tokens": 876,
+        "output_tokens_details": {
+          "thinking_tokens": 599
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 876,
+            "cache_read_input_tokens": 2634,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n division named + equal-pair cancellation fact; no all-n argument",
+    "upper_bound_mechanism": "XY halve/cancel operation catalogue sketched; only grid-verified for n<=3",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula stated explicitly as a conjecture, numerically confirmed for n=1,2,3 only. Reduction to alternating sum asserted as 'proved/brute-forced' but not argued. Both bounds explicitly listed as 'remaining'; Liu's geometric division and Xiang's halve/cancel moves are named without an all-n proof or subset-sum pigeonhole."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

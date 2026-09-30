@@ -1,0 +1,32 @@
+{
+ "task_id": "imo-2026-p6",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Sequence is well-defined, pairwise non-coprime, and unbounded (the least multiple M of A exceeding a_n is admissible since gcd(M,a_i) >= gcd(A,a_i) > 1, giving a_{n+1} <= a_n + A).",
+  "Equivalence (1): for m > A not a term, taking n maximal with a_n < m < a_{n+1} forces m to be coprime to some a_i < m, so P(m) good iff m is a term (for m >= A).",
+  "Lemma case k=0: m = R < Rq <= x since R | x and q | x.",
+  "Lemma case k>0: minimality of k gives Rp^{k-1} < A, so p^k <= pA/R <= A < q (using p in Q, R >= p), hence m < Rq <= x.",
+  "The b produced in the lemma satisfies b = a_i with i < index(x) (sequence strictly increasing), so the induction hypothesis applies and sigma(b) meets P(x); yet sigma(b) disjoint from sigma(x) (coprimality with m) and from P(x)\\sigma(x) (all primes > A), contradiction.",
+  "Special case m = A handled: then sigma(x) = P(A), good by (1).",
+  "Goodness is upward closed, so (3) holds: m >= A is a term iff sigma(m) is good.",
+  "sigma(m+L) = sigma(m) for all m >= A with L = prod_{p<=A} p, giving global L-periodicity (4) on [A, inf).",
+  "Counting: every interval of L consecutive integers in [A, inf) contains exactly T terms (one per residue class, membership well-defined by iterating (4)); applied to (a_n, a_n+L] whose right endpoint is a term, this yields a_{n+T} = a_n + L for all n >= 1.",
+  "Falsification attempts 1-3 are correctly reasoned; in particular example 3 correctly shows why periodicity must be proved globally from A rather than only eventually."
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is complete and correct. The greedy scan is characterized by good prime supports (1); the central lemma shows the trace on primes <= A of every term is itself good, via a careful induction with the small witness m = Rp^k >= A (both the k=0 and k>0 bounds on m < x check out, and the boundary case m = A is handled). Upward closure then reduces term-detection to the finite set Q, giving global period L = prod_{p<=A} p from A onward, and a residue count finishes with a_{n+T} = a_n + L for all n. All quantifiers, indices, and induction ordering were independently re-derived; no gaps found.",
+ "transfer_assessment": [
+  "Reusable: characterizing a greedy 'smallest admissible successor' sequence by a static property of prime supports (m is a term iff P(m) is good), which converts dynamics into periodicity.",
+  "Reusable: erasing large primes by replacing a term x with a smaller witness m = Rp^k sharing exactly the small-prime support, with an explicit repair of the sub-threshold boundary (the minimality trick p^k < pA/R <= A).",
+  "Reusable: proving periodicity globally from the first term rather than eventually, since tail periodicity alone does not force the identity at n = 1.",
+  "Potentially misleading: for a general infinite pairwise-intersecting family of constraints, no finite reduction need exist (e.g. {2,q_i}); the reduction here relies on the arithmetic scan order, not compactness."
+ ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-6d17430cc840",
+  "problem": "1",
+  "sha256": "6d17430cc8409eaec292509b3906f361d79b72f2a842ebeccf2e3b9b7c68de69",
+  "path": "checkpoint_inputs_ext/6d17430cc8409eaec292509b3906f361d79b72f2a842ebeccf2e3b9b7c68de69.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "57ce82c6",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-57ce82c6-v1"
+  ],
+  "bytes": 5403,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1733,
+        "output_tokens": 13234,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 208.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "product monovariant (via false lemma gcd(m,n)>1)",
+    "upper_bound_mechanism": "invariant gcd of p-adic valuations",
+    "wrong_answer_stated": true,
+    "notes": "Final formula for M is correct. The p-adic valuation reduction and the gcd-invariance lemma (Euclid, all cases incl. zeros/equal) are correctly proved. But part (a) rests on the false claim gcd(m,n)>1 whenever m,n>1; the product does not decrease for coprime pairs (2,3 -> 1,6), so termination and 'exactly one survivor' are unproved."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

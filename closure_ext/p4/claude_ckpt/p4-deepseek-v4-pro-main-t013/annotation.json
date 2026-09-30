@@ -1,0 +1,66 @@
+{
+  "id": "p4-deepseek-v4-pro-main-t013",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 13,
+  "path": "checkpoint_inputs_ext/459e07a52e70e58b20fb2486669d8e2dc4d35e357343efd58f84962c6e034e30.md",
+  "bytes": 2172,
+  "sha256": "459e07a52e70e58b20fb2486669d8e2dc4d35e357343efd58f84962c6e034e30",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3010,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 995,
+        "output_tokens_details": {
+          "thinking_tokens": 757
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3010,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 995,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 3010,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3010
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 14.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 0,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "one-move double win only for theta = 90 (split apex into 90-b and 90-c)",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Only exploratory notes. Conjecture offered is confused/wrong (\"180/theta not an integer\" or \"only 90\"), plus a false search claim that 30 deg loses. Correct answer 180/n never stated. No k*theta lemma proved (only posed as a question), no avoidance strategy. Credit only for the complete one-move argument in the special case theta = 90."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

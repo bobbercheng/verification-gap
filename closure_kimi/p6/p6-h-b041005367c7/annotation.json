@@ -1,0 +1,38 @@
+{
+  "id": "p6-h-b041005367c7",
+  "problem": "6",
+  "sha256": "b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58",
+  "path": "checkpoint_inputs/b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round1",
+  "turn": 21,
+  "record_ids": [
+    "p6-kimi-k3-round1-t021"
+  ],
+  "bytes": 2820,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 303.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "gap bound <= rad(a_1) + H_n stabilization via permanent transversals (crux open)",
+    "upper_bound_mechanism": "S_infty union of residue classes mod L implies a_{n+T}=a_n+L with T = window count",
+    "wrong_answer_stated": false,
+    "notes": "Sound transversal framework. (C) stated exactly (sequence = S_infty cap [a_1,inf)) but Theorem A only asserted, not argued. Gap bound and Lemmas A-D claimed proved; the finiteness/large-prime-erasure step is explicitly the open crux, backed only by numerics. Periodicity assembly is correct and global from n=1. No false lemma used."
+  },
+  "S": 1,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-513b242ad9b4",
+  "problem": "3",
+  "sha256": "513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7",
+  "path": "checkpoint_inputs/513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c2"
+  ],
+  "bytes": 9799,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3551,
+        "output_tokens": 3058,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 34.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:4:…:2^n division (validity vs all Xiang open; induction/merge sketch only)",
+    "upper_bound_mechanism": "midpoint halving (only vs geometric config; universal UB open)",
+    "wrong_answer_stated": false,
+    "notes": "Draft-game lemma proved rigorously for all n via greedy exchange, giving exact odd-rank-sum reduction. Correct closed form only conjectured; c(1)=2/3 proved both directions. Geometric Liu division and halving Xiang reply computed exactly for all n but only as a meeting pair; LB vs arbitrary Xiang and universal UB explicitly open for n≥2, supported solely by grid/numerical search."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,17 @@
+{
+ "gate": "closure",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "text_sha256": "4dc7a53d31a858f813302a988c6c3a4755094c2e49732d5e9fd6cb4a705e7ad2",
+ "text_path": "texts/gpt56-ours-accepted/H.md",
+ "system_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+ "system": "You are an impartial grader of partial mathematical write-ups for IMO 2026 Problem 3:\n\n\"Let n be a positive integer. Liu Bang and Xiang Yu have a stick of length 1. Liu marks at most n points, then Xiang marks at most n points (all distinct); the stick is cut at all marks; they alternately claim pieces, Liu first, each maximizing own total. For each n determine the largest c such that Liu can guarantee at least c.\"\n\nThe correct answer is c_n = 2^n/(2^(n+1)-1). A complete proof needs: (R) the reduction of the claiming phase to an alternating sum of sorted piece lengths; (L) an all-n LOWER bound: a Liu division (1:2:4:...:2^n) and an argument valid against EVERY Xiang reply (e.g. a pairing/tree argument on rank pairs, an even-position majorization, or an induction that handles arbitrary interleaving); (U) an all-n UPPER bound: for EVERY Liu division a Xiang reply with at most n cuts (e.g. subset-sum pigeonhole giving a gap <= 1/(2^(n+1)-1) plus a cancellation/overlay construction).\n\nGrade ONLY what is written in the text. Do not credit claims that are asserted, conjectured, numerically tested, or left as \"to do\". A mechanism scored 2 must be written out as an argument for all n; a scored 1 mechanism is named/sketched or proved only for specific small n; 0 means absent or a wrong approach.\n\nReturn ONLY a JSON object:\n{\"answer\": 0|1|2, \"reduction\": 0|1|2, \"lower_bound\": 0|1|2, \"upper_bound\": 0|1|2,\n \"lower_bound_mechanism\": \"<short name or 'none'>\", \"upper_bound_mechanism\": \"<short name or 'none'>\",\n \"wrong_answer_stated\": true|false, \"notes\": \"<=60 words\"}\nScoring key for answer: 2 = correct closed form stated as the answer; 1 = correct values for small n only or correct form stated as conjecture; 0 = absent or wrong.\n",
+ "prompt_source": "closure_annotate.RUBRIC",
+ "user_chars": 11139,
+ "started_utc": "2026-09-06 19:16:03 UTC"
+}

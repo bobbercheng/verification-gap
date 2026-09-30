@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-5a75aa5c50ee",
+  "problem": "3",
+  "sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+  "path": "checkpoint_inputs/5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8.md",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "kimi-r1-c3"
+  ],
+  "bytes": 14257,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 8064,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 752,
+        "output_tokens_details": {
+          "thinking_tokens": 453
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 8064,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 752,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 8064,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 8064
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 10.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position majorization induction (Lemma E) on geometric division 1:2:...:2^n",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <=1/(2^{n+1}-1) plus greedy supply-demand cancellation into equal pairs (Lemma 3)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: Lemma 1 proves claiming phase = odd sum via explicit pairing strategies for both players; Lemma E proved by induction for all r,n with correct two-case step; Theorem B gives pigeonhole subset-sum pair, halving of unused parts, greedy matching, and a valid cut count |Z|+|P|+|Q|-1 = n. Tightness noted."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,339 @@
+{
+ "3": {
+  "distinct_texts": 48,
+  "repeated_texts": 8,
+  "repeated_consistent_S": 8,
+  "kappa_S_glm_rerun_vs_kimi": {
+   "n": 48,
+   "observed": 0.958,
+   "kappa": 0.875
+  },
+  "kappa_S_glm_vs_claude": {
+   "n": 48,
+   "observed": 0.979,
+   "kappa": 0.94
+  },
+  "kappa_S_kimi_vs_claude": {
+   "n": 48,
+   "observed": 0.979,
+   "kappa": 0.941
+  },
+  "kappa_S_glm_vs_gpt": {
+   "n": 48,
+   "observed": 0.938,
+   "kappa": 0.815
+  },
+  "field_agreement_rerun_vs_kimi": {
+   "both_present": 48,
+   "lower_equal": 43,
+   "upper_equal": 40
+  },
+  "glm_rerun_fallbacks": 1,
+  "repeat": {
+   "texts_with_3plus_ratings": 0,
+   "all_equal_S": 0,
+   "pairs": 0,
+   "pairs_differ": 0,
+   "pairs_lower_differ": 0,
+   "pairs_upper_differ": 0,
+   "pairwise_disagreement_rate": null
+  },
+  "status": {
+   "agree": 46,
+   "conservative": 2
+  }
+ },
+ "6": {
+  "distinct_texts": 36,
+  "repeated_texts": 6,
+  "repeated_consistent_S": 6,
+  "kappa_S_glm_rerun_vs_kimi": {
+   "n": 36,
+   "observed": 0.972,
+   "kappa": 0.949
+  },
+  "kappa_S_glm_vs_claude": {
+   "n": 36,
+   "observed": 0.944,
+   "kappa": 0.897
+  },
+  "kappa_S_kimi_vs_claude": {
+   "n": 36,
+   "observed": 0.917,
+   "kappa": 0.849
+  },
+  "kappa_S_glm_vs_gpt": {
+   "n": 36,
+   "observed": 0.917,
+   "kappa": 0.847
+  },
+  "field_agreement_rerun_vs_kimi": {
+   "both_present": 36,
+   "lower_equal": 31,
+   "upper_equal": 32
+  },
+  "glm_rerun_fallbacks": 3,
+  "repeat": {
+   "texts_with_3plus_ratings": 0,
+   "all_equal_S": 0,
+   "pairs": 0,
+   "pairs_differ": 0,
+   "pairs_lower_differ": 0,
+   "pairs_upper_differ": 0,
+   "pairwise_disagreement_rate": null
+  },
+  "status": {
+   "agree": 32,
+   "validity_override": 3,
+   "conservative": 1
+  }
+ },
+ "2": {
+  "distinct_texts": 72,
+  "repeated_texts": 5,
+  "repeated_consistent_S": 3,
+  "kappa_S_glm_rerun_vs_kimi": {
+   "n": 72,
+   "observed": 0.875,
+   "kappa": 0.644
+  },
+  "kappa_S_glm_vs_claude": {
+   "n": 72,
+   "observed": 0.833,
+   "kappa": 0.601
+  },
+  "kappa_S_kimi_vs_claude": {
+   "n": 72,
+   "observed": 0.847,
+   "kappa": 0.635
+  },
+  "kappa_S_glm_vs_gpt": null,
+  "field_agreement_rerun_vs_kimi": {
+   "both_present": 72,
+   "lower_equal": 58,
+   "upper_equal": 62
+  },
+  "glm_rerun_fallbacks": 5,
+  "repeat": {
+   "texts_with_3plus_ratings": 0,
+   "all_equal_S": 0,
+   "pairs": 0,
+   "pairs_differ": 0,
+   "pairs_lower_differ": 0,
+   "pairs_upper_differ": 0,
+   "pairwise_disagreement_rate": null
+  },
+  "status": {
+   "agree": 63,
+   "conservative": 9
+  }
+ },
+ "overall": {
+  "distinct_texts": 156,
+  "kappa_S_glm_rerun_vs_kimi": {
+   "n": 156,
+   "observed": 0.923,
+   "kappa": 0.811
+  },
+  "kappa_S_glm_vs_claude": {
+   "n": 156,
+   "observed": 0.904,
+   "kappa": 0.779
+  },
+  "kappa_S_kimi_vs_claude": {
+   "n": 156,
+   "observed": 0.904,
+   "kappa": 0.781
+  },
+  "kappa_S_glm_vs_gpt": {
+   "n": 84,
+   "observed": 0.929,
+   "kappa": 0.837
+  },
+  "status": {
+   "agree": 141,
+   "conservative": 12,
+   "validity_override": 3
+  },
+  "repeat": {
+   "texts_with_3plus_ratings": 0,
+   "all_equal_S": 0,
+   "pairs": 0,
+   "pairs_differ": 0,
+   "pairs_lower_differ": 0,
+   "pairs_upper_differ": 0,
+   "pairwise_disagreement_rate": null
+  },
+  "glm_rerun_fallbacks": 9,
+  "unknown": [],
+  "validity_overrides": [
+   {
+    "problem": "6",
+    "record_ids": [
+     "p6-gpt-5.6-sol-main-t009"
+    ],
+    "S_written": 2,
+    "S_valid": 1,
+    "reason": "Same false finite-transversal lemma as the final file (earlier checkpoint of the same lineage; different purported proof by induction). Applying the criterion only to the final file would manufacture a 2->1 regression."
+   },
+   {
+    "problem": "6",
+    "record_ids": [
+     "p6-kimi-k3-round2-t007"
+    ],
+    "S_written": 2,
+    "S_valid": 1,
+    "reason": "Finiteness proved via a self-dual-clutter theorem established for finite minimal transversals but applied to a Zorn-extracted minimal transversal that is infinite in the needed case; the step is invalid as written."
+   },
+   {
+    "problem": "6",
+    "record_ids": [
+     "p6-deedy-gpt-5.6-sol-final"
+    ],
+    "S_written": 2,
+    "S_valid": 1,
+    "reason": "Finiteness rests on the lemma 'every pairwise-intersecting family of finite sets has finitely many minimal finite transversals' (here proved by a tree/Konig argument). The lemma is false."
+   }
+  ],
+  "changed_vs_raw": [
+   {
+    "problem": "3",
+    "record_ids": [
+     "deedy-gpt-5.6-sol-final"
+    ],
+    "raw_S": [
+     2
+    ],
+    "S_written": 0,
+    "S_valid": 0,
+    "status": "conservative"
+   },
+   {
+    "problem": "6",
+    "record_ids": [
+     "p6-gpt-5.6-sol-main-t009"
+    ],
+    "raw_S": [
+     2
+    ],
+    "S_written": 2,
+    "S_valid": 1,
+    "status": "validity_override"
+   },
+   {
+    "problem": "6",
+    "record_ids": [
+     "p6-kimi-k3-round2-t007"
+    ],
+    "raw_S": [
+     2
+    ],
+    "S_written": 2,
+    "S_valid": 1,
+    "status": "validity_override"
+   },
+   {
+    "problem": "6",
+    "record_ids": [
+     "p6-deedy-gpt-5.6-sol-final"
+    ],
+    "raw_S": [
+     2
+    ],
+    "S_written": 2,
+    "S_valid": 1,
+    "status": "validity_override"
+   },
+   {
+    "problem": "2",
+    "record_ids": [
+     "p2-gpt-5.6-sol-pro-main-t022"
+    ],
+    "raw_S": [
+     1
+    ],
+    "S_written": 0,
+    "S_valid": 0,
+    "status": "agree"
+   },
+   {
+    "problem": "2",
+    "record_ids": [
+     "p2-gpt-5.6-sol-max-main-t071"
+    ],
+    "raw_S": [
+     1
+    ],
+    "S_written": 0,
+    "S_valid": 0,
+    "status": "conservative"
+   },
+   {
+    "problem": "2",
+    "record_ids": [
+     "p2-deedy-gpt-5.6-sol-max-final",
+     "p2-gpt-5.6-sol-max-main-t077"
+    ],
+    "raw_S": [
+     2,
+     0
+    ],
+    "S_written": 0,
+    "S_valid": 0,
+    "status": "conservative"
+   },
+   {
+    "problem": "2",
+    "record_ids": [
+     "p2-deedy-gpt-5.6-sol-final",
+     "p2-gpt-5.6-sol-main-t019"
+    ],
+    "raw_S": [
+     0,
+     1
+    ],
+    "S_written": 0,
+    "S_valid": 0,
+    "status": "agree"
+   },
+   {
+    "problem": "2",
+    "record_ids": [
+     "p2-gpt-5.6-sol-pro-main-t038"
+    ],
+    "raw_S": [
+     2
+    ],
+    "S_written": 1,
+    "S_valid": 1,
+    "status": "conservative"
+   },
+   {
+    "problem": "2",
+    "record_ids": [
+     "p2-gpt-5.6-sol-xhigh-round2-t005"
+    ],
+    "raw_S": [
+     0
+    ],
+    "S_written": 1,
+    "S_valid": 1,
+    "status": "agree"
+   },
+   {
+    "problem": "2",
+    "record_ids": [
+     "p2-deedy-kimi-k3-final",
+     "p2-kimi-k3-main-t023"
+    ],
+    "raw_S": [
+     2,
+     2
+    ],
+    "S_written": 1,
+    "S_valid": 1,
+    "status": "conservative"
+   }
+  ]
+ }
+}

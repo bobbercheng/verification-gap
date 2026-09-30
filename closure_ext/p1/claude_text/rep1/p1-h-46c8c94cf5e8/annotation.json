@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-46c8c94cf5e8",
+  "problem": "1",
+  "sha256": "46c8c94cf5e8321179e62981a21048334126d80a40fbe4b84018920003cca8cd",
+  "path": "checkpoint_inputs_ext/46c8c94cf5e8321179e62981a21048334126d80a40fbe4b84018920003cca8cd.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 10,
+  "record_ids": [
+    "p1-grok-4.5-main-t010"
+  ],
+  "bytes": 8877,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5881,
+        "output_tokens": 1257,
+        "output_tokens_details": {
+          "thinking_tokens": 932
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1257,
+            "cache_read_input_tokens": 5881,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic potential (k, P): k = #entries>1 drops or product divides by g>=2; k never reaches 0 since each move writes at least one entry >1",
+    "upper_bound_mechanism": "per-prime invariance of gcd of valuations via gcd(min, |a-b|) = gcd(a,b), with gcd(0,a)=a convention; terminal board gives g_p = v_p(M)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: valuation description of the move, at-least-one-output>1, lexicographic termination with k=0 excluded, multiset-gcd invariance (equal and zero valuations covered by stated convention), and explicit M = prod p^{gcd_i v_p(a_i)}. One garbled self-correcting parenthetical in the termination case analysis, but the argument stands."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

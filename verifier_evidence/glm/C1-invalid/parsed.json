@@ -1,0 +1,18 @@
+{
+ "claim_id": "C1",
+ "condition": "invalid",
+ "verifier": "glm",
+ "model": "glm-5.3",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "A non-increasing sequence starting above 1 can drop below 1. For example, q_1 = 2, q_2 = 1/2, q_k = 1/2 for k >= 2 satisfies positivity, q_1 > 1, and q_{k+1} <= q_k for all k, yet q_2 = 0.5 < 1. The conclusion fails, so the claim is false.",
+  "witness_valid": false,
+  "witness_reason": "The witness sets q_2 = 3 > 2 = q_1, violating the hypothesis q_{k+1} <= q_k at k = 1 (the sequence is not non-increasing). Since it fails a hypothesis of the claim, it is not a valid counterexample."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 11.8
+}

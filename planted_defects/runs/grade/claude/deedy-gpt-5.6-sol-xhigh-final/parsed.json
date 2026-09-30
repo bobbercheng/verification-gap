@@ -1,0 +1,56 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 118.1,
+  "input_tokens": 2,
+  "output_tokens": 10236,
+  "cache_read_input_tokens": 761,
+  "cache_creation_input_tokens": 5634,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4653,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004758,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 10236,
+    "cacheReadInputTokens": 761,
+    "cacheCreationInputTokens": 5634,
+    "webSearchRequests": 0,
+    "costUSD": 0.31263050000000003,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 10067,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [],
+  "notes": "Answer 2^n/(2^{n+1}-1). Game-value reduction to alternating discrepancy, min-cost pairing lemma, tree-component/powers-of-two lower bound, and subset-sum pigeonhole plus common-refinement upper bound all verified; cut counts (|A|+|B|-1 and total n) check out. Minor degenerate coincidences only reduce cut counts."
+ },
+ "anchors": []
+}

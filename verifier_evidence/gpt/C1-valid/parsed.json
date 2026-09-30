@@ -1,0 +1,18 @@
+{
+ "claim_id": "C1",
+ "condition": "valid",
+ "verifier": "gpt",
+ "model": "gpt-5.6-sol",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "Nonincreasing means later terms may be smaller than q_1. Positivity only requires q_k>0, so it does not prevent a term from equaling or falling below 1.",
+  "witness_valid": true,
+  "witness_reason": "Every term is positive, q_1=2>1, and 2>=1>=1>=... confirms the sequence is nonincreasing. Yet q_2=1 is not greater than 1, violating the conclusion."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": true
+ },
+ "elapsed_seconds": 7.3
+}

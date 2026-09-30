@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-F",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "F",
+ "problem": "5",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 21.4,
+  "input_tokens": 17788,
+  "output_tokens": 751,
+  "reasoning_output_tokens": 594,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "affected_statement": "L5.5",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The counterexample and corrected expansion are valid: the final factor must be (c-b), not (b-c). With that one sign-order correction, nonnegativity gives the stated inequality (5); together with the independently correct inequality (6), it yields (7), and the partition argument then proves that d is constant for all positive inputs, including fixed points. No separate passage establishes L5.5 without relying on this estimate."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

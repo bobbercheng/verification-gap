@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3442,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003537,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 6226,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 5416,
+    "webSearchRequests": 0,
+    "costUSD": 0.20982,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 5834,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5416,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 6226,
+   "output_tokens_details": {
+    "thinking_tokens": 5834
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5416,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 6226,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 5416,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5416
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 76082,
+  "is_error": false,
+  "elapsed_seconds": 76.7,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"quote_faithful\": \"yes\", \"verdict\": \"confirmed\", \"evidence_kind\": \"invalid_inference\", \"fatal\": \"yes\", \"explanation\": \"The quote is verbatim and the objection reads it as the text intends: the inductive claim is only proved for transversals meeting C, yet the induction hypothesis is invoked for ALL finite transversals of F_c. The gap is real and produces a false conclusion. Take F = {{1,2},{1,3},{2,3}} (pairwise intersecting), C = {1,2} \\\\in F. For c=1: F_1 = {{2,3}}, with transversal C\\\\{1} = {2}, which is NOT a member of F_1. Running the induction on F_1: for c'=2, F_{1,2} = \\\\emptyset, giving D = \\\\emptyset, so the list for F_1 is {{2}} — but {3} traverses F_1 without containing {2}. Symmetrically for c=2, so the top-level list is {{1,2}}, missing the transversal {1,3}. The lemma's proof thus yields an incomplete list, breaking the finiteness step (F) on which the whole argument rests.\", \"confidence\": 0.86}"
+   }
+  ]
+ }
+}

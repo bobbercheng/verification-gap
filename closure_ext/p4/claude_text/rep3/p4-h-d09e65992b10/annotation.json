@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-d09e65992b10",
+  "problem": "4",
+  "sha256": "d09e65992b10a57d8fef7512e68d23a17b81a3e0b48b75a56f6e6267c79e547b",
+  "path": "checkpoint_inputs_ext/d09e65992b10a57d8fef7512e68d23a17b81a3e0b48b75a56f6e6267c79e547b.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "7e3e9be3",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-7e3e9be3-v1"
+  ],
+  "bytes": 8871,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6241,
+        "output_tokens": 1223,
+        "output_tokens_details": {
+          "thinking_tokens": 922
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1223,
+            "cache_read_input_tokens": 6241,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 16.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 0,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "direct cut x=90-A (or 60-A) making both children carry 90 or 120/60; only theta=90,60",
+    "upper_bound_mechanism": "invariant 'max angle < theta' (rigorous only for theta>90); ad hoc loop/cycle claims otherwise",
+    "wrong_answer_stated": true,
+    "notes": "Answer restricted to {60,90}, missing 45,36,...; claims Shan-Yu avoids theta for all theta<60, which is false. No k*theta induction lemma. Wins for 90 and 60 are correctly proved for both children. Only the theta>90 avoidance invariant is rigorous; the 60<theta<90 and theta<60 arguments are hand-waved ('one can verify', continuity argument)."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

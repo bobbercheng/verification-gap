@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-bc0c538d972f",
+  "problem": "4",
+  "sha256": "bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e",
+  "path": "checkpoint_inputs_ext/bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "0d682cd0",
+  "turn": 1,
+  "record_ids": [
+    "p4-glm52-0d682cd0-v1"
+  ],
+  "bytes": 7667,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6250,
+        "output_tokens": 1590,
+        "output_tokens_details": {
+          "thinking_tokens": 1291
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1590,
+            "cache_read_input_tokens": 6250,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 20.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "kθ-angle lemma by induction + first cut giving pieces with angles mθ and (n−m)θ (n=2 handled separately)",
+    "upper_bound_mechanism": "safe invariant: all angles non-multiples of θ, equilateral seed, 4-case sum/difference argument using θ∤180",
+    "wrong_answer_stated": false,
+    "notes": "Answer correct. Cut algebra derived; k·θ lemma proved by induction with both pieces winning. Winning strategy covers all triangles, both n≥3 (interval-length argument gives valid cut point) and n=2, with both pieces shown winning. Avoidance invariant complete, non-emptiness justified, all four cases handled. Numerics explicitly labeled non-proof."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

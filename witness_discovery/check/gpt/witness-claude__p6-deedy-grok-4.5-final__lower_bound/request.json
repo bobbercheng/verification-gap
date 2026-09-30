@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p6-deedy-grok-4.5-final",
+ "tag": "lower_bound",
+ "text_sha256": "158954bdd49bff9ebe0d117062217554da62563e0b879d04eb8d09d07eb2c785",
+ "system_sha256": "31de4cf340b3317b69b72a289f2bf83e8cd8e25b4b29993a83818b46831ff9f5",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "not_written",
+  "quote": "Conjecture: there is a finite set of primes S (the \"core\" primes that appear early and cover the sequence) such that L = prod(S) (or lcm of early terms), and eventually the sequence consists exactly of all integers > some point that are divisible by at least one prime from each of certain covering sets",
+  "witness": "MISSING: a proof, valid for all terms, that membership depends only on primes in a fixed finite set (e.g. primes <= a_1 or <= a_1^2) — i.e. that any term divisible by a large prime is dominated by a smaller integer with the same small-prime support which is itself a term (large-prime erasure). The quoted passage explicitly labels this a 'Conjecture' supported by computations on particular starting values, and gives no argument.",
+  "load_bearing": "Finiteness of the relevant prime set is exactly what makes L exist; the text's L = prod(S) is meaningless until S is proved finite and sufficient."
+ },
+ "started_utc": "2026-09-06 04:47:06 UTC"
+}

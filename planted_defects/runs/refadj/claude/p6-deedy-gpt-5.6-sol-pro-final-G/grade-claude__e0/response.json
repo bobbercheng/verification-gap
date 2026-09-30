@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3872,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003972,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 463,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 4620,
+    "webSearchRequests": 0,
+    "costUSD": 0.058653,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 110,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 4620,
+   "cache_read_input_tokens": 1736,
+   "output_tokens": 463,
+   "output_tokens_details": {
+    "thinking_tokens": 110
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 4620,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 463,
+     "cache_read_input_tokens": 1736,
+     "cache_creation_input_tokens": 4620,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 4620
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 6594,
+  "is_error": false,
+  "elapsed_seconds": 7.3,
+  "content": [
+   {
+    "type": "text",
+    "text": "```json\n{\n  \"affected_statement\": \"L6.2\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"lemma\",\n  \"explanation\": \"The quoted line is verbatim: Lemma 2's entire proof is \\\"This follows by a descent on the weight w (standard; details omitted).\\\" Lemma 2 is precisely the large-prime-erasure/finiteness content of L6.2 — it is the only place where the greedy dynamics and the bound a_1 constrain which primes can appear, and everything downstream (terminal members have |D| <= a_1, P finite, C finite, L defined) rests on it. Lemma 1 (sunflower) is purely combinatorial and does not supply it; self-duality (1) and (2) do not either, since a pairwise intersecting antichain can be infinite. No other passage carries out the descent, so L6.2 is unestablished; the repair requires writing the omitted lemma.\"\n}\n```"
+   }
+  ]
+ }
+}

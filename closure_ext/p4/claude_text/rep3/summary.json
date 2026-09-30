@@ -1,0 +1,1763 @@
+{
+  "annotator": "claude-opus-5",
+  "items": [
+    {
+      "id": "p4-h-f8938f118ca0",
+      "problem": "4",
+      "sha256": "f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3",
+      "path": "checkpoint_inputs_ext/f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 5,
+      "record_ids": [
+        "p4-claude-fable-5-main-t005",
+        "p4-deedy-claude-fable-5-final"
+      ],
+      "bytes": 11887,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 8011,
+            "output_tokens": 1483,
+            "output_tokens_details": {
+              "thinking_tokens": 1210
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1483,
+                "cache_read_input_tokens": 8011,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "double-threat cut (both children get kθ) + chain lemma induction",
+        "upper_bound_mechanism": "safe-triangle invariant (no angle in θN), 4-case check",
+        "wrong_answer_stated": false,
+        "notes": "Answer θ=180/n stated correctly. Lemma 0 gives cut parametrization with existence/bijectivity of the cut point. Chain lemma proved by induction covering both discards. Lemma 2 handles n=2 separately and verifies 0<α<A. Lemma 4's four-case argument uses 180∉θN exactly where needed; existence of safe start proved."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-793ec386e18e",
+      "problem": "4",
+      "sha256": "793ec386e18ec41bf4c327ef874eaca641feb560d08e9051ab0c9fb0b2c25a8d",
+      "path": "checkpoint_inputs_ext/793ec386e18ec41bf4c327ef874eaca641feb560d08e9051ab0c9fb0b2c25a8d.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 5,
+      "record_ids": [
+        "p4-deepseek-v4-pro-main-t005"
+      ],
+      "bytes": 1639,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2792,
+            "output_tokens": 451,
+            "output_tokens_details": {
+              "thinking_tokens": 251
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 451,
+                "cache_read_input_tokens": 2792,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Only a status file: no proof, no lemmas. Search claims 45/60/90 winning but 30/36 not, contradicting the correct answer 180/n; guesses 'rational multiples' or 'power-of-2 denominators' as conjectures. No reduction lemma, no Mulan strategy, no Shan-Yu avoidance argument."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-459e07a52e70",
+      "problem": "4",
+      "sha256": "459e07a52e70e58b20fb2486669d8e2dc4d35e357343efd58f84962c6e034e30",
+      "path": "checkpoint_inputs_ext/459e07a52e70e58b20fb2486669d8e2dc4d35e357343efd58f84962c6e034e30.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 13,
+      "record_ids": [
+        "p4-deepseek-v4-pro-main-t013",
+        "p4-deedy-deepseek-v4-pro-final"
+      ],
+      "bytes": 2172,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3010,
+            "output_tokens": 622,
+            "output_tokens_details": {
+              "thinking_tokens": 390
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 622,
+                "cache_read_input_tokens": 3010,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 10.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "one-move win for theta=90 only: split apex into 90-b and 90-c so both pieces are right triangles",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Only exploratory notes: algebraic split formulation (p,b,c+q)/(q,c,b+p) and a correct one-move argument for theta=90. Conjectured answer is the complement of the truth (win iff 180/theta not an integer), based on unreliable discretized search. No lemma K, no general strategy, no avoidance argument."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-b98ad9eb5d44",
+      "problem": "4",
+      "sha256": "b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1",
+      "path": "checkpoint_inputs_ext/b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 3,
+      "record_ids": [
+        "p4-gpt-5.6-sol-main-t003",
+        "p4-deedy-gpt-5.6-sol-final"
+      ],
+      "bytes": 7126,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5276,
+            "output_tokens": 1344,
+            "output_tokens_details": {
+              "thinking_tokens": 1057
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1344,
+                "cache_read_input_tokens": 5276,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 18.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Lemma 1 integer-in-interval cut forcing both children to have an integral multiple of theta, then descent m -> m-1 (covers N=2)",
+        "upper_bound_mechanism": "Safe-triangle invariant in R/(theta Z): equilateral start, at least one child safe since t = [180] != 0",
+        "wrong_answer_stated": false,
+        "notes": "Both directions fully written. Lemma 1 proof handles the all-angles<1 (N=2) case; cut legality (0<x<a) verified; both children shown to carry integral multiples, so discard choice is covered. Necessity's case analysis is exhaustive and uses t!=0 exactly where needed. Computational check is auxiliary only."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-4eb42a7830fb",
+      "problem": "4",
+      "sha256": "4eb42a7830fbb66541ac02a8772b7a6e5ec62b13a271959f7b861b6332cdeae4",
+      "path": "checkpoint_inputs_ext/4eb42a7830fbb66541ac02a8772b7a6e5ec62b13a271959f7b861b6332cdeae4.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 1,
+      "record_ids": [
+        "p4-gpt-5.6-sol-max-main-t001"
+      ],
+      "bytes": 1971,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2986,
+            "output_tokens": 990,
+            "output_tokens_details": {
+              "thinking_tokens": 718
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 990,
+                "cache_read_input_tokens": 2986,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 14.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "grid-point cut from largest angle producing complementary multiples of 1/n (sketch, no induction/discard analysis, n=2 untreated)",
+        "upper_bound_mechanism": "acute-triangle retention for theta > 90 degrees (asserted only); general safe-angle argument absent",
+        "wrong_answer_stated": false,
+        "notes": "Correct answer given only as a leading conjecture; tracking file explicitly says no complete proof. Multiple-of-theta splitting lemma named but not proved. Sufficiency construction sketched, missing existence details, both-piece coverage, and n=2. Necessity asserted only for theta>90 degrees; main range left open."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-dcc0680e3d90",
+      "problem": "4",
+      "sha256": "dcc0680e3d90f47f49d2d2f14bc8c5509e52af15e4e23cd97ece850ef207a14f",
+      "path": "checkpoint_inputs_ext/dcc0680e3d90f47f49d2d2f14bc8c5509e52af15e4e23cd97ece850ef207a14f.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 8,
+      "record_ids": [
+        "p4-gpt-5.6-sol-max-main-t008"
+      ],
+      "bytes": 3690,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3681,
+            "output_tokens": 1185,
+            "output_tokens_details": {
+              "thinking_tokens": 902
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1185,
+                "cache_read_input_tokens": 3681,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 17.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "forcing supplementary grid angles m/n and (n-m)/n at cut point (existence of admissible cut/initialization left as an acknowledged gap)",
+        "upper_bound_mechanism": "asserted 'stay acute' avoidance for t>1/2 only; no general safe-angle invariant",
+        "wrong_answer_stated": false,
+        "notes": "Correct set boxed but explicitly labeled conjectural, with grid computation as support. Reduction lemma (k*theta into theta+(k-1)theta, both children multiples) is fully written. Winning strategy initialization admitted as a gap. Avoidance only asserted for t>1/2, unproved; no strategy for other non-reciprocal t."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-788aced15a04",
+      "problem": "4",
+      "sha256": "788aced15a042ec790b8827c4f5b5a4e9f64f8298c61007f6bfab1fa3eeecb1d",
+      "path": "checkpoint_inputs_ext/788aced15a042ec790b8827c4f5b5a4e9f64f8298c61007f6bfab1fa3eeecb1d.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 11,
+      "record_ids": [
+        "p4-gpt-5.6-sol-max-main-t011",
+        "p4-deedy-gpt-5.6-sol-max-final"
+      ],
+      "bytes": 7827,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5601,
+            "output_tokens": 1450,
+            "output_tokens_details": {
+              "thinking_tokens": 1162
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1450,
+                "cache_read_input_tokens": 5601,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 20.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "interval/pigeonhole cut giving m/n and (n-m)/n in both children, then induction reducing k/n to 1/n",
+        "upper_bound_mechanism": "safe-triangle invariant (no angle a positive integer multiple of t), four-case check, equilateral start",
+        "wrong_answer_stated": false,
+        "notes": "Correct answer boxed. Transition rule derived with attainability of every x in (0,A). Sufficiency handles n=2 separately and n>=3 via nA>1 pigeonhole; both children carry multiples of 1/n. Reduction lemma covers both pieces. Necessity invariant proved exhaustively, using 1=(r+s)t exactly. Computation only exploratory."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-9a62517b51bc",
+      "problem": "4",
+      "sha256": "9a62517b51bcf5a9e01a8ff0a2b463ee7317cd3c8eaf9db95ec5c4caa1d027d9",
+      "path": "checkpoint_inputs_ext/9a62517b51bcf5a9e01a8ff0a2b463ee7317cd3c8eaf9db95ec5c4caa1d027d9.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 1,
+      "record_ids": [
+        "p4-gpt-5.6-sol-pro-main-t001"
+      ],
+      "bytes": 1043,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2587,
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 128,
+                "cache_read_input_tokens": 2587,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 3.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only: status 'unsolved', no characterization, no lemmas or strategies. Nothing substantive to credit."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-14f66095291e",
+      "problem": "4",
+      "sha256": "14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed",
+      "path": "checkpoint_inputs_ext/14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 2,
+      "record_ids": [
+        "p4-gpt-5.6-sol-pro-main-t002",
+        "p4-deedy-gpt-5.6-sol-pro-final"
+      ],
+      "bytes": 6485,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4933,
+            "output_tokens": 1026,
+            "output_tokens_details": {
+              "thinking_tokens": 768
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1026,
+                "cache_read_input_tokens": 4933,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "integral-angle induction: cut making both children carry positive integer multiples k, N-k of theta",
+        "upper_bound_mechanism": "safe (nonintegral in units of theta) invariant from equilateral triangle, four-case check",
+        "wrong_answer_stated": false,
+        "notes": "Correct answer theta=180/N, N>=2. Cut formula (1) derived with explicit realizability of any x in (0,a). Induction on m complete and covers both children. Sufficiency handles all-angles-<1 case forcing N=2. Necessity invariant verified in all four pairings, using s nonintegral exactly. No gaps found."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-8f044a272117",
+      "problem": "4",
+      "sha256": "8f044a272117a8df4312b5ae28d065ca2fb3358dd7b8f3474e611bb76c9cf262",
+      "path": "checkpoint_inputs_ext/8f044a272117a8df4312b5ae28d065ca2fb3358dd7b8f3474e611bb76c9cf262.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 2,
+      "record_ids": [
+        "p4-gpt-5.6-sol-xhigh-main-t002"
+      ],
+      "bytes": 1475,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2774,
+            "output_tokens": 162,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 162,
+                "cache_read_input_tokens": 2774,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 3.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Write-up explicitly states no characterization or proof found. Only a reformulation into angle coordinates and a noted move formula, plus mention of beginning to study finite-horizon winning sets. No lemma, no strategy for either direction."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-404415785358",
+      "problem": "4",
+      "sha256": "404415785358dca16deb9d46aaf4a986fc13762ffa665b1ee87492fb1940fdad",
+      "path": "checkpoint_inputs_ext/404415785358dca16deb9d46aaf4a986fc13762ffa665b1ee87492fb1940fdad.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 3,
+      "record_ids": [
+        "p4-gpt-5.6-sol-xhigh-main-t003"
+      ],
+      "bytes": 2487,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3182,
+            "output_tokens": 1444,
+            "output_tokens_details": {
+              "thinking_tokens": 1166
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1444,
+                "cache_read_input_tokens": 3182,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "complementary cut-point angles k*theta and (n-k)*theta from largest-angle vertex (interval lemma unproved, n=2 untreated)",
+        "upper_bound_mechanism": "safe-triangle invariant (no angle an integer multiple of theta), case analysis only gestured at",
+        "wrong_answer_stated": false,
+        "notes": "Correct answer and all three mechanisms correctly identified, but everything is bullet-point sketch. Induction on k*theta stated in one line without cut-point existence; sufficiency explicitly defers the interval lemma and ignores n=2 (theta=90); necessity asserts the four-case analysis and never exhibits an initial safe triangle."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-43ca23749f7e",
+      "problem": "4",
+      "sha256": "43ca23749f7ecdc084bc699e211e57eb73469d443e1b8b19ca2c45f7c7c5fb8e",
+      "path": "checkpoint_inputs_ext/43ca23749f7ecdc084bc699e211e57eb73469d443e1b8b19ca2c45f7c7c5fb8e.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 7,
+      "record_ids": [
+        "p4-gpt-5.6-sol-xhigh-main-t007",
+        "p4-deedy-gpt-5.6-sol-xhigh-final"
+      ],
+      "bytes": 8913,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5909,
+            "output_tokens": 1062,
+            "output_tokens_details": {
+              "thinking_tokens": 757
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1062,
+                "cache_read_input_tokens": 5909,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Complementary cut-point angles k(theta) and (n-k)theta via integer-between-partial-sums claim (handles n=2), plus Lemma 1 induction",
+        "upper_bound_mechanism": "Safe-triangle invariant: equilateral start, four-case check that every cut of a safe triangle has a safe child, using 180 not a multiple of theta",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct. Cut model with realizability of any x in (0,A) justified; Lemma 1 covers both pieces; sufficiency gives both children an integer multiple of theta so discard choice is irrelevant; necessity's four-case analysis is exhaustive and uses (8) exactly in case 4. Computer checks explicitly not used as proof."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-ca6c9452996c",
+      "problem": "4",
+      "sha256": "ca6c9452996c8b92e9e3234479ed2b36856ed8e4c7f4ef9d3ef2f2f13f8eac3a",
+      "path": "checkpoint_inputs_ext/ca6c9452996c8b92e9e3234479ed2b36856ed8e4c7f4ef9d3ef2f2f13f8eac3a.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 2,
+      "record_ids": [
+        "p4-grok-4.5-main-t002",
+        "p4-deedy-grok-4.5-final"
+      ],
+      "bytes": 998,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2574,
+            "output_tokens": 119,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 119,
+                "cache_read_input_tokens": 2574,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 3.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only: status 'unsolved', no approaches, no proof. Nothing to credit."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-25c5ce51b7e0",
+      "problem": "4",
+      "sha256": "25c5ce51b7e0a913a5bb986febfeb1255711ab9824ffff55f6085b23fd398f89",
+      "path": "checkpoint_inputs_ext/25c5ce51b7e0a913a5bb986febfeb1255711ab9824ffff55f6085b23fd398f89.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-main",
+      "turn": 20,
+      "record_ids": [
+        "p4-kimi-k3-main-t020"
+      ],
+      "bytes": 12381,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 8354,
+            "output_tokens": 1793,
+            "output_tokens_details": {
+              "thinking_tokens": 1482
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1793,
+                "cache_read_input_tokens": 8354,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 23.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "round-up cut making both halves marked (u+d(u)=kθ and 180-u-d(u)=(n-k)θ) plus halving lemma",
+        "upper_bound_mechanism": "invariant 'no angle is an integer multiple of θ' from equilateral start, 3-case maintenance",
+        "wrong_answer_stated": false,
+        "notes": "Correct answer and both directions fully argued. Cut Lemma 0 proof is deferred to an external file but its statement includes the IVT/continuity existence sketch inline. Halving lemma covers both discard options; Claims 1-2 handle n=2; avoidance case analysis is exhaustive and uses 180 not a multiple of θ exactly where needed. Computer checks are supplementary only."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-3c87e40d7e02",
+      "problem": "4",
+      "sha256": "3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248",
+      "path": "checkpoint_inputs_ext/3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p4-deedy-kimi-k3-final"
+      ],
+      "bytes": 12563,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 8436,
+            "output_tokens": 1691,
+            "output_tokens_details": {
+              "thinking_tokens": 1370
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1691,
+                "cache_read_input_tokens": 8436,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 22.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Round-up cut alpha=d(u)<v making both halves marked (k*theta and (n-k)*theta), then halving lemma; n=2 handled in Claim 2",
+        "upper_bound_mechanism": "Invariant 'no angle is an integer multiple of theta' from equilateral start; exhaustive 3-case analysis showing one half always safe",
+        "wrong_answer_stated": false,
+        "notes": "Complete: Lemma 0 gives cut formulas and range alpha in (0,A) (proof sketched/deferred but stated with IVT); Lemma 1 induction covers both pieces; Theorem 1 covers every initial triangle and both discards, including n=2 via Claims 1-2; Theorem 2 case analysis exhaustive and uses 180 not a multiple of theta exactly where needed."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-220590cd38ed",
+      "problem": "4",
+      "sha256": "220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181",
+      "path": "checkpoint_inputs_ext/220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": "muse-spark-1.1-main",
+      "turn": 2,
+      "record_ids": [
+        "p4-muse-spark-1.1-main-t002"
+      ],
+      "bytes": 9420,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 7122,
+            "output_tokens": 2425,
+            "output_tokens_details": {
+              "thinking_tokens": 2097
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2425,
+                "cache_read_input_tokens": 7122,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 31.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "kθ split as θ+(k-1)θ makes multiples universally winning; from a generic triangle cut x=r with p+r the next multiple, so both children carry multiples (180=nθ); θ=90 handled separately in one move",
+        "upper_bound_mechanism": "invariant set I of triangles with no angle a multiple of θ; four-case check that some child stays in I, case 4 using 180 not a multiple of θ",
+        "wrong_answer_stated": false,
+        "notes": "Answer correct. Sum lemma for multiples proved with explicit admissible cut. Winning strategy covers n=2 (x=90-p, admissibility justified) and n>=3 (p minimal <=60, D maximal >=theta, r=theta-(p mod theta)), with both children shown winning. Avoidance lemma complete, including nonemptiness of I."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-2c885229d69d",
+      "problem": "4",
+      "sha256": "2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc",
+      "path": "checkpoint_inputs_ext/2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": "muse-spark-1.1-main",
+      "turn": 5,
+      "record_ids": [
+        "p4-muse-spark-1.1-main-t005",
+        "p4-deedy-muse-spark-1.1-final"
+      ],
+      "bytes": 8787,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6932,
+            "output_tokens": 2703,
+            "output_tokens_details": {
+              "thinking_tokens": 2371
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2703,
+                "cache_read_input_tokens": 6932,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 36.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "multiples-of-theta lemma (kθ = θ+(k-1)θ descent) plus a cut r = ceil(p/θ)θ - p from the max angle making both children carry multiples; θ=90 handled separately",
+        "upper_bound_mechanism": "invariant I = no angle is a multiple kθ; case analysis shows one child stays in I, using 180 not a multiple of θ",
+        "wrong_answer_stated": false,
+        "notes": "Correct answer and all three obligations essentially complete: n=2 base case verified with explicit feasible cut, feasibility 0<r<D checked via min/max angle bounds, both children shown to carry multiples, and the avoidance lemma's four cases are correct with 180 ∤ θ used exactly in case 4. Minor terseness on existence of an initial safe triangle; one garbled bullet in §1."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-bc0c538d972f",
+      "problem": "4",
+      "sha256": "bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e",
+      "path": "checkpoint_inputs_ext/bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "0d682cd0",
+      "turn": 1,
+      "record_ids": [
+        "p4-glm52-0d682cd0-v1"
+      ],
+      "bytes": 7667,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6250,
+            "output_tokens": 1590,
+            "output_tokens_details": {
+              "thinking_tokens": 1291
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1590,
+                "cache_read_input_tokens": 6250,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 20.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "kθ-angle lemma by induction + first cut giving pieces with angles mθ and (n−m)θ (n=2 handled separately)",
+        "upper_bound_mechanism": "safe invariant: all angles non-multiples of θ, equilateral seed, 4-case sum/difference argument using θ∤180",
+        "wrong_answer_stated": false,
+        "notes": "Answer correct. Cut algebra derived; k·θ lemma proved by induction with both pieces winning. Winning strategy covers all triangles, both n≥3 (interval-length argument gives valid cut point) and n=2, with both pieces shown winning. Avoidance invariant complete, non-emptiness justified, all four cases handled. Numerics explicitly labeled non-proof."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-4d0a20e17bde",
+      "problem": "4",
+      "sha256": "4d0a20e17bde319101c4be5c8c765c5af406b1af9e2c351c2adb53436fd96382",
+      "path": "checkpoint_inputs_ext/4d0a20e17bde319101c4be5c8c765c5af406b1af9e2c351c2adb53436fd96382.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": "affe2f21",
+      "turn": 1,
+      "record_ids": [
+        "p4-gpt56-affe2f21-v1"
+      ],
+      "bytes": 6805,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5133,
+            "output_tokens": 1519,
+            "output_tokens_details": {
+              "thinking_tokens": 1215
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1519,
+                "cache_read_input_tokens": 5133,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 21.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "cut making both children carry k·theta (k=floor(A/theta)+1), plus induction lemma splitting m·theta into theta+(m-1)·theta; n=2 handled separately",
+        "upper_bound_mechanism": "clean (no angle an integer multiple of theta) invariant from equilateral start; four-pairing sum/difference argument shows some child stays clean",
+        "wrong_answer_stated": false,
+        "notes": "All four obligations met. Cut realizability x in (0,C) stated in Sec 1 and used; Lemma 1 induction complete; winning cut verified legal with both children carrying multiples of theta for every discard; avoidance invariant proved for all cuts, using 180 not a multiple of theta. Computer search explicitly labeled non-essential."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-442b65045661",
+      "problem": "4",
+      "sha256": "442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8",
+      "path": "checkpoint_inputs_ext/442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "0da3d62d",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-0da3d62d-v1"
+      ],
+      "bytes": 4231,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4255,
+            "output_tokens": 1211,
+            "output_tokens_details": {
+              "thinking_tokens": 1013
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1211,
+                "cache_read_input_tokens": 4255,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 17.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "States wrong answer theta <= 90. The game reformulation is false: cutting angle C at vertex gives pieces with angles beta and C-beta at C, not beta in both. All of Part 1 (one-move win for any theta<60) and Part 2's invariant rest on this false lemma. No k*theta lemma, no safe-angle argument."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-814626794ac9",
+      "problem": "4",
+      "sha256": "814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a",
+      "path": "checkpoint_inputs_ext/814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "7912bb42",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-7912bb42-v1"
+      ],
+      "bytes": 11500,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 7422,
+            "output_tokens": 2144,
+            "output_tokens_details": {
+              "thinking_tokens": 1874
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2144,
+                "cache_read_input_tokens": 7422,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 29.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "doubling ladder 2^k*theta up to 90 deg (only theta=180/2^n)",
+        "upper_bound_mechanism": "stay acute for theta>90; asserted finite dyadic invariant",
+        "wrong_answer_stated": true,
+        "notes": "Concludes only as a conjecture that Mulan wins iff theta=180/2^n, missing 180/n generally (e.g. 60 deg left unresolved). Ladder step claims 'both children have 2theta' which is false in general; existence of cut point unchecked. Acute-preservation claim for theta>90 asserted and false (equilateral cut can give two right triangles). Ends mid-exploration."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-d09e65992b10",
+      "problem": "4",
+      "sha256": "d09e65992b10a57d8fef7512e68d23a17b81a3e0b48b75a56f6e6267c79e547b",
+      "path": "checkpoint_inputs_ext/d09e65992b10a57d8fef7512e68d23a17b81a3e0b48b75a56f6e6267c79e547b.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "7e3e9be3",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-7e3e9be3-v1"
+      ],
+      "bytes": 8871,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6241,
+            "output_tokens": 1223,
+            "output_tokens_details": {
+              "thinking_tokens": 922
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1223,
+                "cache_read_input_tokens": 6241,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 16.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "direct cut x=90-A (or 60-A) making both children carry 90 or 120/60; only theta=90,60",
+        "upper_bound_mechanism": "invariant 'max angle < theta' (rigorous only for theta>90); ad hoc loop/cycle claims otherwise",
+        "wrong_answer_stated": true,
+        "notes": "Answer restricted to {60,90}, missing 45,36,...; claims Shan-Yu avoids theta for all theta<60, which is false. No k*theta induction lemma. Wins for 90 and 60 are correctly proved for both children. Only the theta>90 avoidance invariant is rigorous; the 60<theta<90 and theta<60 arguments are hand-waved ('one can verify', continuity argument)."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-908b36293a06",
+      "problem": "4",
+      "sha256": "908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e",
+      "path": "checkpoint_inputs_ext/908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "0c164fc0",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-0c164fc0-v1"
+      ],
+      "bytes": 9794,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6946,
+            "output_tokens": 1414,
+            "output_tokens_details": {
+              "thinking_tokens": 1110
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1414,
+                "cache_read_input_tokens": 6946,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 20.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "explicit cuts for θ=90° (one move) and θ=60° (≤2 moves); sketchy 'force 90° then split by θ' with admitted gaps for other θ",
+        "upper_bound_mechanism": "max-angle < θ invariant, valid only for θ > 90°",
+        "wrong_answer_stated": true,
+        "notes": "Answer stated as θ ≤ 90°, wrong. Winning direction fully proved only for 90° and 60°; the θ<60° and 60°<θ<90° arguments contain admitted gaps ('a detailed case analysis shows') and a bogus termination/measure claim. Avoidance argument is correct but only for θ>90°, missing all non-180/n values below 90°. Multiple-of-θ induction only sketched."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-7e9068250570",
+      "problem": "4",
+      "sha256": "7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8",
+      "path": "checkpoint_inputs_ext/7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "9a63b14e",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-9a63b14e-v1"
+      ],
+      "bytes": 12849,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 7971,
+            "output_tokens": 1367,
+            "output_tokens_details": {
+              "thinking_tokens": 1057
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1367,
+                "cache_read_input_tokens": 7971,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "Explicit one/two-move splits proved only for theta=90 (both children right) and theta=60 (cases via 120-degree state); general 180/n absent",
+        "upper_bound_mechanism": "Max-angle invariant from equilateral, valid only for theta>90 (interval-emptiness 2theta>180); no safe-angle/multiple-of-theta invariant",
+        "wrong_answer_stated": false,
+        "notes": "Correct transition formulas and two rigorous special cases (theta=90, 60) plus a valid Shan-Yu defense for theta>90. General answer 180/n never stated; (0,60) and (60,90) declared open. The k*theta lemma appears only implicitly as the 120-degree case at theta=60. No wrong claim asserted, but most obligations unmet."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-440c35229a2f",
+      "problem": "4",
+      "sha256": "440c35229a2f9e2f0e32406bcb086d3a4a9f50600d8d17a854d75251ed9ac8de",
+      "path": "checkpoint_inputs_ext/440c35229a2f9e2f0e32406bcb086d3a4a9f50600d8d17a854d75251ed9ac8de.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "c1c5994c",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-c1c5994c-v1"
+      ],
+      "bytes": 2470,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3376,
+            "output_tokens": 820,
+            "output_tokens_details": {
+              "thinking_tokens": 575
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 820,
+                "cache_read_input_tokens": 3376,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 12.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "explicit one/two-move cuts for θ=90° and θ=60° only",
+        "upper_bound_mechanism": "invariant 'max angle < θ' from equilateral start, valid only for θ>90°",
+        "wrong_answer_stated": false,
+        "notes": "No committed answer: three competing hypotheses listed, correct family only as hypothesis C. (K) present only as the k=2 special case, no induction. Winning direction verified only for θ=90°,60°. Avoidance proved only for θ>90° via max-angle invariant; intervals (0,60) and (60,90) explicitly open."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    }
+  ]
+}

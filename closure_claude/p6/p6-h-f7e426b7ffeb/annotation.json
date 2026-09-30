@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-f7e426b7ffeb",
+  "problem": "6",
+  "sha256": "f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da",
+  "path": "checkpoint_inputs/f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "7030bbc7",
+  "turn": 3,
+  "record_ids": [
+    "p6-glm52-7030bbc7-v3"
+  ],
+  "bytes": 11701,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 7182,
+        "cache_read_input_tokens": 901,
+        "output_tokens": 5099,
+        "output_tokens_details": {
+          "thinking_tokens": 4773
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 7182,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 5099,
+            "cache_read_input_tokens": 901,
+            "cache_creation_input_tokens": 7182,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 7182
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 57.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Cofactor Bound: every essential prime ≤ a_1 via smooth-gap construction + TERM lemma + B-monotonicity contradiction",
+    "upper_bound_mechanism": "Stabilized minimal-support antichain over finite ground set; V a union of residue classes mod L=∏essential primes; sequence is increasing enumeration of V from a_1",
+    "wrong_answer_stated": false,
+    "notes": "Reduction to transversals/blockers is clean; finiteness is genuinely argued (Lemmas A–C plus contradiction), not just numerically checked; periodicity holds from n=1 since the sequence is shown to enumerate V starting at a_1. Minor gaps: τ*=P(a_j) case and 'M_n never repeats' stated tersely. Computational checks are decorative, not load-bearing."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

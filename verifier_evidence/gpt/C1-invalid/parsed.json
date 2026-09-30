@@ -1,0 +1,18 @@
+{
+ "claim_id": "C1",
+ "condition": "invalid",
+ "verifier": "gpt",
+ "model": "gpt-5.6-sol",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "A positive nonincreasing sequence can fall below 1; for example, q_1=2 and q_k=0.5 for every k≥2.",
+  "witness_valid": false,
+  "witness_reason": "The proposed sequence violates the hypothesis q_{k+1}≤q_k because q_2=3>2=q_1."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 8.1
+}

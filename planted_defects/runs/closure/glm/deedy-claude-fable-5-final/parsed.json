@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "deedy-claude-fable-5-final",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 73.4,
+  "input_tokens": 5961,
+  "output_tokens": 6320,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "tree-pairing on rank pairs with signed subset-sum (geometric 1:2:...:2^n division)",
+  "upper_bound_mechanism": "subset-sum pigeonhole + equal-pair overlay/cancellation cuts",
+  "wrong_answer_stated": false,
+  "notes": "Complete proof. Lemma 2 fully proves picking-phase value (1+D)/2 in both directions. Lemma 4: all-n lower bound via tree-pairing on rank pairs and signed subset-sum, valid against arbitrary refinements. Lemma 5: all-n upper bound via subset-sum pigeonhole gap plus overlay construction making equal pairs. Numerical checks are only supplementary."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 5961,
+    "output_tokens": 6320,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 73.4,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 2,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

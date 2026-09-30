@@ -1,0 +1,45 @@
+{
+  "id": "p4-h-43ca23749f7e",
+  "problem": "4",
+  "sha256": "43ca23749f7ecdc084bc699e211e57eb73469d443e1b8b19ca2c45f7c7c5fb8e",
+  "path": "checkpoint_inputs_ext/43ca23749f7ecdc084bc699e211e57eb73469d443e1b8b19ca2c45f7c7c5fb8e.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 7,
+  "record_ids": [
+    "p4-gpt-5.6-sol-xhigh-main-t007",
+    "p4-deedy-gpt-5.6-sol-xhigh-final"
+  ],
+  "bytes": 8913,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17611,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 115,
+        "reasoning_output_tokens": 0
+      },
+      "sec": 6.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "integer-between-partial-sums cut plus induction",
+    "upper_bound_mechanism": "safe-triangle invariant",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Lemma 1 handles every discard choice; the integer-between-partial-sums claim covers all n, including n=2, and makes both children winning. The safe-child proof exhausts all four cases and supplies a safe initial equilateral triangle."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

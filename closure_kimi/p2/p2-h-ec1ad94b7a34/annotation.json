@@ -1,0 +1,38 @@
+{
+  "id": "p2-h-ec1ad94b7a34",
+  "problem": "2",
+  "sha256": "ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a",
+  "path": "checkpoint_inputs/ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9c3c93da",
+  "turn": 2,
+  "record_ids": [
+    "p2-nemotron-9c3c93da-v2"
+  ],
+  "bytes": 17780,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 564.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "spiral similarity at A (B→C, M→N) with false claim KA=KB, LA=LC; no key circle through A,K,L",
+    "upper_bound_mechanism": "homothety H(A,2) reducing OM=ON to O'B=O'C, then asserted direct computation (false even from its premises)",
+    "wrong_answer_stated": true,
+    "notes": "Lemmas 1–3 correctly restate the hypotheses via the spiral similarity at A, but no concyclicity is proved (attempts explicitly abort). Pivotal claim KA=KB, LA=LC is false: valid configurations have KA≠KB; the factorization is only asserted and complex condition (1) has wrong orientation. Final O'B=O'C is unexecuted and doesn't follow even from those premises."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

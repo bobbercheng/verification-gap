@@ -1,0 +1,36 @@
+{
+ "task_id": "imo-2026-p5",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Substituting x=f(y) is legitimate (f(y)>0) and collapses both outer terms to f(y), forcing the middle term to equal f(y), hence the exact law f(f(y))+y=2f(y) (equation (1)).",
+  "With d(t)=f(t)-t, equation (1) gives d(f(t))=d(t); induction then yields f^n(t)=t+n·d(t) for all n>=0, and since f maps R_{>0} to R_{>0} every iterate is positive, so d(t)<0 would give f^n(t)<0 for n>t/(-d(t)), a contradiction. Hence d>=0 (equation (4)).",
+  "Expansion check for the lower inequality with x=f(t)=t+c, f(x)=t+2c, f(y)=y+b: (t+2c+y)^2-4(t+c)(y+b) = (t-y)^2+4(t+c)(c-b); verified by direct expansion.",
+  "Expansion check for the upper inequality: 2(t+c)^2+2(y+b)^2-(t+2c+y)^2 = (t-y)^2+2(b-c)(2y+b+c); verified by direct expansion (the 4y(b-c) cross term is correctly accounted for).",
+  "Squaring is equivalence-preserving since all quantities are strictly positive; denominators 4(t+c) and 2(2y+b+c) are positive, and bounds (5), (6) simplify correctly using b,c>=0.",
+  "Case analysis by sign of b-c correctly combines (5) and (6) into the symmetric estimate |d(y)-d(t)| <= (y-t)^2/(4·min{t,y}) (equation (7)); both branches use min{t,y} <= the respective denominator base.",
+  "Partition/telescoping argument: n equal subintervals of length h give |d(v)-d(u)| <= n·h^2/(4u) = (v-u)^2/(4un) -> 0, so d(v)=d(u) for all 0<u<v; no continuity, monotonicity, or measurability is assumed or needed, and the limit argument is elementary (a fixed nonnegative number bounded by an expression tending to 0).",
+  "Necessity of C>=0 follows from (4) and from positivity of f on all of R_{>0}.",
+  "Converse: for f(x)=x+C with C>=0 the chain becomes RMS>=AM>=GM for the positive numbers x and y+C, so every such C works.",
+  "Falsification-record numerics independently recomputed: f(x)=sqrt(x) at (x,y)=(1,4) gives squared upper margin 2+8-25=-15; f(x)=x^2 at (4,2) gives 32+32-324=-260; the piecewise orbitwise-shift example at (1,1/2) gives 2+1/2-25/4=-15/4. All match.",
+  "Consistency of the affine and power-law heuristic claims: (1) forces (a-1)^2=0 for affine maps and p^2=2p-1 (hence p=1) for power laws, matching the stated falsification record; these are heuristics only and are not load-bearing.",
+  "Classification f(x)=x+C, C>=0 is exact: every solution has this form and every such function satisfies the chain for all x,y>0."
+ ],
+ "unverified_claims": [],
+ "summary": "The candidate proof is correct and complete. Step 1 legitimately extracts the exact iterate law f(f(y))+y=2f(y) by substituting x=f(y), derives f^n(t)=t+n·d(t), and uses strict positivity of all iterates to force d>=0. Step 2 (both algebraic expansions independently reverified) upgrades the two original inequalities at x=f(t) into the two-sided quadratic-modulus estimate |d(y)-d(t)| <= (y-t)^2/(4·min{t,y}), valid with no regularity hypotheses. Step 3 kills this modulus by uniform partition refinement, proving d is constant; the limit step is elementary and non-circular. Step 4 verifies the converse via RMS-AM-GM and rules out C<0 both algebraically and by positivity. Degenerate cases (t=y, C=0) are handled, quantifiers are respected, and the computational experiments are explicitly non-load-bearing (the referenced script is decorative and its stated margins were independently recomputed by hand).",
+ "transfer_assessment": [
+  "Reusable: in sandwich-type functional inequalities of the form A(x,f(y)) >= B(f(x),y) >= C(x,f(y)), substituting the value that makes both outer terms coincide (here x=f(y)) is a general trick to extract an exact functional equation.",
+  "Reusable: converting a functional equation into an orbit law f^n(t)=t+n·d(t) and exploiting that the codomain is positivity-restricted to force sign constraints on the displacement d — a powerful regularity-free device.",
+  "Reusable: strengthening pointwise constraints into a local estimate with quadratic modulus in the distance, then destroying it by refining a partition — a standard, correctly executed technique for proving constancy (or linearity) without any continuity assumption.",
+  "Reusable: verifying solutions of the form x+C by recognizing RMS-AM-GM, which also cleanly explains why translations and only translations survive.",
+  "Misleading if transferred uncritically: numerical margin spot-checks and falsification examples (hypotheses 1-5) can suggest but never prove a classification; the 'differentiate the forced identity' trick for power laws is only valid after the identity is established for all y.",
+  "Misleading if transferred: the quadratic-modulus estimate (7) depends on having first proved b,c>=0 to bound denominators; dropping that preliminary step would invalidate the final inequalities."
+ ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "p3-h-0df01e264dd8",
+  "problem": "3",
+  "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+  "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-claude-fable-5-final",
+    "claude-fable-5-main-t013"
+  ],
+  "bytes": 15474,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 9656,
+        "output_tokens": 526,
+        "output_tokens_details": {
+          "thinking_tokens": 228
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 526,
+            "cache_read_input_tokens": 9656,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "tree-pairing multigraph on pieces + signed subset-sum separation of powers of 2",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) + midpoint/overlay cross-pairing cuts cancelling equal pairs",
+    "wrong_answer_stated": false,
+    "notes": "Complete: Lemma 2 proves the odd-rank/alternating-sum reduction with greedy strategies for both players; Lemma 4 gives an all-n lower bound via a component-tree 2-colouring and edge count |E|<=n<|V|; Lemma 5 gives an all-n Xiang reply using at most n marks. Numerics are supplementary, not load-bearing."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "gpt-5.6-sol-xhigh-main-t008",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 8,
+  "ts": "2026-07-18T17:39:10.915615+00:00",
+  "path": "checkpoint_inputs/c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89.md",
+  "bytes": 11015,
+  "sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3765,
+        "output_tokens": 5789,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 81.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "powers-of-two division with tree-component bipartition on pairing multigraph",
+    "upper_bound_mechanism": "subset-sum pigeonhole plus common-refinement overlay pairing",
+    "wrong_answer_stated": false,
+    "notes": "Complete correct proof. Reduction: backward induction proving greedy/alternating-sum value D. Lower bound: 1:2:...:2^n division, pairing graph with ≤ n edges, tree component bipartition forces nonzero signed power-of-two sum ≥ d. Upper bound: subset-sum gap ≤ d, refinement construction with ≤ n cuts, leftover ≤ d. Answer boxed correctly."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+  "original_bytes": 11015,
+  "input_anonymized": false
+}

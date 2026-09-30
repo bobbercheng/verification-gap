@@ -1,0 +1,55 @@
+{
+ "gate": "witness",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-G",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "G",
+ "problem": "5",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 64.6,
+  "input_tokens": 34668,
+  "output_tokens": 1840,
+  "reasoning_output_tokens": 1315,
+  "cached_input_tokens": 21248
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "not_written",
+    "quote": "Squaring the lower and the upper inequality, rearranging, and using \\(b,c\\ge0\\) (standard; details omitted) yields\n\\[\n\\boxed{\n|d(y)-d(t)|\\le \\frac{(y-t)^2}{4\\min\\{t,y\\}}.\n} \\tag{7}\n\\]",
+    "witness": "The write-up must prove estimate (7) for every t,y>0, including both possible signs of d(y)-d(t). It explicitly omits the necessary algebra and sign-dependent deductions, so merely asserting that rearrangement yields (7) does not establish the estimate.",
+    "load_bearing": "The partition argument proving that d is constant depends entirely on (7). Without a proof of that estimate, necessity is only sketched."
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "The classification, iterate law, nonnegativity of the displacement, and full RMS–AM–GM converse are correct. Necessity is incomplete because its decisive quadratic estimate is asserted with details omitted."
+ },
+ "anchors": {
+  "upper_bound": {
+   "anchored": true,
+   "length": 183,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    2837,
+    3020
+   ]
+  }
+ }
+}

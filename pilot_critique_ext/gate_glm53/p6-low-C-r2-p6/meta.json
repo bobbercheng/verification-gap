@@ -1,0 +1,68 @@
+{
+ "task_id": "imo-2026-p6",
+ "route_reviewed": "p6-low-C-r2",
+ "reviewer_model": "glm-5.3",
+ "reviewer_endpoint": "https://api.z.ai/api/anthropic",
+ "api": "anthropic",
+ "statement_sha256": "ea3f916e232d74dc448de9bf132a32e09a8966d62aa0c98b2e6f29c69fee03e2",
+ "candidate_file": "pilot_critique_ext/p6-low-C-r2/output.md",
+ "candidate_sha256": "6bd572498c1a98b44821a521e93923d194288711884cf9fcee7e947430862bc5",
+ "rubric_sha256": "45e5debb4c56f2cb610e3eb19d27eab36106f7bcf73c3d46efa582e714cc96f5",
+ "attempts": [
+  {
+   "attempt": 0,
+   "thinking": {
+    "type": "enabled",
+    "budget_tokens": 16000
+   },
+   "http_status": 200,
+   "stop_reason": "max_tokens",
+   "usage": {
+    "input_tokens": 2629,
+    "output_tokens": 30000,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "elapsed_seconds": 286.4,
+   "model": "glm-5.3",
+   "json_parsed": false
+  },
+  {
+   "attempt": 1,
+   "thinking": {
+    "type": "disabled"
+   },
+   "http_status": 200,
+   "stop_reason": "end_turn",
+   "usage": {
+    "input_tokens": 2629,
+    "output_tokens": 19782,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "elapsed_seconds": 234.3,
+   "model": "glm-5.3",
+   "json_parsed": true
+  }
+ ],
+ "parsed": true,
+ "passes_gate": false,
+ "verdict": "revise",
+ "scores": {
+  "correctness": 2,
+  "completeness": 2,
+  "rigor": 2,
+  "self_contained": 4
+ },
+ "n_fatal": 2,
+ "n_unverified": 1,
+ "finished_at": "2026-09-06T00:43:54Z",
+ "candidate_file_as_recorded": "pilot_critique/p6-low-C-r2/output.md",
+ "relabel_note": "2026-09-06T01:32:45Z: label corrected from the primary-run directory name to the extension run; candidate_sha256 unchanged and verified against the extension output."
+}

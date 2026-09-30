@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-cd94261ef509",
+  "problem": "5",
+  "sha256": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+  "path": "checkpoint_inputs_ext/cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 33,
+  "record_ids": [
+    "p5-deepseek-v4-pro-main-t033"
+  ],
+  "bytes": 8326,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6903,
+        "output_tokens": 3995,
+        "output_tokens_details": {
+          "thinking_tokens": 3657
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3995,
+            "cache_read_input_tokens": 6903,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 50.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "Identity |A-B|<=A+B gives inequality (7); orbit APs + rational/irrational density kill two positive differences; A(y,x)>=0 gives |x-y|>c separating S_0 from S_c; backward lemma + interval covering forces S_0 empty",
+    "wrong_answer_stated": false,
+    "notes": "f(f(x))=2f(x)-x and g(x+g(x))=g(x) fully derived, but g(x)>=0 (orbit leaving R_{>0}) is never proved, so the classification V subset {0,c} ignores negative differences. Remaining steps (uniqueness of positive value, separation |x-y|>c, small-element lemma, covering) are complete and correct; verification is correct."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

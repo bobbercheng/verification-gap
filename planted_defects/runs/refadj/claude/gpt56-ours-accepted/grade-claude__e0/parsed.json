@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted",
+ "base_id": "gpt56-ours-accepted",
+ "type": "O",
+ "problem": "3",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.2,
+  "input_tokens": 2,
+  "output_tokens": 807,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 6162,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5112,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005207,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 807,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 6162,
+    "webSearchRequests": 0,
+    "costUSD": 0.08262649999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 461,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "none",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_applicable",
+  "repair_distance": "none",
+  "explanation": "Check: Liu's marks 7,21 on 56 units give intervals 7,14,35, whose subset sums are 0,7,14,21,35,42,49,56, so Γ = 7/56 = 1/8 and optimal Xiang play caps Liu at (1+1/8)/2 = 9/16 < 4/7. The cited Xiang reply (8,38) is therefore suboptimal, and the phrase 'in agreement with the theorem' is loose. But this passage is in Section 5's falsification record and is explicitly labelled 'evidence, not part of the proof'; it supports no ledger item. L3.1–L3.3 are argued in Sections 1, 2, 3 and 4 independently of this example, so nothing in the proof is affected."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

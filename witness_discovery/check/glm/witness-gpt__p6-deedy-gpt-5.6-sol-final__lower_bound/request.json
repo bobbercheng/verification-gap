@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p6-deedy-gpt-5.6-sol-final",
+ "tag": "lower_bound",
+ "text_sha256": "fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de",
+ "system_sha256": "31de4cf340b3317b69b72a289f2bf83e8cd8e25b4b29993a83818b46831ff9f5",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "written_but_invalid",
+  "quote": "Insert $c$ at its first such occurrence. Until the next occurrence nothing changes; at that next occurrence the element selected there is dispensable, because that selected set is already met by $c$. Repeating between consecutive occurrences shows that the branch has a contracted node, contrary to the pruning rule.",
+  "witness": "NON-SEQUITUR: The established premise is that one fixed $c\\in C$ belongs to infinitely many sets selected along the original branch. But inserting $c$ at the first occurrence changes that branch, with no proof that subsequent nodes or selected sets remain the same. Indeed, once $c$ is inserted, every subsequently selected $F_D$ must be disjoint from the current label and therefore cannot contain $c$, so the asserted next occurrence cannot occur on the modified branch. Thus finiteness of the pruned tree does not follow.",
+  "load_bearing": "This is the sole argument that there are finitely many minimal transversals. Without it, the finite sets $B_1,\\ldots,B_s$ and hence the finite-prime description of membership have not been proved."
+ },
+ "started_utc": "2026-09-06 04:49:28 UTC"
+}

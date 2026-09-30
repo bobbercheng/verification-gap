@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-G",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "G",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 86.4,
+  "input_tokens": 3576,
+  "output_tokens": 6528,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "powers-of-two division + pairing/weighted-multigraph tree-component argument",
+  "upper_bound_mechanism": "subset-sum pigeonhole + cancellation + common-refinement overlay equal-pairing",
+  "wrong_answer_stated": false,
+  "notes": "Essentially complete. Reduction proved by backward induction with greedy check; lower bound handles arbitrary interleaving via tree-component signed-sum argument; upper bound fully cases out m<=n and m=n+1. Only blemish: overlay cut-count |A|+|B|-1 left as 'standard, details omitted', but construction is explicit and count is immediate."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 3576,
+    "output_tokens": 6528,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 86.4,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 2,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

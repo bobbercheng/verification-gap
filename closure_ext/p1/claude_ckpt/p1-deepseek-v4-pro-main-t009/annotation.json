@@ -1,0 +1,66 @@
+{
+  "id": "p1-deepseek-v4-pro-main-t009",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 9,
+  "path": "checkpoint_inputs_ext/927a091f84a0608782f3eea77b6014ed9cbe9b88b86b47b324b225ba97a7e4ce.md",
+  "bytes": 7089,
+  "sha256": "927a091f84a0608782f3eea77b6014ed9cbe9b88b86b47b324b225ba97a7e4ce",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5691,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 877,
+        "output_tokens_details": {
+          "thinking_tokens": 599
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 5691,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 877,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 5691,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 5691
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "monovariant K + sum Omega strictly decreases; move never yields two 1s so K=0 unreachable, terminal K=1",
+    "upper_bound_mechanism": "gcd of p-adic valuation multiset invariant under (a,b)->(min,|a-b|), proved both divisibility directions incl. zeros/equal case",
+    "wrong_answer_stated": false,
+    "notes": "Complete: explicit M = prod p^{gcd_i v_p(a_i)}; valuation move description with min/|diff| and no-two-ones check; correct termination monovariant with case analysis; invariance lemma proved in full generality including zero and equal valuations; final board gcd = v_p(M)."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

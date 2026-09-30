@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-0db62b6e6ab5",
+  "problem": "1",
+  "sha256": "0db62b6e6ab55f27c632148783ed255ccd412cb80214df06130ba689c98f88a0",
+  "path": "checkpoint_inputs_ext/0db62b6e6ab55f27c632148783ed255ccd412cb80214df06130ba689c98f88a0.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 1,
+  "record_ids": [
+    "p1-gpt-5.6-sol-xhigh-main-t001"
+  ],
+  "bytes": 1476,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 427,
+        "output_tokens": 2445,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 31.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "lexicographic descent on (product, #nonunit entries)",
+    "upper_bound_mechanism": "invariance of gcd of p-adic exponents",
+    "wrong_answer_stated": false,
+    "notes": "Tracking file only; full proof 'being assembled'. Correct explicit formula M=prod p^{g_p} stated (hedged as 'expected'). Valuation map (min,|a-b|) and exponent-gcd invariance merely asserted ('consequently'), no gcd(x,y-x) case analysis. Termination descent sketched correctly, but 'product cannot become 1' (survivor exists) is unjustified; 'never outputs two 1s' absent."
+  },
+  "S": 0,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

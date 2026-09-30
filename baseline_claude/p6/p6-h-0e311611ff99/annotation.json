@@ -1,0 +1,66 @@
+{
+  "id": "p6-h-0e311611ff99",
+  "problem": "6",
+  "sha256": "0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780",
+  "path": "checkpoint_inputs/0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8828b58a",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-8828b58a-v2"
+  ],
+  "bytes": 16700,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 9175,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 3433,
+        "output_tokens_details": {
+          "thinking_tokens": 3195
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 9175,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3433,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 9175,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 9175
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 44.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 1,
+    "complete": false,
+    "main_gap": "Lemma 1 (finitely many primes) is FALSE — the write-up's own example produces 66=2·3·11, 70=2·5·7, 78=2·3·13 — and its CRT 'proof' is incoherent (it builds x_k coprime to all previous terms, then calls that a contradiction).",
+    "notes": "Lemma 3 is also false (42=2·3·7 appears in their own example) and admittedly hand-waved ('formalized in Lemma 4'). Lemma 6's uniqueness/backward argument never shows b_1=a_1. Only the routine part — merge of progressions is eventually periodic given stabilization — is sound."
+  },
+  "S": null,
+  "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+  "path_base": "bundle root"
+}

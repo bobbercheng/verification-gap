@@ -1,0 +1,74 @@
+{
+ "gate": "witness_blind",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final-H",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 53.7,
+  "input_tokens": 2,
+  "output_tokens": 4816,
+  "cache_read_input_tokens": 1224,
+  "cache_creation_input_tokens": 9049,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7294,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.007394,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 4816,
+    "cacheReadInputTokens": 1224,
+    "cacheCreationInputTokens": 9049,
+    "webSearchRequests": 0,
+    "costUSD": 0.21151199999999998,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 4483,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Lemma 2 (greedy/alternating-sum reduction) checked incl. inequalities (2.1),(2.2). Lemma 4 tree-component/2-colouring argument with (3.1) is complete for all n. Lemma 5 subset-sum pigeonhole plus cross-pairing grid construction verified: mark count ≤ n, grids coincide on [0,β_q], leftover sums to Δ ≤ u. Answer 2^n/(2^{n+1}-1) correct."
+ },
+ "anchors": {}
+}

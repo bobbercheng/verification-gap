@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-f4b82aeef8ab",
+  "problem": "3",
+  "sha256": "f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00",
+  "path": "checkpoint_inputs/f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round3",
+  "turn": 14,
+  "record_ids": [
+    "kimi-k3-round3-t014"
+  ],
+  "bytes": 2892,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2769,
+        "output_tokens": 759,
+        "output_tokens_details": {
+          "thinking_tokens": 487
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 759,
+            "cache_read_input_tokens": 2769,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 11.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "matching formula + component decomposition + block lemma (sketch, matching formula only empirically verified)",
+    "upper_bound_mechanism": "subset-sum pigeonhole on 2^(n+1) signed sums (named; chain=signed-sum equivalence unproved, checked n<=4)",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form asserted as answer. Reduction to alternating sum only asserted ('proved, brute-force verified') with no written argument. Part A lower bound is a structured sketch relying on an empirically verified matching formula. Part B upper bound explicitly incomplete: 'chain theorem needs proof', numerics only."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

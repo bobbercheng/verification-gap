@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted-G",
+ "base_id": "gpt56-ours-accepted",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "witness-gpt__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.1,
+  "input_tokens": 2,
+  "output_tokens": 677,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 6042,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5002,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005097,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 677,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 6042,
+    "webSearchRequests": 0,
+    "costUSD": 0.0781765,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 359,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "L3.2 requires an explicit Xiang reply with at most n cuts realizing G <= Sigma(S)-Sigma(T). The write-up's upper half of the Refinement Lemma is exactly this construction, and for the main case B != empty it says only 'standard; details omitted' — no overlay alignment, no pairing verification, no cut count. Only the degenerate B = empty case is argued. Section 3 merely cites the lemma, and Section 4 uses only its lower half, so nothing else in the text supplies the construction or the count |A|+|B| overlay cuts plus bisections <= q-1. Supplying it is a lemma-sized addition, not a local edit."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "upper_bound"
+}

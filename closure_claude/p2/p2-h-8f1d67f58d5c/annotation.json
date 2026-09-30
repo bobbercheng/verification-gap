@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-8f1d67f58d5c",
+  "problem": "2",
+  "sha256": "8f1d67f58d5ccf092a255eb99e87b79829e4ef0ebfdc849e1b7b5080dd6bcaed",
+  "path": "checkpoint_inputs/8f1d67f58d5ccf092a255eb99e87b79829e4ef0ebfdc849e1b7b5080dd6bcaed.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 8,
+  "record_ids": [
+    "p2-grok-4.5-main-t008"
+  ],
+  "bytes": 1525,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1345,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 594,
+        "output_tokens_details": {
+          "thinking_tokens": 366
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1345,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 594,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 1345,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1345
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Goal correctly stated but explicitly 'proof not yet found'. Only angle-parameter unpacking (α,β,γ) with triangle angle sums — no concyclicity translation, no usable coordinate encoding. Evidence is numerical only, which earns no credit. No key circle through A, K, L; no derivation of OM=ON. Remaining content is a list of untried ideas."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

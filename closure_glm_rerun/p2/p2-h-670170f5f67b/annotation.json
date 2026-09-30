@@ -1,0 +1,46 @@
+{
+  "id": "p2-h-670170f5f67b",
+  "problem": "2",
+  "sha256": "670170f5f67b7ba8926ea3c0b93fbd131eaaee9fbd93716aff2d1fd9d0464d0e",
+  "path": "checkpoint_inputs/670170f5f67b7ba8926ea3c0b93fbd131eaaee9fbd93716aff2d1fd9d0464d0e.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 41,
+  "record_ids": [
+    "p2-gpt-5.6-sol-max-main-t041"
+  ],
+  "bytes": 4600,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1433,
+        "output_tokens": 8430,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 89.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "unexecuted determinant/Gröbner test of circle-coefficient identity (V)",
+    "upper_bound_mechanism": "equal powers of M,N via oblique circle coefficients",
+    "wrong_answer_stated": false,
+    "notes": "Oblique-coordinate setup genuinely encodes all three angle conditions; sine-law derivation of (II) checks out (identities verified). Finish from equal-power condition (V) to OM=ON is correctly written. But (V) itself is unproved, left to a corrected-but-unrun script after a retracted SymPy bug; key-circle content is only reduced to an unexecuted computation."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

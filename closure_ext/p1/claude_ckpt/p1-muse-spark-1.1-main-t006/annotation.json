@@ -1,0 +1,66 @@
+{
+  "id": "p1-muse-spark-1.1-main-t006",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 6,
+  "path": "checkpoint_inputs_ext/e073e996239a09dc7f07165fc08db8248312169f6e5468505e4c00950e064580.md",
+  "bytes": 6757,
+  "sha256": "e073e996239a09dc7f07165fc08db8248312169f6e5468505e4c00950e064580",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4413,
+        "cache_read_input_tokens": 1363,
+        "output_tokens": 915,
+        "output_tokens_details": {
+          "thinking_tokens": 638
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4413,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 915,
+            "cache_read_input_tokens": 1363,
+            "cache_creation_input_tokens": 4413,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4413
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "count of entries >1 stabilizes, then product strictly decreases (infinite descent); at least one output >1 shown",
+    "upper_bound_mechanism": "per-prime gcd of valuations invariant via gcd(a,b)=gcd(min(a,b),|a-b|)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: valuation map (min,|a-b|) with proof no move yields two 1s; product P_{t+1}=P_t/g correctly noted as non-strict when g=1, avoiding the false lemma; k_t>=1 shown so terminal state has exactly one M>1; gcd invariance covers equal/zero cases; explicit M formula given."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

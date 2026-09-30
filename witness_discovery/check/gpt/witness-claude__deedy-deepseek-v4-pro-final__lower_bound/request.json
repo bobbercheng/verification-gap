@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-deepseek-v4-pro-final",
+ "tag": "lower_bound",
+ "text_sha256": "ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "not_written",
+  "quote": "Attempted to compute X's optimal response to L's marks via discretized search; results suggest L can guarantee at least (n+1)/(2n+1) by placing marks at 1/(2n+1), 2/(2n+1), ..., n/(2n+1).",
+  "witness": "Missing statement: an explicit Liu division together with a proof, valid for every n and every one of Xiang Yu's at most n replies (arbitrary interleaving of new cuts), that Liu's alternating-sum total is at least c. The quoted passage reports only discretized numerical search on a guessed division and proves nothing; moreover the proposed target (n+1)/(2n+1) exceeds the true value 2^n/(2^{n+1}-1) for n>=3, so no such proof exists for it.",
+  "load_bearing": "The claimed guarantee for Liu rests entirely on this unproved numerical observation; no strategy argument covering arbitrary Xiang replies appears anywhere in the text."
+ },
+ "started_utc": "2026-09-06 04:36:30 UTC"
+}

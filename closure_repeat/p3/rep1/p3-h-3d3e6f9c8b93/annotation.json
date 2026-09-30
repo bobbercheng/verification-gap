@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-3d3e6f9c8b93",
+  "problem": "3",
+  "sha256": "3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a",
+  "path": "checkpoint_inputs/3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 6,
+  "record_ids": [
+    "gpt-5.6-sol-pro-main-t006"
+  ],
+  "bytes": 3652,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1490,
+        "output_tokens": 2106,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 26.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "direct n=1 analysis (Liu marks at 2/3)",
+    "upper_bound_mechanism": "direct n=1 analysis (Xiang's single cut)",
+    "wrong_answer_stated": false,
+    "notes": "Only n=1 fully solved: c_1=2/3 with both Liu's guarantee and Xiang's best reply argued. Reduction to alternating sum D stated but greedy-claiming proof explicitly deferred; layer-cake identity asserted unproved. General n open; pairing idea merely exploratory. No general closed form stated."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

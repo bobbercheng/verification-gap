@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-0f9b4ecd6f83",
+  "problem": "3",
+  "sha256": "0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6",
+  "path": "checkpoint_inputs/0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6.md",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "kimi-r1-c1"
+  ],
+  "bytes": 3339,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1656,
+        "output_tokens": 6550,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 78.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division 2^n:...:2:1 (verified n<=3 only, no proof)",
+    "upper_bound_mechanism": "recursive halve/match-cut case induction (sketch)",
+    "wrong_answer_stated": false,
+    "notes": "Lemma 1 is a complete, correct reduction to the odd-position sum. Correct closed form 2^n/(2^{n+1}-1) appears only as a conjecture, verified computationally for n<=3. Lower bound: geometric division named but proof listed as open gap. Upper bound: two-case recursive cut strategy sketched; author admits induction and value functions are unfinished."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

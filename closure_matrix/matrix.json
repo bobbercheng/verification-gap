@@ -1,0 +1,3327 @@
+{
+ "coverage": {
+  "2": {
+   "items": 77,
+   "annotated": 77,
+   "lineages": 12,
+   "missing_dirs": [],
+   "first_pass_grades": 9,
+   "final_grades": 9,
+   "budget_models": 9
+  },
+  "3": {
+   "items": 57,
+   "annotated": 57,
+   "lineages": 17,
+   "missing_dirs": [],
+   "first_pass_grades": 9,
+   "final_grades": 9,
+   "budget_models": 9
+  },
+  "6": {
+   "items": 42,
+   "annotated": 42,
+   "lineages": 12,
+   "missing_dirs": [],
+   "first_pass_grades": 9,
+   "final_grades": 9,
+   "budget_models": 9
+  }
+ },
+ "layer": "valid",
+ "lineages": [
+  {
+   "problem": "2",
+   "lineage": "deedy-claude-fable-5",
+   "model": "claude-fable-5",
+   "source": "public",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "p2-claude-fable-5-main-t006",
+     "label": "claude-fable-5-main, t6",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-claude-fable-5-main-t011",
+     "label": "claude-fable-5-main, t11",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-claude-fable-5-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "claude-fable-5-main, t11",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "affine power identity F≡0 (four-circle combination, vanished at A,K,L)",
+    "upper": "power evaluation at B,C with cx=by and median-length formula",
+    "notes": "Complete rigorous write-up: X,Y constructed via crossbar, all three concyclicities proved with directed angles incl. tangency cases, affine power identity proved in full, finish via median formula with signs handled."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 141363,
+    "tool_calls": 24,
+    "current_md_writes": 2,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 5890,
+    "minutes": 27.4
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "2",
+   "lineage": "deedy-deepseek-v4-pro",
+   "model": "deepseek-v4-pro",
+   "source": "public",
+   "n_checkpoints": 5,
+   "route_na": "complex coordinates (plan, unexecuted)",
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 5,
+   "S_sequence": [
+    {
+     "id": "p2-deepseek-v4-pro-main-t017",
+     "label": "deepseek-v4-pro-main, t17",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deepseek-v4-pro-main-t033",
+     "label": "deepseek-v4-pro-main, t33",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deepseek-v4-pro-main-t052",
+     "label": "deepseek-v4-pro-main, t52",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deepseek-v4-pro-main-t080",
+     "label": "deepseek-v4-pro-main, t80",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-deepseek-v4-pro-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "none",
+    "upper": "none",
+    "notes": "The complex setup (M=0, N=1, B=-A, C=2-A) with the three explicit Im(...)=0 conditions correctly encodes all three angle hypotheses (verified term-by-term), so the translation is done. However, no key circle is identified, and the finish is an unexecuted 'need to show P ∈ Ideal(R1,R2,R3)'; numeric checks and special cases earn no credit."
+   },
+   "first_pass_grade": 2,
+   "final_grade": 2,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 295827,
+    "tool_calls": 80,
+    "current_md_writes": 4,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 3698,
+    "minutes": 82.3
+   },
+   "grade_for_agreement": 2,
+   "grade_first_pass": 2
+  },
+  {
+   "problem": "2",
+   "lineage": "deedy-gpt-5.6-sol",
+   "model": "gpt-5.6-sol",
+   "source": "public",
+   "n_checkpoints": 5,
+   "route_na": "complex coordinates",
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 5,
+   "S_sequence": [
+    {
+     "id": "p2-gpt-5.6-sol-main-t001",
+     "label": "gpt-5.6-sol-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-main-t006",
+     "label": "gpt-5.6-sol-main, t6",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-main-t015",
+     "label": "gpt-5.6-sol-main, t15",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-main-t019",
+     "label": "gpt-5.6-sol-main, t19",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-gpt-5.6-sol-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "complex equal-power lemma (H=0 cancellation, unexecuted)",
+    "upper": "equal powers of M,N wrt (AKL) ⟹ OM=ON",
+    "notes": "Complex setup genuinely encodes all three angle hypotheses via sine-rule coordinates and reality relations (3)-(4), so reduction is complete. Circle (AKL) explicit via (5)-(6). But crux H=0 rests on an unexecuted substitution; listed conjugate pairs (u,-ū) do not themselves sum to zero. Final power-to-distance step correct yet premised on unproved equal powers."
+   },
+   "first_pass_grade": 4,
+   "final_grade": 4,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 17860,
+    "tool_calls": 19,
+    "current_md_writes": 4,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 940,
+    "minutes": 14.8
+   },
+   "grade_for_agreement": 4,
+   "grade_first_pass": 4
+  },
+  {
+   "problem": "2",
+   "lineage": "deedy-gpt-5.6-sol-max",
+   "model": "gpt-5.6-sol-max",
+   "source": "public",
+   "n_checkpoints": 17,
+   "route_na": "cartesian coordinates",
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    2
+   ],
+   "S_sources": [
+    "agree",
+    "conservative"
+   ],
+   "n_annotated": 17,
+   "S_sequence": [
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t001",
+     "label": "gpt-5.6-sol-max-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t006",
+     "label": "gpt-5.6-sol-max-main, t6",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t011",
+     "label": "gpt-5.6-sol-max-main, t11",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t016",
+     "label": "gpt-5.6-sol-max-main, t16",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t021",
+     "label": "gpt-5.6-sol-max-main, t21",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t026",
+     "label": "gpt-5.6-sol-max-main, t26",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t031",
+     "label": "gpt-5.6-sol-max-main, t31",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t036",
+     "label": "gpt-5.6-sol-max-main, t36",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t041",
+     "label": "gpt-5.6-sol-max-main, t41",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t046",
+     "label": "gpt-5.6-sol-max-main, t46",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t051",
+     "label": "gpt-5.6-sol-max-main, t51",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t056",
+     "label": "gpt-5.6-sol-max-main, t56",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t061",
+     "label": "gpt-5.6-sol-max-main, t61",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t066",
+     "label": "gpt-5.6-sol-max-main, t66",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t071",
+     "label": "gpt-5.6-sol-max-main, t71",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-max-main-t077",
+     "label": "gpt-5.6-sol-max-main, t77",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-gpt-5.6-sol-max-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": true,
+   "monotone": false,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "analytic circumcircle equation of AKL with explicit polynomial certificate",
+    "upper": "power/algebra: OM^2-ON^2 as linear relation in circle coefficients",
+    "notes": "Full analytic proof: all three angle conditions explicitly translated into sine-law relations (1)-(13); circumcircle of AKL computed in Cartesian coordinates; explicit certificate (22) with fully displayed multipliers reduces target to the two quadratics and Pythagorean identities; finish OM^2-ON^2=0 carried out with signs/positivity handled."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 92748,
+    "tool_calls": 80,
+    "current_md_writes": 16,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 1159,
+    "minutes": 37.1
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "2",
+   "lineage": "deedy-gpt-5.6-sol-pro",
+   "model": "gpt-5.6-sol-pro",
+   "source": "public",
+   "n_checkpoints": 9,
+   "route_na": "trigonometric",
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    2,
+    1
+   ],
+   "S_sources": [
+    "agree",
+    "conservative"
+   ],
+   "n_annotated": 9,
+   "S_sequence": [
+    {
+     "id": "p2-gpt-5.6-sol-pro-main-t001",
+     "label": "gpt-5.6-sol-pro-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-pro-main-t006",
+     "label": "gpt-5.6-sol-pro-main, t6",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-pro-main-t011",
+     "label": "gpt-5.6-sol-pro-main, t11",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-pro-main-t016",
+     "label": "gpt-5.6-sol-pro-main, t16",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-pro-main-t022",
+     "label": "gpt-5.6-sol-pro-main, t22",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-pro-main-t028",
+     "label": "gpt-5.6-sol-pro-main, t28",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-pro-main-t033",
+     "label": "gpt-5.6-sol-pro-main, t33",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-pro-main-t038",
+     "label": "gpt-5.6-sol-pro-main, t38",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-gpt-5.6-sol-pro-final",
+     "label": "final file",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 1,
+   "first_S2": null,
+   "ever_S1": true,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "none",
+    "upper": "oriented circle / power-of-a-point on lines AB, AC with trig factorization T = sin(x-y)·(compatibility residual)",
+    "notes": "Complete trigonometric proof: all three angle conditions encoded via sine rule (Eqs 1-4); ray order justified; OM=ON reduced to cd-be=(c^2-b^2)/2 using circumcircle intersections D,E; identity (12) proved in full. No concyclicity key-circle mechanism used, so lower_bound is 0 though the proof succeeds by other means."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 253505,
+    "tool_calls": 55,
+    "current_md_writes": 8,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 4609,
+    "minutes": 50.9
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "2",
+   "lineage": "deedy-gpt-5.6-sol-xhigh",
+   "model": "gpt-5.6-sol-xhigh",
+   "source": "public",
+   "n_checkpoints": 12,
+   "route_na": "complex coordinates",
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 12,
+   "S_sequence": [
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t001",
+     "label": "gpt-5.6-sol-xhigh-round1, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t006",
+     "label": "gpt-5.6-sol-xhigh-round1, t6",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t011",
+     "label": "gpt-5.6-sol-xhigh-round1, t11",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t016",
+     "label": "gpt-5.6-sol-xhigh-round1, t16",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t021",
+     "label": "gpt-5.6-sol-xhigh-round1, t21",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t026",
+     "label": "gpt-5.6-sol-xhigh-round1, t26",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t031",
+     "label": "gpt-5.6-sol-xhigh-round1, t31",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t036",
+     "label": "gpt-5.6-sol-xhigh-round1, t36",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round1-t041",
+     "label": "gpt-5.6-sol-xhigh-round1, t41",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round2-t005",
+     "label": "gpt-5.6-sol-xhigh-round2, t5",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt-5.6-sol-xhigh-round2-t010",
+     "label": "gpt-5.6-sol-xhigh-round2, t10",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-gpt-5.6-sol-xhigh-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "final file",
+   "ever_S1": true,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "complex coordinate setup with fully proved determinant factorization lemma (tangent substitution + continuity for exceptional cases)",
+    "upper": "equal powers of M and N w.r.t. (AKL) via vanishing augmented determinant => OM=ON",
+    "notes": "Complete analytic proof. All three angle hypotheses encoded in coordinates (2)-(5); factorization lemma proved in full with explicit coefficient check and continuity handling; finish derives OM=ON from equality of powers via determinant."
+   },
+   "first_pass_grade": 4,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 4,
+    "completion_tokens": 113253,
+    "tool_calls": 132,
+    "current_md_writes": 11,
+    "sessions_without_current_write": 2,
+    "tokens_per_tool_call": 858,
+    "minutes": 106.4
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 4
+  },
+  {
+   "problem": "2",
+   "lineage": "deedy-grok-4.5",
+   "model": "grok-4.5",
+   "source": "public",
+   "n_checkpoints": 11,
+   "route_na": "undetermined (tracking file, no proof route executed)",
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 11,
+   "S_sequence": [
+    {
+     "id": "p2-grok-4.5-main-t008",
+     "label": "grok-4.5-main, t8",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t015",
+     "label": "grok-4.5-main, t15",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t020",
+     "label": "grok-4.5-main, t20",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t029",
+     "label": "grok-4.5-main, t29",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t034",
+     "label": "grok-4.5-main, t34",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t039",
+     "label": "grok-4.5-main, t39",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t044",
+     "label": "grok-4.5-main, t44",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t049",
+     "label": "grok-4.5-main, t49",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t054",
+     "label": "grok-4.5-main, t54",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-grok-4.5-main-t059",
+     "label": "grok-4.5-main, t59",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-grok-4.5-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "none",
+    "upper": "none",
+    "notes": "Tracking file, not a proof. Goal OM=ON restated (with typos); strategy only vague ('perhaps reflection of O', congruent triangles, Cartesian), equivalent to restating goal. No concyclicity translation of angle conditions, no key circle through A,K,L, no finish. Numerical checks and isosceles-by-reflection claim are unexecuted assertions."
+   },
+   "first_pass_grade": 2,
+   "final_grade": 2,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 127445,
+    "tool_calls": 83,
+    "current_md_writes": 10,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 1535,
+    "minutes": 37.2
+   },
+   "grade_for_agreement": 2,
+   "grade_first_pass": 2
+  },
+  {
+   "problem": "2",
+   "lineage": "deedy-kimi-k3",
+   "model": "kimi-k3",
+   "source": "public",
+   "n_checkpoints": 2,
+   "route_na": "law-of-sines / power-of-a-point coordinates",
+   "S_raw_sequence": [
+    2,
+    2
+   ],
+   "S_sources": [
+    "conservative"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "p2-kimi-k3-main-t023",
+     "label": "kimi-k3-main, t23",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-kimi-k3-final",
+     "label": "final file",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 1,
+   "first_S2": null,
+   "ever_S1": true,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "law-of-sines quadratics ConsP/ConsQ eliminating beta,gamma (Step 3)",
+    "upper": "power of B,C via circle equation through A,K,L; Apollonius median link (Steps 1,4,5,6)",
+    "notes": "Complete coordinate/power proof. All three angle conditions encoded via four law-of-sines relations; elimination to ConsP/ConsQ fully written; power formulas (2),(3) derived; identity (4) verified monomial-by-monynomial with E=0 shown; (5) by symmetry. Finish OM=ON rigorous, sign issues handled (sin(A+phi)>0)."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 171310,
+    "tool_calls": 26,
+    "current_md_writes": 1,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 6589,
+    "minutes": 84.8
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "2",
+   "lineage": "deedy-muse-spark-1.1",
+   "model": "muse-spark-1.1",
+   "source": "public",
+   "n_checkpoints": 2,
+   "route_na": "coordinates (reduction only)",
+   "S_raw_sequence": [
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "p2-muse-spark-1.1-main-t007",
+     "label": "muse-spark-1.1-main, t7",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-deedy-muse-spark-1.1-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "none",
+    "upper": "none",
+    "notes": "Unsolved tracking file. OM=ON stated; coordinate reduction OM=ON iff Ox=0 is correct. Angle-to-ray setup (alpha,beta,gamma; consistency equations E1,E2) correctly sketches encoding of all three hypotheses but equations are never written or solved. No key circle containing A,K,L; no finish; proof 'TBD', only numeric suspicion."
+   },
+   "first_pass_grade": 2,
+   "final_grade": 2,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 183399,
+    "tool_calls": 12,
+    "current_md_writes": 1,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 15283,
+    "minutes": 40.8
+   },
+   "grade_for_agreement": 2,
+   "grade_first_pass": 2
+  },
+  {
+   "problem": "2",
+   "lineage": "ours-glm52",
+   "model": "glm-5.2",
+   "source": "ours",
+   "n_checkpoints": 2,
+   "route_na": "coordinates with computer-algebra certificate",
+   "S_raw_sequence": [
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree",
+    "conservative"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "p2-glm52-f823332e-v1",
+     "label": "f823332e, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 4,
+       "completeness": 3,
+       "rigor": 3,
+       "self_contained": 3
+      },
+      "n_fatal": 0,
+      "n_unverified": 0,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p2-glm52-f823332e-v2",
+     "label": "f823332e, t2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "pass",
+      "scores": {
+       "correctness": 4,
+       "completeness": 4,
+       "rigor": 3,
+       "self_contained": 4
+      },
+      "n_fatal": 0,
+      "n_unverified": 0,
+      "review_pass": true,
+      "verification": "confirm",
+      "gate_pass": true
+     }
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "none",
+    "upper": "asserted CAS numerator-divisibility certificate (antipode on perpendicular bisector of BC)",
+    "notes": "Coordinate setup genuinely encodes all three hypotheses: sine-rule parametrisation plus G1 (derived in-line, correct) and G2 (by B/C-symmetry); additive orderings properly derived from strict interiors. Antipode reformulation of OM=ON is rigorous. However the closing identity num(E)=Q·num(G2) is an asserted CAS certificate with Q relegated to an external file — an unexecuted computation. No key circle through A,K,L is ever identified."
+   },
+   "gate": "pass",
+   "gate_passing_checkpoints": [
+    "f823332e, t2"
+   ],
+   "recorded_outcome": null,
+   "grade_for_agreement": 7
+  },
+  {
+   "problem": "2",
+   "lineage": "ours-gpt56sol-ultra",
+   "model": "gpt-5.6-sol",
+   "source": "ours",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "p2-gpt56-212c6c54-v1",
+     "label": "212c6c54, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-gpt56-d8fdf9d1-v1",
+     "label": "d8fdf9d1, t1",
+     "S": 2,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "pass",
+      "scores": {
+       "correctness": 4,
+       "completeness": 4,
+       "rigor": 4,
+       "self_contained": 4
+      },
+      "n_fatal": 0,
+      "n_unverified": 2,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p2-gpt56-d8fdf9d1-v2",
+     "label": "d8fdf9d1, t2",
+     "S": 2,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "pass",
+      "scores": {
+       "correctness": 4,
+       "completeness": 4,
+       "rigor": 4,
+       "self_contained": 4
+      },
+      "n_fatal": 0,
+      "n_unverified": 0,
+      "review_pass": true,
+      "verification": "confirm",
+      "gate_pass": true
+     }
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "d8fdf9d1, t1",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "circle Ω with diameter AZ; L, K placed on it via radical axis of Ω with (BLN) and (CKM)",
+    "upper": "O is midpoint of AZ, so MO = ½BZ and NO = ½CZ with ZB = ZC",
+    "notes": "Complete and rigorous. Translation of all three angle conditions into BCEF concyclic, E∈(BLN), F∈(CKM), including degenerate tangent cases. Key circle Ω (diameter AZ) membership of K, L proved via power/radical-axis identities with midpoint computations written out. Finish gives OM = ON directly."
+   },
+   "gate": "pass",
+   "gate_passing_checkpoints": [
+    "d8fdf9d1, t2"
+   ],
+   "recorded_outcome": null,
+   "grade_for_agreement": 7
+  },
+  {
+   "problem": "2",
+   "lineage": "ours-nemotron",
+   "model": "nemotron-3-ultra",
+   "source": "ours",
+   "n_checkpoints": 6,
+   "route_na": "complex reality conditions + spiral similarity (unexecuted)",
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 6,
+   "S_sequence": [
+    {
+     "id": "p2-nemotron-80085a35-v1",
+     "label": "80085a35, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "reject",
+      "scores": {
+       "correctness": 1,
+       "completeness": 1,
+       "rigor": 1,
+       "self_contained": 2
+      },
+      "n_fatal": 6,
+      "n_unverified": 8,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p2-nemotron-4e40fa30-v1",
+     "label": "4e40fa30, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 2,
+       "completeness": 1,
+       "rigor": 2,
+       "self_contained": 3
+      },
+      "n_fatal": 3,
+      "n_unverified": 4,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p2-nemotron-69253a90-v1",
+     "label": "69253a90, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p2-nemotron-9c3c93da-v1",
+     "label": "9c3c93da, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 2,
+       "completeness": 2,
+       "rigor": 2,
+       "self_contained": 2
+      },
+      "n_fatal": 4,
+      "n_unverified": 5,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p2-nemotron-9c3c93da-v2",
+     "label": "9c3c93da, t2",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 2,
+       "completeness": 2,
+       "rigor": 1,
+       "self_contained": 2
+      },
+      "n_fatal": 4,
+      "n_unverified": 7,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p2-nemotron-109446af-v1",
+     "label": "109446af, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 1,
+       "completeness": 0,
+       "rigor": 1,
+       "self_contained": 1
+      },
+      "n_fatal": 5,
+      "n_unverified": 6,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": true,
+   "final_mechanisms": {
+    "lower": "none",
+    "upper": "perpendicular-bisector/homothety reduction contingent on unproved KA=KB",
+    "notes": "Honest partial. Three angle conditions correctly encoded as complex reality conditions but elimination never executed, so reduction only set up. No key circle through A,K,L; central lemma KA=KB is explicitly unverified conjecture. Finish reduced to unexecuted circumcenter algebra with numerical check only."
+   },
+   "gate": "fail",
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": null,
+   "grade_for_agreement": 0
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-claude-fable-5",
+   "model": "claude-fable-5",
+   "source": "public",
+   "n_checkpoints": 4,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 4,
+   "S_sequence": [
+    {
+     "id": "claude-fable-5-main-t002",
+     "label": "claude-fable-5-main, t2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "claude-fable-5-main-t007",
+     "label": "claude-fable-5-main, t7",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "claude-fable-5-main-t013",
+     "label": "claude-fable-5-main, t13",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "deedy-claude-fable-5-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "claude-fable-5-main, t13",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "rank-pair tree component + signed subset-sum (geometric 1:2:...:2^n marking)",
+    "upper": "subset-sum pigeonhole + overlay equal-pair/cross-pairing cuts",
+    "notes": "Full rigorous all-n proof. Lemma 2 fully proves picking-phase value (1+D)/2 for both players. Lower bound: pairing graph on original pieces must contain a tree component; 2-coloring plus signed subset-sum (3.1) yields D≥u against every reply. Upper bound: pigeonhole gap ≤u plus overlay construction with ≤n marks forces D≤u; mark counts and distinctness checked. Correct closed form boxed."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 2,
+    "completion_tokens": 331025,
+    "tool_calls": 25,
+    "current_md_writes": 3,
+    "sessions_without_current_write": 1,
+    "tokens_per_tool_call": 13241,
+    "minutes": 72.8
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-deepseek-v4-pro",
+   "model": "deepseek-v4-pro",
+   "source": "public",
+   "n_checkpoints": 2,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "deepseek-v4-pro-main-t009",
+     "label": "deepseek-v4-pro-main, t9",
+     "S": 0,
+     "wrong_answer": true,
+     "review": null
+    },
+    {
+     "id": "deedy-deepseek-v4-pro-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": true,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": true,
+   "wrong_answer_any": true,
+   "final_mechanisms": {
+    "lower": "uniform spacing (conjectured only, false)",
+    "upper": "none",
+    "notes": "Conjectures c=(n+1)/(2n+1), which is wrong for n>=2 (true value 4/7 at n=2, not 3/5). No reduction, no proofs written; lower-bound strategy only numerically suggested and false; upper bound merely posed as an open question. 'Full proof' section empty."
+   },
+   "first_pass_grade": 1,
+   "final_grade": 1,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 326465,
+    "tool_calls": 55,
+    "current_md_writes": 1,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 5936,
+    "minutes": 102.9
+   },
+   "grade_for_agreement": 1,
+   "grade_first_pass": 1
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-gpt-5.6-sol",
+   "model": "gpt-5.6-sol",
+   "source": "public",
+   "n_checkpoints": 4,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    2
+   ],
+   "S_sources": [
+    "agree",
+    "conservative"
+   ],
+   "n_annotated": 4,
+   "S_sequence": [
+    {
+     "id": "gpt-5.6-sol-main-t001",
+     "label": "gpt-5.6-sol-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "gpt-5.6-sol-main-t006",
+     "label": "gpt-5.6-sol-main, t6",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "gpt-5.6-sol-main-t011",
+     "label": "gpt-5.6-sol-main, t11",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "deedy-gpt-5.6-sol-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "geometric partition + refinement lemma part (ii) upward-sweep induction",
+    "upper": "column-sweep alternating-imbalance refinement lemma part (i)",
+    "notes": "Correct closed form stated. Claiming-phase reduction fully proved via greedy matching strategies. Both lemma parts proved for all n (column sweep with parity rows and induction); applied to geometric partition for lower bound and arbitrary partition for upper bound. Minor hand-waving in sweep details, but complete for all n."
+   },
+   "first_pass_grade": 2,
+   "final_grade": 2,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 16574,
+    "tool_calls": 16,
+    "current_md_writes": 3,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 1036,
+    "minutes": 14.8
+   },
+   "grade_for_agreement": 2,
+   "grade_first_pass": 2
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-gpt-5.6-sol-max",
+   "model": "gpt-5.6-sol-max",
+   "source": "public",
+   "n_checkpoints": 2,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "gpt-5.6-sol-max-main-t001",
+     "label": "gpt-5.6-sol-max-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "deedy-gpt-5.6-sol-max-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "none",
+    "upper": "none",
+    "notes": "Explicitly marked unsolved; no answer or bounds given. Only content is a correctly stated but unproven reduction: greedy claiming of longest piece yields the alternating sum of sorted lengths, D = x1 - x2 + x3 - ... . No Liu division, no Xiang reply construction, no small-n values."
+   },
+   "first_pass_grade": 1,
+   "final_grade": 1,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 982,
+    "tool_calls": 1,
+    "current_md_writes": 1,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 982,
+    "minutes": 1.2
+   },
+   "grade_for_agreement": 1,
+   "grade_first_pass": 1
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-gpt-5.6-sol-pro",
+   "model": "gpt-5.6-sol-pro",
+   "source": "public",
+   "n_checkpoints": 4,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 4,
+   "S_sequence": [
+    {
+     "id": "gpt-5.6-sol-pro-main-t001",
+     "label": "gpt-5.6-sol-pro-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "gpt-5.6-sol-pro-main-t006",
+     "label": "gpt-5.6-sol-pro-main, t6",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "gpt-5.6-sol-pro-main-t011",
+     "label": "gpt-5.6-sol-pro-main, t11",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "deedy-gpt-5.6-sol-pro-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "geometric division 1:2:4:...:2^n (conjectured; proved only for n=1)",
+    "upper": "case analysis of Xiang cuts for n=1 only; general case open",
+    "notes": "Claiming-phase reduction to alternating sum D=x1-x2+... is proved inline for all n (greedy both sides). Correct closed form c_n=2^n/(2^{n+1}-1) stated only as a conjecture backed by brute force for n<=4. Geometric Liu division named but no all-n argument; upper bound proved only for n=1; refinement theorem left open."
+   },
+   "first_pass_grade": 2,
+   "final_grade": 2,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 57861,
+    "tool_calls": 13,
+    "current_md_writes": 3,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 4451,
+    "minutes": 27.1
+   },
+   "grade_for_agreement": 2,
+   "grade_first_pass": 2
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-gpt-5.6-sol-xhigh",
+   "model": "gpt-5.6-sol-xhigh",
+   "source": "public",
+   "n_checkpoints": 5,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 5,
+   "S_sequence": [
+    {
+     "id": "gpt-5.6-sol-xhigh-main-t001",
+     "label": "gpt-5.6-sol-xhigh-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "gpt-5.6-sol-xhigh-main-t002",
+     "label": "gpt-5.6-sol-xhigh-main, t2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "gpt-5.6-sol-xhigh-main-t005",
+     "label": "gpt-5.6-sol-xhigh-main, t5",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "gpt-5.6-sol-xhigh-main-t008",
+     "label": "gpt-5.6-sol-xhigh-main, t8",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "deedy-gpt-5.6-sol-xhigh-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "gpt-5.6-sol-xhigh-main, t8",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "powers-of-two (1:2:...:2^n) division with tree-component bipartition argument on pairing graph",
+    "upper": "subset-sum pigeonhole gap + common-refinement equal-pairing overlay with ≤n cuts",
+    "notes": "Complete rigorous proof for all n. Reduction: backward-induction proof that greedy draft yields alternating sorted-sum D. Lower: 1:2:...:2^n split; pairing graph with ≤n edges must contain a tree; bipartition plus dominance of largest power of two forces D≥1/(2^{n+1}-1). Upper: subset-sum pigeonhole and careful refinement cut-count verified. Answer matches 2^n/(2^{n+1}-1)."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 43259,
+    "tool_calls": 19,
+    "current_md_writes": 4,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 2277,
+    "minutes": 27.0
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-grok-4.5",
+   "model": "grok-4.5",
+   "source": "public",
+   "n_checkpoints": 7,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 7,
+   "S_sequence": [
+    {
+     "id": "grok-4.5-main-t001",
+     "label": "grok-4.5-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "grok-4.5-main-t014",
+     "label": "grok-4.5-main, t14",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "grok-4.5-main-t024",
+     "label": "grok-4.5-main, t24",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "grok-4.5-main-t034",
+     "label": "grok-4.5-main, t34",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "grok-4.5-main-t049",
+     "label": "grok-4.5-main, t49",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "grok-4.5-main-t080",
+     "label": "grok-4.5-main, t80",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "deedy-grok-4.5-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "power-of-two division with induction (incomplete)",
+    "upper": "pairing/cancellation to force D=1 (sketch)",
+    "notes": "Correct final answer stated. D defined and Lemma A genuinely proved, but the key reduction V=(sum+D)/2 and greedy optimality are only asserted. Lower bound: 1:2:...:2^n division correct; induction case k=0 fine, main subcases garbled/hand-waved, relies on n<=3 numerics. Upper bound: pairing-to-D=1 idea sketched, <=n-cuts feasibility unjustified; some auxiliary formulas (D(B_n) closed form, target multiset) wrong."
+   },
+   "first_pass_grade": 2,
+   "final_grade": 2,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 273455,
+    "tool_calls": 81,
+    "current_md_writes": 6,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 3376,
+    "minutes": 77.3
+   },
+   "grade_for_agreement": 2,
+   "grade_first_pass": 2
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-kimi-k3",
+   "model": "kimi-k3",
+   "source": "public",
+   "n_checkpoints": 5,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree",
+    "conservative"
+   ],
+   "n_annotated": 5,
+   "S_sequence": [
+    {
+     "id": "kimi-k3-round1-t008",
+     "label": "kimi-k3-round1, t8",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "kimi-k3-round3-t007",
+     "label": "kimi-k3-round3, t7",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "kimi-k3-round3-t014",
+     "label": "kimi-k3-round3, t14",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "kimi-k3-round4-t014",
+     "label": "kimi-k3-round4, t14",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "deedy-kimi-k3-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "kimi-k3-round4, t14",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "matching formula + tree-component argument on super-increasing (geometric 1:2:4:...) split",
+    "upper": "subset-sum pigeonhole gap + greedy chain-realizability lemma + bisect/cancel equal-pair construction",
+    "notes": "Complete all-n proof. Lemma 1.1 (full induction) reduces game to alternating sum. Lower bound: D(M)=min matching cost, loop-aware component graph yields a tree component, tree inequality + margin gives D≥T_n for any refinement. Upper bound: chain theorem via 2^m subset sums and realizability lemma, cut count exactly ≤ n, equal pairs cancel. Answer c=2^n/(2^{n+1}-1) proved."
+   },
+   "first_pass_grade": 5,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 6,
+    "completion_tokens": 846626,
+    "tool_calls": 118,
+    "current_md_writes": 4,
+    "sessions_without_current_write": 3,
+    "tokens_per_tool_call": 7175,
+    "minutes": 490.9
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 5
+  },
+  {
+   "problem": "3",
+   "lineage": "deedy-muse-spark-1.1",
+   "model": "muse-spark-1.1",
+   "source": "public",
+   "n_checkpoints": 2,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "muse-spark-1.1-main-t005",
+     "label": "muse-spark-1.1-main, t5",
+     "S": 0,
+     "wrong_answer": true,
+     "review": null
+    },
+    {
+     "id": "deedy-muse-spark-1.1-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": true,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": true,
+   "wrong_answer_any": true,
+   "final_mechanisms": {
+    "lower": "rank-pair parity cancellation on (2d,...,2d,d) division",
+    "upper": "none",
+    "notes": "Wrong conjecture (n+1)/(2n+1) stated; only n=1 correct. Sorted alternating-sum reduction used throughout but never justified. Lower bound: parity argument on symmetric pairs written for all n but only covers Xiang splitting each big piece once; misses cuts inside the small piece (construction actually fails for n=2). Upper bound: no argument; grid completion shown insufficient, brute force never run."
+   },
+   "first_pass_grade": 1,
+   "final_grade": 1,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 224090,
+    "tool_calls": 24,
+    "current_md_writes": 1,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 9337,
+    "minutes": 51.1
+   },
+   "grade_for_agreement": 1,
+   "grade_first_pass": 1
+  },
+  {
+   "problem": "3",
+   "lineage": "ours-glm52-repair",
+   "model": "glm-5.2",
+   "source": "ours",
+   "n_checkpoints": 1,
+   "route_na": null,
+   "S_raw_sequence": [
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 1,
+   "S_sequence": [
+    {
+     "id": "glm52-repair",
+     "label": "c4",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "c4",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "geometric 1:2:...:2^n opening with inductive even-position majorization (v_2+...+v_2r ≤ 2^n−2^{n−r})",
+    "upper": "subset-sum pigeonhole gap ≤ 1/(2^{n+1}−1) plus greedy max-cancellation into equal pairs, δ ≤ max leftover",
+    "notes": "Correct closed form. Lemma 1 fully proves value = odd(S) via both pairing strategies. Lower bound induction on rank r valid for all n. Upper bound cut count |Z|+c ≤ n, invariance, and δ(L) ≤ ΣL = D ≤ 1/N all written out, including edge cases. Complete."
+   },
+   "gate": null,
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": "7",
+   "grade_for_agreement": 7
+  },
+  {
+   "problem": "3",
+   "lineage": "ours-glm52-simple",
+   "model": "glm-5.2",
+   "source": "ours",
+   "n_checkpoints": 4,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 4,
+   "S_sequence": [
+    {
+     "id": "glm52-simple-c1",
+     "label": "c1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "glm52-simple-c2",
+     "label": "c2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "glm52-simple-c3",
+     "label": "c3",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "glm52-simple-c4",
+     "label": "c4",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "geometric division (1:2:…:2^n) exhibited; induction/merge-inequality only sketched, admitted open for n≥2",
+    "upper": "halving response vs geometric config only; universal bound proved for n=1 (cut at 1/3), no all-n mechanism",
+    "notes": "Draft-game lemma (odd-rank sum) fully proved, plus sup/inf minimax formulation. c(1)=2/3 proved both directions with attainment. For n≥2 the formula is explicitly conjectural: lower bound lacks any 'every Xiang reply' argument (merge inequality unresolved); upper bound has no universal construction beyond n=1. Honest, self-aware partial write-up."
+   },
+   "gate": null,
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": "2",
+   "grade_for_agreement": 2
+  },
+  {
+   "problem": "3",
+   "lineage": "ours-glm53-thin",
+   "model": "glm-5.3",
+   "source": "ours",
+   "n_checkpoints": 4,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 4,
+   "S_sequence": [
+    {
+     "id": "glm53-c1",
+     "label": "c1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": null
+    },
+    {
+     "id": "glm53-c2",
+     "label": "c2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "glm53-c3",
+     "label": "c3",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "glm53-c4",
+     "label": "c4",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": true,
+   "final_mechanisms": {
+    "lower": "geometric partition + layer-cake XOR-merge induction (incomplete)",
+    "upper": "split-at-k* + counting lemma / pairing-refinement moves (incomplete)",
+    "notes": "Correct closed form stated as proposed answer. Greedy reduction to alternating sum written out with pairing argument. Lower bound: geometric division given; only n≤2 and uncut-largest case proved; XOR-merge induction explicitly open. Upper bound: counting lemma and split-at-k* proved only for nonnegative-gap regime plus n≤2; negative-gap Lemma X1 open. Both all-n mechanisms sketched, not established."
+   },
+   "gate": null,
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": "unreviewed",
+   "grade_for_agreement": null
+  },
+  {
+   "problem": "3",
+   "lineage": "ours-gpt56sol-ultra",
+   "model": "gpt-5.6-sol",
+   "source": "ours",
+   "n_checkpoints": 2,
+   "route_na": null,
+   "S_raw_sequence": [
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "gpt56-ours-timeout",
+     "label": "c1",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "gpt56-ours-accepted",
+     "label": "c2",
+     "S": 2,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "pass",
+      "scores": {
+       "correctness": 4,
+       "completeness": 4,
+       "rigor": 4,
+       "self_contained": 4
+      },
+      "n_fatal": 0,
+      "n_unverified": 0,
+      "review_pass": true,
+      "verification": "confirm",
+      "gate_pass": true
+     }
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "c1",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "rank-pair tree/graph bipartition argument",
+    "upper": "subset-sum pigeonhole + overlay cancellation construction",
+    "notes": "Complete rigorous solution. Drafting lemma proved by induction (greedy optimal, value (1+D)/2). Refinement lemma proved both directions for all n: multigraph/tree bipartition lower bound; overlay construction with exact cut count ≤ q−1. Pigeonhole gives Γ ≤ 1/(2^(n+1)−1); binary division achieves equality. Section 5 alternatives are explicitly refuted, not asserted."
+   },
+   "gate": "pass",
+   "gate_passing_checkpoints": [
+    "c2"
+   ],
+   "recorded_outcome": null,
+   "grade_for_agreement": 7
+  },
+  {
+   "problem": "3",
+   "lineage": "ours-kimi-K2-repair",
+   "model": "kimi-k3",
+   "source": "ours",
+   "n_checkpoints": 1,
+   "route_na": null,
+   "S_raw_sequence": [
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 1,
+   "S_sequence": [
+    {
+     "id": "kimi-k2-repair",
+     "label": "c4",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "c4",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "geometric division (2^n:...:1) + even-position majorization (Lemma E induction)",
+    "upper": "subset-sum pigeonhole (gap <= 1/N) + greedy supply-demand cancellation into equal pairs",
+    "notes": "Complete proof for all n. Lemma 1 fully proves the odd/even alternating-sum value via explicit pairing strategies. Theorem A/Lemma E lower bound handles arbitrary Xiang refinements by induction on rank pairs. Theorem B upper bound works for every Liu division, with cut count, empty-pool and L=empty cases repaired. Degenerate cases addressed."
+   },
+   "gate": null,
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": "7",
+   "grade_for_agreement": 7
+  },
+  {
+   "problem": "3",
+   "lineage": "ours-kimi-R1",
+   "model": "kimi-k3",
+   "source": "ours",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "kimi-r1-c1",
+     "label": "c1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "kimi-r1-c2",
+     "label": "c2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "kimi-r1-c3",
+     "label": "c3",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "c3",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "even-position majorization on geometric division 2^n:...:1 (Lemma E induction)",
+    "upper": "subset-sum pigeonhole + greedy equal-pair (supply-demand) cancellation",
+    "notes": "All components fully proved for all n. Lemma 1 pairing proof handles deviation case correctly. Lemma E base and two-case inductive step are valid, yielding even(S) <= 2^n - 1. Theorem B: N-gap pigeonhole, halving of Z-parts, cancellation with cut count c <= |P|+|Q|-1, and delta(L) <= max L. Boxed answer matches."
+   },
+   "gate": null,
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": "6->7",
+   "grade_for_agreement": 6
+  },
+  {
+   "problem": "3",
+   "lineage": "ours-kimi-R2",
+   "model": "kimi-k3",
+   "source": "ours",
+   "n_checkpoints": 4,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 4,
+   "S_sequence": [
+    {
+     "id": "kimi-r2-c1",
+     "label": "c1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "kimi-r2-c2",
+     "label": "c2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "kimi-r2-c3",
+     "label": "c3",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "kimi-r2-c4",
+     "label": "c4",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "dyadic division (1:2:...:2^n) + toggle/symmetric-difference game",
+    "upper": "set-game restriction (pair cancellation/toggle moves) with recursion",
+    "notes": "Correct form appears only as labeled CONJECTURE. Draft reduction asserted with numerics; greedy-optimality lemma explicitly unwritten. LB: dyadic division identified, one inequality of toggle relaxation proved, crux g(n,n)≥1 open; only n=1 full. UB: set-game restriction valid, hand strategies for n≤2 only; general covering argument open."
+   },
+   "gate": null,
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": "1",
+   "grade_for_agreement": 1
+  },
+  {
+   "problem": "3",
+   "lineage": "ours-nemotron",
+   "model": "nemotron-3-ultra",
+   "source": "ours",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "nemotron-p3-1",
+     "label": "c1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 2,
+       "completeness": 2,
+       "rigor": 2,
+       "self_contained": 1
+      },
+      "n_fatal": 3,
+      "n_unverified": 4,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "nemotron-p3-2",
+     "label": "c2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 1,
+       "completeness": 1,
+       "rigor": 1,
+       "self_contained": 1
+      },
+      "n_fatal": 4,
+      "n_unverified": 6,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "nemotron-p3-3",
+     "label": "c3",
+     "S": 0,
+     "wrong_answer": true,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": true,
+   "wrong_answer_any": true,
+   "final_mechanisms": {
+    "lower": "equal-spacing division with alternating-sum analysis (only worst-case reply computed)",
+    "upper": "walk-along-stick grouping into 2/(2n+1) segments (unverified)",
+    "notes": "States incorrect answer (n+1)/(2n+1). Alternating-sum reduction asserted with sketch only. Lower bound verified only against one Xiang reply; admits 'we must also show no other strategy gives less' without proof. Upper bound abandons first pairing as invalid; grouping construction and key lemma 'can be shown' — unproven."
+   },
+   "gate": "fail",
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": null,
+   "grade_for_agreement": 0
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-claude-fable-5",
+   "model": "claude-fable-5",
+   "source": "public",
+   "n_checkpoints": 2,
+   "route_na": null,
+   "S_raw_sequence": [
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "p6-claude-fable-5-main-t005",
+     "label": "claude-fable-5-main, t5",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-claude-fable-5-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "claude-fable-5-main, t5",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "cheap-witness geometric descent on transversal products (forces primes ≤ a_1)",
+    "upper": "residue counting in blocks of length M with shift bijection",
+    "notes": "Complete and correct. Lemma 2 proves (C) for all m ≥ a_1. Lemmas 6–8 prove (F) for all members via geometric descent d ↦ (a_1/q)d, confining primes to ≤ a_1. Step 5 assembles periodicity from n = 1 with L = product of primes ≤ a_1 and T = residue count. Minimal-transversal use is valid, not the warned false lemma."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 2,
+    "completion_tokens": 121922,
+    "tool_calls": 12,
+    "current_md_writes": 1,
+    "sessions_without_current_write": 1,
+    "tokens_per_tool_call": 10160,
+    "minutes": 25.9
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-deepseek-v4-pro",
+   "model": "deepseek-v4-pro",
+   "source": "public",
+   "n_checkpoints": 2,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "p6-deepseek-v4-pro-main-t053",
+     "label": "deepseek-v4-pro-main, t53",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-deepseek-v4-pro-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "minimal transversal stabilization (asserted, 'one shows')",
+    "upper": "finite union of residue classes mod lcm (unfinished)",
+    "notes": "Outline only; no completed arguments. Step 3 (characterization) is a one-line sketch; the key finiteness lemma (step 6) is asserted ('one shows') not proven; step 7 explicitly admits periodicity from n=1 is not derived. Full proof section empty."
+   },
+   "first_pass_grade": 1,
+   "final_grade": 1,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 639183,
+    "tool_calls": 56,
+    "current_md_writes": 1,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 11414,
+    "minutes": 163.6
+   },
+   "grade_for_agreement": 1,
+   "grade_first_pass": 1
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-gpt-5.6-sol",
+   "model": "gpt-5.6-sol",
+   "source": "public",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree",
+    "validity_override"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "p6-gpt-5.6-sol-main-t005",
+     "label": "gpt-5.6-sol-main, t5",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-gpt-5.6-sol-main-t009",
+     "label": "gpt-5.6-sol-main, t9",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-gpt-5.6-sol-final",
+     "label": "final file",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 1,
+   "first_S2": null,
+   "ever_S1": true,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "finitely many minimal prime transversals of a pairwise-intersecting family (search tree + König pruning)",
+    "upper": "L = lcm of transversal products; membership periodic mod L; T = admissible residue classes; enumeration from a_1",
+    "notes": "Complete rigorous proof: characterization of terms as enumeration of admissible set, finiteness of minimal transversals proved in general, and global periodicity from n=1. All three mechanisms fully written out."
+   },
+   "first_pass_grade": 1,
+   "final_grade": 1,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 21420,
+    "tool_calls": 12,
+    "current_md_writes": 2,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 1785,
+    "minutes": 14.5
+   },
+   "grade_for_agreement": 1,
+   "grade_first_pass": 1
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-gpt-5.6-sol-max",
+   "model": "gpt-5.6-sol-max",
+   "source": "public",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "p6-gpt-5.6-sol-max-main-t001",
+     "label": "gpt-5.6-sol-max-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-gpt-5.6-sol-max-main-t006",
+     "label": "gpt-5.6-sol-max-main, t6",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-gpt-5.6-sol-max-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "small-prime factor + bounded-gap route (named, unproven)",
+    "upper": "periodic stabilized set with counting index shift (conditional)",
+    "notes": "Correct setup: S_n reduction, bounded gaps via multiples of a_1, valid pairwise-non-coprime stabilization criterion. But finiteness (large-prime erasure) is only a named 'likely route' plus an a_1=15 example; periodicity assembly is conditional on unproved stabilization, with the from-n=1 identity asserted, not argued."
+   },
+   "first_pass_grade": 1,
+   "final_grade": 1,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 6125,
+    "tool_calls": 6,
+    "current_md_writes": 2,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 1021,
+    "minutes": 7.1
+   },
+   "grade_for_agreement": 1,
+   "grade_first_pass": 1
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-gpt-5.6-sol-pro",
+   "model": "gpt-5.6-sol-pro",
+   "source": "public",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "p6-gpt-5.6-sol-pro-main-t001",
+     "label": "gpt-5.6-sol-pro-main, t1",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-gpt-5.6-sol-pro-main-t006",
+     "label": "gpt-5.6-sol-pro-main, t6",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-gpt-5.6-sol-pro-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "gpt-5.6-sol-pro-main, t6",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "sunflower lemma + weight-descent to terminal minimal supports (finiteness of relevant primes)",
+    "upper": "residue-class counting in length-L window, periodicity from n=1",
+    "notes": "Complete correct proof. Support-only membership and self-duality (C) are proved. Finiteness of relevant primes via Lemma 1 (infinite sunflower, fully proved by induction) and Lemma 2 (strict weight descent), giving finite P and L. Global periodicity a_{n+T}=a_n+L for all n via counting accepted residues in (a_n, a_n+L]. No false lemmas used."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 100209,
+    "tool_calls": 16,
+    "current_md_writes": 2,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 6263,
+    "minutes": 20.2
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-gpt-5.6-sol-xhigh",
+   "model": "gpt-5.6-sol-xhigh",
+   "source": "public",
+   "n_checkpoints": 5,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 5,
+   "S_sequence": [
+    {
+     "id": "p6-gpt-5.6-sol-xhigh-round1-t002",
+     "label": "gpt-5.6-sol-xhigh-round1, t2",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-gpt-5.6-sol-xhigh-main-t004",
+     "label": "gpt-5.6-sol-xhigh-main, t4",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-gpt-5.6-sol-xhigh-main-t005",
+     "label": "gpt-5.6-sol-xhigh-main, t5",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-gpt-5.6-sol-xhigh-main-t006",
+     "label": "gpt-5.6-sol-xhigh-main, t6",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-gpt-5.6-sol-xhigh-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "gpt-5.6-sol-xhigh-main, t6",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "minimal-support descent to small cores (c(H,p) ≤ a_1) + disjoint witness",
+    "upper": "residue-class counting modulo L from the first term",
+    "notes": "Complete, correct proof. Scanning property plus G=F gives the membership characterization (C) for all x ≥ a_1. Finiteness of relevant primes proved for all terms via descent on c(H,p) to cores with product ≤ a_1 and disjoint-witness pairing. Periodicity with L = product of relevant primes, T = count of admissible residues, valid for all n ≥ 1. No false lemmas."
+   },
+   "first_pass_grade": 7,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 2,
+    "completion_tokens": 36052,
+    "tool_calls": 17,
+    "current_md_writes": 4,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 2121,
+    "minutes": 59.7
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 7
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-grok-4.5",
+   "model": "grok-4.5",
+   "source": "public",
+   "n_checkpoints": 2,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 2,
+   "S_sequence": [
+    {
+     "id": "p6-grok-4.5-main-t009",
+     "label": "grok-4.5-main, t9",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-grok-4.5-final",
+     "label": "final file",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "finite set of essential/core primes (conjecture + examples only)",
+    "upper": "admissible residues closed under +L, T = residue count (conjecture + examples only)",
+    "notes": "Tracking file: computations and conjectures only; 'Full proof' empty. Structure correctly and explicitly conjectured (L = product of essential primes, residues mod L closed under +L, T = count). Candidate gcd condition noted, but term-characterization, finiteness of essential primes, and periodicity are never proved—only numerically tested."
+   },
+   "first_pass_grade": 1,
+   "final_grade": 1,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 7053,
+    "tool_calls": 11,
+    "current_md_writes": 1,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 641,
+    "minutes": 4.4
+   },
+   "grade_for_agreement": 1,
+   "grade_first_pass": 1
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-kimi-k3",
+   "model": "kimi-k3",
+   "source": "public",
+   "n_checkpoints": 5,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    2,
+    1,
+    2,
+    2
+   ],
+   "S_sources": [
+    "agree",
+    "conservative",
+    "validity_override"
+   ],
+   "n_annotated": 5,
+   "S_sequence": [
+    {
+     "id": "p6-kimi-k3-round1-t021",
+     "label": "kimi-k3-round1, t21",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-kimi-k3-round2-t007",
+     "label": "kimi-k3-round2, t7",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-kimi-k3-round3-t009",
+     "label": "kimi-k3-round3, t9",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-kimi-k3-main-t005",
+     "label": "kimi-k3-main, t5",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-kimi-k3-final",
+     "label": "final file",
+     "S": 2,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "kimi-k3-main, t5",
+   "ever_S1": true,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "killing property K′ (large-prime erasure) via descent + pigeonhole compactness",
+    "upper": "L = lcm(minimal elements), T = count of terms in [a_1, a_1+L), global periodicity from n=1",
+    "notes": "Complete, correct proof. Step 1 gives the enumeration/reduction; K′ is proved for all cases and drives the compactness theorem (no infinite minimal transversals); peeling gives finiteness of C; Step 2 assembles periodicity from n=1 with explicit L, T. All steps written out generally, not just examples."
+   },
+   "first_pass_grade": 3,
+   "final_grade": 7,
+   "budget": {
+    "sessions": 4,
+    "completion_tokens": 381100,
+    "tool_calls": 79,
+    "current_md_writes": 4,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 4824,
+    "minutes": 380.6
+   },
+   "grade_for_agreement": 7,
+   "grade_first_pass": 3
+  },
+  {
+   "problem": "6",
+   "lineage": "deedy-muse-spark-1.1",
+   "model": "muse-spark-1.1",
+   "source": "public",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    1,
+    1
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "p6-muse-spark-1.1-main-t012",
+     "label": "muse-spark-1.1-main, t12",
+     "S": 0,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-muse-spark-1.1-main-t015",
+     "label": "muse-spark-1.1-main, t15",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    },
+    {
+     "id": "p6-deedy-muse-spark-1.1-final",
+     "label": "final file",
+     "S": 1,
+     "wrong_answer": false,
+     "review": null
+    }
+   ],
+   "S_final": 1,
+   "first_S2": null,
+   "ever_S1": true,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "up-set growth + transient-new-prime erasure (incomplete induction on tau)",
+    "upper": "L-periodic union U* enumerated globally from a_1, T = |U*∩[1,L]|",
+    "notes": "Characterization (C) and full global periodicity (P) are written out. Section 4 proves termination on a fixed ground, but Section 5's key finiteness across growing grounds is left unfinished: several abandoned attempts, then 'we accept finiteness ... as proved' and 'Carrying out induction gives...' without the induction being carried out. So (F) is only a sketch, scored 1."
+   },
+   "first_pass_grade": 2,
+   "final_grade": 2,
+   "budget": {
+    "sessions": 1,
+    "completion_tokens": 204340,
+    "tool_calls": 16,
+    "current_md_writes": 2,
+    "sessions_without_current_write": 0,
+    "tokens_per_tool_call": 12771,
+    "minutes": 31.0
+   },
+   "grade_for_agreement": 2,
+   "grade_first_pass": 2
+  },
+  {
+   "problem": "6",
+   "lineage": "ours-glm52",
+   "model": "glm-5.2",
+   "source": "ours",
+   "n_checkpoints": 3,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    1,
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 3,
+   "S_sequence": [
+    {
+     "id": "p6-glm52-7030bbc7-v1",
+     "label": "7030bbc7, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "reject",
+      "scores": {
+       "correctness": 2,
+       "completeness": 1,
+       "rigor": 1,
+       "self_contained": 3
+      },
+      "n_fatal": 2,
+      "n_unverified": 2,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-glm52-7030bbc7-v2",
+     "label": "7030bbc7, t2",
+     "S": 1,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "reject",
+      "scores": {
+       "correctness": 2,
+       "completeness": 1,
+       "rigor": 3,
+       "self_contained": 3
+      },
+      "n_fatal": 2,
+      "n_unverified": 3,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-glm52-7030bbc7-v3",
+     "label": "7030bbc7, t3",
+     "S": 2,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "pass",
+      "scores": {
+       "correctness": 4,
+       "completeness": 4,
+       "rigor": 4,
+       "self_contained": 4
+      },
+      "n_fatal": 0,
+      "n_unverified": 0,
+      "review_pass": true,
+      "verification": "confirm",
+      "gate_pass": true
+     }
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "7030bbc7, t3",
+   "ever_S1": true,
+   "monotone": true,
+   "crossing_inside_record": true,
+   "wrong_answer_final": false,
+   "wrong_answer_any": true,
+   "final_mechanisms": {
+    "lower": "Cofactor Bound: large essential prime forces smaller valid term Dc in [a_1,a_{j-1}], contradiction via blocker-monotonicity",
+    "upper": "V is union of residue classes mod L=product of essential primes; sequence = increasing enumeration of V from a_1, T = count per period",
+    "notes": "Reduction (Step 1) and periodicity assembly (Steps 3-4, from n=1) are fully written out. Finiteness (CB, Step 9) is a genuine all-cases contradiction argument, not example-based; computations are supplementary. L and T explicitly identified."
+   },
+   "gate": "pass",
+   "gate_passing_checkpoints": [
+    "7030bbc7, t3"
+   ],
+   "recorded_outcome": null,
+   "grade_for_agreement": 7
+  },
+  {
+   "problem": "6",
+   "lineage": "ours-gpt56sol-ultra",
+   "model": "gpt-5.6-sol",
+   "source": "ours",
+   "n_checkpoints": 1,
+   "route_na": null,
+   "S_raw_sequence": [
+    2
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 1,
+   "S_sequence": [
+    {
+     "id": "p6-gpt56-ours",
+     "label": "c1, t1",
+     "S": 2,
+     "wrong_answer": false,
+     "review": {
+      "verdict": "pass",
+      "scores": {
+       "correctness": 4,
+       "completeness": 4,
+       "rigor": 4,
+       "self_contained": 4
+      },
+      "n_fatal": 0,
+      "n_unverified": 0,
+      "review_pass": true,
+      "verification": "confirm",
+      "gate_pass": true
+     }
+    }
+   ],
+   "S_final": 2,
+   "first_S2": "c1, t1",
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": false,
+   "wrong_answer_any": false,
+   "final_mechanisms": {
+    "lower": "large-prime erasure: replace prime q>A by m=Rp^k≥A with P(m)=σ(x), induction over all terms",
+    "upper": "membership invariant under m→m+L for all m≥A (L=∏_{p≤A}p); T = terms in [A,A+L−1]",
+    "notes": "Complete proof. (C): (1) proved for all m≥A via bounded gaps/unboundedness. (F): Lemma proved for all terms by induction, with correct boundary repair Rp^k. (P): global periodicity from A=a_1, window count gives a_{n+T}=a_n+L for all n≥1. Computations explicitly not used; no false lemmas."
+   },
+   "gate": "pass",
+   "gate_passing_checkpoints": [
+    "c1, t1"
+   ],
+   "recorded_outcome": null,
+   "grade_for_agreement": 7
+  },
+  {
+   "problem": "6",
+   "lineage": "ours-nemotron",
+   "model": "nemotron-3-ultra",
+   "source": "ours",
+   "n_checkpoints": 10,
+   "route_na": null,
+   "S_raw_sequence": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "S_sources": [
+    "agree"
+   ],
+   "n_annotated": 10,
+   "S_sequence": [
+    {
+     "id": "p6-nemotron-d024e848-v1",
+     "label": "d024e848, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": null
+    },
+    {
+     "id": "p6-nemotron-fb285ec4-v1",
+     "label": "fb285ec4, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 2,
+       "completeness": 2,
+       "rigor": 1,
+       "self_contained": 2
+      },
+      "n_fatal": 3,
+      "n_unverified": 5,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-nemotron-fb285ec4-v2",
+     "label": "fb285ec4, t2",
+     "S": 0,
+     "wrong_answer": true,
+     "review": null
+    },
+    {
+     "id": "p6-nemotron-8828b58a-v1",
+     "label": "8828b58a, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 1,
+       "completeness": 1,
+       "rigor": 1,
+       "self_contained": 2
+      },
+      "n_fatal": 4,
+      "n_unverified": 6,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-nemotron-8828b58a-v2",
+     "label": "8828b58a, t2",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "reject",
+      "scores": {
+       "correctness": 0,
+       "completeness": 0,
+       "rigor": 1,
+       "self_contained": 2
+      },
+      "n_fatal": 4,
+      "n_unverified": 4,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-nemotron-244edfad-v1",
+     "label": "244edfad, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "reject",
+      "scores": {
+       "correctness": 1,
+       "completeness": 2,
+       "rigor": 1,
+       "self_contained": 2
+      },
+      "n_fatal": 3,
+      "n_unverified": 4,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-nemotron-dbbb2d6f-v1",
+     "label": "dbbb2d6f, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "reject",
+      "scores": {
+       "correctness": 1,
+       "completeness": 1,
+       "rigor": 1,
+       "self_contained": 1
+      },
+      "n_fatal": 3,
+      "n_unverified": 5,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-nemotron-cab6a0da-v1",
+     "label": "cab6a0da, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "reject",
+      "scores": {
+       "correctness": 1,
+       "completeness": 1,
+       "rigor": 1,
+       "self_contained": 1
+      },
+      "n_fatal": 5,
+      "n_unverified": 9,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-nemotron-cab6a0da-v2",
+     "label": "cab6a0da, t2",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "revise",
+      "scores": {
+       "correctness": 2,
+       "completeness": 1,
+       "rigor": 2,
+       "self_contained": 1
+      },
+      "n_fatal": 3,
+      "n_unverified": 4,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    },
+    {
+     "id": "p6-nemotron-12402695-v1",
+     "label": "12402695, t1",
+     "S": 0,
+     "wrong_answer": true,
+     "review": {
+      "verdict": "reject",
+      "scores": {
+       "correctness": 1,
+       "completeness": 0,
+       "rigor": 1,
+       "self_contained": 0
+      },
+      "n_fatal": 5,
+      "n_unverified": 8,
+      "review_pass": false,
+      "verification": "missing",
+      "gate_pass": false
+     }
+    }
+   ],
+   "S_final": 0,
+   "first_S2": null,
+   "ever_S1": false,
+   "monotone": true,
+   "crossing_inside_record": false,
+   "wrong_answer_final": true,
+   "wrong_answer_any": true,
+   "final_mechanisms": {
+    "lower": "large-prime erasure / minimality contradiction at new prime's first appearance (sketch only, open)",
+    "upper": "merge of arithmetic progressions of m_H mod L, T = |R| (tail only, conditional)",
+    "notes": "Hitting-set candidate equivalence (C) proved cleanly. Finiteness of the prime set (F) is explicitly conjectural—core gap open, only a minimality-contradiction sketch. Periodicity proved only for the tail, conditional on unproven lemmas including a D≠∅ conjecture contradicted by the write-up's own data; backward extension to n=1 open."
+   },
+   "gate": "fail",
+   "gate_passing_checkpoints": [],
+   "recorded_outcome": null,
+   "grade_for_agreement": 0
+  }
+ ]
+}

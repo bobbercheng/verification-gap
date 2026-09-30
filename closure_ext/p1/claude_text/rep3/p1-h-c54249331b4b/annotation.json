@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-c54249331b4b",
+  "problem": "1",
+  "sha256": "c54249331b4bc0f67d3b59fbea23f33a33e488d8bb75ede000385f90b2d7e7d9",
+  "path": "checkpoint_inputs_ext/c54249331b4bc0f67d3b59fbea23f33a33e488d8bb75ede000385f90b2d7e7d9.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 7,
+  "record_ids": [
+    "p1-deepseek-v4-pro-main-t007"
+  ],
+  "bytes": 6350,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5234,
+        "output_tokens": 791,
+        "output_tokens_details": {
+          "thinking_tokens": 530
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 791,
+            "cache_read_input_tokens": 5234,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 11.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "monovariant K+S (count of numbers>1 plus total Omega) strictly decreases; plus every move leaves a number >1",
+    "upper_bound_mechanism": "per-prime gcd of valuation multiset invariant under (a,b)->(min,|a-b|), both divisibility directions shown",
+    "wrong_answer_stated": false,
+    "notes": "All three components fully written: valuation description with min/|diff| and no-two-ones case analysis; strictly decreasing nonnegative integer monovariant with the K=0 impossibility argument; invariance proved in both directions including equal and zero valuations; final M stated explicitly and correctly."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

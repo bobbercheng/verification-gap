@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-252f3c8d29b6",
+  "problem": "1",
+  "sha256": "252f3c8d29b64dd963743aa6c5d058f24a0ff2b69af39e575ee820f053944374",
+  "path": "checkpoint_inputs_ext/252f3c8d29b64dd963743aa6c5d058f24a0ff2b69af39e575ee820f053944374.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "35c91371",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-35c91371-v1"
+  ],
+  "bytes": 5344,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4485,
+        "output_tokens": 2288,
+        "output_tokens_details": {
+          "thinking_tokens": 2006
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2288,
+            "cache_read_input_tokens": 4485,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 29.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic monovariant (total valuation sum, count of entries >1); 'at least one survivor' step circular",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations via gcd(a,b)=gcd(min(a,b),|a-b|)",
+    "wrong_answer_stated": true,
+    "notes": "Formula for M correct and explicit; valuation move description and invariance handled well (identity stated for all nonnegative a,b). Termination monovariant is valid, but Claim 3's proof that the board never becomes all 1s is bogus ('strict decrease from >1 to 1 impossible for integers'), the exact false lemma flagged. Remark 2 also garbled."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

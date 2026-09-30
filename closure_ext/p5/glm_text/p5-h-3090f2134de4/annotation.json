@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-3090f2134de4",
+  "problem": "5",
+  "sha256": "3090f2134de489ae871a8f0defc0d228317ab58974a2fa8e2479cf583a09662c",
+  "path": "checkpoint_inputs_ext/3090f2134de489ae871a8f0defc0d228317ab58974a2fa8e2479cf583a09662c.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": "7324ef70",
+  "turn": 1,
+  "record_ids": [
+    "p5-gpt56-7324ef70-v1"
+  ],
+  "bytes": 4645,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1702,
+        "output_tokens": 3128,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 35.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "RMS–AM–GM on x and y+C (both inequalities verified for all x,y>0, C≥0)",
+    "upper_bound_mechanism": "Quadratic local estimate |d(y)−d(t)| ≤ (y−t)²/(4·min{t,y}) via substituting x=f(t) into both inequalities, then telescoping partition of [u,v] forces d constant",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Iterate identity obtained by squeezing at x=f(t); d≥0 from positivity of iterates. Local quadratic estimate uses no extra assumptions, so fixed points (C=0) handled; telescoping gives constant C≥0. Algebra in both squared inequalities checks out. Converse is a full RMS–AM–GM verification. Falsification-record hypotheses are explicitly labeled false."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

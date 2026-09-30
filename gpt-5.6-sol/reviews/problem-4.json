@@ -1,0 +1,31 @@
+{
+  "task_id": "imo-2026-p4",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "For a cut from C to an interior point of AB, the two child angle triples are (A, x, 180-A-x) and (B, C-x, A+x), and every strict split 0<x<C is geometrically realizable.",
+    "When 180=n theta with n>=3, either an angle is already a positive integral multiple of theta or the largest-angle construction produces a legal cut for which both possible retained children contain complementary positive integral multiples of theta.",
+    "Splitting an angle m theta into theta and (m-1) theta gives a well-founded descent and forces termination after finitely many cuts, with the stated uniform bound.",
+    "The separate n=2 construction is legal for every non-right triangle and forces a right angle in both children.",
+    "When 180/theta is not an integer, the equilateral starting triangle is clean, and the exhaustive four-pairing argument proves that Shan-Yu can retain a clean child after every cut.",
+    "The clean-child strategy has the correct adversarial quantifiers and prevents a target angle at every finite stage; possible limiting degeneration is irrelevant.",
+    "The finite-lattice program was rerun for totals 3 through 60 and returned exactly the divisor targets in all 1769 parameter pairs; the candidate appropriately does not use this computation as proof of the real-angle result.",
+    "The manifest accurately summarizes the proof, assumptions, and evidentiary status of the computation."
+  ],
+  "unverified_claims": [],
+  "summary": "The classification theta=180 degrees/n for integers n>=2 is proved correctly and completely. No counterexample, hidden quantifier shift, illegal or degenerate cut, circular step, or unjustified analytic claim was found.",
+  "transfer_assessment": [
+    "Reusable: encode a geometric cut by an exact strict angle split and write both adversarial successor states explicitly.",
+    "Reusable: manufacture complementary lattice values in both successors by choosing a lattice point inside an interval longer than the lattice spacing.",
+    "Reusable: combine a forcing move with descent on a positive integer multiplier to obtain a uniform finite bound.",
+    "Reusable: prove an adversarial invariant by assuming both successors leave the invariant and exhaustively pairing their possible witnesses.",
+    "Potentially misleading if detached from the proof: finite-lattice attractor searches do not establish the continuous real-angle game; here they are correctly labeled as evidence only."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "p6-nemotron-fb285ec4-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "fb285ec4",
+  "turn": 1,
+  "path": "checkpoint_inputs/5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f.md",
+  "bytes": 8151,
+  "sha256": "5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 2642,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 108.3,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2642,
+        "output_tokens": 529,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 11.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "pigeonhole on prime-support tuples (sketch)",
+    "wrong_answer_stated": true,
+    "notes": "Relies on minimal-hitting-set fallacy in Steps 1-2; no characterization or finite-prime erasure. Step 3 falsely claims eventual a_{n+1}=a_n+L (contradicted by its own example). Global periodicity from n=1 only asserted ('one can verify'), never proved; T ill-defined."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f",
+  "original_bytes": 8151,
+  "input_anonymized": false
+}

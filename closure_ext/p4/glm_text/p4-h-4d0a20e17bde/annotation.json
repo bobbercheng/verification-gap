@@ -1,0 +1,46 @@
+{
+  "id": "p4-h-4d0a20e17bde",
+  "problem": "4",
+  "sha256": "4d0a20e17bde319101c4be5c8c765c5af406b1af9e2c351c2adb53436fd96382",
+  "path": "checkpoint_inputs_ext/4d0a20e17bde319101c4be5c8c765c5af406b1af9e2c351c2adb53436fd96382.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": "affe2f21",
+  "turn": 1,
+  "record_ids": [
+    "p4-gpt56-affe2f21-v1"
+  ],
+  "bytes": 6805,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1950,
+        "output_tokens": 4277,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 73.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "largest-angle cut creating kθ so both children carry integral multiples + Lemma 1 induction; n=2 handled separately",
+    "upper_bound_mechanism": "clean-triangle invariant (no angle a positive multiple of θ), four-case sum/difference argument, equilateral start",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Lemma 1's induction makes both children multiples of θ; the n≥3 manufacturing cut (kθ in (A,A+C)) is proved legal and leaves both children winning; n=2 case fully worked. Clean-invariant four-case argument uses 180∉ℤθ exactly; equilateral start verified. Computer section explicitly marked non-proof."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

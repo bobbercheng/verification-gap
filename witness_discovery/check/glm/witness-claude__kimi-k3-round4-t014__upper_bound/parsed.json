@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "kimi-k3-round4-t014",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 157.1,
+  "input_tokens": 446,
+  "output_tokens": 10035,
+  "cache_read_input_tokens": 8000
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "The text defines v(B) via the fixed decreasing order b_1≥⋯≥b_r. Lemma 4.1 yields only SOME ordering of P∪N with nested difference g, and nested difference is order-dependent. The witness checks out: for {8,7,6,5,4}, decreasing order gives ||||8−7|−6|−5|−4| = 4, while the Lemma-4.1 greedy ordering 8,6,5,7,4 (P={8,7}, N={6,5,4}, both sums 15) gives 0. So 'some ordering has value g' does not imply the decreasing-order v(P∪N)≤S/(2^m−1); Theorem 4.2, as stated, is unproved. Moreover the strategy explicitly takes B={b_1≥⋯≥b_r}, processes b_2,…,b_r in that decreasing order, and equates the leftover with v(B), so the achieved D is exactly the unbounded decreasing-order value. No other passage repairs this; the two-line fix (process in the greedy order) is not written. Upper bound invalid as written."
+ }
+}

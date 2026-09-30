@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "competition": "67th International Mathematical Olympiad (2026)",
+  "updated_at": "2026-08-20T16:18:57Z",
+  "authority": "model-generated and model-audited; not official IMO grading",
+  "models": {
+    "gpt-5.6-sol": {
+      "reasoning_effort": "ultra",
+      "provisionally_resolved": 6,
+      "total": 6,
+      "candidate_answer_wall_seconds": 4592,
+      "strict_gate_wall_seconds": 6977,
+      "problems": {
+        "1": {"status": "provisionally_resolved", "result": "M = product_p p^(gcd_i v_p(A_i))"},
+        "2": {"status": "provisionally_resolved", "result": "OM = ON"},
+        "3": {"status": "provisionally_resolved", "result": "c_n = 2^n/(2^(n+1)-1)"},
+        "4": {"status": "provisionally_resolved", "result": "theta = 180 degrees/n for integers n >= 2"},
+        "5": {"status": "provisionally_resolved", "result": "f(x) = x + C for C >= 0"},
+        "6": {"status": "provisionally_resolved", "result": "a_(n+T) = a_n + L"}
+      }
+    },
+    "nvidia/nemotron-3-ultra-550b-a55b:free": {
+      "provider": "NVIDIA through OpenRouter",
+      "provisionally_resolved": 2,
+      "unresolved": 4,
+      "total": 6,
+      "problems": {
+        "1": {"status": "provisionally_resolved", "attempts": 5},
+        "2": {"status": "unresolved", "attempts": 3},
+        "3": {"status": "unresolved", "attempts": 6, "answer_target_found": true},
+        "4": {"status": "unresolved", "attempts": 3},
+        "5": {"status": "provisionally_resolved", "attempts": 4},
+        "6": {"status": "unresolved", "attempts": 4}
+      }
+    },
+    "glm-5.2": {
+      "process": "same core Portfolio Transfer process as GPT-5.6-Sol, through a model-specific adapter, followed by P3-specific enhancements",
+      "result_scope": "independent solve campaign; excludes the reviewer-guided P3 repair follow-up",
+      "provisionally_resolved": 5,
+      "unresolved": 1,
+      "total": 6,
+      "problems": {
+        "1": {"status": "provisionally_resolved"},
+        "2": {"status": "provisionally_resolved"},
+        "3": {"status": "unresolved", "best_clean_independent_score": "2/7"},
+        "4": {"status": "provisionally_resolved"},
+        "5": {"status": "provisionally_resolved"},
+        "6": {"status": "provisionally_resolved"}
+      },
+      "p3_repair_follow_up": {
+        "status": "blind_review_pass",
+        "score": "7/7",
+        "source_candidate": "frozen Kimi K3 6/7 proof",
+        "classification": "reviewer-guided repair, not an independent GLM-5.2 solve"
+      }
+    },
+    "glm-5.3": {
+      "provider": "Z.ai direct Anthropic-compatible API",
+      "process": "Thin Discovery: four fresh no-review discovery contexts plus four thinking-disabled serializer calls",
+      "result_scope": "independent Problem 3 follow-up only",
+      "provisionally_resolved": 0,
+      "unresolved": 1,
+      "problems_attempted": 1,
+      "usage": {
+        "successful_completions": 8,
+        "discovery_completions": 4,
+        "serializer_completions": 4,
+        "input_tokens": 472086,
+        "output_tokens": 470466,
+        "cache_read_input_tokens": 0
+      },
+      "transport": {
+        "completed_glm_5_3_requests": 8,
+        "pre_inference_model_code_rejections": 1,
+        "retries": 0
+      },
+      "problems": {
+        "3": {
+          "status": "unresolved",
+          "checkpoint_status": "partial",
+          "review_status": "not_reviewed",
+          "answer_target_found": true,
+          "likely_result": "c_n = 2^n/(2^(n+1)-1)",
+          "open_load_bearing_proof_directions": [
+            "Theorem L, Case II (XOR merge / cut-budget coupling)",
+            "Lemma X1 / Theorem X when min Delta_k < 0"
+          ],
+          "terminal_candidate_sha256": "323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15",
+          "artifact_manifest_sha256": "f2cc76f125a6eae090eaf5ba43035a12f98b71a7a2b7025d7b063b448fd18711"
+        }
+      },
+      "follow_up": {
+        "other_problem_lanes_launched": false,
+        "reason": "P3 did not reach the structural-closure and review gate"
+      }
+    }
+  },
+  "external_evidence": {
+    "deedy/kimi-k3": {
+      "source": "https://github.com/deedy/imo-2026/tree/dbe872307883296c5f06bf8bcb90e6bfd0879364",
+      "first_pass_score": "36/42",
+      "final_score_after_repair": "42/42",
+      "grading": "separate Claude-based verifier agents; not official IMO jury grading",
+      "local_evidence_note": "cross-validation/deedy-kimi-k3.md",
+      "local_replication": {
+        "scope": "Problem 3 only",
+        "no_review_score": "6/7",
+        "final_score_after_local_defect_repair": "7/7",
+        "classification": "outcome-level replication; not a fresh local six-problem run or statistical replication"
+      }
+    }
+  }
+}

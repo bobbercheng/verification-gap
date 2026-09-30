@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-claude__kimi-k3-round4-t014__upper_bound",
+ "case": "kimi-k3-round4-t014",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 29.2,
+  "input_tokens": 2,
+  "output_tokens": 2159,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 11916,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9706,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009796,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2159,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 11916,
+    "webSearchRequests": 0,
+    "costUSD": 0.1739665,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1755,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "sentence",
+  "explanation": "The objection is locally right: v(B) is defined via the decreasing ordering, while Lemma 4.1 only produces some (greedy) ordering with nested value g; the counterexample {8,7,6,5,4} (decreasing value 4, greedy ordering value 0) shows order-dependence, so Theorem 4.2 as literally stated is not proved. However the only defective element is the sorting convention: the pigeonhole gap g <= S/(2^{m+1}... ) = S/(2^m-1), the realizability construction, and Xiang's cancel/bisect strategy (which nowhere uses monotonicity — it just consumes the elements in the given order, leaving pairs plus the final running value) together give D = g <= T_n with at most n cuts. Replacing 'b_1 >= ... >= b_r' by 'in the ordering of Lemma 4.1' repairs it; the upper-bound mechanism itself is present for all n."
+ },
+ "elsewhere_anchor": null
+}

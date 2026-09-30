@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "lower_bound",
+ "text_sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "written_but_invalid",
+  "quote": "\\sqrt{\\frac{x^2 + (y+c)^2}{2}} \\;\\ge\\; \\frac{x + y + 2c}{2} \\;\\ge\\; \\sqrt{x(y+c)}.",
+  "witness": "COUNTEREXAMPLE to the displayed chain: for f(x)=x+c the middle term of the problem's chain is (f(x)+y)/2 = (x+c+y)/2, not (x+y+2c)/2. With c=1, x=2, y=1 the written chain reads sqrt((4+4)/2)=2 >= (2+1+2)/2 = 2.5, which is false. Hence the displayed inequalities are NOT both equivalent to (x-y-c)^2 >= 0 (here (x-y-c)^2 = 0 >= 0 holds while the left written inequality fails), and the verification section as written does not verify the required chain for all x,y and all c >= 0.",
+  "load_bearing": "Section 5 is the entire sufficiency argument, and the only computation offered is the assertion that the displayed chain reduces to (x-y-c)^2 >= 0; since the displayed middle term is not (f(x)+y)/2, nothing about the actual system is verified."
+ },
+ "started_utc": "2026-09-06 05:47:41 UTC"
+}

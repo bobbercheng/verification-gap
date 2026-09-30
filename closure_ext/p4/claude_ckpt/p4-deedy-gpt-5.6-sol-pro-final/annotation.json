@@ -1,0 +1,66 @@
+{
+  "id": "p4-deedy-gpt-5.6-sol-pro-final",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed.md",
+  "bytes": 6485,
+  "sha256": "14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4933,
+        "output_tokens": 985,
+        "output_tokens_details": {
+          "thinking_tokens": 701
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 985,
+            "cache_read_input_tokens": 4933,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 14.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Normalized angles (units of theta); integer-angle induction plus a single cut with x=k-b making both children have integer angles k and N-k; n=2 case handled separately",
+    "upper_bound_mechanism": "Shan-Yu keeps a triangle with all three normalized angles non-integral, starting equilateral; four-case check on (1) using non-integrality of s",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct on both directions. Cut formula (1) derived with explicit realizability of every x in (0,a). Induction lemma covers both pieces; sufficiency handles N=2 and all-angles-<1 case; necessity's four-case argument uses s non-integer exactly where needed."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

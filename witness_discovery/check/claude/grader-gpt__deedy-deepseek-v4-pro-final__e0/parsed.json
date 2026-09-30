@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "deedy-deepseek-v4-pro-final",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.4,
+  "input_tokens": 2,
+  "output_tokens": 582,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 1702,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1619,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001709,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 582,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 1702,
+    "webSearchRequests": 0,
+    "costUSD": 0.0322505,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 230,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quoted sentence appears verbatim in \"Current best\" and is offered as Liu's lower-bound strategy. The text itself concedes the gap: it labels the whole thing \"Conjecture\", says Xiang's optimal response \"seems to be\" the complementary equal spacing, and then writes \"Need to prove both that Liu Bang can guarantee at least this much (lower bound) and that Xiang Yu can prevent...\"; the \"Full proof\" section reads \"(To be completed)\". Nowhere is any argument given covering arbitrary Xiang replies, nor is the claiming phase reduced to an alternating sum of sorted lengths. So no all-n lower bound is established (indeed the value is also wrong: for n=2 the true c is 4/7, not 3/5, and the strategy 1/5,2/5 is refutable). The lower-bound obligation is unmet."
+ }
+}

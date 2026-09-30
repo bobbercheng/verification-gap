@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-6a21f32effe8",
+  "problem": "6",
+  "sha256": "6a21f32effe8a8488a14d581dfa2f3ee816e7cfa2153697813dbab84e92964f2",
+  "path": "checkpoint_inputs/6a21f32effe8a8488a14d581dfa2f3ee816e7cfa2153697813dbab84e92964f2.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 4,
+  "record_ids": [
+    "p6-gpt-5.6-sol-xhigh-main-t004"
+  ],
+  "bytes": 2351,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1527,
+        "cache_read_input_tokens": 901,
+        "output_tokens": 859,
+        "output_tokens_details": {
+          "thinking_tokens": 610
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1527,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 859,
+            "cache_read_input_tokens": 901,
+            "cache_creation_input_tokens": 1527,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1527
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "minimal prime supports + arithmetic descent to radical <= a_1, disjoint witness (sketched only)",
+    "upper_bound_mechanism": "asserted: union of multiple-sets is L-periodic, T = count of admissible residues",
+    "wrong_answer_stated": false,
+    "notes": "Only a plan: correct target structure (L = product of finitely many relevant primes, T = residue count) and correct strategy named, but the three steps are explicitly deferred ('details being written below'). Finiteness/descent and periodicity are sketched or asserted, never argued for all cases. No false lemma invoked."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

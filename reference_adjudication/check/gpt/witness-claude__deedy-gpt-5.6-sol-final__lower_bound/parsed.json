@@ -1,0 +1,25 @@
+{
+ "checker": "gpt",
+ "objection_key": "witness-claude__deedy-gpt-5.6-sol-final__lower_bound",
+ "case": "deedy-gpt-5.6-sol-final",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.4,
+  "input_tokens": 17647,
+  "output_tokens": 318,
+  "reasoning_output_tokens": 149,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The stated strip recursion is arithmetically incorrect: the preceding columns contain 2^{j+1}-1 strips, so two copies plus one contain 2^{j+2}-1, not the 2^{j+1} strips in the next column. More importantly, the asserted dichotomy is not proved for splits at arbitrary real heights. The earlier statement of Lemma (ii) and its later application merely rely on this defective proof; they do not independently establish the universal lower bound. A valid all-n pairing/tree, majorization, or induction argument is needed."
+ },
+ "elsewhere_anchor": null
+}

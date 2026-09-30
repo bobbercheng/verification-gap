@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-H",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "H",
+ "problem": "3",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.4,
+  "input_tokens": 2,
+  "output_tokens": 891,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 5806,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4793,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004883,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 891,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 5806,
+    "webSearchRequests": 0,
+    "costUSD": 0.0811665,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 576,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The geometric sum 1+2+...+2^{k-1} equals 2^k-1, not 2^k-2, so the displayed numeral is a misprint. However, the inference actually used is that the largest present power 2^k strictly exceeds the sum of all smaller distinct powers (which is at most 2^k-1 < 2^k), so the signed sum of distinct powers of two is a nonzero integer, hence of absolute value at least 1, and (9)-(10) go through unchanged. The lower-bound mechanism (tree component, bipartition, weighted degrees, residuals) is written out for all n and is unaffected; only the numeral needs a one-symbol fix."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "p4-deedy-kimi-k3-final",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248.md",
+  "bytes": 12563,
+  "sha256": "3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6932,
+        "cache_read_input_tokens": 1504,
+        "output_tokens": 2117,
+        "output_tokens_details": {
+          "thinking_tokens": 1787
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6932,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2117,
+            "cache_read_input_tokens": 1504,
+            "cache_creation_input_tokens": 6932,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 6932
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 28.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "round-up cut: alpha = d(u) makes u+alpha = k*theta and 180-u-alpha = (n-k)*theta, so both halves marked; then halving Lemma 1",
+    "upper_bound_mechanism": "invariant 'no angle is an integer multiple of theta' from equilateral start; exhaustive 3-case check that one half preserves it, using 180 not a multiple of theta",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer and both directions written out. Lemma 1 induction complete (both pieces marked). Theorem 1 handles n=2 via Claims 1-2, both halves marked, every discard covered. Theorem 2's case analysis is exhaustive and uses 180 != m*theta exactly. Only blemish: Lemma 0's angle chase/IVT proof deferred to an external file."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

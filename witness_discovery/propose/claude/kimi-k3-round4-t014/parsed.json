@@ -1,0 +1,77 @@
+{
+ "proposer": "claude",
+ "case": "kimi-k3-round4-t014",
+ "problem": "3",
+ "group": "C",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 207.6,
+  "input_tokens": 2,
+  "output_tokens": 17425,
+  "cache_read_input_tokens": 1473,
+  "cache_creation_input_tokens": 11392,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9332,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009432,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 17425,
+    "cacheReadInputTokens": 1473,
+    "cacheCreationInputTokens": 11392,
+    "webSearchRequests": 0,
+    "costUSD": 0.5502914999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 16562,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_but_invalid",
+    "quote": "So the hypothesis of Lemma 4.1(b) holds, and some ordering of $P\\cup N$ has chain value $g\\le\\frac{S}{2^m-1}$.",
+    "witness": "NON-SEQUITUR. The text defines the chain value of a multiset B by the DECREASING ordering: v(B)=|...||b_1-b_2|-b_3|...-b_r| with b_1>=...>=b_r, and Theorem 4.2 asserts v(B)<=S/(2^m-1). What the quoted step (via Lemma 4.1) establishes is only that SOME ordering of P∪N has nested absolute difference g. The nested absolute difference is order-dependent, so this does not yield the decreasing-order value: for B={8,7,6,5,4} the decreasing order gives ||||8-7|-6|-5|-4| = |||1-6|-5|-4| = ||5-5|-4| = 4, whereas the ordering 8,6,5,7,4 (exactly the greedy ordering of Lemma 4.1 with P={8,7}, N={6,5,4}) gives |8-6|=2, |2-5|=3, |3-7|=4, |4-4|=0. Thus 'some ordering has value g' does not imply 'v(B)=g', and nothing in the text proves the decreasing order is optimal.",
+    "load_bearing": "XY's strategy is explicitly written as taking B={b_1>=...>=b_r} and processing b_2,...,b_r in that decreasing order, so the leftover final running piece equals the decreasing-order value v(B); the conclusion D(M)=v(B)<=T_n therefore requires exactly the sorted-order statement of Theorem 4.2, which the proof does not establish."
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "Answer 2^n/(2^{n+1}-1) correct. Lemma 1.1 reduction and the super-increasing/matching lower bound are fully argued. Upper bound has all components (bisection case, pigeonhole, greedy realizability, cancellation strategy) but conflates the order-dependent chain value: the greedy ordering produced is not the decreasing ordering used in the definition and in XY's strategy."
+ },
+ "anchors": {
+  "upper_bound": {
+   "anchored": true,
+   "length": 110,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

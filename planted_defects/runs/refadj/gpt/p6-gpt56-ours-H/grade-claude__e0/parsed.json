@@ -1,0 +1,42 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-gpt56-ours-H",
+ "base_id": "p6-gpt56-ours",
+ "type": "H",
+ "problem": "6",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 26.8,
+  "input_tokens": 17596,
+  "output_tokens": 1139,
+  "reasoning_output_tokens": 821,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "Therefore \\(m\\) is a sequence term. By (1), \\(P(m)=\\sigma(x)\\) is good, completing the induction. \\(\\square\\)\n\nGoodness is upward closed: a finite prime set containing a good set is good. Consequently, for every \\(m\\ge A\\),\n\\[\n\\begin{aligned}\nm\\text{ is a sequence term}\n&\\overset{(1)}\\Longleftrightarrow P(m)\\text{ is good}\\\\\n&\\Longleftrightarrow \\sigma(m)\\text{ is good}. \\tag{3}\n\\end{aligned}\n\\]",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The objection is correct: after 15 and 18, the next term is 20, since it shares factors 5 and 2 respectively; 22 is coprime to 15. Then 21 is skipped because it is coprime to the earlier term 20. Replacing “22” by “20” repairs the example. The formal induction and equation (3) independently prove L6.2 for every term, so the numerical slip does not leave that statement unestablished."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 398,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   2726,
+   3124
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

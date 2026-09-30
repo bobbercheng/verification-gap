@@ -1,0 +1,58 @@
+{
+  "id": "p3-h-9b8187934c93",
+  "problem": "3",
+  "sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+  "path": "checkpoint_inputs/9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-1"
+  ],
+  "bytes": 15914,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 5906,
+        "output_tokens": 24000,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 280.8,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5906,
+        "output_tokens": 162,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 4.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 3,
+    "complete": false,
+    "main_gap": "Upper bound is not proved: key lemma explicitly stated with 'We omit the full details here', citing the official solution; several failed proof attempts precede it.",
+    "notes": "Lower bound argument is present but sketchy (wasted-cut claims asserted without proof). Upper bound contains acknowledged failed attempts, self-corrections, and finally an unproved lemma called 'known'. Correct answer, one valid bound, major half missing."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

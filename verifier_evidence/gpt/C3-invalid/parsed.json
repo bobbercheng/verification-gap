@@ -1,0 +1,18 @@
+{
+ "claim_id": "C3",
+ "condition": "invalid",
+ "verifier": "gpt",
+ "model": "gpt-5.6-sol",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "With a_1=6, greediness gives a_2=8, a_3=10, and a_4=12. The prime set {2,3} of a_4 is not inclusion-minimal: {2} already hits the prime-factor sets of 6, 8, and 10.",
+  "witness_valid": false,
+  "witness_reason": "The proposed sequence violates the defining rule: 9 and 8 share no prime factor. Indeed, after 6 and 8, the least eligible integer is 10, not 9."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 19.0
+}

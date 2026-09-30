@@ -1,0 +1,22 @@
+{
+ "checker": "gpt",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-gpt-5.6-sol-final",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.0,
+  "input_tokens": 17500,
+  "output_tokens": 401,
+  "reasoning_output_tokens": 189,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "The quoted induction is the write-up’s only justification of Lemma (ii), and its preservation step is not established. After the first j+1 original columns there are 1+2+⋯+2^j=2^(j+1)−1 d-strips; two copies plus one would contain 2^(j+2)−1 strips, not the 2^(j+1) strips in the next column. More importantly, cuts may occur at arbitrary heights, so the resulting pieces need not decompose into whole d-strips. The text gives no invariant or argument showing that cancellation must leave a whole odd d-strip unless every original column was cut. Thus the asserted dichotomy, and hence Δ≥d, does not follow. Since Section 3 relies solely on Lemma (ii), the lower-bound obligation remains unproved as written."
+ }
+}

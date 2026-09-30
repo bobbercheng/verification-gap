@@ -1,0 +1,66 @@
+{
+  "id": "p5-gpt-5.6-sol-xhigh-main-t002",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 2,
+  "path": "checkpoint_inputs_ext/4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b.md",
+  "bytes": 5533,
+  "sha256": "4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3553,
+        "cache_read_input_tokens": 1356,
+        "output_tokens": 1427,
+        "output_tokens_details": {
+          "thinking_tokens": 1131
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3553,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1427,
+            "cache_read_input_tokens": 1356,
+            "cache_creation_input_tokens": 3553,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3553
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "orbit arithmetic progressions + asymptotic RMS-AM gap forcing a=b; then openness of fixed/shifted sets via first inequality + connectedness",
+    "wrong_answer_stated": false,
+    "notes": "Complete: (S) via x=f(y) forcing equality, orbits AP with d>=0; positive displacements shown equal by bounded-gap asymptotics with correct algebraic identity; mixed fixed/non-fixed case excluded by openness of A and B plus connectedness (limit gives 2L+c<=2L); sufficiency verified for all x,y and c>=0."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

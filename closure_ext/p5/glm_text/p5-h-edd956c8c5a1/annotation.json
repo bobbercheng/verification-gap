@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-edd956c8c5a1",
+  "problem": "5",
+  "sha256": "edd956c8c5a1ce7898bc13b1451c2ee901815049b69fb97f40cdfba86456701f",
+  "path": "checkpoint_inputs_ext/edd956c8c5a1ce7898bc13b1451c2ee901815049b69fb97f40cdfba86456701f.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 1,
+  "record_ids": [
+    "p5-gpt-5.6-sol-max-main-t001"
+  ],
+  "bytes": 1386,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1342,
+        "output_tokens": 3550,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 48.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "AM-GM / RMS-AM check for f(x)=x+c (asserted, not written out)",
+    "upper_bound_mechanism": "orbit comparison + connectedness (plan only, no argument)",
+    "wrong_answer_stated": false,
+    "notes": "Correct family f(x)=x+c (c>=0) stated only as the 'expected characterization' (conjecture). Structural identity f(f(t))=2f(t)-t and d>=0 are asserted, not derived. Sufficiency merely cited via AM-GM/RMS-AM. Necessity (equal positive displacements; excluding fixed/non-fixed coexistence) is a named plan with 'appears to force'; nothing proved. No wrong answer or false lemma."
+  },
+  "S": 0,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

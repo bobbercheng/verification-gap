@@ -1,0 +1,74 @@
+{
+ "gate": "witness_blind",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-H",
+ "base_id": "p6-gpt56-ours",
+ "type": "H",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 82.6,
+  "input_tokens": 2,
+  "output_tokens": 7146,
+  "cache_read_input_tokens": 1280,
+  "cache_creation_input_tokens": 3717,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3282,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003367,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 7146,
+    "cacheReadInputTokens": 1280,
+    "cacheCreationInputTokens": 3717,
+    "webSearchRequests": 0,
+    "costUSD": 0.21647,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 6810,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Reduction = criterion (1) (m≥A is a term iff P(m) good); lower_bound = Lemma that the ≤A prime support of every term is good (strong induction, Rp^k construction, all cases checked); upper_bound = periodicity mod L=∏_{p≤A}p from threshold A and the counting step giving a_{n+T}=a_n+L for all n. All verified. Non-proof section misstates A=15 terms as 15,18,22 (should be 15,18,20); not load-bearing."
+ },
+ "anchors": {}
+}

@@ -1,0 +1,43 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "reject",
+  "scores": {
+    "correctness": 2,
+    "completeness": 1,
+    "rigor": 3,
+    "self_contained": 3
+  },
+  "fatal_issues": [
+    "The theorem is NOT proved. The entire argument is conditional on the minimal prime-set family M_n stabilizing to a self-dual antichain (equivalently, only finitely many primes being 'essential'). This is explicitly left OPEN (the candidate's own 'Status: PARTIAL'; Step 6 reachability). It is the actual hard core of IMO 2026 P6, not a remediable oversight.",
+    "The top-level 'Conclusion' states unconditionally: 'Such T,L always exist: the sequence is the increasing enumeration of a periodic (valid) set ... hence periodic up to translation.' But periodicity of V (mod L=product of essential primes) is only meaningful once the set of essential primes is finite, which is exactly the unproved crux. The unconditional Conclusion overstates what is established."
+  ],
+  "required_fixes": [
+    "Prove that only finitely many primes become essential (equiv.: M_n stabilizes; equiv.: M_n reaches a self-dual antichain b(M)=M). The cofactor lemma (Step 7) bounds each newly entering prime q by a_{j-1}/prod(tau*)+1 at its entry, but gives NO termination bound on how many primes enter or when defects stop being realized. A genuine termination argument is required.",
+    "Either prove the conjectured uniform bound Q<=a_1 (largest essential prime <= a_1), currently supported only computationally for a_1<=250, OR give a direct reachability argument for self-duality that does not rely on an explicit prime bound. Note Q<=a_1 is loose in practice (a_1=249 collapses to Q=3), so it may be neither necessary nor the natural route.",
+    "De-emphasize the unconditional 'Conclusion'; restate the result as conditional on the crux until the crux is closed."
+  ],
+  "verified_claims": [
+    "Step 1/2 reduction: a simulator built directly on the claim a_{n+1}=min{m>a_n : P(m) transversal of M_n} reproduces the greedy sequence exactly (verified against brute-force gcd on a_1=15,385,4199,2310,249,...).",
+    "Step 3/4 (sequence = increasing enumeration of V from a_1; periodic mod L): for a_1=15, L=30, T=8, a_{n+8}=a_n+30 from n=1; for a_1=385, L=2*3*5*7*11*19=43890, T=5088, the produced sequence equals sorted(V cap [a_1,inf)) and a_{n+5088}=a_n+43890 holds on ALL produced terms (so the 'for every n>=1' clause is genuinely satisfied once stabilized). Independently recomputed.",
+    "Step 5 growth bound a_{n+1}<=2a_n (2a_n is valid since P(2a_n)>=P(a_n)): argument is sound.",
+    "Step 6 self-dual fixed-point characterization: for every stabilized family tested (a_1 in [2,60], plus 385,4199,2310,2730,14641,1024,6561,249), an independent minimal-transversal computation gives b(M)=M exactly (0 failures).",
+    "Step 7 cofactor lemma: independently checked on every essential-prime-entry event for a_1=15 (1 event), 385 (4 events), 4199 (9 events) -- 0 failures; the defect tau* in b(M_{j-1})\\M_{j-1} with tau* subset P(a_j) and q | (a_j/prod tau*) and the bound q<=k<=a_{j-1}/prod(tau*)+1 all hold.",
+    "Refutations: a_1=385=5*7*11 yields essential Q=19>11=max P(a_1) (naive 'essential<=max P(a_1)' bound is false); a_1=4199=13*17*19 yields Q=83>19; a_1=249 grows to 41 minimal sets with Q=199 at 120 terms then collapses to {{3}} (termination is non-monotone, refuting 'decreasing |M_n| terminates'); a_1=2310 collapses to {{2}} (self-dual).",
+    "Conjecture Q<=a_1 (largest essential prime <= a_1): 0 violations for a_1 in [2,250] (independent sweep). Confirmed only computationally, NOT proved."
+  ],
+  "unverified_claims": [
+    "CRUX (unproved): M_n reaches a self-dual antichain / equivalently only finitely many primes are essential. This is the load-bearing assumption behind periodicity; it is left open by the candidate and is not independently provable from the supplied text.",
+    "Conjecture Q<=a_1 is presented as the most promising route to close the crux, but it is unproved (computational only); the candidate's own text labels it a conjecture. Relying on it would still require a proof.",
+    "Implicitly assumed in the unconditional Conclusion: that the set of essential primes (union of M) is finite, so L=prod(essential primes) is well-defined and V is a finite union of residue classes. Without the crux this is not established."
+  ],
+  "summary": "A sophisticated, correctly-executed PARTIAL solution -- not a proof. Steps 1-7 (radical/transversal reduction of gcd-sharing to hypergraph transversals; valid set V = union of divisibility classes over the blocker b(M), hence periodic mod L=prod(essential primes); the self-dual fixed-point characterization of stabilization; and the cofactor lemma bounding each newly entering essential prime via a realized defect) are independently reproduced and all check out (a_1=15 -> L=30,T=8; a_1=385 -> L=43890,T=5088 with the sequence verified to be exactly the increasing enumeration of V from a_1 and a_{n+T}=a_n+L from n=1; cofactor lemma 0 failures). The fatal gap is that the theorem itself is conditional on M_n stabilizing to a self-dual antichain (finitely many essential primes), which is explicitly left OPEN and constitutes the genuine hard core of IMO 2026 P6. The cofactor lemma bounds each entering prime but gives no termination argument, and the conjectured bound Q<=a_1 is only computational. The unconditional 'Conclusion' overstates a conditional result. Verdict: reject as a complete proof (incompleteness at the central crux), while acknowledging the machinery is sound and the partial results are correct and honestly labeled.",
+  "transfer_assessment": [
+    "REUSABLE: reduction of 'shares a factor with every earlier term' to 'prime-set is a transversal of the minimal family M_n' and the valid-set/union-of-divisibility-classes formulation -- a clean, correct bridge from the greedy gcd condition to periodicity modulo L.",
+    "REUSABLE: the self-dual fixed-point characterization (stabilization <=> b(M)=M) is an elegant and correct way to describe the target; a future solver can build a termination argument on exactly this.",
+    "REUSABLE: the cofactor lemma (each new essential prime enters only by realizing a defect tau* in b(M)\\M, as a cofactor of a_j=prod(tau*)*k, bounded by a_{j-1}/prod(tau*)+1) is a genuine, verified structural lemma bounding the size of entering primes.",
+    "REUSABLE: the observation that periodicity holds FROM n=1 (not just eventually) because every term is a transversal of the eventual M and V subset V_n -- correctly resolves the 'for every n' quantifier; verified directly.",
+    "MISLEADING: the conditional structure is easy to mistake for a complete proof; the top-line 'Conclusion' is stated unconditionally although it rests on an unproved crux.",
+    "MISLEADING: the conjecture Q<=a_1 is offered as the likely closing route but is unproved and is actually very loose (a_1=249 collapses to Q=3), so it is neither verified nor necessarily the natural path.",
+    "CORRECTLY REFUTED (do not re-attempt): 'essential<=max P(a_1)' (false: 385->19); 'termination by decreasing |M_n|' (false: 249 and 2310 grow then collapse); 'no-new-prime-set detects stabilization' (non-minimal supersets persist). These refutations were independently confirmed."
+  ]
+}

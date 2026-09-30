@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-5a75aa5c50ee",
+  "problem": "3",
+  "sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+  "path": "checkpoint_inputs/5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8.md",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "kimi-r1-c3"
+  ],
+  "bytes": 14257,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5449,
+        "output_tokens": 12756,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 136.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position majorization on geometric division (induction on rank r, two-case step)",
+    "upper_bound_mechanism": "subset-sum pigeonhole + supply–demand cancellation into equal pairs (Lemma 3)",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Lemma 1 proves the alternating-sum reduction via both pairing strategies with correct edge cases. Theorem A: geometric marks plus a valid all-n majorization induction against arbitrary refinements. Theorem B: pigeonhole gap ≤1/N, cut count |Z|+c≤n verified, leftover δ≤1/N. Answer stated and proved for all n."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,18 @@
+{
+ "claim_id": "C2",
+ "condition": "invalid",
+ "verifier": "claude",
+ "model": "claude-opus-5",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "Counterexample: C_n = {b1,...,bn, a_{n+1}} for n>=1; all contain b1, so pairwise intersecting, all finite. Minimal finite transversals include {b1} and T_k = {a2,...,ak,bk} for every k>=2 (a_i hits C_{i-1}, b_k hits C_n for n>=k; each element has a private witness). Infinitely many.",
+  "witness_valid": false,
+  "witness_reason": "Distinct singletons {x_n} are pairwise disjoint, so the family is not pairwise intersecting, violating a hypothesis. Also {x_k} misses every F_n with n != k, hence is not a transversal at all; that family has no finite transversal."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 263.4
+}

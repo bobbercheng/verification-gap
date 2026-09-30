@@ -1,0 +1,31 @@
+{
+  "task_id": "imo-2026-p3",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "For a fixed final multiset, backward induction gives the first drafter advantage D, the decreasing sorted alternating sum, and hence payoff (1+D)/2.",
+    "For every refinement using k at most q-1 cuts, the consecutive-rank pairing multigraph has a tree component whose bipartition witnesses two distinct subset sums differing by at most D; thus D is at least Gamma.",
+    "After cancelling two closest subsets, the virtual-row overlay construction creates equal pairs plus residual total Gamma with at most q-1 distinct new interior cuts, including the cases B empty and Gamma zero; thus D is at most Gamma.",
+    "The subset-sum pigeonhole argument gives Gamma at most 1/(2^q-1), and the normalized powers-of-two intervals have uniquely spaced subset sums with Gamma exactly 1/(2^(n+1)-1).",
+    "The cases q at most n and q=n+1 are both covered, yielding the matching Xiang upper bound and Liu lower bound c_n=2^n/(2^(n+1)-1).",
+    "Loops, parallel edges, disconnected pairing graphs, repeated cuts in one parent interval, both parities, tied piece lengths, ineffective endpoint marks, and globally distinct marks do not invalidate the argument.",
+    "Independent exact and exhaustive small-case checks reproduced the drafting recurrence, the refinement identity, the overlay cut budget, and the stated n=2 grid examples; these checks are corroborative rather than used as proof."
+  ],
+  "unverified_claims": [],
+  "summary": "The proposed value and both minimax bounds are correct. The drafting lemma, graph lower bound, overlay upper construction, cut counts, subset-sum extremal argument, and degenerate cases form a complete self-contained proof with no known fatal gap. This is a model review, not an official proof certificate.",
+  "transfer_assessment": [
+    "Reusable: convert alternating optimal drafting of commonly valued items into the sorted alternating discrepancy by backward induction.",
+    "Reusable: pair consecutive ranks and use an edge-deficient parent multigraph to extract a tree-component signed-sum certificate.",
+    "Reusable: turn two nearly equal subset totals into equal physical pairs by overlaying virtual concatenations, leaving only their excess as discrepancy.",
+    "Reusable: combine a closest-subset-sum pigeonhole bound with a binary lattice construction to obtain a sharp minimax extremizer.",
+    "Misleading if overgeneralized: the exact refinement duality is proved for the critical budget of at most q-1 cuts; the proof does not assert the same formula for arbitrary cut budgets.",
+    "Misleading if used as proof: finite-grid enumeration needs sufficiently fine grids to represent bisections and remains only falsification evidence for the continuous problem."
+  ]
+}

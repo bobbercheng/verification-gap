@@ -1,0 +1,38 @@
+{
+  "id": "p6-h-c734a640cdef",
+  "problem": "6",
+  "sha256": "c734a640cdef6ea313666115130884bc6f3b92af3083cc71a707085f13ee8c0b",
+  "path": "checkpoint_inputs/c734a640cdef6ea313666115130884bc6f3b92af3083cc71a707085f13ee8c0b.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8828b58a",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-8828b58a-v1"
+  ],
+  "bytes": 7513,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 245.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none (false finite-support lemma)",
+    "upper_bound_mechanism": "merge of progressions mod L; global step only asserted",
+    "wrong_answer_stated": true,
+    "notes": "Relies on the false 'support = minimal hitting set' lemma, contradicted by its own example (30, 42 contain non-minimal supports and prime 7). Lemma 1's finite-support claim is false, proof deferred ('see below', absent). Step 2 sketches eventual periodicity; Step 3 merely asserts backward propagation to n=1. Only eventual periodicity, falsely justified."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

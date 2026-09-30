@@ -1,0 +1,18 @@
+{
+ "claim_id": "C2",
+ "condition": "valid",
+ "verifier": "gpt",
+ "model": "gpt-5.6-sol",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "The displayed family has infinitely many distinct inclusion-minimal finite transversals, so it disproves the universal claim.",
+  "witness_valid": true,
+  "witness_reason": "Each F_n is finite and nonempty, and all share x_1. Each T_k meets F_n via y_n for n<k and x_k for n>=k. Removing y_i makes it miss F_i; removing x_k makes it miss F_k. Thus every T_k is minimal, and they are distinct."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": true
+ },
+ "elapsed_seconds": 10.0
+}

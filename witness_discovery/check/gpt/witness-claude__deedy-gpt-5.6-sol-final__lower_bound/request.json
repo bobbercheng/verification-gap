@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-gpt-5.6-sol-final",
+ "tag": "lower_bound",
+ "text_sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "written_but_invalid",
+  "quote": "Inductively, after the first $j+1$ columns have been swept, either one whole $d$-strip remains uncancelled in the odd row, or a cut has occurred in every one of these $j+1$ columns: adding the next column, whose $2^{j+1}$ strips consist of two identical copies of all preceding strips plus one parity interchange, preserves this alternative.",
+  "witness": "NON-SEQUITUR (with a false sub-claim). Premises established: heights are $d,2d,\\dots,2^q d$ cut into $d$-strips, and $\\Delta=\\int (N(t)\\bmod 2)dt$. The structural claim is arithmetically false for $j\\ge 1$: columns $d,2d,\\dots,2^j d$ contain $(2^{j+1}-1)$ strips of height $d$, so 'two identical copies of all preceding strips plus one' would be $2^{j+2}-1$ strips, whereas the next column has only $2^{j+1}$ strips (equality only when $j=0$). Moreover Xiang's splits may be at arbitrary heights, not at multiples of $d$, so the dichotomy 'a whole $d$-strip remains uncancelled, or a cut occurred in every column' is never derived for arbitrary cut positions; no argument is given for why adding a column preserves the alternative under a cut placed at a non-strip level. Hence the conclusion 'with at most $s$ cuts an odd strip remains' does not follow.",
+  "load_bearing": "Section 3 derives Liu's guarantee solely from Lemma (ii) applied with $q=n$, $d=1/D$; this induction step is the entire proof of Lemma (ii), so the lower bound stands or falls with it."
+ },
+ "started_utc": "2026-09-06 04:44:46 UTC"
+}

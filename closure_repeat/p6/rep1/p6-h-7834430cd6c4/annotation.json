@@ -1,0 +1,47 @@
+{
+  "id": "p6-h-7834430cd6c4",
+  "problem": "6",
+  "sha256": "7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132",
+  "path": "checkpoint_inputs/7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p6-deedy-gpt-5.6-sol-xhigh-final",
+    "p6-gpt-5.6-sol-xhigh-main-t006"
+  ],
+  "bytes": 8618,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2522,
+        "output_tokens": 3541,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 44.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "descent on c(H,p) to core ≤ a1 + intersecting-witness bound",
+    "upper_bound_mechanism": "periodicity mod L=product of relevant primes, T=count per window",
+    "wrong_answer_stated": false,
+    "notes": "Complete correct proof. Scanning property plus G=F yields full membership characterization (8) for all x≥a_1. Finiteness of relevant primes proved for all terms via descent forcing c(H,p)≤a_1, then a disjoint witness F_C bounds primes per core; H finite. Periodicity mod L=∏U with T terms per window gives a_{n+T}=a_n+L for every n≥1."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

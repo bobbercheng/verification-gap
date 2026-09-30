@@ -1,0 +1,44 @@
+{
+  "id": "p3-h-9b8187934c93",
+  "problem": "3",
+  "sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+  "path": "checkpoint_inputs/9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-1"
+  ],
+  "bytes": 15914,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 20154,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 250,
+        "reasoning_output_tokens": 134
+      },
+      "sec": 10.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "The stated formula is wrong except at n=1. The sorted-piece alternating-pick reduction is correctly identified. The lower bound relies on unsupported and false claims that repeated cuts are wasteful and midpoint cuts are optimal. The upper bound repeatedly encounters contradictions and ultimately omits the proof of a false midpoint-bisection lemma."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

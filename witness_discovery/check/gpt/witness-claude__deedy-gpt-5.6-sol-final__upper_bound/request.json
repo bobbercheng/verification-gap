@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-gpt-5.6-sol-final",
+ "tag": "upper_bound",
+ "text_sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "written_but_invalid",
+  "quote": "What remains, apart from the initial portion of length $d$, consists of two arrays, each with at most $s$ column-blocks and each of total length at most",
+  "witness": "NON-SEQUITUR. What the text establishes about the two rows is only the parenthetical claim that 'their uncancelled totals add to $T-d$ and interchange at the cut'. From a sum equal to $T-d$ one cannot conclude that each summand is at most $(T-d)/2$; that needs the two uncancelled totals to be equal (or an explicit bound), which is nowhere proved, and the single interchange below one cut level gives no equalization. Likewise 'each with at most $s$ column-blocks' is asserted without derivation, and the accounting 'the first operation uses one cut and the induction uses at most $s-1$' recurses on one of two arrays without showing the other array contributes nothing to the odd measure. Hence the bound $\\Delta\\le T/(2^{s+1}-1)$ does not follow.",
+  "load_bearing": "Section 4 obtains Xiang's matching strategy purely by invoking Lemma (i) with $T=1$, $s=n$; the quoted halving step is the inductive engine of Lemma (i)'s proof, so the upper bound rests entirely on it."
+ },
+ "started_utc": "2026-09-06 04:44:59 UTC"
+}

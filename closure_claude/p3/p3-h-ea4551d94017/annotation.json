@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-ea4551d94017",
+  "problem": "3",
+  "sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+  "path": "checkpoint_inputs/ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round4",
+  "turn": 14,
+  "record_ids": [
+    "kimi-k3-round4-t014"
+  ],
+  "bytes": 20480,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 11338,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 526,
+        "output_tokens_details": {
+          "thinking_tokens": 250
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 11338,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 526,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 11338,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 11338
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "min-cost matching formula for D + fragment-component counting (tree component exists) + super-increasing margin",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= S/(2^m-1) + greedy realizability of nested-absolute-difference chain + cancel/bisect cuts",
+    "wrong_answer_stated": false,
+    "notes": "Complete: claiming game solved by induction giving (1+D)/2; layer-cake and matching representations proved; geometric split lower bound proved for all n via tree component argument; XY upper bound handles m<=n (bisect) and m=n+1 (chain), cut count and distinctness checked. Sharpness remark included."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

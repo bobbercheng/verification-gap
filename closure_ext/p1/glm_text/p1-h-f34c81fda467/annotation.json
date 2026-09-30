@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-f34c81fda467",
+  "problem": "1",
+  "sha256": "f34c81fda467c0c63f195aadc5de5dfc652022071867cb0310ce7db2f9d24f41",
+  "path": "checkpoint_inputs_ext/f34c81fda467c0c63f195aadc5de5dfc652022071867cb0310ce7db2f9d24f41.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "da850012",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-da850012-v1"
+  ],
+  "bytes": 8262,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2748,
+        "output_tokens": 4129,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 50.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic descent on (count of entries >1, total Ω)",
+    "upper_bound_mechanism": "invariant gcd of p-adic valuations via gcd(a,b)=gcd(min(a,b),|a-b|)",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Elementary reduction (min, |a-b|) stated; never-two-1s shown. Termination via well-founded lexicographic monovariant covering g=1, g>1 with m≠n, m=n cases; K≥1 preserved; exactly one survivor. Invariance identity is unconditional (covers a=b and zeros); final M = ∏ p^{gcd_i v_p(a_i)} explicit."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

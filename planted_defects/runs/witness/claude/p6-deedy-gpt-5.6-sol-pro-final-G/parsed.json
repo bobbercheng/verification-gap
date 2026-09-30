@@ -1,0 +1,85 @@
+{
+ "gate": "witness",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-G",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "G",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 32.3,
+  "input_tokens": 2,
+  "output_tokens": 2570,
+  "cache_read_input_tokens": 1632,
+  "cache_creation_input_tokens": 4417,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3705,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003805,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2570,
+    "cacheReadInputTokens": 1632,
+    "cacheCreationInputTokens": 4417,
+    "webSearchRequests": 0,
+    "costUSD": 0.109246,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2014,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "not_written",
+    "quote": "**Proof.** This follows by a descent on the weight $w$ (standard; details omitted). $\\square$",
+    "witness": "Lemma 2 (for every C in the minimal family and every p in C there is a minimal D containing p with w(D\\{p}) < a_1) is exactly the large-prime-erasure/finiteness content: one must show, for ALL terms/supports, that a support containing a large prime is dominated by a smaller accepted integer with a bounded small-prime support, producing the strict weight descent to a bounded-weight minimal support. The text gives no such argument at all: it asserts the descent exists and explicitly omits the details, so no all-cases proof is present.",
+    "load_bearing": "Everything after Lemma 2 (bounded cardinality of terminal members, finiteness of P, and hence finiteness of C) is deduced from it; without Lemma 2 the set P of relevant primes could be infinite and L would not exist."
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "Reduction (support-only acceptance, self-duality, minimal-support characterization) is fully argued. Periodicity assembly from m >= a_1 with L = prod P and T = count of accepted residues is correct and global, not merely eventual. The finiteness core (Lemma 2) is explicitly deferred with 'details omitted'."
+ },
+ "anchors": {
+  "lower_bound": {
+   "anchored": true,
+   "length": 93,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    6805,
+    6895
+   ]
+  }
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-1d951116019b",
+  "problem": "2",
+  "sha256": "1d951116019b881bbd8dfcc9511692b4743059868a4d44f1ad574ace1abbc9b6",
+  "path": "checkpoint_inputs/1d951116019b881bbd8dfcc9511692b4743059868a4d44f1ad574ace1abbc9b6.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 22,
+  "record_ids": [
+    "p2-gpt-5.6-sol-pro-main-t022"
+  ],
+  "bytes": 4890,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3227,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 2521,
+        "output_tokens_details": {
+          "thinking_tokens": 2224
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3227,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2521,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 3227,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3227
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 32.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "trigonometric factorization lemma T = lambda*C (stated, only numerically verified)",
+    "upper_bound_mechanism": "circle |z|^2 = w.z through A; OM=ON <=> c*d - b*e = (c^2-b^2)/2 with d,e chord lengths",
+    "wrong_answer_stated": false,
+    "notes": "Full trig encoding of all three angle conditions is genuinely derived (sine rule in BMK/ABK, CNL/ACL, ACK/ABL), and the finish from the chord relation is written out. The crux — the factorization T = lambda*C — is only checked symbolically/numerically and explicitly flagged as unproven, so the analogue of the key-circle step is a named but unexecuted computation."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

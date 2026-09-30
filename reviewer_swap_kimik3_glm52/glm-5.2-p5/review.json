@@ -1,0 +1,31 @@
+{
+ "task_id": "imo-2026-p5",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Sufficiency: for f(x)=x+c, c>=0, both inequalities reduce to (x-y-c)^2>=0 (expansions re-checked: (x+y+c)^2-4x(y+c)=(x-y-c)^2 and 2x^2+2(y+c)^2-(x+y+c)^2=(x-y-c)^2); positivity of f holds iff c>=0.",
+  "Step 1: substituting (x,y)=(f(t),t) makes both outer terms equal f(t), forcing f(f(t))=2f(t)-t for all t>0; substitution is legitimate since f(t)>0.",
+  "Step 2: D(f(t))=D(t) and induction give f^{(n)}(t)=t+nD(t); positivity of all iterates rules out D(t)<0, so f>=id (D>=0).",
+  "Step 3: (C2) rearranged gives D(v)<=((f(u)+v)^2-4uv)/(4u); the completion-of-square identity ((f(u)+v)^2-4uv)/(4u)=D(u)+(v-(2u-f(u)))^2/(4u) verified algebraically; choosing u=f(s) and using D(f(s))=D(s), 2f(s)-f(f(s))=s yields the master bound D(v)<=D(s)+(v-s)^2/(4f(s)).",
+  "Step 4: for |v-s|<s/2, the swapped bound plus f(v)>=v>s/2 gives a two-sided quadratic bound |D(v)-D(s)|<=max{(v-s)^2/(4f(s)),(v-s)^2/(2s)} -> 0, proving continuity of D (no regularity assumed).",
+  "Step 5: on compact [a,b], m=min f>0 (continuity+positivity) yields |D(v)-D(s)|<=(v-s)^2/(4m); the n-step partition gives |D(q)-D(p)|<=(q-p)^2/(4mn)->0, so D is constant on every compact interval; the nested intervals [1/n,n] all contain 1, so the constant is global; c>=0 by Step 2.",
+  "No hidden quantifier changes, no unjustified limits, no circularity; squaring steps are valid since all quantities are positive."
+ ],
+ "unverified_claims": [],
+ "summary": "The solution is correct and complete. It classifies all solutions as f(x)=x+c (c>=0), verifies the family cleanly, and proves uniqueness without any regularity assumptions: the key substitution (x,y)=(f(t),t) yields the exact identity f(f(t))=2f(t)-t; positivity of orbits forces f>=id; a completed-square master inequality D(v)<=D(s)+(v-s)^2/(4f(s)) then gives continuity of D and, via a subdivision argument, constancy of D. Every algebraic step was independently re-derived and checks out. The numeric parenthetical in Step 3 is explicitly flagged as evidence only and plays no role in the proof.",
+ "transfer_assessment": [
+  "Reusable: when an inequality chain is symmetric enough that substituting (x,y)=(f(t),t) makes the outer terms coincide, one obtains an exact iterative identity (here f(f(t))=2f(t)-t) — a strong bootstrap from a mere inequality.",
+  "Reusable: linearized orbit formula f^{(n)}(t)=t+nD(t) combined with a positive codomain converts a one-sided constraint (D<0 impossible) into a global comparison f>=id.",
+  "Reusable: completing the square in a two-variable inequality to isolate (v-s)^2/(4f(s)) produces a super-Hölder (quadratic) local modulus; a bound |D(v)-D(s)|<=C(v-s)^2 implies constancy via n-subdivision with total error O(1/n) — a clean way to prove constancy without derivatives.",
+  "Reusable: deriving continuity from the functional inequality itself (two-sided application of the master bound) rather than assuming it — important since the problem states no regularity.",
+  "Caution (not an error here): a quadratic local bound does not immediately imply constancy; the explicit partition/telescoping argument with error O(1/n) is essential and is correctly supplied.",
+  "Minor stylistic note: the step 'D constant on each [1/n,n] implies global constant' silently uses that the nested intervals overlap (all contain 1); trivially true but worth one phrase in a formal write-up."
+ ]
+}

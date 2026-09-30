@@ -1,0 +1,44 @@
+{
+  "id": "p3-h-323ceb8b7c17",
+  "problem": "3",
+  "sha256": "323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15",
+  "path": "checkpoint_inputs/323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 4,
+  "turn": null,
+  "record_ids": [
+    "glm53-c4"
+  ],
+  "bytes": 9294,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17878,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 201,
+        "reasoning_output_tokens": 83
+      },
+      "sec": 8.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "superincreasing geometric partition / XOR merge",
+    "upper_bound_mechanism": "counting lemma and split-at-minimum-gap construction",
+    "wrong_answer_stated": false,
+    "notes": "The correct closed form and greedy alternating-sum reduction are stated and proved. Both required all-n bounds remain explicitly open: the lower-bound cut-largest/XOR step and the upper-bound negative-gap regime. Only small cases and restricted subcases are completed."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

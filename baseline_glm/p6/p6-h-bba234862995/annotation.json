@@ -1,0 +1,50 @@
+{
+  "id": "p6-h-bba234862995",
+  "problem": "6",
+  "sha256": "bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988",
+  "path": "checkpoint_inputs/bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "fb285ec4",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-fb285ec4-v2"
+  ],
+  "bytes": 15030,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 599,
+      "stop": null,
+      "usage": null,
+      "sec": 2400.5,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5619,
+        "output_tokens": 982,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 16.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 2,
+    "complete": false,
+    "main_gap": "Lemma 2 (essential primes eventually divide every term) is false—e.g. for a_1=15, prime 5 is essential but never divides 36—and its 'proof' is hand-waving; Lemma 4 (a_{n+1}=a_n+L) is also false, as the write-up's own example (a_9=45, not 48) shows.",
+    "notes": "Only Lemma 1 and the vague eventual-periodicity idea are sound. The central structure (essential primes, step L) is incorrect, and the 'verification' example is fabricated/wrong, contradicting the lemmas it claims to check."
+  },
+  "S": null,
+  "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+  "path_base": "bundle root"
+}

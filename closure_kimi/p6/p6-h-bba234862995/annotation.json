@@ -1,0 +1,38 @@
+{
+  "id": "p6-h-bba234862995",
+  "problem": "6",
+  "sha256": "bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988",
+  "path": "checkpoint_inputs/bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "fb285ec4",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-fb285ec4-v2"
+  ],
+  "bytes": 15030,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 279.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none (finiteness of E merely asserted via false claim E subset of supp(a1); handwavy gap/rad-growth argument for false Lemma 2)",
+    "upper_bound_mechanism": "finite-state support tuples + backward induction (circular; rests on false Lemmas 2-5)",
+    "wrong_answer_stated": true,
+    "notes": "No characterization (C). Corollary 3's 'E subset of supp(a1)' is false by its own example (2 essential, 2 does not divide 15). Lemmas 2-4 are false: 20,40,50 are never divisible by essential prime 3, and a_{n+1} != a_n+30. Example omits a_9=45, so verification fails. Shift invariance mod L and backward induction only asserted, never proved."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

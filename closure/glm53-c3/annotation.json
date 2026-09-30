@@ -1,0 +1,44 @@
+{
+  "id": "glm53-c3",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 3,
+  "path": "checkpoint_inputs/a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829.md",
+  "bytes": 9592,
+  "sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3687,
+        "output_tokens": 4861,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 62.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric partition + superincreasing (Δ_k) induction, incomplete",
+    "upper_bound_mechanism": "subset-sum gap Lemma X1 + macro plans, incomplete",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form stated as claimed answer but explicitly conditional/conjectural for n≥3. Reduction (sorted alternating sum, A=2V−1) precisely stated as settled lemma. Lower: geometric partition given; superincreasing Theorem L proved only for n≤2 and uncut-largest case; insertion lemma open. Upper: min Δ_k counting and split-at-k* proved; Lemma X1 verified only through m≤4."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+  "original_bytes": 9592,
+  "input_anonymized": false
+}

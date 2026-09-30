@@ -1,0 +1,46 @@
+{
+  "id": "p2-h-5e0ec43edbc3",
+  "problem": "2",
+  "sha256": "5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296",
+  "path": "checkpoint_inputs/5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-round1",
+  "turn": 41,
+  "record_ids": [
+    "p2-gpt-5.6-sol-xhigh-round1-t041"
+  ],
+  "bytes": 2685,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 655,
+        "output_tokens": 17471,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 181.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "determinant factorization D = c·Q (stated, numerically verified, proof deferred)",
+    "upper_bound_mechanism": "equality of powers of M and N w.r.t. (0KL) via D = 0 (asserted)",
+    "wrong_answer_stated": false,
+    "notes": "Complex setup with A=0,B=2,M=1 is explicit and genuinely encodes all three angle conditions (Q=0 = third condition); strategy 'equal powers ⇒ OM=ON' is correct. But the boxed identity D=cQ is only verified symbolically/numerically, proof admitted as an unexecuted computation, and the power-determinant identification is asserted, not derived."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

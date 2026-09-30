@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-gpt__p5-deepseek-v4-pro-main-t033__upper_bound",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "procedure": "witness",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 28.0,
+  "input_tokens": 2,
+  "output_tokens": 2035,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 5913,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5280,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.00537,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2035,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 5913,
+    "webSearchRequests": 0,
+    "costUSD": 0.111156,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1698,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The dichotomy in §3 is indeed non-exhaustive: V={c} (i.e. f(x)=x+c, the actual answer) fits neither branch (i) nor (ii); this omission is harmless since §6–7 land exactly there, but the second half of the objection is decisive. The write-up never proves g(x) >= 0. The only related line, 'Then g(x) > -x', is far weaker, and §3 only rules out two distinct positive values, silently assuming V contains no negative number before restricting to V ⊆ {0,c}. The standard one-line repair (iterate (4): f^n(x) = x + n g(x) > 0 for all n, so g(x) >= 0) is absent, so L5.3 is not established as written."
+ },
+ "elsewhere_anchor": null
+}

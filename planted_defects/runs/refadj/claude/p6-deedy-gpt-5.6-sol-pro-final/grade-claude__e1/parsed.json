@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "O",
+ "problem": "6",
+ "objection_key": "grade-claude__e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 16.2,
+  "input_tokens": 2,
+  "output_tokens": 989,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 5072,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4228,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004333,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 989,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 5072,
+    "webSearchRequests": 0,
+    "costUSD": 0.076323,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 660,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "no",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "established",
+  "repair_distance": "none",
+  "explanation": "The quoted line is the inductive step of a standard elementary sunflower/Delta-system fact for families of sets of size at most K, used only inside Lemma 1. The write-up gives both cases: an element in infinitely many sets (restrict, delete, induct — the deleted element is then automatically common to all chosen sets, so it joins the core, and distinctness is preserved because the deleted element lay in every set) and the case where every element occurs finitely often (greedy disjoint choice, core empty). No case is missing and no false step occurs; the omitted bookkeeping is mechanical. Hence Lemma 1, and through it the finiteness of C (the ledger's finiteness content), stands as written.",
+  "objection_severity": "none"
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e1"
+}

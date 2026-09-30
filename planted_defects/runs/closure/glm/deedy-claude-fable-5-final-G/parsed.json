@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "deedy-claude-fable-5-final-G",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "G",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 66.6,
+  "input_tokens": 5517,
+  "output_tokens": 6074,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 1,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "tree-pairing on rank pairs (multigraph component; details omitted)",
+  "upper_bound_mechanism": "subset-sum pigeonhole + overlay equal-pair cuts",
+  "wrong_answer_stated": false,
+  "notes": "Correct closed form stated. Lemma 2 (greedy value = alternating sorted sum) and Lemma 5 (pigeonhole gap plus overlay construction, mark count checked) are fully written for all n. Lemma 4's core tree-component signed-sum inequality is explicitly '(standard; details omitted)', so the lower bound is only sketched."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 5517,
+    "output_tokens": 6074,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 66.6,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 1,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

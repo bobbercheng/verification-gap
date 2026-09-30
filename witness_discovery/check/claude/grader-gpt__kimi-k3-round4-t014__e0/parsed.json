@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "kimi-k3-round4-t014",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 49.5,
+  "input_tokens": 2,
+  "output_tokens": 3987,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 11596,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9479,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009569,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 3987,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 11596,
+    "webSearchRequests": 0,
+    "costUSD": 0.2163155,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 3588,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and its plain meaning is that after LB takes p_j and XY takes ℓ, XY is the first mover on M''. But moves alternate LB, XY, LB, …: the two removals restore LB to the move, so LB moves first on M''. Lemma 1.1's induction hypothesis (stated for games with LB moving first) then gives XY only even(M''), not odd(M''). Hence 'XY's total is p_2 + odd(M\\{p_1,p_2\\})' and 'p_1 + odd(M\\{p_1,p_j\\})' overstate XY's guaranteed total; the conclusion does not follow from the induction hypothesis as invoked. The true values (e.g. for j=1, p_2 + even(M\\{p_1,p_2\\}) = p_2+p_4+⋯ = even(M)) still yield the lemma, but that verification, and the j≥2 case, are nowhere carried out in the text, so the XY half of Lemma 1.1 is invalid as written."
+ }
+}

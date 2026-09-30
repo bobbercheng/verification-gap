@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-599287c3773b",
+  "problem": "2",
+  "sha256": "599287c3773b853f849c03d42aa7a8183853df8d9ecfa784377b5484c6cab59f",
+  "path": "checkpoint_inputs/599287c3773b853f849c03d42aa7a8183853df8d9ecfa784377b5484c6cab59f.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 6,
+  "record_ids": [
+    "p2-gpt-5.6-sol-pro-main-t006"
+  ],
+  "bytes": 3728,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2778,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 4240,
+        "output_tokens_details": {
+          "thinking_tokens": 3957
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2778,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 4240,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 2778,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2778
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 51.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "circumcircle of AKL cut on AB,AC at D,E; crux reduced to unproven trig identity (6)",
+    "upper_bound_mechanism": "equal powers of M,N: OM=ON ⟺ cd−be=(c²−b²)/2",
+    "wrong_answer_stated": false,
+    "notes": "Correct goal and a sound, error-free trig setup: cot x=cot p+2cot r, AK=cP, the power-of-a-point criterion (2), and identities (4)-(5) all check out. But the three hypotheses are only partly derived (eq. (1) asserted), no key circle through A,K,L is identified/proved, and the decisive identity (6) is explicitly left unproven."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-27f4dde8c553",
+  "problem": "5",
+  "sha256": "27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0",
+  "path": "checkpoint_inputs_ext/27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "2587b733",
+  "turn": 1,
+  "record_ids": [
+    "p5-nemotron-2587b733-v1"
+  ],
+  "bytes": 2982,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1274,
+        "output_tokens": 15803,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 204.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "direct verification: both inequalities equivalent to (x-y-c)^2 >= 0",
+    "upper_bound_mechanism": "iterate comparison via right inequality + fixed-point separation (flawed)",
+    "wrong_answer_stated": true,
+    "notes": "Answer, structural identity, d>=0, and sufficiency are fine (middle term (x+y+2c)/2 is a typo for (x+y+c)/2). Necessity incomplete: Sec. 3's 'linear term 4c(c-e)n' needs unstated m≈(c/e)n and omits case c>e; Sec. 4's claim that non-empty subsets of connected R_{>0} can be chosen arbitrarily close is a false lemma, so the mixed case is not validly excluded."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

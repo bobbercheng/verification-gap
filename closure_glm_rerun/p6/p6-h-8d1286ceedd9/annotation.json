@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-8d1286ceedd9",
+  "problem": "6",
+  "sha256": "8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4",
+  "path": "checkpoint_inputs/8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 12,
+  "record_ids": [
+    "p6-muse-spark-1.1-main-t012"
+  ],
+  "bytes": 135155,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 30394,
+        "output_tokens": 14219,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 155.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "T = residue count mod L = lcm of stable products (conditional, eventual only)",
+    "wrong_answer_stated": false,
+    "notes": "Correct clutter/blocker framework: proves stability iff self-dual (valid lemma), argues non-self-dual M must change, singleton case yields global T=1, and states L=lcm, T=residue count explicitly. But no large-prime erasure/finiteness (ground expansion left open, flagged 'main missing'), and global from-n=1 periodicity is only flagged as a needed lemma, never proved."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

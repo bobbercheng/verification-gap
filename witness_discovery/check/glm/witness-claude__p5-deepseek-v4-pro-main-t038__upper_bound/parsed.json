@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p5-deepseek-v4-pro-main-t038",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 46.5,
+  "input_tokens": 373,
+  "output_tokens": 3892,
+  "cache_read_input_tokens": 5056
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and the inference it rests on ('Consequently, either (i)... or (ii)...') requires that g take no negative values. The whole text establishes only g(x) > -x (§1, from f > 0); nowhere is g >= 0 proved. The standard orbit argument — from (4), g is constant on x, x+g(x), x+2g(x), ..., and these iterates must stay in R_{>0}, forcing g(x) >= 0 — is absent, and neither (7)/(8) nor anything else substitutes for it. Hence 'at most one positive value' leaves open V containing negative values (alone or alongside one positive value), so the dichotomy V ⊆ {0} or V ⊆ {0,c}, the parenthetical 'every x belongs to S_0 ∪ S_c', Lemma 1's 'b ∈ {0,c}', and the covering conclusion are all unjustified. The necessity argument (obligation N) is therefore incomplete as written; the missing one-line orbit argument, though easy, is nowhere supplied."
+ }
+}

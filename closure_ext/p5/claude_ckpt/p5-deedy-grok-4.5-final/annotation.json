@@ -1,0 +1,66 @@
+{
+  "id": "p5-deedy-grok-4.5-final",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/72f3ae519eb2c7e7ee5d768f2697068f3b2a36a55b5b344ec677e4c9630fb8bc.md",
+  "bytes": 1233,
+  "sha256": "72f3ae519eb2c7e7ee5d768f2697068f3b2a36a55b5b344ec677e4c9630fb8bc",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2639,
+        "output_tokens": 1007,
+        "output_tokens_details": {
+          "thinking_tokens": 814
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1007,
+            "cache_read_input_tokens": 2639,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Only f(x)=x is proposed (stated as unique target), missing the family x+c, c>=0. Substitution x=f(y) yields f(f(y))=2f(y)-y in preimage form, but no d(t)>=0 or AP structure. No verification of x+c and no necessity argument; 'full proof' is empty."
+  },
+  "S": 0,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

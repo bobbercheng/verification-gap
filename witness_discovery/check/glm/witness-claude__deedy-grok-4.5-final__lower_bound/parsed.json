@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-grok-4.5-final",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 53.5,
+  "input_tokens": 430,
+  "output_tokens": 3596,
+  "cache_read_input_tokens": 6336
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "Check the arithmetic: in the subcase k>=1, mu>tau=2^{n-1}, the piece mu is the largest part of the split bin of length 2^n, hence mu<2^n; and sum P = 2^n-1, so the collection has total S_n - mu = 2^{n+1}-1-mu > 2^n-1 = S_{n-1}. The witness (n=2, B_2={1,2,4}, one cut of the 4-bin into 3.5+0.5, so mu=3.5>tau=2, S_2-mu=3.5>S_1=3) satisfies every stated hypothesis and violates the asserted S_n-mu<=S_{n-1}. The dummy length S_{n-1}-(S_n-mu)=-0.5 is negative, so the padded 'B_{n-1} instance' does not exist and the inductive appeal is vacuous (the later d=mu-tau is indeed a different quantity). The continuation is hand-waving ('something that forces', n<=3 numerics) and the remark is conjectural, so no valid all-n lower bound remains."
+ }
+}

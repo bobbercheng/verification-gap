@@ -1,0 +1,19 @@
+{
+ "checker": "claude",
+ "transport": "claude-cli",
+ "model": "claude-opus-5",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-gpt-5.6-sol-final",
+ "tag": "upper_bound",
+ "text_sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "written_but_invalid",
+  "quote": "Set $d=T/(2^{s+1}-1)$. When the first row has accumulated length $d$, cut the column crossed at that instant and put its lower portion in the other row; below that level the two rows are interchanged.",
+  "witness": "COUNTEREXAMPLE: let $s=1$ and take two columns of height $T/2$. At every occupied level $N(t)=2$, so the odd-parity row accumulates length $0$, never $d=T/3$. The prescribed first cut therefore does not exist. The proof gives no separate branch for this case before invoking its induction.",
+  "load_bearing": "This sweep is the only argument supplied for refinement lemma (i). Since its construction is not defined for every permitted multiset, the lemma cannot support Xiang's claimed universal reply as written."
+ },
+ "started_utc": "2026-09-06 04:46:04 UTC"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-af4801711663",
+  "problem": "2",
+  "sha256": "af48017116631ef46e97e8c9579b4f775826b893475baa3f3ea1b7ab1e11c5b6",
+  "path": "checkpoint_inputs/af48017116631ef46e97e8c9579b4f775826b893475baa3f3ea1b7ab1e11c5b6.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 38,
+  "record_ids": [
+    "p2-gpt-5.6-sol-pro-main-t038"
+  ],
+  "bytes": 5861,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3967,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 13898,
+        "output_tokens_details": {
+          "thinking_tokens": 13520
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3967,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 13898,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 3967,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3967
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 149.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Circumcircle of AKL as |z|^2=w·z; second intersections D,E with AB,AC computed, plus identities (8),(9) from the midpoint sine-rule relations",
+    "upper_bound_mechanism": "Vector identity OM^2-ON^2 reduces goal to cd-be=(c^2-b^2)/2; harmonic factorization T=sin(x-y)(PQ sinU sinV - sin(p+r)sin(p+q))=0 by compatibility (4)",
+    "wrong_answer_stated": false,
+    "notes": "All three hypotheses genuinely encoded via sine rules (cot x=cot p+2cot r, etc.) plus (3)/(4). Analytic substitute for the key circle is executed correctly; I verified (8),(13),(14),(15), the e^{2iδ} coefficient and the constant-term reduction. Gaps: the numerator identity and constant-term matching are asserted; ray-order/configuration claims unproved."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,17 @@
+{
+  "task_id": "imo-2026-p3",
+  "verdict": "confirm",
+  "weakest_inference": "The most vulnerable step is the passage from an edge-deficient component of the rank-pairing multigraph to inequality (3): it requires that e_C = v_C - 1 exclude loops and parallel cycles, that no paired edge leave the component, and that the bipartition expansion consist only of signed rank-pair differences (plus the possible last piece). Each requirement holds, so the distinct subset-sum witness has absolute difference at most D.",
+  "counterexample_search": [
+    "Recomputed the drafting game by full minimax recurrence on 488281 integer multisets of up to eight pieces; every value equaled the sorted alternating discrepancy D.",
+    "Exhaustively inspected 13652 integer-grid refinements arising from 637 positive parent compositions with q at most 5, including fewer than q-1 cuts, repeated cuts, loops, ties, and both parities; every deficient component supplied the claimed tree certificate and no case had D below Gamma.",
+    "Independently implemented the closest-subset virtual overlay for 14892 positive integer compositions with q at most 6; every construction used at most q-1 cuts, preserved total length, and attained D = Gamma.",
+    "Tested the empty-subset case a = (1/4, 3/4): bisecting 3/4 gives discrepancy 1/4 = Gamma, so the B-empty branch is attainable rather than merely limiting.",
+    "Tested the zero-gap case a = (1/5, 3/10, 1/2): cutting 1/2 into 1/5 and 3/10 produces two equal pairs and D = Gamma = 0.",
+    "Reversed the proof's inequality uses: the graph witness gives Gamma <= D universally for Liu's lower bound, while the explicit overlay and Gamma <= 1/(2^q-1) give an existential D <= 1/(2^q-1) for Xiang's upper bound; neither implication is used backwards.",
+    "Checked q = 1, ineffective endpoint marks, fewer-than-allowed marks, tied final pieces, and the binary construction's nonzero conclusion; finite attainment and unique binary subset sums cover all existence and positivity claims."
+  ],
+  "dependency_gaps": [],
+  "required_fixes": [],
+  "summary": "The dependency graph is acyclic: backward induction first reduces optimal drafting to (1+D)/2; an independent graph argument proves every refinement with at most q-1 cuts has D >= Gamma; an independent overlay construction proves some such refinement has D <= Gamma; subset-sum pigeonholing then supplies Xiang's upper bound, while uniquely spaced normalized powers of two and only the universal graph direction supply Liu's matching lower bound. All inequality directions, cut-existence claims, zero/nonzero cases, and distinct-mark constraints survive the attack, and no concrete counterexample was found. The claimed value c_n = 2^n/(2^(n+1)-1) is therefore confirmed."
+}

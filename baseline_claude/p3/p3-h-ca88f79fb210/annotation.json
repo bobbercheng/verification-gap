@@ -1,0 +1,67 @@
+{
+  "id": "p3-h-ca88f79fb210",
+  "problem": "3",
+  "sha256": "ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7",
+  "path": "checkpoint_inputs/ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-deepseek-v4-pro-final",
+    "deepseek-v4-pro-main-t009"
+  ],
+  "bytes": 1934,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2181,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 701,
+        "output_tokens_details": {
+          "thinking_tokens": 532
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2181,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 701,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 2181,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2181
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 11.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 1,
+    "complete": false,
+    "main_gap": "No proof at all: only a conjectured formula from small-case numerics; both lower and upper bound arguments explicitly left 'to be completed'.",
+    "notes": "Tracking file stating status 'partial'. Provides plausible answer (n+1)/(2n+1) with n=1,2 brute-force checks and a candidate marking strategy, but no strategy analysis for either player. Conjectures and numerics earn no credit beyond the answer itself."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

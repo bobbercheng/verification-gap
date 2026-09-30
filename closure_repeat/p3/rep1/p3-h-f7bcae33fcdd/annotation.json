@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-f7bcae33fcdd",
+  "problem": "3",
+  "sha256": "f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874",
+  "path": "checkpoint_inputs/f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874.md",
+  "lineage": "ours-kimi-K2-repair",
+  "model": "kimi-k3",
+  "context": 4,
+  "turn": null,
+  "record_ids": [
+    "kimi-k2-repair"
+  ],
+  "bytes": 17249,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 6432,
+        "output_tokens": 4684,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 49.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "geometric division + even-position majorization (Lemma E)",
+    "upper_bound_mechanism": "subset-sum pigeonhole + supply–demand cancellation into equal pairs",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Lemma 1 fully proves the claiming value equals the odd sum. Lemma E's induction (two-case step) establishes the lower bound for the geometric division against arbitrary refinements for all n. Theorem B gives pigeonhole gap ≤ 1/N and an explicit cancellation with correct cut count ≤ n (D1, D2 repaired), plus δ evaluation. Correct boxed answer."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-c2ce1631ca36",
+  "problem": "3",
+  "sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+  "path": "checkpoint_inputs/c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d.md",
+  "lineage": "ours-kimi-R2",
+  "model": "kimi-k3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "kimi-r2-c1"
+  ],
+  "bytes": 3032,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2892,
+        "output_tokens": 578,
+        "output_tokens_details": {
+          "thinking_tokens": 287
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 578,
+            "cache_read_input_tokens": 2892,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "dyadic 1:2:...:2^n with toggle/symmetric-difference model; BFS-verified invariant, proved only n=2",
+    "upper_bound_mechanism": "explicit Xiang attacks (halve-largest, clone, halve-smallest) with case analysis, n=2 only",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form 2^n/(2^{n+1}-1) is stated explicitly but labeled CONJECTURE, verified numerically for n<=3 and proved only for n=2. Reduction to odd-order-statistics sum is asserted ('proof standard, to be written'). Both bounds are sketches/small-case only; the general invariant and general Xiang strategy are open."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

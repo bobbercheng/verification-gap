@@ -1,0 +1,47 @@
+{
+  "id": "p6-h-5effa7f8941a",
+  "problem": "6",
+  "sha256": "5effa7f8941a24e7e3fb4e6a5d9c0a4a0df080fc87b3bec389a596379a2cd372",
+  "path": "checkpoint_inputs/5effa7f8941a24e7e3fb4e6a5d9c0a4a0df080fc87b3bec389a596379a2cd372.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p6-deedy-gpt-5.6-sol-max-final",
+    "p6-gpt-5.6-sol-max-main-t006"
+  ],
+  "bytes": 3406,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 960,
+        "output_tokens": 8164,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 103.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "bounded gaps + fixed prime set P(a1) (route named, unproved)",
+    "upper_bound_mechanism": "conditional period = product of primes of a1..aN with index shift",
+    "wrong_answer_stated": false,
+    "notes": "Correct setup: S_n recast of the greedy rule, bounded gaps via multiples of a_1, stabilization criterion (S_N pairwise non-coprime) with conditional periodicity sketch and a_1=15 example. Core finiteness/large-prime erasure explicitly left unproved ('remains to prove finite stabilization'); all-n indexing deferred. No false lemma; gaps acknowledged."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

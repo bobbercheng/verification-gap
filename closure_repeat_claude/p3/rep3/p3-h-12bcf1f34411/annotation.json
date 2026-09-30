@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-12bcf1f34411",
+  "problem": "3",
+  "sha256": "12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c",
+  "path": "checkpoint_inputs/12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-kimi-k3-final"
+  ],
+  "bytes": 24463,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 13775,
+        "output_tokens": 454,
+        "output_tokens_details": {
+          "thinking_tokens": 189
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 454,
+            "cache_read_input_tokens": 13775,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 7.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "matching/odd-set formula for D + component-counting (tree component) + super-increasing margin inequality",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= S/(2^m-1) + greedy realizability of nested-difference chain + equal-pair cancellation/bisection",
+    "wrong_answer_stated": false,
+    "notes": "Complete for all n: claiming game value proved by induction (odd/even sums, both players' guarantees), geometric 1:2:...:2^n split with general super-increasing tree argument, and Xiang's chain counterstrategy with cut-count and distinctness verified. Sharpness remark included."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

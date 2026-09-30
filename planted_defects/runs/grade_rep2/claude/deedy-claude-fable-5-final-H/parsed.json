@@ -1,0 +1,56 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final-H",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 99.3,
+  "input_tokens": 2,
+  "output_tokens": 8666,
+  "cache_read_input_tokens": 9809,
+  "cache_creation_input_tokens": 0,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7294,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.007389,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 8666,
+    "cacheReadInputTokens": 9809,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.22156450000000003,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 8417,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [],
+  "notes": "Answer 2^n/(2^{n+1}-1) with both bounds proved. Lemma 2 (greedy value = sum of odd-ranked pieces) is correctly derived via (2.1)/(2.2); the lower bound via tree-component 2-colouring plus the signed-subset-sum property of the geometric configuration is valid; the upper bound via subset-sum pigeonhole and cross-pairing cuts checks out, including the mark count m-1=n and distinctness. Verified edge cases (single-vertex component, Δ=0, β_q=α_p) hold. Numerical remarks are extraneous but the proof is self-contained."
+ },
+ "anchors": []
+}

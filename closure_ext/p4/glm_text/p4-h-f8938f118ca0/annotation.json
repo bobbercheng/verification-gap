@@ -1,0 +1,47 @@
+{
+  "id": "p4-h-f8938f118ca0",
+  "problem": "4",
+  "sha256": "f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3",
+  "path": "checkpoint_inputs_ext/f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p4-claude-fable-5-main-t005",
+    "p4-deedy-claude-fable-5-final"
+  ],
+  "bytes": 11887,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4782,
+        "output_tokens": 3879,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 57.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "chain lemma (induction on kθ) + double-threat cut at largest angle",
+    "upper_bound_mechanism": "safe-triangle invariant (angles outside θℕ) with 4-case closure",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Lemma 0 parametrizes cuts; Lemma 1 (chain induction) handles both discard choices with α=θ∈(0,kθ); Lemma 2 double-threat cut (n≥3 and n=2 cases) puts multiples of θ in both children; Lemmas 3–4 give Shan-Yu's safe invariant, using 180∉θℕ in case 4. Answer θ=180°/n explicit. No gaps."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

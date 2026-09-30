@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-1a10db6e23dc",
+  "problem": "1",
+  "sha256": "1a10db6e23dca33da727e66a219fcf9b19ea3c20642b5b8e3afe8f913e64b43b",
+  "path": "checkpoint_inputs_ext/1a10db6e23dca33da727e66a219fcf9b19ea3c20642b5b8e3afe8f913e64b43b.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "e1fce43d",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-e1fce43d-v1"
+  ],
+  "bytes": 7369,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5442,
+        "output_tokens": 1837,
+        "output_tokens_details": {
+          "thinking_tokens": 1568
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1837,
+            "cache_read_input_tokens": 5442,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 24.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic (K, sum Omega) well-founded descent; 'at least one >1' via product argument",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations via gcd(a,b)=gcd(min(a,b),|a-b|)",
+    "wrong_answer_stated": true,
+    "notes": "Correct M and move description; lexicographic termination and K<=1 are rigorous. But 'at least one >1' is deduced from 'product never increases and starts >1', a false inference (product could drop to 1); the correct argument (every move leaves an output >1) is never given. Invariance identity stated unconditionally, degenerate cases unverified."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

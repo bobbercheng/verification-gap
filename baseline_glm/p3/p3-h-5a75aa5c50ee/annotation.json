@@ -1,0 +1,42 @@
+{
+  "id": "p3-h-5a75aa5c50ee",
+  "problem": "3",
+  "sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+  "path": "checkpoint_inputs/5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8.md",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "kimi-r1-c3"
+  ],
+  "bytes": 14257,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5414,
+        "output_tokens": 19713,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 232.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 7,
+    "complete": true,
+    "main_gap": "none",
+    "notes": "Complete correct proof. Lemma 1 (claiming value = odd sum of sorted pieces) is rigorously proved via both pairing strategies. Lower bound: Lemma E induction (base + two-case step) correctly caps Xiang's even positions at 2^n-1 units on the geometric partition. Upper bound: pigeonhole on subset sums plus greedy supply-demand cancellation with correct cut count; Lemma 3 pairing-cancellation is sound. One cosmetic slip: '|Z|<=n-1' in the one-sided case should be '<=n'; conclusion unaffected."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

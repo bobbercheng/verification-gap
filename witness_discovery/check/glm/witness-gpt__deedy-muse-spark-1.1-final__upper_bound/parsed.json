@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 56.0,
+  "input_tokens": 197,
+  "output_tokens": 3705,
+  "cache_read_input_tokens": 8192
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote appears verbatim and is correctly read: it announces a goal ('Need to show'), not a proof. Checking the entire text, no universal Xiang reply is ever constructed: after conjecturing c=(n+1)/(2n+1), each attempted idea (completing the equal grid, mirroring, threshold/threshold-counting bounds) is explicitly abandoned ('So previous plan fails... So need different Xiang strategy to upper bound'), and the file ends with an unexecuted computational brute-force plan. Nothing proves that for every Liu division Xiang can hold Liu to any fixed constant for all n; moreover the targeted constant (n+1)/(2n+1) is not even the correct 2^n/(2^(n+1)-1). The upper-bound obligation (U) is therefore wholly unmet, and the gap is load-bearing for the claimed value."
+ }
+}

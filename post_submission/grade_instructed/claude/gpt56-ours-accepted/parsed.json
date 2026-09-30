@@ -1,0 +1,46 @@
+{
+ "gate": "grade_im",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted",
+ "base_id": "gpt56-ours-accepted",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 73.2,
+  "input_tokens": 2,
+  "output_tokens": 6308,
+  "cache_read_input_tokens": 3426,
+  "cache_creation_input_tokens": 7660,
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 6308,
+    "cacheReadInputTokens": 3426,
+    "cacheCreationInputTokens": 7660,
+    "webSearchRequests": 0,
+    "costUSD": 0.236023,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 6105,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [],
+  "notes": "Answer 2^n/(2^{n+1}-1). Drafting lemma (greedy optimal, advantage = alternating sum) proved by induction; refinement lemma (min discrepancy with ≤q-1 cuts = min subset-sum gap) proved both ways via a tree-component pairing argument and an overlay construction; pigeonhole on 2^{n+1} subset sums gives the upper bound, the dyadic partition the lower bound. Sections 5–6 are extraneous but harmless."
+ },
+ "anchors": [],
+ "parse_path": "strict",
+ "run_dir": "grade_im",
+ "run_tag": "",
+ "transport_choice": "cli"
+}

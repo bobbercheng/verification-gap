@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-eb62923f791f",
+  "problem": "3",
+  "sha256": "eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6",
+  "path": "checkpoint_inputs/eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round1",
+  "turn": 8,
+  "record_ids": [
+    "kimi-k3-round1-t008"
+  ],
+  "bytes": 2684,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1314,
+        "output_tokens": 4873,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 54.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division 1:2:4:...:2^n (named, unproved)",
+    "upper_bound_mechanism": "XY halving/cancellation operations with parity invariance (sketch)",
+    "wrong_answer_stated": false,
+    "notes": "Correct form appears only as conjecture, numerically verified for n≤3. Reduction (greedy = alternating sum, share (1+D)/2) asserted, not written out. Geometric division stated for all n, but lower-bound argument explicitly 'remaining'. XY operation toolkit and parity fact sketched; no pigeonhole or complete upper-bound argument."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

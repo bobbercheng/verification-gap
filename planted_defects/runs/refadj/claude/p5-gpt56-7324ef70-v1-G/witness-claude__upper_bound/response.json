@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2919,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003019,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2332,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 3241,
+    "webSearchRequests": 0,
+    "costUSD": 0.091861,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1990,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3241,
+   "cache_read_input_tokens": 2282,
+   "output_tokens": 2332,
+   "output_tokens_details": {
+    "thinking_tokens": 1990
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3241,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 2332,
+     "cache_read_input_tokens": 2282,
+     "cache_creation_input_tokens": 3241,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3241
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 27893,
+  "is_error": false,
+  "elapsed_seconds": 28.6,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L5.5\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"sentence\",\n  \"explanation\": \"Section 3's telescoping argument (and hence the whole necessity half, including the fixed-point case) depends entirely on (7). The text derives (7) nowhere: it says 'squaring... rearranging... (standard; details omitted)'. No other passage supplies the computation. The estimate is in fact true and short: with y=t+s, the AM-GM branch at x=f(t) gives (t+2c+y)^2-4(t+c)(y+b) = s^2+4(c-b)(t+c) >= 0, so d(y)-d(t) <= (y-t)^2/(4t), and swapping t,y gives the other side. That two-line computation plus the explicit swap is the missing sentence; since it is omitted, the estimate is asserted, not established.\"\n}"
+   }
+  ]
+ }
+}

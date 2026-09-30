@@ -1,0 +1,55 @@
+{
+ "gate": "witness",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-F",
+ "base_id": "gpt56-ours-accepted",
+ "type": "F",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 64.9,
+  "input_tokens": 18671,
+  "output_tokens": 1879,
+  "reasoning_output_tokens": 1491,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_but_invalid",
+    "quote": "Having fewer edges than vertices, the graph contains\nno cycle and no loop, since a cycle or a loop on \\(v\\) vertices already uses at\nleast \\(v\\) edges; hence every connected component \\(C\\) has \\(e_C=v_C-1\\) and\nis a tree (an isolated vertex counts as a tree). We use the component\ncontaining the vertex of \\(a_q\\).",
+    "witness": "Counterexample: take q=2, a_1=1/5 and a_2=4/5. Xiang uses one cut, splitting a_2 into 2/5 and 2/5. Then x=(2/5,2/5,1/5), so the sole rank-pair edge is a loop at vertex a_2. Thus the graph has one edge on two vertices, yet contains a loop; moreover the selected component containing a_q=a_2 has v=1 and e=1 and is not a tree, so the asserted bipartition is unavailable.",
+    "load_bearing": "The proof of D≥Γ for every Xiang refinement depends on bipartitioning the selected component. Section 4 explicitly invokes this lower half of the refinement lemma to obtain Liu's all-n guarantee."
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "The closed form is correct. The drafting reduction and Xiang construction are valid, but the claimed graph acyclicity is false, leaving the matching lower bound unproved as written."
+ },
+ "anchors": {
+  "lower_bound": {
+   "anchored": true,
+   "length": 315,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    2545,
+    2860
+   ]
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "checker": "gpt",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "kimi-k3-round4-t014",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 20.6,
+  "input_tokens": 22670,
+  "output_tokens": 642,
+  "reasoning_output_tokens": 446,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "Lemma 4.1 proves existence of an ordering with nested absolute difference g, whereas v(B) was defined using the decreasing ordering. These are not equivalent because nested absolute difference is order-dependent. The witness verifies this: decreasing order 8,7,6,5,4 gives value 4, while 8,6,5,7,4 gives 0. Indeed P={8,7} and N={6,5,4} have equal sums, so this also directly exposes the analogous gap in the g=0 branch of Theorem 4.2. The later strategy explicitly processes b_1≥⋯≥b_r and therefore requires the unproved decreasing-order bound. No argument elsewhere repairs this mismatch, so the all-n upper bound is incomplete as written."
+ }
+}

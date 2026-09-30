@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "kimi-k3-round4-t014",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 117.4,
+  "input_tokens": 7256,
+  "output_tokens": 9354,
+  "cache_read_input_tokens": 1024
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "Section 4 defines v(B) as the nested difference in decreasing order (B = {b_1 ≥ ... ≥ b_r}), but Lemma 4.1 only produces some (greedy) ordering with value g. The witness is correct: for P={8,7,5}, N={10,9}, ΣP−ΣN=1>0 and no subset sum lies strictly between 19 and 20 (sums are integers); the decreasing-order value of P∪N={10,9,8,7,5} is |...||10−9|−8|−7|−5| = 5, while the ordering 10,8,7,9,5 gives 1. This pair is realizable in the proof (adjacent subset sums 19, 20 of {5,7,8,9,10}, gap 1 ≤ 39/31). Thus the proof of Theorem 4.2 establishes only an ordering-specific value, not the stated decreasing chain value, and the XY strategy explicitly processes B in decreasing order relying on that statement. No repair (e.g. processing in Lemma 4.1's greedy order) appears in the text, so the all-n upper bound is unsupported as written."
+ }
+}

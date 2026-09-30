@@ -1,0 +1,42 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted",
+ "base_id": "gpt56-ours-accepted",
+ "type": "O",
+ "problem": "3",
+ "objection_key": "grade-claude__e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.0,
+  "input_tokens": 18874,
+  "output_tokens": 394,
+  "reasoning_output_tokens": 209,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "no",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "Since every connected multigraph has \\(e_C\\ge v_C-1\\), this component has \\(e_C=v_C-1\\) and is a tree (an isolated vertex counts as a tree).",
+  "status_as_written": "established",
+  "repair_distance": "none",
+  "explanation": "The selected connected component satisfies \\(e_C<v_C\\); combined with \\(e_C\\ge v_C-1\\), this gives \\(e_C=v_C-1\\). The write-up then explicitly identifies it as a tree. A connected multigraph with a loop would have at least \\(v_C\\) edges, so no loop can occur in that component. Thus the needed fact is both implied and stated through the tree conclusion."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 140,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   2657,
+   2797
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e1"
+}

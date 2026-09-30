@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-927a091f84a0",
+  "problem": "1",
+  "sha256": "927a091f84a0608782f3eea77b6014ed9cbe9b88b86b47b324b225ba97a7e4ce",
+  "path": "checkpoint_inputs_ext/927a091f84a0608782f3eea77b6014ed9cbe9b88b86b47b324b225ba97a7e4ce.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 9,
+  "record_ids": [
+    "p1-deepseek-v4-pro-main-t009"
+  ],
+  "bytes": 7089,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3345,
+        "output_tokens": 2258,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 26.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "K+S monovariant (count of >1 plus total Ω) with full case analysis g=1 / g>1,m=n / g>1,m≠n",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations under (α,β)→(min,|α−β|), proved via divisibility both ways",
+    "wrong_answer_stated": false,
+    "notes": "Complete write-up. Valuation move description and never-two-1s fact both proven. Termination via strict monovariant K+S covers all cases; K=0 ruled out. Invariance lemma handles equal and zero valuations and gcd(v,0,...,0)=v. M=∏p^{gcd_i v_p(a_i)} explicitly stated."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

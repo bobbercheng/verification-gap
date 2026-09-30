@@ -1,0 +1,22 @@
+{
+ "checker": "gpt",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.8,
+  "input_tokens": 18243,
+  "output_tokens": 255,
+  "reasoning_output_tokens": 89,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "For f(x)=x+c, the required middle term is (f(x)+y)/2=(x+y+c)/2, whereas Section 5 uses (x+y+2c)/2. The witness c=1, x=2, y=1 gives 2 >= 2.5, so the displayed chain is false even though (x-y-c)^2=0. Since Section 5 is the only sufficiency verification, obligation (V) is not established as written. Replacing the middle term by (x+y+c)/2 would repair the argument: each inequality then reduces to (x-y-c)^2>=0."
+ }
+}

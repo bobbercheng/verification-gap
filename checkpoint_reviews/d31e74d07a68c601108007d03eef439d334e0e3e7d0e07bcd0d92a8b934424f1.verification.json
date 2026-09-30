@@ -1,0 +1,15 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "confirm",
+  "weakest_inference": "The most vulnerable inference is the large-prime-erasure induction: if the constructed m = R p^k were skipped, an earlier selected b < m < x is used to make sigma(b) meet P(x), while gcd(b,m) = 1 and P(m) = sigma(x) make sigma(b) disjoint from P(x). This is valid because b is strictly earlier than x, goodness is defined against the already fixed whole sequence, and the scan characterization used here was proved independently before the induction, so there is no circularity.",
+  "counterexample_search": [
+    "Reversed the descent inequalities in both branches. For k = 0, Rq divides x and x >= Rq > R = m. For k > 0, minimality gives R p^(k-1) < A; since R >= p and q > A, this gives p^k < pA/R <= A < q and hence x >= Rq > R p^k = m >= A. No equality or direction failure occurs.",
+    "Attacked the threshold with A = 15 and selected x = 102: the naive quotient 102/17 = 6 falls below A, but the proof's construction gives m = 18 when p = 3 or m = 24 when p = 2; both are earlier selected terms with support {2,3}. No boundary counterexample results.",
+    "An independent exact greedy scan for every 2 <= A <= 17 compared membership across two complete blocks of length L = product of the primes at most A. It found no mismatch m versus m + L; this includes A = 2, primes, prime powers, and composites.",
+    "The supplied trace test was rerun for 2 <= A <= 150 over 400 terms per start. Among 19,585 selected terms having a prime factor greater than A, none lacked an earlier selected term with exactly the same small-prime support.",
+    "Tested skipped-number witnesses, the m = A boundary, empty-support risk, existence of p and the least k, positivity of L and T, and the half-open final block. Every witness is strictly earlier, sigma(x) is nonempty because x meets A, k exists because p >= 2, and T >= 1 because A lies in the base block."
+  ],
+  "dependency_gaps": [],
+  "required_fixes": [],
+  "summary": "The proof dependency graph is acyclic: the greedy rule gives strict increase and pairwise non-coprimality; the next multiple of A gives admissibility and bounded gaps; these facts give the scan characterization and an earlier coprime witness for every skipped integer; strict-descent induction then proves small-prime erasure; upward closure makes membership depend only on primes at most A; the primorial L preserves that trace; and counting one residue block yields the fixed index shift T. All inequality directions, existence and nonzero claims, threshold cases, and uses of global goodness survive the attack. No concrete counterexample or substantive repair was found, so the prior pass is confirmed on independent grounds."
+}

@@ -1,0 +1,104 @@
+[
+ {
+  "id": "p6-deedy-gpt-5.6-sol-pro-final-F",
+  "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+  "base_path": "checkpoint_inputs/89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998.md",
+  "problem": "6",
+  "type": "F",
+  "obligation": "lower_bound",
+  "ledger_statement": "L6.2",
+  "search": "**Lemma 1.** For every positive integer $K$, there are only finitely many $C\\in\\mathcal C$ such that $|C|\\le K$.\n\n**Proof.** Suppose instead that there are infinitely many such members. We use the following elementary infinite sunflower fact: every infinite family of distinct sets of cardinality at most $K$ has an infinite subfamily $C_1,C_2,\\ldots$ for which there is a fixed set $R$ satisfying\n\\[\nC_i\\cap C_j=R\\qquad(i\\ne j).\n\\tag{3}\n\\]\nFor completeness, this fact follows by induction on $K$. If some element occurs in infinitely many sets, restrict to those sets, delete that element, and apply the induction hypothesis. If every element occurs only finitely many times, one can greedily choose infinitely many pairwise disjoint sets, giving $R=\\varnothing$.\n\nApply the fact to the assumed infinite bounded-size subfamily of $\\mathcal C$. The petals $C_i\\setminus R$ are pairwise disjoint. Fix any $H\\in\\mathcal C$. Since $\\mathcal C$ is intersecting, $H$ meets every $C_i$. If $H$ were disjoint from $R$, the finite set $H$ would have to meet every one of the infinitely many pairwise disjoint petals, which is impossible. Thus every $H\\in\\mathcal C$ meets $R$. Since $\\mathcal C$ is nonempty, this also shows that $R$ is nonempty.\n\nEvery member of $\\mathcal F$ contains a member of $\\mathcal C$, so $R$ meets every member of $\\mathcal F$. By (1), $R\\in\\mathcal F$. Hence $R$ contains some $H_0\\in\\mathcal C$. But\n\\[\nH_0\\subseteq R\\subseteq C_i\n\\]\nfor every $i$. Since $H_0$ and $C_i$ belong to the antichain $\\mathcal C$, this forces $H_0=C_i$ for every $i$, contradicting the distinctness of the $C_i$. This proves Lemma 1. $\\square$",
+  "replace": "**Lemma 1.** Let $\\mathcal A$ be a pairwise-intersecting family of finite sets. Then $\\mathcal A$ has only finitely many inclusion-minimal finite transversals, that is, finite sets meeting every member of $\\mathcal A$ and minimal with this property. In particular, for every positive integer $K$, there are only finitely many $C\\in\\mathcal C$ such that $|C|\\le K$.\n\n**Proof.** Suppose instead that $\\mathcal A$ has infinitely many distinct minimal finite transversals $X_1,X_2,\\ldots$. We use the following elementary infinite sunflower fact: every infinite family of distinct finite sets has an infinite subfamily $X_{i_1},X_{i_2},\\ldots$ for which there is a fixed set $R$ satisfying\n\\[\nX_{i_j}\\cap X_{i_k}=R\\qquad(j\\ne k).\n\\tag{3}\n\\]\nFor completeness, this fact follows by induction. If some element occurs in infinitely many sets, restrict to those sets, delete that element, and continue. If every element occurs only finitely many times, one can greedily choose infinitely many pairwise disjoint sets, giving $R=\\varnothing$.\n\nApply the fact and relabel so that (3) holds for $X_1,X_2,\\ldots$. The petals $X_i\\setminus R$ are pairwise disjoint. Fix any $A\\in\\mathcal A$. Since each $X_i$ is a transversal, $A$ meets every $X_i$. If $A$ were disjoint from $R$, the finite set $A$ would have to meet every one of the infinitely many pairwise disjoint petals, which is impossible. Thus every $A\\in\\mathcal A$ meets $R$, that is, $R$ is a transversal of $\\mathcal A$. But\n\\[\nR\\subseteq X_i\n\\]\nfor every $i$, and $X_i$ is an inclusion-minimal transversal, so $R=X_i$ for every $i$, contradicting the distinctness of the $X_i$. The last assertion follows because, by (1), $\\mathcal C$ is the family of inclusion-minimal finite transversals of the intersecting family $\\mathcal F$. This proves Lemma 1. $\\square$",
+  "dependency_argument": "Lemma 1 (statement and proof) is replaced by the false general lemma 'every pairwise-intersecting family of finite sets has only finitely many inclusion-minimal finite transversals' (refuted by F_k = {x_1,...,x_k, y_k}: for every k the set {y_1,...,y_{k-1}, x_k} is a distinct minimal finite transversal), with a bogus proof whose sunflower 'fact' drops the cardinality bound (false for the initial segments {1..n}). The original self-duality/sunflower argument for the bounded-size case is gone. Consumer, unchanged: 'In particular, $|D|\\le a_1$, so Lemma 1 shows that there are only finitely many terminal members.' and then 'Let $P$ be the union of all terminal members. It is a finite set of primes.' The finiteness of P (hence of C, and the existence of L) rests on the false lemma; this is the ledger's documented failure mode for L6.2 (p6-deedy-gpt-5.6-sol-final).",
+  "truth": {
+   "AW": "reject",
+   "RT": "reject"
+  },
+  "check": "check_deedy_F_transversal_lemma"
+ },
+ {
+  "id": "p6-deedy-gpt-5.6-sol-pro-final-H",
+  "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+  "base_path": "checkpoint_inputs/89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998.md",
+  "problem": "6",
+  "type": "H",
+  "obligation": "lower_bound",
+  "ledger_statement": "L6.2",
+  "search": "\\[\n2^{|D|-1}\\le w(D\\setminus\\{p\\})<a_1\n\\]\nfor the corresponding $p$. In particular, $|D|\\le a_1$, so Lemma 1 shows that there are only finitely many terminal members.",
+  "replace": "\\[\n2^{|D|}\\le w(D\\setminus\\{p\\})<a_1\n\\]\nfor the corresponding $p$. In particular, $|D|\\le a_1$, so Lemma 1 shows that there are only finitely many terminal members.",
+  "dependency_argument": "The display '2^{|D|-1} <= w(D\\{p}) < a_1' becomes '2^{|D|} <= w(D\\{p}) < a_1', which is false (a_1 = 15, D = {2,3} in C, p = 3: w({2}) = 2 < 4 = 2^{|D|}); the stated justification 'since all primes are at least 2' only yields the original exponent |D|-1. The continuation 'In particular, $|D|\\le a_1$, so Lemma 1 shows that there are only finitely many terminal members.' is unchanged and correct (it follows from the correct display), and no later line cites the display itself; only the conclusion |D| <= a_1 (and in fact only the finiteness it gives) is used.",
+  "truth": {
+   "AW": "reject",
+   "RT": "accept"
+  },
+  "check": "check_deedy_H_cardinality_display"
+ },
+ {
+  "id": "p6-deedy-gpt-5.6-sol-pro-final-G",
+  "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+  "base_path": "checkpoint_inputs/89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998.md",
+  "problem": "6",
+  "type": "G",
+  "obligation": "lower_bound",
+  "ledger_statement": "L6.2",
+  "search": "**Proof.** We first establish a descent step. Let $E\\in\\mathcal C$, let $p\\in E$, and suppose\n\\[\nw(E\\setminus\\{p\\})\\ge a_1.\n\\]\nSet $S=E\\setminus\\{p\\}$. By the inclusion-minimality of $E$, we have $S\\notin\\mathcal F$. The squarefree integer $w(S)$ has support $S$, is at least $a_1$, and is therefore rejected. In fact it is greater than $a_1$, since $a_1$ itself is accepted. Hence there exists an accepted integer $y<w(S)$ coprime to $w(S)$. The support of $y$ lies in $\\mathcal F$, so it contains some $H\\in\\mathcal C$.\n\nWe have $H\\cap S=\\varnothing$. Since $H,E\\in\\mathcal C$ and $\\mathcal C$ is intersecting, $H\\cap E\\ne\\varnothing$. As $E=S\\cup\\{p\\}$, it follows that $p\\in H$. Moreover,\n\\[\nw(H)\\le \\prod_{q\\mid y}q\\le y<w(S)=w(E\\setminus\\{p\\}).\n\\tag{5}\n\\]\nThis is the required descent step.\n\nStarting from $C$, repeatedly perform this step as long as the current set $E$ satisfies $w(E\\setminus\\{p\\})\\ge a_1$. Every resulting member of $\\mathcal C$ contains $p$, and (5) shows that its weight is strictly smaller than the weight of the preceding member. Since these weights are positive integers, the process must terminate. At termination we obtain a set $D$ satisfying (4). This proves Lemma 2. $\\square$",
+  "replace": "**Proof.** This follows by a descent on the weight $w$ (standard; details omitted). $\\square$",
+  "dependency_argument": "The proof of Lemma 2 (the descent step: a rejected squarefree w(E\\{p}) has a smaller accepted coprime witness whose minimal support H contains p and has smaller weight) is deleted; the statement (4) is kept with 'standard; details omitted'. Lemma 2 is the arithmetic heart (the analogue of large-prime erasure): it is what bounds the primes of C. Later uses, unchanged: 'Call a member $D\\in\\mathcal C$ terminal if (4) holds for at least one $p\\in D$.' and 'If a prime $p$ occurs in any $C\\in\\mathcal C$, Lemma 2 supplies a terminal $D\\in\\mathcal C$ containing $p$. Therefore every prime occurring in any member of $\\mathcal C$ belongs to $P$.'",
+  "truth": {
+   "AW": "reject",
+   "RT": "reject"
+  },
+  "check": "none: deletion"
+ },
+ {
+  "id": "p6-gpt56-ours-F",
+  "base_id": "p6-gpt56-ours",
+  "base_path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+  "problem": "6",
+  "type": "F",
+  "obligation": "lower_bound",
+  "ledger_statement": "L6.2",
+  "search": "Q=\\{p:p\\text{ is prime and }p\\le A\\},\n\\qquad\n\\sigma(x)=P(x)\\cap Q.\n\\]",
+  "replace": "Q=\\{p:p\\text{ is prime and }p\\mid A\\},\n\\qquad\n\\sigma(x)=P(x)\\cap Q.\n\\]\nOnly the primes dividing \\(A\\) can matter here, because every term shares a prime factor with \\(A=a_1\\).",
+  "dependency_argument": "The relevant prime set Q is changed from the primes <= A to the primes dividing A (with a false one-line justification). The key lemma, unchanged, '**Lemma.** For every sequence term \\(x\\), the set \\(\\sigma(x)\\) is good.' is then false: for A = 15 the term 18 has sigma(18) = {3}, and {3} misses P(20) = {2,5} although 20 is a term. Consumers, unchanged: (3) 'm is a sequence term <=> sigma(m) is good' and 'Set L=\\prod_{p\\in Q}p.' followed by 'Hence \\(\\sigma(m+L)=\\sigma(m)\\), and (3) gives' (4); with L = 15 the equivalence (4) fails (18 is a term, 33 is not), and the boxed a_{n+T}=a_n+L fails for the proof's own T = 4 (a_6 = 36 != a_2 + 15 = 33). The text's own hypothesis 1 documents this as false, which is the parent's intended 'contradicted by the text's own example' variant.",
+  "truth": {
+   "AW": "reject",
+   "RT": "reject"
+  },
+  "check": "check_ours_F_prime_set"
+ },
+ {
+  "id": "p6-gpt56-ours-H",
+  "base_id": "p6-gpt56-ours",
+  "base_path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+  "problem": "6",
+  "type": "H",
+  "obligation": "lower_bound",
+  "ledger_statement": "L6.2",
+  "search": "For \\(A=15\\), the first terms are \\(15,18,20\\), while \\(21\\) is skipped because \\(\\gcd(21,20)=1\\).",
+  "replace": "For \\(A=15\\), the first terms are \\(15,18,22\\), while \\(21\\) is skipped because \\(\\gcd(21,20)=1\\).",
+  "dependency_argument": "The worked example's list of first terms for A = 15 is made false (22 = 2*11 is coprime to 15 and is skipped; the third term is 20). The same sentence continues from the correct value: 'while \\(21\\) is skipped because \\(\\gcd(21,20)=1\\). Yet \\(18\\) and \\(21\\) have the same trace \\(\\{3\\}\\) on the primes dividing \\(15\\).' No later line cites the list; the example lives in the 'Hypotheses tested' section and the proof body never uses it.",
+  "truth": {
+   "AW": "reject",
+   "RT": "accept"
+  },
+  "check": "check_ours_H_example_terms"
+ },
+ {
+  "id": "p6-gpt56-ours-G",
+  "base_id": "p6-gpt56-ours",
+  "base_path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+  "problem": "6",
+  "type": "G",
+  "obligation": "lower_bound",
+  "ledger_statement": "L6.2",
+  "search": "**Proof.** We induct over the sequence terms in increasing order. First, \\(\\sigma(x)\\ne\\varnothing\\): for \\(x=A\\) this is clear, and every later term has a common prime factor with \\(A\\), necessarily a prime at most \\(A\\).\n\nIf all prime factors of \\(x\\) are at most \\(A\\), then \\(\\sigma(x)=P(x)\\), which is good by (1). Otherwise, choose a prime \\(q>A\\) dividing \\(x\\). Put\n\\[\nR=\\prod_{r\\in\\sigma(x)}r,\n\\]\nchoose any \\(p\\in\\sigma(x)\\), and let \\(k\\ge0\\) be least such that\n\\[\nm=Rp^k\\ge A.\n\\]\nBecause \\(p\\mid R\\), we have \\(P(m)=\\sigma(x)\\). Moreover, \\(m<x\\). If \\(k=0\\), then\n\\[\nm=R<Rq\\le x.\n\\]\nIf \\(k>0\\), minimality of \\(k\\) gives \\(Rp^{k-1}<A\\), and hence\n\\[\np^k<\\frac{pA}{R}\\le A<q.\n\\]\nAgain \\(m=Rp^k<Rq\\le x\\).\n\nIf \\(m=A\\), then it is already the first sequence term. Otherwise \\(m>A\\). Suppose for a contradiction that this \\(m\\) is not a sequence term. The proof of (1), applied causally to this skipped integer, gives a sequence term \\(b<m\\) with \\(\\gcd(b,m)=1\\). Since \\(b<x\\), the induction hypothesis says that \\(\\sigma(b)\\) is good. In particular,\n\\[\n\\sigma(b)\\cap P(x)\\ne\\varnothing. \\tag{2}\n\\]\nOn the other hand, \\(P(m)=\\sigma(x)\\) and \\(\\gcd(b,m)=1\\), so \\(\\sigma(b)\\cap\\sigma(x)=\\varnothing\\). Every prime in \\(\\sigma(b)\\) is at most \\(A\\), whereas every prime in \\(P(x)\\setminus\\sigma(x)\\) is greater than \\(A\\). Thus \\(\\sigma(b)\\) is in fact disjoint from all of \\(P(x)\\), contradicting (2).\n\nTherefore \\(m\\) is a sequence term. By (1), \\(P(m)=\\sigma(x)\\) is good, completing the induction. \\(\\square\\)",
+  "replace": "**Proof.** Induction over the sequence terms in increasing order (standard; details omitted). \\(\\square\\)",
+  "dependency_argument": "The whole proof of the key lemma (the Rp^k construction, the causal witness b, and the small/large prime separation) is deleted; the statement 'For every sequence term x, the set sigma(x) is good' is kept with 'standard; details omitted'. Later uses, unchanged: 'For the last equivalence, the forward direction is the lemma and the reverse direction follows from \\(\\sigma(m)\\subseteq P(m)\\).' establishing (3), and in section 3 'Hence \\(\\sigma(m+L)=\\sigma(m)\\), and (3) gives' (4), on which T and the boxed identity rest. This is exactly the AoPS Solution 1 pattern recorded in the ledger (finiteness asserted, not proved).",
+  "truth": {
+   "AW": "reject",
+   "RT": "reject"
+  },
+  "check": "none: deletion"
+ }
+]

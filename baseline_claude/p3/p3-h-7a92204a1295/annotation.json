@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-7a92204a1295",
+  "problem": "3",
+  "sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+  "path": "checkpoint_inputs/7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "gpt56-ours-timeout"
+  ],
+  "bytes": 8900,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4761,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 12755,
+        "output_tokens_details": {
+          "thinking_tokens": 12541
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4761,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 12755,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 4761,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4761
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 150.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 7,
+    "complete": true,
+    "main_gap": "none",
+    "notes": "Answer 2^n/(2^{n+1}-1) with correct greedy-drafting lemma (D = alternating sorted sum), a clean equivalence 'min achievable D with q-1 cuts = minimal subset-sum gap Γ' (graph/parity argument for D≥Γ, overlay pairing construction for D≤Γ), pigeonhole Γ≤1/(2^q−1), and binary construction. Only cosmetic typo in the drafting-lemma display; edge cases (fewer marks, ties, coincident marks) addressed."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "p1-gpt-5.6-sol-pro-main-t005",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 5,
+  "path": "checkpoint_inputs_ext/d4561baddfcbee9d1d5969be84b4970d61db62f08a17182034606afe6f9679d8.md",
+  "bytes": 5185,
+  "sha256": "d4561baddfcbee9d1d5969be84b4970d61db62f08a17182034606afe6f9679d8",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2945,
+        "cache_read_input_tokens": 1363,
+        "output_tokens": 657,
+        "output_tokens_details": {
+          "thinking_tokens": 371
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2945,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 657,
+            "cache_read_input_tokens": 1363,
+            "cache_creation_input_tokens": 2945,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2945
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 10.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "P+K monovariant (product times gcd-division plus nonunit count) with 'every move leaves a nonunit' and 'two nonunits allow a move'",
+    "upper_bound_mechanism": "per-prime invariance of gcd of all p-adic valuations via gcd(min(a,b),|a-b|)=gcd(a,b)",
+    "wrong_answer_stated": false,
+    "notes": "All four components fully written: move valuation description plus no-two-ones observation; strict descent of P+K with correct case split (g>1 vs g=1); survivor existence and uniqueness; Euclidean gcd invariance with zero-gcd convention; explicit product formula. Numerical check is supplementary, not load-bearing."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,2532 @@
+{
+  "annotator": "claude-opus-5",
+  "items": [
+    {
+      "id": "p6-h-1a0f167db7d0",
+      "problem": "6",
+      "sha256": "1a0f167db7d0a3e445df7c089e6f962cfb02954d37e889f26ec2119aeb9f90fb",
+      "path": "checkpoint_inputs/1a0f167db7d0a3e445df7c089e6f962cfb02954d37e889f26ec2119aeb9f90fb.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 5,
+      "record_ids": [
+        "p6-claude-fable-5-main-t005",
+        "p6-deedy-claude-fable-5-final"
+      ],
+      "bytes": 13571,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 8986,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 791,
+            "output_tokens_details": {
+              "thinking_tokens": 460
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 8986,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 791,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 8986,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 8986
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 11.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Cheap-witness descent: minimal transversal Q with prime q>a_1 yields Q' with Q'∩Q={q}, d_{Q'} < (a_1/q)d_Q, geometric contradiction",
+        "upper_bound_mechanism": "Membership depends only on residue mod M=∏_{p≤a_1}p; equal counts T per block, order-preserving bijection m↦m+M from n=1",
+        "wrong_answer_stated": false,
+        "notes": "Complete: Lemmas 1-3 give the self-consistency characterization plus greedy smaller-coprime-witness; Lemma 6/7 prove large-prime erasure for all members via geometric descent; Step 5 gives genuine periodicity from n=1 with explicit L=∏_{p≤a_1}p and T=|R|. Numerics are supplementary only."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-1a17db061508",
+      "problem": "6",
+      "sha256": "1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897",
+      "path": "checkpoint_inputs/1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-deepseek-v4-pro-final",
+        "p6-deepseek-v4-pro-main-t053"
+      ],
+      "bytes": 4597,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3484,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 1488,
+            "output_tokens_details": {
+              "thinking_tokens": 1218
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3484,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1488,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 3484,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3484
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 21.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "minimal transversal family claimed finite (stabilizes after ~3 terms) — asserted, not proved",
+        "upper_bound_mechanism": "good set = finite union of residue classes mod M = lcm of transversal products; start-of-sequence issue unresolved",
+        "wrong_answer_stated": true,
+        "notes": "Outline only; explicitly says step 6 (transversal stabilization) and step 7 (periodicity from n=1) remain to be completed. Characterization asserted with one-line justification. Finiteness rests on unproven and likely false claim that all minimal transversals use primes of the first three terms; 'one shows...' placeholder. Full proof section empty."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-fc5dfc45e082",
+      "problem": "6",
+      "sha256": "fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de",
+      "path": "checkpoint_inputs/fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-gpt-5.6-sol-final"
+      ],
+      "bytes": 6599,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4400,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 16375,
+            "output_tokens_details": {
+              "thinking_tokens": 16063
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4400,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 16375,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 4400,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4400
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 206.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "abstract 'finite blocker' lemma: pairwise-intersecting family has finitely many minimal transversals (pruned König tree)",
+        "upper_bound_mechanism": "S = union of multiples of b_j, membership periodic mod L = lcm(b_j), T = count of admissible residues, valid from n=1",
+        "wrong_answer_stated": false,
+        "notes": "Characterization of terms as S ∩ [a_1,∞) is proved correctly, and periodicity from n=1 is fully assembled. Finiteness is outsourced to a general set-theoretic lemma whose proof (search tree with undefined 'pruning'/'contraction' rules, hand-waved König contradiction) is a sketch, not a verifiable argument; no prime-size/large-prime-erasure bound given."
+      },
+      "S": 1,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-5effa7f8941a",
+      "problem": "6",
+      "sha256": "5effa7f8941a24e7e3fb4e6a5d9c0a4a0df080fc87b3bec389a596379a2cd372",
+      "path": "checkpoint_inputs/5effa7f8941a24e7e3fb4e6a5d9c0a4a0df080fc87b3bec389a596379a2cd372.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-gpt-5.6-sol-max-final",
+        "p6-gpt-5.6-sol-max-main-t006"
+      ],
+      "bytes": 3406,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 2967,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 715,
+            "output_tokens_details": {
+              "thinking_tokens": 474
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 2967,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 715,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 2967,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 2967
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 11.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "sketched: periodicity mod product of primes of a_1..a_N, constant index shift (conditional, unproven)",
+        "wrong_answer_stated": false,
+        "notes": "Sets up admissible sets S_n, bounded gaps, and a conditional stabilization criterion; explicitly admits stabilization is unproven. No large-prime erasure/finiteness argument at all. Periodicity only asserted conditionally, with the all-n indexing left 'to be made explicit'. Correctly rejects a false single-class hope; examples only."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-89ab40b12a7e",
+      "problem": "6",
+      "sha256": "89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998",
+      "path": "checkpoint_inputs/89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-gpt-5.6-sol-pro-final"
+      ],
+      "bytes": 9717,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 5735,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 2176,
+            "output_tokens_details": {
+              "thinking_tokens": 1864
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 5735,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2176,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 5735,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 5735
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 27.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "sunflower lemma + squarefree-weight descent to bounded-size terminal minimal supports (all primes lie in finite P)",
+        "upper_bound_mechanism": "membership invariant under m->m+L for all m>=a_1; T = accepted residue classes, window (a_n, a_n+L]",
+        "wrong_answer_stated": false,
+        "notes": "Complete: greedy recast, support-invariance and self-duality give (C); Lemma 2 descent (w(E\\{p})>=a_1 forces a smaller minimal support containing p) plus Lemma 1 sunflower finiteness gives (F) for all terms; periodicity holds from n=1 with L=prod P, T=count of accepted classes. Arguments general, no example-checking or false minimal-hitting-set lemma."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-7834430cd6c4",
+      "problem": "6",
+      "sha256": "7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132",
+      "path": "checkpoint_inputs/7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-gpt-5.6-sol-xhigh-final",
+        "p6-gpt-5.6-sol-xhigh-main-t006"
+      ],
+      "bytes": 8618,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 5444,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 2069,
+            "output_tokens_details": {
+              "thinking_tokens": 1817
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 5444,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2069,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 5444,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 5444
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 26.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Descent on c(H,p)=rad(H\\{p}) using scanning property, plus disjoint witness F_C bounding primes per small core",
+        "upper_bound_mechanism": "Characterization (8) for all x>=a_1; H subset P(x) invariant mod L=prod of relevant primes; T = count per window",
+        "wrong_answer_stated": false,
+        "notes": "Proves G=F (blocker self-duality) rigorously, giving the membership characterization; large-prime finiteness via a genuine descent argument valid for all cases; periodicity established from n=1, not merely eventually. Complete and correct."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-158954bdd49b",
+      "problem": "6",
+      "sha256": "158954bdd49bff9ebe0d117062217554da62563e0b879d04eb8d09d07eb2c785",
+      "path": "checkpoint_inputs/158954bdd49bff9ebe0d117062217554da62563e0b879d04eb8d09d07eb2c785.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-grok-4.5-final",
+        "p6-grok-4.5-main-t009"
+      ],
+      "bytes": 3023,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1818,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 565,
+            "output_tokens_details": {
+              "thinking_tokens": 364
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1818,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 565,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 1818,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1818
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Purely exploratory: numerical data for several a_1, the observation that m is admissible iff it meets every earlier term, and a conjecture that L is a product of finitely many 'core' primes. Finiteness/large-prime erasure and periodicity are explicitly left open ('Full proof: not yet complete'), and only eventual periodicity is claimed."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-535f08f8f805",
+      "problem": "6",
+      "sha256": "535f08f8f805554c7558dcc8d63875bb10abf5214967d9f9c022e536194db24f",
+      "path": "checkpoint_inputs/535f08f8f805554c7558dcc8d63875bb10abf5214967d9f9c022e536194db24f.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-kimi-k3-final"
+      ],
+      "bytes": 17140,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 9350,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 6368,
+            "output_tokens_details": {
+              "thinking_tokens": 6030
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 9350,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 6368,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 9350,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 9350
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 73.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "killing property (K'/greedy) + descent bounding pi(t*)<=a_1*w, pigeonhole on prime-sets of product <=a_1, compactness (no infinite minimal transversal) + peeling",
+        "upper_bound_mechanism": "S_infty = union of multiples of finite minimal set M; L=lcm(M) gives m in S_infty iff m+L in S_infty for all m, T = count in [a_1,a_1+L)",
+        "wrong_answer_stated": false,
+        "notes": "Alternative but complete route: Step 1 gives the exact characterization (terms = S_infty above a_1); finiteness of minimal supports proved via intersecting/self-dual clutter, killing property K', compactness theorem and peeling, all argued in general; periodicity holds from n=1 with explicit L, T. Edge cases (P_0 empty) harmless."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-1ff4d9dbde77",
+      "problem": "6",
+      "sha256": "1ff4d9dbde777e1bc2c18067f4cff7e52b1f46ce1a6fd1a4cfefcca38e488ed7",
+      "path": "checkpoint_inputs/1ff4d9dbde777e1bc2c18067f4cff7e52b1f46ce1a6fd1a4cfefcca38e488ed7.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-muse-spark-1.1-final",
+        "p6-muse-spark-1.1-main-t015"
+      ],
+      "bytes": 17527,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 9388,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 949,
+            "output_tokens_details": {
+              "thinking_tokens": 662
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 9388,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 949,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 9388,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 9388
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 14.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "ground/minimal-family stabilization via up-set growth + bounded covering number (incomplete induction)",
+        "upper_bound_mechanism": "U* = union of d·N with d | L is L-periodic; (a_n) is increasing enumeration of U* ∩ [a_1,∞), handled also for n < N",
+        "wrong_answer_stated": false,
+        "notes": "Clutter/blocker framework is correct and the periodicity assembly is genuinely global from n=1. But Section 5 (finiteness of the ground / elimination of new primes) visibly flounders: repeated 'Not.', 'Given time, we accept finiteness...', and an induction only gestured at, never carried out. Structure claim explicit and correct."
+      },
+      "S": 1,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-b65c27609918",
+      "problem": "6",
+      "sha256": "b65c27609918a13c888b0b0d755818ac6e41a5b57533860519a9fed21333689c",
+      "path": "checkpoint_inputs/b65c27609918a13c888b0b0d755818ac6e41a5b57533860519a9fed21333689c.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "7030bbc7",
+      "turn": 1,
+      "record_ids": [
+        "p6-glm52-7030bbc7-v1"
+      ],
+      "bytes": 2225,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1779,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 910,
+            "output_tokens_details": {
+              "thinking_tokens": 714
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1779,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 910,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 1779,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1779
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 13.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Correctly names L = product of essential primes and T = count in a window. Transversal/hitting-set characterization is asserted but not proved, and it omits that every valid m occurs as a term. Finiteness of essential primes and stabilization are explicitly left open; periodicity step is only planned. Claims eventual periodicity, not from n=1."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-8184613190d7",
+      "problem": "6",
+      "sha256": "8184613190d78c40e9e952f3d2840443b66a20d356fb6052c81cbd433646c639",
+      "path": "checkpoint_inputs/8184613190d78c40e9e952f3d2840443b66a20d356fb6052c81cbd433646c639.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "7030bbc7",
+      "turn": 2,
+      "record_ids": [
+        "p6-glm52-7030bbc7-v2"
+      ],
+      "bytes": 7558,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4720,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 656,
+            "output_tokens_details": {
+              "thinking_tokens": 383
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4720,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 656,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 4720,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4720
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 10.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "self-duality/defect-entry cofactor bound on new essential primes (conjectural, unproved)",
+        "upper_bound_mechanism": "V a union of residue classes mod L=prod of essential primes; T=|V∩[1,L]|; holds from n=1 via Step 3",
+        "wrong_answer_stated": false,
+        "notes": "Reduction to valid set V and the fact that the sequence enumerates V from a_1 are fully proved; periodicity assembly with L=prod essential primes, T=count, valid from n=1, is written out. Finiteness of essential primes (self-duality reachability) is explicitly left open, only numerically verified plus a partial cofactor bound."
+      },
+      "S": 1,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-f7e426b7ffeb",
+      "problem": "6",
+      "sha256": "f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da",
+      "path": "checkpoint_inputs/f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "7030bbc7",
+      "turn": 3,
+      "record_ids": [
+        "p6-glm52-7030bbc7-v3"
+      ],
+      "bytes": 11701,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 7182,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 5099,
+            "output_tokens_details": {
+              "thinking_tokens": 4773
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 7182,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 5099,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 7182,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 7182
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 57.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Cofactor Bound: every essential prime ≤ a_1 via smooth-gap construction + TERM lemma + B-monotonicity contradiction",
+        "upper_bound_mechanism": "Stabilized minimal-support antichain over finite ground set; V a union of residue classes mod L=∏essential primes; sequence is increasing enumeration of V from a_1",
+        "wrong_answer_stated": false,
+        "notes": "Reduction to transversals/blockers is clean; finiteness is genuinely argued (Lemmas A–C plus contradiction), not just numerically checked; periodicity holds from n=1 since the sequence is shown to enumerate V starting at a_1. Minor gaps: τ*=P(a_j) case and 'M_n never repeats' stated tersely. Computational checks are decorative, not load-bearing."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-a292544be62e",
+      "problem": "6",
+      "sha256": "a292544be62ee35c5a442eb3df7d2d2b1cbae0314acf9ab88d786927e27a16ec",
+      "path": "checkpoint_inputs/a292544be62ee35c5a442eb3df7d2d2b1cbae0314acf9ab88d786927e27a16ec.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 5,
+      "record_ids": [
+        "p6-gpt-5.6-sol-main-t005"
+      ],
+      "bytes": 2189,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1562,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 823,
+            "output_tokens_details": {
+              "thinking_tokens": 580
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1562,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 823,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 1562,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1562
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 12.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "vague 'finite-prime/compactness' remark: every term shares a prime with a_1; no domination/erasure lemma",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Characterization (C) that the sequence is exactly the elements of S = {x >= a_1 : gcd(x,a_i)>1 for all i} is fully and correctly argued. Finiteness is only gestured at as an approach; periodicity is explicitly 'still under development'. Structure (L a product of primes, T a residue count) is only conjectured vaguely."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-6990dbe90da7",
+      "problem": "6",
+      "sha256": "6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3",
+      "path": "checkpoint_inputs/6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 9,
+      "record_ids": [
+        "p6-gpt-5.6-sol-main-t009"
+      ],
+      "bytes": 6687,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3668,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 21230,
+            "output_tokens_details": {
+              "thinking_tokens": 20874
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3668,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 21230,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 3668,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3668
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 260.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "finitely many minimal transversals of the pairwise-intersecting family {P(a_i)} (set-theoretic lemma, induction on |C|)",
+        "upper_bound_mechanism": "S = union of multiples of b_j is L-periodic (L = lcm b_j); count T admissible residues in (a_n, a_n+L], valid for all n>=1",
+        "wrong_answer_stated": false,
+        "notes": "Characterization of terms as S-elements >= a_1 and the periodic assembly from n=1 are correct and explicit. But the finiteness lemma's induction is broken: the IH is used for all transversals of F_c while only proved for those meeting C\\{c}; the stated criterion fails (e.g. F={12,23,13}, X={1,3}). The self-admitted hand-wave makes finiteness unestablished.",
+        "wrong_answer_stated_reason": "no false lemma or merely-eventual periodicity"
+      },
+      "S": 1,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-064a2411d75d",
+      "problem": "6",
+      "sha256": "064a2411d75d373c2abb09e1f26ab04dd077a7e37af5ed43ec7aa01a00ecf54e",
+      "path": "checkpoint_inputs/064a2411d75d373c2abb09e1f26ab04dd077a7e37af5ed43ec7aa01a00ecf54e.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 1,
+      "record_ids": [
+        "p6-gpt-5.6-sol-max-main-t001"
+      ],
+      "bytes": 1606,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1301,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 567,
+            "output_tokens_details": {
+              "thinking_tokens": 315
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1301,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 567,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 1301,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1301
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "conditional: if admissible set stabilizes to pairwise non-coprime family, it is a finite union of multiple-classes hence translation-periodic from n=1 (sketch only)",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file self-labeled unsolved. Prime-support/common-neighbor recasting is stated but not developed into the membership characterization. No finiteness or large-prime-erasure argument at all; stabilization explicitly admitted missing. Periodicity only sketched conditionally. L as product of finitely many primes never made explicit."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-857d6799ef24",
+      "problem": "6",
+      "sha256": "857d6799ef248f817f132869630f965518d1b9faa60a9eb4c19c730d810717b8",
+      "path": "checkpoint_inputs/857d6799ef248f817f132869630f965518d1b9faa60a9eb4c19c730d810717b8.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 1,
+      "record_ids": [
+        "p6-gpt-5.6-sol-pro-main-t001"
+      ],
+      "bytes": 2174,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1440,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 950,
+            "output_tokens_details": {
+              "thinking_tokens": 692
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1440,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 950,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 1440,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1440
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none (only 'every term shares a prime with a_1'; large-prime erasure absent)",
+        "upper_bound_mechanism": "finite-exception lifting from eventual periodicity (sketch, conditional)",
+        "wrong_answer_stated": false,
+        "notes": "Self-admittedly incomplete: no proof given. Characterization of membership is described as a viewpoint without full argument; the finiteness/large-prime-domination lemma is missing entirely (only the weak observation that each term shares a prime with a_1); periodicity is reduced to unproven eventual periodicity plus a sketched lifting. L's explicit form is not identified."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-cc00e6162436",
+      "problem": "6",
+      "sha256": "cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a",
+      "path": "checkpoint_inputs/cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 6,
+      "record_ids": [
+        "p6-gpt-5.6-sol-pro-main-t006"
+      ],
+      "bytes": 9581,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4774,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 2284,
+            "output_tokens_details": {
+              "thinking_tokens": 1976
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4774,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2284,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 4774,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4774
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 27.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Sunflower-lemma finiteness of bounded-size minimal supports plus weight-descent (Lemma 2) forcing every prime of a minimal support into a finite terminal set",
+        "upper_bound_mechanism": "Membership depends only on divisibility by primes in P, so invariant under m -> m+L for all m >= a_1; each window (a_n, a_n+L] has exactly T accepted integers and endpoint accepted",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct: greedy-scan recasting, support-only acceptance with self-duality, minimal-support antichain, sunflower + strict weight descent giving finiteness of relevant primes, and global periodicity valid from n=1 with explicit L = prod of P and T = accepted residue count."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-6a21f32effe8",
+      "problem": "6",
+      "sha256": "6a21f32effe8a8488a14d581dfa2f3ee816e7cfa2153697813dbab84e92964f2",
+      "path": "checkpoint_inputs/6a21f32effe8a8488a14d581dfa2f3ee816e7cfa2153697813dbab84e92964f2.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 4,
+      "record_ids": [
+        "p6-gpt-5.6-sol-xhigh-main-t004"
+      ],
+      "bytes": 2351,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1527,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 859,
+            "output_tokens_details": {
+              "thinking_tokens": 610
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1527,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 859,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 1527,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1527
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 12.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "minimal prime supports + arithmetic descent to radical <= a_1, disjoint witness (sketched only)",
+        "upper_bound_mechanism": "asserted: union of multiple-sets is L-periodic, T = count of admissible residues",
+        "wrong_answer_stated": false,
+        "notes": "Only a plan: correct target structure (L = product of finitely many relevant primes, T = residue count) and correct strategy named, but the three steps are explicitly deferred ('details being written below'). Finiteness/descent and periodicity are sketched or asserted, never argued for all cases. No false lemma invoked."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-1f900cf0679b",
+      "problem": "6",
+      "sha256": "1f900cf0679bc7a427d6df10d999f1fad13207495174b96a304f7042b74a6373",
+      "path": "checkpoint_inputs/1f900cf0679bc7a427d6df10d999f1fad13207495174b96a304f7042b74a6373.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 5,
+      "record_ids": [
+        "p6-gpt-5.6-sol-xhigh-main-t005"
+      ],
+      "bytes": 5846,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3228,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1346,
+            "output_tokens_details": {
+              "thinking_tokens": 1063
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3228,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1346,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 3228,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3228
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "descent on inclusion-minimal supports to small cofactor c(H,p) <= a_1 (finiteness itself not concluded)",
+        "upper_bound_mechanism": "sequence as increasing enumeration of finite union of multiple-sets, L = product of relevant primes (asserted only)",
+        "wrong_answer_stated": false,
+        "notes": "Characterization proved cleanly via scanning property plus eligibility (G = F, self-blocking family). Finiteness only reaches the descent step; the write-up explicitly defers the 'final small-core argument' showing each core pairs with finitely many primes. Periodicity is stated as a plan, with no proof of membership invariance under m -> m+L from n=1."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-0ce2641363f3",
+      "problem": "6",
+      "sha256": "0ce2641363f3d31f3450dddd46a06892c1fb8d794aba581c842b5db2e9e83262",
+      "path": "checkpoint_inputs/0ce2641363f3d31f3450dddd46a06892c1fb8d794aba581c842b5db2e9e83262.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 2,
+      "record_ids": [
+        "p6-gpt-5.6-sol-xhigh-round1-t002"
+      ],
+      "bytes": 813,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1002,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 165,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1002,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 165,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 1002,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1002
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 3.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file marked 'unsolved' with no proof. Only mentions starting computational exploration and reformulating via prime-factor sets; no characterization, no finiteness lemma, no periodicity argument, no claimed structure for T and L."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-d31e74d07a68",
+      "problem": "6",
+      "sha256": "d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1",
+      "path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": 1,
+      "turn": 1,
+      "record_ids": [
+        "p6-gpt56-ours"
+      ],
+      "bytes": 6345,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3604,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1506,
+            "output_tokens_details": {
+              "thinking_tokens": 1153
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3604,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1506,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 3604,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3604
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Large-prime erasure: for any term x, build m=Rp^k with P(m)=σ(x)=P(x)∩{p≤a_1}, a_1≤m<x; induct on terms to show m is a term, so σ(x) is good",
+        "upper_bound_mechanism": "L=∏_{p≤a_1}p makes σ(m+L)=σ(m), so membership is L-periodic on all of [a_1,∞); T = #terms in [a_1,a_1+L-1], each length-L window has T terms and a_n+L is a term",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct: characterization, erasure lemma (fully proved by induction with the R·p^k construction handling the m<a_1 boundary), and global periodicity from n=1 with T,L identified. Numerics explicitly labeled non-essential. Bounds m<x verified in both k=0 and k>0 cases."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-ca355972e2be",
+      "problem": "6",
+      "sha256": "ca355972e2bea920b8a954d18745abda6732c30157eb3b0694d19a21ec105376",
+      "path": "checkpoint_inputs/ca355972e2bea920b8a954d18745abda6732c30157eb3b0694d19a21ec105376.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-main",
+      "turn": 5,
+      "record_ids": [
+        "p6-kimi-k3-main-t005"
+      ],
+      "bytes": 16597,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 9173,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 6555,
+            "output_tokens_details": {
+              "thinking_tokens": 6192
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 9173,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 6555,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 9173,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 9173
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 75.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Killing property (K'): descent on pi through private members + pigeonhole on prime-sets of product <= a_1, giving no infinite minimal transversal (compactness), then peeling to force C finite",
+        "upper_bound_mechanism": "L = lcm of the finitely many minimal elements; S_inf membership is L-periodic for every m, T = #(S_inf ∩ [a_1, a_1+L)), block bijection gives a_{n+T}=a_n+L for all n>=1",
+        "wrong_answer_stated": false,
+        "notes": "Complete, self-contained argument. Step 1 gives the characterization; Steps 3-4 prove finiteness of minimal supports via intersecting antichain, finite self-duality, killing property (K'), compactness and peeling; Step 2 gives periodicity from n=1. Only blemish: C is really the family of *finite* minimal transversals, but this is harmless (antichain reproved via divisibility)."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-b041005367c7",
+      "problem": "6",
+      "sha256": "b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58",
+      "path": "checkpoint_inputs/b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round1",
+      "turn": 21,
+      "record_ids": [
+        "p6-kimi-k3-round1-t021"
+      ],
+      "bytes": 2820,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 2026,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1071,
+            "output_tokens_details": {
+              "thinking_tokens": 754
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 2026,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1071,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 2026,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 2026
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "stabilization of minimal transversal family H_n (S_infty finitely generated) — asserted, only numerically verified",
+        "upper_bound_mechanism": "Theorem A: sequence = S_infty ∩ [a_1,∞); if S_infty is a union of residue classes mod L then T = #(S_infty ∩ [1,L]) works for all n — conditional, unproved",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file, not a proof. Framework (upward-closed set, transversals) is correct and would give global periodicity, but Theorem A and lemmas are only labeled '(proved)' without written arguments. The key finiteness step ('shrinkage stops') is explicitly an open crux supported only by empirics. No large-prime erasure argument; L never identified as a product of primes."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-bd6057aef3ec",
+      "problem": "6",
+      "sha256": "bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757",
+      "path": "checkpoint_inputs/bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round2",
+      "turn": 7,
+      "record_ids": [
+        "p6-kimi-k3-round2-t007"
+      ],
+      "bytes": 11071,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 6346,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 4555,
+            "output_tokens_details": {
+              "thinking_tokens": 4203
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6346,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 4555,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 6346,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 6346
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 52.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "finiteness of minimal elements via self-dual intersecting antichain (clutter) theorem: Zorn for minimal transversals + pigeonhole peeling/infinite-descent",
+        "upper_bound_mechanism": "L = lcm of the finitely many squarefree minimal elements; membership in S_inf invariant under m -> m+L for all m, T = count in [a_1, a_1+L), giving a_{n+T}=a_n+L for all n>=1",
+        "wrong_answer_stated": false,
+        "notes": "Complete alternative route: Step 1 gives the exact characterization; Steps 3-4 replace large-prime erasure with a proved combinatorial theorem (intersecting, antichain, self-dual family of finite sets is finite); pure powers pi(t)^k supply the intersecting property. Periodicity is global from n=1. Header 'under verification' but text is self-contained and the arguments check out."
+      },
+      "S": 2,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-01814ca40bb4",
+      "problem": "6",
+      "sha256": "01814ca40bb47cfc5ce9166ce02789daaecec123cc5191e5f7baab1795f5d41c",
+      "path": "checkpoint_inputs/01814ca40bb47cfc5ce9166ce02789daaecec123cc5191e5f7baab1795f5d41c.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round3",
+      "turn": 9,
+      "record_ids": [
+        "p6-kimi-k3-round3-t009"
+      ],
+      "bytes": 15786,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 8429,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 976,
+            "output_tokens_details": {
+              "thinking_tokens": 681
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 8429,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 976,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 8429,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 8429
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 13.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "peeling of intersecting self-dual antichain + 'compactness' via killing property (K)/(C1) — explicitly unproved",
+        "upper_bound_mechanism": "L = lcm of minimal elements of S_inf; S_inf invariant under +L; T = count in one block, valid from n=1",
+        "wrong_answer_stated": false,
+        "notes": "Step 1 (characterization) and Step 2 (global periodicity from n=1, conditional on finiteness) are rigorous; Step 3 structure correct. Finiteness of the minimal-element family is explicitly an open gap: peeling is done but the compactness crux is 'IN PROGRESS'. No false lemma relied on, but the key finiteness mechanism is only sketched."
+      },
+      "S": 1,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-8d1286ceedd9",
+      "problem": "6",
+      "sha256": "8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4",
+      "path": "checkpoint_inputs/8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": "muse-spark-1.1-main",
+      "turn": 12,
+      "record_ids": [
+        "p6-muse-spark-1.1-main-t012"
+      ],
+      "bytes": 135155,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 45243,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 2074,
+            "output_tokens_details": {
+              "thinking_tokens": 1793
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 45243,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2074,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 45243,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 45243
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 31.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "self-dual (blocker=clutter) stabilization; termination/ground-boundedness unproved",
+        "upper_bound_mechanism": "example check (a1=35) plus singleton-prime case only",
+        "wrong_answer_stated": false,
+        "notes": "Exploratory notes. Correctly reduces membership to 'prime support hits M_n' and proves blocker-intersecting <=> every minimal transversal contains an edge. But finiteness fails: text admits new primes may be unbounded and 'Main missing: proof that M_n stabilizes'; ends mid-sentence. Global periodicity from n=1 only verified on examples/singleton case. L,T described vaguely via lcm of clutter products."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-f77b2d46f736",
+      "problem": "6",
+      "sha256": "f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39",
+      "path": "checkpoint_inputs/f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "12402695",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-12402695-v1"
+      ],
+      "bytes": 11926,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 6503,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1735,
+            "output_tokens_details": {
+              "thinking_tokens": 1496
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6503,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1735,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 6503,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 6503
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 23.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "merge-of-arithmetic-progressions residue count (tail only, conditional)",
+        "wrong_answer_stated": true,
+        "notes": "Self-declared partial: finiteness of the prime set (F) is explicitly open, as is extension to n=1. Hitting-set reformulation is correct but the global membership characterization only follows from unproven stabilization. Tail periodicity via residues mod L is sketched conditionally. Quoted data (L=69 for a_1=105) contradicts its own L=lcm{m_H}=210."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-7232c3edc529",
+      "problem": "6",
+      "sha256": "7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb",
+      "path": "checkpoint_inputs/7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "244edfad",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-244edfad-v1"
+      ],
+      "bytes": 8615,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 5027,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1633,
+            "output_tokens_details": {
+              "thinking_tokens": 1339
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 5027,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1633,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 5027,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 5027
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 23.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "essential primes eventually divide every term (Lemma 2, sketched/circular)",
+        "upper_bound_mechanism": "backward extension via shifted sequence b_n = a_{n+T} - L",
+        "wrong_answer_stated": true,
+        "notes": "Hitting-set characterization and the answer shape (L = product of essential primes, T = number of covered residues) are correct and explicit. But Lemma 2 (the finiteness core) is openly hand-waved: 'by induction on essential rank', 'one can bound this gap'; finiteness of E is never proved. Part 4 uses the false identity gcd(x+L,y+L)=gcd(x,y) and an invalid comparison argument, so only eventual periodicity is genuinely established."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-c734a640cdef",
+      "problem": "6",
+      "sha256": "c734a640cdef6ea313666115130884bc6f3b92af3083cc71a707085f13ee8c0b",
+      "path": "checkpoint_inputs/c734a640cdef6ea313666115130884bc6f3b92af3083cc71a707085f13ee8c0b.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "8828b58a",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-8828b58a-v1"
+      ],
+      "bytes": 7513,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4014,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 730,
+            "output_tokens_details": {
+              "thinking_tokens": 472
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4014,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 730,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 4014,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4014
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 12.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "hand-waved disjoint-subsequence argument for finiteness of prime union; admits it is not rigorous ('see below' never supplied)",
+        "upper_bound_mechanism": "none (asserts periodicity 'propagates backwards' without argument)",
+        "wrong_answer_stated": true,
+        "notes": "Correct final shape (L = product of primes in P*, T = number of covered residues) but built on the false lemma that each term's prime support is a minimal hitting set. Finiteness proof is explicitly incomplete; stabilization of H_n unjustified; extension to all n >= 1 merely asserted. Example is illustrative only."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-0e311611ff99",
+      "problem": "6",
+      "sha256": "0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780",
+      "path": "checkpoint_inputs/0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "8828b58a",
+      "turn": 2,
+      "record_ids": [
+        "p6-nemotron-8828b58a-v2"
+      ],
+      "bytes": 16700,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 9175,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1372,
+            "output_tokens_details": {
+              "thinking_tokens": 1103
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 9175,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1372,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 9175,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 9175
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 20.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "CRT construction of a smaller coprime candidate (logically broken)",
+        "upper_bound_mechanism": "shift-sequence uniqueness / backward induction (asserted)",
+        "wrong_answer_stated": true,
+        "notes": "Built on the false 'key observation' that each P(a_{n+1}) is a minimal hitting set; the author's own example (42 with prime 7) refutes Lemma 3. Lemma 1's CRT argument concludes gcd(x_k,a_i)=1 yet calls this a contradiction — incoherent. Lemma 6's uniqueness/backward step is asserted, not proved; only eventual periodicity is really argued."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-49ab81e1743d",
+      "problem": "6",
+      "sha256": "49ab81e1743d761069a714a8e724cc74056bcb83956e3d6062db34ce65c3f217",
+      "path": "checkpoint_inputs/49ab81e1743d761069a714a8e724cc74056bcb83956e3d6062db34ce65c3f217.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "cab6a0da",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-cab6a0da-v1"
+      ],
+      "bytes": 7612,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4304,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1046,
+            "output_tokens_details": {
+              "thinking_tokens": 827
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4304,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1046,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 4304,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4304
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 16.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Correct target structure stated (L = product of essential primes, T = number of covered residues mod L). Hitting-set restatement of the recursion given with one-line justification, but no proof of the term-characterization. Prime finiteness explicitly open; ubiquitous-prime lemma only conjectured/experimental; Part 5 eventual periodicity conditional; backward extension to n=1 explicitly unproven."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-961eadba7a83",
+      "problem": "6",
+      "sha256": "961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671",
+      "path": "checkpoint_inputs/961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "cab6a0da",
+      "turn": 2,
+      "record_ids": [
+        "p6-nemotron-cab6a0da-v2"
+      ],
+      "bytes": 11627,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 6231,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1029,
+            "output_tokens_details": {
+              "thinking_tokens": 771
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6231,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1029,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 6231,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 6231
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 14.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none (Lemma 2 explicitly open/conjectured)",
+        "upper_bound_mechanism": "merge of arithmetic progressions mod L = lcm{m_H}, residue-count T; eventual only, backward extension sketched",
+        "wrong_answer_stated": true,
+        "notes": "Correct framework: hitting-set characterization of valid terms is stated and justified, and the target structure (L = lcm of m_H, T = number of covered residues) is explicit. Finiteness of the prime support is admitted open. Periodicity is only conditional/eventual; backward extension to n=1 is a labeled conjecture with a sketch."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-99df0a828c44",
+      "problem": "6",
+      "sha256": "99df0a828c44a165cd008d7abf5b50582cc6f698542a5725c2d6e29d830fe6de",
+      "path": "checkpoint_inputs/99df0a828c44a165cd008d7abf5b50582cc6f698542a5725c2d6e29d830fe6de.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "d024e848",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-d024e848-v1"
+      ],
+      "bytes": 14933,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 7871,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1081,
+            "output_tokens_details": {
+              "thinking_tokens": 832
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 7871,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1081,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 7871,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 7871
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "minimal-hitting-set stabilisation (Lemma 1, sketched only)",
+        "upper_bound_mechanism": "none (only n >= n_0, preperiod admitted)",
+        "wrong_answer_stated": true,
+        "notes": "Restates the problem as eventual periodicity and proves only that. Finiteness of core primes (Lemma 1) is explicitly a sketch, admitted incomplete; Lemma 2's stabilisation argument is circular. Validity characterisation asserted rather than proved. Section 5 classification is numeric conjecture with question marks. No periodicity from n=1."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-7c6e3fdd966a",
+      "problem": "6",
+      "sha256": "7c6e3fdd966a88237fe0c9b74525925388762d27048262cee6d5b6b121a775a7",
+      "path": "checkpoint_inputs/7c6e3fdd966a88237fe0c9b74525925388762d27048262cee6d5b6b121a775a7.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "dbbb2d6f",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-dbbb2d6f-v1"
+      ],
+      "bytes": 10479,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 5634,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1029,
+            "output_tokens_details": {
+              "thinking_tokens": 789
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 5634,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1029,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 5634,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 5634
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 14.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none (finiteness declared an open gap)",
+        "upper_bound_mechanism": "none (backward extension admitted flawed)",
+        "wrong_answer_stated": true,
+        "notes": "Correct target structure stated: L = lcm of minimal-hitting-set products, T = number of covered residues mod L. The hitting-set candidate characterization is asserted but not proved. Finiteness of the prime set and ubiquity of essential primes are explicitly flagged as unproved gaps; only conditional eventual periodicity is obtained, and the n>=1 extension is admitted flawed."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-5749fe90f16d",
+      "problem": "6",
+      "sha256": "5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f",
+      "path": "checkpoint_inputs/5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "fb285ec4",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-fb285ec4-v1"
+      ],
+      "bytes": 8151,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4313,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 730,
+            "output_tokens_details": {
+              "thinking_tokens": 502
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4313,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 730,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 4313,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4313
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 14.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "L = product of 'essential' primes is roughly right, but T is misdefined as a transient length. Step 1-2 use the false 'minimal hitting set' heuristic; Step 3 falsely concludes a_{n+1}=a_n+L, contradicted by the author's own 15,18,20,24 example. No characterization of terms, no large-prime erasure, and periodicity from n=1 is merely asserted ('one can verify')."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-bba234862995",
+      "problem": "6",
+      "sha256": "bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988",
+      "path": "checkpoint_inputs/bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "fb285ec4",
+      "turn": 2,
+      "record_ids": [
+        "p6-nemotron-fb285ec4-v2"
+      ],
+      "bytes": 15030,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 7849,
+            "cache_read_input_tokens": 901,
+            "output_tokens": 1368,
+            "output_tokens_details": {
+              "thinking_tokens": 1075
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 7849,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1368,
+                "cache_read_input_tokens": 901,
+                "cache_creation_input_tokens": 7849,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 7849
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "\"essential primes\" pigeonhole (bogus; falsely claims E ⊆ primes of a_1)",
+        "upper_bound_mechanism": "finite-state pigeonhole + backward induction (sketch, rests on false Lemma 4)",
+        "wrong_answer_stated": true,
+        "notes": "Lemma 4 claims a_{n+1}=a_n+L eventually, contradicted by the text's own 15,18,20,... example (T=8, not 1). Corollary 3's finiteness of E rests on the false claim E ⊆ primes of a_1 (2 ∤ 15). No characterization of membership, no large-prime erasure. Lemma 2 is explicit hand-waving. Backward induction only sketched."
+      },
+      "S": 0,
+      "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+      "path_base": "bundle root"
+    }
+  ]
+}

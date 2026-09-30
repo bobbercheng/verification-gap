@@ -1,0 +1,61 @@
+{
+  "id": "p2-nemotron-9c3c93da-v2",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9c3c93da",
+  "turn": 2,
+  "path": "checkpoint_inputs/ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a.md",
+  "bytes": 17780,
+  "sha256": "ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 6446,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 98.3,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 6446,
+        "output_tokens": 745,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 12.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "asserted complex factorization yielding KA=KB, LA=LC",
+    "upper_bound_mechanism": "homothety to O' plus unexecuted circumcenter computation",
+    "wrong_answer_stated": true,
+    "notes": "The three angle conditions are correctly encoded as complex real-ratio equations (T done). But the crucial factorization (2x-1)Q=0 is only asserted ('Remarkably'), Q≠0 'one checks', the synthetic sections visibly fail and are abandoned, and the claimed lemma KA=KB, LA=LC is a false intermediate. Final computation O'B=O'C also unexecuted."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a",
+  "original_bytes": 17780,
+  "input_anonymized": false
+}

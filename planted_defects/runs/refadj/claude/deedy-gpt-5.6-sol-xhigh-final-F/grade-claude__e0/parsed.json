@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-F",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "F",
+ "problem": "3",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 31.1,
+  "input_tokens": 2,
+  "output_tokens": 2607,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 5959,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4911,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005011,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2607,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 5959,
+    "webSearchRequests": 0,
+    "costUSD": 0.1255965,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2237,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "With N = 2^{n+1}-2 sums strictly inside (0,1), the N-1 = 2^{n+1}-3 consecutive gaps total y_N - y_1 < 1, so pigeonhole only yields a minimal gap < 1/(2^{n+1}-3), which exceeds d = 1/(2^{n+1}-1). The displayed bound (11) does not follow from the stated count, and (12) with tolerance d is what the rest of Section 5 consumes; no other passage derives a pair of subset sums within d. The fix is exactly the ledger's version: include the empty and full subsets, giving 2^{n+1} values in [0,1] and 2^{n+1}-1 gaps summing to 1; the resulting 'A or B empty' case is already treated below. One sentence.",
+  "status": "not_established"
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

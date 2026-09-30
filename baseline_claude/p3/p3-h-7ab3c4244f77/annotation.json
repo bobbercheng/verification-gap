@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-7ab3c4244f77",
+  "problem": "3",
+  "sha256": "7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce",
+  "path": "checkpoint_inputs/7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c1"
+  ],
+  "bytes": 4902,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2843,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 7460,
+        "output_tokens_details": {
+          "thinking_tokens": 7252
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2843,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 7460,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 2843,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2843
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 83.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 1,
+    "complete": false,
+    "main_gap": "No proof at all: answer 2^n/(2^{n+1}-1) is only a numerical conjecture (n≤5); neither lower- nor upper-bound argument is written, and the odd-rank reduction lemma is only asserted/verified, not proved.",
+    "notes": "Write-up is a status report admitting no proof exists. Credit for the likely-correct answer and the correct (but unproven) reduction to maximin of the odd-rank sum. Numerics, refuted alternative conjectures, and 'provable by exchange argument' claims earn no coordination credit."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

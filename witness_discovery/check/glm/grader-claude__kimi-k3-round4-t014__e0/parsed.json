@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "kimi-k3-round4-t014",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 2419.1,
+  "input_tokens": 7189,
+  "output_tokens": 780,
+  "cache_read_input_tokens": 1024
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "no",
+  "explanation": "The mismatch is real: v(B) is defined via the decreasing ordering, and nested absolute differences are order-dependent (e.g. 10,6,4,2 gives 2 decreasing but 6 in order 2,4,6,10). Lemma 4.1 supplies some other ordering, whose nested value is g ≤ T_n; the strategy section then labels its pieces as decreasing while actually realizing the Lemma's ordering. However the strategy realizes the Lemma-ordering's value g ≤ T_n, which is all Part B needs, so the gap is purely notational — exactly as the objection itself states ('purely cosmetic'). Confirmed, not fatal."
+ }
+}

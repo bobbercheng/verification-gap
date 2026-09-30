@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 41.6,
+  "input_tokens": 426,
+  "output_tokens": 3446,
+  "cache_read_input_tokens": 4736
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "Section 3 proves exactly what its header says: V contains at most one POSITIVE value (the argument starts 'Suppose V contains two distinct positive numbers c1 > c2 > 0'). From this alone the stated dichotomy — 'either g ≡ 0 or V ⊆ {0, c}' — does not follow: negative values are never excluded, and the only bound the text records is g(x) > -x. The needed lemma g ≥ 0 (one line: x + n·g(x) = fⁿ(x) > 0 for all n forces g(x) ≥ 0) appears nowhere in the write-up. The gap is load-bearing: Lemma 1 explicitly uses 'b = g(z) ∈ {0, c} (because V ⊆ {0, c})', and the S_0/S_c level-set analysis and covering argument of §§4–6 all presuppose V ⊆ {0, c}. Hence the necessity argument (upper_bound) is incomplete as written, though the fix is a routine one-line orbit-positivity argument."
+ }
+}

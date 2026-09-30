@@ -1,0 +1,37 @@
+{
+ "task_id": "imo-2026-p2",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Ray orders (1) and (2) follow from the four strict interiority hypotheses: K in int(BMC) gives BK between BA(=ray BM) and BC at B and MK between MB, MC at M; K in int(ABL) gives BK between BA and BL and AK between AB and AL; L in int(AKC) gives AL between AK and AC and CL between CA and CK; L in int(BNC) gives BL before BC at B and NL between NB, NC at N. Orientation signs: at A and C the sweeps are counterclockwise, at B clockwise; det(MB,MC)=det(NB,NC)=det(AB,AC)/2>0 verified directly.",
+  "A,K,L noncollinear since K lies strictly inside triangle ABL (otherwise K on side AL).",
+  "E in AC^o, F in AB^o, B-K-E, C-L-F: rays from a vertex through an interior point of ABC meet the opposite side strictly inside.",
+  "Directed-angle conversions are sign-correct given (1),(2): <FBE = <(BA,BK) = -∠KBA, <FCE = <(CL,CA) = -∠ACL; <LBE = +∠LBK and <LNE = +∠LNC (mod 180, line NE = line NC); <KCF = -∠LCK and <KMF = -∠BMK (line MF = line MB). Hence B,C,E,F concyclic (omega_0), E on omega_1=(BLN), F on omega_2=(CKM).",
+  "Tangent cases handled correctly: if E=N the condition becomes <(NL,NC)=<(BL,BN), so by the converse tangent-chord theorem AC is tangent to omega_1 at N (double intersection); similarly AB tangent to omega_2 at M when F=M. Power formulas remain valid with multiplicity.",
+  "Power of A: AF*AB = AE*AC from omega_0 (4); AF'*AB = AE*AN and AE'*AC = AF*AM from omega_1, omega_2 (5); using AN=AC/2, AM=AB/2 yields AF'=AF/2, AE'=AE/2 (6), both positive, giving orders A-F'-F-B and A-E'-E-C (7). Tangency of AB to omega_1 at B is thereby excluded (would force AB=AF/2<AB/2).",
+  "Omega (diameter AZ) is nondegenerate: Z=A would force AC=AE as radii of omega_0 with C,E on the same ray, contradicting E strictly inside AC.",
+  "P,Q on Omega: perpendicular from centre Z to chords BF, CE bisects them, so ZP perp AB and ZQ perp AC; Thales gives angle APZ = angle AQZ = 90; cases P=Z or Q=Z put the point at a diameter endpoint. P != A and Q != A hold.",
+  "Power equalities (8),(9),(11),(12) verified with correct signs: Pow_omega1(C)=CN*CE=CA*CQ=Pow_Omega(C); Pow_omega1(F)=-FF'*FB=-FA*FP=Pow_Omega(F) using FF'=FA/2, FP=FB/2 and the order (7); Pow_omega2(B)=BM*BF=BA*BP=Pow_Omega(B); Pow_omega2(E)=-EE'*EC=-EA*EQ=Pow_Omega(E) using EE'=EA/2, EQ=EC/2.",
+  "Circle distinctness for radical axes: A in Omega but A not in omega_1 (line AB meets omega_1 exactly at B,F', neither equal to A by (7)) and A not in omega_2 similarly; equal-power loci are nonempty (contain C resp. B), so they are lines: rad(omega_1,Omega)=CF and rad(omega_2,Omega)=BE.",
+  "L in CF ∩ omega_1 implies Pow_Omega(L)=Pow_omega1(L)=0, hence L in Omega (10); similarly K in BE ∩ omega_2 implies K in Omega (13).",
+  "Omega passes through noncollinear A,K,L, so Omega is the circumcircle of AKL and O is the midpoint of AZ.",
+  "Final computation: M=(A+B)/2, N=(A+C)/2, O=(A+Z)/2 give MO = BZ/2 (midsegment in triangle ABZ) and NO = CZ/2; ZB=ZC as radii of omega_0, hence OM=ON."
+ ],
+ "unverified_claims": [],
+ "summary": "A correct, complete, and elegant synthetic proof. The three angle conditions are converted (with sign control from the interiority-induced ray orders) into three circles: omega_0=(BCEF) with centre Z, omega_1=(BLNE), omega_2=(CKMF), where E=BK∩AC, F=CL∩AB. Midpoint hypotheses give power-of-A relations forcing the second intersections F',E' to be midpoints of AF,AE. The circle Omega with diameter AZ is shown to contain K and L via radical-axis arguments (rad(omega_1,Omega)=CF, rad(omega_2,Omega)=BE) built on four explicit power equalities; hence Omega=(AKL) and O is the midpoint of AZ. The midsegment theorem then gives OM=BZ/2=CZ/2=ON. Degenerate cases (E=N, F=M tangencies; P=Z or Q=Z; Z=A; tangency at B or C) are each addressed soundly; no generic-position assumption is used and no circularity was found.",
+ "transfer_assessment": [
+  "Reusable: deriving strict ray orders from 'strictly inside triangle' hypotheses to fix signs when converting ordinary angle equalities into directed-angle concyclicity criteria.",
+  "Reusable: encoding the midpoint condition AN=AC/2 as a factor-1/2 relation between powers of A w.r.t. two circles sharing a secant, yielding midpoint identifications like AF'=AF/2.",
+  "Reusable: proving a point lies on a target circle by exhibiting it on the radical axis of that circle and an auxiliary circle already containing the point (power zero transfers).",
+  "Reusable: recognizing the circumcircle as the circle with diameter AZ (Z the centre of a naturally occurring circle), reducing the conclusion to the midsegment theorem plus ZB=ZC.",
+  "Reusable: treating borderline incidences (E=N, F=M) as tangent double intersections via the converse tangent-chord theorem so that power computations need no case split.",
+  "Not misleading: the directed-length and multiplicity conventions are stated and applied consistently; the compressed phrase 'the orders determine all signs' is justified by the explicit orders (1)-(2)."
+ ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "p2-h-9a5214101452",
+  "problem": "2",
+  "sha256": "9a52141014522913ba62567f2188e98d98b562459e43c1607cb0cfa684deb9ab",
+  "path": "checkpoint_inputs/9a52141014522913ba62567f2188e98d98b562459e43c1607cb0cfa684deb9ab.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-round1",
+  "turn": 21,
+  "record_ids": [
+    "p2-gpt-5.6-sol-xhigh-round1-t021"
+  ],
+  "bytes": 2961,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2113,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 1727,
+        "output_tokens_details": {
+          "thinking_tokens": 1399
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2113,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1727,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 2113,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2113
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 27.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "computer-found determinant factorization D = c(p,q,s,t)·Q (equal powers of M,N), not hand-derived",
+    "upper_bound_mechanism": "equal powers of M,N w.r.t. (AKL) ⇒ OM²−R²=ON²−R²",
+    "wrong_answer_stated": false,
+    "notes": "Goal and strategy (equal powers of M,N) correct and explicit. Coordinate setup with p,q,s plausibly encodes all three angle conditions but derivations ('sine law gives') are asserted, not shown. The pivotal identity D = c·Q is admittedly computer-discovered and unverified by hand; no key circle through A,K,L. Finish is a one-line standard chain conditional on D=0. Degenerate/right-angle cases openly unresolved.",
+    "self_grade": "partial"
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

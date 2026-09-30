@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-19dc570c8774",
+  "problem": "3",
+  "sha256": "19dc570c877417736d49a79851fa50a2d5776e505d4429b0a14628bdaf53c793",
+  "path": "checkpoint_inputs/19dc570c877417736d49a79851fa50a2d5776e505d4429b0a14628bdaf53c793.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 5,
+  "record_ids": [
+    "gpt-5.6-sol-xhigh-main-t005"
+  ],
+  "bytes": 2550,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1131,
+        "output_tokens": 3440,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 38.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "tree-component bipartition imbalance on 1:2:4:...:2^n division",
+    "upper_bound_mechanism": "subset-sum pigeonhole with cancellation/matching",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form stated as the answer. Reduction formula, tree-component lower-bound argument, and subset-sum pigeonhole upper bound are correctly sketched for all n but only in outline; the write-up itself defers rigorous draft, pairing, transportation, and cut-realization details. Each mechanism scores 1."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

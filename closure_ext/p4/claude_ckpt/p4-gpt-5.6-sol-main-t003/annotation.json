@@ -1,0 +1,66 @@
+{
+  "id": "p4-gpt-5.6-sol-main-t003",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": "gpt-5.6-sol-main",
+  "turn": 3,
+  "path": "checkpoint_inputs_ext/b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1.md",
+  "bytes": 7126,
+  "sha256": "b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5276,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1075,
+        "output_tokens_details": {
+          "thinking_tokens": 796
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 5276,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1075,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 5276,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 5276
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Integer-in-interval cut (b<k<a+b) forcing both children to have an integral multiple of theta, then descent m -> m-1",
+    "upper_bound_mechanism": "Nonzero-class invariant in R/(theta Z): safe equilateral start, at least one child safe since t=[180]!=0",
+    "wrong_answer_stated": false,
+    "notes": "Answer correct and explicit. Descent lemma (K) proved with legality. Lemma 1 covers all cases including N=2, and both children shown to carry integer multiples, so Shan-Yu's discard is irrelevant. Necessity handles all four degenerate pairings, using t != 0 exactly where needed. Complete."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

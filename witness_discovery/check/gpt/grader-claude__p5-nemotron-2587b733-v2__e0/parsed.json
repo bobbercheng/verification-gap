@@ -1,0 +1,22 @@
+{
+ "checker": "gpt",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 33.1,
+  "input_tokens": 18161,
+  "output_tokens": 1231,
+  "reasoning_output_tokens": 1014,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "quote_faithful": "no",
+  "verdict": "rejected",
+  "evidence_kind": "invalid_inference",
+  "fatal": "no",
+  "explanation": "The objection mistakes the underbraced term for the complete coefficient of n; the text explicitly says the remainder contains the other linear terms. More importantly, the later estimates follow directly from the exact expression immediately preceding (5). Put r=cn-em and Δ=x_0-y_0. The full expression equals r^2+2Δr+C+(2c^2-4ce)n+2ecm. Since em=cn-r, this is r^2+(2Δ-2c)r+C+4c(c-e)n, where C is constant. Thus r=0 gives 4c(c-e)n+O(1), and |r|<1 also gives 4c(c-e)n+O(1), exactly as used. The displayed (5) is imprecise in isolation but the valid inference is recoverable immediately from the written exact expansion."
+ }
+}

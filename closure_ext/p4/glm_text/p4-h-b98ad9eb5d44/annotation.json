@@ -1,0 +1,47 @@
+{
+  "id": "p4-h-b98ad9eb5d44",
+  "problem": "4",
+  "sha256": "b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1",
+  "path": "checkpoint_inputs_ext/b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": "gpt-5.6-sol-main",
+  "turn": 3,
+  "record_ids": [
+    "p4-gpt-5.6-sol-main-t003",
+    "p4-deedy-gpt-5.6-sol-final"
+  ],
+  "bytes": 7126,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2063,
+        "output_tokens": 3316,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 55.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "interval lemma forces both children to have integral multiple of θ, then induction descent splitting mθ into θ+(m−1)θ",
+    "upper_bound_mechanism": "mod θℤ nonzero-class 'safe triangle' invariant",
+    "wrong_answer_stated": false,
+    "notes": "Complete both ways. Lemma 1 fully proved (including all-angles-≤1, N=2 case); cut point existence shown via 0<x<a; both children shown winning, covering every discard. Descent handles m=1 base and both discard choices. Necessity quotient-group argument covers all four pairings and uses 180∉θℤ exactly where needed."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

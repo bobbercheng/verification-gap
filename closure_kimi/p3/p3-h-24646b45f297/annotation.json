@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-24646b45f297",
+  "problem": "3",
+  "sha256": "24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0",
+  "path": "checkpoint_inputs/24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-3"
+  ],
+  "bytes": 13473,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 295.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "uniform 1:2:...:2 division with splitting-parity alternating-sum claim",
+    "upper_bound_mechanism": "cumulative-walk adjacent pairing with pair sums 2/(2n+1)",
+    "wrong_answer_stated": true,
+    "notes": "States wrong answer (n+1)/(2n+1) vs true 2^n/(2^(n+1)-1); small-n table wrong for n>=2. Alternating-sum reduction asserted, not proved. Lower bound proves a false statement: its splitting lemma is false and only one Xiang reply is analyzed. Upper bound is a sketch targeting a non-tight constant, key pairing lemma listed as open issue."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

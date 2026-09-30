@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-ca0cfe79b32c",
+  "problem": "1",
+  "sha256": "ca0cfe79b32c8331a031d11c8f5a84b17d45747b04f92580fb7be6b5d21ff3a6",
+  "path": "checkpoint_inputs_ext/ca0cfe79b32c8331a031d11c8f5a84b17d45747b04f92580fb7be6b5d21ff3a6.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 1,
+  "record_ids": [
+    "p1-muse-spark-1.1-main-t001"
+  ],
+  "bytes": 6487,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5660,
+        "output_tokens": 893,
+        "output_tokens_details": {
+          "thinking_tokens": 606
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 893,
+            "cache_read_input_tokens": 5660,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "count of entries >1 nonincreasing + product strictly decreasing after count stabilizes; move always leaves one entry >1 so k>=1, terminal k=1",
+    "upper_bound_mechanism": "per-prime invariance of G_p = gcd of valuations via gcd(x,y)=gcd(min,|x-y|), zero/equal cases handled",
+    "wrong_answer_stated": false,
+    "notes": "Complete: valuation move (min,|a-b|) derived, non-both-1 output proved, termination via lexicographic count/product monovariant with k>=1 justified, per-prime gcd invariance with zero and equal cases, and explicit M = prod p^{gcd_i v_p(a_i)}."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

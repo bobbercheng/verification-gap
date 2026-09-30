@@ -1,0 +1,33 @@
+{
+ "task_id": "imo-2026-p3",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Lemma 1: value of the alternating claiming game on a fixed multiset equals odd(S); both pairing strategies and their invariants ('Xiang/Liu never holds both members of a pair') check out, including the M even/odd edge cases",
+  "Lemma 2: removing an equal pair p,p from a multiset leaves δ unchanged (adjacent positions in the sorted order, parity of shifted positions preserved)",
+  "Theorem 1: geometric opening 2^n/N,...,1/N sums to 1; Lemma E induction verified at base r=1 (two pieces > 2^{n-1} must be disjoint subintervals of the unique part of length 2^n) and in Case 2 (2r pieces each > 2^{n-r} fit in the r parts of length ≥ 2^{n-r+1}, total 2^{n+1}-2^{n-r+1}, even-indexed sum ≤ half)",
+  "Piece count M ≤ (n+1)+n = 2n+1, hence r = floor(M/2) ≤ n and even(S) ≤ 2^n - 1, giving Liu ≥ 2^n/N",
+  "Theorem 2 pigeonhole: 2^{n+1} subset sums in [0,1] give a gap ≤ 1/N with distinct subsets I≠J; P,Q disjoint nonneg with |σ_P-σ_Q| ≤ 1/N",
+  "Cancellation procedure correctness: each pair formed is equal-length, cut step decreases pool size by 1, free step by 2, leftover total length exactly D",
+  "Cut count accounting |P|+|Q| = c + 2f + ℓ; if ℓ=0 the last step cannot be a cut step (a cut step returns a positive piece to the larger pool), so f ≥ 1 and total marks |Z|+c ≤ n in all cases, including the degenerate one-sided case",
+  "Final evaluation: δ(S) = δ(L) ≤ max(L) ≤ D ≤ 1/N (using δ ≥ 0 on all multisets), so Liu's total ≤ (1+1/N)/2 = 2^n/N",
+  "Mark legality: all Xiang cuts are at interior points of current pieces, distinct from Liu's marks and from each other",
+  "Sanity check n=1: Liu marks at 1/3, best Xiang reply halves the 2/3 piece giving {1/3,1/3,1/3}, Liu gets 2/3, matching 2^n/(2^{n+1}-1)"
+ ],
+ "unverified_claims": [],
+ "summary": "The answer 2^n/(2^{n+1}-1) is established by a complete, self-contained argument. The reduction to odd(S) via the two pairing strategies is airtight; the lower bound uses a clean induction on even-indexed partial sums exploiting the powers-of-2 structure; the upper bound combines a subset-sum pigeonhole with a Euclidean-style cancellation procedure whose cut-counting (including the subtle ℓ=0 case) is handled correctly. Degenerate cases (fewer Liu marks, one of P,Q empty, endpoint-wasted marks) are all addressed. No gaps found.",
+ "transfer_assessment": [
+  "Reusable: greedy claiming game on a sorted multiset has value odd(S) — proven by symmetric pairing strategies for first and second player",
+  "Reusable: deleting equal pairs preserves the alternating sum δ — useful whenever one player can force paired-equal structure",
+  "Reusable: geometric composition 1/2, 1/4, ... as an optimal splitter opening, with Lemma E's 'top 2r pieces vs. parts of length ≥ threshold' packing argument",
+  "Reusable: pigeonhole on 2^{n+1} subset sums plus a greedy cancellation (Euclidean-like) procedure converting a near-equal pair of subfamilies into equal pairs within a tight cut budget",
+  "Not misleading: none identified; the cut-counting invariant c + 2f + ℓ = initial pieces is the only delicate point and is argued correctly"
+ ]
+}

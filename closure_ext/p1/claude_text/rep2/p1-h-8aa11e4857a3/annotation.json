@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-8aa11e4857a3",
+  "problem": "1",
+  "sha256": "8aa11e4857a3b8961789027cbbe9d6584b1bb168d7caa8b9fc184aa586f40880",
+  "path": "checkpoint_inputs_ext/8aa11e4857a3b8961789027cbbe9d6584b1bb168d7caa8b9fc184aa586f40880.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": "gpt-5.6-sol-main",
+  "turn": 3,
+  "record_ids": [
+    "p1-gpt-5.6-sol-main-t003"
+  ],
+  "bytes": 5286,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4343,
+        "output_tokens": 670,
+        "output_tokens_details": {
+          "thinking_tokens": 375
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 670,
+            "cache_read_input_tokens": 4343,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic (Omega-sum, count of nonunits) monovariant + no move leaves all 1s (lcm/gcd=1 implies m=n so gcd=m>1)",
+    "upper_bound_mechanism": "per-prime invariance of gcd of p-adic valuations via gcd(min(a,b),|a-b|)=gcd(a,b)",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: explicit M = prod p^{gcd v_p(a_i)}, valuation move description, lexicographic termination with the 'at least one nonunit survives' step, and invariance handling equal/zero valuations through gcd(a,b-a)=gcd(a,b). Minor LaTeX display typo only."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

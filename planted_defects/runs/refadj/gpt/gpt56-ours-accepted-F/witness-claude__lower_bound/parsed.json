@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-F",
+ "base_id": "gpt56-ours-accepted",
+ "type": "F",
+ "problem": "3",
+ "objection_key": "witness-claude__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.5,
+  "input_tokens": 19249,
+  "output_tokens": 506,
+  "reasoning_output_tokens": 343,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The counterexample is valid: the global inequality e<q does not imply that every component is acyclic, and the selected component may contain a loop. Thus its asserted bipartition and inequality (3) are unjustified. A local repair is available: since the sum of component edge counts is less than the sum of component vertex counts, some connected component has e_C<v_C; connectedness gives e_C≥v_C−1, so that component is a loop-free tree. Selecting that component instead of the one containing a_q completes the argument."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "lower_bound"
+}

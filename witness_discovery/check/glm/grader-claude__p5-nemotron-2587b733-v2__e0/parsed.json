@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 94.9,
+  "input_tokens": 245,
+  "output_tokens": 8654,
+  "cache_read_input_tokens": 3712
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "Substituting x = x_0+nc, y = y_0+me into (4) gives (cn-em)^2 + [2c(x0-y0)+2c^2-4ce]n + 2e(c-x0+y0)m + const, so the raw coefficient of n is not 4c(c-e); that value emerges only after imposing em ≈ cn, which cancels the 2c(x0-y0) part and folds in the m-term. Since the write-up states the O(n+m) remainder 'collects all terms linear in n,m', (5) is trivially satisfiable with any highlighted coefficient — vacuous as written. The decisive per-case coefficients 4qc(c-e)k and 4c(c-e)n_k+O(1) (both in fact correct, as the objector notes) are then asserted without derivation; the O(1) strength cannot follow from (5)'s O(n+m). Thus the crux sign computation of the necessity argument (all positive differences equal) is never validly established in the text, leaving the obligation incomplete as written despite being repairable."
+ }
+}

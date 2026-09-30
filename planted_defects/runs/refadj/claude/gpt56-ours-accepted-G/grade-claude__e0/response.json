@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4911,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005005999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 770,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 5907,
+    "webSearchRequests": 0,
+    "costUSD": 0.0791515,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 415,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5907,
+   "cache_read_input_tokens": 1643,
+   "output_tokens": 770,
+   "output_tokens_details": {
+    "thinking_tokens": 415
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5907,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 770,
+     "cache_read_input_tokens": 1643,
+     "cache_creation_input_tokens": 5907,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5907
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 11512,
+  "is_error": false,
+  "elapsed_seconds": 12.5,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L3.2\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"lemma\",\n  \"explanation\": \"The quoted sentence is the entire content of the B≠∅ case of the refinement lemma's upper bound: the overlay/common-refinement pairing and the crucial count of at most q−1 = n cuts are asserted with 'standard; details omitted'. This is exactly the mechanism L3.2 requires (mirrored cuts pairing S against T, bisect the rest, within the budget). Elsewhere the text only handles B=∅ (bisect outside A, q−|A| cuts), remarks that overlay cuts lie interior and coincidences reduce the count, and then invokes the lemma in Section 3. No passage carries out the B≠∅ construction or verifies its cut budget, so the universal upper bound is not established as written; supplying the omitted construction is a lemma-sized repair.\"\n}"
+   }
+  ]
+ }
+}

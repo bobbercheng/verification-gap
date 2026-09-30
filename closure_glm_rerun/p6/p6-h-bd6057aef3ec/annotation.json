@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-bd6057aef3ec",
+  "problem": "6",
+  "sha256": "bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757",
+  "path": "checkpoint_inputs/bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round2",
+  "turn": 7,
+  "record_ids": [
+    "p6-kimi-k3-round2-t007"
+  ],
+  "bytes": 11071,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3818,
+        "output_tokens": 12399,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 120.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "finiteness of minimal elements via intersecting self-dual clutter theorem",
+    "upper_bound_mechanism": "L = lcm of squarefree minimal elements; T = count per period window",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Step 1 fully proves the characterization (C). Step 2 assembles global periodicity from n=1 (L = lcm of minimal elements, T = window count). Steps 3-4 prove finiteness of minimal elements for all cases via the self-dual intersecting antichain theorem; the Zorn/peeling argument verifies. Old hitting-set heuristics are explicitly not used in the final proof."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

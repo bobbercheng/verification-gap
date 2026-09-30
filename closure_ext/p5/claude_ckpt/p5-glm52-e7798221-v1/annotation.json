@@ -1,0 +1,67 @@
+{
+  "id": "p5-glm52-e7798221-v1",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "e7798221",
+  "turn": 1,
+  "path": "checkpoint_inputs_ext/d2bc30e7b324192299406c9fff3549976d778099a44193a96fd512d1da47f66b.md",
+  "recorded_mtime_utc": "2026-07-24T18:44:26Z",
+  "bytes": 3740,
+  "sha256": "d2bc30e7b324192299406c9fff3549976d778099a44193a96fd512d1da47f66b",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3048,
+        "cache_read_input_tokens": 1356,
+        "output_tokens": 1490,
+        "output_tokens_details": {
+          "thinking_tokens": 1178
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3048,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1490,
+            "cache_read_input_tokens": 1356,
+            "cache_creation_input_tokens": 3048,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3048
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "direct squaring; both inequalities reduce to (x-y-c)^2 >= 0 for all x,y and c>=0",
+    "upper_bound_mechanism": "master quadratic bound D(v) <= D(s) + (v-s)^2/(4f(s)) via completing the square with u=f(s), then continuity + telescoping over n equal subintervals gives D constant",
+    "wrong_answer_stated": false,
+    "notes": "Step 1 gives f(f(t))=2f(t)-t; Step 2 orbit AP forces D>=0. Step 3's completion of the square and substitution u=f(s) check out algebraically; Steps 4-5 derive continuity and constancy rigorously, covering fixed points without extra assumptions. Numerical remark is decorative, not load-bearing."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2849,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0029389999999999998,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 447,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 3302,
+    "webSearchRequests": 0,
+    "costUSD": 0.0450265,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 138,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3302,
+   "cache_read_input_tokens": 1643,
+   "output_tokens": 447,
+   "output_tokens_details": {
+    "thinking_tokens": 138
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3302,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 447,
+     "cache_read_input_tokens": 1643,
+     "cache_creation_input_tokens": 3302,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3302
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 6915,
+  "is_error": false,
+  "elapsed_seconds": 7.6,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L3.2\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"lemma\",\n  \"explanation\": \"The write-up itself states Part B (the universal upper bound, ledger L3.2) is open, and explicitly flags the realizability gap: the pigeonhole yields a sign vector in {-1,0,1}^{n+1} with small signed sum, but no argument shows Xiang can realize it with at most n cuts (their own {1,2} example shows +1+1 signs are not realizable by their cancel/chain ops). No other passage supplies the construction; the published route needs the mirrored-cut pairing of S against T with bisection of the remaining segments, which is absent. That is a missing lemma, not a local misprint.\",\n  \"objection_correct_note\": null\n}"
+   }
+  ]
+ }
+}

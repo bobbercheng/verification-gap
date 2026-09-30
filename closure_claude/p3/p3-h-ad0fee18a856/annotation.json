@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-ad0fee18a856",
+  "problem": "3",
+  "sha256": "ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb",
+  "path": "checkpoint_inputs/ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "glm53-c1"
+  ],
+  "bytes": 7842,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4398,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 1108,
+        "output_tokens_details": {
+          "thinking_tokens": 841
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4398,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1108,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 4398,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4398
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "explicit Liu partition + case check, n=1 only (n=2 incomplete)",
+    "upper_bound_mechanism": "median-maximizing Xiang cut for n=1; named strategy families S_i for n=2",
+    "wrong_answer_stated": true,
+    "notes": "Only n=1 fully solved (2/3, matches). Proposes c_2=5/9, which is wrong (true value 4/7), and admits no general formula. Reduction to odd-position sum stated as proved but the inductive proof is not written out (author flags this gap). No all-n lower or upper bound construction; subset-sum/pigeonhole and 1:2:4 ideas absent."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

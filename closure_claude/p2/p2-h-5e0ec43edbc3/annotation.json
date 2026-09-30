@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-5e0ec43edbc3",
+  "problem": "2",
+  "sha256": "5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296",
+  "path": "checkpoint_inputs/5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-round1",
+  "turn": 41,
+  "record_ids": [
+    "p2-gpt-5.6-sol-xhigh-round1-t041"
+  ],
+  "bytes": 2685,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1945,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 1596,
+        "output_tokens_details": {
+          "thinking_tokens": 1331
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1945,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1596,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 1945,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1945
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 23.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "complex-coordinate determinant identity D = c·Q (asserted, not proved)",
+    "upper_bound_mechanism": "equal powers of M, N wrt circle (AKL) ⇒ OM = ON (asserted identification of D)",
+    "wrong_answer_stated": false,
+    "notes": "Goal and equal-power strategy are correct. Coordinate setup plausibly encodes the angle conditions but derivations of K, L, λ and of Q=0 are not written out. The crucial factorization D = c·Q is only 'verified', explicitly flagged as an expository gap; no key circle or synthetic argument. Finish is asserted, not derived."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

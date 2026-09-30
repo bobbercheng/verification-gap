@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__p5-deepseek-v4-pro-main-t033__e0",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.7,
+  "input_tokens": 2,
+  "output_tokens": 976,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 8127,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5222,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005307,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 976,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 8127,
+    "webSearchRequests": 0,
+    "costUSD": 0.10568000000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 628,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The write-up only records g(x) > -x after (3)-(4) and never rules out negative values of g. Section 3 proves only that V contains at most one positive number; the jump to 'either g ≡ 0 or V ⊆ {0,c}' silently assumes g ≥ 0. Sections 4-6 all presuppose V ⊆ {0,c} (Lemma 1 explicitly cites 'b = g(z) ∈ {0,c} because V ⊆ {0,c}'), so nonnegativity is nowhere derived. The standard one-line fix — if g(x) = d < 0 then (4) gives g(x+nd) = d with x+nd eventually nonpositive — is absent, so L5.3 is not established as written; a single sentence would repair it."
+ },
+ "elsewhere_anchor": null
+}

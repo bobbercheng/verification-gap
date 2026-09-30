@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-7232c3edc529",
+  "problem": "6",
+  "sha256": "7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb",
+  "path": "checkpoint_inputs/7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "244edfad",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-244edfad-v1"
+  ],
+  "bytes": 8615,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5928,
+        "output_tokens": 2026,
+        "output_tokens_details": {
+          "thinking_tokens": 1749
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2026,
+            "cache_read_input_tokens": 5928,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 27.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "essential primes eventually divide all terms (Lemma 2, sketched with admitted induction gap)",
+    "upper_bound_mechanism": "residues mod L cyclic enumeration + backward shift argument b_n = a_{n+T} - L",
+    "wrong_answer_stated": false,
+    "notes": "Correct target structure (L = product of essential primes, T = number of covered residues) and the hitting-set characterization are clean. Lemma 2's finiteness argument openly defers key steps ('one can bound ... by induction'). Stabilized minimal hitting sets are wrongly assumed to lie inside E. Backward extension leans on a false gcd claim and a vague minimality contradiction."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

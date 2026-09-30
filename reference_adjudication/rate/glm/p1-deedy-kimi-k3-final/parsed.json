@@ -1,0 +1,43 @@
+{
+ "rater": "glm",
+ "case": "p1-deedy-kimi-k3-final",
+ "problem": "1",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 56.1,
+  "input_tokens": 2868,
+  "output_tokens": 4400,
+  "cache_read_input_tokens": 1216
+ },
+ "parsed": {
+  "statements": {
+   "L1.1": {
+    "established": "yes",
+    "quote": "By Step 1 he stops after finitely many moves; in the final position **at most one** entry exceeds $1$, and by Step 2 **at least one** entry exceeds $1$. Hence exactly one entry $M > 1$ remains, and the other $N-1$ entries all equal $1$.",
+    "note": "Step 1: type-A moves halve product P, type-B moves raise z by 1, z non-decreasing, ≤N type-B and ≤log2(P0) type-A moves. Step 2: outputs never both 1."
+   },
+   "L1.2": {
+    "established": "yes",
+    "quote": "Claim: for every positive integer $t$, $t \\mid \\alpha$ and $t \\mid \\beta \\Longleftrightarrow t \\mid \\alpha'$ and $t \\mid \\beta'$. Indeed, we may assume $\\alpha \\le \\beta$, so $\\alpha' = \\alpha$ and $\\beta' = \\beta - \\alpha$.",
+    "note": "Valuations (min, |α−β|) written; common-divisor set unchanged, identically-zero tuple case handled; Step 4 gives v_p(M)=G_p."
+   }
+  },
+  "S_ref": 2,
+  "notes": "Both obligations fully proved for all cases. Monovariant (product, #ones) gives termination plus exactly one survivor for every play; divisibility-equivalence claim including zero/equal valuations gives invariant G_p, and the terminal board yields v_p(M)=G_p with the correct explicit boxed answer. Dead ends are flagged, not relied upon."
+ },
+ "anchors": {
+  "L1.1": {
+   "anchored": true,
+   "length": 236,
+   "length_ok": true,
+   "reason": null
+  },
+  "L1.2": {
+   "anchored": false,
+   "length": 224,
+   "length_ok": true,
+   "reason": "not found"
+  }
+ }
+}

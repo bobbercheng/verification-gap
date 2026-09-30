@@ -1,0 +1,25 @@
+{
+ "checker": "gpt",
+ "objection_key": "witness-claude__deedy-deepseek-v4-pro-final__lower_bound",
+ "case": "deedy-deepseek-v4-pro-final",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.7,
+  "input_tokens": 16078,
+  "output_tokens": 286,
+  "reasoning_output_tokens": 119,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The quoted passage explicitly reports only discretized evidence, and the write-up later labels the lower bound as still needing proof. It contains no argument covering arbitrary Xiang replies for all n. The proposed equal-step division and target are also wrong for n≥3: (n+1)/(2n+1) exceeds the correct guarantee 2^n/(2^(n+1)-1). Establishing L3.3 requires replacing this with the geometric 1:2:…:2^n division and a universal pairing/tree, majorization, or valid induction argument."
+ },
+ "elsewhere_anchor": null
+}

@@ -1,0 +1,46 @@
+{
+  "id": "p2-h-e2f41fa6f165",
+  "problem": "2",
+  "sha256": "e2f41fa6f165fd2089170dadf80fc5f85b38985afce36db670852653c943355a",
+  "path": "checkpoint_inputs/e2f41fa6f165fd2089170dadf80fc5f85b38985afce36db670852653c943355a.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 26,
+  "record_ids": [
+    "p2-gpt-5.6-sol-max-main-t026"
+  ],
+  "bytes": 5140,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1317,
+        "output_tokens": 14382,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 154.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "circumcircle of AKL with generic coefficients p,q (membership tautological; p,q never solved)",
+    "upper_bound_mechanism": "equal powers of M,N reduced to identity (IV); (IV) left to a claimed Gröbner elimination",
+    "wrong_answer_stated": false,
+    "notes": "Sound analytic setup: all three angle hypotheses are encoded via sine-law identities (BMK/BCK, CLN/BCL), fully derived and correct; OM²−ON² is correctly reduced to coefficient identity (IV). But (IV) is established only by a claimed Gröbner computation (self-flagged gap), p,q are never determined, and no key-circle mechanism appears."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

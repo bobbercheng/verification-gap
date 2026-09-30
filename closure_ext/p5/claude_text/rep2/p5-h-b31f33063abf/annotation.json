@@ -1,0 +1,71 @@
+{
+  "id": "p5-h-b31f33063abf",
+  "problem": "5",
+  "sha256": "b31f33063abf487fbca988428d05166b26df3e13e12afac9d3cf92237c3d6b5e",
+  "path": "checkpoint_inputs_ext/b31f33063abf487fbca988428d05166b26df3e13e12afac9d3cf92237c3d6b5e.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 1,
+  "record_ids": [
+    "p5-muse-spark-1.1-main-t001",
+    "p5-deedy-muse-spark-1.1-final"
+  ],
+  "bytes": 6326,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6296,
+        "output_tokens": 1815,
+        "output_tokens_details": {
+          "thinking_tokens": 1474
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1815,
+            "cache_read_input_tokens": 6296,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 21.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "AM-GM and RMS-AM applied to x and y+c, both inequalities checked for all x,y, c>=0",
+    "upper_bound_mechanism": "local quadratic estimate |c(x)-c(y)| <= (x-f(y))^2/f(y); orbit approximation forcing equal positive differences; B-inequality gives |a-b|>=p for fixed/non-fixed pair, then connectedness of (0,inf)",
+    "wrong_answer_stated": false,
+    "notes": "Structural identity f(f(y))=2f(y)-y derived cleanly via alpha+beta=2(x-f(y))^2; c>=0 by orbit positivity. Local estimate (12) correctly derived and used with density of orbits to equate positive differences; mixed fixed/non-fixed case excluded via separation plus connectedness. Sufficiency verified fully. Complete."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

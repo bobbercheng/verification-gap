@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-442b65045661",
+  "problem": "4",
+  "sha256": "442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8",
+  "path": "checkpoint_inputs_ext/442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "0da3d62d",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-0da3d62d-v1"
+  ],
+  "bytes": 4231,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4255,
+        "output_tokens": 1989,
+        "output_tokens_details": {
+          "thinking_tokens": 1780
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1989,
+            "cache_read_input_tokens": 4255,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 26.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "States wrong answer (theta <= 90). Cut model is false: it claims both pieces share the same angle beta at the cut vertex, whereas the sub-angles sum to C and the piece angles are (A,beta,180-A-beta) and (B,C-beta,A+beta). All arguments rest on this false lemma; no k*theta lemma, no safe-angle invariant."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-f4b82aeef8ab",
+  "problem": "3",
+  "sha256": "f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00",
+  "path": "checkpoint_inputs/f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round3",
+  "turn": 14,
+  "record_ids": [
+    "kimi-k3-round3-t014"
+  ],
+  "bytes": 2892,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2027,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 857,
+        "output_tokens_details": {
+          "thinking_tokens": 596
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2027,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 857,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 2027,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2027
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 11.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "matching formula + component decomposition + block lemma for super-increasing (geometric) family",
+    "upper_bound_mechanism": "subset-sum signed pigeonhole + halve/cancel operations (chain theorem unproved)",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form asserted with small-n evidence. Reduction to alternating sum asserted 'proved/brute-force verified' but no argument written. Part A (lower bound) is a bullet-point sketch relying on an unproved-in-text matching formula and trial verification. Part B (upper bound) explicitly open: chain theorem only checked n=1..4."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

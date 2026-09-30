@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-670170f5f67b",
+  "problem": "2",
+  "sha256": "670170f5f67b7ba8926ea3c0b93fbd131eaaee9fbd93716aff2d1fd9d0464d0e",
+  "path": "checkpoint_inputs/670170f5f67b7ba8926ea3c0b93fbd131eaaee9fbd93716aff2d1fd9d0464d0e.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 41,
+  "record_ids": [
+    "p2-gpt-5.6-sol-max-main-t041"
+  ],
+  "bytes": 4600,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3171,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 1527,
+        "output_tokens_details": {
+          "thinking_tokens": 1210
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3171,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1527,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 3171,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3171
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 21.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "none (reduced to an unexecuted Groebner/resultant factorization test for (V)); no circle through A,K,L identified",
+    "upper_bound_mechanism": "power of a point in oblique coordinates: OM^2-ON^2 = (c^2-b^2)/4 - cp/2 + bq/2, so (V) gives OM=ON",
+    "wrong_answer_stated": false,
+    "notes": "Goal and strategy correct. Sine-law translation of all three angle conditions into the quadratic relations (II)/(III) is executed. The finish is correctly reduced to the linear relation (V) via powers of M,N. The crucial step—deriving (V), the analogue of the key circle through A,K,L—is explicitly open, left to a script yet to be run; earlier claim self-corrected."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

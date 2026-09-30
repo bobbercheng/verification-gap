@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-4d5351b57f71",
+  "problem": "5",
+  "sha256": "4d5351b57f712cf818b8c85b9a478da4c5b3c272c888bb884c957e4336745387",
+  "path": "checkpoint_inputs_ext/4d5351b57f712cf818b8c85b9a478da4c5b3c272c888bb884c957e4336745387.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p5-deedy-claude-fable-5-final"
+  ],
+  "bytes": 9430,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7728,
+        "output_tokens": 2069,
+        "output_tokens_details": {
+          "thinking_tokens": 1737
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2069,
+            "cache_read_input_tokens": 7728,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 23.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to u=x, v=y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "Orbit arithmetic progression + two-sided asymptotic sandwich (E1/E2 sqrt estimates) forcing all positive gaps equal and g>0 on a half-line, then downward bootstrap x=y+d to all of R_{>0}",
+    "wrong_answer_stated": false,
+    "notes": "Step 1 gives f(f(y))=2f(y)-y and g>=0; Part I verifies both inequalities for all c>=0. Steps 3-6 rigorously pin g equal to d on [a+d,inf) (lower bound d-d^2/4x>0 excludes large fixed points) and propagate downward by induction; pure identity case handled as c=0. All estimates checked and correct."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,51 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "reject",
+  "scores": {
+    "correctness": 1,
+    "completeness": 0,
+    "rigor": 1,
+    "self_contained": 0
+  },
+  "fatal_issues": [
+    "Lemma 2 (finiteness of the set of all primes P* = ∪_n P_n) is completely unproven and acknowledged as the 'core bottleneck'. This lemma is the heart of the IMO 2026 P6 problem; without it, the entire proof structure collapses.",
+    "Ubiquitous Prime Lemma (Claim 4) is unproven and the previous version (E = D) was experimentally falsified by a_1 = 15. The new hypothesis (D = ∩_{H∈M} H is nonempty and exactly the ubiquitous primes) lacks both proof and comprehensive experimental verification.",
+    "Lemma 5 (backward extension of periodicity to all n ≥ 1) is unproven. Prior attempts used the false identity gcd(x+L, y+L) = gcd(x,y) (counterexample: gcd(36,40)=4 ≠ 2=gcd(6,10)). The proposed correct approach (uniqueness of greedy sequence + translation invariance modulo L) is only a sketch with no rigorous justification.",
+    "Stabilization of the minimal hitting set family M_n (Lemma 3) is conditional on the unproven Lemma 2. Even conditional on Lemma 2, the argument that 'no new minimal hitting sets appear after some point' is asserted but not rigorously justified.",
+    "The claim that eventually P(a_n) equals a minimal hitting set exactly (no extra prime factors) is stated as an open issue with only a heuristic justification (bounded gaps in the merge)."
+  ],
+  "required_fixes": [
+    "Prove Lemma 2 (finiteness of P*) via a correct minimality-contradiction argument. Must handle the case where P(a_{n_k}) is not a minimal hitting set for the family at the first appearance of the k-th new prime.",
+    "Prove the Ubiquitous Prime Lemma: D = ∩_{H∈M} H is nonempty, every p ∈ D eventually divides all terms, and E \\ D are exactly the non-ubiquitous essential primes. First verify experimentally across many a_1 values.",
+    "Prove stabilization of M_n without circular dependence on the Ubiquitous Prime Lemma. Test potential functions Φ₁, Φ₂, Φ₃ or the active family A_n for monotonicity.",
+    "Establish translation invariance of the hitting condition modulo L for the full sequence to enable backward extension (Lemma 5). Prove every early term shares at least one essential prime with the tail.",
+    "Prove that eventually P(a_n) ∈ M exactly, using the bounded-gap property of the merge (max gap ≤ max m_H ≤ L)."
+  ],
+  "verified_claims": [
+    "Lemma 1: The set of essential primes E = {p : p divides infinitely many a_n} is nonempty. Proof by pigeonhole principle on the finite set P(a_1) is correct.",
+    "Key observation: a_{n+1} is the smallest integer > a_n that is a multiple of m_H for some minimal hitting set H ∈ M_n. The equivalence between the gcd condition and the hitting set condition is correctly established.",
+    "Correction: P(a_{n+1}) is a hitting set for {P_1, ..., P_n} but NOT necessarily minimal. Counterexample a_1=6 → a_2=8 → a_3=10 gives P(a_3)={2,5} while minimal hitting set is {2} — verified.",
+    "Experimental data for a_1 ∈ {6, 15, 21, 30, 42, 105, 1155, 2310}: the merge-of-progressions periodicity pattern holds with T = |R|, L = lcm{m_H} in all tested cases.",
+    "For a_1 = 15: M = {{2,3},{2,5},{3,5}}, D = ∅, T = 8, L = 30 — periodicity without ubiquitous primes, falsifying the old 'E = D' claim."
+  ],
+  "unverified_claims": [
+    "Lemma 2: The set of all primes P* = ∪_n P_n is finite.",
+    "Lemma 3: If P* is finite, the family of minimal hitting sets M_n stabilizes to a fixed family M.",
+    "Ubiquitous Prime Lemma (Claim 4): D = ∩_{H∈M} H is nonempty, ubiquitous, contained in every H ∈ M, and E \\ D are exactly the non-ubiquitous essential primes.",
+    "Lemma 4: The tail is the increasing merge of arithmetic progressions A_H = {k·m_H} for H ∈ M, periodic modulo L = lcm{m_H} with period T = |R|, giving a_{n+T} = a_n + L for large n.",
+    "Lemma 5: Periodicity a_{n+T} = a_n + L extends to all n ≥ 1.",
+    "Eventually P(a_n) equals a minimal hitting set exactly (no extra prime factors).",
+    "Exact period parameters: T = |R| and L = lcm{m_H} (not ∏_{p∈E} p, which may be larger — e.g., a_1=105 has ∏E=210 but L=69).",
+    "Stabilization mechanism: M_n stabilizes without assuming D ubiquitous; potential functions Φ₁, Φ₂, Φ₃ or active family A_n exhibit monotonicity."
+  ],
+  "summary": "The candidate solution is an honest proof sketch with explicitly acknowledged gaps, not a complete proof. Only Lemma 1 and the hitting-set reformulation are fully verified. The core lemma (finiteness of all primes) is entirely missing — this is the central difficulty of IMO 2026 P6. The Ubiquitous Prime Lemma and backward extension are also unproven, with previous versions experimentally falsified. The solution cannot be accepted as a valid proof.",
+  "transfer_assessment": [
+    "REUSABLE: Hitting set reformulation (gcd condition ⇔ hitting set ⇔ multiple of m_H for minimal H ∈ M_n) is a correct and powerful mechanism.",
+    "REUSABLE: Essential primes E identified via pigeonhole on P(a_1); nonempty and all primes in the sequence are either essential or eventually disappear.",
+    "REUSABLE: Merge-of-progressions periodicity mechanism — once M stabilizes, the tail is the ordered merge of {k·m_H} for H ∈ M, yielding periodicity modulo L = lcm{m_H} with period T = |R| (number of covered residues).",
+    "MISLEADING: The identity gcd(x+L, y+L) = gcd(x,y) is false in general (counterexample: gcd(36,40)=4 ≠ 2=gcd(6,10)). Prior attempts using this for backward extension are invalid.",
+    "MISLEADING: The assumption that P(a_{n+1}) is always a minimal hitting set is false (falsified by a_1=6 counterexample).",
+    "MISLEADING: The old Ubiquitous Prime Lemma claiming E = D (all essential primes are ubiquitous) is falsified by a_1=15 (E={2,3,5}, D=∅, yet periodicity holds).",
+    "MISLEADING: The CRT construction x_k ≡ 0 (mod p_k), x_k ≡ 1 (mod p_i for i<k) produces a number COPRIME to all previous terms — the opposite of a valid candidate for the minimality contradiction in Lemma 2."
+  ]
+}

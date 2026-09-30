@@ -1,0 +1,44 @@
+{
+  "id": "p1-h-6d17430cc840",
+  "problem": "1",
+  "sha256": "6d17430cc8409eaec292509b3906f361d79b72f2a842ebeccf2e3b9b7c68de69",
+  "path": "checkpoint_inputs_ext/6d17430cc8409eaec292509b3906f361d79b72f2a842ebeccf2e3b9b7c68de69.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "57ce82c6",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-57ce82c6-v1"
+  ],
+  "bytes": 5403,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 16837,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 853,
+        "reasoning_output_tokens": 717
+      },
+      "sec": 24.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "false strictly-decreasing product",
+    "upper_bound_mechanism": "gcd of p-adic valuations",
+    "wrong_answer_stated": true,
+    "notes": "The explicit formula is correct. However, coprime inputs are mishandled: gcd(m,n) need not exceed 1, so the claimed strict product decrease and survivor-count argument fail. The valuation transformation is correct, but the required no-two-1s case is not. The gcd lemma’s displayed proof is invalid when a<b, leaving a case gap."
+  },
+  "S": 0,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

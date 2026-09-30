@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-bfe4b2a3f1e3",
+  "problem": "5",
+  "sha256": "bfe4b2a3f1e332ca276a20b503987c39b5d55ca9612ee224d90712aa11f87168",
+  "path": "checkpoint_inputs_ext/bfe4b2a3f1e332ca276a20b503987c39b5d55ca9612ee224d90712aa11f87168.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8edc6458",
+  "turn": 1,
+  "record_ids": [
+    "p5-nemotron-8edc6458-v1"
+  ],
+  "bytes": 4047,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1746,
+        "output_tokens": 12746,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 151.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "direct substitution: QM-AM and (x-(y+c))^2>=0",
+    "upper_bound_mechanism": "L^2-R^2 sign via swapped pair (fallacious)",
+    "wrong_answer_stated": true,
+    "notes": "Answer, (S) via x=f(y) with orbits and g>=0, and verification are all complete. But necessity Section 6 is invalid: L^2>R^2 at (a,b) and its swap are simultaneously consistent (e.g. g(a)=0, g(b)=1, x=100, y=1 gives all four >=0); the 'forced vanishing' claim is a false lemma."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

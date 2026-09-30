@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-b2b39d07c157",
+  "problem": "5",
+  "sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+  "path": "checkpoint_inputs_ext/b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "2587b733",
+  "turn": 2,
+  "record_ids": [
+    "p5-nemotron-2587b733-v2"
+  ],
+  "bytes": 6189,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2440,
+        "output_tokens": 17533,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 238.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "direct verification: both inequalities reduce to (x - y - c)^2 >= 0",
+    "upper_bound_mechanism": "orbit-iterate comparison via right inequality (rational/Dirichlet split) + connectedness lemma for mixed fixed/non-fixed case",
+    "wrong_answer_stated": false,
+    "notes": "Identity f(f(x))=2f(x)-x, d>=0, sufficiency, and the mixed-case exclusion via connectedness are complete and correct. But Section 3's crux is asserted, not proved: the O(n+m) remainder is Theta(k) along the chosen pairs, and the required cancellation of x0,y0-dependent linear terms is never shown, so the Case 1/2 contradictions do not follow as written."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

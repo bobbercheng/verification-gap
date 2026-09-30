@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "p1-deedy-kimi-k3-final-G",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "G",
+ "problem": "1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 49.2,
+  "input_tokens": 708,
+  "output_tokens": 3885,
+  "cache_read_input_tokens": 2880
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 1,
+  "lower_bound_mechanism": "lexicographic monovariant (product, #ones) with move-count bound; Step 2 induction keeps an entry > 1",
+  "upper_bound_mechanism": "prime-wise gcd-of-valuations invariant; key divisibility equivalence stated but proof omitted",
+  "wrong_answer_stated": false,
+  "notes": "Termination (P halves when g≥2, z increases when g=1), exactly-one-survivor, and the valuation move description (min, |α−β|; never two 1s) are fully written out. Step 3 asserts the correct t-divisibility equivalence but says 'details omitted', so the invariance proof itself is not written out. Boxed M formula is explicit and correct."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 708,
+    "output_tokens": 3885,
+    "cache_read_input_tokens": 2880,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 49.2,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 1,
+ "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+}

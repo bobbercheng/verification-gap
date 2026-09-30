@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-7ab3c4244f77",
+  "problem": "3",
+  "sha256": "7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce",
+  "path": "checkpoint_inputs/7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c1"
+  ],
+  "bytes": 4902,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1984,
+        "output_tokens": 2859,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 35.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "geometric Liu division (ratio 2^n:...:1), numerical verification only",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form appears only as a numerically supported conjecture, explicitly 'not proven'. Reduction to odd-rank sum is stated and numerically verified; proof ('greedy exchange/induction') promised but not written. Lower bound: correct geometric division identified, checked n≤5 numerically, no all-n argument. Upper bound: purely numerical search, no pigeonhole/overlay mechanism. Wrong (n+1)/(2n+1) conjecture was refuted, not asserted."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

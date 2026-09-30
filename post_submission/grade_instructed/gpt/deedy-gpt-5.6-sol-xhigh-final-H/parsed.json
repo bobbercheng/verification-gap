@@ -1,0 +1,46 @@
+{
+ "gate": "grade_im",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-H",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 56.3,
+  "input_tokens": 17056,
+  "output_tokens": 2312,
+  "reasoning_output_tokens": 2134,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": false,
+  "main_gap": "The lower-bound proof contains a minor incorrect geometric-series evaluation, though the needed dominance and nonzero signed-sum conclusion remain valid after an immediate correction.",
+  "errors": [
+   {
+    "description": "The geometric sum is evaluated incorrectly: it equals 2^k-1, not 2^k-2. The intended strict inequality 2^k>2^k-1 is still true, so this is a local, straightforwardly repairable error.",
+    "quote": "the sum $1+2+\\cdots+2^{k-1}=2^k-2$ of all smaller powers"
+   }
+  ],
+  "notes": "Apart from this arithmetic typo, the game-value reduction, pairing lemma, refinement construction, graph lower bound, and subset-sum upper bound form a coherent matching proof of the stated value."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 56,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    8862,
+    8918
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_im",
+ "run_tag": "",
+ "transport_choice": "cli"
+}

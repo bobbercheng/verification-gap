@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1668,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001763,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 790,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 1797,
+    "webSearchRequests": 0,
+    "costUSD": 0.0385515,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 401,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1797,
+   "cache_read_input_tokens": 1643,
+   "output_tokens": 790,
+   "output_tokens_details": {
+    "thinking_tokens": 401
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1797,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 790,
+     "cache_read_input_tokens": 1643,
+     "cache_creation_input_tokens": 1797,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1797
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 10293,
+  "is_error": false,
+  "elapsed_seconds": 11.1,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L3.3\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"none\",\n  \"explanation\": \"Check the counterexample: Liu's marks 1/5, 2/5 give segments 1/5, 1/5, 3/5. Xiang's single cut at 7/10 splits 3/5 into 3/10, 3/10, giving multiset {3/10, 3/10, 1/5, 1/5}; the alternating sum of sorted lengths is 3/10-3/10+1/5-1/5 = 0, so Liu gets exactly 1/2 < 3/5. The proposed equal-spacing division thus fails at n=2, and the write-up contains no other lower-bound argument (it explicitly says the proof is 'To be completed'). The conjectured value (n+1)/(2n+1) is itself wrong (true answer 2^n/(2^{n+1}-1)), so no local edit repairs it.\",\n  \"affected_answer_note\": \"conjectured formula incorrect for n>=2\"\n}"
+   }
+  ]
+ }
+}

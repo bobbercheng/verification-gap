@@ -1,0 +1,44 @@
+{
+  "id": "p3-h-a9b1ddf110b3",
+  "problem": "3",
+  "sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+  "path": "checkpoint_inputs/a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "glm53-c3"
+  ],
+  "bytes": 9592,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17891,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 285,
+        "reasoning_output_tokens": 163
+      },
+      "sec": 10.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric partition with incomplete superincreasing induction",
+    "upper_bound_mechanism": "split construction and incomplete subset-sum lemma",
+    "wrong_answer_stated": false,
+    "notes": "The correct closed form and claiming-phase reduction are stated. Both all-n bounds remain explicitly open: the lower bound lacks the largest-piece insertion step, while the upper bound depends on Lemma X1 proved only for small m. Small-n cases and several restricted regimes are established."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

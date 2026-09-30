@@ -1,0 +1,76 @@
+{
+ "rater": "glm",
+ "case": "p5-nemotron-2587b733-v2",
+ "problem": "5",
+ "group": "D",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 295.1,
+  "input_tokens": 3769,
+  "output_tokens": 26736,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "statements": {
+   "L5.1": {
+    "established": "partial",
+    "quote": "For $f(x) = x + c$ ($c \\ge 0$) the chain becomes\n$$\n\\sqrt{\\frac{x^2 + (y+c)^2}{2}} \\;\\ge\\; \\frac{x + y + 2c}{2} \\;\\ge\\; \\sqrt{x(y+c)}.\n$$\nBoth inequalities are equivalent to $(x - y - c)^2 \\ge 0$, true for all $x,y > 0$",
+    "note": "Middle term miswritten: correct is (x+y+c)/2; as displayed the left inequality fails, though the square-equivalence fits the corrected term."
+   },
+   "L5.2": {
+    "established": "yes",
+    "quote": "Set $x = f(y)$ in the full chain. The left and right ends both become $f(y)$, so equality holds throughout:\n$$\nf(y) \\;=\\; \\frac{f(f(y)) + y}{2} \\;\\Longrightarrow\\; f(f(y)) = 2f(y) - y \\qquad (1)\n$$\nfor all $y > 0$.",
+    "note": "Complete; also derives d(f(x)) = d(x), making every orbit an arithmetic progression."
+   },
+   "L5.3": {
+    "established": "yes",
+    "quote": "Assume $d(a) < 0$ for some $a > 0$. By (2) the orbit $a_n = f^{\\circ n}(a)$ satisfies\n$a_{n+1} = a_n + d(a_n) = a_n + d(a)$, hence $a_n = a + n\\,d(a)$.  \nSince $d(a) < 0$, we eventually have $a_n \\le 0$, contradicting $f : \\mathbb{R}_{>0} \\to \\mathbb{R}_{>0}$.",
+    "note": "Complete; positivity of all iterates forces d \\ge 0 everywhere."
+   },
+   "L5.4": {
+    "established": "partial",
+    "quote": "The full expression becomes\n$$\n(c n - e m)^2 \\;+\\; \\underbrace{4c(c-e)n}_{\\text{linear in }n} \\;+\\; O(n+m) \\;\\ge\\; 0 \\qquad (5)\n$$ ... Then $c n_k - e m_k = 0$ for all $k$, so the quadratic term vanishes exactly. The linear term becomes $4c(c-e) q k$",
+    "note": "Expansion (4) correct and both cases addressed, but sign deductions discard the collected O(n+m) terms, which are the same order; cancellation never shown."
+   },
+   "L5.5": {
+    "established": "yes",
+    "quote": "Squaring and rearranging gives\n$$\n(x_0 - y_0)^2 \\ge c^2 + 2c(x_0 + y_0). \\qquad (7)\n$$ ... By the Lemma, there exist sequences $a_n \\in A$, $b_n \\in B$ with $|a_n - b_n| \\to 0$. ... In any case the right side remains $\\ge c^2 > 0$, a contradiction.",
+    "note": "Forcing (7) yields |x−y| > c; connectedness lemma valid; mixed case fully excluded, given the dichotomy (6)."
+   }
+  },
+  "S_ref": 0,
+  "notes": "Correct answer and architecture; structural identity, d≥0, and fixed-point exclusion are complete. Defects: sufficiency displays middle term (x+y+2c)/2 instead of (x+y+c)/2; Section 3's sign analysis drops same-order O(n+m) terms without showing cancellation. Hence L5.1, L5.4 partial; S_ref = 0."
+ },
+ "anchors": {
+  "L5.1": {
+   "anchored": true,
+   "length": 219,
+   "length_ok": true,
+   "reason": null
+  },
+  "L5.2": {
+   "anchored": true,
+   "length": 214,
+   "length_ok": true,
+   "reason": null
+  },
+  "L5.3": {
+   "anchored": true,
+   "length": 260,
+   "length_ok": true,
+   "reason": null
+  },
+  "L5.4": {
+   "anchored": false,
+   "length": 250,
+   "length_ok": true,
+   "reason": "not found"
+  },
+  "L5.5": {
+   "anchored": false,
+   "length": 248,
+   "length_ok": true,
+   "reason": "not found"
+  }
+ }
+}

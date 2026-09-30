@@ -1,0 +1,61 @@
+{
+  "id": "p2-gpt-5.6-sol-max-main-t056",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 56,
+  "path": "checkpoint_inputs/e1d12a8e7d2d111778a6c1832d4bf4819e1929730bedf5921b8cb7930af17c84.md",
+  "bytes": 4805,
+  "sha256": "e1d12a8e7d2d111778a6c1832d4bf4819e1929730bedf5921b8cb7930af17c84",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 1368,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 107.7,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1368,
+        "output_tokens": 692,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 11.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "coordinate circle-coefficient computation reduced to unexecuted polynomial division (H multipliers not written)",
+    "wrong_answer_stated": false,
+    "notes": "Angle conditions are fully translated into sine-law identities E_R=E_D=0 with coordinates (II) encoding all three hypotheses; finish OM=ON is genuinely reduced to T=0 and division by E_R,E_D with quotients displayed, but the final residual factorization is left unwritten, so the endgame is incomplete. No key circle."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "e1d12a8e7d2d111778a6c1832d4bf4819e1929730bedf5921b8cb7930af17c84",
+  "original_bytes": 4805,
+  "input_anonymized": false
+}

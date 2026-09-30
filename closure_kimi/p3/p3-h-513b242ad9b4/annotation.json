@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-513b242ad9b4",
+  "problem": "3",
+  "sha256": "513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7",
+  "path": "checkpoint_inputs/513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c2"
+  ],
+  "bytes": 9799,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 31.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division 1:2:...:2^n, exact value only vs halving reply; all-replies resistance open (merge-inequality induction sketched, n=1 proved)",
+    "upper_bound_mechanism": "midpoint-halving reply to the geometric config only; universal reply proved just for n=1 (hand case analysis)",
+    "wrong_answer_stated": false,
+    "notes": "Fully proves the draft-game lemma (odd-rank sum reduction) and c(1)=2/3 both directions. Correct formula stated explicitly as conjecture for n>=2; both universal directions openly admitted unproved, backed only by exact-grid (n<=3) and float (n<=5) evidence. No subset-sum/pigeonhole upper-bound construction."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

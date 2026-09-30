@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "tag": "upper_bound",
+ "text_sha256": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "written_but_invalid",
+  "quote": "Thus $V$ contains **at most one** positive number.  Consequently, either  \n\n* (i) $g\\equiv 0$ (constant), which gives $f(x)=x$, a solution; or  \n* (ii) there is $c>0$ such that $V \\subseteq \\{0, c\\}$ with both values attainable.",
+  "witness": "Counterexample to this dichotomy: take f(x)=x+1, so g(x)=1 and V={1}. This function satisfies the original inequalities by QM-AM-GM, and V has at most one positive value, but g is not identically zero and the second branch fails because both 0 and 1 are not attainable. Negative values of g also have not yet been excluded in the text.",
+  "load_bearing": "This is the case split on which the remainder of the necessity proof is based. The subsequent argument only treats the mixed case and therefore does not make the stated all-cases deduction valid."
+ },
+ "started_utc": "2026-09-06 05:43:03 UTC"
+}

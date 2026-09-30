@@ -1,0 +1,123 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 6782,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.006876999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 398,
+    "cacheReadInputTokens": 742,
+    "cacheCreationInputTokens": 8373,
+    "webSearchRequests": 0,
+    "costUSD": 0.094061,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 126,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 8373,
+   "cache_read_input_tokens": 742,
+   "output_tokens": 398,
+   "output_tokens_details": {
+    "thinking_tokens": 126
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 8373,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 398,
+     "cache_read_input_tokens": 742,
+     "cache_creation_input_tokens": 8373,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 8373
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 5801,
+  "is_error": false,
+  "elapsed_seconds": 6.6,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"answer\": 2, \"reduction\": 2, \"lower_bound\": 1, \"upper_bound\": 2, \"lower_bound_mechanism\": \"tree-pairing / signed subset-sum on geometric config (details omitted)\", \"upper_bound_mechanism\": \"subset-sum pigeonhole gap <= 1/(2^(n+1)-1) + cross-pairing/overlay cuts with equal-pair cancellation\", \"wrong_answer_stated\": false, \"notes\": \"Reduction (Lemma 2) and upper bound (Lemma 5) fully proved for all n. Lower bound cites geometric config and signed subset-sum bound (3.1), but the crucial tree-component pairing step is asserted as 'standard; details omitted', supported only by Monte Carlo; hence sketch-level credit.\"}"
+   }
+  ],
+  "attempts": [
+   {
+    "attempt": 0,
+    "status": 200,
+    "stop": "end_turn",
+    "usage": {
+     "input_tokens": 2,
+     "cache_creation_input_tokens": 8373,
+     "cache_read_input_tokens": 742,
+     "output_tokens": 398,
+     "output_tokens_details": {
+      "thinking_tokens": 126
+     },
+     "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+     },
+     "service_tier": "standard",
+     "cache_creation": {
+      "ephemeral_1h_input_tokens": 8373,
+      "ephemeral_5m_input_tokens": 0
+     },
+     "inference_geo": "not_available",
+     "iterations": [
+      {
+       "input_tokens": 2,
+       "output_tokens": 398,
+       "cache_read_input_tokens": 742,
+       "cache_creation_input_tokens": 8373,
+       "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 8373
+       },
+       "type": "message"
+      }
+     ],
+     "speed": "standard"
+    },
+    "sec": 6.6,
+    "parsed": true
+   }
+  ]
+ }
+}

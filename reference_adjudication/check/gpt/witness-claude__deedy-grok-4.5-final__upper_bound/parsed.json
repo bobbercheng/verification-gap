@@ -1,0 +1,25 @@
+{
+ "checker": "gpt",
+ "objection_key": "witness-claude__deedy-grok-4.5-final__upper_bound",
+ "case": "deedy-grok-4.5-final",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.4,
+  "input_tokens": 21129,
+  "output_tokens": 241,
+  "reasoning_output_tokens": 77,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The passage specifies a desired paired refinement but never proves that it can be produced from every Liu partition using at most n cuts. The asserted reduction from 2n internal breaks to n residual cuts is unsupported, and the subsequent binary-greedy description gives neither a valid construction nor a cut-count proof. The preceding induction explicitly runs into a contradiction, while the final checks cover only n=1,2. Thus the universal upper-bound mechanism required by L3.2 is absent and needs a substantive lemma, such as the subset-sum gap and mirrored-cut construction."
+ },
+ "elsewhere_anchor": null
+}

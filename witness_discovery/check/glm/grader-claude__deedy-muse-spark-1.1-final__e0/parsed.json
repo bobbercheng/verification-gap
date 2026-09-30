@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 74.3,
+  "input_tokens": 198,
+  "output_tokens": 4608,
+  "cache_read_input_tokens": 8192
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "The quote appears verbatim and 'this construction' is Liu's n=2 cuts at 2/5, 4/5, giving pieces {0.4, 0.4, 0.2}. The witness satisfies all hypotheses: Xiang uses one cut (≤ n), inside the 0.2 piece at its midpoint, producing pieces {0.4, 0.4, 0.1, 0.1}. Backward induction on the claiming game: if Liu takes 0.4, Xiang takes 0.4 and Liu ends with 0.4+0.1=0.5; if Liu takes 0.1 first, best play still gives Liu 0.5. So Liu gets 0.5 < 3/5, refuting the quoted guarantee. The write-up only tested splits of the big pieces (including one fewer-cut case), never splitting the small piece to change parity, and offers no repair elsewhere; its conjectured answer (n+1)/(2n+1) is in fact wrong (true c_2 = 4/7). The objection is correct and the lower-bound claim is invalid as written."
+ }
+}

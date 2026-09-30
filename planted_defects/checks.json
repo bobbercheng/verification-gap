@@ -1,0 +1,151 @@
+{
+ "generated_utc": "2026-09-06 19:14:36 UTC",
+ "python": "3.13.9",
+ "checks": [
+  {
+   "check": "check_claude_F",
+   "module": "checks_p3.py",
+   "planting": "deedy-claude-fable-5-final-F",
+   "type": "F",
+   "ledger_statement": "L3.3",
+   "ok": true,
+   "detail": "n=2, u=1/7, Y cuts 4u->2.5u+1.5u and 2u->1.2u+0.8u: sorted parts [('5/14', 2), ('3/14', 2), ('6/35', 1), ('1/7', 0), ('4/35', 1)], edges [(2, 2), (1, 0)], |E|=2<|V|=3 yet loops [(2, 2)]; component of vertex n=2 has a loop -> planted claim false (D(A)=2/7 = 2u, so the lemma's conclusion still holds but its written argument breaks)"
+  },
+  {
+   "check": "check_claude_H",
+   "module": "checks_p3.py",
+   "planting": "deedy-claude-fable-5-final-H",
+   "type": "H",
+   "ledger_statement": "L3.2",
+   "ok": true,
+   "detail": "display false for n=1..10 (n=1: (1-u)/2=1/3 vs planted 1/4); continuation (1+u)/2 = 2^n/(2^{n+1}-1) = c holds for n=1..10"
+  },
+  {
+   "check": "check_deedy_F_transversal_lemma",
+   "module": "checks_p6.py",
+   "planting": "p6-deedy-gpt-5.6-sol-pro-final-F",
+   "type": "F",
+   "ledger_statement": "L6.2",
+   "ok": true,
+   "detail": "F_k = {x_1..x_k, y_k} is pairwise intersecting; X_k = {y_1..y_(k-1), x_k} are 10 distinct minimal finite transversals of F_1..F_14 (k = 1..10, unbounded in k) -> the planted general lemma is false; and among the initial segments {1..n}, n <= 8, no three sets form a sunflower -> the bogus unbounded sunflower fact is false"
+  },
+  {
+   "check": "check_deedy_H_cardinality_display",
+   "module": "checks_p6.py",
+   "planting": "p6-deedy-gpt-5.6-sol-pro-final-H",
+   "type": "H",
+   "ledger_statement": "L6.2",
+   "ok": true,
+   "detail": "planted display fails 67 times for a_1 <= 60, e.g. a_1, D, p, w(D-p) = (15, [2, 3], 2, 3) (2^|D| = 4); correct display 2^(|D|-1) <= w(D-p) holds always: True; continuation |D| <= a_1 holds always: True; C(15) = [[2, 3], [2, 5], [3, 5]], first terms [15, 18, 20, 24, 30, 36, 40, 42, 45]"
+  },
+  {
+   "check": "check_ours_F",
+   "module": "checks_p3.py",
+   "planting": "gpt56-ours-accepted-F",
+   "type": "F",
+   "ledger_statement": "L3.3",
+   "ok": true,
+   "detail": "q=3, a=(1/5,3/10,1/2), cuts 1/2->13/50+12/50, 3/10->8/50+7/50: sorted parts [('13/50', 2), ('6/25', 2), ('1/5', 0), ('4/25', 1), ('7/50', 1)], edges [(2, 2), (0, 1)], |E|=2<|V|=3 yet loops [(2, 2)]; the component of the vertex of a_q has a loop -> planted claim false"
+  },
+  {
+   "check": "check_ours_F_prime_set",
+   "module": "checks_p6.py",
+   "planting": "p6-gpt56-ours-F",
+   "type": "F",
+   "ledger_statement": "L6.2",
+   "ok": true,
+   "detail": "A=15: terms [15, 18, 20, 24, 30, 36, 40, 42, 45]; sigma(18) on primes dividing 15 = {3}, meets supp(20)={2, 5}? False -> lemma false; L=15: 18 term True, 33 term False -> (4) false; T=4: a_(n+T) = a_n + 15 fails within n<=6: True (a_2=18, a_(2+T)=36); correct L=30030 untouched"
+  },
+  {
+   "check": "check_ours_H",
+   "module": "checks_p3.py",
+   "planting": "gpt56-ours-accepted-H",
+   "type": "H",
+   "ledger_statement": "L3.3",
+   "ok": true,
+   "detail": "n=1: planted marks give ['2/3', '1/3'] (matches (9): False); correct marks give (9): True; Gamma of (9) = delta: True; n=2: planted marks give ['2/7', '2/7', '3/7'] (matches (9): False); correct marks give (9): True; Gamma of (9) = delta: True; n=3: planted marks give ['2/15', '2/15', '4/15', '7/15'] (matches (9): False); correct marks give (9): True; Gamma of (9) = delta: True"
+  },
+  {
+   "check": "check_ours_H_example_terms",
+   "module": "checks_p6.py",
+   "planting": "p6-gpt56-ours-H",
+   "type": "H",
+   "ledger_statement": "L6.2",
+   "ok": true,
+   "detail": "first terms [15, 18, 20, 24, 30]; 22 term? False (gcd(22,15)=1) -> display false; continuation: 21 term? False, gcd(21,20)=1, traces of 18, 21 on {3,5}: {3}, {3} -> correct"
+  },
+  {
+   "check": "check_p1_gpt56_F",
+   "module": "checks_p1p5.py",
+   "planting": "p1-gpt56-5aca5e52-v1-F",
+   "type": "F",
+   "ledger_statement": "L1.1",
+   "ok": true,
+   "detail": "lemma refuted by [1, 0] and by 2026, 2025, ..., 0; K non-increasing in the real process: True (hypothesis true, conclusion does not follow)"
+  },
+  {
+   "check": "check_p1_gpt56_H",
+   "module": "checks_p1p5.py",
+   "planting": "p1-gpt56-5aca5e52-v1-H",
+   "type": "H",
+   "ledger_statement": "L1.1",
+   "ok": true,
+   "detail": "lcm(m,n) != mn/g^2 for all 621 pairs with g > 1 in [2,40]^2 (e.g. (4,6): 12 vs 6); product of outputs = mn/g for all pairs, so P' = P/g is correct"
+  },
+  {
+   "check": "check_p1_kimi_F",
+   "module": "checks_p1p5.py",
+   "planting": "p1-deedy-kimi-k3-final-F",
+   "type": "F",
+   "ledger_statement": "L1.1",
+   "ok": true,
+   "detail": "lemma refuted by non-increasing sequences [2, 1] and [8, 4, 2, 1] (start > 1, reach 1); true survivor claim on all 3-boards with entries 2..6: True"
+  },
+  {
+   "check": "check_p1_kimi_H",
+   "module": "checks_p1p5.py",
+   "planting": "p1-deedy-kimi-k3-final-H",
+   "type": "H",
+   "ledger_statement": "L1.1",
+   "ok": true,
+   "detail": "900 coprime pairs: ell = mn != m+n in all of them (e.g. (2,3) -> (1, 6), m+n = 5); continuation (1, mn) with product unchanged confirmed"
+  },
+  {
+   "check": "check_p5_gpt56_F",
+   "module": "checks_p1p5.py",
+   "planting": "p5-gpt56-7324ef70-v1-F",
+   "type": "F",
+   "ledger_statement": "L5.4",
+   "ok": true,
+   "detail": "lhs - planted = -8*(b - c)*(c + t) (nonzero); lhs - original = 0; at t=y=c=1,b=0: lhs=8, planted=-8, original=8"
+  },
+  {
+   "check": "check_p5_gpt56_H",
+   "module": "checks_p1p5.py",
+   "planting": "p5-gpt56-7324ef70-v1-H",
+   "type": "H",
+   "ledger_statement": "L5.1",
+   "ok": true,
+   "detail": "planted chain fails at x=y=1, C=10 (61 >= 121 is false); correct middle term (x+(y+C))/2 = (f(x)+y)/2 identically and the correct RMS >= AM >= GM chain holds on a 64-point exact grid: True"
+  },
+  {
+   "check": "check_xhigh_F",
+   "module": "checks_p3.py",
+   "planting": "deedy-gpt-5.6-sol-xhigh-final-F",
+   "type": "F",
+   "ledger_statement": "L3.2",
+   "ok": true,
+   "detail": "n=1, Liu (7/10,3/10): nonempty-proper subset sums ['3/10', '7/10'] min gap 2/5 > d=1/3 -> planted (11) false; all subset sums (with the empty set) give min gap 3/10 <= d; bisecting 7/10 gives D=3/10 <= d"
+  },
+  {
+   "check": "check_xhigh_H",
+   "module": "checks_p3.py",
+   "planting": "deedy-gpt-5.6-sol-xhigh-final-H",
+   "type": "H",
+   "ledger_statement": "L3.3",
+   "ok": true,
+   "detail": "display false for k=1..11 (true sum is 2^k-1); min |nonempty signed sum| over powers 2^0..2^k = [1, 1, 1, 1, 1, 1] for k=0..5, so the continuation 'at least 1' is correct"
+  }
+ ],
+ "missing": []
+}

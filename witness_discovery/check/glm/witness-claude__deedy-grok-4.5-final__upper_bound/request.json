@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-grok-4.5-final",
+ "tag": "upper_bound",
+ "text_sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "not_written",
+  "quote": "XY aims to realise a refinement whose pieces can be perfectly matched into pairs of equal length except for a single leftover piece of length \\(1\\). Such a multiset has \\(D=1\\).",
+  "witness": "What must be proved for all cases: for EVERY multiset L of total S = 2^{n+1}-1 arising from Liu's at most n marks, an explicit choice of at most n additional cuts yielding D(M) <= 1 (e.g. a subset-sum/pigeonhole gap bound plus a pairing construction). The quoted passage only states a target shape (paired pieces plus one leftover of length 1) and the following text admits the counting fails ('is exactly the number of internal breaks, which is 2n; but starting from an already partially cut stick the residual number of cuts required is at most n'), with no proof that n cuts suffice from an arbitrary Liu partition; the section elsewhere records its own contradiction ('This appears contradictory unless...') and closes with checks for n = 1, 2 only.",
+  "load_bearing": "Tightness of c_n = 2^n/(2^{n+1}-1) rests entirely on Theorem C; without a construction valid for every Liu partition and every n the upper bound is unestablished."
+ },
+ "started_utc": "2026-09-06 05:34:06 UTC"
+}

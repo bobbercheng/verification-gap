@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-5",
+ "cli": "claude",
+ "cli_model_usage": {
+  "claude-haiku-4-5-20251001": {
+   "inputTokens": 1418,
+   "outputTokens": 21,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.001523,
+   "contextWindow": 200000,
+   "maxOutputTokens": 32000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-4-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 2,
+   "outputTokens": 716,
+   "cacheReadInputTokens": 2688,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.019254,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 454,
+   "canonicalModel": "claude-opus-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2688,
+  "output_tokens": 716,
+  "output_tokens_details": {
+   "thinking_tokens": 454
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "not_available",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 716,
+    "cache_read_input_tokens": 2688,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "num_turns": 1,
+ "duration_ms": 9248,
+ "is_error": false,
+ "elapsed_seconds": 10.0,
+ "content": [
+  {
+   "type": "text",
+   "text": "{\"answer\": 2, \"reduction\": 1, \"lower_bound\": 1, \"upper_bound\": 1, \"lower_bound_mechanism\": \"lexicographic (product, number of entries >1) descent\", \"upper_bound_mechanism\": \"gcd of p-adic valuations invariant under (a,b)->(min,|a-b|)\", \"wrong_answer_stated\": false, \"notes\": \"Tracking file, explicitly 'a complete proof is being assembled'. Correct final value M = prod p^{gcd v_p(A_i)} stated explicitly. All three mechanisms are correctly named but only asserted: the (min,|a-b|) move description is unproved, termination is 'should prove', 'move never kills both nonunits' asserted, and gcd-invariance has no case analysis.\"}"
+  }
+ ]
+}

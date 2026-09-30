@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-9b8187934c93",
+  "problem": "3",
+  "sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+  "path": "checkpoint_inputs/9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-1"
+  ],
+  "bytes": 15914,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 8364,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 7891,
+        "output_tokens_details": {
+          "thinking_tokens": 7701
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 8364,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 7891,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 8364,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 8364
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 90.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 2,
+    "complete": false,
+    "main_gap": "Upper bound essentially absent: the proposed 'bisect the n largest' strategy is false (equal thirds for n=2 gives Liu 2/3), and the key lemma is explicitly cited as known and left unproved.",
+    "notes": "Correct answer and correct Liu construction, but the lower-bound case analysis rests on unjustified 'Xiang's best is to bisect distinct large pieces' claims and a pairing argument promised but never given. Section 2 is visible flailing with self-admitted failures."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

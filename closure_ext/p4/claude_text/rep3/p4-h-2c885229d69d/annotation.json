@@ -1,0 +1,71 @@
+{
+  "id": "p4-h-2c885229d69d",
+  "problem": "4",
+  "sha256": "2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc",
+  "path": "checkpoint_inputs_ext/2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 5,
+  "record_ids": [
+    "p4-muse-spark-1.1-main-t005",
+    "p4-deedy-muse-spark-1.1-final"
+  ],
+  "bytes": 8787,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6932,
+        "output_tokens": 2703,
+        "output_tokens_details": {
+          "thinking_tokens": 2371
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2703,
+            "cache_read_input_tokens": 6932,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 36.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "multiples-of-theta lemma (kθ = θ+(k-1)θ descent) plus a cut r = ceil(p/θ)θ - p from the max angle making both children carry multiples; θ=90 handled separately",
+    "upper_bound_mechanism": "invariant I = no angle is a multiple kθ; case analysis shows one child stays in I, using 180 not a multiple of θ",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer and all three obligations essentially complete: n=2 base case verified with explicit feasible cut, feasibility 0<r<D checked via min/max angle bounds, both children shown to carry multiples, and the avoidance lemma's four cases are correct with 180 ∤ θ used exactly in case 4. Minor terseness on existence of an initial safe triangle; one garbled bullet in §1."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

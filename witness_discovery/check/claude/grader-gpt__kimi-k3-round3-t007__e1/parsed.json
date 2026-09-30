@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "kimi-k3-round3-t007",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.3,
+  "input_tokens": 2,
+  "output_tokens": 968,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 3235,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2833,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002928,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 968,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 3235,
+    "webSearchRequests": 0,
+    "costUSD": 0.057230500000000004,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 592,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and the text itself frames Part A as a sketch that \"needs writing + numeric checks\". Checking the content: (i) the matching formula D(M)=min_mu(...) rests on \"an exchange argument\" that is never given; (ii) the multigraph is described only as \"edge = matched pair of fragments, unmatched frag = mark\", with no precise vertex/edge set or proof that pieces partition into components with all their fragments; (iii) the slack identity \"total slack = c − m + #comp\" and the claim slack(K)≥1 for cyclic components are asserted with no derivation; (iv) the key per-component inequality w_I ≤ cost(component) is compressed to \"algebra ... then triangle ineq\". Only the block lemma is argued in full. Hence the all-n lower-bound mechanism (L) is named/sketched, not written out; nothing later in the text repairs it (Part B is explicitly open)."
+ }
+}

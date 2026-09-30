@@ -1,0 +1,42 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-F",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "F",
+ "problem": "6",
+ "objection_key": "grade-claude__e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 16.0,
+  "input_tokens": 18416,
+  "output_tokens": 534,
+  "reasoning_output_tokens": 334,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L6.1",
+  "objection_correct": "no",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "We have the following self-duality property:\n\\[\nS\\in\\mathcal F\n\\quad\\Longleftrightarrow\\quad\nS\\cap R\\ne\\varnothing\\text{ for every }R\\in\\mathcal F.\n\\tag{1}\n\\]",
+  "status_as_written": "established",
+  "repair_distance": "none",
+  "explanation": "The omitted direction of (2) is an immediate consequence of the already proved (1). If S contains C∈C⊆F, then C meets every R∈F by (1), so S also meets every R∈F; applying (1) again gives S∈F. A separate upward-closedness lemma or sentence is unnecessary, and L6.1 is explicitly established through self-duality."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 158,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   3956,
+   4114
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e1"
+}

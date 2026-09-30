@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p6-kimi-k3-round1-t021",
+ "tag": "upper_bound",
+ "text_sha256": "b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58",
+ "system_sha256": "31de4cf340b3317b69b72a289f2bf83e8cd8e25b4b29993a83818b46831ff9f5",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "not_written",
+  "quote": "So it suffices: $S_\\infty$ is a union of residue classes mod $L$ (then $a_{n+T}=a_n+L$ for ALL $n$ with $T=\\#(S_\\infty\\cap[1,L])$).",
+  "witness": "Missing: a proof that for a concrete $L$ (product of the relevant primes) membership in $S_\\infty$ is invariant under $m\\mapsto m+L$ for every $m\\ge a_1$, and that counting terms in a window of length $L$ yields $a_{n+T}=a_n+L$ from $n=1$. The quoted sentence only says such periodicity of $S_\\infty$ 'suffices'; it is stated as a goal conditional on the unproved finiteness lemma, with no derivation of the residue-class structure or of the counting argument.",
+  "load_bearing": "The final conclusion is obtained only by this assembly step, which the text states as a desideratum rather than proving."
+ },
+ "started_utc": "2026-09-06 05:42:33 UTC"
+}

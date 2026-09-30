@@ -1,0 +1,43 @@
+{
+  "task_id": "imo-2026-p2",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 2,
+    "completeness": 1,
+    "rigor": 2,
+    "self_contained": 3
+  },
+  "fatal_issues": [
+    "Section 3 claims circles (ANK1) and (CKK1) are tangent at K1 or satisfy a spiral similarity relation, based solely on ∠ANK1 = ∠CK1K = γ. This does not follow: these are angles at different points (N and K1) in different circles sharing K1. Tangency would require matching angles between chords and tangents at K1, or equivalently ∠K1AN = ∠K1KC (alternate segment). No such relation is established. The spiral similarity claim is similarly unsupported.",
+    "Section 3 claims quadrilateral L1CK1N is cyclic or a spiral similarity sends C→N, L1→L, based on ∠L1CK1 = ∠LNC = β. For cyclicity, we need ∠L1CK1 = ∠L1NK1 (subtending L1K1). But ∠LNC is the angle between LN and NC, while ∠L1NK1 is between NL1 and NK1. These are different rays at N with no established relation. The spiral similarity claim requires additional angle equalities (e.g., ∠L1KN = ∠L1CN) that are not proved.",
+    "The core gap: no connection is established between the angle equalities from Lemmas 1-3 and the perpendicular bisector condition. The reduction in Section 4-5 correctly translates OM=ON to O'B=O'C and relates O' to O1 (circumcenter of AK1L1), but the proof never shows that O1 lies on any specific line forced by the geometry. The open issues in Section 6 acknowledge this gap but provide no progress toward closing it."
+  ],
+  "required_fixes": [
+    "Prove the correct cyclic/tangency configurations from Lemmas 1-3. A viable path: show that the spiral similarity S at A sends K→K1 on CL, and use the angle conditions to prove that K, L, K1, L1 lie on a circle or form a spiral similarity configuration that forces O1 (circumcenter of AK1L1) to lie on the line through A perpendicular to the Simson line or some equivalent condition.",
+    "Establish the exact position of O1 relative to the spiral similarity. For instance, prove that O1 lies on the perpendicular bisector of the segment joining the centers of spiral similarities sending B→C and K→K1, or that O1 is the image of some known point under S.",
+    "Complete the translation from O1 to O' and show O'B = O'C. This requires explicit computation of the composition of S with the homothety H_{A,2} and verifying that the image of the perpendicular bisector condition matches the required conclusion.",
+    "Verify all interiority conditions (K inside △BMC and △ABL, L inside △BNC and △AKC) are used correctly to determine ray directions and avoid sign ambiguities in directed angles."
+  ],
+  "verified_claims": [
+    "Spiral similarity S centered at A with ratio AC/AB and rotation ∠A sends B→C and M→N (midpoint property).",
+    "Lemma 1: S(K) lies on ray CL (correct angle chase using ∠KBA = ∠ACL = α).",
+    "Lemma 2: ∠(CA, NS(K)) = γ = ∠(CS(K), CK) (correct angle chase using S(BM)→CN, S(MK)→NK1, and ∠BMK = ∠LCK = γ).",
+    "Lemma 3: ∠(CS(L), CS(K)) = β = ∠(LN, CA) (correct angle chase using S(BL)→CL1, S(BK)→CK1, and ∠LBK = ∠LNC = β).",
+    "OM = ON iff O lies on perpendicular bisector of MN iff H_{A,2}(O) lies on perpendicular bisector of BC (valid homothety reduction).",
+    "Numerical experiment confirms the theorem holds for a valid configuration."
+  ],
+  "unverified_claims": [
+    "Circles (ANK1) and (CKK1) are tangent at K1 or satisfy a spiral similarity relation.",
+    "Quadrilateral L1CK1N is cyclic, or a spiral similarity sends C↦N and L1↦L.",
+    "The circumcenter O1 of △AK1L1 lies on a line that maps to the perpendicular bisector of BC under the composed transformation.",
+    "Any complete angle chase closing the gap between Lemmas 1-3 and the perpendicular bisector condition."
+  ],
+  "summary": "The candidate proof correctly identifies the spiral similarity S at A sending B→C, M→N as the central mechanism and proves three valid lemmas placing S(K) on CL and establishing angle equalities γ and β. However, the core geometric analysis in Section 3 makes unjustified claims about cyclic quadrilaterals and tangencies that do not follow from the established angle equalities. The reduction to O'B=O'C via homothety is correct but disconnected from the spiral similarity results—the proof never establishes where O1 (circumcenter of AK1L1) lies, which is the essential missing step. The proof explicitly acknowledges these gaps in Section 6. The approach is promising but incomplete; significant additional synthetic work is needed to connect the spiral similarity to the perpendicular bisector.",
+  "transfer_assessment": [
+    "Spiral similarity at a vertex mapping midpoints (S: B↦C, M↦N) is a REUSABLE mechanism for problems with midpoint configurations and angle conditions across the median lines.",
+    "The technique of sending K to S(K) on the opposite side's ray (Lemma 1) via an angle equality is REUSABLE: when ∠(line from vertex to K) equals a given angle on the opposite side, S(K) lands on a specific line.",
+    "The homothety reduction OM=ON ⇔ O' on ⟂bis(BC) where O' = H_{A,2}(O) is REUSABLE for any problem asking to prove equidistance from midpoints via circumcenters.",
+    "The claimed cyclicities/tangencies in Section 3 are MISLEADING: equal angles at different points on different circles sharing one point do NOT imply tangency or spiral similarity without additional conditions (e.g., matching alternate segment angles). This is a common error to avoid.",
+    "The numerical verification approach is REUSABLE for checking candidate configurations, but does not substitute for synthetic proof."
+  ]
+}

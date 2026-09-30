@@ -1,0 +1,34 @@
+{
+ "task_id": "imo-2026-p3",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Answer formula c_n = 2^n/(2^{n+1}-1); sanity check n=1 gives c=2/3 (Liu marks at 2/3, all Xiang replies give Liu at least 2/3, and halving the larger part of any composition t+(1-t) caps Liu at max over t equal to 2/3)",
+  "Lemma 1 (greedy claiming game value equals odd(S)/even(S)): Liu's pairing (v2,v3),(v4,v5),... with rules 1-3, the invariant maintenance, and the sub-claim that Xiang can never end with both members of any pair (each route to a first-claimed member leads to contradiction) all check out; Xiang's mirrored pairing (v1,v2),(v3,v4),... is symmetric",
+  "Reduction of Xiang's marks to a refinement by at most n cuts: successive cut points lie in interiors of current pieces with disjoint interiors, hence all distinct and distinct from Liu's marks; final piece count M = m + k_X <= 2n+1",
+  "Lemma 3 (removing an equal pair preserves delta): equal values occupy a contiguous block in sorted order, contribution cancels, parity of later positions preserved",
+  "Lemma E base case r=1 (two pieces > 2^{n-1} both lie in the unique part 2^n, so v_2 <= 2^{n-1}) and inductive step (pieces exceeding 2^{n-r} lie among the r parts of size >= 2^{n-r+1} of total 2^{n+1} - 2^{n-r+1}; even-indexed sum <= half)",
+  "Theorem A conclusion: with r = floor(M/2) <= n, even(S) <= 2^n - 2^{n-r} <= 2^n - 1, so odd(S) >= 2^n units",
+  "Theorem B pigeonhole: 2^{n+1} subset sums, N = 2^{n+1}-1 gaps, all gaps > 1/N would force s_N - s_0 > 1; hence |sum_P - sum_Q| <= 1/N after cancelling I∩J",
+  "Cut-count accounting in the cancellation process: each cut step lowers |S|+|T| by 1, free step by 2, so c + 2f = |P|+|Q| - ℓ; if ℓ >= 1 then c <= |P|+|Q|-1, if ℓ = 0 the last step must be free giving c <= |P|+|Q|-2; total cuts |Z| + c <= n, and Case (ii) uses |Z| <= n cuts",
+  "Step 3 evaluation: leftover family has total D <= 1/N and delta(L) = ℓ1 - delta(rest) <= max L <= D, using delta >= 0; degenerate sub-cases (D = 0, empty P or Q, L empty) all handled",
+  "Tightness remark: binary uniqueness gives minimum subset-sum gap exactly 1 unit for the geometric composition, attained with I={n+1}, J={1,...,n}, yielding delta = 1/N after n cuts"
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is correct and complete. It cleanly reduces the game to max_A min_S delta(S) via a correct greedy-claiming lemma, proves Liu's geometric lower bound by an even-position majorization induction, and proves Xiang's upper bound by a pigeonhole on subset sums plus an equal-pairing/greedy-cancellation cutting procedure with careful cut counting. All degenerate cases (equal sums, empty P or Q, odd/even piece counts) are addressed, the value is attained rather than approached, and edge cases n=1 were independently checked.",
+ "transfer_assessment": [
+  "Reusable: value of alternating greedy claiming game on a sorted multiset equals the odd-indexed sum (pairing/strategy-stealing argument)",
+  "Reusable: refinement-of-composition model converts the two-player marking phase into a max-min over refinements by at most n cuts",
+  "Reusable: equal pairs do not affect the alternating sum delta (Lemma 3), letting players 'neutralize' mass they cut in half",
+  "Reusable: subset-sum pigeonhole (2^{k} sums in [0,1] force two within 1/(2^k - 1)) to find a near-balanced partition to cancel",
+  "Reusable: greedy max-vs-max cancellation with cutting and positive remainders, with piece-count accounting to bound the number of cuts",
+  "Reusable: geometric composition 2^n, 2^{n-1}, ..., 1 (total 2^{n+1}-1) is extremal for both bounds simultaneously"
+ ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "grok-4.5-main-t034",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 34,
+  "ts": "2026-07-21T04:24:11.436562+00:00",
+  "path": "checkpoint_inputs/a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b.md",
+  "bytes": 2547,
+  "sha256": "a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 749,
+        "output_tokens": 6073,
+        "cache_read_input_tokens": 448,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 80.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "induction on alternating-sum D over power-of-two division",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Correct c_n stated only as conjecture. Reduction (LB total=(sum+D)/2) and D-lemmas asserted, not proved here. Lower bound: power-of-two cut placement specified, but induction sketch is muddled/incomplete; only numerical checks for n<=3. Upper bound: just a vague 'matching/recursive dichotomy' strategy idea, no Xiang construction or argument."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b",
+  "original_bytes": 2547,
+  "input_anonymized": false
+}

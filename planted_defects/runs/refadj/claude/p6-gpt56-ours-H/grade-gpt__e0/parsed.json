@@ -1,0 +1,73 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-H",
+ "base_id": "p6-gpt56-ours",
+ "type": "H",
+ "problem": "6",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 20.6,
+  "input_tokens": 2,
+  "output_tokens": 1640,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 3865,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3404,
+    "outputTokens": 15,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003479,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1640,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3865,
+    "webSearchRequests": 0,
+    "costUSD": 0.080528,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1181,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "If \\(m=A\\), then it is already the first sequence term. Otherwise \\(m>A\\). Suppose for a contradiction that this \\(m\\) is not a sequence term. The proof of (1), applied causally to this skipped integer, gives a sequence term \\(b<m\\) with \\(\\gcd(b,m)=1\\).",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "Check: a_1=15, a_2=18 (16,17 coprime to 15), a_3=20 since gcd(20,15)=5, gcd(20,18)=2; 22 is coprime to 15 so cannot be a term. So the displayed '22' is wrong, and the very next clause ('21 is skipped because gcd(21,20)=1') already uses 20, confirming a misprint. The line sits in the motivational 'Hypotheses tested' section; the large-prime-erasure lemma of Section 2 is proved for all terms by induction via the construction m=Rp^k with P(m)=sigma(x) and m<x, independent of this example. One-symbol fix (22 -> 20).",
+  "affected_statement_note": null
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 254,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   2032,
+   2286
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

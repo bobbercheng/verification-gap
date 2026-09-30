@@ -1,0 +1,100 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 23.4,
+  "input_tokens": 2,
+  "output_tokens": 1582,
+  "cache_read_input_tokens": 761,
+  "cache_creation_input_tokens": 2961,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2666,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002751,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1582,
+    "cacheReadInputTokens": 761,
+    "cacheCreationInputTokens": 2961,
+    "webSearchRequests": 0,
+    "costUSD": 0.0695505,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 985,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 2,
+  "complete": false,
+  "main_gap": "The central Lemma (for every term x, its small-prime part σ(x) is good) is asserted with 'details omitted' — the entire crux of the problem is unproven.",
+  "errors": [
+   {
+    "description": "The key lemma, which is the heart of the problem (that prime factors exceeding a_1 can be discarded without losing the intersecting property), is stated and then not proved at all; only a vague hint ('the construction Rp^k') appears later in a non-proof section. Everything else in the argument is conditional on it.",
+    "quote": "**Proof.** Induction over the sequence terms in increasing order (standard; details omitted). \\(\\square\\)"
+   },
+   {
+    "description": "The write-up declares itself complete and offers computational verification of the missing lemma, which earns no credit; numerical checks cannot substitute for the omitted induction.",
+    "quote": "Status: **complete**."
+   },
+   {
+    "description": "Minor: the final step asserts the right endpoint a_n+L is a term and the interval (a_n, a_n+L] contains exactly T terms, but the count T was defined on [A, A+L-1]; the shift between half-open/closed intervals and the threshold A ≤ a_n is used without explicit justification.",
+    "quote": "Every interval of \\(L\\) consecutive integers contained in \\([A,\\infty)\\) contains each residue modulo \\(L\\) once and therefore contains exactly \\(T\\) sequence terms, by (4)."
+   }
+  ],
+  "notes": "The reduction (m ≥ a_1 is a term iff P(m) is good), the choice L = ∏_{p≤a_1} p, and the deduction of the conclusion from the lemma are correct and coherent, but they are routine once the lemma is granted; the essential difficulty is skipped."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 105,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    1316,
+    1419
+   ]
+  },
+  {
+   "anchored": true,
+   "length": 21,
+   "length_ok": false,
+   "reason": "short",
+   "span": [
+    22,
+    43
+   ]
+  },
+  {
+   "anchored": true,
+   "length": 173,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    2390,
+    2563
+   ]
+  }
+ ]
+}

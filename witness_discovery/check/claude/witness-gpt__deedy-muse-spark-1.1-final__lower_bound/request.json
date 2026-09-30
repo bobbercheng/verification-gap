@@ -1,0 +1,19 @@
+{
+ "checker": "claude",
+ "transport": "claude-cli",
+ "model": "claude-opus-5",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "lower_bound",
+ "text_sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "not_written",
+  "quote": "We need to show that with Liu's initial partition (n pieces size 2d, one size d), Xiang cannot force Liu below (n+1)d.",
+  "witness": "A valid lower bound must give the correct all-n construction and prove it against every allocation of Xiang's at most n cuts. The text proves an invariance only when every 2d piece is split once, then explicitly leaves unproved the cases where cuts are distributed differently; moreover, it targets the incorrect value (n+1)/(2n+1).",
+  "load_bearing": "The claimed guarantee depends entirely on excluding arbitrary Xiang replies that distribute multiple cuts in one Liu interval or leave other intervals uncut. That exclusion is never established."
+ },
+ "started_utc": "2026-09-06 04:47:09 UTC"
+}

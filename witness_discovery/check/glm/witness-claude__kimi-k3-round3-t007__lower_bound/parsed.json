@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "kimi-k3-round3-t007",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 41.3,
+  "input_tokens": 303,
+  "output_tokens": 2401,
+  "cache_read_input_tokens": 2496
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote appears verbatim and means what the objection says: the text itself labels Part A a 'SKETCH' that 'needs writing + numeric checks'. Checking the whole text confirms no all-n lower-bound proof exists. The matching identity 'sum p_{2k} = max_mu sum min(p,q)' is asserted 'by an exchange argument' that is never given; the tree-component inequality w_I <= cost is compressed to a parenthetical '(algebra: ... triangle ineq)' with x_e, y_e, U_i undefined; odd-cycle exclusion rests on a 'checked numerically by hand' triangle example, and grading forbids crediting numerics; the specialization a_i = 2^{i-1}/(2^{n+1}-1), delta = 1/(2^{n+1}-1) is never derived (it is immediate from the lemma, but the lemma is unproved). Grids cover only n=1,2,3; Part B concerns the upper bound. So the lower-bound obligation is not established as written."
+ }
+}

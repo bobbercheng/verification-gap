@@ -1,0 +1,71 @@
+{
+  "id": "p1-h-93dc480d77a2",
+  "problem": "1",
+  "sha256": "93dc480d77a2043cffb97690baca15d0ffbb94c75fb5c66fa51ea6df92605f0e",
+  "path": "checkpoint_inputs_ext/93dc480d77a2043cffb97690baca15d0ffbb94c75fb5c66fa51ea6df92605f0e.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-main",
+  "turn": 7,
+  "record_ids": [
+    "p1-kimi-k3-main-t007",
+    "p1-deedy-kimi-k3-final"
+  ],
+  "bytes": 8828,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6169,
+        "output_tokens": 362,
+        "output_tokens_details": {
+          "thinking_tokens": 103
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 362,
+            "cache_read_input_tokens": 6169,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 7.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "product/#ones lexicographic monovariant + 'no move yields two 1s' survivor induction",
+    "upper_bound_mechanism": "prime-wise invariance of gcd of p-adic valuations via gcd(x,y-x)=gcd(x,y)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: valuation move description (min, |a-b|) given; termination bounded by log2 P0 + N with type A/B split; at-least-one->1 proved by induction; gcd invariance proved for all t including all-zero tuple; explicit boxed formula M = prod p^{gcd v_p(a_i)}."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

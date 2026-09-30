@@ -1,0 +1,46 @@
+{
+ "gate": "grade_im",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-G",
+ "base_id": "gpt56-ours-accepted",
+ "type": "G",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 77.5,
+  "input_tokens": 17076,
+  "output_tokens": 2656,
+  "reasoning_output_tokens": 2498,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": false,
+  "main_gap": "The constructive half of the refinement lemma omits the justification that the overlay produces paired pieces using at most q−1 cuts.",
+  "errors": [
+   {
+    "description": "The crucial overlay construction and its cut count are merely asserted. One must count the foreign row boundaries and the possible A-tail boundary, then add one bisection per outside interval. This is a localized, straightforward gap, but it underpins Xiang’s upper bound.",
+    "quote": "and use at most \\(q-1\\) cuts in total (standard; details omitted)."
+   }
+  ],
+  "notes": "Apart from this omission, the drafting lemma, graph lower bound, subset-sum bound, and binary construction form a coherent and apparently correct proof."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 66,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    4343,
+    4409
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_im",
+ "run_tag": "",
+ "transport_choice": "cli"
+}

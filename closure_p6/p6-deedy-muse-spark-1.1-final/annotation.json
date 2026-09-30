@@ -1,0 +1,61 @@
+{
+  "id": "p6-deedy-muse-spark-1.1-final",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs/1ff4d9dbde777e1bc2c18067f4cff7e52b1f46ce1a6fd1a4cfefcca38e488ed7.md",
+  "bytes": 17527,
+  "sha256": "1ff4d9dbde777e1bc2c18067f4cff7e52b1f46ce1a6fd1a4cfefcca38e488ed7",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 5993,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 102.4,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5865,
+        "output_tokens": 352,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 6.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "up-set growth + transient-new-prime erasure (incomplete induction on tau)",
+    "upper_bound_mechanism": "L-periodic union U* enumerated globally from a_1, T = |U*∩[1,L]|",
+    "wrong_answer_stated": false,
+    "notes": "Characterization (C) and full global periodicity (P) are written out. Section 4 proves termination on a fixed ground, but Section 5's key finiteness across growing grounds is left unfinished: several abandoned attempts, then 'we accept finiteness ... as proved' and 'Carrying out induction gives...' without the induction being carried out. So (F) is only a sketch, scored 1."
+  },
+  "S": 1,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "1ff4d9dbde777e1bc2c18067f4cff7e52b1f46ce1a6fd1a4cfefcca38e488ed7",
+  "original_bytes": 17527,
+  "input_anonymized": false
+}

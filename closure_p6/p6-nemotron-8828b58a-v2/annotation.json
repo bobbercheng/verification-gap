@@ -1,0 +1,61 @@
+{
+  "id": "p6-nemotron-8828b58a-v2",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8828b58a",
+  "turn": 2,
+  "path": "checkpoint_inputs/0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780.md",
+  "bytes": 16700,
+  "sha256": "0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 6032,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 101.3,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 6032,
+        "output_tokens": 602,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 9.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "CRT erasure attempt (claims p_k > product of smaller primes, false)",
+    "upper_bound_mechanism": "merge of progressions + backward induction via uniqueness",
+    "wrong_answer_stated": true,
+    "notes": "Relies on the false lemma that P(a_{n+1}) is a minimal hitting set (extra primes like 30=2·3·5 do occur). Lemma 1's finiteness proof uses false claim p_k > L_k. Periodicity is only eventual; backward induction's gcd(x+L,y+L)=gcd(x,y) is false, so extension to all n fails."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780",
+  "original_bytes": 16700,
+  "input_anonymized": false
+}

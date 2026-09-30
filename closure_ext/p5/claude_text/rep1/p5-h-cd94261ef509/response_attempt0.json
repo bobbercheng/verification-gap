@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-5",
+ "cli": "claude",
+ "cli_model_usage": {
+  "claude-haiku-4-5-20251001": {
+   "inputTokens": 5066,
+   "outputTokens": 19,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.005161,
+   "contextWindow": 200000,
+   "maxOutputTokens": 32000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-4-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 2,
+   "outputTokens": 4154,
+   "cacheReadInputTokens": 6903,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.10731149999999999,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 3800,
+   "canonicalModel": "claude-opus-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 6903,
+  "output_tokens": 4154,
+  "output_tokens_details": {
+   "thinking_tokens": 3800
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "not_available",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 4154,
+    "cache_read_input_tokens": 6903,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "num_turns": 1,
+ "duration_ms": 52417,
+ "is_error": false,
+ "elapsed_seconds": 53.0,
+ "content": [
+  {
+   "type": "text",
+   "text": "{\"answer\": 2, \"reduction\": 1, \"lower_bound\": 2, \"upper_bound\": 2, \"lower_bound_mechanism\": \"QM-AM and AM-GM applied to x and y+c, both inequalities, all c>=0\", \"upper_bound_mechanism\": \"|A-B|<=A+B inequality (7): rational/irrational Kronecker density kills two distinct positive differences; level-set separation |x-y|>c plus Lemma 1 (small element of S_c) and interval covering kills the mixed fixed-point case\", \"wrong_answer_stated\": false, \"notes\": \"Identity f(f(y))=2f(y)-y and g(x+g(x))=g(x) derived cleanly, but d(x)>=0 is never proved (orbit-positivity argument absent); the dichotomy 'g==0 or V subset {0,c}' silently excludes negative values of g. Both necessity mechanisms (uniqueness of positive difference; exclusion of mixed fixed/non-fixed points) are written out in full and correct. Verification complete.\"}"
+  }
+ ]
+}

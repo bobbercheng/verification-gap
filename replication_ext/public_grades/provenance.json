@@ -1,0 +1,48 @@
+{
+ "source_repository": "https://github.com/deedy/imo-2026",
+ "source_commit": "dbe872307883296c5f06bf8bcb90e6bfd0879364",
+ "source_commit_date": "2026-07-22T21:54:48-07:00",
+ "source_dirty": false,
+ "captured_utc": "2026-09-06T04:37:12Z",
+ "captured_by": "scripts/replication_ext.py capture-grades",
+ "files": {
+  "problem-01.json": {
+   "source_path": "grades/problem-01.json",
+   "sha256": "35af0466c9a69297000ed799c7150dcc8603356ee545f28ce13dea80a0272fa2",
+   "bytes": 9695,
+   "content": "public verifier receipt: one entry per run with score (final grade), justification and key_issues"
+  },
+  "problem-03.json": {
+   "source_path": "grades/problem-03.json",
+   "sha256": "1a2ca6bab7e1d3c2c03f93ae0cfa3795d84ad429b1abd155d6725509bfabebc0",
+   "bytes": 16455,
+   "content": "public verifier receipt: one entry per run with score (final grade), justification and key_issues"
+  },
+  "problem-04.json": {
+   "source_path": "grades/problem-04.json",
+   "sha256": "7f4cdd6767c98c32624a24af5b644520dd391192dd88e0fe467101447a21e237",
+   "bytes": 11350,
+   "content": "public verifier receipt: one entry per run with score (final grade), justification and key_issues"
+  },
+  "problem-05.json": {
+   "source_path": "grades/problem-05.json",
+   "sha256": "ee93725a95c0808a801f6f46d53e36dbf0d26aa6c8e9c7206da06dae7fc080bb",
+   "bytes": 11161,
+   "content": "public verifier receipt: one entry per run with score (final grade), justification and key_issues"
+  },
+  "problem-06.json": {
+   "source_path": "grades/problem-06.json",
+   "sha256": "0a5123775f7417bcdaf4e8f820e37ac323a4a224bb2f4a4ba46d83a249ea1b55",
+   "bytes": 18703,
+   "content": "public verifier receipt: one entry per run with score (final grade), justification and key_issues"
+  },
+  "first_pass_grades.json": {
+   "source_path": "README.md",
+   "source_sha256": "5a82d5855fb501e11b5e371b013af331491179c253a422c14f5b03d91f431787",
+   "sha256": "fe529c8893dd542b0b43b12966df40b1907d0487bb41f243779a13d99a96c5d9",
+   "bytes": 749,
+   "content": "model -> problem -> grade, parsed from the README table 'First pass (before any repair round)'; run names mapped by README_NAMES in scripts/replication_ext.py"
+  }
+ },
+ "note": "Byte-for-byte copies of the public campaign's grade files (final grades = 'score'); first_pass_grades.json is the README's first-pass table (grades before any reviewer-feedback repair round). `replication_ext.py analyze` reads only these copies. P2 receipts are not needed by the replication and are omitted; closure_matrix/public_grades.json carries the P2/P3/P6 grades used by the paper's matrix."
+}

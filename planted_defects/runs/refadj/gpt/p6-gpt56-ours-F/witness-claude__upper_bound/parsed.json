@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-gpt56-ours-F",
+ "base_id": "p6-gpt56-ours",
+ "type": "F",
+ "problem": "6",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.0,
+  "input_tokens": 17680,
+  "output_tokens": 445,
+  "reasoning_output_tokens": 232,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L6.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The counterexample is valid: for A=15, both 18 and 33 have trace {3} on Q={3,5}, but 18 is a term while 33 is incompatible with the earlier term 20. Thus (3), and consequently (4), is false. The underlying erasure lemma fails because it incorrectly states that if all prime factors of x are at most A, then sigma(x)=P(x); for x=20, sigma(20)={5} whereas P(20)={2,5}. Repair requires redefining the finite prime set (for example, all primes at most A or A²) and proving the corresponding erasure lemma for all terms."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

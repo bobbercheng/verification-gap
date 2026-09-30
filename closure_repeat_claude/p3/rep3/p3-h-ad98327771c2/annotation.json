@@ -1,0 +1,72 @@
+{
+  "id": "p3-h-ad98327771c2",
+  "problem": "3",
+  "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+  "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+  "lineage": "ours-kimi-R2",
+  "model": "kimi-k3",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "kimi-r2-c2",
+    "kimi-r2-c3",
+    "kimi-r2-c4"
+  ],
+  "bytes": 4134,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3569,
+        "output_tokens": 583,
+        "output_tokens_details": {
+          "thinking_tokens": 281
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 583,
+            "cache_read_input_tokens": 3569,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "toggle/symmetric-difference relaxation g(n,k) for dyadic 1:2:...:2^n (crux inequality open; n=1 only)",
+    "upper_bound_mechanism": "reduced set-game with cancellation moves, DP-verified on grids; hand strategies for n=1,2",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula appears only as a numerically-derived conjecture. Draft reduction to odd order-statistics sum is verified by code but the greedy lemma is explicitly unwritten. Lower bound reduces to an admittedly open inequality (only the useless direction proved). Upper bound proved by hand for n=1,2 only; general strategy 'to be extracted'. No subset-sum pigeonhole."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "p5-nemotron-2587b733-v2",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "2587b733",
+  "turn": 2,
+  "path": "checkpoint_inputs_ext/b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf.md",
+  "recorded_mtime_utc": "2026-07-20T19:00:06Z",
+  "bytes": 6189,
+  "sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4044,
+        "cache_read_input_tokens": 1356,
+        "output_tokens": 5293,
+        "output_tokens_details": {
+          "thinking_tokens": 4920
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4044,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 5293,
+            "cache_read_input_tokens": 1356,
+            "cache_creation_input_tokens": 4044,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4044
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 64.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "Substitute f(x)=x+c; both inequalities reduce to (x-y-c)^2>=0 (QM-AM-GM in x, y+c)",
+    "upper_bound_mechanism": "Orbit comparison in inequality (4) with rational/Dirichlet approximation of c/e, plus connectedness argument separating fixed and non-fixed points",
+    "wrong_answer_stated": false,
+    "notes": "S derived correctly (x=f(y) forces equality; d>=0 via orbit escaping R_{>0}). Verification correct for both inequalities and all c>=0. Mixed-case exclusion (fixed vs non-fixed) is rigorous via (7) and connectedness. But step (5) is asserted, not derived: the highlighted 4c(c-e)n term is the same order as the unquantified O(n+m) remainder; the needed cancellation (valid only when cn-em is bounded) is never computed, so the 'all positive d equal' half is a sketch."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

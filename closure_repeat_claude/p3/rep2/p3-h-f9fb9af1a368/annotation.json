@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-f9fb9af1a368",
+  "problem": "3",
+  "sha256": "f9fb9af1a368266c234311e910e64dde7772f2248fb8950c96175d6074cb9d45",
+  "path": "checkpoint_inputs/f9fb9af1a368266c234311e910e64dde7772f2248fb8950c96175d6074cb9d45.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 14,
+  "record_ids": [
+    "grok-4.5-main-t014"
+  ],
+  "bytes": 1710,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2179,
+        "output_tokens": 823,
+        "output_tokens_details": {
+          "thinking_tokens": 570
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 823,
+            "cache_read_input_tokens": 2179,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 11.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "hand-checked n=1 cut at 1/3; n=2 cuts 1/7,3/7 found empirically",
+    "upper_bound_mechanism": "vague mention of pairing/matching Xiang response; n=1 by hand",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form 2^n/(2^{n+1}-1) appears only as a conjecture matched to n=1,2,3 data, alongside discarded wrong guesses. No reduction of the claiming phase, no general Liu strategy proof, no general Xiang counter-construction. Proof section explicitly empty/in progress."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

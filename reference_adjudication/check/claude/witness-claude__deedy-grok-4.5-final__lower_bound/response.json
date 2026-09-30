@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7826,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.007921,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 761,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 9640,
+    "webSearchRequests": 0,
+    "costUSD": 0.11625649999999998,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 418,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 9640,
+   "cache_read_input_tokens": 1643,
+   "output_tokens": 761,
+   "output_tokens_details": {
+    "thinking_tokens": 418
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 9640,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 761,
+     "cache_read_input_tokens": 1643,
+     "cache_creation_input_tokens": 9640,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 9640
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 10806,
+  "is_error": false,
+  "elapsed_seconds": 11.5,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"affected_statement\":\"L3.3\",\"objection_correct\":\"yes\",\"established_elsewhere\":\"no\",\"elsewhere_quote\":null,\"status_as_written\":\"not_established\",\"repair_distance\":\"none\",\"explanation\":\"S_n - mu <= S_{n-1} requires mu >= 2^n, but the subcase only assumes mu > tau = 2^{n-1}. The n=2 instance (cut the bin 4 at 3.5, so P={1,2}, mu=3.5) gives S_2-mu=3.5>3=S_1, so the padding length S_{n-1}-(S_n-mu)=mu-2^n is negative and is also not the d=mu-tau used later. The rest of Case k>=1 never repairs this: it degenerates into '(something that forces)', an appeal to 'the cleanest route', unproven claims about a 'virtual complementary piece', and explicit reliance on numerical checks for n<=3. No other passage proves the all-n lower bound, so L3.3 is not established and no local edit supplies it.\"}"
+   }
+  ]
+ }
+}

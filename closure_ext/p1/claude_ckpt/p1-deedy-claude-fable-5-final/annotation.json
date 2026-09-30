@@ -1,0 +1,66 @@
+{
+  "id": "p1-deedy-claude-fable-5-final",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/f78ecdb93b18abef5b7d850d309efc95f948f323b7ad82134dbbce3f15137353.md",
+  "bytes": 7832,
+  "sha256": "f78ecdb93b18abef5b7d850d309efc95f948f323b7ad82134dbbce3f15137353",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6085,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 595,
+        "output_tokens_details": {
+          "thinking_tokens": 305
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6085,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 595,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 6085,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 6085
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "monovariant Phi = sum Omega(x_i) + #{x_i>1} strictly decreases; move possible iff N>=2; N>=1 preserved via Lemma 2",
+    "upper_bound_mechanism": "per-prime invariance of g_p = gcd of valuations via gcd(a, b-a) = gcd(a,b), zero/equal cases noted",
+    "wrong_answer_stated": false,
+    "notes": "All four components fully written: exponent dynamics (Lemma 1), no-two-ones (Lemma 2), termination plus exactly-one-survivor with the N>=1 induction, and prime-wise gcd invariance including a=b and zero-valuation conventions. Explicit product formula for M stated."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

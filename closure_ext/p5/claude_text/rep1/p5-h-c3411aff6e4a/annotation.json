@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-c3411aff6e4a",
+  "problem": "5",
+  "sha256": "c3411aff6e4a1f388b139a71a10d0ecc29dc2bf797b10dececb7017b3eb989de",
+  "path": "checkpoint_inputs_ext/c3411aff6e4a1f388b139a71a10d0ecc29dc2bf797b10dececb7017b3eb989de.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p5-claude-fable-5-main-t005"
+  ],
+  "bytes": 9276,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7650,
+        "output_tokens": 1473,
+        "output_tokens_details": {
+          "thinking_tokens": 1134
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1473,
+            "cache_read_input_tokens": 7650,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to u=x, v=y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "Orbit AP + nearest-orbit-point asymptotic sandwich (all positive gaps equal, gap>0 on half-line excludes fixed points) + downward bootstrap via x=y+d",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: identity f(f(y))=2f(y)-y and f(y)>=y derived; sufficiency verified via QM-AM-GM for both inequalities; necessity uses explicit two-sided estimate (7) valid for x>=a+d, shows all positive gaps equal and that gaps stay positive on the half-line (excluding mixed fixed-point case), then bootstraps downward to all x>0. Minor garbled algebra in one bound, harmless."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

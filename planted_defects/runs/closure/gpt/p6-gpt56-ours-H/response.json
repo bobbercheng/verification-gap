@@ -1,0 +1,45 @@
+{
+ "status": 200,
+ "response": {
+  "model": "gpt-5.6-sol",
+  "cli": "codex",
+  "reasoning_effort": "high",
+  "usage": {
+   "input_tokens": 16853,
+   "cached_input_tokens": 12672,
+   "cache_write_input_tokens": 0,
+   "output_tokens": 570,
+   "reasoning_output_tokens": 440
+  },
+  "events": [
+   "item.completed",
+   "thread.started",
+   "turn.completed",
+   "turn.started"
+  ],
+  "stop_reason": "end_turn",
+  "elapsed_seconds": 15.8,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"answer\":2,\"reduction\":2,\"lower_bound\":2,\"upper_bound\":2,\"lower_bound_mechanism\":\"large-prime erasure via smaller term with identical small-prime support\",\"upper_bound_mechanism\":\"global residue periodicity modulo product of primes at most a_1\",\"wrong_answer_stated\":false,\"notes\":\"Complete and correct. The induction proves erasure for every term, including the threshold repair; membership then depends only on finitely many small primes. Translation invariance holds from a_1, and counting terms in one full residue window yields the identity for every n.\"}"
+   }
+  ],
+  "attempts": [
+   {
+    "attempt": 0,
+    "status": 200,
+    "stop": "end_turn",
+    "usage": {
+     "input_tokens": 16853,
+     "cached_input_tokens": 12672,
+     "cache_write_input_tokens": 0,
+     "output_tokens": 570,
+     "reasoning_output_tokens": 440
+    },
+    "sec": 15.8,
+    "parsed": true
+   }
+  ]
+ }
+}

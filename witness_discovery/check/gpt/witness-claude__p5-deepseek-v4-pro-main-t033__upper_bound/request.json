@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "tag": "upper_bound",
+ "text_sha256": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "written_but_invalid",
+  "quote": "* (ii) there is $c>0$ such that $V \\subseteq \\{0, c\\}$ with both values attainable.",
+  "witness": "NON-SEQUITUR. What §3 establishes is only: the value set V contains at most one POSITIVE number (the argument in §3 begins 'Suppose V contains two distinct positive numbers c1 > c2 > 0' and never treats values c <= 0 other than 0). The text nowhere proves g(x) = f(x) - x >= 0; the only bound recorded is 'g(x) > -x'. Hence a priori V could be, e.g., {c, -δ} with c > 0 and some negative value -δ attained at some point, or contain several distinct negative values, none of which is ruled out by the §3 dichotomy argument. So the conclusion 'V ⊆ {0,c}' (and the alternative 'g ≡ 0') does not follow from what was proved. A proof of g >= 0 (e.g. iterating f(x) = x + g(x) > 0 along the orbit x, x+g(x), x+2g(x), ... which must stay positive) is missing from the text.",
+  "load_bearing": "Everything after §3 (Lemma 1, the level sets S_0, S_c, and the covering argument) is carried out under the standing hypothesis V ⊆ {0,c}; in particular Lemma 1 uses 'b = g(z) ∈ {0,c} (because V⊆{0,c})'. Without excluding negative values the classification of g as a single constant for all x is not established."
+ },
+ "started_utc": "2026-09-06 04:46:43 UTC"
+}

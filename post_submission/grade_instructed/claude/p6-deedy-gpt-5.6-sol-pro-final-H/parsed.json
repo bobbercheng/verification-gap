@@ -1,0 +1,62 @@
+{
+ "gate": "grade_im",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-H",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "H",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 34.5,
+  "input_tokens": 2,
+  "output_tokens": 2701,
+  "cache_read_input_tokens": 3426,
+  "cache_creation_input_tokens": 6655,
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2701,
+    "cacheReadInputTokens": 3426,
+    "cacheCreationInputTokens": 6655,
+    "webSearchRequests": 0,
+    "costUSD": 0.135798,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2396,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "Bounding the cardinality of a terminal member: D\\{p} has |D|-1 primes, so the correct inequality is 2^{|D|-1} <= w(D\\{p}) < a_1, not 2^{|D|}. The stated conclusion |D| <= a_1 still follows, so this is a harmless typo.",
+    "quote": "2^{|D|}\\le w(D\\setminus\\{p\\})<a_1"
+   }
+  ],
+  "notes": "Correct and complete: greedy-scan reformulation, support-only acceptance, self-dual family F, intersecting antichain C of minimal supports, sunflower-based finiteness for bounded size, weight-descent to bounded-size members containing any given prime, hence C finite and acceptance periodic mod L. Final T/L argument is sound."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 33,
+   "length_ok": false,
+   "reason": "short",
+   "span": [
+    8190,
+    8223
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_im",
+ "run_tag": "",
+ "transport_choice": "cli"
+}

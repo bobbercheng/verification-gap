@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-27f4dde8c553",
+  "problem": "5",
+  "sha256": "27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0",
+  "path": "checkpoint_inputs_ext/27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "2587b733",
+  "turn": 1,
+  "record_ids": [
+    "p5-nemotron-2587b733-v1"
+  ],
+  "bytes": 2982,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3751,
+        "output_tokens": 5128,
+        "output_tokens_details": {
+          "thinking_tokens": 4807
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 5128,
+            "cache_read_input_tokens": 3751,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 62.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "QM-AM-GM on x and y+c, but middle term written as (x+y+2c)/2 (should be (x+y+c)/2), so the displayed chain is false",
+    "upper_bound_mechanism": "growth along orbits in expanded right inequality (4) to equate positive deviations + connectedness argument excluding mixed fixed/non-fixed points",
+    "wrong_answer_stated": false,
+    "notes": "(S) fully derived, plus d>=0 via orbit positivity. Step 3 only sketches: quadratic part (cn-em)^2 is not controlled (no choice of m ~ nc/e), and the sign case c>e is waved; linear coefficient stated loosely. Step 4 (mixed case) is essentially correct via connectedness. Verification has an arithmetic slip making the displayed chain false."
+  },
+  "S": 0,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

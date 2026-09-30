@@ -1,0 +1,42 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-claude-fable-5-final-H",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 147.2,
+  "input_tokens": 20215,
+  "output_tokens": 2719,
+  "reasoning_output_tokens": 2588,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "The final simplification of (1-u)/2 is arithmetically wrong; its denominator should be 2^{n+1}-1. This is a harmless typo because the adjacent symbolic inequalities already establish the required upper bound.",
+    "quote": "\\frac{1-u}{2}=\\frac{2^{n}-1}{2^{n+1}}"
+   }
+  ],
+  "notes": "The lower-bound tree argument and upper-bound subset-sum/cross-pairing construction are otherwise rigorous and complete. The claimed value follows correctly."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 37,
+   "length_ok": false,
+   "reason": "short",
+   "span": [
+    14689,
+    14725
+   ]
+  }
+ ]
+}

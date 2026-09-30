@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-5e2ebb3f401c",
+  "problem": "3",
+  "sha256": "5e2ebb3f401cb782aad47beaebbad01ead43c20efd764961f63d9d03a9382699",
+  "path": "checkpoint_inputs/5e2ebb3f401cb782aad47beaebbad01ead43c20efd764961f63d9d03a9382699.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 2,
+  "record_ids": [
+    "gpt-5.6-sol-xhigh-main-t002"
+  ],
+  "bytes": 2102,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2280,
+        "output_tokens": 954,
+        "output_tokens_details": {
+          "thinking_tokens": 728
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 954,
+            "cache_read_input_tokens": 2280,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "bisect/pair intervals giving non-sharp D <= 1/(2n+1)",
+    "wrong_answer_stated": false,
+    "notes": "Reduction to alternating sum of sorted lengths is stated correctly but only asserted, not proved. No answer given; formula declared open. Candidate Liu partition (n copies of 1/(2n+1)) tested and refuted, so no lower bound. Upper bound argument is general but non-sharp, missing subset-sum pigeonhole."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

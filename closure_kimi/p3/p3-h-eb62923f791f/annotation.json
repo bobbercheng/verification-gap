@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-eb62923f791f",
+  "problem": "3",
+  "sha256": "eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6",
+  "path": "checkpoint_inputs/eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round1",
+  "turn": 8,
+  "record_ids": [
+    "kimi-k3-round1-t008"
+  ],
+  "bytes": 2684,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 39.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n division specified; guarantee vs all replies unproven",
+    "upper_bound_mechanism": "halve/cancel reduction to signed-subset-sum leftovers; no pigeonhole, numeric only",
+    "wrong_answer_stated": false,
+    "notes": "Correct conjecture c_n=2^n/(2^{n+1}-1), grid-verified for n<=3 only. Alternating-sum reduction stated with greedy optimality merely asserted. Both bounds explicitly listed as 'remaining': no all-replies lower-bound argument, no subset-sum pigeonhole for the upper bound."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

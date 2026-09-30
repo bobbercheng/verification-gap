@@ -1,0 +1,39 @@
+{
+  "id": "p3-h-c833554e3cbb",
+  "problem": "3",
+  "sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+  "path": "checkpoint_inputs/c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-gpt-5.6-sol-xhigh-final",
+    "gpt-5.6-sol-xhigh-main-t008"
+  ],
+  "bytes": 11015,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 50.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "powers-of-two division + tree-component bipartition signed-sum of powers of two",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap + common-refinement equal-pairing construction",
+    "wrong_answer_stated": false,
+    "notes": "Complete correct solution. Claiming stage reduced to alternating discrepancy with full induction; lower bound via 1:2:...:2^n and a pairing multigraph whose tree component forces a nonzero signed power-of-two sum; upper bound via 2^{n+1} subset sums, cancellation, and an overlay refinement within the n-cut budget. All proven for all n."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

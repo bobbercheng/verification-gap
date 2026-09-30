@@ -1,0 +1,46 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-gpt56-ours-H",
+ "base_id": "p6-gpt56-ours",
+ "type": "H",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 55.1,
+  "input_tokens": 15732,
+  "output_tokens": 1997,
+  "reasoning_output_tokens": 1860,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "The ancillary example is incorrect: after 15,18 the next term is 20, while 22 is coprime to 15 and cannot occur. Replacing 22 by 20 repairs the example without affecting the proof.",
+    "quote": "For \\(A=15\\), the first terms are \\(15,18,22\\)"
+   }
+  ],
+  "notes": "The main proof is logically complete: it correctly reduces membership to small-prime support and derives global periodicity. The sole issue is an easily repaired factual typo in a nonessential example."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 46,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    4350,
+    4396
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_retest",
+ "run_tag": "_retest",
+ "transport_choice": "cli"
+}

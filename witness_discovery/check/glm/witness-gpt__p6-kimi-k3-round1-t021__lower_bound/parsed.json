@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p6-kimi-k3-round1-t021",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 38.1,
+  "input_tokens": 1119,
+  "output_tokens": 247,
+  "cache_read_input_tokens": 1024
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and its meaning is clear: the write-up itself flags 'prove shrinkage stops', equivalent to S_infty being finitely generated, as an open crux. The rubric's lower_bound obligation (F) requires an all-terms finiteness/large-prime-erasure lemma giving a fixed finite relevant prime set from which L is built. Nothing in the text proves this: the lemmas A–D are labeled proved but concern permanents and transversal structure without yielding finiteness, and the empirical verification on 100+ values of a_1 is explicitly numerical, not a proof. Without finiteness there is no unconditional finite L, so the periodicity reduction cannot be completed. The witness correctly identifies this as missing; it is the load-bearing gap, so fatal."
+ }
+}

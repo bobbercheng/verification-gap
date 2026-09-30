@@ -1,0 +1,54 @@
+{
+ "rater": "glm",
+ "case": "deedy-gpt-5.6-sol-xhigh-final",
+ "problem": "3",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 127.5,
+  "input_tokens": 3134,
+  "output_tokens": 11553,
+  "cache_read_input_tokens": 1024
+ },
+ "parsed": {
+  "statements": {
+   "L3.1": {
+    "established": "yes",
+    "quote": "Every term on the right is nonnegative, so no choice is better than $x_1$. This proves the claim. The two players' totals sum to $1$. Therefore Liu Bang's value in the claiming stage is $\\frac{1+D}{2}$.",
+    "note": "Full induction via V(X)=max(x-V(X\\{x})); case analysis (2) verified; gives Liu = sum of odd-ranked pieces."
+   },
+   "L3.2": {
+    "established": "yes",
+    "quote": "Apply the common-refinement construction of Section 3 to these two collections, putting the one with larger total length first. By (12), it creates equal pairs and leaves unpaired material of total length at most $d$, using at most $|A|+|B|-1$ cuts. Bisect every interval outside $A\\cup B$.",
+    "note": "Pigeonhole on 2^{n+1} subset sums gives gap <= d; Sections 2-3 prove pairing cost bound and cut count <= n for all Liu divisions."
+   },
+   "L3.3": {
+    "established": "yes",
+    "quote": "The integer in parentheses is nonzero: in a nonempty signed sum of distinct powers of two, the largest power is greater than the sum of all smaller powers. Its absolute value is therefore at least $1$. It follows from (9) that $d\\le \\left|\\sum_{i\\in P}r_i-\\sum_{i\\in Q}r_i\\right| \\le\\sum_{i=0}^n r_i=D$. Thus Liu Bang's construction guarantees $D\\ge d$.",
+    "note": "Tree-component bipartition argument on 1:2:...:2^n division, valid against every Xiang reply with <= n marks; graph accounting (7)-(8) checks out."
+   }
+  },
+  "S_ref": 2,
+  "notes": "Complete rigorous proof for all n. Reduction proven by induction with verified case analysis; lower bound via tree component of the pair multigraph; upper bound via subset-sum pigeonhole plus common-refinement equal-pairing within n cuts, both cases (A or B empty) handled. Answer 2^n/(2^{n+1}-1) derived."
+ },
+ "anchors": {
+  "L3.1": {
+   "anchored": false,
+   "length": 202,
+   "length_ok": true,
+   "reason": "not found"
+  },
+  "L3.2": {
+   "anchored": true,
+   "length": 290,
+   "length_ok": true,
+   "reason": null
+  },
+  "L3.3": {
+   "anchored": false,
+   "length": 353,
+   "length_ok": true,
+   "reason": "not found"
+  }
+ }
+}

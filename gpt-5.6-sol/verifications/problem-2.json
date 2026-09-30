@@ -1,0 +1,16 @@
+{
+  "task_id": "imo-2026-p2",
+  "verdict": "confirm",
+  "weakest_inference": "The weakest inference is the passage from the second and third ordinary-angle equalities to tangent double intersections when E=N or F=M: an unnoticed directed-angle sign or supplementary branch would invalidate the later power products. Reconstructing the ray orders gives exactly angle(LN,NC)=angle(LB,BN) and angle(CK,CM)=angle(MK,MB) modulo 180 degrees, which are the required converse tangent-chord statements. Coordinate circle equations independently give double roots at N and M in these cases, so the inference survives.",
+  "counterexample_search": [
+    "Reversed every order/sign implication using strict barycentric inequalities and determinants. The four interiority hypotheses force AB,AK,AL,AC; BA,BK,BL,BC; CA,CL,CK,CB and the midpoint ray orders in the stated directions, leaving no supplementary-angle branch.",
+    "Derived coordinate equations with A=0, E=eC and F=fB, where 0<e,f<1. The first angle condition is reversibly equivalent to pf=qe; the auxiliary-circle differences factor into the lines CF and BE, so the radical-axis membership conclusions cannot select an extraneous branch.",
+    "Checked all signed power identities in both directions: their values are q(1-e)/2, -pf(1-f)/2, p(1-f)/2 and -qe(1-e)/2, with strictly determined signs. All divisions are by positive side lengths and the conclusions F'=F/2 and E'=E/2 are literal interior points.",
+    "A nonlinear numerical search found 30 generic valid configurations over varied scalene triangles; the largest absolute discrepancy |OM-ON| was 2.9e-15.",
+    "Targeted searches found 8 valid E=N configurations, 8 valid F=M configurations, and 121 configurations with E=N and F=M simultaneously. The largest observed |OM-ON| in the simultaneous-tangency search was 9.6e-14, with the excess attributable to floating-point conditioning.",
+    "Tested existence and zero cases: BLN, CKM, BCEF, AKL and the diameter circle are nondegenerate; second intersections exist with multiplicity; Z cannot equal A; P=Z and Q=Z are already diameter endpoints; the auxiliary circles are distinct from the diameter circle; and no conclusion is used to establish an earlier premise. No concrete counterexample was found."
+  ],
+  "dependency_gaps": [],
+  "required_fixes": [],
+  "summary": "The reconstructed dependency graph is: strict interiority fixes ray orders and nondegeneracy; the first angle equality creates the cyclic quadrilateral BCEF; the other two equalities place E and F on BLN and CKM, including tangent multiplicities; powers at A create half-scale intersections; chord midpoints lie on the circle with diameter AZ; exact equal-power identities make CF and BE the radical axes and force L and K onto that circle; then its centre is the midpoint of AZ and the target reduces to ZB=ZC. Directed-angle reversals, inequalities, existence/nonzero claims, degeneracies, circularity, exact coordinate equations and numerical counterexample searches all survived the attack."
+}

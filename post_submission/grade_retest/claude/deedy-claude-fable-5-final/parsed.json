@@ -1,0 +1,46 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 52.5,
+  "input_tokens": 2,
+  "output_tokens": 4410,
+  "cache_read_input_tokens": 3382,
+  "cache_creation_input_tokens": 10737,
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 4410,
+    "cacheReadInputTokens": 3382,
+    "cacheCreationInputTokens": 10737,
+    "webSearchRequests": 0,
+    "costUSD": 0.219321,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 4202,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [],
+  "notes": "Answer c = 2^n/(2^{n+1}-1) with complete proof. Lemma 2 (greedy picking value) verified via (2.1)/(2.2); Lemma 4's tree-component 2-colouring argument correctly gives D ≥ u using the signed-sum property; Lemma 5's pigeonhole on subset sums plus cross-pairing cuts uses ≤ n marks, all interior and distinct, forcing D ≤ u. Extraneous numerical remarks do not affect rigor."
+ },
+ "anchors": [],
+ "parse_path": "strict",
+ "run_dir": "grade_retest",
+ "run_tag": "_retest",
+ "transport_choice": "cli"
+}

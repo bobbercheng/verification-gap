@@ -1,0 +1,66 @@
+{
+  "id": "p4-deedy-muse-spark-1.1-final",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc.md",
+  "bytes": 8787,
+  "sha256": "2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6932,
+        "output_tokens": 2327,
+        "output_tokens_details": {
+          "thinking_tokens": 1991
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2327,
+            "cache_read_input_tokens": 6932,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 31.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "sum-closure induction: kθ is universally winning; from a multiple-free triangle cut x = ⌈p/θ⌉θ − p off the max angle so both children carry multiples of θ; separate one-cut argument for θ=90°",
+    "upper_bound_mechanism": "invariant I = no angle is a multiple of θ; four-case check that some child stays in I, case 4 using 180 ∉ θZ",
+    "wrong_answer_stated": false,
+    "notes": "Answer θ=180/n stated. Sum-closure lemma proved with both children carrying multiples. n=2 handled explicitly with feasibility 0<r<D verified; n≥3 cut verified feasible and both children multiple-carrying. Avoidance lemma complete with nonempty-invariant argument. Minor terseness (choice of donor vs minimal angle) does not damage correctness."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

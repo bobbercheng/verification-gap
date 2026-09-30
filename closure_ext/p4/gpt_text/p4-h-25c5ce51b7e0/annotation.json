@@ -1,0 +1,44 @@
+{
+  "id": "p4-h-25c5ce51b7e0",
+  "problem": "4",
+  "sha256": "25c5ce51b7e0a913a5bb986febfeb1255711ab9824ffff55f6085b23fd398f89",
+  "path": "checkpoint_inputs_ext/25c5ce51b7e0a913a5bb986febfeb1255711ab9824ffff55f6085b23fd398f89.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-main",
+  "turn": 20,
+  "record_ids": [
+    "p4-kimi-k3-main-t020"
+  ],
+  "bytes": 12381,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 19201,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 339,
+        "reasoning_output_tokens": 228
+      },
+      "sec": 11.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "round-up cut plus halving lemma",
+    "upper_bound_mechanism": "safe-angle invariant",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. The halving lemma handles every discard choice; the round-up construction makes both resulting triangles winning, including n=2; and the exhaustive three-case invariant argument gives Shan-Yu a safe surviving half after every cut for all other theta."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

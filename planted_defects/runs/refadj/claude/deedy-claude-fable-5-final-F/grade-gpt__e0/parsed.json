@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final-F",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "F",
+ "problem": "3",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 24.6,
+  "input_tokens": 2,
+  "output_tokens": 1775,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 9261,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7446,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.007531,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1775,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 9261,
+    "webSearchRequests": 0,
+    "costUSD": 0.1378165,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1361,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The inference \"|E|<|V| implies no cycle and no loop anywhere\" is false: isolated vertices elsewhere can absorb the edge budget. Concrete instance (n=2, pieces 4u,2u,u): Y halves the u-piece and halves the 4u-piece, giving parts 2u,2u,2u,u/2,u/2; a tie-break can pair the two 2u parts of the top piece with each other, creating a loop at vertex n=2, while the edge {2u of piece 1, u/2 of piece 0} leaves |E|=2<|V|=3. So the component of vertex n need not be loop/cycle-free, and the proper 2-colouring step fails for it. The load-bearing claim appears only here. Repair: |E|<|V| forces some component with fewer edges than vertices, hence a tree component; apply (3.1) to that component instead (one sentence).",
+  "objection_severity_note": "decided from write-up and ledger only"
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

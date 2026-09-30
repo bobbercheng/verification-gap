@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-gpt__p5-deepseek-v4-pro-main-t038__upper_bound",
+ "case": "p5-deepseek-v4-pro-main-t038",
+ "procedure": "witness",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.4,
+  "input_tokens": 2,
+  "output_tokens": 975,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 6330,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5620,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005715,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 975,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 6330,
+    "webSearchRequests": 0,
+    "costUSD": 0.08882599999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 616,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The write-up derives only the weak bound \"g(x) > -x\" in §1 and never rules out g(t) < 0. §3's exclusion argument treats only two distinct positive values c1 > c2 > 0, yet the stated dichotomy jumps to V ⊆ {0} or V ⊆ {0,c}, silently discarding negative values; §5 then uses \"b = g(z) belongs to {0,c}\", which depends on that dichotomy. No other passage establishes nonnegativity. The standard one-sentence fix (if g(t) = -e < 0, then by (4) g(t - ne) = -e and the orbit t - ne becomes non-positive, contradicting f > 0 on R_{>0}) is absent, so L5.3 is not established as written; repair is a single sentence."
+ },
+ "elsewhere_anchor": null
+}

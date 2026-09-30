@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-7115bacba58e",
+  "problem": "5",
+  "sha256": "7115bacba58e85e41d3cfb7a6e5241f314e093617278b1be9cb0d66cf8deb3dc",
+  "path": "checkpoint_inputs_ext/7115bacba58e85e41d3cfb7a6e5241f314e093617278b1be9cb0d66cf8deb3dc.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 1,
+  "record_ids": [
+    "p5-gpt-5.6-sol-pro-main-t001"
+  ],
+  "bytes": 1514,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2664,
+        "output_tokens": 772,
+        "output_tokens_details": {
+          "thinking_tokens": 499
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 772,
+            "cache_read_input_tokens": 2664,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 11.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "RMS-AM-GM for f(x)=x+c (asserted, not written out)",
+    "upper_bound_mechanism": "orbit synchronization of two APs + no-mixing finite-chain argument (sketched only)",
+    "wrong_answer_stated": false,
+    "notes": "Tracking file only: correct boxed answer f(x)=x+c, c>=0. Substitution x=f(y) giving f(f(y))=2f(y)-y, AP orbits, positivity, orbit-synchronization and no-mixing are all named in one-line summaries; 'Full proof: draft pending'. No mechanism is written out as a complete argument, so each obligation scores sketch-level."
+  },
+  "S": 0,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

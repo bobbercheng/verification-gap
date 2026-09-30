@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p5-gpt56-7324ef70-v1-F",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "F",
+ "problem": "5",
+ "objection_key": "grade-claude__e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.7,
+  "input_tokens": 2,
+  "output_tokens": 810,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 3428,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3075,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003175,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 810,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 3428,
+    "webSearchRequests": 0,
+    "costUSD": 0.055680999999999994,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 472,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "none",
+  "objection_correct": "no",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_applicable",
+  "repair_distance": "none",
+  "explanation": "The quoted line sits in the exploratory 'Hypotheses and falsification record' section, which the write-up explicitly excludes from the proof; the actual proof (Sections 1-4) establishes L5.2/L5.3 via (1)-(4), L5.4/L5.5 via the quadratic estimate (7) and the telescoping partition argument, and L5.1 via RMS-AM-GM. So the objection bears on no ledger statement. Moreover the local claim is itself weak: the hypothesis posits y^{p^2} = 2y^p - y for all y > 0, both sides are differentiable, so differentiating and setting y = 1 to get p^2 = 2p - 1 is legitimate, not merely heuristic. No repair needed."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e1"
+}

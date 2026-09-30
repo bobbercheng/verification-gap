@@ -1,0 +1,71 @@
+{
+  "id": "p1-h-d4561baddfcb",
+  "problem": "1",
+  "sha256": "d4561baddfcbee9d1d5969be84b4970d61db62f08a17182034606afe6f9679d8",
+  "path": "checkpoint_inputs_ext/d4561baddfcbee9d1d5969be84b4970d61db62f08a17182034606afe6f9679d8.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 5,
+  "record_ids": [
+    "p1-gpt-5.6-sol-pro-main-t005",
+    "p1-deedy-gpt-5.6-sol-pro-final"
+  ],
+  "bytes": 5185,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4308,
+        "output_tokens": 851,
+        "output_tokens_details": {
+          "thinking_tokens": 577
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 851,
+            "cache_read_input_tokens": 4308,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "strict descent of positive integer P+K (product plus nonunit count), plus every move leaves a nonunit and no two nonunits remain at termination",
+    "upper_bound_mechanism": "prime-by-prime invariance of gcd of p-adic valuations via gcd(min(a,b),|a-b|)=gcd(a,b)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: correct explicit formula, exact valuation description of a move with the 'never two 1s' case split, valid monovariant with both termination and existence of a survivor, and Euclidean gcd invariance with the zero-list convention stated. Equal-valuation case covered by the divisibility argument."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

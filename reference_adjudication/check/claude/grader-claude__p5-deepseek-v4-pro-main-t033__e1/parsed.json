@@ -1,0 +1,61 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__p5-deepseek-v4-pro-main-t033__e1",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 15.1,
+  "input_tokens": 2,
+  "output_tokens": 1120,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 5816,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5198,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005288,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1120,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 5816,
+    "webSearchRequests": 0,
+    "costUSD": 0.087311,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 564,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.5",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "A(y,x) &= (x-y)^2 - c^2 - 2c(x+y) \\ge 0 \\;\\Longrightarrow\\; (x-y)^2 \\ge c^2 + 2c(x+y). \\tag{11}\n\\end{aligned}\n\\]\n\nFrom (11) we immediately obtain $(x-y)^2 > c^2$, hence  \n\n\\[\n|x-y| > c \\qquad \\forall\\,x\\in S_0,\\;y\\in S_c . \\tag{12}",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The general identity A(x,y) = (x-y)^2 - a^2 - 2a(x+y) + 4by + 2b^2 with a=0, b=c gives (x-y)^2 + 4cy + 2c^2, so the displayed 4cx is a transcription slip; the objection is locally correct. However this line is not used: the separation |x-y| > c (L5.5's key step) is derived from A(y,x) in (11), which is computed correctly (a=g(y)=c, b=g(x)=0 gives (y-x)^2 - c^2 - 2c(x+y)), and B in (10) is likewise unused for the final covering argument. Since the erroneous display is only annotated 'always true' and carries no weight, the statement stands; repair is a single symbol x -> y.",
+  "wrong_answer_stated": false
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 231,
+  "length_ok": true,
+  "reason": null
+ }
+}

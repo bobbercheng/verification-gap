@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-23591a31a955",
+  "problem": "3",
+  "sha256": "23591a31a955e0960363e3acbad293fe9367b80c1523a5b826262073de0af070",
+  "path": "checkpoint_inputs/23591a31a955e0960363e3acbad293fe9367b80c1523a5b826262073de0af070.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": "gpt-5.6-sol-main",
+  "turn": 11,
+  "record_ids": [
+    "gpt-5.6-sol-main-t011"
+  ],
+  "bytes": 4837,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2693,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 2387,
+        "output_tokens_details": {
+          "thinking_tokens": 2192
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2693,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2387,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 2693,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2693
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 29.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 2,
+    "complete": false,
+    "main_gap": "The entire combinatorial core (both directions of the 'alternating-imbalance refinement lemma') is deferred to an external file and never proved in the text.",
+    "notes": "Correct answer 2^n/(2^{n+1}-1) and a valid reduction of the claiming phase to the alternating imbalance, with O=(1+Δ)/2. But both bounds rest wholly on an unproved lemma; the extremal geometric partition is asserted, not verified. Matches 'correct answer + reduction, main argument absent'."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

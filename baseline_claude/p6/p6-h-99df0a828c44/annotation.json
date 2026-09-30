@@ -1,0 +1,66 @@
+{
+  "id": "p6-h-99df0a828c44",
+  "problem": "6",
+  "sha256": "99df0a828c44a165cd008d7abf5b50582cc6f698542a5725c2d6e29d830fe6de",
+  "path": "checkpoint_inputs/99df0a828c44a165cd008d7abf5b50582cc6f698542a5725c2d6e29d830fe6de.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "d024e848",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-d024e848-v1"
+  ],
+  "bytes": 14933,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 7871,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 690,
+        "output_tokens_details": {
+          "thinking_tokens": 438
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 7871,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 690,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 7871,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 7871
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 11.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 2,
+    "complete": false,
+    "main_gap": "The crux—finiteness/stabilization of the minimal hitting sets (Lemma 1, and the claim that no new core primes arise)—is only sketched with an admitted-missing potential-function induction; Lemma 2 and Section 3's characterization are also unjustified.",
+    "notes": "Correct framing (pairwise-intersecting prime sets, minimal hitting sets, valid set becomes a periodic union of APs ⇒ a_{n+T}=a_n+L) and the final step from a stabilized family is fine. But the essential stabilization is asserted, author admits gaps, and Section 5 is speculative/numerical. Also only eventual periodicity is addressed."
+  },
+  "S": null,
+  "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "p3-h-ad0fee18a856",
+  "problem": "3",
+  "sha256": "ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb",
+  "path": "checkpoint_inputs/ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "glm53-c1"
+  ],
+  "bytes": 7842,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17321,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 383,
+        "reasoning_output_tokens": 258
+      },
+      "sec": 14.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "n=1 median argument",
+    "upper_bound_mechanism": "n=1 median optimization",
+    "wrong_answer_stated": true,
+    "notes": "Correctly solves n=1 and states the sorted odd-position reduction, but gives no written proof of greedy optimality. Both bounds are only complete for n=1. The conjectured c_2=5/9 is wrong; the required all-n geometric construction and universal subset-sum/cancellation upper bound are absent."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

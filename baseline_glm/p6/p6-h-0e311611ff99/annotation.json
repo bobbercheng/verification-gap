@@ -1,0 +1,58 @@
+{
+  "id": "p6-h-0e311611ff99",
+  "problem": "6",
+  "sha256": "0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780",
+  "path": "checkpoint_inputs/0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8828b58a",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-8828b58a-v2"
+  ],
+  "bytes": 16700,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 6480,
+        "output_tokens": 24000,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 272.5,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 6480,
+        "output_tokens": 999,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 15.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 3,
+    "complete": false,
+    "main_gap": "Lemma 1's proof is incorrect (earlier terms may contain primes larger than p_k, and the bound L_k < p_k is false); Lemma 3 is a hand-waving sketch deferring to Lemma 4; Lemma 6's backward step is circular and the claimed gcd identity is false.",
+    "notes": "Overall framework (finiteness of primes, stabilizing hitting sets, merge of residue progressions mod L, periodicity) is the right one, and Lemmas 2, 4, 5 are essentially fine. But Lemma 1 contains a real error, Lemma 3 is asserted not proved, and Lemma 6's uniqueness/circularity argument fails. Major parts unjustified."
+  },
+  "S": null,
+  "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+  "path_base": "bundle root"
+}

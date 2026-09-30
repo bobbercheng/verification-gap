@@ -1,0 +1,74 @@
+{
+ "rater": "claude",
+ "case": "p1-deedy-kimi-k3-final",
+ "problem": "1",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.2,
+  "input_tokens": 2,
+  "output_tokens": 543,
+  "cache_read_input_tokens": 1812,
+  "cache_creation_input_tokens": 4918,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4173,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004278,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 543,
+    "cacheReadInputTokens": 1812,
+    "cacheCreationInputTokens": 4918,
+    "webSearchRequests": 0,
+    "costUSD": 0.06367099999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 110,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "statements": {
+   "L1.1": {
+    "established": "yes",
+    "quote": "Since $z$ is non-decreasing, takes values in\n$\\{0,1,\\dots,N\\}$, and increases by $1$ at every type B move, the whole play contains **at\nmost $N$ type B moves**. Since $P$ is always a positive integer and each type A move at\nleast halves it",
+    "note": "Termination by two-type bound; Step 2 gives at least one >1; conclusion gives at most one, hence exactly one."
+   },
+   "L1.2": {
+    "established": "yes",
+    "quote": "If the tuple is identically zero, then in particular\n$\\alpha = \\beta = 0$, so $\\alpha' = \\beta' = 0$ and the tuple remains identically zero; the\ngcd equals $0$ before and after. In all cases $G_p$ is invariant.",
+    "note": "Full common-divisor argument, equal/zero valuation cases handled; terminal gcd(x,0)=x gives v_p(M)."
+   }
+  },
+  "S_ref": 2,
+  "notes": "Both obligations fully met: termination with exactly one survivor for every play, and prime-wise gcd invariance with all edge cases. Explicit formula for M stated; elementary move description on valuations given. Computer checks are supplementary only."
+ },
+ "anchors": {
+  "L1.1": {
+   "anchored": true,
+   "length": 239,
+   "length_ok": true,
+   "reason": null
+  },
+  "L1.2": {
+   "anchored": true,
+   "length": 210,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

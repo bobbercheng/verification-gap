@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-G",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 54.3,
+  "input_tokens": 2,
+  "output_tokens": 4001,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 5692,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4665,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0047599999999999995,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 4001,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 5692,
+    "webSearchRequests": 0,
+    "costUSD": 0.1577765,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 3659,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "established",
+  "repair_distance": "none",
+  "explanation": "The objection is locally right that the cut count in the overlay lemma is deferred (\"details omitted\"). But the construction itself is fully specified — concatenate A, lay the concatenated B-row over the initial length-q segment, cut both rows at the union of division points, pair corresponding cells — and the write-up states the counting method. The count it asserts is exactly what that construction yields: at most |B|-1 images of B's interior boundaries plus the endpoint q in the A-row, and at most |A|-1 images of A's boundaries in the B-row, totalling |A|+|B|-1, with coincidences only reducing it. So bound (5), and hence the budget (13) underpinning L3.2, stands; only a routine verification is compressed.",
+  "severity": "minor"
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

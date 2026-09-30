@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-bc0c538d972f",
+  "problem": "4",
+  "sha256": "bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e",
+  "path": "checkpoint_inputs_ext/bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "0d682cd0",
+  "turn": 1,
+  "record_ids": [
+    "p4-glm52-0d682cd0-v1"
+  ],
+  "bytes": 7667,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6250,
+        "output_tokens": 1376,
+        "output_tokens_details": {
+          "thinking_tokens": 1078
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1376,
+            "cache_read_input_tokens": 6250,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 18.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "kθ-angle lemma by induction; first cut splitting a into mθ and (n−m)θ so both pieces carry multiples; separate n=2 case",
+    "upper_bound_mechanism": "Safe set S of triangles with no angle a θ-multiple; equilateral in S; four-case closure using sums/differences and 180 not a multiple",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer, clean angle-splitting reformulation. Lemma (K) fully proved with both pieces winning. Sufficiency covers every triangle including n=2 and verifies cut point lies in (0,c). Avoidance argument complete with all four cases and nonemptiness of the trap. Computational section correctly flagged as non-essential evidence."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

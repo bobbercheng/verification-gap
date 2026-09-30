@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-grok-4.5-final",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.4,
+  "input_tokens": 2,
+  "output_tokens": 1021,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 9362,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7657,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.007751999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1021,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 9362,
+    "webSearchRequests": 0,
+    "costUSD": 0.1198255,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 602,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "Theorem C's hypothesis is an arbitrary multiset L with sum S_n; in the large-piece case the text writes D(M)=μ−D(R) and asserts \"Taking the remainder as a single piece (using 0 cuts) already yields D(R)=s=S_n−μ\". But L's remainder is already split by Liu's marks, and Xiang can only add cuts, never merge. The witness L={4,1.5,1.5} (n=2, S_2=7, unique μ=4≥τ=4) has remainder R={1.5,1.5} with D(R)=1.5−1.5=0, not 3, and the text's chain would give D(M)=4, not ≤1. (A cut of 4 into 2.5+1.5 does force D=1, but the text never gives that argument.) The subsequent \"recursive dichotomy\" passage is only a sketch (\"binary Greedy Egyptian fraction\", checks for n=1,2), so the large-piece case is not repaired elsewhere; the upper bound remains unproved."
+ }
+}

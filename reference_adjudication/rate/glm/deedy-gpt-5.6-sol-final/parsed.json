@@ -1,0 +1,54 @@
+{
+ "rater": "glm",
+ "case": "deedy-gpt-5.6-sol-final",
+ "problem": "3",
+ "group": "A",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 311.6,
+  "input_tokens": 2854,
+  "output_tokens": 25079,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "statements": {
+   "L3.1": {
+    "established": "yes",
+    "quote": "Indeed, if Liu always takes a longest remaining piece, then before his $k$-th turn at most $2k-2$ pieces have disappeared, so the piece he takes has length at least $x_{2k-1}$. Thus he secures at least $O$.",
+    "note": "Both greedy strategies written out; odd-sum game value and O=(1+Delta)/2 proved for all n."
+   },
+   "L3.2": {
+    "established": "partial",
+    "quote": "With $s$ cuts available and at most $s+1$ columns of total height $T$, sweep a horizontal line down through them, recording successive vertical portions alternately in two rows (according as the number of columns met is odd or even). Set $d=T/(2^{s+1}-1)$.",
+    "note": "Lemma (i) states the right all-n statement, but the sweep proof leaves cut choice, cancellation, array bounds, and induction unjustified; sketch only."
+   },
+   "L3.3": {
+    "established": "partial",
+    "quote": "At $j=s$, the second possibility requires at least $s+1$ cuts. With at most $s$ cuts, an odd strip therefore remains, and (5) gives $\\Delta\\ge d$. This proves (ii).",
+    "note": "Strip-sweep induction for Lemma (ii) is sketched for all n, but the invariant, 'identical copies' step, and cut-count claim are asserted, not proven."
+   }
+  },
+  "S_ref": 0,
+  "notes": "Reduction (L3.1) fully proved; closed form 2^n/(2^{n+1}-1) correctly stated as the answer. Both bounds rest on the refinement lemma, whose parts are only sketched: cancellation, array totals, and induction transfer are asserted without proof, so neither bound is established."
+ },
+ "anchors": {
+  "L3.1": {
+   "anchored": true,
+   "length": 206,
+   "length_ok": true,
+   "reason": null
+  },
+  "L3.2": {
+   "anchored": true,
+   "length": 256,
+   "length_ok": true,
+   "reason": null
+  },
+  "L3.3": {
+   "anchored": true,
+   "length": 164,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

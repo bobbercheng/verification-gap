@@ -1,0 +1,67 @@
+{
+  "id": "p1-gpt56-5aca5e52-v1",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": "5aca5e52",
+  "turn": 1,
+  "path": "checkpoint_inputs_ext/cdc88080cd219cde88e04afe43130a98d92617c0aa91fe0dbf2d0d2cf070bc50.md",
+  "recorded_mtime_utc": "2026-07-20T21:28:24Z",
+  "bytes": 5788,
+  "sha256": "cdc88080cd219cde88e04afe43130a98d92617c0aa91fe0dbf2d0d2cf070bc50",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3252,
+        "cache_read_input_tokens": 1363,
+        "output_tokens": 480,
+        "output_tokens_details": {
+          "thinking_tokens": 226
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3252,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 480,
+            "cache_read_input_tokens": 1363,
+            "cache_creation_input_tokens": 3252,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3252
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic (product, count of nonunits) well-founded descent; plus every move leaves an output >1",
+    "upper_bound_mechanism": "primewise invariance of gcd of p-adic valuations via gcd(a,b)=gcd(a,b-a)",
+    "wrong_answer_stated": false,
+    "notes": "All components complete: move description with min/|a-b| and no-two-1s, lex monovariant with correct handling of the coprime case (product unchanged), exactly-one-survivor argument, invariance including zero and equal valuation cases, and explicit M = prod p^{gcd v_p(A_i)}."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

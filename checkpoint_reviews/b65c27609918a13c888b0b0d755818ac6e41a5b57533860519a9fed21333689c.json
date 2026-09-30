@@ -1,0 +1,44 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "reject",
+  "scores": {
+    "correctness": 2,
+    "completeness": 1,
+    "rigor": 1,
+    "self_contained": 3
+  },
+  "fatal_issues": [
+    "CRUX UNPROVED. The argument correctly reduces the theorem to: only finitely many primes ever become 'essential' (appear in an inclusion-minimal prime-factor set), so the minimal family M_n stabilizes (candidate claim #3). This is asserted but never proved; the candidate itself labels status PARTIAL with confidence 0.45. Everything else (Steps 2-3) depends on it, so the theorem is not established.",
+    "INVALID TERMINATION ARGUMENT. The candidate's proposed route in candidate_v1.json open_issues ('termination via strictly decreasing total size once essential primes are finite') is false. For a1=2310 the minimal family grows MONOTONICALLY to 251 sets (transient maxEss 1993) before collapsing to {{2}} at step 893; total size is not monotone decreasing. The envisioned proof mechanism does not work."
+  ],
+  "required_fixes": [
+    "Prove finiteness of essential primes with a valid argument. The candidate's experimentally-floated bound 'essential <= max P(a_1)' is FALSE: a1=385 yields essential prime 19 > max P(a1)=11 (independently reproduced). The bound 'essential <= a_1' survives all tests up to a1=5000 (tight, with equality exactly for primes/prime-powers) but remains unproved; it is currently a conjecture underpinning the whole envisioned proof.",
+    "Fix the stabilization experiments. search.py and fast.py flag a 'change' whenever any new distinct prime-factor-set appears (pfm not in seen). This signal never quiets for stable-but-active cases such as a1=15, where non-minimal supersets appear every step forever while the true minimal family has been {{3,5},{2,3},{2,5}} since step 3. The quiet-window test therefore misreports stabilization. Track actual minimal-family changes instead (verified via clean_search.py: correct stabilization is detected, e.g. a1=385 stable from step 37, a1=2310 collapses at step 893).",
+    "Rigorize Step 3 and explicitly handle the theorem's 'for EVERY positive integer n' clause (periodicity must hold from n=1, not merely eventually). Clean argument, currently missing from the writeup: every a_n lies in the eventual valid set V because gcd(a_n,a_k)>1 for all pairs (each a_m is chosen to share a factor with all earlier terms), so the whole sequence is the increasing enumeration of V starting at a_1, giving a_{n+T}=a_n+L for all n>=1. Independently verified for a1=385: a_{n+5088}=a_n+43890 holds for n=1..5 despite stabilization only at step 37.",
+    "Verify the degenerate cases explicitly (a_1 prime, prime power). Now done: a1=7/49/121/8 collapse to a single essential prime with T=1, L=that prime. The candidate listed this as open."
+  ],
+  "verified_claims": [
+    "Validity depends only on prime-factor sets: m is valid at step n iff P(m) is a transversal (hitting set) of {P(a_i): i<=n}. Logic checked.",
+    "Transversals are determined by the inclusion-minimal elements M_n of the family (hitting a minimal member is the hard case; supersets follow). Checked.",
+    "Once M is stable, V={m: P(m) transversal of M} equals the union over minimal transversals tau of {m: prod(tau)|m}, hence is periodic mod L=product of essential primes. Checked.",
+    "The increasing enumeration of such a periodic V satisfies a_{n+T}=a_n+L, and this holds from n=1 because every a_n is in V (pairwise gcd>1). Proved and verified on a1=385 (n=1..5).",
+    "a1=15: T=8, L=30, M={{3,5},{2,3},{2,5}}, gap block [3,2,4,6,6,4,2,3] from the start, valid set = multiples of 6/10/15. Reproduced exactly.",
+    "a1=385: minimal family stabilizes at step 37 with 7 sets, L=43890, T=5088 valid residues, zero residue violations, a_{n+T}=a_n+L on the entire tail. Independently verified (the candidate's earlier 'no period found' was only because N<L, a_N/L~1.6).",
+    "a1=2310: minimal family grows to 251 sets then collapses to {{2}} at step 893 when 4096=2^12 appears; T=1, L=2. Verified.",
+    "Degenerate prime/prime-power starts (7, 49, 121, 8): collapse to a single essential prime, T=1, L=that prime. Verified."
+  ],
+  "unverified_claims": [
+    "'M_n is eventually constant' / 'only finitely many primes ever become essential' - the theorem's crux; supported by experiment but unproved. No argument is given.",
+    "'Essential primes are bounded by a_1' - the conjectured bound underpinning the envisioned proof. Survives all tests (tight for prime a_1) but unproved; the weaker variant 'essential <= max P(a_1)' is refuted by a1=385."
+  ],
+  "summary": "Sound, clearly-stated framework with correct experimental support (independently reproduced for a1=15, 385, 2310 and degenerate prime/prime-power starts). The reduction (radical/transversal -> minimal-family stabilization -> periodic enumeration) is mathematically correct: Steps 2-3 are rigorously fillable, and the theorem's 'for every n>=1' clause is provable via the pairwise-gcd observation that every term lies in the eventual valid set (verified for a1=385 holding from n=1 even though the family stabilizes only at step 37). However the entire crux - finiteness of essential primes / stabilization of M_n - is unproved (candidate admits PARTIAL, confidence 0.45), and that is essentially the whole difficulty of the problem. Moreover the candidate's envisioned proof route is partly wrong: the bound 'essential <= max P(a_1)' is refuted by a1=385 (essential prime 19 > 11); the 'strictly decreasing total size' termination argument is refuted by a1=2310 (grow-then-collapse to 251 sets); and the stabilization experiments misreport by tracking new distinct prime-factor-sets rather than minimal-family changes. As a proof of IMO 2026 P6 this does not succeed.",
+  "transfer_assessment": [
+    "REUSABLE: reduction of the gcd-sharing greedy condition to a hitting-set (transversal) condition on prime-factor sets P(m).",
+    "REUSABLE: inclusion-minimal-element (antichain) maintenance - only minimal radicals constrain the valid set; supersets are irrelevant.",
+    "REUSABLE: valid set = finite union of divisibility classes of the minimal transversals => periodic mod (product of essential primes) => quasi-periodic increasing enumeration a_{n+T}=a_n+L.",
+    "REUSABLE: pairwise gcd(a_n,a_k)>1 for all pairs => every a_n lies in the eventual valid set => periodicity holds from the first term (resolves the 'for all n' clause).",
+    "MISLEADING/do-not-transfer: the bound 'essential prime <= max P(a_1)'. REFUTED by a1=385 (essential prime 19 > max P(a1)=11).",
+    "MISLEADING/do-not-transfer: termination via 'strictly decreasing total size of M_n once essential primes are finite'. INVALID - a1=2310 grows monotonically to 251 minimal sets before collapsing.",
+    "MISLEADING/do-not-transfer: detecting stabilization by 'no new distinct prime-factor-set for a quiet window'. Flawed proxy - non-minimal supersets appear indefinitely even in stable cases (a1=15)."
+  ]
+}

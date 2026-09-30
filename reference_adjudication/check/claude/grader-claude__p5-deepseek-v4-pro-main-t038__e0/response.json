@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5657,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005751999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1154,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 6356,
+    "webSearchRequests": 0,
+    "costUSD": 0.09356099999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 806,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6356,
+   "cache_read_input_tokens": 2282,
+   "output_tokens": 1154,
+   "output_tokens_details": {
+    "thinking_tokens": 806
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 6356,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1154,
+     "cache_read_input_tokens": 2282,
+     "cache_creation_input_tokens": 6356,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 6356
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 14925,
+  "is_error": false,
+  "elapsed_seconds": 15.8,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L5.3\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"sentence\",\n  \"explanation\": \"The write-up only records g(x) > -x after defining g, and §3 supposes two distinct POSITIVE values c1 > c2 > 0; nothing anywhere rules out g(x) < 0 for some x. Hence the jump from \\\"V contains at most one positive number\\\" to \\\"V ⊆ {0,c}\\\" (or g ≡ 0) is unsupported, and the ledger statement L5.3 (f(t) - t ≥ 0 for every t) is never proved. Sections 4-7 all presuppose V ⊆ {0,c}. The gap is closable by one sentence: (4) gives f^n(x) = x + n g(x) > 0 for all n, so g(x) ≥ 0; but that sentence is absent, so the statement is not established as written.\"\n}"
+   }
+  ]
+ }
+}

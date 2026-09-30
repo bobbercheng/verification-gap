@@ -1,0 +1,53 @@
+{
+  "task_id": "imo-2026-p3",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 2,
+    "completeness": 2,
+    "rigor": 2,
+    "self_contained": 1
+  },
+  "fatal_issues": [
+    "The upper bound proof has a fatal gap: the key pairing lemma (p_{2k} + p_{2k+1} <= 2/(2n+1) under midpoint bisection) is stated without rigorous proof. The candidate's own writeup contains multiple abandoned/incorrect proof attempts and explicitly acknowledges the gap in open_issues.",
+    "The upper bound strategy (bisecting the n largest intervals) is claimed to be optimal for Xiang but no proof of optimality is given; the solution relies on an unproven 'known lemma' and references to 'known results' without derivation.",
+    "The lower bound proof, while essentially correct, contains a handwavy 'pairing argument' in Case k < n that lacks formal justification for why the odd-position sum is at least the claimed bound when Xiang's remaining cuts are placed adversarially on already-cut pieces."
+  ],
+  "required_fixes": [
+    "Provide a complete, rigorous proof of the upper bound. Either: (a) prove the pairing lemma for the midpoint-bisection strategy using a correct majorization/rearrangement argument, or (b) give an alternative rigorous strategy for Xiang (e.g., the grid strategy placing marks at odd multiples of 1/(2n+1) with perturbation) with a full proof that it limits Liu to (n+1)/(2n+1).",
+    "Formalize the lower bound Case k < n argument: show that any deviation by Xiang from bisecting all n large pieces cannot reduce Liu's guaranteed sum below (n+1)/(2n+1), using a clear pairing or greedy-picking argument on the sorted pieces.",
+    "Remove all incomplete proof sketches, abandoned reasoning paths, and references to unproven 'known lemmas' from the final solution."
+  ],
+  "verified_claims": [
+    "Liu's lower bound strategy (marking odd multiples of 1/(2n+1)) guarantees at least (n+1)/(2n+1) when Xiang bisects all n large pieces at their midpoints (yielding 2n+1 equal pieces).",
+    "For n=1, the value is 2/3; for n=2, the value is 3/5; both match (n+1)/(2n+1).",
+    "Asymptotically, (n+1)/(2n+1) -> 1/2 as n -> infinity, consistent with the first-player advantage of one piece out of ~2n pieces.",
+    "If Xiang deviates from bisecting all large pieces (e.g., cuts the small piece or leaves a large piece uncut), Liu's guaranteed share does not decrease (verified for small n and supported by the majorization intuition)."
+  ],
+  "unverified_claims": [
+    "Xiang's midpoint-bisection strategy (bisecting the n largest intervals after Liu's cuts) limits Liu to at most (n+1)/(2n+1) for all n and all Liu cut patterns.",
+    "The pairing lemma: after bisecting the n largest intervals, the sorted pieces satisfy p_{2k} + p_{2k+1} <= 2/(2n+1) for k=1..n (or any equivalent majorization bound yielding the upper bound).",
+    "The midpoint-bisection strategy is optimal for Xiang (i.e., no other strategy yields a lower upper bound for Liu).",
+    "The game value exists and equals the pure-strategy value (implicitly assumed; a full formal treatment would require discretization + minimax or a pure-strategy saddle point proof)."
+  ],
+  "summary": "The candidate correctly identifies the answer c = (n+1)/(2n+1) and provides a valid lower bound construction. However, the upper bound proof is incomplete and contains a fatal gap: the central pairing lemma is unproven, and the writeup includes multiple failed/abandoned proof attempts. The solution is not self-contained and relies on an unproven 'known lemma.' The lower bound argument, while correct in essence, has a handwavy case analysis for k < n. Substantial revision is needed to provide a rigorous upper bound proof and clean up the lower bound case analysis.",
+  "transfer_assessment": [
+    "alternating-picking-game",
+    "cake-cutting",
+    "fair-division",
+    "pre-commitment",
+    "target-equalization",
+    "midpoint-bisection-strategy",
+    "second-mover-advantage",
+    "majorization",
+    "pairing-argument",
+    "rearrangement-inequality",
+    "zero-sum-game",
+    "sorted-payoff-bounding",
+    "asymptotic-analysis",
+    "large-n-limit",
+    "first-mover-advantage-decay",
+    "minimax",
+    "strategy-stealing",
+    "IMO-2026-P3"
+  ]
+}

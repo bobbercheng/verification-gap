@@ -1,0 +1,45 @@
+{
+  "id": "p2-deedy-gpt-5.6-sol-final",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs/74cde2147129b498fb2a9c6e3d70e20be2d815e13bd15cac63a65b0ee57c316a.md",
+  "bytes": 5166,
+  "sha256": "74cde2147129b498fb2a9c6e3d70e20be2d815e13bd15cac63a65b0ee57c316a",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 35,
+        "output_tokens": 5975,
+        "cache_read_input_tokens": 2368,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 77.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "complex equal-power lemma (H=0 cancellation, unexecuted)",
+    "upper_bound_mechanism": "equal powers of M,N wrt (AKL) ⟹ OM=ON",
+    "wrong_answer_stated": false,
+    "notes": "Complex setup genuinely encodes all three angle hypotheses via sine-rule coordinates and reality relations (3)-(4), so reduction is complete. Circle (AKL) explicit via (5)-(6). But crux H=0 rests on an unexecuted substitution; listed conjugate pairs (u,-ū) do not themselves sum to zero. Final power-to-distance step correct yet premised on unproved equal powers."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "74cde2147129b498fb2a9c6e3d70e20be2d815e13bd15cac63a65b0ee57c316a",
+  "original_bytes": 5166,
+  "input_anonymized": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-a9b1ddf110b3",
+  "problem": "3",
+  "sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+  "path": "checkpoint_inputs/a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "glm53-c3"
+  ],
+  "bytes": 9592,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 16.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric partition + superincreasing induction via XOR-merge insertion (Case II unproven)",
+    "upper_bound_mechanism": "min-gap counting lemma (proved all n) + macro-plan/split-at-k* construction; subset-sum Lemma X1 unproven",
+    "wrong_answer_stated": false,
+    "notes": "Correct c_n stated as claimed theorem. Reduction to alternating sum fully done with matching/layer-cake formulations. Lower bound proved only n<=2 and a_1-uncut case; insertion lemma open. Upper bound: gap lemma proved for all n, but Xiang construction complete only n<=2; Lemma X1 verified m<=4 only. Both main theorems explicitly open for general n."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

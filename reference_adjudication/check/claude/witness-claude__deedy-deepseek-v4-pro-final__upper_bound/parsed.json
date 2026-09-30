@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-claude__deedy-deepseek-v4-pro-final__upper_bound",
+ "case": "deedy-deepseek-v4-pro-final",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 5.8,
+  "input_tokens": 2,
+  "output_tokens": 270,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 1826,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1661,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001756,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 270,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 1826,
+    "webSearchRequests": 0,
+    "costUSD": 0.025841499999999996,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "none",
+  "explanation": "The write-up gives no upper-bound argument: the quoted line poses 'Strategy for X?' as an open question, and the 'Full proof' section is '(To be completed)'. Nowhere is a Xiang reply constructed for an arbitrary Liu division; only a numerically guessed formula (n+1)/(2n+1), which is in fact wrong (the answer is 2^n/(2^{n+1}-1); they agree only at n=1,2). No subset-sum pigeonhole or mirrored-cut construction appears. No local edit supplies this; a full lemma is missing."
+ },
+ "elsewhere_anchor": null
+}

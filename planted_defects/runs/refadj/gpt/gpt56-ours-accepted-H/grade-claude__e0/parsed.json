@@ -1,0 +1,42 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 17.8,
+  "input_tokens": 18903,
+  "output_tokens": 606,
+  "reasoning_output_tokens": 403,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "Therefore \\(\\Gamma=\\delta\\). Xiang has at most \\(n=(n+1)-1\\) cuts, so the lower half of the refinement lemma gives \\(D\\ge\\delta\\) for every one of his marking choices.",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The objection is correct: the cumulative cut positions for lengths \\(\\delta,2\\delta,\\ldots,2^n\\delta\\) are \\((2^j-1)\\delta\\), not \\(2^j\\delta\\). However, (9) correctly specifies the intended division, and the proved refinement lemma plus the binary subset-sum calculation establishes the universal lower bound. The erroneous position formula is unused. Inserting “\\(-1\\)” repairs it."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 167,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   7115,
+   7282
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

@@ -1,0 +1,72 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-H",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "H",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 61.9,
+  "input_tokens": 2,
+  "output_tokens": 5399,
+  "cache_read_input_tokens": 761,
+  "cache_creation_input_tokens": 4944,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4137,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004242,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 5399,
+    "cacheReadInputTokens": 761,
+    "cacheCreationInputTokens": 4944,
+    "webSearchRequests": 0,
+    "costUSD": 0.1848055,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 5128,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "Minor arithmetic slip bounding terminal sets: since |D\\{p}| = |D|-1, one has 2^{|D|-1} ≤ w(D\\{p}), not 2^{|D|}. The conclusion (|D| bounded, e.g. |D| ≤ a_1) is unaffected.",
+    "quote": "2^{|D|}\\le w(D\\setminus\\{p\\})<a_1"
+   }
+  ],
+  "notes": "Reduction to support-only acceptance, self-duality of F, sunflower lemma for bounded-size minimal supports, and the weight-descent to terminal supports are all correctly executed; the periodicity conclusion follows cleanly. Only a harmless exponent slip."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 33,
+   "length_ok": false,
+   "reason": "short",
+   "span": [
+    8190,
+    8223
+   ]
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "p1-deedy-grok-4.5-final",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/b031b8f1dcb2566444bd17c37374c84f9ae706cc66267b1c49caa27bfa8f141d.md",
+  "bytes": 8573,
+  "sha256": "b031b8f1dcb2566444bd17c37374c84f9ae706cc66267b1c49caa27bfa8f141d",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4341,
+        "cache_read_input_tokens": 1363,
+        "output_tokens": 919,
+        "output_tokens_details": {
+          "thinking_tokens": 610
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4341,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 919,
+            "cache_read_input_tokens": 1363,
+            "cache_creation_input_tokens": 4341,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4341
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic potential (k, P): k = #entries>1 drops or product drops by factor g>=2; k never reaches 0 since g*l=lcm>1",
+    "upper_bound_mechanism": "per-prime gcd of valuation multiset invariant via gcd(min, |a-b|) = gcd(a,b), with zero/equal cases covered",
+    "wrong_answer_stated": false,
+    "notes": "Complete: Lemma 1 gives valuation move (min, max-min) and shows at least one output >1; Lemma 2/Cor 3 prove invariance for all cases including zeros and equal valuations; termination via lexicographic (k,P) with the 'k>=1' step argued correctly; explicit M = prod p^{gcd_i v_p(a_i)} stated."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

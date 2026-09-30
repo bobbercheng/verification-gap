@@ -1,0 +1,44 @@
+{
+  "id": "kimi-r1-c2",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 2,
+  "path": "checkpoint_inputs/53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c.md",
+  "bytes": 8696,
+  "sha256": "53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3518,
+        "output_tokens": 3741,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 64.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division 1:2:…:2^n with induction on cuts into largest part",
+    "upper_bound_mechanism": "deterministic peeling (halving + top-pair cancellation)",
+    "wrong_answer_stated": false,
+    "notes": "Closed form appears only as conjecture (numerics n≤3). Lemma 1 (odd-sum value) fully proved for all n. Lower bound: geometric division given, j=0 case proved, but the all-refinements induction is open (abstract combination refuted). Upper bound: peeling strategy valid for all n via proved peel-lemma, but q(A)≤1/N proved only for |A|≤3; general case open."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c",
+  "original_bytes": 8696,
+  "input_anonymized": false
+}

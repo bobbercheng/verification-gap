@@ -1,0 +1,46 @@
+{
+  "id": "p2-h-ec1ad94b7a34",
+  "problem": "2",
+  "sha256": "ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a",
+  "path": "checkpoint_inputs/ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9c3c93da",
+  "turn": 2,
+  "record_ids": [
+    "p2-nemotron-9c3c93da-v2"
+  ],
+  "bytes": 17780,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 6446,
+        "output_tokens": 14541,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 154.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Complex translations of all three angle conditions are correct, so reduction earns credit. But the core is asserted and false: the claimed factorization (2x-1)Q=0 fails (e.g. z=i, k=1/2+i/4), 'one checks Q≠0' is unexecuted, and the final implication Re(k)=1/2, Re(lz̄)=|z|²/2 ⇒ O'B=O'C is false (counterexample k=1/2+i, l=1/2+i/2 gives OM≠ON). Synthetic attempts (Claim 1, Lemma 4) visibly collapse; no key circle through A,K,L is proved; no valid finish."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

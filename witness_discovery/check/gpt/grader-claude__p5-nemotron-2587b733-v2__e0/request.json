@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "e0",
+ "text_sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "unspecified",
+  "status": "error reported by an ordinary grader",
+  "quote": "(c n - e m)^2 \\;+\\; \\underbrace{4c(c-e)n}_{\\text{linear in }n} \\;+\\; O(n+m) \\;\\ge\\; 0 \\qquad (5)",
+  "witness": "In (5) the highlighted linear term 4c(c-e)n is not the actual coefficient of n in the expanded expression (that is 2c^2-4ce+2c(x_0-y_0)); the value 4c(c-e) only emerges after using the near-diagonal relation em ≈ cn. Moreover the stated O(n+m) remainder subsumes all linear terms, making (5) vacuous as written. The correct per-case coefficients (4cq(c-e)k, 4c(c-e)n_k+O(1)) are asserted without derivation, though both are in fact correct.",
+  "load_bearing": null
+ },
+ "started_utc": "2026-09-06 04:47:04 UTC"
+}

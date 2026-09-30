@@ -1,0 +1,66 @@
+{
+  "id": "p4-deedy-claude-fable-5-final",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3.md",
+  "bytes": 11887,
+  "sha256": "f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 8011,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1279,
+        "output_tokens_details": {
+          "thinking_tokens": 995
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 8011,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1279,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 8011,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 8011
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "chain lemma (angle k*theta) + double-threat cut making both children carry a multiple of theta; n=2 case handled separately",
+    "upper_bound_mechanism": "safe invariant: no angle in theta*N; 4-case check shows some child stays safe, using 180 not in theta*N",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Cut parametrization proved; Lemma 1 induction covers both pieces; Lemma 2 constructs the cut with legality (0<alpha<A) verified and treats n=2 explicitly; Lemma 3/4 give existence of a safe triangle and closure under every cut. Numerical checks are supplementary, not load-bearing."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 150.4,
+  "input_tokens": 180,
+  "output_tokens": 14109,
+  "cache_read_input_tokens": 3712
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "Exact expansion of the substituted expression: E = (cn−em)² + 2c(x₀−y₀+c−2e)n + 2e(c−x₀+y₀)m + const; (5) is a valid but loose regrouping whose remainder is 2(c−(x₀−y₀))(em−cn) + const, genuinely O(n+m). In Case 1 the text retains only '4c(c−e)qk', and in Case 2 it asserts '4c(c−e)n_k + O(1)'. But from (5) plus |cn_k−em_k|<1 one gets only m_k = (c/e)n_k + O(1), hence an O(n_k) remainder, which can swamp the negative linear term. The needed O(1) bound requires the exact regrouping via em_k−cn_k = O(1); this computation appears nowhere (indeed 4c(c−e) is not even the raw n-coefficient, showing the regrouping was never performed). So the contradictions in Cases 1 and 2 do not follow from what is written; the gap is easily repaired but is not repaired elsewhere in the text."
+ }
+}

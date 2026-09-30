@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4138,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004233,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 4450,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 5707,
+    "webSearchRequests": 0,
+    "costUSD": 0.16833,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 4086,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5707,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 4450,
+   "output_tokens_details": {
+    "thinking_tokens": 4086
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5707,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 4450,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 5707,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5707
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 50874,
+  "is_error": false,
+  "elapsed_seconds": 51.5,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"grade\": 7, \"complete\": true, \"main_gap\": \"none\", \"errors\": [{\"description\": \"Equivalence (2) uses upward-closure of F (if S contains C in F then S in F), which is asserted without explicit justification; it follows immediately from (1), so this is a cosmetic omission.\", \"quote\": \"Every member of $\\\\mathcal F$ contains a member of $\\\\mathcal C$, because it is a finite set. Thus $\\\\mathcal C$ is an intersecting antichain, and\"}, {\"description\": \"The sunflower lemma proof is only sketched (the inductive step of adding the deleted element back to the core, and preservation of distinctness, are left implicit). Standard and easily filled in.\", \"quote\": \"If some element occurs in infinitely many sets, restrict to those sets, delete that element, and apply the induction hypothesis.\"}], \"notes\": \"Reduction to supports, self-duality, sunflower-based bounded-size finiteness, and the weight descent to terminal minimal supports all check out; the final counting argument correctly yields a_{n+T}=a_n+L for all n.\"}"
+   }
+  ]
+ }
+}

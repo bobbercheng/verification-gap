@@ -1,0 +1,71 @@
+{
+ "annotator": "kimi-k3",
+ "items": [
+  {
+   "id": "pilot-f7029937dfb6",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p3-low-C-r1/output.md",
+   "bytes": 9232,
+   "sha256": "f7029937dfb65e1df1585afdb6c293367827324074de50d2c5ed5cdcb2e95f4a",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 257.8,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "dyadic induction + integral/parity insertion argument",
+    "upper_bound_mechanism": "induction with equal-pair cancellation (pairing)",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer stated. Reduction to alternating sum fully proved. Lower bound: dyadic induction set up, but the key step—that inserting cut longer blocks preserves the odd-measure bound—is only asserted, with a garbled matching claim and a wrong '=0' computation. Upper bound: n=1 proved; induction case a_1 large gives even sum >= R < target (wrong direction); pairing feasibility merely asserted."
+   },
+   "S": 0,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  },
+  {
+   "id": "pilot-b8f1189e80f9",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p3-low-N-r1/output.md",
+   "bytes": 8823,
+   "sha256": "b8f1189e80f9b4c62931c1239d57af7f65236e06fb9e62946b66c79b9a96d3c9",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 122.1,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "signed-sum lemma via pairing graph/tree (bipartite signing) + binary uniqueness",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap 1/D + overlay refinement into equal pairs",
+    "wrong_answer_stated": false,
+    "notes": "Complete, rigorous proof. Lemma 1 proves greedy optimal, reducing to alternating sum. Lemma 2's tree component yields a nontrivial signed block sum <= Delta, forcing Delta >= 1/D for the dyadic division. Upper bound: 2^{n+1} subset sums give gap <= 1/D, overlay pairing built with <= n cuts, degenerate cases handled."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  }
+ ]
+}

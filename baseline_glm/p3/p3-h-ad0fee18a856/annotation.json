@@ -1,0 +1,42 @@
+{
+  "id": "p3-h-ad0fee18a856",
+  "problem": "3",
+  "sha256": "ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb",
+  "path": "checkpoint_inputs/ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "glm53-c1"
+  ],
+  "bytes": 7842,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3080,
+        "output_tokens": 7527,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 86.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 3,
+    "complete": false,
+    "main_gap": "No result for general n: no general Liu construction or Xiang upper bound; even n=2 is admittedly incomplete (a>1/2 upper bound unfinished mid-proof, some subcases only sampled), so the problem's core is unaddressed.",
+    "notes": "Correct, useful reduction: pick-game value = odd-position sum of sorted pieces via greedy optimality (asserted, standard). n=1 fully and correctly solved (c1=2/3, including sup-vs-max subtlety). n=2: only region a≤1/2 bounded; a>1/2 upper bound cut off, verifications partly sampled. Minor inconsistency in stated S3 value. Substantial progress, major parts missing."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "p5-h-d2bc30e7b324",
+  "problem": "5",
+  "sha256": "d2bc30e7b324192299406c9fff3549976d778099a44193a96fd512d1da47f66b",
+  "path": "checkpoint_inputs_ext/d2bc30e7b324192299406c9fff3549976d778099a44193a96fd512d1da47f66b.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "e7798221",
+  "turn": 1,
+  "record_ids": [
+    "p5-glm52-e7798221-v1"
+  ],
+  "bytes": 3740,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 16744,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 401,
+        "reasoning_output_tokens": 282
+      },
+      "sec": 13.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "direct squared QM-AM-GM identities",
+    "upper_bound_mechanism": "quadratic local estimate and partition argument",
+    "wrong_answer_stated": false,
+    "notes": "Complete and rigorous. The structural orbit identity yields nonnegative differences. Inequality (3) is correctly derived, implies continuity without assumptions, and its symmetric quadratic bound forces the difference function to be constant on every compact interval. Both inequalities are verified for all c >= 0."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

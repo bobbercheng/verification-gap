@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 42.4,
+  "input_tokens": 322,
+  "output_tokens": 4233,
+  "cache_read_input_tokens": 3712
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim from Section 5. For f(x)=x+c the middle term of the required chain is (f(x)+y)/2=(x+y+c)/2, but the write-up displays (x+y+2c)/2 (i.e., (f(x)+f(y))/2). The witness is arithmetically correct: with c=1, x=2, y=1, the displayed left side is sqrt((4+4)/2)=2 and the displayed middle is (2+1+2)/2=2.5, so the displayed left inequality is false, while (x-y-c)^2=0>=0 holds. Hence the text's assertion that both displayed inequalities are equivalent to (x-y-c)^2>=0 is false as written (the equivalence would only hold with middle (x+y+c)/2). Section 5 is the only sufficiency verification in the text, so the lower_bound obligation is invalid as written despite the trivially intended repair."
+ }
+}

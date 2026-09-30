@@ -1,0 +1,185 @@
+{
+ "annotator": "glm-5.3",
+ "items": [
+  {
+   "id": "pilot-6bd572498c1a",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p6-low-C-r2/output.md",
+   "bytes": 6974,
+   "sha256": "6bd572498c1a98b44821a521e93923d194288711884cf9fcee7e947430862bc5",
+   "annotator": "glm-5.3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "max_tokens",
+     "usage": {
+      "input_tokens": 2819,
+      "output_tokens": 30000,
+      "cache_read_input_tokens": 0,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 333.2,
+     "parsed": false
+    },
+    {
+     "attempt": 1,
+     "status": 200,
+     "stop": "end_turn",
+     "usage": {
+      "input_tokens": 2819,
+      "output_tokens": 1499,
+      "cache_read_input_tokens": 0,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 24.3,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "finite transversal + minimal-support finiteness (Lemmas 1-3, erasure via Lemma 2)",
+    "upper_bound_mechanism": "V-enumeration (3) plus residue-periodicity with L=product of minimal-support primes, T=number of residues",
+    "wrong_answer_stated": false,
+    "notes": "Essentially complete and rigorous: (3) characterizes membership for all terms, periodicity holds from n=1. Only soft spot is Lemma 3's construction of D, where the greedy/induction termination ('strictly smaller transversal') is sketched rather than fully detailed, but the mechanism is correct and applied to all terms."
+   },
+   "S": 2,
+   "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+  },
+  {
+   "id": "pilot-8629891d4586",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p6-mid-C-r1/output.md",
+   "bytes": 10066,
+   "sha256": "8629891d458639118d9465fe18c5a0f01675e0c675cc841f0093090ade261f64",
+   "annotator": "glm-5.3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "end_turn",
+     "usage": {
+      "input_tokens": 4220,
+      "output_tokens": 7990,
+      "cache_read_input_tokens": 0,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 85.0,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "greedy killing -> permanent with cofactor <= a_1 (Lemma 7) -> finiteness via antichain/self-duality",
+    "upper_bound_mechanism": "L = lcm of finitely many permanents; T = count of members in [a_1, a_1+L)",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Lemmas 1-2 give the full membership characterization; Lemmas 6-7 plus the Theorem prove finiteness of permanents via greedy killing and an antichain contradiction (all cases, not examples); Lemma 8 yields a_{n+T}=a_n+L from n=1. Minor wording: 'exactly' in Lemma 3(c) should read 'finite minimal transversals'; the proof only uses valid directions."
+   },
+   "S": 2,
+   "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+  },
+  {
+   "id": "pilot-4c7e7227a106",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p6-mid-N-r1/output.md",
+   "bytes": 8161,
+   "sha256": "4c7e7227a1060dcc87ce38ff679ecb2f7cba67e592b270ff0b539ddb83914dd9",
+   "annotator": "glm-5.3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "end_turn",
+     "usage": {
+      "input_tokens": 3635,
+      "output_tokens": 9417,
+      "cache_read_input_tokens": 0,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 95.4,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "minimal-transversal descent (π(d) ≤ a₁p) + antichain/pigeonhole finiteness",
+    "upper_bound_mechanism": "periodicity with L = lcm of minimal generators, T = count of terms in a length-L window",
+    "wrong_answer_stated": false,
+    "notes": "Complete correct proof. Lemma 1.1 fully proves the term characterization (C). Sections 3–5 prove finiteness of the minimal generators (descent Lemma 4.1 bounding π(d) ≤ a₁p, then pigeonhole plus antichain contradiction) for all cases. Lemma 2.1 assembles global periodicity from a₁ with explicit T and L, yielding a_{n+T}=a_n+L for all n ≥ 1."
+   },
+   "S": 2,
+   "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+  },
+  {
+   "id": "pilot-dcf72678bb60",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p6-mid-N-r2/output.md",
+   "bytes": 12504,
+   "sha256": "dcf72678bb605fe117a4dc56e34708142ec997d8bae9552dfc90300a41992dfa",
+   "annotator": "glm-5.3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "end_turn",
+     "usage": {
+      "input_tokens": 4614,
+      "output_tokens": 8121,
+      "cache_read_input_tokens": 640,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 79.4,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "descent on permanents via killing property + pigeonhole (finiteness of minimal transversals)",
+    "upper_bound_mechanism": "L = lcm of minimal elements, shift-invariance by L, T = terms per length-L block",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Lemma 1.1 fully proves the term characterization (C). Step 4 proves finiteness for all cases: descent Lemma 4.1 (killing property applied to π(t)/p), iterated descent 4.2, pigeonhole/contradiction 4.3. Lemma 2.2 assembles a_{n+T}=a_n+L globally from n=1. No false lemmas; all steps verified."
+   },
+   "S": 2,
+   "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+  }
+ ]
+}

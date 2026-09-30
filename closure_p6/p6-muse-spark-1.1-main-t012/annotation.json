@@ -1,0 +1,61 @@
+{
+  "id": "p6-muse-spark-1.1-main-t012",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 12,
+  "path": "checkpoint_inputs/8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4.md",
+  "bytes": 135155,
+  "sha256": "8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 30266,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 107.5,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 31034,
+        "output_tokens": 145,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 3.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "hitting-set/blocker clutter framework with self-dual stabilization idea",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Correct clutter framework: stable family iff blocker intersecting iff self-dual; clean proof that bad blocker yields change; observed L = lcm of products, T = residue count only in worked example a1=35. Key finiteness of ground/termination and global periodicity from n=1 left unproved; extensive open questioning, no completed argument."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4",
+  "original_bytes": 135155,
+  "input_anonymized": false
+}

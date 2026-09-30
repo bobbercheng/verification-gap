@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted-G",
+ "base_id": "gpt56-ours-accepted",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 18.3,
+  "input_tokens": 2,
+  "output_tokens": 1322,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 6027,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4998,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0050929999999999994,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1322,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 6027,
+    "webSearchRequests": 0,
+    "costUSD": 0.09415150000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 945,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "L3.2 requires, for every Liu division, an explicit Xiang reply with at most n = q-1 marks realizing D <= |Sigma(A) - Sigma(B)|. The write-up's only construction for the case B nonempty is the overlay sentence, which asserts both the equal-pairing of common-refinement cells and the cut count and then writes 'standard; details omitted'. Nothing elsewhere supplies it: the later remark ('All overlay cuts described above lie strictly inside an original interval...') only addresses coincident boundaries, and Section 3 supplies only the pigeonhole Gamma <= 1/(2^{n+1}-1). The correct count (|A|+|B|-1 overlay cuts plus q-|A|-|B| bisections = q-1) and the pairing verification are absent, so the mechanism is named, not carried out.",
+  "elsewhere_quote_note": null
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

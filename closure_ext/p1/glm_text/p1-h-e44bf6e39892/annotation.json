@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-e44bf6e39892",
+  "problem": "1",
+  "sha256": "e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55",
+  "path": "checkpoint_inputs_ext/e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "2ede1c6b",
+  "turn": 1,
+  "record_ids": [
+    "p1-glm52-2ede1c6b-v1"
+  ],
+  "bytes": 6115,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2202,
+        "output_tokens": 1980,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 30.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic monovariant (sum of Ω, count of entries > 1), plus per-prime gcd invariant rules out all-1s board",
+    "upper_bound_mechanism": "invariant G_p = gcd of all p-adic valuations via gcd(α, β−α) = gcd(α, β), all cases handled",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Move correctly reduces to (min(α,β), |α−β|) per prime with zero/equal cases covered; termination via well-founded lexicographic (T,c) valid for every play; exactly-one survivor via invariant G_p ≥ 1; v_p(M) = initial gcd of valuations stated explicitly."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

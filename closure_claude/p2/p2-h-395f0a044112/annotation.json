@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-395f0a044112",
+  "problem": "2",
+  "sha256": "395f0a04411246017ef8233aba7c446d136ba871a7e485f64d4979e5b3f3ab40",
+  "path": "checkpoint_inputs/395f0a04411246017ef8233aba7c446d136ba871a7e485f64d4979e5b3f3ab40.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 11,
+  "record_ids": [
+    "p2-claude-fable-5-main-t011"
+  ],
+  "bytes": 26960,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 17654,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1650,
+        "output_tokens_details": {
+          "thinking_tokens": 1283
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 17654,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1650,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 17654,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 17654
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 20.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "affine power identity: pow(·,ω)−pow(·,ω_K)−pow(·,ω_L)+pow(·,ω_1) is affine and vanishes at A,K,L (equivalent to key-circle step), all four power evaluations proved",
+    "upper_bound_mechanism": "pow(B,ω)=c(c−x)/2, pow(C,ω)=b(b−y)/2 plus median-length formula and AB·AX=AC·AY give 4(OM²−ON²)=by−cx=0",
+    "wrong_answer_stated": false,
+    "notes": "Complete rigorous proof. Directed-angle translation to three concyclicities is fully executed with crossbar/interior configuration lemmas and both tangency cases (X=M, Y=N). Key step replaces the 'key circle' by an equivalent affine power identity, correctly proved. Finish is exact. Numerics are only supplementary; (P3) sign computation is messy but valid."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

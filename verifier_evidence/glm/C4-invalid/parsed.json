@@ -1,0 +1,18 @@
+{
+ "claim_id": "C4",
+ "condition": "invalid",
+ "verifier": "glm",
+ "model": "glm-5.3",
+ "status": 200,
+ "parsed": {
+  "claim_true": true,
+  "claim_reason": "Each subset sum of 1, 2, 4, ..., 2^n is a sum of distinct powers of two, giving the unique binary expansion of an integer in [0, 2^(n+1) - 1]. Distinct subsets give distinct binary expansions, so all 2^(n+1) subset sums are pairwise distinct.",
+  "witness_valid": false,
+  "witness_reason": "The witness treats '3' as a part, but for n = 2 the parts are only 1, 2, 4; no part of length 3 exists, so {2, 3} is not a valid subset. Actual subset sums 0–7 are all distinct."
+ },
+ "expected": {
+  "claim_true": true,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 6.2
+}

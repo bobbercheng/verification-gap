@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "kimi-k3-round3-t007",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 56.3,
+  "input_tokens": 69,
+  "output_tokens": 3311,
+  "cache_read_input_tokens": 2496
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quoted line appears in the 'Modeling' bullet and asserts the reduction (greedy optimal, Liu gets odd-ranked pieces, payoff = alternating sum D, Liu share = (1+D)/2). Although the file says 'proved', no proof is written anywhere: the parity reduction, matching formula, Part A sketch, and Part B discussion all take the alternating-sum model as given, and the only support offered is brute-force/grid verification (n=1,2,3), i.e., small cases. Under the rubric, obligation (R) — reduction of the claiming phase to an alternating sum of sorted lengths — must be established as an argument, and asserted or numerically tested claims get no credit. Nothing in the 'Full proof' section (marked 'in progress') supplies it either. So the witness is correct: the reduction is asserted, not proved, in this text, leaving the write-up incomplete with respect to (R)."
+ }
+}

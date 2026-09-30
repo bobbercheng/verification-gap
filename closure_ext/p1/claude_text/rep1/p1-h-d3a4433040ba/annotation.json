@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-d3a4433040ba",
+  "problem": "1",
+  "sha256": "d3a4433040ba70543dd5b34568dbf78e8503bc59484ba6f07cad51e488ae03ed",
+  "path": "checkpoint_inputs_ext/d3a4433040ba70543dd5b34568dbf78e8503bc59484ba6f07cad51e488ae03ed.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p1-deedy-gpt-5.6-sol-final"
+  ],
+  "bytes": 5288,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4346,
+        "output_tokens": 836,
+        "output_tokens_details": {
+          "thinking_tokens": 555
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 836,
+            "cache_read_input_tokens": 4346,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic (Omega-sum, count of nonunits) monovariant plus 'a move always leaves an entry >1' (lcm=gcd forces m=n)",
+    "upper_bound_mechanism": "invariance of G_p = gcd of p-adic valuations via gcd(min(a,b),|a-b|)=gcd(a,b)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: explicit M formula, valuation description of the move, lexicographic termination with the 'at least one nonunit survives' step, and gcd-of-valuations invariance (identity covers equal/zero valuation cases, all-zero convention stated). Only a cosmetic unclosed display bracket."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "gpt56-ours-timeout",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "path": "checkpoint_inputs/7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29.md",
+  "bytes": 8900,
+  "sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3165,
+        "output_tokens": 7770,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 98.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "rank-pair multigraph / bipartite-component argument",
+    "upper_bound_mechanism": "subset-sum pigeonhole + overlay/cancellation construction",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Drafting lemma proved by full induction (minor typo in displayed formula, argument sound). Refinement lemma proved both directions: graph bipartite-component lower bound valid for all replies and parities; overlay construction with cut count ≤ q−1. Binary division attains; pigeonhole matches. Falsified hypotheses clearly labeled, never asserted as answers."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+  "original_bytes": 8900,
+  "input_anonymized": false
+}

@@ -1,0 +1,70 @@
+{
+ "proposer": "claude",
+ "case": "p1-deedy-kimi-k3-final",
+ "problem": "1",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.2,
+  "input_tokens": 2,
+  "output_tokens": 979,
+  "cache_read_input_tokens": 2094,
+  "cache_creation_input_tokens": 4860,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4173,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004267999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 979,
+    "cacheReadInputTokens": 2094,
+    "cacheCreationInputTokens": 4860,
+    "webSearchRequests": 0,
+    "costUSD": 0.074132,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 709,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Move description (min, |diff|) and the no-two-ones fact are given; termination uses product-halving for gcd>1 plus the monotone count of ones for gcd=1, with an explicit move bound; 'at least one >1' proved by induction; prime-wise gcd invariance covers equal and zero valuations. Answer explicit and correct."
+ },
+ "anchors": {}
+}

@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-deepseek-v4-pro-final",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 6.9,
+  "input_tokens": 2,
+  "output_tokens": 399,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 3117,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1671,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001761,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 399,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 3117,
+    "webSearchRequests": 0,
+    "costUSD": 0.041155,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 69,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quoted line appears verbatim under \"We need a rigorous proof\" and is followed by the open question \"Strategy for X?\", i.e. the write-up itself flags the upper bound as unfinished; the \"Full proof\" section reads only \"(To be completed)\". Scanning the whole text, nothing constructs a Xiang reply with at most n marks against an arbitrary Liu division: only brute-force small-n searches (n=1,2, tentative n=3) and a conjectured value are recorded, and even that conjectured target ((n+1)/(2n+1)) is not the correct c_n = 2^n/(2^(n+1)-1). No subset-sum/pigeonhole gap argument or overlay construction is present. Hence the upper-bound obligation is entirely unmet, and no guaranteed-value bound is established."
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4175,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.00428,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1367,
+    "cacheReadInputTokens": 819,
+    "cacheCreationInputTokens": 4919,
+    "webSearchRequests": 0,
+    "costUSD": 0.0837845,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1089,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 4919,
+   "cache_read_input_tokens": 819,
+   "output_tokens": 1367,
+   "output_tokens_details": {
+    "thinking_tokens": 1089
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 4919,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1367,
+     "cache_read_input_tokens": 819,
+     "cache_creation_input_tokens": 4919,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 4919
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 18958,
+  "is_error": false,
+  "elapsed_seconds": 19.7,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"grade\": 7, \"complete\": true, \"main_gap\": \"none\", \"errors\": [{\"description\": \"Typo in the coprime case: with g=1 one has \\u2113 = lcm(m,n)/gcd = mn, not m+n. The very next clause correctly states the pair becomes (1, mn), and the inequality \\u2113 > 1 holds either way, so the argument is unaffected.\", \"quote\": \"*Type B: $g = 1$.* Then $\\\\ell = m+n \\\\ge 2\\\\cdot 2 = 4 > 1$\"}], \"notes\": \"Termination via product/zero-count potential is correct and quantitative; the prime-wise gcd-of-valuations invariant is proved cleanly, including the all-zero convention, and correctly evaluated at the terminal state. Computer checks are decorative, not load-bearing.\"}"
+   }
+  ]
+ }
+}

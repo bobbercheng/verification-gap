@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__p5-nemotron-2587b733-v2__e0",
+ "case": "p5-nemotron-2587b733-v2",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 70.0,
+  "input_tokens": 2,
+  "output_tokens": 5627,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 4361,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3886,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003986,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 5627,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 4361,
+    "webSearchRequests": 0,
+    "costUSD": 0.18543600000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 5211,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.4",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Expanding (4) at x=x_0+nc, y=y_0+me gives (cn-em)^2 + (2c-4e)c·n + 2ce·m + const; the raw n-coefficient is 2c(c-2e), not 4c(c-e), and the m-term 2ce·m is unbounded. The displayed 4c(c-e)n is correct only after substituting em = cn + (em-cn), i.e. 2c y_m = 2c y_0 + 2c^2 n + 2c(em-cn), so the residual is 2c(em-cn)+const = O(1) precisely along |cn-em|<1 (and =const in Case 1, using cq=ep). The write-up never performs this regrouping; it asserts \"+O(1)\" in Case 2 while (5) only guarantees O(n+m), which cannot be dominated by a linear negative term. Decisive step asserted, not proved; one added sentence repairs it.",
+  "objection_correct_note": null
+ },
+ "elsewhere_anchor": null
+}

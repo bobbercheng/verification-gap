@@ -1,0 +1,67 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 813,
+    "cacheReadInputTokens": 3484,
+    "cacheCreationInputTokens": 5079,
+    "webSearchRequests": 0,
+    "costUSD": 0.072867,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 648,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5079,
+   "cache_read_input_tokens": 3484,
+   "output_tokens": 813,
+   "output_tokens_details": {
+    "thinking_tokens": 648
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5079,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 813,
+     "cache_read_input_tokens": 3484,
+     "cache_creation_input_tokens": 5079,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5079
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 10996,
+  "is_error": false,
+  "elapsed_seconds": 12.5,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"grade\": 7, \"complete\": true, \"main_gap\": \"none\", \"errors\": [], \"notes\": \"Termination via lexicographic (P,K) is correct: product drops by gcd(m,n) when it exceeds 1, else count of nonunits drops. Terminal board has exactly one nonunit. Primewise gcd of exponent vector is an invariant (Euclid on (a,b)->(min,|a-b|), valid with zeros), forcing v_p(M). Both parts fully proved.\"}"
+   }
+  ]
+ }
+}

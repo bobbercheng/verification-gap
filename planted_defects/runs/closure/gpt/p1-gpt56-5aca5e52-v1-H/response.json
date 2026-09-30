@@ -1,0 +1,45 @@
+{
+ "status": 200,
+ "response": {
+  "model": "gpt-5.6-sol",
+  "cli": "codex",
+  "reasoning_effort": "high",
+  "usage": {
+   "input_tokens": 16892,
+   "cached_input_tokens": 10624,
+   "cache_write_input_tokens": 0,
+   "output_tokens": 578,
+   "reasoning_output_tokens": 446
+  },
+  "events": [
+   "item.completed",
+   "thread.started",
+   "turn.completed",
+   "turn.started"
+  ],
+  "stop_reason": "end_turn",
+  "elapsed_seconds": 16.0,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"answer\":2,\"reduction\":2,\"lower_bound\":1,\"upper_bound\":2,\"lower_bound_mechanism\":\"lexicographic descent of (product, nonunit count)\",\"upper_bound_mechanism\":\"primewise valuation-gcd invariant\",\"wrong_answer_stated\":false,\"notes\":\"The termination mechanism is correct in intent, but its key calculation incorrectly states lcm(m,n)=mn/g^2; actually lcm(m,n)=mn/g. The subsequently asserted P'=P/g is correct but does not follow from the displayed calculation, leaving a gap. The survivor and invariance arguments are complete.\"}"
+   }
+  ],
+  "attempts": [
+   {
+    "attempt": 0,
+    "status": 200,
+    "stop": "end_turn",
+    "usage": {
+     "input_tokens": 16892,
+     "cached_input_tokens": 10624,
+     "cache_write_input_tokens": 0,
+     "output_tokens": 578,
+     "reasoning_output_tokens": 446
+    },
+    "sec": 16.0,
+    "parsed": true
+   }
+  ]
+ }
+}

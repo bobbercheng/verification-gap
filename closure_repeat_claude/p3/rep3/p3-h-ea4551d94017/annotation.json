@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-ea4551d94017",
+  "problem": "3",
+  "sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+  "path": "checkpoint_inputs/ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round4",
+  "turn": 14,
+  "record_ids": [
+    "kimi-k3-round4-t014"
+  ],
+  "bytes": 20480,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 12080,
+        "output_tokens": 587,
+        "output_tokens_details": {
+          "thinking_tokens": 276
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 587,
+            "cache_read_input_tokens": 12080,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 10.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "matching/cost formula for D + super-increasing pieces; component graph with loops, tree component + bipartite sign/triangle inequality gives D >= T_n",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= S/(2^m-1) + greedy realizability lemma for nested absolute differences, executed as halve/cancel cuts leaving all values in even multiplicity except v(B)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: claiming game value proved by induction (odd-index sum), lower bound via matching formula and tree-component argument for all n, upper bound via pigeonhole plus chain-realizability and cancellation construction with cut budget verified. Minor gap: chain value defined on sorted order while lemma yields some ordering."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "p3-h-e9214da8ecf1",
+  "problem": "3",
+  "sha256": "e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0",
+  "path": "checkpoint_inputs/e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-gpt-5.6-sol-pro-final",
+    "gpt-5.6-sol-pro-main-t011"
+  ],
+  "bytes": 3625,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2991,
+        "output_tokens": 580,
+        "output_tokens_details": {
+          "thinking_tokens": 333
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 580,
+            "cache_read_input_tokens": 2991,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division 1:2:...:2^n proposed; proved only for n=1 (conjecture from brute force)",
+    "upper_bound_mechanism": "ad hoc n=1 case analysis of Xiang's single cut; no general construction",
+    "wrong_answer_stated": false,
+    "notes": "Claiming-phase reduction to alternating sum D is fully proved for all n, plus a layer-cake reformulation. Correct closed form appears but explicitly as a conjecture from n=2,3,4 grid search. Only n=1 is settled in both directions; the general refinement theorem is stated as open."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

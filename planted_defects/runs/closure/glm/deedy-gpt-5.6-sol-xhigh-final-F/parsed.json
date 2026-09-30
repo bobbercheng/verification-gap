@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-F",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "F",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 245.9,
+  "input_tokens": 3801,
+  "output_tokens": 16897,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "powers-of-two division + tree-component multigraph on optimal pairs",
+  "upper_bound_mechanism": "subset-sum pigeonhole + cancellation + common-refinement overlay",
+  "wrong_answer_stated": false,
+  "notes": "All mechanisms fully written for all n: induction gives the alternating-sum value; powers-of-two division with bipartite-tree-component graph proves D>=d against every reply; common-refinement lemma with cut count proves the upper bound. One defect: pigeonhole (11) over 2^(n+1)-2 proper sums only yields gap 1/(2^(n+1)-3); including empty/full subsets fixes it, and the needed cases are already handled."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 3801,
+    "output_tokens": 16897,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 245.9,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 2,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

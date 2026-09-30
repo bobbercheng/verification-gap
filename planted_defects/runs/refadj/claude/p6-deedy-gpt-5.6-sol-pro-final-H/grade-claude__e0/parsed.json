@@ -1,0 +1,73 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-H",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "H",
+ "problem": "6",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 17.9,
+  "input_tokens": 2,
+  "output_tokens": 1360,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 5102,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4266,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004356,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1360,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 5102,
+    "webSearchRequests": 0,
+    "costUSD": 0.085898,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 843,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "Let $P$ be the union of all terminal members. It is a finite set of primes. If a prime $p$ occurs in any $C\\in\\mathcal C$, Lemma 2 supplies a terminal $D\\in\\mathcal C$ containing $p$. Therefore every prime occurring in any member of $\\mathcal C$ belongs to $P$.",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The objection is arithmetically right: $D\\setminus\\{p\\}$ has $|D|-1$ primes, so the correct bound is $2^{|D|-1}\\le w(D\\setminus\\{p\\})<a_1$, not $2^{|D|}$. But the conclusion drawn is only that $|D|$ is bounded: $2^{|D|-1}<a_1$ gives $|D|<1+\\log_2 a_1\\le a_1$ for $a_1\\ge 2$, so \"$|D|\\le a_1$\" and the appeal to Lemma 1 (finitely many members of bounded size) stand. Hence the finiteness of terminal members, of $P$, and of $\\mathcal C$ — the write-up's substitute for large-prime erasure — is established; only the exponent in the display is a misprint, fixable by one symbol.",
+  "confidence": 0.9
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 261,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   8353,
+   8614
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

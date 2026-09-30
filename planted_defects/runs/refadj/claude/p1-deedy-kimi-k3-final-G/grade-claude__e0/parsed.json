@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p1-deedy-kimi-k3-final-G",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "G",
+ "problem": "1",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.2,
+  "input_tokens": 2,
+  "output_tokens": 781,
+  "cache_read_input_tokens": 2097,
+  "cache_creation_input_tokens": 4805,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4105,
+    "outputTokens": 23,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.00422,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 781,
+    "cacheReadInputTokens": 2097,
+    "cacheCreationInputTokens": 4805,
+    "webSearchRequests": 0,
+    "costUSD": 0.0686335,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 373,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L1.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Step 3 correctly states the move's effect on valuations, (α,β)↦(min(α,β),|α−β|), and correctly formulates the needed biconditional on common divisors t, but then writes '(standard; details omitted)'. No proof of gcd(α,β)=gcd(min(α,β),|α−β|) (via gcd(x,y)=gcd(x,y−x)) appears, and the equal-valuation case (α=β, giving (α,0)) and zero-valuation cases are not addressed. The only other mention, in 'Current best' ('which preserves gcd's'), is likewise a bare assertion, as is the computer check ('2000 single-move invariant checks'), which is numerical and not credited. Hence the invariance mechanism is named but not argued. A one-sentence insertion of gcd(x,y)=gcd(x,|y−x|) with min/max case analysis repairs it.",
+  "wrong_answer_stated": false
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

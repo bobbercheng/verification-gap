@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-8d1286ceedd9",
+  "problem": "6",
+  "sha256": "8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4",
+  "path": "checkpoint_inputs/8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 12,
+  "record_ids": [
+    "p6-muse-spark-1.1-main-t012"
+  ],
+  "bytes": 135155,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 46144,
+        "output_tokens": 1897,
+        "output_tokens_details": {
+          "thinking_tokens": 1586
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1897,
+            "cache_read_input_tokens": 46144,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 26.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "clutter/blocker stabilization to self-dual intersecting family; 'pure multiple' of a bad minimal hitting set forces change (finiteness unproven for ground-expanding steps)",
+    "upper_bound_mechanism": "sequence = multiples of D once stable, L = lcm(D), T = count of residues; from-start claim only verified on a1=35 and singleton case",
+    "wrong_answer_stated": false,
+    "notes": "Exploratory log. Correct membership characterization and target structure (L=lcm of products, T=residue count). Genuine lemma: blocker intersecting iff every minimal transversal contains an edge. But stabilization/finiteness is explicitly unfinished ('need a more clever finiteness argument'), and global periodicity from n=1 is only checked on examples."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

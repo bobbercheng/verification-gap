@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4950,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005050000000000001,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 9413,
+    "cacheReadInputTokens": 1224,
+    "cacheCreationInputTokens": 5950,
+    "webSearchRequests": 0,
+    "costUSD": 0.295447,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 9087,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5950,
+   "cache_read_input_tokens": 1224,
+   "output_tokens": 9413,
+   "output_tokens_details": {
+    "thinking_tokens": 9087
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5950,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 9413,
+     "cache_read_input_tokens": 1224,
+     "cache_creation_input_tokens": 5950,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5950
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 106784,
+  "is_error": false,
+  "elapsed_seconds": 107.7,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"obligations\": {\"reduction\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null},\n                 \"lower_bound\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null},\n                 \"upper_bound\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}},\n \"S_valid\": 2,\n \"wrong_answer_stated\": false,\n \"notes\": \"Drafting lemma (Liu gets (1+D)/2) proved by induction with explicit sign bookkeeping. Refinement lemma: tree-component/bipartition argument gives D>=Gamma for any <=q-1 cuts; overlay construction gives D<=Gamma within q-1 cuts. Pigeonhole on 2^{n+1} subset sums yields upper bound; powers-of-two lengths give matching lower bound. All steps checked, no gaps found.\"}"
+   }
+  ]
+ }
+}

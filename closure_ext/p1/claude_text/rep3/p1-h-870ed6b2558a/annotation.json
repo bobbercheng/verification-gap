@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-870ed6b2558a",
+  "problem": "1",
+  "sha256": "870ed6b2558ae13ae1db10b8c73637148f93e7d1836fe3f18e2347e771f3c26c",
+  "path": "checkpoint_inputs_ext/870ed6b2558ae13ae1db10b8c73637148f93e7d1836fe3f18e2347e771f3c26c.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 1,
+  "record_ids": [
+    "p1-grok-4.5-main-t001"
+  ],
+  "bytes": 1408,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2545,
+        "output_tokens": 920,
+        "output_tokens_details": {
+          "thinking_tokens": 661
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 920,
+            "cache_read_input_tokens": 2545,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "count of entries >1 plus product monovariant (sketched)",
+    "upper_bound_mechanism": "gcd of p-adic valuations claimed invariant (asserted)",
+    "wrong_answer_stated": false,
+    "notes": "Outline only; 'Full proof' section explicitly deferred. Correct final value M = prod p^{g_p} stated explicitly. Termination monovariant (k nonincreasing, product drops when k constant) and non-vanishing (product of outputs = lcm > 1) are named but not written out; move's valuation description (min, |x-y|) absent; invariance of g_p merely asserted, no case analysis."
+  },
+  "S": 0,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

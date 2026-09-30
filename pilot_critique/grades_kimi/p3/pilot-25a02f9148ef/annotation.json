@@ -1,0 +1,34 @@
+{
+  "id": "pilot-25a02f9148ef",
+  "lineage": "pilot",
+  "model": "pilot",
+  "context": null,
+  "turn": null,
+  "path": "pilot_critique/p3-high-N-r1/output.md",
+  "bytes": 12481,
+  "sha256": "25a02f9148ef9d0100689e342763065fd8f063f2d523c11c94a9db597e0f9719",
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 124.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-rank majorization by induction (sum of v_{2i} <= 2^n - 2^{n-r})",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/N plus greedy equal-pair cancellation with cut count",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct all-n proof. Lemma 1 gives rigorous pairing strategies for the odd-sum reduction; Lemma E inducts on rank pairs handling arbitrary interleaving; upper bound uses sorted subset-sum gaps plus a cancellation procedure with careful count |P|+|Q|=c+2f+ℓ ≤ n marks and legality check. No gaps found."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

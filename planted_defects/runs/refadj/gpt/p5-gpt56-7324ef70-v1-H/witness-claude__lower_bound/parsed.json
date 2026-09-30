@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-H",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "H",
+ "problem": "5",
+ "objection_key": "witness-claude__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.7,
+  "input_tokens": 17749,
+  "output_tokens": 360,
+  "reasoning_output_tokens": 227,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L5.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "For f(x)=x+C, the middle term is (x+y+C)/2. The displayed (x+y+2C)/2 is false and is not the arithmetic mean of x and y+C; the stated counterexample is valid. The surrounding RMS–AM–GM argument would establish sufficiency after replacing 2C by C, so this is a one-symbol false display rather than a missing lemma."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "lower_bound"
+}

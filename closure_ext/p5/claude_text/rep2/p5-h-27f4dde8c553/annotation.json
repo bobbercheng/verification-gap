@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-27f4dde8c553",
+  "problem": "5",
+  "sha256": "27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0",
+  "path": "checkpoint_inputs_ext/27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "2587b733",
+  "turn": 1,
+  "record_ids": [
+    "p5-nemotron-2587b733-v1"
+  ],
+  "bytes": 2982,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3751,
+        "output_tokens": 3453,
+        "output_tokens_details": {
+          "thinking_tokens": 3132
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3453,
+            "cache_read_input_tokens": 3751,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 42.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "direct verification: both inequalities reduce to (x-y-c)^2 >= 0 for all x,y>0, c>=0",
+    "upper_bound_mechanism": "orbit iteration in expanded right inequality (linear-term sign) + connectedness/closeness argument excluding mixed fixed/non-fixed case",
+    "wrong_answer_stated": false,
+    "notes": "S and V complete and correct. Necessity: mixed-case exclusion (step 4) is essentially rigorous via connectedness plus (x0-y0)^2 >= c^2+2c(x0+y0). But step 3's 'all positive d equal' asserts the quadratic part (cn-em)^2 is harmless and the linear term dominates without choosing n,m keeping cn-em bounded (density/approximation step omitted) — a real gap."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

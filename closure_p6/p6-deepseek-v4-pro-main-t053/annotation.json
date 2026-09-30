@@ -1,0 +1,61 @@
+{
+  "id": "p6-deepseek-v4-pro-main-t053",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 53,
+  "path": "checkpoint_inputs/1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897.md",
+  "bytes": 4597,
+  "sha256": "1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 1289,
+        "output_tokens": 12000,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 142.1,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1929,
+        "output_tokens": 492,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 7.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "finiteness of minimal transversals (sketched, unproven)",
+    "upper_bound_mechanism": "union of residue classes modulo M (incomplete)",
+    "wrong_answer_stated": false,
+    "notes": "Outline only; 'Full proof' empty. Step 3 (characterization) and step 5-7 (periodicity) asserted but not proved; key finiteness lemma admitted unfinished ('One shows...'). Periodicity from n=1 explicitly left as 'need to check'. No mechanism fully written out."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897",
+  "original_bytes": 4597,
+  "input_anonymized": false
+}

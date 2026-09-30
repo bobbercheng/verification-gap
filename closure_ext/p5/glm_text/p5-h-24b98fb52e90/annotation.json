@@ -1,0 +1,48 @@
+{
+  "id": "p5-h-24b98fb52e90",
+  "problem": "5",
+  "sha256": "24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931",
+  "path": "checkpoint_inputs_ext/24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 39,
+  "record_ids": [
+    "p5-deepseek-v4-pro-main-t039",
+    "p5-deepseek-v4-pro-main-t043",
+    "p5-deedy-deepseek-v4-pro-final"
+  ],
+  "bytes": 10024,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3971,
+        "output_tokens": 8366,
+        "cache_read_input_tokens": 1152,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 94.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM on x and y+c",
+    "upper_bound_mechanism": "iterate comparison (rational/irrational density) + fixed-point separation with covering argument",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Structural identity derived at x=f(y); orbits are APs with g>=0; inequality (7) plus iterate comparison (rational ratio exactly, irrational via density) yields at most one positive value; mixed case killed via |x-y|>c, backward induction to u in (0,c], covering argument. Sufficiency via QM-AM-GM. Minor typo (4cx vs 4cy) harmless."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

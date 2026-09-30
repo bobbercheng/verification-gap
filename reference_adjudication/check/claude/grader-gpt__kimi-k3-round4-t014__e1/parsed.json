@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__kimi-k3-round4-t014__e1",
+ "case": "kimi-k3-round4-t014",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 36.7,
+  "input_tokens": 2,
+  "output_tokens": 2740,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 11651,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9479,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009574,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2740,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 11651,
+    "webSearchRequests": 0,
+    "costUSD": 0.1858415,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2307,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "sentence",
+  "explanation": "The objection's local point is correct: v(B) is defined via the decreasing ordering, while Lemma 4.1 and Theorem 4.2's proof only produce some (greedy) ordering with nested difference g, and the two need not coincide. However, the substance of L3.2 is present: Lemma 4.1 explicitly constructs an ordering e_1,...,e_r with R_k=|R_{k-1}-e_k| ending at |ΣP-ΣN|=g ≤ 1/(2^{n+1}-1), and XY's strategy processes the chain elements sequentially by exactly this recursion (running value, set-aside equal pairs, ≤ r-1 cuts, then bisect the rest), so it works verbatim for the constructed ordering. Only the sorted labeling 'b_1 ≥ ... ≥ b_r' / the definition of v(B) is wrong; relabeling B in the constructed order (one sentence) repairs it.",
+  "elsewhere_quote_note": null
+ },
+ "elsewhere_anchor": null
+}

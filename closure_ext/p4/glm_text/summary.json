@@ -1,0 +1,1163 @@
+{
+  "annotator": "glm-5.3",
+  "items": [
+    {
+      "id": "p4-h-f8938f118ca0",
+      "problem": "4",
+      "sha256": "f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3",
+      "path": "checkpoint_inputs_ext/f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 5,
+      "record_ids": [
+        "p4-claude-fable-5-main-t005",
+        "p4-deedy-claude-fable-5-final"
+      ],
+      "bytes": 11887,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4782,
+            "output_tokens": 3879,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 57.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "chain lemma (induction on kθ) + double-threat cut at largest angle",
+        "upper_bound_mechanism": "safe-triangle invariant (angles outside θℕ) with 4-case closure",
+        "wrong_answer_stated": false,
+        "notes": "Complete proof. Lemma 0 parametrizes cuts; Lemma 1 (chain induction) handles both discard choices with α=θ∈(0,kθ); Lemma 2 double-threat cut (n≥3 and n=2 cases) puts multiples of θ in both children; Lemmas 3–4 give Shan-Yu's safe invariant, using 180∉θℕ in case 4. Answer θ=180°/n explicit. No gaps."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-793ec386e18e",
+      "problem": "4",
+      "sha256": "793ec386e18ec41bf4c327ef874eaca641feb560d08e9051ab0c9fb0b2c25a8d",
+      "path": "checkpoint_inputs_ext/793ec386e18ec41bf4c327ef874eaca641feb560d08e9051ab0c9fb0b2c25a8d.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 5,
+      "record_ids": [
+        "p4-deepseek-v4-pro-main-t005"
+      ],
+      "bytes": 1639,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1372,
+            "output_tokens": 968,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 15.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only: problem restated, heuristic depth-3 computer search, and hedged conjectures ('all rational multiples of 180' or 'power-of-2 denominators'). No proof content; 'Full proof (not yet complete)'. Search even suggested 30° and 36° losing, contradicting the correct answer, but nothing is definitively asserted."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-459e07a52e70",
+      "problem": "4",
+      "sha256": "459e07a52e70e58b20fb2486669d8e2dc4d35e357343efd58f84962c6e034e30",
+      "path": "checkpoint_inputs_ext/459e07a52e70e58b20fb2486669d8e2dc4d35e357343efd58f84962c6e034e30.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 13,
+      "record_ids": [
+        "p4-deepseek-v4-pro-main-t013",
+        "p4-deedy-deepseek-v4-pro-final"
+      ],
+      "bytes": 2172,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1539,
+            "output_tokens": 5841,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 92.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "one-move split making both pieces contain θ, worked only for θ=90° and conditional on both other angles <90°",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Tracking file, not a proof. No kθ induction lemma (only a question mark) and no Shan-Yu avoidance/safe-angle argument; search-based 'loses' claims uncredited. Winning side has just a conditional θ=90° one-move sketch, vertex-choice/existence gap. Answer never settled; floated conjectures (complement of 180/n, or only 90°) are wrong."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-b98ad9eb5d44",
+      "problem": "4",
+      "sha256": "b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1",
+      "path": "checkpoint_inputs_ext/b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 3,
+      "record_ids": [
+        "p4-gpt-5.6-sol-main-t003",
+        "p4-deedy-gpt-5.6-sol-final"
+      ],
+      "bytes": 7126,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2063,
+            "output_tokens": 3316,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 55.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "interval lemma forces both children to have integral multiple of θ, then induction descent splitting mθ into θ+(m−1)θ",
+        "upper_bound_mechanism": "mod θℤ nonzero-class 'safe triangle' invariant",
+        "wrong_answer_stated": false,
+        "notes": "Complete both ways. Lemma 1 fully proved (including all-angles-≤1, N=2 case); cut point existence shown via 0<x<a; both children shown winning, covering every discard. Descent handles m=1 base and both discard choices. Necessity quotient-group argument covers all four pairings and uses 180∉θℤ exactly where needed."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-4eb42a7830fb",
+      "problem": "4",
+      "sha256": "4eb42a7830fbb66541ac02a8772b7a6e5ec62b13a271959f7b861b6332cdeae4",
+      "path": "checkpoint_inputs_ext/4eb42a7830fbb66541ac02a8772b7a6e5ec62b13a271959f7b861b6332cdeae4.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 1,
+      "record_ids": [
+        "p4-gpt-5.6-sol-max-main-t001"
+      ],
+      "bytes": 1971,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 520,
+            "output_tokens": 6848,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 122.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "grid-point cut giving both children an integer multiple of t=1/n (sketch, in progress)",
+        "upper_bound_mechanism": "acute/non-obtuse child retention for θ>90 (asserted, unproved)",
+        "wrong_answer_stated": false,
+        "notes": "Correct set θ=180°/n appears only as a 'leading conjecture'. (K)/(W) exist solely as an in-progress sketch: cut near largest angle so both P-angles are complementary multiples of t; no induction, no n=2 case, entry move unproved. (A) declared open; only an asserted acute-triangle idea for θ>90. Nothing is proved."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-dcc0680e3d90",
+      "problem": "4",
+      "sha256": "dcc0680e3d90f47f49d2d2f14bc8c5509e52af15e4e23cd97ece850ef207a14f",
+      "path": "checkpoint_inputs_ext/dcc0680e3d90f47f49d2d2f14bc8c5509e52af15e4e23cd97ece850ef207a14f.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 8,
+      "record_ids": [
+        "p4-gpt-5.6-sol-max-main-t008"
+      ],
+      "bytes": 3690,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 962,
+            "output_tokens": 7204,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 118.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "recursive kt-reduction lemma (proved); complementary-grid-angle initialization only sketched, grid-point existence gap",
+        "upper_bound_mechanism": "acute/non-obtuse retention for θ>90° only",
+        "wrong_answer_stated": false,
+        "notes": "Correct set θ=180°/n stated only as a conjecture. Recursive kt-lemma is fully proved by induction, both children carry multiples of t and both discard choices handled. Winning direction lacks universal initialization (grid-point existence and n=2 open). Avoidance is a one-line acute-retention claim for θ>90° only; safe-angle invariant absent, main case admitted unsolved."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-788aced15a04",
+      "problem": "4",
+      "sha256": "788aced15a042ec790b8827c4f5b5a4e9f64f8298c61007f6bfab1fa3eeecb1d",
+      "path": "checkpoint_inputs_ext/788aced15a042ec790b8827c4f5b5a4e9f64f8298c61007f6bfab1fa3eeecb1d.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 11,
+      "record_ids": [
+        "p4-gpt-5.6-sol-max-main-t011",
+        "p4-deedy-gpt-5.6-sol-max-final"
+      ],
+      "bytes": 7827,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2297,
+            "output_tokens": 5066,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 84.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "integer-in-interval cut giving both children angle k/n, then induction on k",
+        "upper_bound_mechanism": "safe-triangle invariant (no angle an integer multiple of t), four-case sum/difference argument",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct. Answer θ=180/n, n≥2. Sufficiency: interval of length nA>1 yields m so both children carry k/n; n=2,3 edge cases and cut existence proved; induction on k covers every discard. Necessity: equilateral safe start; four-case argument uses t≠1/n exactly."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-9a62517b51bc",
+      "problem": "4",
+      "sha256": "9a62517b51bcf5a9e01a8ff0a2b463ee7317cd3c8eaf9db95ec5c4caa1d027d9",
+      "path": "checkpoint_inputs_ext/9a62517b51bcf5a9e01a8ff0a2b463ee7317cd3c8eaf9db95ec5c4caa1d027d9.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 1,
+      "record_ids": [
+        "p4-gpt-5.6-sol-pro-main-t001"
+      ],
+      "bytes": 1043,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 79,
+            "output_tokens": 292,
+            "cache_read_input_tokens": 1152,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 4.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only; explicitly marked unsolved. No answer, no lemma (K), no Mulan winning strategy (W), no Shan-Yu avoidance strategy (A). Only a vague note that modeling via angle measures was begun."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-14f66095291e",
+      "problem": "4",
+      "sha256": "14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed",
+      "path": "checkpoint_inputs_ext/14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 2,
+      "record_ids": [
+        "p4-gpt-5.6-sol-pro-main-t002",
+        "p4-deedy-gpt-5.6-sol-pro-final"
+      ],
+      "bytes": 6485,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1610,
+            "output_tokens": 3852,
+            "cache_read_input_tokens": 1152,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 68.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "integer-angle induction (split mθ into θ+(m−1)θ) plus interval cut (b, a+b) making both children carry integer multiples; N=2 case handled",
+        "upper_bound_mechanism": "Shan-Yu nonintegral-angle invariant from equilateral start with four-case check",
+        "wrong_answer_stated": false,
+        "notes": "Complete proof. Cut realizability (any 0<x<a) proved; induction lemma makes both children winning. Sufficiency covers all triangles, all discards, and N=2 explicitly. Necessity: four-case argument uses s non-integer exactly; safe child always exists. Answer θ=180°/N, N≥2, correct."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-8f044a272117",
+      "problem": "4",
+      "sha256": "8f044a272117a8df4312b5ae28d065ca2fb3358dd7b8f3474e611bb76c9cf262",
+      "path": "checkpoint_inputs_ext/8f044a272117a8df4312b5ae28d065ca2fb3358dd7b8f3474e611bb76c9cf262.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 2,
+      "record_ids": [
+        "p4-gpt-5.6-sol-xhigh-main-t002"
+      ],
+      "bytes": 1475,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 202,
+            "output_tokens": 1205,
+            "cache_read_input_tokens": 1152,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 19.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file marked 'unsolved'. Contains only a correct angle-coordinate reformulation of a cut (triples (B,x,A+C−x) and (C,A−x,B+x)) and a mention of finite-horizon winning sets. No answer, no induction lemma (K), no winning or avoidance strategy; nothing creditable."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-404415785358",
+      "problem": "4",
+      "sha256": "404415785358dca16deb9d46aaf4a986fc13762ffa665b1ee87492fb1940fdad",
+      "path": "checkpoint_inputs_ext/404415785358dca16deb9d46aaf4a986fc13762ffa665b1ee87492fb1940fdad.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 3,
+      "record_ids": [
+        "p4-gpt-5.6-sol-xhigh-main-t003"
+      ],
+      "bytes": 2487,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 467,
+            "output_tokens": 5505,
+            "cache_read_input_tokens": 1152,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 99.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "kθ-precursor split via interval lemma (existence of k left unproved)",
+        "upper_bound_mechanism": "safe-triangle invariant (four-case analysis asserted, not written)",
+        "wrong_answer_stated": false,
+        "notes": "Correct boxed answer θ=180°/n, n≥2. All mechanisms appear only as tracking-file bullet sketches; 'full proof being formalized'. Induction lemma asserted one-line; interval lemma for k explicitly unfinished; safety case analysis and Shan-Yu's initial safe triangle never written out."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-43ca23749f7e",
+      "problem": "4",
+      "sha256": "43ca23749f7ecdc084bc699e211e57eb73469d443e1b8b19ca2c45f7c7c5fb8e",
+      "path": "checkpoint_inputs_ext/43ca23749f7ecdc084bc699e211e57eb73469d443e1b8b19ca2c45f7c7c5fb8e.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 7,
+      "record_ids": [
+        "p4-gpt-5.6-sol-xhigh-main-t007",
+        "p4-deedy-gpt-5.6-sol-xhigh-final"
+      ],
+      "bytes": 8913,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2256,
+            "output_tokens": 4140,
+            "cache_read_input_tokens": 1152,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 73.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "cut-point split into kθ and (n−k)θ plus induction Lemma 1",
+        "upper_bound_mechanism": "safe-triangle invariant (no angle a positive integer multiple of θ)",
+        "wrong_answer_stated": false,
+        "notes": "Complete and rigorous. Lemma 1 (mθ forces win) proved by induction with both discard branches handled. Sufficiency: integer-between lemma yields cut making both children carry kθ and (n−k)θ, case n=2 included; cut existence shown. Necessity: safe-triangle invariant with four-case contradiction, using 180∉θZ exactly in case 4. Answer θ=180°/n, n≥2."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-ca6c9452996c",
+      "problem": "4",
+      "sha256": "ca6c9452996c8b92e9e3234479ed2b36856ed8e4c7f4ef9d3ef2f2f13f8eac3a",
+      "path": "checkpoint_inputs_ext/ca6c9452996c8b92e9e3234479ed2b36856ed8e4c7f4ef9d3ef2f2f13f8eac3a.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 2,
+      "record_ids": [
+        "p4-grok-4.5-main-t002",
+        "p4-deedy-grok-4.5-final"
+      ],
+      "bytes": 998,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 262,
+            "output_tokens": 303,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 5.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Empty tracking file: status 'unsolved', no approaches, no proof. No answer, no lemmas, no strategies for either direction. Nothing to grade beyond the problem restatement."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-25c5ce51b7e0",
+      "problem": "4",
+      "sha256": "25c5ce51b7e0a913a5bb986febfeb1255711ab9824ffff55f6085b23fd398f89",
+      "path": "checkpoint_inputs_ext/25c5ce51b7e0a913a5bb986febfeb1255711ab9824ffff55f6085b23fd398f89.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-main",
+      "turn": 20,
+      "record_ids": [
+        "p4-kimi-k3-main-t020"
+      ],
+      "bytes": 12381,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4041,
+            "output_tokens": 6334,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 102.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "round-up cut making both halves marked + halving-lemma induction",
+        "upper_bound_mechanism": "invariant: no angle an integer multiple of θ, from equilateral triangle",
+        "wrong_answer_stated": false,
+        "notes": "Complete rigorous solution. Lemma 0 gives cut formulas with IVT existence of α. Lemma 1: induction on k, both halves carry multiples of θ. Theorem 1: round-up cut makes both halves marked; Claim 2's contradiction handles n=2; all discards covered. Theorem 2: exhaustive three-case maintenance of the unmarked invariant, using θ≠180°/m exactly where needed."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-3c87e40d7e02",
+      "problem": "4",
+      "sha256": "3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248",
+      "path": "checkpoint_inputs_ext/3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p4-deedy-kimi-k3-final"
+      ],
+      "bytes": 12563,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 127,
+            "output_tokens": 5705,
+            "cache_read_input_tokens": 4928,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 89.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "round-up cut making both halves carry a multiple of θ, then halving-lemma induction on k",
+        "upper_bound_mechanism": "safe-triangle invariant (no angle a multiple of θ), 3-case cut analysis",
+        "wrong_answer_stated": false,
+        "notes": "Complete rigorous proof. Lemma 0 gives cut formulas with IVT existence; Lemma 1 is full induction handling both discards. Theorem 1 works for all n≥2 (n=2 handled in Claim 2), both halves marked. Theorem 2's case analysis is exhaustive, using 180° not a multiple of θ exactly where needed. Computer checks are supplementary only."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-220590cd38ed",
+      "problem": "4",
+      "sha256": "220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181",
+      "path": "checkpoint_inputs_ext/220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": "muse-spark-1.1-main",
+      "turn": 2,
+      "record_ids": [
+        "p4-muse-spark-1.1-main-t002"
+      ],
+      "bytes": 9420,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3251,
+            "output_tokens": 8978,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 151.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "residue cut x ≡ −p (mod θ) making both children carry multiples, then descent kθ → θ+(k−1)θ; n=2 via x=90−p",
+        "upper_bound_mechanism": "safe-triangle invariant (no angle an integer multiple of θ), four-case child analysis using 180 ∉ θℤ",
+        "wrong_answer_stated": false,
+        "notes": "Complete correct proof. Section 2 gives the induction lemma (both pieces carry multiples, all discards covered). Sections 1 and 3 give full Mulan strategies incl. n=2, both children winning, cut existence verified. Section 4 proves safe-set preserved by any cut, exactly using 180 not a multiple; initial safe triangle existence argued."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-2c885229d69d",
+      "problem": "4",
+      "sha256": "2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc",
+      "path": "checkpoint_inputs_ext/2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": "muse-spark-1.1-main",
+      "turn": 5,
+      "record_ids": [
+        "p4-muse-spark-1.1-main-t005",
+        "p4-deedy-muse-spark-1.1-final"
+      ],
+      "bytes": 8787,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3141,
+            "output_tokens": 6294,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 100.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "W_k two-sided closure: cut max angle with r=(k+1)θ−p so both children carry multiples, then descend kθ→θ+(k−1)θ; n=2 handled by explicit 90−p cut",
+        "upper_bound_mechanism": "Safe set I (no kθ angle) invariant; four-case child lemma, case 180=(k1+k3)θ uses 180 not a multiple of θ; Shan-Yu always keeps safe child",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct. Answer θ=180°/n, n≥2, explicit. Cut model (1) is verified correct. Level-k induction makes kθ universally winning with BOTH children multiples; n=2 one-move cut fully written; avoidance lemma covers all cuts and discards, using 180∉θZ exactly. Initial safe triangle existence terse but justified by finiteness of M."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-bc0c538d972f",
+      "problem": "4",
+      "sha256": "bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e",
+      "path": "checkpoint_inputs_ext/bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "0d682cd0",
+      "turn": 1,
+      "record_ids": [
+        "p4-glm52-0d682cd0-v1"
+      ],
+      "bytes": 7667,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2749,
+            "output_tokens": 5009,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 83.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "kθ-induction lemma (both pieces winning) + interval cut placing a θ-multiple in each piece, with n=2 special case",
+        "upper_bound_mechanism": "safe-triangle trap (all angles non-θ-multiples), equilateral start, four-case sum/difference closure",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct. The kθ lemma is proved by strong induction with both pieces winning, so every discard is covered; Case B's interval argument and the n=2 case handle all triangles. Shan-Yu's trap is fully verified, using θ∤180 exactly. Numerics are correctly labelled as non-proof evidence."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-4d0a20e17bde",
+      "problem": "4",
+      "sha256": "4d0a20e17bde319101c4be5c8c765c5af406b1af9e2c351c2adb53436fd96382",
+      "path": "checkpoint_inputs_ext/4d0a20e17bde319101c4be5c8c765c5af406b1af9e2c351c2adb53436fd96382.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": "affe2f21",
+      "turn": 1,
+      "record_ids": [
+        "p4-gpt56-affe2f21-v1"
+      ],
+      "bytes": 6805,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1950,
+            "output_tokens": 4277,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 73.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "largest-angle cut creating kθ so both children carry integral multiples + Lemma 1 induction; n=2 handled separately",
+        "upper_bound_mechanism": "clean-triangle invariant (no angle a positive multiple of θ), four-case sum/difference argument, equilateral start",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct. Lemma 1's induction makes both children multiples of θ; the n≥3 manufacturing cut (kθ in (A,A+C)) is proved legal and leaves both children winning; n=2 case fully worked. Clean-invariant four-case argument uses 180∉ℤθ exactly; equilateral start verified. Computer section explicitly marked non-proof."
+      },
+      "S": 2,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-442b65045661",
+      "problem": "4",
+      "sha256": "442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8",
+      "path": "checkpoint_inputs_ext/442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "0da3d62d",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-0da3d62d-v1"
+      ],
+      "bytes": 4231,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1423,
+            "output_tokens": 15165,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 243.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Answer 'θ ≤ 90°' is wrong. The cut parametrization is false: the two split angles sum to C, so both pieces cannot both receive angle β. The 1- and 2-move 'wins' ignore Shan-Yu's discard. Part 2 covers only θ>90°; its invariant fails (θ=95°, triangle 85/85/10, cut A at 42.5°) and '180−C−θ<0 since C<θ' is invalid."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-814626794ac9",
+      "problem": "4",
+      "sha256": "814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a",
+      "path": "checkpoint_inputs_ext/814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "7912bb42",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-7912bb42-v1"
+      ],
+      "bytes": 11500,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3754,
+            "output_tokens": 8260,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 136.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "immediate-win lemma (angle 2θ) plus dyadic ladder; θ=90° base proven, ladder step invalid",
+        "upper_bound_mechanism": "acute-triangle defense for θ>90°; unproven finite-lattice invariant for 180k/2ⁿ",
+        "wrong_answer_stated": true,
+        "notes": "Correct: one-move win iff an angle is 2θ; θ=90° win proven; θ>90° acute defense essentially proven. Ladder step 'both children get 2θ' is false for θ<45°, so 22.5° etc. unproven; 60°, 30° wrongly excluded. Lattice invariant for 180k/2ⁿ breaks under arbitrary cuts. Conjectured answer 180°/2ⁿ misses all 180/n with n≥3."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-d09e65992b10",
+      "problem": "4",
+      "sha256": "d09e65992b10a57d8fef7512e68d23a17b81a3e0b48b75a56f6e6267c79e547b",
+      "path": "checkpoint_inputs_ext/d09e65992b10a57d8fef7512e68d23a17b81a3e0b48b75a56f6e6267c79e547b.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "7e3e9be3",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-7e3e9be3-v1"
+      ],
+      "bytes": 8871,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2898,
+            "output_tokens": 9114,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 152.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "both-children winning cuts for θ=60°,90° only",
+        "upper_bound_mechanism": "max-angle<θ invariant, complete only for θ>90°",
+        "wrong_answer_stated": true,
+        "notes": "Answer claimed iff {60°,90°} — wrong set, omits 45°,36°,30°,…. Mulan side fully proved only for 90° and 60° (Case 3 ordering A<60<B≤C need not exist, minor slip). No general kθ induction/cut lemma. Avoidance rigorous only for θ>90°; 60–90 is 'one can verify'; θ<60 argument fails (at θ=30° both equilateral children contain 30°) and is hand-waved."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-908b36293a06",
+      "problem": "4",
+      "sha256": "908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e",
+      "path": "checkpoint_inputs_ext/908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "0c164fc0",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-0c164fc0-v1"
+      ],
+      "bytes": 9794,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3381,
+            "output_tokens": 7716,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 128.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "force right angle then θ-split / kθ induction (complete only for θ=90,60,45)",
+        "upper_bound_mechanism": "invariant max angle < θ (proved only for θ>90°)",
+        "wrong_answer_stated": true,
+        "notes": "Stated answer θ≤90° is wrong (correct: θ=180/n). The kθ-induction (cut angle mθ by x=θ, both children carry multiples) is correctly written. Winning direction fully proved only for θ=90°,60°,45°; general θ<60° rests on unproved 'measure decreases', and 60<θ<90 is gappy/false. Avoidance invariant (max angle<θ) complete only for θ>90°."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-7e9068250570",
+      "problem": "4",
+      "sha256": "7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8",
+      "path": "checkpoint_inputs_ext/7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "9a63b14e",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-9a63b14e-v1"
+      ],
+      "bytes": 12849,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3964,
+            "output_tokens": 4676,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 69.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "explicit case analysis: θ=90° (split C with x=90−A) and θ=60° (3 cases) only",
+        "upper_bound_mechanism": "equilateral start + max-angle<θ invariant, proved only for θ>90°",
+        "wrong_answer_stated": false,
+        "notes": "Only special angles proved: θ=90° and θ=60° Mulan wins (both children carry θ, discard choice handled, valid); θ>90° Shan-Yu invariant (correct). Intervals (0°,60°)∪(60°,90°) honestly declared open; no general k·θ induction, no n≥4, no safe-angle/multiple-of-θ invariant; remaining hypotheses flagged untested."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p4-h-440c35229a2f",
+      "problem": "4",
+      "sha256": "440c35229a2f9e2f0e32406bcb086d3a4a9f50600d8d17a854d75251ed9ac8de",
+      "path": "checkpoint_inputs_ext/440c35229a2f9e2f0e32406bcb086d3a4a9f50600d8d17a854d75251ed9ac8de.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "c1c5994c",
+      "turn": 1,
+      "record_ids": [
+        "p4-nemotron-c1c5994c-v1"
+      ],
+      "bytes": 2470,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 866,
+            "output_tokens": 2062,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 33.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "verified only θ=90° and θ=60° cases",
+        "upper_bound_mechanism": "equilateral max-angle invariant for θ>90°",
+        "wrong_answer_stated": false,
+        "notes": "No settled answer; correct family 180°/n appears only as one of three conjectures (C). Only the k=2 split lemma proved, no induction on k. Mulan's win verified only for θ=90°, 60°. Shan-Yu avoidance proved only for θ>90°; open intervals 0–60° and 60–90° unresolved."
+      },
+      "S": 0,
+      "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+      "path_base": "bundle root"
+    }
+  ]
+}

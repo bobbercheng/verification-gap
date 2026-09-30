@@ -1,0 +1,44 @@
+{
+  "id": "deedy-kimi-k3-final",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "path": "checkpoint_inputs/12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c.md",
+  "bytes": 24463,
+  "sha256": "12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 8843,
+        "output_tokens": 9722,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 171.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "matching formula + tree-component argument on super-increasing (geometric 1:2:4:...) split",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap + greedy chain-realizability lemma + bisect/cancel equal-pair construction",
+    "wrong_answer_stated": false,
+    "notes": "Complete all-n proof. Lemma 1.1 (full induction) reduces game to alternating sum. Lower bound: D(M)=min matching cost, loop-aware component graph yields a tree component, tree inequality + margin gives D≥T_n for any refinement. Upper bound: chain theorem via 2^m subset sums and realizability lemma, cut count exactly ≤ n, equal pairs cancel. Answer c=2^n/(2^{n+1}-1) proved."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c",
+  "original_bytes": 24463,
+  "input_anonymized": false
+}

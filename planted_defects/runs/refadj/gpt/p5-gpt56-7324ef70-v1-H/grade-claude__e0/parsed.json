@@ -1,0 +1,42 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-H",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "H",
+ "problem": "5",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 16.9,
+  "input_tokens": 17630,
+  "output_tokens": 504,
+  "reasoning_output_tokens": 287,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L5.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "which is RMS--AM--GM for the positive numbers \\(x\\) and \\(y+C\\). Thus every such \\(C\\) works.",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The displayed middle term should be \\((x+y+C)/2\\), since \\(f(x)+y=x+C+y\\). With \\(2C\\), the displayed chain is indeed false at \\(x=y=C=1\\). However, the following sentence explicitly invokes RMS–AM–GM for \\(x\\) and \\(y+C\\), whose middle term is exactly \\((x+y+C)/2\\), thereby giving the correct all-variable verification. Replacing \\(2C\\) by \\(C\\) repairs the display."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 93,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   4381,
+   4474
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

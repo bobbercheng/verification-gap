@@ -1,0 +1,40 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 2,
+    "completeness": 2,
+    "rigor": 1,
+    "self_contained": 2
+  },
+  "fatal_issues": [
+    "Step 1 contains a mathematically false lemma: 'a finite family of sets without a common element always has a hitting set of size bounded by the maximum size of the sets.' Counterexample: sets {1,2}, {2,3}, {3,4}, ..., {n-1,n} have max size 2 but any hitting set requires size at least n/2. This invalidates the proof that the essential prime set E is non-empty.",
+    "Step 2's argument that non-essential primes cannot obstruct the stabilization is handwavy and lacks a rigorous minimality contradiction.",
+    "Step 4's argument for exact periodicity from n=1 is incomplete and handwavy; it asserts 'the deterministic, time-invariant nature of the recurrence implies that the initial segment must also be consistent with this periodic pattern' without a rigorous proof (e.g., via finite state space determinism or backward induction)."
+  ],
+  "required_fixes": [
+    "Replace Step 1 with a correct proof that E is non-empty. Standard proof: let p be a prime divisor of a_1. Since gcd(a_n, a_1) > 1 for all n, p (or some prime factor of a_1) must divide infinitely many a_n; otherwise there would be a last index N where p divides a_N, and for n > N no term could share a factor with a_1 — contradiction.",
+    "Provide a rigorous proof for Step 2: show that for each p in E, p divides all sufficiently large a_n. Use the minimality of a_{n+1}: if p divides infinitely many terms but misses infinitely many, pick a large n with p | a_n and a larger m with p ∤ a_m; then a_m must hit all earlier p-divisible terms using non-p primes, forcing many distinct prime factors and contradicting minimality of a_m as the next valid integer.",
+    "Rigorize Step 3: prove that for large n, a_n is a multiple of L = prod(E) and a_{n+1} = a_n + L. Show that every a_i (including early terms) shares at least one essential prime with all large terms, so a_n + L hits all previous sets.",
+    "Rigorize Step 4: prove exact periodicity a_{n+T} = a_n + L for all n >= 1. Standard approach: the state of the recurrence (the tuple of residue classes modulo L, or the sequence of prime factor sets) lives in a finite set. The recurrence is deterministic and time-invariant, so the sequence of states is eventually periodic. Show the transient cannot exist by backward induction on the deterministic transition function, or by considering the sequence shifted by T and using minimality of the initial terms."
+  ],
+  "verified_claims": [
+    "The definition of essential primes E and L = prod(E) is appropriate.",
+    "If E is non-empty and eventually all terms are multiples of L, then a_{n+1} = a_n + L for sufficiently large n (Step 3 idea is correct).",
+    "The example with a_1 = 15 giving E = {2,3,5}, L = 30, T = 8 is correct and verifiable.",
+    "The overall theorem statement is correct: there exist positive integers T, L such that a_{n+T} = a_n + L for all n."
+  ],
+  "unverified_claims": [
+    "The false hitting-set-size lemma in Step 1.",
+    "The claim in Step 1 that 'as N grows the minimal hitting set size must tend to infinity (otherwise some prime would be used infinitely often)' — no proof given and not generally true for arbitrary hitting sets.",
+    "The claim in Step 2 that 'p is the only common prime of the a_{n_k}' — not justified; other essential primes could also be common.",
+    "The claim in Step 2 that 'a_n would need a different prime factor for each a_{n_k}, forcing a_n to have arbitrarily many distinct prime factors' — lacks a rigorous minimality contradiction.",
+    "The Step 4 argument that 'the deterministic, time-invariant nature of the recurrence implies that the initial segment must also be consistent with this periodic pattern' — no rigorous proof provided."
+  ],
+  "summary": "The candidate solution correctly identifies the key concepts (essential primes E, product L, eventual arithmetic progression) and the overall proof structure matches the known solution to IMO 2026 P6. However, the proof of the critical first step (E is non-empty) relies on a false combinatorial lemma. Steps 2 and 4 are sketched but lack rigorous justifications. The solution would not receive full marks in a competition setting. Major revisions are needed to fix the fatal gap in Step 1 and to provide complete, rigorous arguments for Steps 2 and 4.",
+  "transfer_assessment": [
+    "The essential-prime / hitting-set framework is a transferable technique for sequences defined by gcd constraints (combinatorial number theory).",
+    "The minimality-forcing-stabilization mechanism (greedy choice forces eventual periodicity) applies to deterministic sequences with finite state spaces and optimality conditions.",
+    "The exact-periodicity-from-eventual-periodicity argument via finite-state determinism is a general dynamical-systems technique."
+  ]
+}

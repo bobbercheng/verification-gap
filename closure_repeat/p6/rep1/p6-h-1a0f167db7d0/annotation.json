@@ -1,0 +1,47 @@
+{
+  "id": "p6-h-1a0f167db7d0",
+  "problem": "6",
+  "sha256": "1a0f167db7d0a3e445df7c089e6f962cfb02954d37e889f26ec2119aeb9f90fb",
+  "path": "checkpoint_inputs/1a0f167db7d0a3e445df7c089e6f962cfb02954d37e889f26ec2119aeb9f90fb.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p6-claude-fable-5-main-t005",
+    "p6-deedy-claude-fable-5-final"
+  ],
+  "bytes": 13571,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5774,
+        "output_tokens": 3444,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 36.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "cheap-witness lemma + geometric descent on member products (Lemmas 6-7)",
+    "upper_bound_mechanism": "residue counting mod M with T=|R|, block bijection m→m+M from n=1 (Step 5)",
+    "wrong_answer_stated": false,
+    "notes": "Complete correct proof. Lemma 2 gives characterization (C); Lemmas 6-7 prove no member contains a prime >a_1 via descent, giving finiteness for all cases; Step 5 assembles L=M, T=|R| and proves a_{n+T}=a_n+L for every n≥1. All arguments written in full, no gaps."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,1739 @@
+{
+ "generated_utc": "2026-09-06 14:47:33 UTC",
+ "python": "3.13.9",
+ "sympy": "1.14.0",
+ "z3": "4.15.4",
+ "script": "scripts/witness_checks.py",
+ "script_sha256": "1c24e66fe4d714c10f9f9e68cc04598fe29817fba23dedb042cad9fdc36abe78",
+ "command": "python3 scripts/witness_checks.py --all",
+ "protocol_note": "post hoc executable certificates (PROTOCOL.md Amendment 1.1); PASS = the computation confirms the objection as recorded in RESULTS.md (p1-board: refutes the earlier counterexample)",
+ "ledger": {
+  "L1.2": "P1 L1.2 invariance: for each prime p, gcd_i v_p(a_i) is unchanged by a move; M = prod_p p^{gcd_i v_p(a_i)}",
+  "L3.2": "P3 L3.2 upper bound: Xiang's reply, universal over Liu's division (Liu <= 2^n/(2^{n+1}-1))",
+  "L3.3": "P3 L3.3 lower bound: Liu's guarantee, universal over Xiang's replies; answer c_n = 2^n/(2^{n+1}-1)",
+  "L5.1": "P5 L5.1 sufficiency: the chain holds for f(x) = x + c with middle term (x+y+c)/2",
+  "L5.3": "P5 L5.3 nonnegative difference: g(x) = f(x) - x >= 0 for every x, needed before any value-set dichotomy",
+  "L6.2": "P6 L6.2 large-prime erasure / finiteness of the relevant prime set for all terms",
+  "none": "no ledger statement (harmless display error inside the necessity argument; checkers: fatal no)"
+ },
+ "not_encoded": [
+  {
+   "case_id": "p6-deedy-gpt-5.6-sol-final",
+   "objection": "Konig-tree step 'Insert c at its first such occurrence...' (witnesses gpt/claude, grader e1)",
+   "reason": "an invalid-inference objection about a proof step; there is no finite object to compute. The false 'finite blocker' fact that the step argues for is certified instead (p6-gpt-transversals)."
+  },
+  {
+   "case_id": "kimi-k3-round4-t014",
+   "objection": "Lemma 1.1 turn order ('moving first on M'' ... guarantees odd(M'')', grader gpt e0)",
+   "reason": "a bookkeeping error about who moves first; nothing beyond counting two moves is computable, so no certificate is written."
+  },
+  {
+   "case_id": "deedy-gpt-5.6-sol-final",
+   "objection": "'each of total length at most (T-d)/2' from 'their uncancelled totals add to T-d' (witness claude, upper_bound)",
+   "reason": "the objection is that a bound on a sum does not bound each summand; the instance a checker offers depends on a reading of the text's undefined 'arrays', so it is not encoded. The arithmetic half of the same witness is certified (p3-strip-count)."
+  }
+ ],
+ "text_receipts": {
+  "cases_json": "witness_discovery/cases.json",
+  "found": true,
+  "texts": {
+   "deedy-gpt-5.6-sol-final": {
+    "problem": "3",
+    "sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs/e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb.md",
+    "recomputed_sha256_matches": true
+   },
+   "deedy-grok-4.5-final": {
+    "problem": "3",
+    "sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs/13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe.md",
+    "recomputed_sha256_matches": true
+   },
+   "deedy-muse-spark-1.1-final": {
+    "problem": "3",
+    "sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs/71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa.md",
+    "recomputed_sha256_matches": true
+   },
+   "deedy-deepseek-v4-pro-final": {
+    "problem": "3",
+    "sha256": "ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs/ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7.md",
+    "recomputed_sha256_matches": true
+   },
+   "kimi-k3-round4-t014": {
+    "problem": "3",
+    "sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs/ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b.md",
+    "recomputed_sha256_matches": true
+   },
+   "p6-gpt-5.6-sol-main-t009": {
+    "problem": "6",
+    "sha256": "6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs/6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3.md",
+    "recomputed_sha256_matches": true
+   },
+   "p6-deedy-gpt-5.6-sol-final": {
+    "problem": "6",
+    "sha256": "fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs/fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de.md",
+    "recomputed_sha256_matches": true
+   },
+   "p6-kimi-k3-round2-t007": {
+    "problem": "6",
+    "sha256": "bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs/bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757.md",
+    "recomputed_sha256_matches": true
+   },
+   "p1-glm52-2ede1c6b-v1": {
+    "problem": "1",
+    "sha256": "e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs_ext/e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55.md",
+    "recomputed_sha256_matches": true
+   },
+   "p5-deepseek-v4-pro-main-t033": {
+    "problem": "5",
+    "sha256": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs_ext/cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523.md",
+    "recomputed_sha256_matches": true
+   },
+   "p5-deepseek-v4-pro-main-t038": {
+    "problem": "5",
+    "sha256": "98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs_ext/98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573.md",
+    "recomputed_sha256_matches": true
+   },
+   "p5-nemotron-2587b733-v2": {
+    "problem": "5",
+    "sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+    "in_cases_json": true,
+    "sha256_matches_cases_json": true,
+    "text_file": "checkpoint_inputs_ext/b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf.md",
+    "recomputed_sha256_matches": true
+   }
+  }
+ },
+ "summary": {
+  "n_checks": 15,
+  "n_pass": 15,
+  "n_fail": 0
+ },
+ "certificates": [
+  {
+   "check": "p3-muse",
+   "case_ids": [
+    "deedy-muse-spark-1.1-final"
+   ],
+   "ledger_statement": "P3 L3.3 lower bound: Liu's guarantee, universal over Xiang's replies; answer c_n = 2^n/(2^{n+1}-1)",
+   "ledger_key": "L3.3",
+   "what_is_checked": "one Xiang reply refutes the claimed 3/5 guarantee of the division 2/5,2/5,1/5",
+   "claim_checked": "the text's n=2 construction (2/5, 2/5, 1/5) guarantees Liu at least 3/5 against every Xiang reply",
+   "result": "PASS",
+   "summary": "Liu 2/5,2/5,1/5; Xiang halves 1/5 -> Liu 1/2 (minimax 1/2) < claimed 3/5; search min 1/2; c_2 = 4/7",
+   "key_values": {
+    "liu_pieces": [
+     "2/5",
+     "2/5",
+     "1/5"
+    ],
+    "claimed_guarantee": "3/5",
+    "correct_c_2": "4/7",
+    "xiang_reply": "halve the 1/5 piece (one cut)",
+    "pieces_after": [
+     "2/5",
+     "2/5",
+     "1/10",
+     "1/10"
+    ],
+    "liu_value_odd_rank": "1/2",
+    "liu_value_minimax": "1/2",
+    "checker_replies": {
+     "glm 0.35/0.05 + 0.1/0.1": "11/20",
+     "gpt both cuts in 1/5 (1/10,1/20,1/20)": "11/20"
+    },
+    "grid_search_min_liu_value": "1/2",
+    "grid_search_cuts": [
+     [
+      2,
+      "1/10"
+     ]
+    ],
+    "grid": 12
+   },
+   "sha256_of_texts": {
+    "deedy-muse-spark-1.1-final": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa"
+   }
+  },
+  {
+   "check": "p3-deepseek",
+   "case_ids": [
+    "deedy-deepseek-v4-pro-final"
+   ],
+   "ledger_statement": "P3 L3.3 lower bound: Liu's guarantee, universal over Xiang's replies; answer c_n = 2^n/(2^{n+1}-1)",
+   "ledger_key": "L3.3",
+   "what_is_checked": "one Xiang reply refutes the equally spaced construction; no 3-piece division reaches 3/5 at n=2",
+   "claim_checked": "marks at k/(2n+1) guarantee (n+1)/(2n+1) (n=2: 1/5,1/5,3/5 guarantees 3/5), and 3/5 is attainable at n=2",
+   "result": "PASS",
+   "summary": "Liu 1/5,1/5,3/5; Xiang halves 3/5 -> Liu 1/2 (minimax 1/2) < claimed 3/5; no 3-piece division reaches 3/5 (z3 unsat); c_2 = 4/7",
+   "key_values": {
+    "liu_marks": [
+     "1/5",
+     "2/5"
+    ],
+    "liu_pieces": [
+     "1/5",
+     "1/5",
+     "3/5"
+    ],
+    "claimed_guarantee": "3/5",
+    "correct_c_2": "4/7",
+    "xiang_reply": "halve the 3/5 piece (one cut)",
+    "pieces_after": [
+     "1/5",
+     "1/5",
+     "3/10",
+     "3/10"
+    ],
+    "liu_value_odd_rank": "1/2",
+    "liu_value_minimax": "1/2",
+    "grid_search_min_liu_value": "1/2",
+    "grid_search_cuts": [
+     [
+      2,
+      "3/10"
+     ]
+    ],
+    "three_reply_formulas_verified_on_grid": true,
+    "grid_points": 300,
+    "grid_denominator": 60,
+    "z3_all_three_replies_ge_3_over_5": "unsat",
+    "division_forced_by_the_inequalities": [
+     "2/5",
+     "3/10",
+     "3/10"
+    ],
+    "its_value_after_halving_a": "1/2"
+   },
+   "sha256_of_texts": {
+    "deedy-deepseek-v4-pro-final": "ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7"
+   }
+  },
+  {
+   "check": "p3-grok",
+   "case_ids": [
+    "deedy-grok-4.5-final"
+   ],
+   "ledger_statement": "P3 L3.3 lower bound: Liu's guarantee, universal over Xiang's replies; answer c_n = 2^n/(2^{n+1}-1)",
+   "ledger_key": "L3.3",
+   "what_is_checked": "three counterexamples: virtual-cut refinement (L3.3), D(R)=s in Theorem C (L3.2), S_n-mu<=S_{n-1} (L3.3)",
+   "claim_checked": "(a) Q refines the two virtual halves; (b) the untouched remainder has D(R) = S_n - mu; (c) S_n - mu <= S_{n-1} whenever mu > tau",
+   "result": "PASS",
+   "summary": "(a) cuts 3/2,5/2: midpoint 2 inside [3/2,5/2]; (b) L=4,3/2,3/2: D(R)=0 not 3; (c) cut 7/2: S_2-mu=7/2 > S_1=3, dummy -1/2",
+   "key_values": {
+    "n": 2,
+    "bins": [
+     1,
+     2,
+     4
+    ],
+    "a": {
+     "cuts_in_bin_of_length_4": [
+      "3/2",
+      "5/2"
+     ],
+     "Q": [
+      "3/2",
+      1,
+      "3/2"
+     ],
+     "all_pieces_le_tau": true,
+     "midpoint": 2,
+     "midpoint_is_a_cut_point": false,
+     "piece_straddling_midpoint": [
+      "3/2",
+      "5/2"
+     ]
+    },
+    "b": {
+     "L": [
+      4,
+      "3/2",
+      "3/2"
+     ],
+     "S_2": 7,
+     "tau": 4,
+     "mu": 4,
+     "R": [
+      "3/2",
+      "3/2"
+     ],
+     "D_R": 0,
+     "text_s_equals_S_n_minus_mu": 3,
+     "text_D_M_equals_mu_minus_D_R": 4,
+     "D_of_L": 4,
+     "side_value_D_after_cutting_4_into_2.5_1.5": 1
+    },
+    "c": {
+     "cut_in_bin_of_length_4": "7/2",
+     "Q": [
+      "7/2",
+      "1/2"
+     ],
+     "mu": "7/2",
+     "tau": 2,
+     "S_2_minus_mu": "7/2",
+     "S_1": 3,
+     "dummy_length_S_1_minus_(S_2_minus_mu)": "-1/2",
+     "d_text_mu_minus_tau": "3/2",
+     "mu_minus_2^n": "-1/2"
+    }
+   },
+   "sha256_of_texts": {
+    "deedy-grok-4.5-final": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe"
+   }
+  },
+  {
+   "check": "p3-two-columns",
+   "case_ids": [
+    "deedy-gpt-5.6-sol-final"
+   ],
+   "ledger_statement": "P3 L3.2 upper bound: Xiang's reply, universal over Liu's division (Liu <= 2^n/(2^{n+1}-1))",
+   "ledger_key": "L3.2",
+   "what_is_checked": "s=1, two columns of height T/2: the odd row never reaches d, the prescribed first cut is undefined",
+   "claim_checked": "the sweep's first operation ('when the first row has accumulated length d, cut ...') exists for every input of Lemma (i)",
+   "result": "PASS",
+   "summary": "s=1, columns T/2,T/2: N(t)=2 on (0,T/2); odd row total 0 < d = 1/3; prescribed first cut exists: False",
+   "key_values": {
+    "s": 1,
+    "T": 1,
+    "columns": [
+     "1/2",
+     "1/2"
+    ],
+    "d": "1/3",
+    "N_profile": [
+     [
+      0,
+      "1/2",
+      2
+     ]
+    ],
+    "odd_row_total": 0,
+    "even_row_total": "1/2",
+    "first_cut_instant_exists": false,
+    "Delta": 0,
+    "Delta_le_d": true,
+    "display_5_verified_on": [
+     [
+      "1",
+      "2",
+      "4"
+     ],
+     [
+      "3/2",
+      "1",
+      "3/2"
+     ],
+     [
+      "9/10",
+      "1/10"
+     ],
+     [
+      "7/2",
+      "1/2",
+      "1",
+      "2"
+     ],
+     [
+      "1/2",
+      "1/2"
+     ]
+    ],
+    "display_5_ok": true
+   },
+   "sha256_of_texts": {
+    "deedy-gpt-5.6-sol-final": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb"
+   }
+  },
+  {
+   "check": "p3-cut-parity",
+   "case_ids": [
+    "deedy-gpt-5.6-sol-final"
+   ],
+   "ledger_statement": "P3 L3.3 lower bound: Liu's guarantee, universal over Xiang's replies; answer c_n = 2^n/(2^{n+1}-1)",
+   "ledger_key": "L3.3",
+   "what_is_checked": "a column 2d cut into d/2, 3d/2 interchanges the parity rows below the cut level",
+   "claim_checked": "'A cut can interchange the two parity rows only above its level.'",
+   "result": "PASS",
+   "summary": "column 2d -> d/2 + 3d/2: N 1->2 on (0,d/2): parity interchanged below the cut level (also on (3d/2,2d))",
+   "key_values": {
+    "d": 1,
+    "before": [
+     2
+    ],
+    "after": [
+     "1/2",
+     "3/2"
+    ],
+    "levels": [
+     [
+      0,
+      "1/2",
+      1,
+      2,
+      true
+     ],
+     [
+      "1/2",
+      "3/2",
+      1,
+      1,
+      false
+     ],
+     [
+      "3/2",
+      2,
+      1,
+      0,
+      true
+     ]
+    ],
+    "parity_interchanged_on": [
+     [
+      0,
+      "1/2"
+     ],
+     [
+      "3/2",
+      2
+     ]
+    ],
+    "interchanged_strictly_below_d_over_2": [
+     [
+      0,
+      "1/2"
+     ]
+    ],
+    "delta_N_is_plus1_0_minus1": true
+   },
+   "sha256_of_texts": {
+    "deedy-gpt-5.6-sol-final": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb"
+   }
+  },
+  {
+   "check": "p3-strip-count",
+   "case_ids": [
+    "deedy-gpt-5.6-sol-final"
+   ],
+   "ledger_statement": "P3 L3.3 lower bound: Liu's guarantee, universal over Xiang's replies; answer c_n = 2^n/(2^{n+1}-1)",
+   "ledger_key": "L3.3",
+   "what_is_checked": "strip arithmetic of the induction step for j <= 8",
+   "claim_checked": "the next column's 2^{j+1} strips consist of two identical copies of all preceding strips plus one",
+   "result": "PASS",
+   "summary": "preceding strips 2^(j+1)-1; two copies+1 = 2^(j+2)-1 != 2^(j+1) for all j<=8 (two copies alone matches only j=0)",
+   "key_values": {
+    "rows": [
+     {
+      "j": 0,
+      "preceding_strips": 1,
+      "two_copies": 2,
+      "two_copies_plus_one": 3,
+      "next_column_strips": 2
+     },
+     {
+      "j": 1,
+      "preceding_strips": 3,
+      "two_copies": 6,
+      "two_copies_plus_one": 7,
+      "next_column_strips": 4
+     },
+     {
+      "j": 2,
+      "preceding_strips": 7,
+      "two_copies": 14,
+      "two_copies_plus_one": 15,
+      "next_column_strips": 8
+     },
+     {
+      "j": 3,
+      "preceding_strips": 15,
+      "two_copies": 30,
+      "two_copies_plus_one": 31,
+      "next_column_strips": 16
+     },
+     {
+      "j": 4,
+      "preceding_strips": 31,
+      "two_copies": 62,
+      "two_copies_plus_one": 63,
+      "next_column_strips": 32
+     },
+     {
+      "j": 5,
+      "preceding_strips": 63,
+      "two_copies": 126,
+      "two_copies_plus_one": 127,
+      "next_column_strips": 64
+     },
+     {
+      "j": 6,
+      "preceding_strips": 127,
+      "two_copies": 254,
+      "two_copies_plus_one": 255,
+      "next_column_strips": 128
+     },
+     {
+      "j": 7,
+      "preceding_strips": 255,
+      "two_copies": 510,
+      "two_copies_plus_one": 511,
+      "next_column_strips": 256
+     },
+     {
+      "j": 8,
+      "preceding_strips": 511,
+      "two_copies": 1022,
+      "two_copies_plus_one": 1023,
+      "next_column_strips": 512
+     }
+    ],
+    "jmax": 8
+   },
+   "sha256_of_texts": {
+    "deedy-gpt-5.6-sol-final": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb"
+   }
+  },
+  {
+   "check": "p3-kimi-order",
+   "case_ids": [
+    "kimi-k3-round4-t014"
+   ],
+   "ledger_statement": "P3 L3.2 upper bound: Xiang's reply, universal over Liu's division (Liu <= 2^n/(2^{n+1}-1))",
+   "ledger_key": "L3.2",
+   "what_is_checked": "nested absolute difference is order-dependent on the two quoted examples (decreasing order 5 vs 1; 4 vs 0)",
+   "claim_checked": "the chain value v(B), defined by the decreasing order, is at most the value that Lemma 4.1 attains for some ordering",
+   "result": "PASS",
+   "summary": "{10,9,8,7,5}: decreasing 5 vs 10,8,7,9,5 -> 1; {8,7,6,5,4}: decreasing 4 vs 8,6,5,7,4 -> 0",
+   "key_values": {
+    "examples": [
+     {
+      "B": [
+       10,
+       9,
+       8,
+       7,
+       5
+      ],
+      "decreasing_order_value": 5,
+      "alternative_order": [
+       10,
+       8,
+       7,
+       9,
+       5
+      ],
+      "alternative_order_value": 1,
+      "P": [
+       8,
+       7,
+       5
+      ],
+      "N": [
+       10,
+       9
+      ],
+      "sigmaP_minus_sigmaN": 1,
+      "subset_sums_strictly_between": [],
+      "lemma_4_1_case": "(b)",
+      "min_over_all_orderings": 1,
+      "lemma_value_attained_by_alternative_order": true
+     },
+     {
+      "B": [
+       8,
+       7,
+       6,
+       5,
+       4
+      ],
+      "decreasing_order_value": 4,
+      "alternative_order": [
+       8,
+       6,
+       5,
+       7,
+       4
+      ],
+      "alternative_order_value": 0,
+      "P": [
+       8,
+       7
+      ],
+      "N": [
+       6,
+       5,
+       4
+      ],
+      "sigmaP_minus_sigmaN": 0,
+      "subset_sums_strictly_between": [],
+      "lemma_4_1_case": "(a)",
+      "min_over_all_orderings": 0,
+      "lemma_value_attained_by_alternative_order": true
+     }
+    ],
+    "checker_examples": {
+     "{8,5,2}: decreasing vs (5,2,8)": [
+      1,
+      5
+     ],
+     "{10,6,4,2}: decreasing vs (2,4,6,10)": [
+      2,
+      6
+     ]
+    }
+   },
+   "sha256_of_texts": {
+    "kimi-k3-round4-t014": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b"
+   }
+  },
+  {
+   "check": "p5-nemotron-z3",
+   "case_ids": [
+    "p5-nemotron-2587b733-v2"
+   ],
+   "ledger_statement": "P5 L5.1 sufficiency: the chain holds for f(x) = x + c with middle term (x+y+c)/2",
+   "ledger_key": "L5.1",
+   "what_is_checked": "z3 proves the chain with middle term (x+y+c)/2 for all x,y,c>0; the written (x+y+2c)/2 chain fails at (1,1,1)",
+   "claim_checked": "the displayed chain with middle term (x+y+2c)/2 holds for all x, y > 0 and both its inequalities are equivalent to (x-y-c)^2 >= 0",
+   "result": "PASS",
+   "summary": "correct chain: z3 unsat/unsat; written left ineq at (1,1,1): sqrt(5/2)>=2 false; z3 finds violation (x=1, y=1, c=1)",
+   "key_values": {
+    "correct_chain_left_negation": "unsat",
+    "correct_chain_right_negation": "unsat",
+    "written_left_negation": "sat",
+    "written_right_negation": "unsat",
+    "z3_violation_of_written_left": {
+     "x": 1,
+     "y": 1,
+     "c": 1
+    },
+    "violation_rechecked_exactly": true,
+    "sympy": {
+     "2(x^2+(y+c)^2)-(x+y+c)^2": "c**2 - 2*c*x + 2*c*y + x**2 - 2*x*y + y**2",
+     "(x+y+c)^2-4x(y+c)": "c**2 - 2*c*x + 2*c*y + x**2 - 2*x*y + y**2",
+     "2(x^2+(y+c)^2)-(x+y+2c)^2": "-2*c**2 - 4*c*x + x**2 - 2*x*y + y**2",
+     "(x+y+2c)^2-4x(y+c)": "4*c**2 + 4*c*y + x**2 - 2*x*y + y**2",
+     "both_correct_differences_equal_(x-y-c)^2": true
+    },
+    "sample_points": {
+     "x=1,y=1,c=1": {
+      "left": 1.581139,
+      "true_middle": 1.5,
+      "written_middle": 2.0,
+      "right": 1.414214,
+      "written_left_ineq_holds": false,
+      "true_left_ineq_holds": true
+     },
+     "x=2,y=1,c=1": {
+      "left": 2.0,
+      "true_middle": 2.0,
+      "written_middle": 2.5,
+      "right": 2.0,
+      "written_left_ineq_holds": false,
+      "true_left_ineq_holds": true
+     }
+    }
+   },
+   "sha256_of_texts": {
+    "p5-nemotron-2587b733-v2": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf"
+   }
+  },
+  {
+   "check": "p5-deepseek-dichotomy",
+   "case_ids": [
+    "p5-deepseek-v4-pro-main-t033",
+    "p5-deepseek-v4-pro-main-t038"
+   ],
+   "ledger_statement": "P5 L5.3 nonnegative difference: g(x) = f(x) - x >= 0 for every x, needed before any value-set dichotomy",
+   "ledger_key": "L5.3",
+   "what_is_checked": "f(x)=x+1 is a solution with V={1}: premise holds, neither branch (i) nor (ii) holds; negative values never excluded",
+   "claim_checked": "'V contains at most one positive number' implies 'either g == 0 or V subset {0,c} with both values attainable'",
+   "result": "PASS",
+   "summary": "f=x+1: z3 both ineqs hold; V={1}: branch (i) False, branch (ii) False; premise-true/conclusion-false value sets: 5",
+   "key_values": {
+    "f": "x + 1",
+    "g_symbolic": "1",
+    "z3_left_inequality_negation": "unsat",
+    "z3_right_inequality_negation": "unsat",
+    "sample_points_hold_exactly": true,
+    "samples": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      "1/2",
+      3
+     ],
+     [
+      5,
+      "1/3"
+     ],
+     [
+      "7/3",
+      "7/3"
+     ]
+    ],
+    "V": [
+     1
+    ],
+    "premise_at_most_one_positive": true,
+    "branch_i_g_identically_0": false,
+    "branch_ii_V_subset_0_c_both_attained": false,
+    "value_sets_from_{-1,0,1}": [
+     {
+      "V": [
+       -1
+      ],
+      "premise": true,
+      "conclusion": false
+     },
+     {
+      "V": [
+       0
+      ],
+      "premise": true,
+      "conclusion": true
+     },
+     {
+      "V": [
+       1
+      ],
+      "premise": true,
+      "conclusion": false
+     },
+     {
+      "V": [
+       -1,
+       0
+      ],
+      "premise": true,
+      "conclusion": false
+     },
+     {
+      "V": [
+       -1,
+       1
+      ],
+      "premise": true,
+      "conclusion": false
+     },
+     {
+      "V": [
+       0,
+       1
+      ],
+      "premise": true,
+      "conclusion": true
+     },
+     {
+      "V": [
+       -1,
+       0,
+       1
+      ],
+      "premise": true,
+      "conclusion": false
+     }
+    ],
+    "premise_true_conclusion_false": [
+     [
+      -1
+     ],
+     [
+      1
+     ],
+     [
+      -1,
+      0
+     ],
+     [
+      -1,
+      1
+     ],
+     [
+      -1,
+      0,
+      1
+     ]
+    ]
+   },
+   "sha256_of_texts": {
+    "p5-deepseek-v4-pro-main-t033": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+    "p5-deepseek-v4-pro-main-t038": "98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573"
+   }
+  },
+  {
+   "check": "p5-deepseek-typo",
+   "case_ids": [
+    "p5-deepseek-v4-pro-main-t033",
+    "p5-deepseek-v4-pro-main-t038"
+   ],
+   "ledger_statement": "no ledger statement (harmless display error inside the necessity argument; checkers: fatal no)",
+   "ledger_key": "none",
+   "what_is_checked": "sympy: A(x,y) at a=0,b=c is (x-y)^2+4cy+2c^2, the display has 4cx (harmless: both nonnegative)",
+   "claim_checked": "the specialised display A(x,y) = (x-y)^2 + 4cx + 2c^2 is the expansion of the text's A at a=0, b=c",
+   "result": "PASS",
+   "summary": "A(a=0,b=c) = 2*c**2 + 4*c*y + x**2 - 2*x*y + y**2 vs displayed 4cx: difference 4*c*(x - y); at (1,2,1): 11 vs 7; harmless (both >= 0)",
+   "key_values": {
+    "A_definition": "2x^2 + 2(y+b)^2 - (x+y+a)^2",
+    "text_general_expansions_and_(5)_correct": true,
+    "A_at_a=0,b=c": "2*c**2 + 4*c*y + x**2 - 2*x*y + y**2",
+    "displayed": "2*c**2 + 4*c*x + x**2 - 2*x*y + y**2",
+    "displayed_minus_correct": "4*c*(x - y)",
+    "value_at_x=1,y=2,c=1": {
+     "correct": 11,
+     "displayed": 7
+    },
+    "B_display_(x-y)^2-4cx_correct": true,
+    "both_nonnegative_for_positive_x_y_c": "yes: (x-y)^2 + 4c*x + 2c^2 and (x-y)^2 + 4c*y + 2c^2 are sums of nonnegative terms"
+   },
+   "sha256_of_texts": {
+    "p5-deepseek-v4-pro-main-t033": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+    "p5-deepseek-v4-pro-main-t038": "98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573"
+   }
+  },
+  {
+   "check": "p6-transversals",
+   "case_ids": [
+    "p6-gpt-5.6-sol-main-t009",
+    "p6-deedy-gpt-5.6-sol-final"
+   ],
+   "ledger_statement": "P6 L6.2 large-prime erasure / finiteness of the relevant prime set for all terms",
+   "ledger_key": "L6.2",
+   "what_is_checked": "F_k = {x_1..x_k, y_k}: 6 distinct minimal finite transversals T_k for k <= 6",
+   "claim_checked": "a pairwise-intersecting family of nonempty finite sets has finitely many inclusion-minimal finite transversals",
+   "result": "PASS",
+   "summary": "F_k={x_1..x_k,y_k}, k<=6: pairwise intersecting True; 6 distinct minimal transversals T_k (all verified)",
+   "key_values": {
+    "n": 6,
+    "pairwise_intersecting": true,
+    "T_k": [
+     [
+      1,
+      [
+       "x1"
+      ],
+      true,
+      true
+     ],
+     [
+      2,
+      [
+       "x2",
+       "y1"
+      ],
+      true,
+      true
+     ],
+     [
+      3,
+      [
+       "x3",
+       "y1",
+       "y2"
+      ],
+      true,
+      true
+     ],
+     [
+      4,
+      [
+       "x4",
+       "y1",
+       "y2",
+       "y3"
+      ],
+      true,
+      true
+     ],
+     [
+      5,
+      [
+       "x5",
+       "y1",
+       "y2",
+       "y3",
+       "y4"
+      ],
+      true,
+      true
+     ],
+     [
+      6,
+      [
+       "x6",
+       "y1",
+       "y2",
+       "y3",
+       "y4",
+       "y5"
+      ],
+      true,
+      true
+     ]
+    ]
+   },
+   "sha256_of_texts": {
+    "p6-gpt-5.6-sol-main-t009": "6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3",
+    "p6-deedy-gpt-5.6-sol-final": "fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de"
+   }
+  },
+  {
+   "check": "p6-gpt-transversals",
+   "case_ids": [
+    "p6-gpt-5.6-sol-main-t009",
+    "p6-deedy-gpt-5.6-sol-final"
+   ],
+   "ledger_statement": "P6 L6.2 large-prime erasure / finiteness of the relevant prime set for all terms",
+   "ledger_key": "L6.2",
+   "what_is_checked": "the graders' three families (F_k with x_0, E_i, G_i) have 8, 8, 7 distinct minimal finite transversals for K=8",
+   "claim_checked": "a pairwise-intersecting family of nonempty finite sets (with a member of size r) has finitely many inclusion-minimal finite transversals",
+   "result": "PASS",
+   "summary": "F_k/E_i/G_i truncated at K=8: pairwise intersecting; 24 listed minimal transversals verified (grow linearly with K)",
+   "key_values": {
+    "F_k={x_0..x_k,y_k}": {
+     "K": 8,
+     "pairwise_intersecting": true,
+     "smallest_member_size": 2,
+     "listed_transversals": [
+      [
+       0,
+       [
+        "x0"
+       ],
+       true,
+       true
+      ],
+      [
+       1,
+       [
+        "x1",
+        "y0"
+       ],
+       true,
+       true
+      ],
+      [
+       2,
+       [
+        "x2",
+        "y0",
+        "y1"
+       ],
+       true,
+       true
+      ],
+      [
+       3,
+       [
+        "x3",
+        "y0",
+        "y1",
+        "y2"
+       ],
+       true,
+       true
+      ],
+      [
+       4,
+       [
+        "x4",
+        "y0",
+        "y1",
+        "y2",
+        "y3"
+       ],
+       true,
+       true
+      ],
+      [
+       5,
+       [
+        "x5",
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4"
+       ],
+       true,
+       true
+      ],
+      [
+       6,
+       [
+        "x6",
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5"
+       ],
+       true,
+       true
+      ],
+      [
+       7,
+       [
+        "x7",
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "y6"
+       ],
+       true,
+       true
+      ],
+      [
+       8,
+       [
+        "x8",
+        "y0",
+        "y1",
+        "y2",
+        "y3",
+        "y4",
+        "y5",
+        "y6",
+        "y7"
+       ],
+       true,
+       true
+      ]
+     ],
+     "all_listed_are_minimal_transversals": true,
+     "distinct": true,
+     "count": 9,
+     "brute_force_count_of_minimal_transversals_of_truncation_K=1..4": {
+      "1": 3,
+      "2": 4,
+      "3": 5,
+      "4": 6
+     },
+     "listed_ones_found_by_brute_force": true
+    },
+    "E_i={a_1..a_i,b_i}": {
+     "K": 8,
+     "pairwise_intersecting": true,
+     "smallest_member_size": 2,
+     "listed_transversals": [
+      [
+       1,
+       [
+        "a1"
+       ],
+       true,
+       true
+      ],
+      [
+       2,
+       [
+        "a2",
+        "b1"
+       ],
+       true,
+       true
+      ],
+      [
+       3,
+       [
+        "a3",
+        "b1",
+        "b2"
+       ],
+       true,
+       true
+      ],
+      [
+       4,
+       [
+        "a4",
+        "b1",
+        "b2",
+        "b3"
+       ],
+       true,
+       true
+      ],
+      [
+       5,
+       [
+        "a5",
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+       ],
+       true,
+       true
+      ],
+      [
+       6,
+       [
+        "a6",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+       ],
+       true,
+       true
+      ],
+      [
+       7,
+       [
+        "a7",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+       ],
+       true,
+       true
+      ],
+      [
+       8,
+       [
+        "a8",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+       ],
+       true,
+       true
+      ]
+     ],
+     "all_listed_are_minimal_transversals": true,
+     "distinct": true,
+     "count": 8,
+     "brute_force_count_of_minimal_transversals_of_truncation_K=1..4": {
+      "1": 2,
+      "2": 3,
+      "3": 4,
+      "4": 5
+     },
+     "listed_ones_found_by_brute_force": true
+    },
+    "G_i={c,a_i,b_1..b_{i-1}}": {
+     "K": 8,
+     "pairwise_intersecting": true,
+     "smallest_member_size": 2,
+     "listed_transversals": [
+      [
+       1,
+       [
+        "a1",
+        "b1"
+       ],
+       true,
+       true
+      ],
+      [
+       2,
+       [
+        "a1",
+        "a2",
+        "b2"
+       ],
+       true,
+       true
+      ],
+      [
+       3,
+       [
+        "a1",
+        "a2",
+        "a3",
+        "b3"
+       ],
+       true,
+       true
+      ],
+      [
+       4,
+       [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "b4"
+       ],
+       true,
+       true
+      ],
+      [
+       5,
+       [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "b5"
+       ],
+       true,
+       true
+      ],
+      [
+       6,
+       [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "b6"
+       ],
+       true,
+       true
+      ],
+      [
+       7,
+       [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "b7"
+       ],
+       true,
+       true
+      ]
+     ],
+     "all_listed_are_minimal_transversals": true,
+     "distinct": true,
+     "count": 7,
+     "brute_force_count_of_minimal_transversals_of_truncation_K=1..4": {
+      "1": 2,
+      "2": 3,
+      "3": 4,
+      "4": 5
+     },
+     "listed_ones_found_by_brute_force": true
+    }
+   },
+   "sha256_of_texts": {
+    "p6-gpt-5.6-sol-main-t009": "6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3",
+    "p6-deedy-gpt-5.6-sol-final": "fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de"
+   }
+  },
+  {
+   "check": "p6-gpt-recursion",
+   "case_ids": [
+    "p6-gpt-5.6-sol-main-t009"
+   ],
+   "ledger_statement": "P6 L6.2 large-prime erasure / finiteness of the relevant prime set for all terms",
+   "ledger_key": "L6.2",
+   "what_is_checked": "the text's induction, run literally, outputs lists that miss genuine transversals on the four quoted instances",
+   "claim_checked": "a finite X traverses F iff X contains one of the sets {c} u D_{c,k} produced by the induction restricted to transversals meeting C",
+   "result": "PASS",
+   "summary": "F={{1,2},{2,3}}, C={1,2}: list {{1,2},{2}} misses {1,3}; C\\{1}={2} not a member of F_1; 4/4 instances miss a transversal",
+   "key_values": {
+    "instances": [
+     {
+      "instance": "witness gpt / checkers",
+      "F": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "C": [
+       1,
+       2
+      ],
+      "C_is_member_of_F": true,
+      "text_list": [
+       [
+        1,
+        2
+       ],
+       [
+        2
+       ]
+      ],
+      "minimal_transversals": [
+       [
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "missed_by_the_list": [
+       [
+        1,
+        3
+       ]
+      ],
+      "failing_recursive_call": {
+       "c": 1,
+       "F_c": [
+        [
+         2,
+         3
+        ]
+       ],
+       "C_minus_c": [
+        2
+       ],
+       "C_minus_c_is_member_of_F_c": false,
+       "restricted_list_for_(F_c,C_minus_c)": [
+        [
+         2
+        ]
+       ],
+       "transversal_of_F_c_not_covered": [
+        3
+       ],
+       "it_meets_C_minus_c": false
+      },
+      "top_level_failure": null
+     },
+     {
+      "instance": "witness claude",
+      "F": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "C": [
+       2
+      ],
+      "C_is_member_of_F": false,
+      "text_list": [
+       [
+        2
+       ]
+      ],
+      "minimal_transversals": [
+       [
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "missed_by_the_list": [
+       [
+        1,
+        3
+       ]
+      ],
+      "failing_recursive_call": null,
+      "top_level_failure": {
+       "C_is_member_of_F": false,
+       "transversal_of_F_disjoint_from_C": [
+        1,
+        3
+       ]
+      }
+     },
+     {
+      "instance": "grader claude e1",
+      "F": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "C": [
+       1,
+       2
+      ],
+      "C_is_member_of_F": true,
+      "text_list": [
+       [
+        1,
+        2
+       ],
+       [
+        2
+       ]
+      ],
+      "minimal_transversals": [
+       [
+        2
+       ],
+       [
+        1,
+        3,
+        4
+       ]
+      ],
+      "missed_by_the_list": [
+       [
+        1,
+        3,
+        4
+       ]
+      ],
+      "failing_recursive_call": {
+       "c": 1,
+       "F_c": [
+        [
+         2,
+         3
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "C_minus_c": [
+        2
+       ],
+       "C_minus_c_is_member_of_F_c": false,
+       "restricted_list_for_(F_c,C_minus_c)": [
+        [
+         2
+        ]
+       ],
+       "transversal_of_F_c_not_covered": [
+        3,
+        4
+       ],
+       "it_meets_C_minus_c": false
+      },
+      "top_level_failure": null
+     },
+     {
+      "instance": "checker claude (grader gpt e1)",
+      "F": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "C": [
+       1,
+       2
+      ],
+      "C_is_member_of_F": true,
+      "text_list": [
+       [
+        1,
+        2
+       ]
+      ],
+      "minimal_transversals": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "missed_by_the_list": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "failing_recursive_call": {
+       "c": 1,
+       "F_c": [
+        [
+         2,
+         3
+        ]
+       ],
+       "C_minus_c": [
+        2
+       ],
+       "C_minus_c_is_member_of_F_c": false,
+       "restricted_list_for_(F_c,C_minus_c)": [
+        [
+         2
+        ]
+       ],
+       "transversal_of_F_c_not_covered": [
+        3
+       ],
+       "it_meets_C_minus_c": false
+      },
+      "top_level_failure": null
+     }
+    ]
+   },
+   "sha256_of_texts": {
+    "p6-gpt-5.6-sol-main-t009": "6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3"
+   }
+  },
+  {
+   "check": "p6-kimi-infinite-transversal",
+   "case_ids": [
+    "p6-kimi-k3-round2-t007"
+   ],
+   "ledger_statement": "P6 L6.2 large-prime erasure / finiteness of the relevant prime set for all terms",
+   "ledger_key": "L6.2",
+   "what_is_checked": "{{2,x_n}}: {x_1..x_N} is a minimal transversal of the truncation whose every subset misses {2,x_{N+1}}, N<=8",
+   "claim_checked": "every inclusion-minimal transversal T of the intersecting antichain C is finite (so that pi(T) is defined)",
+   "result": "PASS",
+   "summary": "{{2,x_n}}: T={x_1..x_N} minimal transversal for N<=8; every subset of T misses {2,x_{N+1}}; infinite minimal transversal exists",
+   "key_values": {
+    "rows": [
+     {
+      "N": 1,
+      "pairwise_intersecting": true,
+      "antichain": true,
+      "T=x1..xN_hits_all": true,
+      "each_deletion_of_x_k_leaves_{2,x_k}_unhit": true,
+      "all_2^N_subsets_of_T_miss_{2,x_{N+1}}": true,
+      "subsets_checked": 2,
+      "{2}_is_a_finite_minimal_transversal": true,
+      "{2}_is_a_member": false
+     },
+     {
+      "N": 2,
+      "pairwise_intersecting": true,
+      "antichain": true,
+      "T=x1..xN_hits_all": true,
+      "each_deletion_of_x_k_leaves_{2,x_k}_unhit": true,
+      "all_2^N_subsets_of_T_miss_{2,x_{N+1}}": true,
+      "subsets_checked": 4,
+      "{2}_is_a_finite_minimal_transversal": true,
+      "{2}_is_a_member": false
+     },
+     {
+      "N": 3,
+      "pairwise_intersecting": true,
+      "antichain": true,
+      "T=x1..xN_hits_all": true,
+      "each_deletion_of_x_k_leaves_{2,x_k}_unhit": true,
+      "all_2^N_subsets_of_T_miss_{2,x_{N+1}}": true,
+      "subsets_checked": 8,
+      "{2}_is_a_finite_minimal_transversal": true,
+      "{2}_is_a_member": false
+     },
+     {
+      "N": 4,
+      "pairwise_intersecting": true,
+      "antichain": true,
+      "T=x1..xN_hits_all": true,
+      "each_deletion_of_x_k_leaves_{2,x_k}_unhit": true,
+      "all_2^N_subsets_of_T_miss_{2,x_{N+1}}": true,
+      "subsets_checked": 16,
+      "{2}_is_a_finite_minimal_transversal": true,
+      "{2}_is_a_member": false
+     },
+     {
+      "N": 5,
+      "pairwise_intersecting": true,
+      "antichain": true,
+      "T=x1..xN_hits_all": true,
+      "each_deletion_of_x_k_leaves_{2,x_k}_unhit": true,
+      "all_2^N_subsets_of_T_miss_{2,x_{N+1}}": true,
+      "subsets_checked": 32,
+      "{2}_is_a_finite_minimal_transversal": true,
+      "{2}_is_a_member": false
+     },
+     {
+      "N": 6,
+      "pairwise_intersecting": true,
+      "antichain": true,
+      "T=x1..xN_hits_all": true,
+      "each_deletion_of_x_k_leaves_{2,x_k}_unhit": true,
+      "all_2^N_subsets_of_T_miss_{2,x_{N+1}}": true,
+      "subsets_checked": 64,
+      "{2}_is_a_finite_minimal_transversal": true,
+      "{2}_is_a_member": false
+     },
+     {
+      "N": 7,
+      "pairwise_intersecting": true,
+      "antichain": true,
+      "T=x1..xN_hits_all": true,
+      "each_deletion_of_x_k_leaves_{2,x_k}_unhit": true,
+      "all_2^N_subsets_of_T_miss_{2,x_{N+1}}": true,
+      "subsets_checked": 128,
+      "{2}_is_a_finite_minimal_transversal": true,
+      "{2}_is_a_member": false
+     },
+     {
+      "N": 8,
+      "pairwise_intersecting": true,
+      "antichain": true,
+      "T=x1..xN_hits_all": true,
+      "each_deletion_of_x_k_leaves_{2,x_k}_unhit": true,
+      "all_2^N_subsets_of_T_miss_{2,x_{N+1}}": true,
+      "subsets_checked": 256,
+      "{2}_is_a_finite_minimal_transversal": true,
+      "{2}_is_a_member": false
+     }
+    ],
+    "N_max": 8
+   },
+   "sha256_of_texts": {
+    "p6-kimi-k3-round2-t007": "bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757"
+   }
+  },
+  {
+   "check": "p1-board",
+   "case_ids": [
+    "p1-glm52-2ede1c6b-v1"
+   ],
+   "ledger_statement": "P1 L1.2 invariance: for each prime p, gcd_i v_p(a_i) is unchanged by a move; M = prod_p p^{gcd_i v_p(a_i)}",
+   "ledger_key": "L1.2",
+   "what_is_checked": "board [2, 3]: every play ends with the survivor M = prod p^gcd v_p (gcd(1,0)=1)",
+   "claim_checked": "the earlier counterexample: on the board {2,3} the valuation-gcd formula for M fails",
+   "result": "PASS",
+   "summary": "board [2, 3]: valuation gcds {2: 1, 3: 1} (gcd(1,0)=1), M = 6, survivors [6]: earlier {2,3} counterexample refuted",
+   "key_values": {
+    "board": [
+     2,
+     3
+    ],
+    "reachable_states": 2,
+    "terminal_boards": [
+     [
+      1,
+      6
+     ]
+    ],
+    "primes": [
+     2,
+     3
+    ],
+    "valuations": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1
+     ]
+    },
+    "valuation_gcds": {
+     "2": 1,
+     "3": 1
+    },
+    "M_formula": 6,
+    "survivors": [
+     6
+    ],
+    "note": "gcd(1,0) = 1 (Python's math.gcd and the text's convention): the earlier {2,3} counterexample fails",
+    "receipts_other_boards": {
+     "[4, 6, 9]": {
+      "M": 6,
+      "survivors": [
+       6
+      ],
+      "terminal_boards": 1
+     },
+     "[12, 18, 8]": {
+      "M": 6,
+      "survivors": [
+       6
+      ],
+      "terminal_boards": 1
+     },
+     "[2, 4, 8, 3]": {
+      "M": 6,
+      "survivors": [
+       6
+      ],
+      "terminal_boards": 1
+     }
+    }
+   },
+   "sha256_of_texts": {
+    "p1-glm52-2ede1c6b-v1": "e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55"
+   }
+  }
+ ]
+}

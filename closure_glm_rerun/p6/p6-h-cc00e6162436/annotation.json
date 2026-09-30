@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-cc00e6162436",
+  "problem": "6",
+  "sha256": "cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a",
+  "path": "checkpoint_inputs/cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 6,
+  "record_ids": [
+    "p6-gpt-5.6-sol-pro-main-t006"
+  ],
+  "bytes": 9581,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2629,
+        "output_tokens": 7468,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 73.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "weight descent on minimal accepted supports + sunflower lemma (bounded-size finiteness)",
+    "upper_bound_mechanism": "periodicity mod L = product of relevant primes; T = number of accepted residue classes per window",
+    "wrong_answer_stated": false,
+    "notes": "Complete correct proof. Greedy-scan reinterpretation and support-only acceptance give self-duality (C). Finiteness of relevant primes proved for all minimal supports via descent using the coprime witness of a rejected squarefree number, plus sunflower lemma for bounded-size families. Periodicity holds for every m >= a_1, yielding a_{n+T} = a_n + L from n = 1. No false lemmas, no eventual-only claims."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

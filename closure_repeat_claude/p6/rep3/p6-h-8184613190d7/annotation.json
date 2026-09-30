@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-8184613190d7",
+  "problem": "6",
+  "sha256": "8184613190d78c40e9e952f3d2840443b66a20d356fb6052c81cbd433646c639",
+  "path": "checkpoint_inputs/8184613190d78c40e9e952f3d2840443b66a20d356fb6052c81cbd433646c639.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "7030bbc7",
+  "turn": 2,
+  "record_ids": [
+    "p6-glm52-7030bbc7-v2"
+  ],
+  "bytes": 7558,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5621,
+        "output_tokens": 1054,
+        "output_tokens_details": {
+          "thinking_tokens": 756
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1054,
+            "cache_read_input_tokens": 5621,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "cofactor bound on newly entering essential primes + self-duality criterion (finiteness itself left open/conjectured, checked numerically)",
+    "upper_bound_mechanism": "V a union of residue classes mod L=prod of essential primes; T=|V∩[1,L]|; Step 3 shows sequence enumerates V from a_1",
+    "wrong_answer_stated": false,
+    "notes": "Reduction to the valid set and blocker-class description are fully rigorous, and the periodicity assembly holds from n=1 once the family stabilizes. The finiteness/large-prime-erasure step is explicitly open: only a partial cofactor bound plus computational evidence and a conjecture (Q<=a_1). Honest, self-aware partial write-up."
+  },
+  "S": 1,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

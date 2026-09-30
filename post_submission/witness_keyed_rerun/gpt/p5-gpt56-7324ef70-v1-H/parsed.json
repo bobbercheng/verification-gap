@@ -1,0 +1,55 @@
+{
+ "gate": "witness",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-H",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "H",
+ "problem": "5",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 31.5,
+  "input_tokens": 17317,
+  "output_tokens": 812,
+  "reasoning_output_tokens": 516,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_but_invalid",
+    "quote": "the desired chain becomes\n\\[\n\\sqrt{\\frac{x^2+(y+C)^2}{2}}\n\\ge \\frac{x+y+2C}2\n\\ge \\sqrt{x(y+C)},\n\\]",
+    "witness": "COUNTEREXAMPLE: take C=1 and x=y=1. The original middle term is (f(1)+1)/2=(2+1)/2=3/2, whereas the quoted substituted middle term is (1+1+2)/2=2. Thus the displayed chain does not result from substitution and is not the claimed RMS–AM–GM chain for x and y+C.",
+    "load_bearing": "This incorrect substitution is the write-up's exact verification that every translation satisfies both inequalities. Consequently, sufficiency for the claimed family is not validly established as written."
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "The structural and necessity arguments are valid, including fixed points. The converse contains an extra C in the middle term; the correct term would be (x+y+C)/2."
+ },
+ "anchors": {
+  "lower_bound": {
+   "anchored": true,
+   "length": 98,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    4282,
+    4380
+   ]
+  }
+ }
+}

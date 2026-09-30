@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9495,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.00958,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 6238,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 11619,
+    "webSearchRequests": 0,
+    "costUSD": 0.2728205,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 5824,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 11619,
+   "cache_read_input_tokens": 1341,
+   "output_tokens": 6238,
+   "output_tokens_details": {
+    "thinking_tokens": 5824
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 11619,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 6238,
+     "cache_read_input_tokens": 1341,
+     "cache_creation_input_tokens": 11619,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 11619
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 79398,
+  "is_error": false,
+  "elapsed_seconds": 80.0,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"quote_faithful\": \"yes\", \"verdict\": \"confirmed\", \"evidence_kind\": \"invalid_inference\", \"fatal\": \"no\", \"explanation\": \"The quote is verbatim and does mean what the objector says: v(B) was defined (Section 4) as the nested difference taken in the *decreasing* order b_1\\u2265\\u2026\\u2265b_r, and the strategy then processes b_2,\\u2026,b_r 'in turn', i.e. in that order. But the proof of Theorem 4.2 only produces, via Lemma 4.1, *some* ordering of P\\u222aN whose nested difference equals g; it never shows the decreasing order attains it. Decreasing order is not optimal in general: for {8,7,6,5,4} the decreasing nested value is ||||8-7|-6|-5|-4| = 4, while the ordering 8,4,6,7,5 gives 0. So the inference 'Theorem 4.2 \\u21d2 v(B) (decreasing) \\u2264 T_n' does not follow. Not fatal: the running-value procedure, cut count, distinctness and parity cancellation are all order-agnostic, so processing B in the ordering Lemma 4.1 already constructs repairs the step verbatim.\"}"
+   }
+  ]
+ }
+}

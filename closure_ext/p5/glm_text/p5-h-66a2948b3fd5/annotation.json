@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-66a2948b3fd5",
+  "problem": "5",
+  "sha256": "66a2948b3fd5a27039c4d713c83fbff7da5163356cf3ad3fdaf211387420aacb",
+  "path": "checkpoint_inputs_ext/66a2948b3fd5a27039c4d713c83fbff7da5163356cf3ad3fdaf211387420aacb.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 2,
+  "record_ids": [
+    "p5-gpt-5.6-sol-max-main-t002"
+  ],
+  "bytes": 5820,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2017,
+        "output_tokens": 2989,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 36.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "RMS–AM–GM chain applied to x and y+c (with f(x)+y = x+f(y))",
+    "upper_bound_mechanism": "asymptotic alignment of arithmetic forward orbits (all positive displacements equal) + connectedness/openness to exclude coexistence of d=0 and d=c",
+    "wrong_answer_stated": false,
+    "notes": "Complete and rigorous. Section 1 derives f(f(y))=2f(y)-y and d≥0. Section 2 proves all positive displacements equal via Φ(x,v)→0 along aligned orbits. Section 3 uses continuity of Φ and connectedness to rule out mixed fixed/non-fixed points, covering c=0. Section 4 verifies sufficiency for all c≥0."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

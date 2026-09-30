@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p6-kimi-k3-round1-t021",
+ "tag": "upper_bound",
+ "text_sha256": "b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58",
+ "system_sha256": "31de4cf340b3317b69b72a289f2bf83e8cd8e25b4b29993a83818b46831ff9f5",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "not_written",
+  "quote": "So it suffices: $S_\\infty$ is a union of residue classes mod $L$ (then $a_{n+T}=a_n+L$ for ALL $n$ with $T=\\#(S_\\infty\\cap[1,L])$).",
+  "witness": "The write-up must establish an actual finite $L$ and prove membership invariance under $m\\mapsto m+L$ for every $m\\ge a_1$, then derive the indexing shift from the first term. The quote gives only a conditional assembly under the unproved assumption that $S_\\infty$ is a union of residue classes.",
+  "load_bearing": "The desired conclusion follows only after the unproved residue-class hypothesis is established globally. Numerical verification and conditional language do not prove periodicity from $n=1$."
+ },
+ "started_utc": "2026-09-06 05:41:18 UTC"
+}

@@ -1,0 +1,74 @@
+{
+ "rater": "claude",
+ "case": "p1-glm52-2ede1c6b-v1",
+ "problem": "1",
+ "group": "D",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.3,
+  "input_tokens": 2,
+  "output_tokens": 787,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 5878,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3535,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.00363,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 787,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 5878,
+    "webSearchRequests": 0,
+    "costUSD": 0.07846500000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 222,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "statements": {
+   "L1.1": {
+    "established": "yes",
+    "quote": "Every move strictly decreases $(T,c)$. Since the lexicographic order on\n$\\mathbb Z_{\\ge0}^2$ has no infinite strictly decreasing chain, only finitely many\nmoves are possible. Thus the process always stops. A move is possible exactly when\n$c\\ge2$, so at termination $c\\le1$.",
+    "note": "Lex monovariant covers both cases; \"at least one >1\" proved via positive G_p invariant, non-circular."
+   },
+   "L1.2": {
+    "established": "yes",
+    "quote": "$$\\gcd\\bigl(\\min(\\alpha,\\beta),\\,|\\alpha-\\beta|\\bigr)=\\gcd(\\alpha,\\beta-\\alpha)=\\gcd(\\alpha,\\beta)$$\nby Euclid's identity. Therefore the gcd of the two touched exponents is unchanged,\nhence the gcd of the *entire* multiset of $p$-exponents — i.e. $G_p$ — is\nunchanged.",
+    "note": "WLOG plus stated gcd(0,x)=x convention handles equal and zero valuations; yields v_p(M)=G_p."
+   }
+  },
+  "S_ref": 2,
+  "notes": "Move rewritten to (min, |diff|) explicitly; explicit M = prod p^{gcd_i v_p(a_i)} stated. Termination via well-founded lex pair (T,c), survivor existence via positive invariant rather than the \"never two 1s\" route, which is equivalent. Numerical checks clearly labeled as non-proof."
+ },
+ "anchors": {
+  "L1.1": {
+   "anchored": true,
+   "length": 273,
+   "length_ok": true,
+   "reason": null
+  },
+  "L1.2": {
+   "anchored": true,
+   "length": 268,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

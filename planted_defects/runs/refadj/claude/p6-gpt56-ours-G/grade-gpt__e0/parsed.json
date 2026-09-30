@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 8.5,
+  "input_tokens": 2,
+  "output_tokens": 521,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 3143,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2805,
+    "outputTokens": 15,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.00288,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 521,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3143,
+    "webSearchRequests": 0,
+    "costUSD": 0.045333,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 157,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The large-prime erasure lemma is the crux (L6.2), and the write-up's only 'proof' is 'Induction over the sequence terms in increasing order (standard; details omitted)' — no induction hypothesis, no construction, no case analysis. Nowhere else is it proved: the 'Surviving hypothesis' paragraph merely asserts that 'The construction Rp^k repairs this boundary issue' and defers to 'the lemma', and the computational section explicitly states the checks 'only test the lemma'. Since (3), and hence the periodicity of Section 3, rests entirely on this lemma, the objection is decisive. Repairing requires supplying the full lemma proof (and the threshold, ledger uses a_1^2, may need adjusting).",
+  "wrong_answer_stated": false
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-0db62b6e6ab5",
+  "problem": "1",
+  "sha256": "0db62b6e6ab55f27c632148783ed255ccd412cb80214df06130ba689c98f88a0",
+  "path": "checkpoint_inputs_ext/0db62b6e6ab55f27c632148783ed255ccd412cb80214df06130ba689c98f88a0.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 1,
+  "record_ids": [
+    "p1-gpt-5.6-sol-xhigh-main-t001"
+  ],
+  "bytes": 1476,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2598,
+        "output_tokens": 1199,
+        "output_tokens_details": {
+          "thinking_tokens": 922
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1199,
+            "cache_read_input_tokens": 2598,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 16.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "lexicographic descent of (product, number of nonunits)",
+    "upper_bound_mechanism": "invariance of gcd of p-adic exponents under (a,b)->(min(a,b),|a-b|)",
+    "wrong_answer_stated": false,
+    "notes": "Tracking file, explicitly says full proof not yet assembled. Correct M = prod p^{gcd v_p(a_i)} stated. Move rule on valuations asserted without derivation; termination monovariant named but 'product cannot become 1' merely asserted (no argument that some entry stays >1); invariance stated as 'consequently' with no gcd(x,y-x)=gcd(x,y) argument or edge cases."
+  },
+  "S": 0,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,37 @@
+{
+ "task_id": "imo-2026-p1",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Product bookkeeping: the two new entries g=gcd(m,n) and lcm(m,n)/g multiply to lcm(m,n)=mn/g, so the board product becomes P'=P/g; P never increases.",
+  "Case split for descent: g>1 gives P'<P; g=1 gives new entries (1,mn), so P'=P and exactly two nonunits become one, K'=K-1. Hence (P,K) strictly decreases lexicographically after every legal move.",
+  "Well-foundedness: P is a positive integer that can strictly decrease only finitely often; while P is fixed (equivalently g=1) every move strictly decreases the bounded integer K. So every move sequence is finite regardless of choices.",
+  "Terminal state: at most one entry >1 (two would form a legal pair), and at least one nonunit persists since a move outputs either g>1 or mn>1; hence exactly one M>1 at termination.",
+  "p-adic exponent transformation under a move is (a,b) -> (min(a,b), max(a,b)-min(a,b)=|a-b|), correct because v_p(lcm/g)=a+b-2min(a,b).",
+  "Invariance: gcd(a,b)=gcd(min(a,b),|a-b|) (verified including a=0, b=0, a=b cases), so the gcd G_p of the full exponent vector (zeros included, gcd(0,x)=x convention) is invariant under every move.",
+  "Terminal evaluation: exponent vector (v_p(M),0,...,0) has gcd v_p(M), so v_p(M)=G_p for every prime p; by unique factorization M equals the stated formula, which depends only on the initial board (choice-independence).",
+  "Only primes dividing some initial A_i have G_p>0, so the product is finite; consistency check M>1 holds since some A_i>1 gives some G_p>0 (zeros do not trivialize the gcd).",
+  "Falsification examples check out: (2,3)->(1,6) has sum 5->7 and product 6->6 (refuting sum/product descent); (4,8)->(4,2)->(2,2)->(2,1) terminates at M=2 while initial lcm is 8 (refuting M=lcm), and the formula gives gcd(2,3)=1, M=2.",
+  "Spot checks of formula (1): (2,3) yields M=6; (6,10,15) yields M=30 via two different move orders; (12,18)->(6,6)->(6,1) yields M=6; (72,2700) terminates at M=150=2^1*3^1*5^2, matching gcd-of-exponents per prime.",
+  "Equal values in different places are legal: (m,m)->(m,1), exponents (a,a)->(a,0), gcd preserved; coprime case (m,n)->(1,mn) handled; selecting 1 is not legal and correctly excluded."
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is correct, complete, and self-contained. Termination is shown by a lexicographic descent on (board product P, number of nonunits K): a move multiplies the board by 1/gcd, so P strictly falls when gcd>1, and when gcd=1 the pair (m,n) becomes (1,mn), keeping P fixed while K drops by exactly 1; both coordinates are well-founded, so all choice sequences terminate, and the terminal board has exactly one nonunit M since moves never eliminate the last nonunit. Uniqueness follows by fixing a prime p and observing a move sends exponents (a,b) to (min(a,b),|a-b|), which preserves the gcd of the whole exponent vector; at the end the vector is (v_p(M),0,...,0), forcing v_p(M)=gcd of initial p-exponents for every p, i.e. M = prod_p p^{gcd(v_p(A_1),...,v_p(A_2026))}. All degenerate cases (equal entries, coprime entries, zero valuations) were independently re-derived and check out; the included counterexamples correctly refute the naive hypotheses (sum descent, pure product descent, M=lcm). The computational-evidence paragraph references an external script (verify_small.py) whose output was not re-run here, but it is explicitly labeled as non-load-bearing falsification evidence and the proof relies on nothing outside itself. No fatal gaps found.",
+ "transfer_assessment": [
+  "Reusable: when a single measure fails (product is preserved by coprime moves), augment lexicographically with a discrete count (number of nonunits) that strictly drops exactly when the primary measure is flat.",
+  "Reusable: translate multiplicative board dynamics into per-prime exponent vectors; gcd/lcm operations become min/max on exponents, turning the problem into an integer (Euclidean-style) dynamics where gcd-of-vector invariants are natural.",
+  "Reusable: the map (a,b)->(min(a,b),|a-b|) preserves pairwise gcd (Euclidean identity), hence preserves the gcd of the entire vector; evaluating an invariant at a terminal state of known shape (one nonzero entry) pins down the answer.",
+  "Reusable: prove persistence of a nonunit separately from the 'at most one' terminal argument; termination only gives <=1 nonunit, existence needs the move-output check (g>1 or mn>1).",
+  "Caution (misleading if misread): the second output is lcm/gcd = mn/g^2, not lcm; misreading it as lcm would change exponents to (min,max) and break both the descent and the invariant.",
+  "Caution: naive guesses fail — total sum can increase ((2,3)->(1,6): 5->7), product alone can stay flat (coprime moves), and the final value is not the initial lcm ((4,8) ends at 2, not 8); any solution needs the two-coordinate descent and the gcd invariant specifically.",
+  "Note: the zero-valuation conventions gcd(0,x)=x and gcd(0,...,0)=0 are load-bearing; without them the invariant statement would be ill-defined for primes absent from some entries.",
+  "Non-transferable/decorative: the exhaustive small-case script is useful only as falsification support; it plays no role in the proof and its reported counts were not independently verified here."
+ ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "p1-h-e781d3fd1787",
+  "problem": "1",
+  "sha256": "e781d3fd1787b223c2ee0d7fa40521c32385955b72012077bf343cd4dfd2a89d",
+  "path": "checkpoint_inputs_ext/e781d3fd1787b223c2ee0d7fa40521c32385955b72012077bf343cd4dfd2a89d.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 6,
+  "record_ids": [
+    "p1-gpt-5.6-sol-max-main-t006",
+    "p1-deedy-gpt-5.6-sol-max-final"
+  ],
+  "bytes": 5378,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1614,
+        "output_tokens": 2341,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 36.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "potential Φ = P·2^r (product times 2^{#nonunits}) strictly decreasing",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations via gcd(min(a,b),|a−b|)=gcd(a,b)",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Φ = P·2^r strictly decreases in both d=1 (r drops) and d>1 (P drops, r≤) cases, giving termination; terminal board has at most one nonunit and never loses all since replacement product lcm(m,n)>1. Valuation map (min,|a−b|) with gcd identity, zero/equal cases addressed; M explicitly determined."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

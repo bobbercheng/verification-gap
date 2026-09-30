@@ -1,0 +1,169 @@
+{
+ "annotator": "glm-5.3",
+ "items": [
+  {
+   "id": "pilot-c473124a3778",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique/p3-high-C-r1/output.md",
+   "bytes": 15120,
+   "sha256": "c473124a3778f64e325b270174210641c039144626e7947846ae6bc6c098e58b",
+   "annotator": "glm-5.3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "end_turn",
+     "usage": {
+      "input_tokens": 5641,
+      "output_tokens": 6656,
+      "cache_read_input_tokens": 0,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 77.5,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n division + even-rank majorization (Lemma E)",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap + greedy supply/demand cancellation matching",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Pairing lemma rigorously proves claiming phase equals odd sorted sum. Theorem A's induction (Lemma E) handles arbitrary interleaving for all n. Theorem B's pigeonhole and greedy matching include correct cut-count and legality checks; leftover bound via Observation 1(ii) and Lemma 3."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  },
+  {
+   "id": "pilot-b81de4e701ac",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique/p3-high-C-r2/output.md",
+   "bytes": 13505,
+   "sha256": "b81de4e701acf71a6ff544b797faad368c5c75559989852613426334e75910d4",
+   "annotator": "glm-5.3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "end_turn",
+     "usage": {
+      "input_tokens": 5141,
+      "output_tokens": 7409,
+      "cache_read_input_tokens": 0,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 87.6,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n division with even-position majorization proved by induction on r",
+    "upper_bound_mechanism": "subset-sum pigeonhole (gap <= 1/N) plus greedy cancellation cutting producing equal pairs and leftover of mass <= 1/N",
+    "wrong_answer_stated": false,
+    "notes": "Complete for all n. Lemma 1 proves the alternating-sum value via pairing strategies both sides; Theorem A's induction is valid against every refinement; Theorem B's pigeonhole, cut-counting, and Lemma 3 cancellation are fully written. Answer stated and boxed correctly."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  },
+  {
+   "id": "pilot-25a02f9148ef",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique/p3-high-N-r1/output.md",
+   "bytes": 12481,
+   "sha256": "25a02f9148ef9d0100689e342763065fd8f063f2d523c11c94a9db597e0f9719",
+   "annotator": "glm-5.3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "end_turn",
+     "usage": {
+      "input_tokens": 4845,
+      "output_tokens": 5993,
+      "cache_read_input_tokens": 0,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 64.8,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "geometric opening (2^n:...:1) with even-index sum majorization proved by induction (Lemma E)",
+    "upper_bound_mechanism": "subset-sum pigeonhole (gap <= 1/(2^{n+1}-1)) plus greedy max-max cancellation pairing with halved common parts",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Lemma 1 fully proves the odd(S) value via both pairing strategies. Theorem 1's Lemma E induction is valid for all n against any Xiang reply. Theorem 2's pigeonhole and cancellation procedure are fully written with correct cut count, legality, and delta(L) <= D. Answer matches 2^n/(2^{n+1}-1)."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  },
+  {
+   "id": "pilot-96514f704580",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique/p3-high-N-r2/output.md",
+   "bytes": 9412,
+   "sha256": "96514f704580da32f1f32e223688c7b4fa054fa32f2371ab268b266f93c14e38",
+   "annotator": "glm-5.3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "end_turn",
+     "usage": {
+      "input_tokens": 3860,
+      "output_tokens": 7165,
+      "cache_read_input_tokens": 0,
+      "server_tool_use": {
+       "web_search_requests": 0
+      },
+      "service_tier": "standard"
+     },
+     "sec": 89.6,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position sum induction (Lemma E) on 1:2:4:...:2^n division",
+    "upper_bound_mechanism": "subset-sum pigeonhole near-equal disjoint subsums + greedy equal-pair cancellation",
+    "wrong_answer_stated": false,
+    "notes": "Complete and rigorous. Lemma 1 pairing strategies correctly establish value = odd(S) = (1+delta)/2 and reduce marking to sup-inf delta. Lower bound: Lemma E induction bounds every even-position partial sum by 2^n-2^{n-r}, valid for all n and all replies. Upper bound: pigeonhole gap <= 1/N, halving Z, greedy cancellation with exact cut count <= n, delta <= 1/N via Lemmas 2 and (1)."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  }
+ ]
+}

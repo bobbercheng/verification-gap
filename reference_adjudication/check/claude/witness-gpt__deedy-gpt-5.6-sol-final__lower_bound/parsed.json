@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-gpt__deedy-gpt-5.6-sol-final__lower_bound",
+ "case": "deedy-gpt-5.6-sol-final",
+ "procedure": "witness",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 36.6,
+  "input_tokens": 2,
+  "output_tokens": 2737,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 3923,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3336,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003436,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2737,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 3923,
+    "webSearchRequests": 0,
+    "costUSD": 0.1084865,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2346,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "With N(t) = number of columns of height >= t and Delta = integral of (N(t) mod 2), splitting a column of height a into u <= v flips the parity on BOTH (0,u] and (v,a]: N increases by 1 below u and drops by 1 above v. The objection's instance (2d -> d/2, 3d/2) is exactly this: parity flips on (0,d/2), below the cut level, contradicting 'only above its level'. That assertion is the sole support for the induction ('plus one parity interchange') proving part (ii), i.e. the universal lower bound for the 1:2:...:2^n division. No other passage in the write-up proves (ii) (the referenced lemmas/refinement.md is not reproduced), so L3.3 is not established as written; a correct replacement argument (e.g. the sign-vector/tree bound) is needed.",
+  "elsewhere_quote_note": null
+ },
+ "elsewhere_anchor": null
+}

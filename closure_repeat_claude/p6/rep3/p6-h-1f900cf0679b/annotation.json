@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-1f900cf0679b",
+  "problem": "6",
+  "sha256": "1f900cf0679bc7a427d6df10d999f1fad13207495174b96a304f7042b74a6373",
+  "path": "checkpoint_inputs/1f900cf0679bc7a427d6df10d999f1fad13207495174b96a304f7042b74a6373.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 5,
+  "record_ids": [
+    "p6-gpt-5.6-sol-xhigh-main-t005"
+  ],
+  "bytes": 5846,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4129,
+        "output_tokens": 1490,
+        "output_tokens_details": {
+          "thinking_tokens": 1184
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1490,
+            "cache_read_input_tokens": 4129,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 22.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "descent on c(H,p)=rad(H\\{p}) via scanning property: every relevant prime lies in a minimal support with small core (<= a_1); finiteness of U not completed",
+    "upper_bound_mechanism": "asserted: sequence = increasing enumeration of finite union of multiple-sets, L = product of relevant primes, T = number of admissible residues (no proof)",
+    "wrong_answer_stated": false,
+    "notes": "Scanning property and the characterization G=F (support is a term-support iff it meets every term's support) are proved cleanly. The finiteness argument gives only the descent step; the 'small-core' pairing finishing finiteness is explicitly deferred. Periodicity is merely announced, with no invariance-mod-L proof and no handling of n=1."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

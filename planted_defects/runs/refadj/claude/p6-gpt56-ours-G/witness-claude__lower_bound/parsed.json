@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "objection_key": "witness-claude__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.1,
+  "input_tokens": 2,
+  "output_tokens": 373,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 3210,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2866,
+    "outputTokens": 15,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002941,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 373,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3210,
+    "webSearchRequests": 0,
+    "costUSD": 0.04230300000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 46,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The whole finiteness/large-prime-erasure content sits in the Lemma \"For every sequence term x, the set σ(x) is good\", whose proof reads only \"Induction over the sequence terms in increasing order (standard; details omitted).\" That is no argument. Elsewhere the text offers only a hypothesis-testing remark that \"The construction Rp^k repairs this boundary issue\" (no definition of R, no proof Rp^k is a term or lies in [A,x)), plus explicitly non-probative numerics (\"These computations only test the lemma\"). Since (3), (4) and hence periodicity all rest on this lemma, L6.2 is not established as written; supplying the omitted lemma proof is the minimal repair."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "lower_bound"
+}

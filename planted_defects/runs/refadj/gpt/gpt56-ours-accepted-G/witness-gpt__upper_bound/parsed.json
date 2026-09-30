@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-G",
+ "base_id": "gpt56-ours-accepted",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "witness-gpt__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.2,
+  "input_tokens": 18837,
+  "output_tokens": 318,
+  "reasoning_output_tokens": 170,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The nonempty-B case is precisely the universal cancellation/overlay construction required for L3.2. The write-up asserts implementability, equal pairing, residual mass, and the q−1 cut bound while explicitly omitting their proof. Later sections only invoke the refinement lemma or restate that it handles these cases; they do not supply the missing construction and count. Since these facts must hold for arbitrary interval lengths and minimizing disjoint A,B, a substantive lemma-level argument is needed."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "upper_bound"
+}

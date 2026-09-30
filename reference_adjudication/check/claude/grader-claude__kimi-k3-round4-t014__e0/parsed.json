@@ -1,0 +1,61 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__kimi-k3-round4-t014__e0",
+ "case": "kimi-k3-round4-t014",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 26.7,
+  "input_tokens": 2,
+  "output_tokens": 1967,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 11713,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9539,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009634,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1967,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 11713,
+    "webSearchRequests": 0,
+    "costUSD": 0.1671365,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1515,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "So the hypothesis of Lemma 4.1(b) holds, and some ordering of $P\\cup N$ has chain value $g\\le\\frac{S}{2^m-1}$.",
+  "status_as_written": "false_display",
+  "repair_distance": "sentence",
+  "explanation": "The objection is locally right: v(B) is defined via the decreasing ordering, yet Lemma 4.1 and Theorem 4.2's proof only produce *some* ordering of P∪N with nested value g, and decreasing order need not achieve it. But the substance of L3.2 survives: the pigeonhole gives a subset (P∪N) and an explicit ordering with nested value ≤ S/(2^{n+1}-1)=T_n, and XY's cut strategy (cut the larger of running piece and b_k, set aside equal pairs, bisect the rest) is order-agnostic — it never uses b_1≥…≥b_r, only sequential processing. So the notation 'b_1≥…≥b_r' is a misprint beside a valid argument; replacing it by 'in the order supplied by Lemma 4.1' repairs it in one sentence.",
+  "confidence": "high"
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 110,
+  "length_ok": true,
+  "reason": null
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-bba234862995",
+  "problem": "6",
+  "sha256": "bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988",
+  "path": "checkpoint_inputs/bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "fb285ec4",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-fb285ec4-v2"
+  ],
+  "bytes": 15030,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 7849,
+        "cache_read_input_tokens": 901,
+        "output_tokens": 1368,
+        "output_tokens_details": {
+          "thinking_tokens": 1075
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 7849,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1368,
+            "cache_read_input_tokens": 901,
+            "cache_creation_input_tokens": 7849,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 7849
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 19.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "\"essential primes\" pigeonhole (bogus; falsely claims E ⊆ primes of a_1)",
+    "upper_bound_mechanism": "finite-state pigeonhole + backward induction (sketch, rests on false Lemma 4)",
+    "wrong_answer_stated": true,
+    "notes": "Lemma 4 claims a_{n+1}=a_n+L eventually, contradicted by the text's own 15,18,20,... example (T=8, not 1). Corollary 3's finiteness of E rests on the false claim E ⊆ primes of a_1 (2 ∤ 15). No characterization of membership, no large-prime erasure. Lemma 2 is explicit hand-waving. Backward induction only sketched."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

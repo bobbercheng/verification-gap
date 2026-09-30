@@ -1,0 +1,2126 @@
+{
+  "annotator": "gpt-5.6-sol",
+  "items": [
+    {
+      "id": "p3-h-0df01e264dd8",
+      "problem": "3",
+      "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+      "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-claude-fable-5-final",
+        "claude-fable-5-main-t013"
+      ],
+      "bytes": 15474,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 20180,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 411,
+            "reasoning_output_tokens": 286
+          },
+          "sec": 15.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "tree-pairing with signed subset sums",
+        "upper_bound_mechanism": "subset-sum pigeonhole with cross-pairing cuts",
+        "wrong_answer_stated": false,
+        "notes": "Complete all-n proof. The claiming phase is rigorously reduced to the odd-ranked sum. The geometric construction is protected by a valid tree-pairing argument, and the universal upper bound follows from subset-sum pigeonholing plus an explicit overlay construction using at most n cuts."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ca88f79fb210",
+      "problem": "3",
+      "sha256": "ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7",
+      "path": "checkpoint_inputs/ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-deepseek-v4-pro-final",
+        "deepseek-v4-pro-main-t009"
+      ],
+      "bytes": 1934,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15266,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 327,
+            "reasoning_output_tokens": 213
+          },
+          "sec": 11.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Correct values are reported for n=1,2, but the conjectured general formula is wrong from n=3 onward. No claiming-phase reduction is given. The equal-spacing lower-bound claim is unsupported and false in general; the proposed Xiang reply addresses only that particular Liu placement, not every Liu division."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-e3e333cc4847",
+      "problem": "3",
+      "sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+      "path": "checkpoint_inputs/e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-gpt-5.6-sol-final"
+      ],
+      "bytes": 7191,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 16680,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 487,
+            "reasoning_output_tokens": 360
+          },
+          "sec": 15.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric partition plus sketched refinement lemma",
+        "upper_bound_mechanism": "sketched alternating-imbalance refinement lemma",
+        "wrong_answer_stated": false,
+        "notes": "The claiming-game reduction is complete. Both bounds depend entirely on the refinement lemma, whose purported sweep proof is not rigorous: the row construction and cancellation are undefined, the claimed block and total bounds are unsupported, and neither induction is actually established. Thus it is only an all-n sketch, not a proof."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-357c84e12d44",
+      "problem": "3",
+      "sha256": "357c84e12d443fa53d1a04486d5d68d50b666376ca3546588bf1cedcad8a7e54",
+      "path": "checkpoint_inputs/357c84e12d443fa53d1a04486d5d68d50b666376ca3546588bf1cedcad8a7e54.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-gpt-5.6-sol-max-final",
+        "gpt-5.6-sol-max-main-t001"
+      ],
+      "bytes": 1274,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15017,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 89,
+            "reasoning_output_tokens": 0
+          },
+          "sec": 6.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Correctly reduces optimal claiming to taking pieces in nonincreasing order and expresses Liu's payoff via the alternating sum. No closed-form answer, lower-bound construction, or upper-bound strategy is provided."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-e9214da8ecf1",
+      "problem": "3",
+      "sha256": "e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0",
+      "path": "checkpoint_inputs/e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-gpt-5.6-sol-pro-final",
+        "gpt-5.6-sol-pro-main-t011"
+      ],
+      "bytes": 3625,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15744,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 265,
+            "reasoning_output_tokens": 148
+          },
+          "sec": 12.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division conjectured; direct n=1 proof",
+        "upper_bound_mechanism": "direct n=1 optimization",
+        "wrong_answer_stated": false,
+        "notes": "The claiming-phase reduction is fully proved. The correct closed form and geometric Liu division are explicitly labeled conjectural. No all-n argument against arbitrary Xiang replies and no all-n Xiang construction are supplied. Both bounds are established only for n=1."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-c833554e3cbb",
+      "problem": "3",
+      "sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+      "path": "checkpoint_inputs/c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final",
+        "gpt-5.6-sol-xhigh-main-t008"
+      ],
+      "bytes": 11015,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 17976,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 383,
+            "reasoning_output_tokens": 268
+          },
+          "sec": 11.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "weighted multigraph tree-component pairing",
+        "upper_bound_mechanism": "subset-sum pigeonhole and common refinement",
+        "wrong_answer_stated": false,
+        "notes": "Complete all-n proof. It rigorously reduces optimal claiming to the sorted alternating sum, proves the powers-of-two lower bound via a tree component and signed powers, and proves the matching upper bound using close subset sums, refinement, and at most n cuts."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-13eda1f40c36",
+      "problem": "3",
+      "sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+      "path": "checkpoint_inputs/13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-grok-4.5-final",
+        "grok-4.5-main-t080"
+      ],
+      "bytes": 17437,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 20278,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 577,
+            "reasoning_output_tokens": 445
+          },
+          "sec": 19.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "power-of-two induction sketch",
+        "upper_bound_mechanism": "binary equal-pair refinement sketch",
+        "wrong_answer_stated": false,
+        "notes": "The closed form and alternating-sum reduction are correctly stated. The lower-bound induction contains unsupported dummy-piece interpretations, parity claims, and explicit placeholders, so it does not handle arbitrary interleavings. The upper-bound argument recognizes the desired paired refinement but never proves it requires at most n cuts; its recursive/binary assertions and small-n numerical checks are insufficient."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-12bcf1f34411",
+      "problem": "3",
+      "sha256": "12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c",
+      "path": "checkpoint_inputs/12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-kimi-k3-final"
+      ],
+      "bytes": 24463,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 23054,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 535,
+            "reasoning_output_tokens": 411
+          },
+          "sec": 16.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "super-increasing geometric split via matching/tree argument",
+        "upper_bound_mechanism": "subset-sum pigeonhole and chain cancellation construction",
+        "wrong_answer_stated": false,
+        "notes": "Complete all-n proof. The claiming phase is rigorously reduced to the alternating sum. The geometric lower bound handles every refinement through the matching formula and tree component argument. The upper bound gives a valid subset-sum chain theorem and an explicit Xiang strategy using at most n cuts."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-71a422af6fd1",
+      "problem": "3",
+      "sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+      "path": "checkpoint_inputs/71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-muse-spark-1.1-final",
+        "muse-spark-1.1-main-t005"
+      ],
+      "bytes": 24081,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 21985,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 373,
+            "reasoning_output_tokens": 247
+          },
+          "sec": 14.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "symmetric-pair cancellation, incomplete",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "The correct n=1 value is proved, but the general conjecture (n+1)/(2n+1) is wrong. The sorted odd-position draft sum is used but only informally justified. Pair cancellation is proved only when every large interval is cut once; arbitrary cut allocation is explicitly unresolved. No valid upper bound is supplied."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-bfb7a020a5b1",
+      "problem": "3",
+      "sha256": "bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7",
+      "path": "checkpoint_inputs/bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7.md",
+      "lineage": "ours-glm52-repair",
+      "model": "glm-5.2",
+      "context": 4,
+      "turn": null,
+      "record_ids": [
+        "glm52-repair"
+      ],
+      "bytes": 8773,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 17761,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 504,
+            "reasoning_output_tokens": 390
+          },
+          "sec": 19.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "even-position majorization induction",
+        "upper_bound_mechanism": "subset-sum pigeonhole and cancellation overlay",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct for all positive n. The claiming phase is rigorously reduced to odd-ranked pieces; the geometric opening is handled against arbitrary refinements; and the subset-sum construction gives a legal at-most-n-cut reply with controlled leftover and alternating sum."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-7ab3c4244f77",
+      "problem": "3",
+      "sha256": "7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce",
+      "path": "checkpoint_inputs/7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce.md",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "glm52-simple-c1"
+      ],
+      "bytes": 4902,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 16187,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 467,
+            "reasoning_output_tokens": 346
+          },
+          "sec": 14.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "geometric 1:2:4:...:2^n strategy",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is explicitly only conjectured. The odd-rank reduction is stated with merely computational verification and an unwritten proof sketch. The geometric strategy is identified but checked only numerically for n≤5. No rigorous Xiang construction or general upper-bound argument is provided."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-513b242ad9b4",
+      "problem": "3",
+      "sha256": "513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7",
+      "path": "checkpoint_inputs/513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7.md",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "glm52-simple-c2"
+      ],
+      "bytes": 9799,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 17792,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 264,
+            "reasoning_output_tokens": 147
+          },
+          "sec": 9.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division, proved only for n=1",
+        "upper_bound_mechanism": "n=1 cut; halving only the geometric configuration",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is explicitly conjectured, not proved for all n. The claiming-phase reduction is complete. Both universal bounds remain open for n≥2; exact computations and the meeting strategy pair do not establish either minimax direction."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-681ea6d2ed0a",
+      "problem": "3",
+      "sha256": "681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4",
+      "path": "checkpoint_inputs/681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4.md",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 3,
+      "turn": null,
+      "record_ids": [
+        "glm52-simple-c3"
+      ],
+      "bytes": 14776,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 19311,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 247,
+            "reasoning_output_tokens": 133
+          },
+          "sec": 11.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "n=1 median argument",
+        "upper_bound_mechanism": "n=1 median construction",
+        "wrong_answer_stated": false,
+        "notes": "The correct general formula is explicitly conjectured but proved only for n=1. The claiming-phase reduction is fully proved. Both bounds are rigorous for n=1 only; the geometric/halving computation is merely one matched strategy pair and supplies neither universal all-n bound."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-d84ec9b247fc",
+      "problem": "3",
+      "sha256": "d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8",
+      "path": "checkpoint_inputs/d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8.md",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 4,
+      "turn": null,
+      "record_ids": [
+        "glm52-simple-c4"
+      ],
+      "bytes": 19101,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 20535,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 238,
+            "reasoning_output_tokens": 122
+          },
+          "sec": 9.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric construction proved only for n=1",
+        "upper_bound_mechanism": "explicit reply proved only for n=1",
+        "wrong_answer_stated": false,
+        "notes": "The odd-rank reduction is fully proved. The correct formula is explicitly only conjectured for n≥2. Both universal minimax directions are absent beyond n=1; the matched geometric/halving pair and numerical evidence do not establish either."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ad0fee18a856",
+      "problem": "3",
+      "sha256": "ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb",
+      "path": "checkpoint_inputs/ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb.md",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "glm53-c1"
+      ],
+      "bytes": 7842,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 17321,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 383,
+            "reasoning_output_tokens": 258
+          },
+          "sec": 14.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "n=1 median argument",
+        "upper_bound_mechanism": "n=1 median optimization",
+        "wrong_answer_stated": true,
+        "notes": "Correctly solves n=1 and states the sorted odd-position reduction, but gives no written proof of greedy optimality. Both bounds are only complete for n=1. The conjectured c_2=5/9 is wrong; the required all-n geometric construction and universal subset-sum/cancellation upper bound are absent."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-e8f9c35c4d32",
+      "problem": "3",
+      "sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+      "path": "checkpoint_inputs/e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d.md",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "glm53-c2"
+      ],
+      "bytes": 11002,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 18686,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 277,
+            "reasoning_output_tokens": 165
+          },
+          "sec": 11.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric partition; exhaustive n=2",
+        "upper_bound_mechanism": "halving bound; exhaustive n=2",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is explicitly conjectural for n≥3. The odd-position reduction is asserted as standard without proof. Both directions are rigorously handled only for n≤2; the proposed all-n mechanisms are openly left unproved."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-a9b1ddf110b3",
+      "problem": "3",
+      "sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+      "path": "checkpoint_inputs/a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829.md",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 3,
+      "turn": null,
+      "record_ids": [
+        "glm53-c3"
+      ],
+      "bytes": 9592,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 17891,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 285,
+            "reasoning_output_tokens": 163
+          },
+          "sec": 10.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric partition with incomplete superincreasing induction",
+        "upper_bound_mechanism": "split construction and incomplete subset-sum lemma",
+        "wrong_answer_stated": false,
+        "notes": "The correct closed form and claiming-phase reduction are stated. Both all-n bounds remain explicitly open: the lower bound lacks the largest-piece insertion step, while the upper bound depends on Lemma X1 proved only for small m. Small-n cases and several restricted regimes are established."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-323ceb8b7c17",
+      "problem": "3",
+      "sha256": "323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15",
+      "path": "checkpoint_inputs/323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15.md",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 4,
+      "turn": null,
+      "record_ids": [
+        "glm53-c4"
+      ],
+      "bytes": 9294,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 17878,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 201,
+            "reasoning_output_tokens": 83
+          },
+          "sec": 8.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "superincreasing geometric partition / XOR merge",
+        "upper_bound_mechanism": "counting lemma and split-at-minimum-gap construction",
+        "wrong_answer_stated": false,
+        "notes": "The correct closed form and greedy alternating-sum reduction are stated and proved. Both required all-n bounds remain explicitly open: the lower-bound cut-largest/XOR step and the upper-bound negative-gap regime. Only small cases and restricted subcases are completed."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-cb1bcbb2df8f",
+      "problem": "3",
+      "sha256": "cb1bcbb2df8fa81bfe15b7ceb9c74d06c914bb6052ab1c111784f8700e4fa645",
+      "path": "checkpoint_inputs/cb1bcbb2df8fa81bfe15b7ceb9c74d06c914bb6052ab1c111784f8700e4fa645.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "gpt56-ours-accepted"
+      ],
+      "bytes": 11127,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 18171,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 485,
+            "reasoning_output_tokens": 362
+          },
+          "sec": 17.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "binary division plus rank-pair tree argument",
+        "upper_bound_mechanism": "subset-sum pigeonhole plus overlay cancellation",
+        "wrong_answer_stated": false,
+        "notes": "Complete all-n proof. The drafting lemma rigorously reduces optimal claiming to the alternating sum. The refinement lemma handles arbitrary Xiang cuts via a rank-pair multigraph and constructs matching refinements by overlay. Binary lengths give the lower bound; subset-sum spacing gives the upper bound."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-7a92204a1295",
+      "problem": "3",
+      "sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+      "path": "checkpoint_inputs/7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "gpt56-ours-timeout"
+      ],
+      "bytes": 8900,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 17409,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 618,
+            "reasoning_output_tokens": 501
+          },
+          "sec": 20.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "subset-gap graph pairing",
+        "upper_bound_mechanism": "subset-sum pigeonhole and overlay cancellation",
+        "wrong_answer_stated": false,
+        "notes": "Complete all-n proof. The drafting lemma reduces optimal play to the sorted alternating sum. The refinement lemma rigorously handles arbitrary Xiang refinements and fewer cuts. Binary lengths attain the subset-sum gap, while pigeonhole spacing and overlay cancellation give the matching universal upper bound."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-f7bcae33fcdd",
+      "problem": "3",
+      "sha256": "f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874",
+      "path": "checkpoint_inputs/f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874.md",
+      "lineage": "ours-kimi-K2-repair",
+      "model": "kimi-k3",
+      "context": 4,
+      "turn": null,
+      "record_ids": [
+        "kimi-k2-repair"
+      ],
+      "bytes": 17249,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 20684,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 316,
+            "reasoning_output_tokens": 196
+          },
+          "sec": 14.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "even-position majorization",
+        "upper_bound_mechanism": "subset-sum pigeonhole and cancellation",
+        "wrong_answer_stated": false,
+        "notes": "Complete all-n proof. The claiming phase is rigorously reduced to odd/even sorted sums; the geometric division is protected by proved even-position majorization; and every Liu composition is capped using a near-equal subset-sum pair, an explicit legal cancellation construction, and a verified cut count."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-0f9b4ecd6f83",
+      "problem": "3",
+      "sha256": "0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6",
+      "path": "checkpoint_inputs/0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6.md",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "kimi-r1-c1"
+      ],
+      "bytes": 3339,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15874,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 371,
+            "reasoning_output_tokens": 248
+          },
+          "sec": 13.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division, numerically checked only",
+        "upper_bound_mechanism": "incomplete recursive case split",
+        "wrong_answer_stated": false,
+        "notes": "The correct closed form is explicitly labeled a conjecture. The claiming-phase reduction has a valid all-n pairing proof. The geometric lower-bound strategy is stated but its arbitrary-refinement argument is an open gap. Upper-bound recurrences are only partial sketches and do not cover every Liu division for all n."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-53603b46ba72",
+      "problem": "3",
+      "sha256": "53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c",
+      "path": "checkpoint_inputs/53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c.md",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "kimi-r1-c2"
+      ],
+      "bytes": 8696,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 17730,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 280,
+            "reasoning_output_tokens": 160
+          },
+          "sec": 9.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric composition with incomplete induction",
+        "upper_bound_mechanism": "deterministic peeling",
+        "wrong_answer_stated": false,
+        "notes": "The claiming-phase odd-sum reduction is fully proved. The correct formula is explicitly only conjectured. The geometric lower-bound construction is identified, but its guarantee against arbitrary replies remains open. Peeling gives a valid general Xiang construction, but the essential all-n bound on its leftover is unproved."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-5a75aa5c50ee",
+      "problem": "3",
+      "sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+      "path": "checkpoint_inputs/5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8.md",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 3,
+      "turn": null,
+      "record_ids": [
+        "kimi-r1-c3"
+      ],
+      "bytes": 14257,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 19696,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 530,
+            "reasoning_output_tokens": 403
+          },
+          "sec": 18.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "even-position majorization",
+        "upper_bound_mechanism": "subset-sum pigeonhole and supply–demand cancellation",
+        "wrong_answer_stated": false,
+        "notes": "Complete all-n proof. The claiming phase is rigorously reduced to odd/even ranked sums; the geometric division is handled against arbitrary refinements by Lemma E; and the pigeonhole/cancellation construction legally uses at most n cuts and leaves imbalance at most 1/(2^(n+1)-1)."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-c2ce1631ca36",
+      "problem": "3",
+      "sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+      "path": "checkpoint_inputs/c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d.md",
+      "lineage": "ours-kimi-R2",
+      "model": "kimi-k3",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "kimi-r2-c1"
+      ],
+      "bytes": 3032,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15658,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 318,
+            "reasoning_output_tokens": 200
+          },
+          "sec": 11.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "dyadic division with relaxed-toggle sketch",
+        "upper_bound_mechanism": "four n=2 attacks only",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is stated only as a conjecture. The draft reduction is asserted with proof deferred. The dyadic construction and toggle reformulation are promising but lack an all-n invariant. The upper bound is only described for n=2, with its case analysis not included."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ad98327771c2",
+      "problem": "3",
+      "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+      "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+      "lineage": "ours-kimi-R2",
+      "model": "kimi-k3",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "kimi-r2-c2",
+        "kimi-r2-c3",
+        "kimi-r2-c4"
+      ],
+      "bytes": 4134,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 16098,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 196,
+            "reasoning_output_tokens": 89
+          },
+          "sec": 8.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "toggle relaxation",
+        "upper_bound_mechanism": "set-game strategy",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula is stated only as a conjecture. The greedy draft reduction lacks proof. The dyadic lower-bound argument is missing its crucial reverse inequality for arbitrary replies. The upper bound has computations and small-n strategies, but no all-n construction or covering argument."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-9b8187934c93",
+      "problem": "3",
+      "sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+      "path": "checkpoint_inputs/9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "nemotron-p3-1"
+      ],
+      "bytes": 15914,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 20154,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 250,
+            "reasoning_output_tokens": 134
+          },
+          "sec": 10.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "The stated formula is wrong except at n=1. The sorted-piece alternating-pick reduction is correctly identified. The lower bound relies on unsupported and false claims that repeated cuts are wasteful and midpoint cuts are optimal. The upper bound repeatedly encounters contradictions and ultimately omits the proof of a false midpoint-bisection lemma."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ee57fd697d9c",
+      "problem": "3",
+      "sha256": "ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb",
+      "path": "checkpoint_inputs/ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "nemotron-p3-2"
+      ],
+      "bytes": 15901,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 19988,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 315,
+            "reasoning_output_tokens": 187
+          },
+          "sec": 13.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "binary division with incomplete splitting/majorization argument",
+        "upper_bound_mechanism": "greedy pairing induction sketch",
+        "wrong_answer_stated": false,
+        "notes": "The closed form and alternating-sum reduction are given. The lower bound's splitting lemma wrongly assumes fragments occupy consecutive ranks after resorting, and the essential “careful accounting” is omitted. The upper-bound induction is unfinished, relies on unjustified symmetry, questionable majorization, an unchecked potential, and explicitly omitted bookkeeping."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-24646b45f297",
+      "problem": "3",
+      "sha256": "24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0",
+      "path": "checkpoint_inputs/24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 3,
+      "turn": null,
+      "record_ids": [
+        "nemotron-p3-3"
+      ],
+      "bytes": 13473,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 19124,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 368,
+            "reasoning_output_tokens": 241
+          },
+          "sec": 12.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "flawed splitting monotonicity",
+        "upper_bound_mechanism": "flawed adjacent-pair construction",
+        "wrong_answer_stated": true,
+        "notes": "The stated formula is wrong except at n=1. The claiming phase is correctly reduced to odd-ranked sorted pieces and an alternating sum. The proposed lower bound relies on false, unproved splitting claims and analyzes only one Xiang response. The upper construction neither respects Liu’s existing cuts nor proves its key sorted-pair lemma."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-53fcca77ed99",
+      "problem": "3",
+      "sha256": "53fcca77ed99823742d5d7e54be1df6e408d7e1877ca083dbd0e51803bffac96",
+      "path": "checkpoint_inputs/53fcca77ed99823742d5d7e54be1df6e408d7e1877ca083dbd0e51803bffac96.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 2,
+      "record_ids": [
+        "claude-fable-5-main-t002"
+      ],
+      "bytes": 1220,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15035,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 183,
+            "reasoning_output_tokens": 77
+          },
+          "sec": 8.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "geometric division, proved only for n=1",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula and geometric construction are only conjectured. The claiming-phase reduction is stated without proof. Only n=1 is established; there is no argument against arbitrary Xiang replies for all n and no upper-bound construction."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-a2a14ff8b369",
+      "problem": "3",
+      "sha256": "a2a14ff8b36953a77fa3fe426c8b070371a6c14a11fcd9260ac9e81489827c18",
+      "path": "checkpoint_inputs/a2a14ff8b36953a77fa3fe426c8b070371a6c14a11fcd9260ac9e81489827c18.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 7,
+      "record_ids": [
+        "claude-fable-5-main-t007"
+      ],
+      "bytes": 3325,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15806,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 287,
+            "reasoning_output_tokens": 162
+          },
+          "sec": 11.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric partition with parity-measure/integrality sketch",
+        "upper_bound_mechanism": "halving/cancellation recursion verified only for small m",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is explicitly labeled conjectural. The picking-game reduction is asserted with induction deferred. The geometric lower-bound argument covers only special cases and admits an open gap. The upper-bound recursion is verified only through m=3 and explicitly fails to establish the general case."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-569a398abb27",
+      "problem": "3",
+      "sha256": "569a398abb27f29df7b8947d714e83f6886a9804d6480608f9130b07b65afa76",
+      "path": "checkpoint_inputs/569a398abb27f29df7b8947d714e83f6886a9804d6480608f9130b07b65afa76.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 1,
+      "record_ids": [
+        "gpt-5.6-sol-main-t001"
+      ],
+      "bytes": 1162,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 14970,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 322,
+            "reasoning_output_tokens": 221
+          },
+          "sec": 12.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "The correct n=1 value is suggested, but no general formula is given. The sorted-order/odd-rank reduction is stated without justification. No proved lower-bound argument, even for n=1, and no upper-bound construction are supplied."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-17c52d5715c6",
+      "problem": "3",
+      "sha256": "17c52d5715c605b0d020b86bf397f79dca356d450a50f61beb7bfb0174e515b1",
+      "path": "checkpoint_inputs/17c52d5715c605b0d020b86bf397f79dca356d450a50f61beb7bfb0174e515b1.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 6,
+      "record_ids": [
+        "gpt-5.6-sol-main-t006"
+      ],
+      "bytes": 2764,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15350,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 376,
+            "reasoning_output_tokens": 274
+          },
+          "sec": 11.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Correct reduction to the odd-ranked sum is proved. The value 2/3 is identified only as an apparent n=1 candidate. No rigorous lower or upper bound is completed, even for n=1, and no general closed form is stated."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-23591a31a955",
+      "problem": "3",
+      "sha256": "23591a31a955e0960363e3acbad293fe9367b80c1523a5b826262073de0af070",
+      "path": "checkpoint_inputs/23591a31a955e0960363e3acbad293fe9367b80c1523a5b826262073de0af070.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 11,
+      "record_ids": [
+        "gpt-5.6-sol-main-t011"
+      ],
+      "bytes": 4837,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 16045,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 362,
+            "reasoning_output_tokens": 245
+          },
+          "sec": 12.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "unproved refinement lemma (ii)",
+        "upper_bound_mechanism": "unproved refinement lemma (i)",
+        "wrong_answer_stated": false,
+        "notes": "The closed form and claiming-phase reduction are correctly established. Both bounds, however, depend entirely on a refinement lemma whose proof is only referenced in another file and is not included in the submitted text. Thus the all-n mechanisms are stated and applied, but not proved."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ea7721ae800e",
+      "problem": "3",
+      "sha256": "ea7721ae800e8f71918b8eff70ed044ac78a00f2d1bd8014cb334c242b9ae4d5",
+      "path": "checkpoint_inputs/ea7721ae800e8f71918b8eff70ed044ac78a00f2d1bd8014cb334c242b9ae4d5.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 1,
+      "record_ids": [
+        "gpt-5.6-sol-pro-main-t001"
+      ],
+      "bytes": 1070,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 14937,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 79,
+            "reasoning_output_tokens": 0
+          },
+          "sec": 5.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "The claiming-phase reduction is only mentioned as an investigation, with no proof. No formula, lower-bound construction, or upper-bound reply is provided."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-3d3e6f9c8b93",
+      "problem": "3",
+      "sha256": "3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a",
+      "path": "checkpoint_inputs/3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 6,
+      "record_ids": [
+        "gpt-5.6-sol-pro-main-t006"
+      ],
+      "bytes": 3652,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15695,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 243,
+            "reasoning_output_tokens": 131
+          },
+          "sec": 10.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "n=1 case analysis",
+        "upper_bound_mechanism": "n=1 case analysis",
+        "wrong_answer_stated": false,
+        "notes": "The correct value is established only for n=1. The sorted-piece alternating-sum reduction and layer-cake identity are stated, but the claiming-game induction is explicitly unfinished. No all-n geometric lower-bound construction or universal Xiang upper-bound response is provided."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-5178d6ad7537",
+      "problem": "3",
+      "sha256": "5178d6ad7537678b73888a6da8e7d99bec43f4587384e99c7c5f6e243f80367e",
+      "path": "checkpoint_inputs/5178d6ad7537678b73888a6da8e7d99bec43f4587384e99c7c5f6e243f80367e.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 1,
+      "record_ids": [
+        "gpt-5.6-sol-xhigh-main-t001"
+      ],
+      "bytes": 1284,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 14993,
+            "cached_input_tokens": 14080,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 89,
+            "reasoning_output_tokens": 0
+          },
+          "sec": 6.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "The claiming phase is correctly reduced to the sum of odd-ranked lengths after sorting. No value of c_n is stated, and no lower- or upper-bound construction or all-n argument is provided."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-5e2ebb3f401c",
+      "problem": "3",
+      "sha256": "5e2ebb3f401cb782aad47beaebbad01ead43c20efd764961f63d9d03a9382699",
+      "path": "checkpoint_inputs/5e2ebb3f401cb782aad47beaebbad01ead43c20efd764961f63d9d03a9382699.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 2,
+      "record_ids": [
+        "gpt-5.6-sol-xhigh-main-t002"
+      ],
+      "bytes": 2102,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15279,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 307,
+            "reasoning_output_tokens": 209
+          },
+          "sec": 11.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "The claiming-stage reduction and alternating-discrepancy formula are correctly stated but not justified. No candidate closed form, sharp lower bound, or sharp upper-bound construction is supplied. The universal upper bound presented is explicitly non-sharp."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-19dc570c8774",
+      "problem": "3",
+      "sha256": "19dc570c877417736d49a79851fa50a2d5776e505d4429b0a14628bdaf53c793",
+      "path": "checkpoint_inputs/19dc570c877417736d49a79851fa50a2d5776e505d4429b0a14628bdaf53c793.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 5,
+      "record_ids": [
+        "gpt-5.6-sol-xhigh-main-t005"
+      ],
+      "bytes": 2550,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15337,
+            "cached_input_tokens": 14080,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 212,
+            "reasoning_output_tokens": 95
+          },
+          "sec": 8.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "weighted multigraph/tree bipartition sketch",
+        "upper_bound_mechanism": "subset-sum pigeonhole and sparse matching sketch",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is stated. The claiming reduction is asserted without proving optimal play. Both sharp constructions are promising all-n outlines, but the write-up explicitly omits the pairing, transportation, and cut-realization details needed to establish them against arbitrary play."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-6cbe7f9a3f50",
+      "problem": "3",
+      "sha256": "6cbe7f9a3f50371ff3c714c58d4d546db8fbeba1e3983babe942519734596f73",
+      "path": "checkpoint_inputs/6cbe7f9a3f50371ff3c714c58d4d546db8fbeba1e3983babe942519734596f73.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 1,
+      "record_ids": [
+        "grok-4.5-main-t001"
+      ],
+      "bytes": 793,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 14885,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 71,
+            "reasoning_output_tokens": 0
+          },
+          "sec": 7.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "The write-up contains no proposed answer, reduction, lower-bound construction, upper-bound construction, or proof."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-f9fb9af1a368",
+      "problem": "3",
+      "sha256": "f9fb9af1a368266c234311e910e64dde7772f2248fb8950c96175d6074cb9d45",
+      "path": "checkpoint_inputs/f9fb9af1a368266c234311e910e64dde7772f2248fb8950c96175d6074cb9d45.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 14,
+      "record_ids": [
+        "grok-4.5-main-t014"
+      ],
+      "bytes": 1710,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15238,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 393,
+            "reasoning_output_tokens": 276
+          },
+          "sec": 17.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division, small cases only",
+        "upper_bound_mechanism": "matching idea only",
+        "wrong_answer_stated": true,
+        "notes": "The correct closed form is presented only as a possibility. The n=2 geometric division is identified but supported only empirically, with no argument against every reply. The claiming-phase reduction is absent. The upper-bound matching idea is merely named. Several incorrect alternative conjectures are also stated."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-439ff9df8a77",
+      "problem": "3",
+      "sha256": "439ff9df8a779660e61d3efb16d48421efcbaf31eacf992bba17614c4f08eeb0",
+      "path": "checkpoint_inputs/439ff9df8a779660e61d3efb16d48421efcbaf31eacf992bba17614c4f08eeb0.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 24,
+      "record_ids": [
+        "grok-4.5-main-t024"
+      ],
+      "bytes": 1916,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15209,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 125,
+            "reasoning_output_tokens": 0
+          },
+          "sec": 8.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "power-of-two division, proved only for n=1",
+        "upper_bound_mechanism": "near-pairing idea only",
+        "wrong_answer_stated": false,
+        "notes": "The correct closed form is explicitly labeled a conjecture, not an answer. The claiming-phase alternating-sum reduction is absent. Only n=1 is proved; n=2 relies on numerical case analysis. The all-n lower-bound argument and upper-bound construction are merely proposed, with no complete proof."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-a354e6f7b1c5",
+      "problem": "3",
+      "sha256": "a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b",
+      "path": "checkpoint_inputs/a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 34,
+      "record_ids": [
+        "grok-4.5-main-t034"
+      ],
+      "bytes": 2547,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15396,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 405,
+            "reasoning_output_tokens": 280
+          },
+          "sec": 14.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "power-of-two construction with unfinished induction",
+        "upper_bound_mechanism": "binary matching/recursive dichotomy sketch",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is stated only as a conjecture. The alternating-sum reduction is asserted but not fully justified. The lower construction is correct, but only numerical checks and an incomplete induction plan are supplied. The upper bound has numerical evidence for n=2 and a vague strategy idea, not a proof."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-87db022a0736",
+      "problem": "3",
+      "sha256": "87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc",
+      "path": "checkpoint_inputs/87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 49,
+      "record_ids": [
+        "grok-4.5-main-t049"
+      ],
+      "bytes": 2794,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15714,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 261,
+            "reasoning_output_tokens": 138
+          },
+          "sec": 9.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "power-of-two construction with conjectured D induction",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is stated only as a conjecture. The claiming value formula via D is sketched but D and the sorted alternating-sum reduction are not fully presented. The lower bound is numerically checked only through n=3; its all-n key claim is unproved. The upper bound is explicitly unfinished."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-eb62923f791f",
+      "problem": "3",
+      "sha256": "eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6",
+      "path": "checkpoint_inputs/eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round1",
+      "turn": 8,
+      "record_ids": [
+        "kimi-k3-round1-t008"
+      ],
+      "bytes": 2684,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15520,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 351,
+            "reasoning_output_tokens": 229
+          },
+          "sec": 13.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division",
+        "upper_bound_mechanism": "halving/cancellation sketch",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is only conjectured, though verified for n=1,2,3. Greedy reduction is asserted without its proof. The geometric construction is given, but no argument handles every Xiang reply. Halving/cancellation operations are described, yet no all-n construction proving the universal upper bound is supplied."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-15413cb68d86",
+      "problem": "3",
+      "sha256": "15413cb68d86a2d234cc0acaad29c1956a8d7fefb87b818c1d7d6c61e460a3f3",
+      "path": "checkpoint_inputs/15413cb68d86a2d234cc0acaad29c1956a8d7fefb87b818c1d7d6c61e460a3f3.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round3",
+      "turn": 7,
+      "record_ids": [
+        "kimi-k3-round3-t007"
+      ],
+      "bytes": 4794,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 16284,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1892,
+            "reasoning_output_tokens": 1762
+          },
+          "sec": 50.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 2,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "matching/tree components and block lemma",
+        "upper_bound_mechanism": "subset-sum pigeonhole; realizability missing",
+        "wrong_answer_stated": false,
+        "notes": "The correct formula is stated only as a conjecture. Greedy claiming and the alternating-sum reduction are asserted without a written proof. The detailed tree-component/block-lemma argument supplies an all-n lower bound. The upper bound stops at a signed-sum gap and explicitly acknowledges that no valid Xiang construction has been proved."
+      },
+      "S": 1,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-f4b82aeef8ab",
+      "problem": "3",
+      "sha256": "f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00",
+      "path": "checkpoint_inputs/f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round3",
+      "turn": 14,
+      "record_ids": [
+        "kimi-k3-round3-t014"
+      ],
+      "bytes": 2892,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 15551,
+            "cached_input_tokens": 10624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 304,
+            "reasoning_output_tokens": 169
+          },
+          "sec": 11.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "matching/tree and block-lemma sketch",
+        "upper_bound_mechanism": "subset-sum pigeonhole/greedy-chain sketch",
+        "wrong_answer_stated": false,
+        "notes": "The correct closed form is stated. Greedy claiming and the alternating-sum reduction are asserted without their proof. The lower-bound framework is outlined for all n, but key matching/component steps are not written out and it is explicitly “modulo write-up.” The upper bound depends on an unproved chain theorem, so neither bound is complete."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ea4551d94017",
+      "problem": "3",
+      "sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+      "path": "checkpoint_inputs/ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round4",
+      "turn": 14,
+      "record_ids": [
+        "kimi-k3-round4-t014"
+      ],
+      "bytes": 20480,
+      "annotator": "gpt-5.6-sol",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 21829,
+            "cached_input_tokens": 12672,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4153,
+            "reasoning_output_tokens": 4031
+          },
+          "sec": 106.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 2,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "super-increasing matching/tree argument",
+        "upper_bound_mechanism": "subset-sum gap with chain cancellation",
+        "wrong_answer_stated": false,
+        "notes": "The closed form and super-increasing matching/tree lower bound are valid for all n. Lemma 1.1 wrongly gives Xiang the next move after two claims. The upper proof guarantees a favorable ordering, but chain value and the implemented strategy use decreasing order; no equivalence is proved."
+      },
+      "S": 1,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    }
+  ]
+}

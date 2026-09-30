@@ -1,0 +1,46 @@
+{
+  "id": "kimi-k3-round3-t014",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round3",
+  "turn": 14,
+  "ts": "2026-07-18T00:50:52.822729+00:00",
+  "path": "checkpoint_inputs/f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00.md",
+  "bytes": 2892,
+  "sha256": "f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1347,
+        "output_tokens": 2391,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 28.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "matching formula + block lemma on super-increasing (geometric) pieces",
+    "upper_bound_mechanism": "signed-sum pigeonhole / greedy-chain equivalence (conjectural)",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form stated as answer. Reduction (greedy ⇒ alternating sum) asserted 'proved' but not written. Part A lower bound only sketched: matching formula, component decomposition, block lemma proof sketch; main argument claimed 'modulo write-up', random-trial verified. Part B upper bound unproved: numerically checked n≤4, chain theorem admitted needing proof."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00",
+  "original_bytes": 2892,
+  "input_anonymized": false
+}

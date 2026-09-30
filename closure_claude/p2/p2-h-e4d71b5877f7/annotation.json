@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-e4d71b5877f7",
+  "problem": "2",
+  "sha256": "e4d71b5877f7d8ad2c755b157aa5e06bd9d44826e5040b6640f1ef15443a95d9",
+  "path": "checkpoint_inputs/e4d71b5877f7d8ad2c755b157aa5e06bd9d44826e5040b6640f1ef15443a95d9.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "69253a90",
+  "turn": 1,
+  "record_ids": [
+    "p2-nemotron-69253a90-v1"
+  ],
+  "bytes": 6493,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3970,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 3474,
+        "output_tokens_details": {
+          "thinking_tokens": 3230
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3970,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3474,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 3970,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3970
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 44.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "homothety H_{A,2}: OM=ON restated as O'B=O'C (restatement only)",
+    "wrong_answer_stated": true,
+    "notes": "Goal stated, but strategy rests on Lemma 1 (spiral similarity at A sends K onto ray CL), which is false by orientation and fails on the write-up's own numerics (A=0,B=4,C=1+3i gives S(K) off line CL). No concyclicities derived (Sections 3, 6 admit gaps); no circle through A,K,L; only numerical verification."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

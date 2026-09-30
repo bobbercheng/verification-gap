@@ -1,0 +1,71 @@
+{
+  "id": "p4-h-788aced15a04",
+  "problem": "4",
+  "sha256": "788aced15a042ec790b8827c4f5b5a4e9f64f8298c61007f6bfab1fa3eeecb1d",
+  "path": "checkpoint_inputs_ext/788aced15a042ec790b8827c4f5b5a4e9f64f8298c61007f6bfab1fa3eeecb1d.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 11,
+  "record_ids": [
+    "p4-gpt-5.6-sol-max-main-t011",
+    "p4-deedy-gpt-5.6-sol-max-final"
+  ],
+  "bytes": 7827,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5601,
+        "output_tokens": 1269,
+        "output_tokens_details": {
+          "thinking_tokens": 973
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1269,
+            "cache_read_input_tokens": 5601,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 18.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "pigeonhole integer m in (nC, n(A+C)) making both children carry multiples m/n, (n-m)/n; plus k -> k-1 induction",
+    "upper_bound_mechanism": "safe-triangle invariant (no angle a positive multiple of t), four-case check that some child stays safe",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer boxed. Transition rule derived with attainability of every x in (0,A). Sufficiency handles n=2 and n=3 edge cases, gives both children an integer multiple of 1/n, then clean induction splitting kt = t + (k-1)t. Necessity uses equilateral start and complete four-case argument, with 1 = (r+s)t used exactly where needed."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

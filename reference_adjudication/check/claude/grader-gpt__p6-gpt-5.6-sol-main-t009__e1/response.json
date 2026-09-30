@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3426,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0035159999999999996,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 786,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3948,
+    "webSearchRequests": 0,
+    "costUSD": 0.060008000000000006,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 442,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3948,
+   "cache_read_input_tokens": 1736,
+   "output_tokens": 786,
+   "output_tokens_details": {
+    "thinking_tokens": 442
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3948,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 786,
+     "cache_read_input_tokens": 1736,
+     "cache_creation_input_tokens": 3948,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3948
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 9949,
+  "is_error": false,
+  "elapsed_seconds": 10.8,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L6.2\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"none\",\n  \"explanation\": \"The write-up's only source of finiteness is the set-theoretic Lemma: a pairwise-intersecting family has finitely many minimal finite transversals. The objection correctly identifies the induction's flaw: the inductive claim is only valid for transversals meeting C, and at the recursive call C\\\\{c} need not lie in F_c, so transversals of F_c need not meet it; the hypothesis cannot be invoked as stated. Worse, the Lemma is false (ledger L6.2: F_k = {x_1,...,x_k, y_k} is pairwise intersecting with infinitely many minimal finite transversals), so no local edit repairs it. The genuine finiteness input, large-prime erasure using minimality of the a_n, appears nowhere in the text.\"\n}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-e8f9c35c4d32",
+  "problem": "3",
+  "sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+  "path": "checkpoint_inputs/e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "glm53-c2"
+  ],
+  "bytes": 11002,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6380,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 677,
+        "output_tokens_details": {
+          "thinking_tokens": 363
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6380,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 677,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 6380,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 6380
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:4 partition + exhaustive case analysis (n=2 only); Conjecture L (merge/pairing) unproved",
+    "upper_bound_mechanism": "halving-the-n-largest bound V<=1/2+delta/2 (not tight) + three-strategy case analysis for n=2; Conjecture X unproved",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form c_n=2^n/(2^{n+1}-1) but explicitly labeled conjectural for n>=3. Reduction to odd-position sum merely asserted as 'standard'. Both directions proved only for n=1,2; general Conjectures L and X formulated with partial tools (uncut-top case, merge lemmas, L0 equivalence) and openly flagged as unproved."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

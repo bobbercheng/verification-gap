@@ -1,0 +1,67 @@
+{
+  "id": "p1-nemotron-6c9c2439-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "6c9c2439",
+  "turn": 1,
+  "path": "checkpoint_inputs_ext/ae440d9edfbabe407aaab8871be17d24d4941aa3b6337bac8d2c036059b662ce.md",
+  "recorded_mtime_utc": "2026-07-20T12:49:01Z",
+  "bytes": 6836,
+  "sha256": "ae440d9edfbabe407aaab8871be17d24d4941aa3b6337bac8d2c036059b662ce",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3913,
+        "cache_read_input_tokens": 1363,
+        "output_tokens": 1702,
+        "output_tokens_details": {
+          "thinking_tokens": 1411
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3913,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1702,
+            "cache_read_input_tokens": 1363,
+            "cache_creation_input_tokens": 3913,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3913
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 22.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic monovariant (Omega, count of >1) + every move leaves an output >1",
+    "upper_bound_mechanism": "prime-wise gcd of p-adic valuations invariant under (a,b)->(min,|a-b|)",
+    "wrong_answer_stated": false,
+    "notes": "All components present: exponent move description with the never-two-1s check, well-founded lex monovariant with both gcd>1 and gcd=1 cases (including m=n=d subcase), C>=1 preserved, and gcd-of-valuations invariance yielding M=prod p^{G_p}. Invariance uses gcd(a,b)=gcd(min,|a-b|) tersely but validly; equal/zero cases not separately discussed."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

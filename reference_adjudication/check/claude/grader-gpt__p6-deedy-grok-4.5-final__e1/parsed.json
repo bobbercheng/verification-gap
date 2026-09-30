@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__p6-deedy-grok-4.5-final__e1",
+ "case": "p6-deedy-grok-4.5-final",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 10.3,
+  "input_tokens": 2,
+  "output_tokens": 590,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 2032,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1897,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001992,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 590,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 2032,
+    "webSearchRequests": 0,
+    "costUSD": 0.035947999999999994,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 275,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The quoted line is explicitly labeled a \"Conjecture\" and is supported only by the listed computations for a1 = 15, 35, etc. Nowhere does the file argue that a term divisible by a large prime is dominated by a smaller admissible number with the same small-prime support; on the contrary it records \"New primes keep appearing (infinitely many, by computational evidence)\" and \"Need a rigorous proof that (1) only finitely many primes can ever be forced\", and the \"Full proof\" section reads \"(Not yet complete.)\". So the finiteness/large-prime-erasure statement is asserted, not established; supplying it requires a full lemma."
+ },
+ "elsewhere_anchor": null
+}

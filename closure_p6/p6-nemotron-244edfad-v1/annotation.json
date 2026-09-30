@@ -1,0 +1,61 @@
+{
+  "id": "p6-nemotron-244edfad-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "244edfad",
+  "turn": 1,
+  "path": "checkpoint_inputs/7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb.md",
+  "bytes": 8615,
+  "sha256": "7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 3109,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 105.3,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3109,
+        "output_tokens": 1158,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 16.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "essential-primes gap argument (sketched, 'one can bound' by induction hand-wave)",
+    "upper_bound_mechanism": "residue enumeration + backward shift (Lemma 6 flawed)",
+    "wrong_answer_stated": true,
+    "notes": "Candidate characterization (C) is correct. Lemma 2's core gap bound is explicitly left as 'one can bound... by induction' — the finiteness/erasure mechanism is only sketched. E is never proved finite. Lemma 4's claim that minimal hitting sets lie inside E is asserted, not proved. Lemma 6's gcd claim is false/garbled and its argument is circular; only eventual periodicity is genuinely shown."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb",
+  "original_bytes": 8615,
+  "input_anonymized": false
+}

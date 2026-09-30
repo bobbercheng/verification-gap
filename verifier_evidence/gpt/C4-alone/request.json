@@ -1,0 +1,8 @@
+{
+ "system": "You are a careful mathematical verifier. You will be shown a claim and possibly a proposed counterexample (a witness). Assess them separately and independently. Do not defer to the confidence of the proposer. Do not retrieve or recall published solutions; reason from first principles. Return ONLY a JSON object with exactly these fields: {\"claim_true\": true|false, \"claim_reason\": \"<=60 words\", \"witness_valid\": true|false|null, \"witness_reason\": \"<=60 words or null\"}. witness_valid is null when no witness is given; otherwise it is true only if the witness satisfies every hypothesis of the claim and violates its conclusion.",
+ "user": "## Claim\nFor the division of a stick into n+1 parts of lengths 1, 2, 4, ..., 2^n (in some unit), all 2^{n+1} subset sums of the parts are pairwise distinct.\n\n## Witness\nNone. Assess the claim on its own.",
+ "model": "gpt-5.6-sol",
+ "condition": "alone",
+ "claim_id": "C4",
+ "claim_truth": true
+}

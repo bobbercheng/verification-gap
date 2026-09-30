@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-681ea6d2ed0a",
+  "problem": "3",
+  "sha256": "681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4",
+  "path": "checkpoint_inputs/681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c3"
+  ],
+  "bytes": 14776,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 8040,
+        "output_tokens": 497,
+        "output_tokens_details": {
+          "thinking_tokens": 227
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 497,
+            "cache_read_input_tokens": 8040,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n config; n=1 case-check only; merge-induction sketched but explicitly unproved",
+    "upper_bound_mechanism": "n=1 only: explicit Xiang cut at 1/3 forcing median 1/3; no general mechanism",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula stated explicitly as conjecture; only c(1)=2/3 proved. Draft-game odd-rank reduction proved rigorously for all n via greedy exchange. LB and UB both openly declared unproven for n>=2, supported only by exact-grid/floating-point search. Honest, self-aware partial write-up."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

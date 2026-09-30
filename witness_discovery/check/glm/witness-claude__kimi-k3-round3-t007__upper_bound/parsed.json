@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "kimi-k3-round3-t007",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 22.1,
+  "input_tokens": 239,
+  "output_tokens": 1449,
+  "cache_read_input_tokens": 2496
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and read correctly: the text itself concedes that the pigeonhole sign vector is 'NOT always realizable by cancel/chain ops', calling it a 'Realizability gap'. Checking the whole text: the only upper-bound content is the reduction to m=n+1 pieces (LB using m≤n pieces gives D=0) and the pigeonhole existence of δ with |Σδᵢaᵢ| ≤ T_n·S. No passage anywhere converts this into an explicit Xiang strategy with ≤ n cuts valid for all n; the alternative 'min over subsets of greedy chain' is reported as empirical ('seems ≤ T_n', 'needs verification & proof'), and both 'Current best' and 'Full proof' explicitly state 'Part B still open'/'Part B open'. Grid checks for n≤3 do not count as an all-n construction. The upper-bound obligation (U) is therefore genuinely unmet, and without it no upper bound on c_n is established."
+ }
+}

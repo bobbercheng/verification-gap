@@ -1,0 +1,63 @@
+{
+ "_policy": "Route of each Problem-2 lineage, classified from the final retained text and both annotators' mechanism notes, against the taxonomy of the published solutions (synthetic key circle through A,K,L; trigonometric/sine-rule; complex or Cartesian coordinates). The synthetic-route rubric (obligations K, F) applies only to lineages whose final text follows the synthetic route; all other lineages are 'route N/A': their S values are displayed but excluded from agreement and transition counts. Classification was written before regenerating any count and applies to every checkpoint of the lineage.",
+ "deedy-claude-fable-5": {
+  "route": "synthetic",
+  "applicable": true,
+  "evidence": "Directed-angle translation of the three hypotheses into concyclicities; affine power identity vanishing at A,K,L replaces the explicit key circle; finish via median-length formula (both annotators; public verifier: 'A complete synthetic solution')."
+ },
+ "ours-gpt56sol-ultra": {
+  "route": "synthetic",
+  "applicable": true,
+  "evidence": "Circle with diameter AZ shown to contain K and L via radical axes; O is the midpoint of AZ, so MO=BZ/2=CZ/2=NO (both annotators)."
+ },
+ "deedy-gpt-5.6-sol-pro": {
+  "route": "trigonometric",
+  "applicable": false,
+  "evidence": "Sine-rule encoding of all three angle conditions; OM=ON reduced to cd-be=(c^2-b^2)/2 and closed by a trigonometric identity (annotators; verifier: 'complete, rigorous proof')."
+ },
+ "deedy-gpt-5.6-sol-max": {
+  "route": "cartesian coordinates",
+  "applicable": false,
+  "evidence": "Circumcircle of AKL computed in Cartesian coordinates with a polynomial certificate (annotators; verifier: 'complete, rigorous analytic proof')."
+ },
+ "deedy-gpt-5.6-sol-xhigh": {
+  "route": "complex coordinates",
+  "applicable": false,
+  "evidence": "Complex-coordinate setup, determinant factorization lemma, equal powers of M and N (annotators; verifier re-verified symbolically)."
+ },
+ "deedy-gpt-5.6-sol": {
+  "route": "complex coordinates",
+  "applicable": false,
+  "evidence": "Complex setup with sine-rule coordinates; circle (AKL) via explicit equations; crux H=0 asserted (annotators; verifier 4/7)."
+ },
+ "deedy-kimi-k3": {
+  "route": "law-of-sines / power-of-a-point coordinates",
+  "applicable": false,
+  "evidence": "Four law-of-sines relations eliminated to quadratics ConsP/ConsQ; powers of B, C w.r.t. (AKL); Apollonius median identity (annotators: 'non-synthetic trig/algebra route'; verifier: 'complete power-of-a-point proof')."
+ },
+ "deedy-deepseek-v4-pro": {
+  "route": "complex coordinates (plan, unexecuted)",
+  "applicable": false,
+  "evidence": "Complex setup M=0, N=1 with Im(.)=0 conditions; nothing executed (annotators; verifier)."
+ },
+ "deedy-muse-spark-1.1": {
+  "route": "coordinates (reduction only)",
+  "applicable": false,
+  "evidence": "Coordinate reduction OM=ON iff O_x=0; angle conditions sketched (annotators; verifier)."
+ },
+ "deedy-grok-4.5": {
+  "route": "undetermined (tracking file, no proof route executed)",
+  "applicable": false,
+  "evidence": "Vague ideas (spiral similarities, reflection, coordinates), nothing executed (annotators; verifier)."
+ },
+ "ours-glm52": {
+  "route": "coordinates with computer-algebra certificate",
+  "applicable": false,
+  "evidence": "Sine-rule parametrisation, constraints G1/G2, antipode reduction, decisive identity certified in external CAS files (annotators; Kimi K3 re-grade)."
+ },
+ "ours-nemotron": {
+  "route": "complex reality conditions + spiral similarity (unexecuted)",
+  "applicable": false,
+  "evidence": "Three angle conditions encoded as complex reality conditions, elimination never executed; crux lemma KA=KB false in general (annotators)."
+ }
+}

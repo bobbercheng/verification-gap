@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-gpt-5.6-sol-final",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 298.1,
+  "input_tokens": 352,
+  "output_tokens": 17711,
+  "cache_read_input_tokens": 2816
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and the objection reads it correctly: the only quantitative justification offered for 'each of total length at most $(T-d)/2$' is the parenthetical that the two uncancelled totals 'add to $T-d$'. Two nonnegative numbers with sum $S$ need not each be at most $S/2$; that needs equality or an independent bound, and the text proves neither — 'interchange at the cut' swaps row roles, it does not equalize totals (e.g., one column of height $T$, cut at $2T/3$, leaves remainders $0$ and $2T/3 > T/3 = (T-d)/2$). Nor is 'at most $s$ column-blocks' derived, nor is the non-recursed array's odd contribution bounded, and the peeled-off $d$ plus the recursive bound (array total $/(2^s-1) \\le d$) already gives $2d$, not $d$. Since Section 4 rests entirely on Lemma (i), the all-n upper bound is unproven in the text."
+ }
+}

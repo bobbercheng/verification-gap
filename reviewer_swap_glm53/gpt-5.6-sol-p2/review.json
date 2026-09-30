@@ -1,0 +1,37 @@
+{
+ "task_id": "imo-2026-p2",
+ "verdict": "revise",
+ "scores": {
+  "correctness": 3,
+  "completeness": 3,
+  "rigor": 2,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [
+  "The justification of the cyclicity of B,C,E,F is invalid as written. The chain 'measuredangle FBE = -∠KBA = -∠ACL = measuredangle FCE' asserts measuredangle FCE = -∠ACL, but a direct directed-angle evaluation gives measuredangle FCE = ∠FCA + ∠ACL (with ray CF between CA and CB); the congruence to -∠ACL mod 180 is equivalent to the cyclicity being proved, so the argument is circular. Replace with the correct criterion: B,C,E,F are concyclic iff measuredangle(BE,CE) ≡ measuredangle(BF,CF) mod 180, and both sides indeed equal ∠BAC + ∠ACL (= ∠(BK,CA) resp. ∠(BA,CL)) using the ray orders (1), the hypothesis ∠KBA = ∠ACL, and directed angles mod 180. The cyclicity conclusion itself is true, so this is a repairable gap, not a fatal one."
+ ],
+ "verified_claims": [
+  "Ray orders (1) and (2) at A, B, C, M, N follow correctly from the strict interiority hypotheses (K∈int BMC, L∈int BNC, K∈int ABL, L∈int AKC), and A,K,L are noncollinear.",
+  "E ∈ AC°, F ∈ AB° with orders B-K-E and C-L-F.",
+  "E ∈ ω1 = (BLN) when E ≠ N: measuredangle(BL,BE) = ∠LBK and measuredangle(NL,NE) = ∠LNC (lines NE, NC coincide, both directed values positive), so the inscribed-angle criterion applies.",
+  "The E = N and F = M degenerate cases are correctly converted to tangency of AC to ω1 at N (resp. AB to ω2 at M) via the converse tangent–chord theorem using the same angle equalities.",
+  "F ∈ ω2 = (CKM) when F ≠ M, by the symmetric directed-angle argument.",
+  "Power-of-A computations: AF·AB = AE·AC (ω0); AF'·AB = AE·AN and AE'·AC = AF·AM (ω1, ω2); hence AF' = AF/2 and AE' = AE/2, so F' and E' are the midpoints of AF and AE and lie strictly between A and F (resp. A and E); tangency at B or C is thereby impossible.",
+  "The circle Ω with diameter AZ is nondegenerate (Z ≠ A, since C,E would otherwise force AC = AE).",
+  "P, Q (midpoints of BF, CE) lie on Ω via perpendicular bisectors of chords of ω0 through Z (Thales, with P=Z or Q=Z handled).",
+  "Power comparisons (8), (9): C and F have equal powers with respect to ω1 and Ω (using N, Q midpoints on AC and F', P midpoints on AB, with correct directed signs); ω1 ≠ Ω since Ω contains A while ω1∩AB = {B,F'} excludes A. Hence the radical axis is CF and L ∈ Ω.",
+  "The symmetric arguments (11), (12) give B and E equal powers with respect to ω2 and Ω, radical axis BE, and K ∈ Ω.",
+  "Finale: O is the midpoint of AZ, so MO = ZB/2 and ON = ZC/2; ZB = ZC since Z is the centre of ω0 through B, C; hence OM = ON."
+ ],
+ "unverified_claims": [
+  "measuredangle FCE = -∠ACL as a direct (non-circular) directed-angle identity, used to establish that B, C, E, F are concyclic. The identity is true mod 180 as a consequence of the cyclicity, but no independent derivation is supplied; the candidate's own evaluation path (∠(CF,CE) = ∠FCA + ∠ACE) does not yield it without additional input."
+ ],
+ "summary": "The overall architecture is sound and essentially complete: the proof correctly identifies the circumcircle of AKL as the circle with diameter AZ, where Z is the centre of the circle through B,C,E,F, and derives K, L ∈ Ω via clean radical-axis arguments with midpoint/halving power identities. All power computations, degenerate cases (E=N, F=M, P=Z, Q=Z, Z=A, tangencies), distinctness of auxiliary circles, and the final MO=ON step were independently re-derived and check out. The one genuine defect is the justification that B, C, E, F are concyclic: the claimed directed-angle equality measuredangle FCE = -∠ACL is asserted without valid derivation and, as presented, is circular (it is equivalent to the cyclicity being proved). The claim itself is true (it follows immediately from the correct criterion measuredangle(BE,CE) ≡ measuredangle(BF,CF), both equal to ∠BAC + ∠ACL), so a one-paragraph fix suffices; until then the proof has a rigor gap at a foundational lemma.",
+ "transfer_assessment": [
+  "Reusable: the reduction of 'OM = ON for the circumcentre of AKL' to 'O = midpoint of AZ with ZB = ZC' via the midpoint-of-segment vector identity — a clean target reformulation for midpoint-circumcentre problems.",
+  "Reusable: proving a constructed point lies on the target circumcircle by intersecting a candidate circle (here diameter AZ) with an auxiliary circle's radical axis, where equal powers at two points are verified through half-length power identities (F', E' as midpoints of AF, AE forced by AN = AC/2, AM = AB/2).",
+  "Reusable: handling possible coincidences (E = N, F = M) by interpreting them as tangent double intersections before power computations, and ruling out tangencies at B and C via strict inequalities from the same computations.",
+  "Misleading mechanism: equating an ordinary angle directly with a directed angle at a vertex where the auxiliary ray (e.g. CF) lies on the opposite side of the other ray — this produced the circular step in the cyclicity lemma; the safe pattern is to use the chord-subtending criterion measuredangle(PX,QX) ≡ measuredangle(PY,QY) with full mod-180 bookkeeping."
+ ]
+}

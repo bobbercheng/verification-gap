@@ -1,0 +1,71 @@
+{
+  "id": "p4-h-f8938f118ca0",
+  "problem": "4",
+  "sha256": "f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3",
+  "path": "checkpoint_inputs_ext/f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p4-claude-fable-5-main-t005",
+    "p4-deedy-claude-fable-5-final"
+  ],
+  "bytes": 11887,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 8011,
+        "output_tokens": 1483,
+        "output_tokens_details": {
+          "thinking_tokens": 1210
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1483,
+            "cache_read_input_tokens": 8011,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 19.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "double-threat cut (both children get kθ) + chain lemma induction",
+    "upper_bound_mechanism": "safe-triangle invariant (no angle in θN), 4-case check",
+    "wrong_answer_stated": false,
+    "notes": "Answer θ=180/n stated correctly. Lemma 0 gives cut parametrization with existence/bijectivity of the cut point. Chain lemma proved by induction covering both discards. Lemma 2 handles n=2 separately and verifies 0<α<A. Lemma 4's four-case argument uses 180∉θN exactly where needed; existence of safe start proved."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

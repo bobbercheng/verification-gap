@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-c734a640cdef",
+  "problem": "6",
+  "sha256": "c734a640cdef6ea313666115130884bc6f3b92af3083cc71a707085f13ee8c0b",
+  "path": "checkpoint_inputs/c734a640cdef6ea313666115130884bc6f3b92af3083cc71a707085f13ee8c0b.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8828b58a",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-8828b58a-v1"
+  ],
+  "bytes": 7513,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4014,
+        "cache_read_input_tokens": 901,
+        "output_tokens": 730,
+        "output_tokens_details": {
+          "thinking_tokens": 472
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4014,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 730,
+            "cache_read_input_tokens": 901,
+            "cache_creation_input_tokens": 4014,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4014
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "hand-waved disjoint-subsequence argument for finiteness of prime union; admits it is not rigorous ('see below' never supplied)",
+    "upper_bound_mechanism": "none (asserts periodicity 'propagates backwards' without argument)",
+    "wrong_answer_stated": true,
+    "notes": "Correct final shape (L = product of primes in P*, T = number of covered residues) but built on the false lemma that each term's prime support is a minimal hitting set. Finiteness proof is explicitly incomplete; stabilization of H_n unjustified; extension to all n >= 1 merely asserted. Example is illustrative only."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

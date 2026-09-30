@@ -1,0 +1,64 @@
+{
+ "grader": "claude",
+ "case": "kimi-k3-round4-t014",
+ "problem": "3",
+ "group": "C",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 164.8,
+  "input_tokens": 2,
+  "output_tokens": 13791,
+  "cache_read_input_tokens": 761,
+  "cache_creation_input_tokens": 11392,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9332,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009437,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 13791,
+    "cacheReadInputTokens": 761,
+    "cacheCreationInputTokens": 11392,
+    "webSearchRequests": 0,
+    "costUSD": 0.45908550000000004,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 13392,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "Theorem 4.2 is stated for the chain value v(B) defined via the *decreasing* ordering, but its proof (via Lemma 4.1) only produces *some* ordering of P∪N with nested absolute difference g. The strategy section then writes B={b_1≥…≥b_r}. Purely cosmetic: the cut strategy is order-agnostic, so one need only say 'process B in the order supplied by Lemma 4.1'.",
+    "quote": "Let $B=\\{b_1\\ge\\dots\\ge b_r\\}$ be a nonempty subset of LB's pieces with chain value $v=v(B)\\le T_n$ (Theorem 4.2 with $S=1$, $m=n+1$)."
+   }
+  ],
+  "notes": "Answer 2^n/(2^{n+1}-1) correct. Reduction to alternating sum (Lemma 1.1), matching formula, the tree/loop counting argument for the geometric lower bound, and the pigeonhole+greedy-realizability chain argument for the upper bound all check out in detail; cut counts and distinctness are handled."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 134,
+   "length_ok": true,
+   "reason": null
+  }
+ ]
+}

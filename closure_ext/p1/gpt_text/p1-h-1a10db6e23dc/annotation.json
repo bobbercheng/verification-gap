@@ -1,0 +1,44 @@
+{
+  "id": "p1-h-1a10db6e23dc",
+  "problem": "1",
+  "sha256": "1a10db6e23dca33da727e66a219fcf9b19ea3c20642b5b8e3afe8f913e64b43b",
+  "path": "checkpoint_inputs_ext/1a10db6e23dca33da727e66a219fcf9b19ea3c20642b5b8e3afe8f913e64b43b.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "e1fce43d",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-e1fce43d-v1"
+  ],
+  "bytes": 7369,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17524,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 549,
+        "reasoning_output_tokens": 420
+      },
+      "sec": 21.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic descent; survivor argument flawed",
+    "upper_bound_mechanism": "prime-valuation gcd invariant",
+    "wrong_answer_stated": true,
+    "notes": "Termination is proved correctly. However, the claim that a product starting above 1 and never increasing must remain above 1 is false, so the written justification for at least one survivor fails. The move cases earlier contain the ingredients for a correct argument, but it is not made. Invariance and the formula for M are complete."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

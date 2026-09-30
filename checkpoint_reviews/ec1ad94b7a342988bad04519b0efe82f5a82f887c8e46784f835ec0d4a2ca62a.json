@@ -1,0 +1,58 @@
+{
+  "task_id": "imo-2026-p2",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 2,
+    "completeness": 2,
+    "rigor": 1,
+    "self_contained": 2
+  },
+  "fatal_issues": [
+    "The algebraic verification of perpendicularity (Section 4) claims a factorization (2x-1)·Q = 0 but does not show the factorization or prove Q ≠ 0 under interiority conditions. This is the core step proving KA = KB and is not carried out.",
+    "The synthetic proof of perpendicularity (Section 3) is abandoned mid-argument with 'This is getting too tangled' and 'A cleaner way...' — Claim 1 (∠CK₁K = γ) is not proven, so the concyclicity of C,N,K₁,K and the isosceles triangle CK = CK₁ are not established synthetically.",
+    "The symmetry argument for L (ℜ(Lz̄) = |z|²/2) is handwaved: 'By symmetry (swap B↔C, M↔N, K↔L, and replace z by 1/z̄ after normalizing, or repeat the algebra with L)'. In the coordinate system A=0, B=1, C=z, swapping B and C requires a different coordinate setup; this is not a trivial substitution and needs proper justification.",
+    "The final homothety/circumcenter argument (Section 5) gives a formula for O' and claims 'a direct computation shows |O'-1|² = |O'-z|²' but does not perform or sketch this computation. The geometric reflection argument is also incomplete ('The configuration forces O' to be equidistant from B and C' without proof)."
+  ],
+  "required_fixes": [
+    "Fully carry out the complex-number algebra: expand Im(z(K-1)(2K-1)/(K-z)) = 0 with K=x+yi, z=a+bi, show the polynomial factors as (2x-1)·Q(x,y,a,b), and prove Q ≠ 0 when K is strictly inside △BMC and △ABL.",
+    "Either complete the synthetic proof of ∠CK₁K = γ (using the third angle condition and spiral similarity properties) or replace the synthetic attempt with a complete algebraic derivation.",
+    "Properly derive LA = LC: either repeat the algebraic computation with the coordinate system adapted for symmetry, or give a synthetic argument using the spiral similarity S⁻¹.",
+    "Verify the circumcenter computation: substitute ℜ(k)=1/2 and ℜ(lz̄)=|z|²/2 into the formula for O' and show |O'-1|² = |O'-z|², or provide a complete synthetic proof using the perpendicular bisector properties of K and L.",
+    "Check boundary/degenerate cases explicitly or argue why the interiority conditions exclude the Q=0 factor."
+  ],
+  "verified_claims": [
+    "Lemma 1: S(K) lies on ray CL (from ∠KBA = ∠ACL = α and spiral similarity S at A sending B→C).",
+    "Lemma 2: ∠(CA, NK₁) = γ = ∠(CK₁, CK) where K₁ = S(K) (from ∠BMK = ∠LCK = γ and S sending BM→CN, MK→NK₁).",
+    "Lemma 3: ∠(CL₁, CK₁) = β = ∠(LN, CA) where L₁ = S(L) (from ∠LBK = ∠LNC = β and S sending BL→CL₁, BK→CK₁).",
+    "The spiral similarity S at A with ratio AC/AB and rotation ∠BAC sends B→C and M→N (since M,N are midpoints).",
+    "OM = ON is equivalent to O lying on the perpendicular bisector of MN, which under homothety H_{A,1/2} is equivalent to H_{A,2}(O) lying on the perpendicular bisector of BC."
+  ],
+  "unverified_claims": [
+    "Points C, N, K₁, K are concyclic with ∠CK₁K = γ (Claim 1 proof incomplete).",
+    "Triangle CK₁K is isosceles with CK = CK₁ (depends on unproven concyclicity).",
+    "The equation Im(z(K-1)(2K-1)/(K-z)) = 0 factors as (2x-1)·Q = 0 with Q ≠ 0 under interiority (factorization and non-vanishing not shown).",
+    "ℜ(K) = 1/2, i.e., KA = KB and KM ⟂ AB (depends on unverified factorization).",
+    "ℜ(Lz̄) = |z|²/2, i.e., LA = LC and LN ⟂ AC (symmetry argument not justified in given coordinates).",
+    "|O'-1|² = |O'-z|² where O' is the circumcenter of 0, 2k, 2l (computation not shown).",
+    "O lies on the perpendicular bisector of MN, giving OM = ON (depends on previous unverified steps)."
+  ],
+  "summary": "The candidate correctly identifies the spiral similarity at A as the central mechanism and establishes Lemmas 1–3 rigorously. However, the proof of the critical perpendicularities KA = KB and LA = LC is incomplete in both its synthetic and algebraic forms. The synthetic proof is abandoned; the algebraic verification states a factorization result without performing it or checking the non-degeneracy condition. The symmetry argument for L is not properly executed in the chosen coordinate system, and the final circumcenter computation is omitted. These are fatal gaps for a complete proof, but the overall approach is sound and fixable with detailed computation.",
+  "transfer_assessment": [
+    {
+      "mechanism": "spiral-similarity-at-vertex",
+      "assessment": "reusable — correctly identifies the spiral similarity at A sending midpoints M,N as the key structure; Lemmas 1–3 are valid and transferable"
+    },
+    {
+      "mechanism": "perpendicular-bisector-reduction",
+      "assessment": "reusable — the homothety reduction of OM=ON to O'B=O'C is a standard and correct equivalence"
+    },
+    {
+      "mechanism": "angle-to-perpendicularity",
+      "assessment": "misleading as presented — the claim that cyclic quadrilaterals and angle equalities 'force' perpendicularity is true in the problem, but the candidate's synthetic derivation has a gap (Claim 1 unproven) and the algebraic verification is not carried out; a solver cannot rely on this writeup to replicate the step"
+    },
+    {
+      "mechanism": "algebraic-verification-by-factorization",
+      "assessment": "misleading — the candidate claims a clean factorization (2x-1)·Q=0 but does not demonstrate it; this presents a false sense of completion"
+    }
+  ]
+}

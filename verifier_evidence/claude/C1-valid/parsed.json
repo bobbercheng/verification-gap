@@ -1,0 +1,18 @@
+{
+ "claim_id": "C1",
+ "condition": "valid",
+ "verifier": "claude",
+ "model": "claude-opus-5",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "Nonincreasing only forbids growth; terms may drop to 1 or below. Nothing forces q_k > 1 beyond k=1.",
+  "witness_valid": true,
+  "witness_reason": "q_1=2>1, positive reals, and 2>=1>=1>=... is nonincreasing, yet q_2=1 is not >1, violating the conclusion."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": true
+ },
+ "elapsed_seconds": 4.3
+}

@@ -1,0 +1,16 @@
+{
+  "task_id": "imo-2026-p1",
+  "verdict": "confirm",
+  "weakest_inference": "The most compressed inference is that preservation of the gcd of the two selected p-adic exponents preserves the gcd of the entire 2026-coordinate exponent vector. It is valid: if R is the gcd of all unselected coordinates, the old global gcd is gcd(R,gcd(a,b)) and the new one is gcd(R,gcd(min(a,b),abs(a-b))); Euclid's identity makes these equal, including all zero cases.",
+  "counterexample_search": [
+    "Reversed the product implications from P'=P/g with integer g>=1: P'<P holds if and only if g>1, while P'=P holds if and only if g=1; in the latter case the outputs are 1 and mn and K falls exactly once. The converse K'=K-1 implies g=1 is false, for example (2,2) maps to (2,1), but the proof never uses that converse.",
+    "Attacked the descent with coprime, equal, divisibility, and proper-common-factor pairs. Coprime pairs keep P fixed but lower K; every noncoprime pair lowers P, so no move preserves the full rank and no cycle is possible.",
+    "Tested terminal existence and nonzero conclusions. No legal move is equivalent to K<=1, and each move leaves at least one selected output greater than 1, so a maximal terminal board has K=1. The formula also cannot give M=1: any prime present initially has at least one positive valuation, whose gcd with any zero valuations remains positive.",
+    "Tested valuation boundary maps (0,b), (a,a), and (0,0), primes occurring in only one entry, and primes absent initially. Pairwise gcd is preserved in every case, and absent primes cannot be introduced.",
+    "Independently exhaustively enumerated 4356 initial multisets of lengths 2 through 5 with entries from 2 through 12, covering 34920 memoized reachable states. Every terminal set was the singleton predicted by the claimed formula; no counterexample was found.",
+    "A voluntarily truncated prefix, such as making one move from 2026 copies of 2 and then stopping, contradicts a context-free literal reading of 'every sequence ... ends with exactly one'. It is not a counterexample to the stated process, which explicitly continues while a move is possible; under that required maximal-play reading, the proof's terminal conclusion is valid."
+  ],
+  "dependency_gaps": [],
+  "required_fixes": [],
+  "summary": "The second-order attack confirms the proof. Termination follows independently from a well-founded lexicographic descent; maximality plus preservation of a nonunit gives exactly one terminal nonunit; and an independent family of primewise gcd invariants determines that nonunit uniquely. All inequality converses actually needed by the argument hold, the only false converse is unused, the existence and positivity claims survive boundary testing, and there is no circular dependency."
+}

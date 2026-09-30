@@ -1,0 +1,66 @@
+{
+  "id": "p1-deedy-muse-spark-1.1-final",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/e073e996239a09dc7f07165fc08db8248312169f6e5468505e4c00950e064580.md",
+  "bytes": 6757,
+  "sha256": "e073e996239a09dc7f07165fc08db8248312169f6e5468505e4c00950e064580",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5776,
+        "output_tokens": 913,
+        "output_tokens_details": {
+          "thinking_tokens": 597
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 913,
+            "cache_read_input_tokens": 5776,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "count of entries >1 stabilizes ⇒ all later moves have gcd>1 ⇒ product strictly decreases forever (contradiction); plus every move leaves ≥1 entry >1 so k≥1",
+    "upper_bound_mechanism": "per-prime invariance of gcd of valuations via gcd(a,b)=gcd(min(a,b),|a−b|), evaluated at terminal state",
+    "wrong_answer_stated": false,
+    "notes": "Complete: valuation reduction with min/|a−b| and the 'not both 1' lemma; product decreases only when gcd>1 (correctly stated, no false lemma); termination via stabilized count plus strict product descent; invariance handles equal and zero valuations; explicit M = prod p^{gcd_i v_p(a_i)}."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

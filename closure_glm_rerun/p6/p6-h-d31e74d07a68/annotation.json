@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-d31e74d07a68",
+  "problem": "6",
+  "sha256": "d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1",
+  "path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "turn": 1,
+  "record_ids": [
+    "p6-gpt56-ours"
+  ],
+  "bytes": 6345,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2017,
+        "output_tokens": 4766,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 62.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "large-prime erasure: replace term x by m=Rp^k with identical support on primes <= a_1, proved for all terms by induction with boundary repair",
+    "upper_bound_mechanism": "L = product of primes <= a_1; membership invariant under m -> m+L for all m >= a_1; T = count of terms in [a_1, a_1+L-1]",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Section 1 proves the support characterization (C). The lemma erases primes > a_1 via m=Rp^k, fully general induction including the m=A boundary case, giving (F). Section 3 assembles global periodicity from threshold a_1 and counts T in a full window, yielding a_{n+T}=a_n+L for all n. Computations properly separated from proof."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

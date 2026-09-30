@@ -1,0 +1,3753 @@
+{
+ "schema_version": 1,
+ "generated_by": "post_submission/summarize.py",
+ "note": "Runs made by the author after submission (7 September 2026), on the same 32 texts; outside the paper's protocol and post hoc. See post_submission/README.md for what each run changed.",
+ "population": {
+  "texts": 32,
+  "broken": "F+G",
+  "sound": "O+H (repair-tolerant convention)",
+  "disputed_labels": [
+   "p1-gpt56-5aca5e52-v1-G",
+   "p1-deedy-kimi-k3-final-F",
+   "p5-gpt56-7324ef70-v1-F",
+   "p1-deedy-kimi-k3-final-G",
+   "p1-gpt56-5aca5e52-v1-F"
+  ]
+ },
+ "arms": {
+  "grade_rerun": {
+   "dates_utc": [
+    "2026-09-08 13:03:29 UTC",
+    "2026-09-08 13:40:33 UTC"
+   ],
+   "identity_with_primary_run": {
+    "text_sha256_equal": 64,
+    "system_sha256_equal": 64,
+    "system_sha256_ok": 64,
+    "input_tokens_equal": {
+     "gpt": 26,
+     "claude": 32
+    },
+    "calls": 64
+   },
+   "rules": {
+    "pass": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "14/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-claude-fable-5-final-G",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "9/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 6
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "14/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-claude-fable-5-final-G",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "9/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 6
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "14/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-claude-fable-5-final-G",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "9/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 6
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "0/32",
+      "referred_ids": [],
+      "broken_auto_accepted": "14/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 14,
+       "claude": 14
+      },
+      "AW": {
+       "gpt": 22,
+       "claude": 22
+      }
+     }
+    },
+    "strict": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "4/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-G"
+       ],
+       "sound_rejected": "9/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H",
+        "p6-gpt56-ours-H"
+       ],
+       "broken_accepted_without_five_disputed": "2/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 7
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 4
+        },
+        "H": {
+         "n": 8,
+         "accepted": 0
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "2/16",
+       "broken_accepted_ids": [
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F"
+       ],
+       "sound_rejected": "1/16",
+       "sound_rejected_ids": [
+        "gpt56-ours-accepted-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 1
+        },
+        "G": {
+         "n": 8,
+         "accepted": 1
+        },
+        "H": {
+         "n": 8,
+         "accepted": 7
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "1/16",
+       "broken_accepted_ids": [
+        "p1-gpt56-5aca5e52-v1-G"
+       ],
+       "sound_rejected": "9/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H",
+        "p6-gpt56-ours-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 7
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 1
+        },
+        "H": {
+         "n": 8,
+         "accepted": 0
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "12/32",
+      "referred_ids": [
+       "deedy-claude-fable-5-final-H",
+       "deedy-gpt-5.6-sol-xhigh-final-G",
+       "deedy-gpt-5.6-sol-xhigh-final-H",
+       "p1-deedy-kimi-k3-final",
+       "p1-deedy-kimi-k3-final-G",
+       "p1-deedy-kimi-k3-final-H",
+       "p1-gpt56-5aca5e52-v1-H",
+       "p5-gpt56-7324ef70-v1-F",
+       "p5-gpt56-7324ef70-v1-G",
+       "p5-gpt56-7324ef70-v1-H",
+       "p6-deedy-gpt-5.6-sol-pro-final-H",
+       "p6-gpt56-ours-H"
+      ],
+      "broken_auto_accepted": "1/16",
+      "sound_auto_rejected": "1/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 13,
+       "claude": 3
+      },
+      "AW": {
+       "gpt": 5,
+       "claude": 9
+      }
+     }
+    },
+    "flag": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "4/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-G"
+       ],
+       "sound_rejected": "6/16",
+       "sound_rejected_ids": [
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H",
+        "p6-gpt56-ours-H"
+       ],
+       "broken_accepted_without_five_disputed": "2/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 4
+        },
+        "H": {
+         "n": 8,
+         "accepted": 2
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "2/16",
+       "broken_accepted_ids": [
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 1
+        },
+        "G": {
+         "n": 8,
+         "accepted": 1
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "1/16",
+       "broken_accepted_ids": [
+        "p1-gpt56-5aca5e52-v1-G"
+       ],
+       "sound_rejected": "6/16",
+       "sound_rejected_ids": [
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H",
+        "p6-gpt56-ours-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 1
+        },
+        "H": {
+         "n": 8,
+         "accepted": 2
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "10/32",
+      "referred_ids": [
+       "deedy-gpt-5.6-sol-xhigh-final-G",
+       "gpt56-ours-accepted-H",
+       "p1-deedy-kimi-k3-final-G",
+       "p1-deedy-kimi-k3-final-H",
+       "p1-gpt56-5aca5e52-v1-H",
+       "p5-gpt56-7324ef70-v1-F",
+       "p5-gpt56-7324ef70-v1-G",
+       "p5-gpt56-7324ef70-v1-H",
+       "p6-deedy-gpt-5.6-sol-pro-final-H",
+       "p6-gpt56-ours-H"
+      ],
+      "broken_auto_accepted": "1/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 10,
+       "claude": 2
+      },
+      "AW": {
+       "gpt": 6,
+       "claude": 10
+      }
+     }
+    }
+   },
+   "per_text": {
+    "deedy-claude-fable-5-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-claude-fable-5-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "gpt56-ours-accepted": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "gpt56-ours-accepted-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-deedy-kimi-k3-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-G": {
+     "pass": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-gpt56-ours-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-G": {
+     "pass": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    }
+   }
+  },
+  "grade_retest": {
+   "dates_utc": [
+    "2026-09-21 05:36:04 UTC",
+    "2026-09-21 06:11:09 UTC"
+   ],
+   "identity_with_primary_run": {
+    "text_sha256_equal": 64,
+    "system_sha256_equal": 64,
+    "system_sha256_ok": 64,
+    "input_tokens_equal": {
+     "gpt": 0,
+     "claude": 0
+    },
+    "calls": 64
+   },
+   "rules": {
+    "pass": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "14/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-claude-fable-5-final-G",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "9/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 6
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "14/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-deedy-gpt-5.6-sol-pro-final-G",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "9/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 6
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "13/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "8/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 5
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "2/32",
+      "referred_ids": [
+       "deedy-claude-fable-5-final-G",
+       "p6-deedy-gpt-5.6-sol-pro-final-G"
+      ],
+      "broken_auto_accepted": "13/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 14,
+       "claude": 14
+      },
+      "AW": {
+       "gpt": 22,
+       "claude": 22
+      }
+     }
+    },
+    "strict": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "4/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-G"
+       ],
+       "sound_rejected": "8/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H",
+        "p6-gpt56-ours-H"
+       ],
+       "broken_accepted_without_five_disputed": "2/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 4
+        },
+        "H": {
+         "n": 8,
+         "accepted": 0
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "6/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "1/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 3
+        },
+        "G": {
+         "n": 8,
+         "accepted": 3
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "3/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G"
+       ],
+       "sound_rejected": "8/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H",
+        "p6-gpt56-ours-H"
+       ],
+       "broken_accepted_without_five_disputed": "1/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 3
+        },
+        "H": {
+         "n": 8,
+         "accepted": 0
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "12/32",
+      "referred_ids": [
+       "deedy-claude-fable-5-final-H",
+       "deedy-gpt-5.6-sol-xhigh-final-H",
+       "gpt56-ours-accepted-H",
+       "p1-deedy-kimi-k3-final-F",
+       "p1-deedy-kimi-k3-final-H",
+       "p1-gpt56-5aca5e52-v1-F",
+       "p1-gpt56-5aca5e52-v1-H",
+       "p5-gpt56-7324ef70-v1-F",
+       "p5-gpt56-7324ef70-v1-G",
+       "p5-gpt56-7324ef70-v1-H",
+       "p6-deedy-gpt-5.6-sol-pro-final-H",
+       "p6-gpt56-ours-H"
+      ],
+      "broken_auto_accepted": "3/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 12,
+       "claude": 6
+      },
+      "AW": {
+       "gpt": 4,
+       "claude": 14
+      }
+     }
+    },
+    "flag": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "4/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-G"
+       ],
+       "sound_rejected": "4/16",
+       "sound_rejected_ids": [
+        "gpt56-ours-accepted-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H"
+       ],
+       "broken_accepted_without_five_disputed": "2/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 4
+        },
+        "H": {
+         "n": 8,
+         "accepted": 4
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "11/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "6/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 6
+        },
+        "G": {
+         "n": 8,
+         "accepted": 5
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "4/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-G"
+       ],
+       "sound_rejected": "4/16",
+       "sound_rejected_ids": [
+        "gpt56-ours-accepted-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H"
+       ],
+       "broken_accepted_without_five_disputed": "2/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 4
+        },
+        "H": {
+         "n": 8,
+         "accepted": 4
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "11/32",
+      "referred_ids": [
+       "gpt56-ours-accepted-F",
+       "gpt56-ours-accepted-G",
+       "gpt56-ours-accepted-H",
+       "p1-deedy-kimi-k3-final-F",
+       "p1-gpt56-5aca5e52-v1-F",
+       "p1-gpt56-5aca5e52-v1-H",
+       "p5-gpt56-7324ef70-v1-F",
+       "p5-gpt56-7324ef70-v1-H",
+       "p6-deedy-gpt-5.6-sol-pro-final-F",
+       "p6-deedy-gpt-5.6-sol-pro-final-H",
+       "p6-gpt56-ours-F"
+      ],
+      "broken_auto_accepted": "4/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 8,
+       "claude": 11
+      },
+      "AW": {
+       "gpt": 8,
+       "claude": 19
+      }
+     }
+    }
+   },
+   "per_text": {
+    "deedy-claude-fable-5-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-claude-fable-5-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "gpt56-ours-accepted": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "gpt56-ours-accepted-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-deedy-kimi-k3-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-deedy-kimi-k3-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-G": {
+     "pass": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-gpt56-ours-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-G": {
+     "pass": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    }
+   }
+  },
+  "grade_instructed": {
+   "dates_utc": [
+    "2026-09-21 05:17:50 UTC",
+    "2026-09-21 05:34:46 UTC"
+   ],
+   "identity_with_primary_run": {
+    "text_sha256_equal": 64,
+    "system_sha256_equal": 0,
+    "system_sha256_ok": 64,
+    "input_tokens_equal": {
+     "gpt": 0,
+     "claude": 0
+    },
+    "calls": 64
+   },
+   "rules": {
+    "pass": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "14/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-claude-fable-5-final-G",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "9/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 6
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "15/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-claude-fable-5-final-G",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-deedy-gpt-5.6-sol-pro-final-G",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "10/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 7
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "14/16",
+       "broken_accepted_ids": [
+        "deedy-claude-fable-5-final-F",
+        "deedy-claude-fable-5-final-G",
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "9/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 8
+        },
+        "G": {
+         "n": 8,
+         "accepted": 6
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "1/32",
+      "referred_ids": [
+       "p6-deedy-gpt-5.6-sol-pro-final-G"
+      ],
+      "broken_auto_accepted": "14/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 14,
+       "claude": 15
+      },
+      "AW": {
+       "gpt": 22,
+       "claude": 23
+      }
+     }
+    },
+    "strict": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "2/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-gpt56-5aca5e52-v1-G"
+       ],
+       "sound_rejected": "9/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H",
+        "p6-gpt56-ours-H"
+       ],
+       "broken_accepted_without_five_disputed": "1/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 7
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 2
+        },
+        "H": {
+         "n": 8,
+         "accepted": 0
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "4/16",
+       "broken_accepted_ids": [
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "1/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 1
+        },
+        "G": {
+         "n": 8,
+         "accepted": 3
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "1/16",
+       "broken_accepted_ids": [
+        "p1-gpt56-5aca5e52-v1-G"
+       ],
+       "sound_rejected": "9/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H",
+        "p6-gpt56-ours-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 7
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 1
+        },
+        "H": {
+         "n": 8,
+         "accepted": 0
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "13/32",
+      "referred_ids": [
+       "deedy-claude-fable-5-final-H",
+       "deedy-gpt-5.6-sol-xhigh-final-G",
+       "deedy-gpt-5.6-sol-xhigh-final-H",
+       "gpt56-ours-accepted-H",
+       "p1-deedy-kimi-k3-final",
+       "p1-deedy-kimi-k3-final-G",
+       "p1-deedy-kimi-k3-final-H",
+       "p1-gpt56-5aca5e52-v1-H",
+       "p5-gpt56-7324ef70-v1-F",
+       "p5-gpt56-7324ef70-v1-G",
+       "p5-gpt56-7324ef70-v1-H",
+       "p6-deedy-gpt-5.6-sol-pro-final-H",
+       "p6-gpt56-ours-H"
+      ],
+      "broken_auto_accepted": "1/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 11,
+       "claude": 4
+      },
+      "AW": {
+       "gpt": 3,
+       "claude": 12
+      }
+     }
+    },
+    "flag": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "3/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G"
+       ],
+       "sound_rejected": "7/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H"
+       ],
+       "broken_accepted_without_five_disputed": "1/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 3
+        },
+        "H": {
+         "n": 8,
+         "accepted": 1
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "12/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-F",
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "gpt56-ours-accepted-F",
+        "gpt56-ours-accepted-G",
+        "p1-deedy-kimi-k3-final-F",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-F",
+        "p1-gpt56-5aca5e52-v1-G",
+        "p5-gpt56-7324ef70-v1-F",
+        "p5-gpt56-7324ef70-v1-G",
+        "p6-deedy-gpt-5.6-sol-pro-final-F",
+        "p6-gpt56-ours-F"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "7/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 7
+        },
+        "G": {
+         "n": 8,
+         "accepted": 5
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "3/16",
+       "broken_accepted_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-G",
+        "p1-deedy-kimi-k3-final-G",
+        "p1-gpt56-5aca5e52-v1-G"
+       ],
+       "sound_rejected": "7/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H"
+       ],
+       "broken_accepted_without_five_disputed": "1/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 3
+        },
+        "H": {
+         "n": 8,
+         "accepted": 1
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "16/32",
+      "referred_ids": [
+       "deedy-claude-fable-5-final-H",
+       "deedy-gpt-5.6-sol-xhigh-final-F",
+       "deedy-gpt-5.6-sol-xhigh-final-H",
+       "gpt56-ours-accepted-F",
+       "gpt56-ours-accepted-G",
+       "gpt56-ours-accepted-H",
+       "p1-deedy-kimi-k3-final-F",
+       "p1-deedy-kimi-k3-final-H",
+       "p1-gpt56-5aca5e52-v1-F",
+       "p1-gpt56-5aca5e52-v1-H",
+       "p5-gpt56-7324ef70-v1-F",
+       "p5-gpt56-7324ef70-v1-G",
+       "p5-gpt56-7324ef70-v1-H",
+       "p6-deedy-gpt-5.6-sol-pro-final-F",
+       "p6-deedy-gpt-5.6-sol-pro-final-H",
+       "p6-gpt56-ours-F"
+      ],
+      "broken_auto_accepted": "3/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 10,
+       "claude": 12
+      },
+      "AW": {
+       "gpt": 4,
+       "claude": 20
+      }
+     }
+    }
+   },
+   "per_text": {
+    "deedy-claude-fable-5-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-claude-fable-5-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "gpt56-ours-accepted-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-deedy-kimi-k3-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-deedy-kimi-k3-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-G": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-G": {
+     "pass": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-gpt56-ours-F": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-G": {
+     "pass": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-H": {
+     "pass": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     },
+     "strict": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     },
+     "flag": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    }
+   }
+  },
+  "witness_keyed_rerun": {
+   "dates_utc": [
+    "2026-09-08 23:40:03 UTC",
+    "2026-09-09 00:15:10 UTC"
+   ],
+   "identity_with_primary_run": {
+    "text_sha256_equal": 64,
+    "system_sha256_equal": 64,
+    "system_sha256_ok": 64,
+    "input_tokens_equal": {
+     "gpt": 24,
+     "claude": 32
+    },
+    "calls": 64
+   },
+   "rules": {
+    "witness": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "0/16",
+       "broken_accepted_ids": [],
+       "sound_rejected": "5/16",
+       "sound_rejected_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 0
+        },
+        "H": {
+         "n": 8,
+         "accepted": 3
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "0/16",
+       "broken_accepted_ids": [],
+       "sound_rejected": "1/16",
+       "sound_rejected_ids": [
+        "p5-gpt56-7324ef70-v1-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 0
+        },
+        "H": {
+         "n": 8,
+         "accepted": 7
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "0/16",
+       "broken_accepted_ids": [],
+       "sound_rejected": "5/16",
+       "sound_rejected_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "p1-deedy-kimi-k3-final-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 0
+        },
+        "H": {
+         "n": 8,
+         "accepted": 3
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "4/32",
+      "referred_ids": [
+       "deedy-gpt-5.6-sol-xhigh-final-H",
+       "p1-deedy-kimi-k3-final-H",
+       "p1-gpt56-5aca5e52-v1-H",
+       "p6-deedy-gpt-5.6-sol-pro-final-H"
+      ],
+      "broken_auto_accepted": "0/16",
+      "sound_auto_rejected": "1/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 5,
+       "claude": 1
+      },
+      "AW": {
+       "gpt": 3,
+       "claude": 7
+      }
+     }
+    }
+   },
+   "per_text": {
+    "deedy-claude-fable-5-final": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-claude-fable-5-final-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-H": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "gpt56-ours-accepted-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-H": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-deedy-kimi-k3-final": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-deedy-kimi-k3-final-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-gpt56-ours-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-H": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    }
+   }
+  },
+  "witness_keyfree": {
+   "dates_utc": [
+    "2026-09-11 03:02:53 UTC",
+    "2026-09-11 03:38:41 UTC"
+   ],
+   "identity_with_primary_run": {
+    "text_sha256_equal": 64,
+    "system_sha256_equal": 0,
+    "system_sha256_ok": 64,
+    "input_tokens_equal": {
+     "gpt": 0,
+     "claude": 0
+    },
+    "calls": 64
+   },
+   "rules": {
+    "witness": {
+     "per_grader": {
+      "gpt": {
+       "broken_accepted": "0/16",
+       "broken_accepted_ids": [],
+       "sound_rejected": "6/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 0
+        },
+        "H": {
+         "n": 8,
+         "accepted": 2
+        }
+       }
+      },
+      "claude": {
+       "broken_accepted": "1/16",
+       "broken_accepted_ids": [
+        "p1-gpt56-5aca5e52-v1-G"
+       ],
+       "sound_rejected": "0/16",
+       "sound_rejected_ids": [],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 1
+        },
+        "H": {
+         "n": 8,
+         "accepted": 8
+        }
+       }
+      },
+      "both": {
+       "broken_accepted": "0/16",
+       "broken_accepted_ids": [],
+       "sound_rejected": "6/16",
+       "sound_rejected_ids": [
+        "deedy-claude-fable-5-final-H",
+        "deedy-gpt-5.6-sol-xhigh-final-H",
+        "gpt56-ours-accepted-H",
+        "p1-gpt56-5aca5e52-v1-H",
+        "p5-gpt56-7324ef70-v1-H",
+        "p6-deedy-gpt-5.6-sol-pro-final-H"
+       ],
+       "broken_accepted_without_five_disputed": "0/11",
+       "by_class": {
+        "O": {
+         "n": 8,
+         "accepted": 8
+        },
+        "F": {
+         "n": 8,
+         "accepted": 0
+        },
+        "G": {
+         "n": 8,
+         "accepted": 0
+        },
+        "H": {
+         "n": 8,
+         "accepted": 2
+        }
+       }
+      }
+     },
+     "routing": {
+      "referred": "7/32",
+      "referred_ids": [
+       "deedy-claude-fable-5-final-H",
+       "deedy-gpt-5.6-sol-xhigh-final-H",
+       "gpt56-ours-accepted-H",
+       "p1-gpt56-5aca5e52-v1-G",
+       "p1-gpt56-5aca5e52-v1-H",
+       "p5-gpt56-7324ef70-v1-H",
+       "p6-deedy-gpt-5.6-sol-pro-final-H"
+      ],
+      "broken_auto_accepted": "0/16",
+      "sound_auto_rejected": "0/16"
+     },
+     "convention_errors": {
+      "RT": {
+       "gpt": 6,
+       "claude": 1
+      },
+      "AW": {
+       "gpt": 2,
+       "claude": 9
+      }
+     }
+    }
+   },
+   "per_text": {
+    "deedy-claude-fable-5-final": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-claude-fable-5-final-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-claude-fable-5-final-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "deedy-gpt-5.6-sol-xhigh-final-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "gpt56-ours-accepted-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "gpt56-ours-accepted-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-deedy-kimi-k3-final-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-deedy-kimi-k3-final-H": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p1-gpt56-5aca5e52-v1-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p5-gpt56-7324ef70-v1-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-deedy-gpt-5.6-sol-pro-final-H": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "accept",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    },
+    "p6-gpt56-ours-F": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-G": {
+     "witness": {
+      "gpt": "reject",
+      "claude": "reject",
+      "both": "reject"
+     }
+    },
+    "p6-gpt56-ours-H": {
+     "witness": {
+      "gpt": "accept",
+      "claude": "accept",
+      "both": "accept"
+     }
+    }
+   }
+  }
+ },
+ "comparisons": {
+  "witness_keyed_rerun_vs_paper_witness_gate": {
+   "per_grader_decisions_changed": "0/64",
+   "pair_decisions_changed": "0/32"
+  },
+  "witness_keyfree_vs_paper_witness_gate": {
+   "per_grader_changes": [
+    {
+     "text": "deedy-claude-fable-5-final-H",
+     "grader": "gpt",
+     "keyed": "accept",
+     "keyfree": "reject"
+    },
+    {
+     "text": "gpt56-ours-accepted-H",
+     "grader": "gpt",
+     "keyed": "accept",
+     "keyfree": "reject"
+    },
+    {
+     "text": "p1-deedy-kimi-k3-final-H",
+     "grader": "gpt",
+     "keyed": "reject",
+     "keyfree": "accept"
+    },
+    {
+     "text": "p1-gpt56-5aca5e52-v1-G",
+     "grader": "claude",
+     "keyed": "reject",
+     "keyfree": "accept"
+    },
+    {
+     "text": "p5-gpt56-7324ef70-v1-H",
+     "grader": "claude",
+     "keyed": "reject",
+     "keyfree": "accept"
+    }
+   ],
+   "pair_changes": [
+    {
+     "text": "deedy-claude-fable-5-final-H",
+     "keyed": "accept",
+     "keyfree": "reject"
+    },
+    {
+     "text": "gpt56-ours-accepted-H",
+     "keyed": "accept",
+     "keyfree": "reject"
+    },
+    {
+     "text": "p1-deedy-kimi-k3-final-H",
+     "keyed": "reject",
+     "keyfree": "accept"
+    }
+   ]
+  }
+ }
+}

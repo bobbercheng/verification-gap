@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9332,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009427,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1635,
+    "cacheReadInputTokens": 1358,
+    "cacheCreationInputTokens": 11450,
+    "webSearchRequests": 0,
+    "costUSD": 0.156064,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 894,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 11450,
+   "cache_read_input_tokens": 1358,
+   "output_tokens": 1635,
+   "output_tokens_details": {
+    "thinking_tokens": 894
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 11450,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1635,
+     "cache_read_input_tokens": 1358,
+     "cache_creation_input_tokens": 11450,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 11450
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 20183,
+  "is_error": false,
+  "elapsed_seconds": 20.9,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"statements\": {\"L3.1\": {\"established\": \"yes\", \"quote\": \"*In the claiming game played on a multiset $M$ with Liu Bang moving first, Liu Bang can guarantee a total of at least $\\\\operatorname{odd}(M)$, and Xiang Yu can guarantee a total of at least $\\\\operatorname{even}(M)$. Hence under optimal play Liu Bang obtains exactly $\\\\operatorname{odd}(M)=\\\\frac{\\\\sum M + D(M)}{2}$.*\", \"note\": \"Lemma 1.1 proved by induction both directions; reduction to alternating sum D stated.\"}, \"L3.2\": {\"established\": \"yes\", \"quote\": \"*Let $a_1,\\\\dots,a_m$ be positive reals with sum $S$. Then some nonempty sub-multiset $B\\\\subseteq\\\\{a_1,\\\\dots,a_m\\\\}$ has chain value $v(B)\\\\le\\\\dfrac{S}{2^m-1}$.* ... Consider the $2^m$ subset sums ... some consecutive gap satisfies $$g:=t_{j+1}-t_j\\\\le\\\\frac{S}{2^m-1}.$$\", \"note\": \"Pigeonhole + realizability lemma + explicit halve/cancel strategy with cut count \\u2264 n, all m.\"}, \"L3.3\": {\"established\": \"yes\", \"quote\": \"*Let $a_1\\\\le\\\\dots\\\\le a_m$ be super-increasing with margin $\\\\delta$, and let $M$ be obtained from these pieces by at most $m-1$ cuts (each cut splits one current piece into two positive pieces). Then $D(M)\\\\ge\\\\delta$.*\", \"note\": \"Matching formula + multigraph edge count e\\u2264m-1 forcing a tree component + signed-sum/margin bound; all n.\"}}, \"S_ref\": 2, \"notes\": \"Complete: reduction (Lemma 1.1), matching/odd-set representations, super-increasing lower bound via tree component, and universal upper bound via subset-sum pigeonhole plus a realizable halve/cancel chain within n cuts. Answer 2^n/(2^{n+1}-1) stated and proved.\"}"
+   }
+  ]
+ }
+}

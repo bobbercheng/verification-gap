@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "deedy-gpt-5.6-sol-final",
+ "tag": "e0",
+ "text_sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "unspecified",
+  "status": "error reported by an ordinary grader",
+  "quote": "What remains, apart from the initial portion of length $d$, consists of two arrays, each with at most $s$ column-blocks and each of total length at most\n\\[\n\\frac{T-d}{2}=(2^s-1)d.\n\\]",
+  "witness": "Proof of lemma (i) is unverifiable and internally inconsistent: it asserts the two post-cancellation arrays have totals summing to T-d yet each at most (T-d)/2 (forcing exact equality, which fails in examples), and that each has 'at most s column-blocks'. 'Arrays'/'column-blocks' are never defined, nor is it shown that cuts in these derived objects correspond to legal cuts of the actual pieces, so the induction cannot be checked.",
+  "load_bearing": null
+ },
+ "started_utc": "2026-09-06 04:45:04 UTC"
+}

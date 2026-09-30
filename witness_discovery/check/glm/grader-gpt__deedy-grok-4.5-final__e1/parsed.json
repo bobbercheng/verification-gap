@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "deedy-grok-4.5-final",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 56.2,
+  "input_tokens": 5564,
+  "output_tokens": 4763,
+  "cache_read_input_tokens": 896
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and load-bearing in the subcase 'every piece of Q ≤ τ'. The lattice-parity dichotomy is asserted, never proved, and is false: cuts sit at arbitrary reals, so D(Q) carries no lattice constraint. Concrete refutation: n=2, P={1,2} (m=0 cuts), Xiang Yu cuts bin 4 into Q={2,1.5,0.5}; then D(P)=1 and D(Q)=2−1.5+0.5=1, so neither D(Q)≤D(P)−1=0 nor D(Q)≥D(P)+1=2 holds. Moreover the legitimate tool is insufficient: reverse triangle gives D(M)≥|D(P)−D(Q)|, which can be <1 (Q={2,1.2,0.8}: |1−1.6|=0.6), so 'D(Q)≤1' (also false: Q={2,1,1} gives D=2) plus reverse triangle does not close the case. Nowhere else does the text prove this subcase for all n; the closing remark's stronger claim is explicitly conjectural, backed only by numerics for n≤3. The all-n lower-bound obligation is therefore unproven as written."
+ }
+}

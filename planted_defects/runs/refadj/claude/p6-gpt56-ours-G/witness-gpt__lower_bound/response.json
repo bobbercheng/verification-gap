@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2819,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0029089999999999997,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 601,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3164,
+    "webSearchRequests": 0,
+    "costUSD": 0.047543,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 242,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3164,
+   "cache_read_input_tokens": 1736,
+   "output_tokens": 601,
+   "output_tokens_details": {
+    "thinking_tokens": 242
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3164,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 601,
+     "cache_read_input_tokens": 1736,
+     "cache_creation_input_tokens": 3164,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3164
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 8098,
+  "is_error": false,
+  "elapsed_seconds": 8.8,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L6.2\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"lemma\",\n  \"explanation\": \"The large-prime-erasure lemma is the load-bearing finiteness step (L6.2), and the write-up's entire proof of it is \\\"Induction over the sequence terms in increasing order (standard; details omitted).\\\" No construction of the dominating smaller term q^k c is given, no verification that it lies in [A, x) and is itself a term, and no case analysis. Elsewhere the text only gestures at it (\\\"The construction Rp^k repairs this boundary issue ... the lemma proves the strengthened hypothesis\\\") and offers computational checks explicitly labeled \\\"not used as proof.\\\" Since (3), (4) and hence the whole periodicity assembly rest on this lemma, the statement is not established as written; supplying the full lemma proof is required.\",\n  \"elsewhere_quote_note\": null\n}"
+   }
+  ]
+ }
+}

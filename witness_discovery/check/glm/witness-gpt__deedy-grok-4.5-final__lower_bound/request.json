@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-grok-4.5-final",
+ "tag": "lower_bound",
+ "text_sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "written_but_invalid",
+  "quote": "The virtual cut partitions the large bin into two sub-sticks of length \\(\\tau\\) each; the actual pieces of \\(Q\\) are a common refinement of those two sub-sticks.",
+  "witness": "Counterexample: take n=2, so the large bin has length 4 and τ=2. Put both allowed cuts in it, at positions 1.5 and 2.5. Then Q consists of lengths 1.5, 1, 1.5, all at most τ, but the virtual midpoint 2 lies inside the actual piece [1.5,2.5]. Thus Q is not a refinement of the two halves.",
+  "load_bearing": "The subcase relies on splitting Q into refinements of the two halves and applying induction to them. The false refinement claim removes the basis for that induction, leaving arbitrary interleavings untreated."
+ },
+ "started_utc": "2026-09-06 05:31:42 UTC"
+}

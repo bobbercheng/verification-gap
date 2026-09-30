@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-4d5351b57f71",
+  "problem": "5",
+  "sha256": "4d5351b57f712cf818b8c85b9a478da4c5b3c272c888bb884c957e4336745387",
+  "path": "checkpoint_inputs_ext/4d5351b57f712cf818b8c85b9a478da4c5b3c272c888bb884c957e4336745387.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p5-deedy-claude-fable-5-final"
+  ],
+  "bytes": 9430,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7728,
+        "output_tokens": 1425,
+        "output_tokens_details": {
+          "thinking_tokens": 1091
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1425,
+            "cache_read_input_tokens": 7728,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM on u=x, v=y+c verifying both inequalities for all c>=0",
+    "upper_bound_mechanism": "Orbit AP + nearest-orbit-point two-sided sandwich (d - d^2/4x <= g(x) <= d + d^2/(16x-4d)) forcing all positive gaps equal and g>0 on a half-line, then downward bootstrap x=y+d",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: (S) via x=f(y) collapsing both bounds; sufficiency proven for all x,y and c>=0; necessity handles mixed/fixed-point case since the lower sandwich forces g(x)>0 for all large x, excluding fixed points there, and induction extends to all of R_{>0}. Estimates E1, E2 proved and applied within valid ranges."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

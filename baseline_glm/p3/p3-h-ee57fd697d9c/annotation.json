@@ -1,0 +1,58 @@
+{
+  "id": "p3-h-ee57fd697d9c",
+  "problem": "3",
+  "sha256": "ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb",
+  "path": "checkpoint_inputs/ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-2"
+  ],
+  "bytes": 15901,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 5727,
+        "output_tokens": 24000,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 247.6,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5727,
+        "output_tokens": 211,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 5.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 3,
+    "complete": false,
+    "main_gap": "Upper bound induction is incomplete: Case 1/Case 2 arguments trail off, potential function abandoned, and rigor deferred as 'standard/omitted'. Lower bound's key claim A ≥ 1/D after Xiang's cuts is asserted via 'careful accounting' without proof.",
+    "notes": "Correct answer, correct greedy-picking lemma, plausible Xiang strategy, and a genuine tightness construction against Liu's cuts. But both bounds rest on unproven central claims (Lemma 3's rank analysis is also flawed since fragments need not stay contiguous). Substantial progress, major parts unjustified."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

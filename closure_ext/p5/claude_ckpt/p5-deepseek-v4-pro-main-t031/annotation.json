@@ -1,0 +1,66 @@
+{
+  "id": "p5-deepseek-v4-pro-main-t031",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 31,
+  "path": "checkpoint_inputs_ext/2b4b78de53565f9f364844de381cb628cf595665094bca6804376b0cdc665056.md",
+  "bytes": 7914,
+  "sha256": "2b4b78de53565f9f364844de381cb628cf595665094bca6804376b0cdc665056",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6564,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 4650,
+        "output_tokens_details": {
+          "thinking_tokens": 4321
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6564,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 4650,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 6564,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 6564
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 61.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "QM-AM-GM applied to x and y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "|A-B|<=A+B inequality (7); AP orbits with rational/irrational density to kill two positive differences; separation |x-y|>c plus covering by y0+nc to kill mixed fixed/non-fixed case",
+    "wrong_answer_stated": false,
+    "notes": "Identity f(f(x))=2f(x)-x and g(x+g(x))=g(x) fully derived; sufficiency correct. Necessity has two gaps: negative values of g are never excluded (V⊆{0,c} asserted), and the key backward step 'y>c implies y-c in S_c' uses f^{-1} whose existence/surjectivity is unproved (circular), yet the covering argument depends on y0<=c."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

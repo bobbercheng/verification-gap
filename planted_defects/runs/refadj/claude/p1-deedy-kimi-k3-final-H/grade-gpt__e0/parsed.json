@@ -1,0 +1,72 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p1-deedy-kimi-k3-final-H",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "H",
+ "problem": "1",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.8,
+  "input_tokens": 2,
+  "output_tokens": 880,
+  "cache_read_input_tokens": 2097,
+  "cache_creation_input_tokens": 5083,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4306,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004411,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 880,
+    "cacheReadInputTokens": 2097,
+    "cacheCreationInputTokens": 5083,
+    "webSearchRequests": 0,
+    "costUSD": 0.0738885,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 462,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L1.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "If $g = 1$, then the new entry $\\ell = mn \\ge 4$ exceeds $1$. All entries not involved in the move are unchanged, so after the move some entry still exceeds $1$.",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "When gcd(m,n)=1, lcm(m,n)=mn so ℓ=mn/1=mn; writing ℓ=m+n is a misprint (the numeric bound 2·2=4 already reflects the product). The objection's local claim is correct. But the misprint is inert: the same sentence continues \"the pair (m,n) is replaced by (1,mn)\", from which the type-B conclusions (P unchanged, z increases by exactly 1) follow, and Step 2 independently states ℓ = mn ≥ 4 > 1 to secure \"at least one entry > 1 survives\". So the termination/exactly-one-survivor ledger item L1.1 is established as argued; only the displayed formula is wrong. Repair: replace m+n by mn."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 161,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   4719,
+   4880
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

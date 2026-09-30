@@ -1,0 +1,25 @@
+{
+ "checker": "gpt",
+ "objection_key": "witness-claude__p5-nemotron-2587b733-v2__lower_bound",
+ "case": "p5-nemotron-2587b733-v2",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 25.4,
+  "input_tokens": 18418,
+  "output_tokens": 503,
+  "reasoning_output_tokens": 368,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L5.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "symbol",
+  "explanation": "The objection is valid: substituting f(x)=x+c gives the middle term (x+y+c)/2, not (x+y+2c)/2. The displayed chain is false for the supplied example, and no other passage verifies sufficiency for all x,y,c. Replacing “2c” by “c” repairs the verification: each inequality then reduces to (x-y-c)^2≥0."
+ },
+ "elsewhere_anchor": null
+}

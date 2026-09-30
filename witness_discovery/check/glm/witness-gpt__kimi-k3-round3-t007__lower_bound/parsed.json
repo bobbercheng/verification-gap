@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "kimi-k3-round3-t007",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 49.6,
+  "input_tokens": 1637,
+  "output_tokens": 2980,
+  "cache_read_input_tokens": 1024
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote appears verbatim under 'Matching formula'. Its claimed 'Proof' supplies only the two displayed equalities, the second justified solely by naming 'an exchange argument' — a label, not an argument. Checking the whole text: nowhere is the identity Σ p_{2k} = max_μ Σ min(p,q) (nor the full matching formula D(M) = min_μ(...)) established; the file itself flags Part A as 'SKETCH', 'not yet coded/verified', 'needs writing + numeric checks'. The identity is load-bearing: Part A takes an optimal matching and lower-bounds its cost via tree components, and only the unproved formula transfers that cost bound to the alternating sum D and hence to Liu's payoff. So the all-n lower bound is conditional on an unproved lemma, exactly as the objector states; the lower-bound obligation remains incomplete as written."
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5315,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005405,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1070,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 5958,
+    "webSearchRequests": 0,
+    "costUSD": 0.08748099999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 695,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5958,
+   "cache_read_input_tokens": 2282,
+   "output_tokens": 1070,
+   "output_tokens_details": {
+    "thinking_tokens": 695
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5958,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1070,
+     "cache_read_input_tokens": 2282,
+     "cache_creation_input_tokens": 5958,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5958
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 14404,
+  "is_error": false,
+  "elapsed_seconds": 15.0,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L5.3\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"sentence\",\n  \"explanation\": \"The write-up only records \\\"g(x) > -x\\\" from positivity of f, which does not exclude negative values of g. Section 3 rules out two distinct positive values of V, then silently asserts V ⊆ {0} or V ⊆ {0,c}; nothing anywhere excludes g(x) < 0. This omission is load-bearing: Lemma 1 assumes b = g(z) ∈ {0,c}, and the level-set dichotomy S_0 ∪ S_c = (0,∞) in §§4–6 presumes it. Hence L5.3 (nonnegativity of the common difference) is not established as written. The standard two-line fix — g(x₀) = -d < 0 gives g(x₀ - nd) = -d with x₀ - nd > 0 for all n, impossible — is absent, so a one-sentence insertion suffices.\"\n}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-c3411aff6e4a",
+  "problem": "5",
+  "sha256": "c3411aff6e4a1f388b139a71a10d0ecc29dc2bf797b10dececb7017b3eb989de",
+  "path": "checkpoint_inputs_ext/c3411aff6e4a1f388b139a71a10d0ecc29dc2bf797b10dececb7017b3eb989de.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p5-claude-fable-5-main-t005"
+  ],
+  "bytes": 9276,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4819,
+        "output_tokens": 8425,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 79.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM–AM–GM applied to x and y+c, both inequalities squared out",
+    "upper_bound_mechanism": "asymptotic two-sided orbit sandwich (E1/E2 estimates) + downward bootstrap",
+    "wrong_answer_stated": false,
+    "notes": "Complete rigorous proof. Steps 1–2 derive f(f(y))=2f(y)−y and g=f−id≥0 via orbit APs. Part I verifies sufficiency for all c≥0, both inequalities. Steps 3–6: sandwich pins g(x)=d on a half-line, all positive gaps equal, bootstrap extends to all y>0; fixed-point case (c=0) handled. One garbled but harmless line in Step 3's upper bound."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

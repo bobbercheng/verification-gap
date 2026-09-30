@@ -1,0 +1,17 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "O",
+ "problem": "6",
+ "text_sha256": "89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998",
+ "text_path": "texts/p6-deedy-gpt-5.6-sol-pro-final/original.md",
+ "system_sha256": "ed66af1c372de97f04a342d89bed5c27e90984a8adedb5c0d44c5db559002aca",
+ "system": "You are an IMO coordinator grading ONE write-up for IMO 2026 Problem 6 on the standard 0-7 scale.\n\n## Problem statement\n# IMO 2026 Problem 6\n\nLet $a_1,a_2,a_3,\\ldots$ be an infinite sequence of positive integers greater than $1$. Suppose that for all positive integers $n$, the number $a_{n+1}$ is the smallest positive integer greater than $a_n$ such that $gcd(a_{n+1},a_i)>1$ for every $i=1,2,\\ldots,n$. Prove that there exist positive integers $T$ and $L$ such that\n\n$$\na_{n+T}=a_n+L\n$$\n\nfor every positive integer $n$.\n\n(Note that $gcd(x,y)$ denotes the greatest common divisor of positive integers $x$ and $y$.)\n\nSource: https://www.imo-official.org/problems/2026/\n\n## Instructions\nGrade only what is written in the text below. Do not consult, recall, or compare against any published solution, and do not use\na fixed list of required lemmas: judge the write-up on its own terms as a proof attempt, as a coordinator would.\nScale: 7 = complete and correct proof; 5-6 = essentially complete, with minor gaps or a small error that is straightforwardly\nrepairable; 3-4 = substantial correct progress with a major part missing or unjustified; 1-2 = minor correct progress\n(e.g. correct answer or reduction with the main argument absent); 0 = no meaningful progress, or the text is not a proof attempt.\nNumerical checks, conjectures, and claims left \"to do\" earn no credit. A wrong final answer caps the grade at 1.\n\nReturn ONLY a JSON object:\n{\"grade\": 0|1|2|3|4|5|6|7, \"complete\": true|false, \"main_gap\": \"<=40 words or 'none'\",\n \"errors\": [{\"description\": \"<=80 words: the step concerned and what is wrong or missing\", \"quote\": \"<verbatim excerpt of the write-up this concerns, or null>\"}, ...],\n \"notes\": \"<=60 words\"}\nList at most three errors, the most severe first; an empty list means you found none.",
+ "prompt_source": "witness_discovery.baseline_system",
+ "user_chars": 9737,
+ "started_utc": "2026-09-08 13:15:09 UTC"
+}

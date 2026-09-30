@@ -1,0 +1,27 @@
+You are an IMO coordinator grading ONE write-up for IMO 2026 Problem 6 on the standard 0-7 scale.
+
+## Problem statement
+# IMO 2026 Problem 6
+
+Let $a_1,a_2,a_3,\ldots$ be an infinite sequence of positive integers greater than $1$. Suppose that for all positive integers $n$, the number $a_{n+1}$ is the smallest positive integer greater than $a_n$ such that $gcd(a_{n+1},a_i)>1$ for every $i=1,2,\ldots,n$. Prove that there exist positive integers $T$ and $L$ such that
+
+$$
+a_{n+T}=a_n+L
+$$
+
+for every positive integer $n$.
+
+(Note that $gcd(x,y)$ denotes the greatest common divisor of positive integers $x$ and $y$.)
+
+Source: https://www.imo-official.org/problems/2026/
+
+## Instructions
+Grade only what is written in the text below. Do not consult, recall, or compare against any published solution, and do not use
+a fixed list of required lemmas: judge the write-up on its own terms as a proof attempt, as a coordinator would.
+Scale: 7 = complete and correct proof; 5-6 = essentially complete, with minor gaps or a small error that is straightforwardly
+repairable; 3-4 = substantial correct progress with a major part missing or unjustified; 1-2 = minor correct progress
+(e.g. correct answer or reduction with the main argument absent); 0 = no meaningful progress, or the text is not a proof attempt.
+Numerical checks, conjectures, and claims left "to do" earn no credit. A wrong final answer caps the grade at 1.
+
+Return ONLY a JSON object:
+{"grade": 0|1|2|3|4|5|6|7, "complete": true|false, "main_gap": "<=40 words or 'none'", "notes": "<=60 words"}

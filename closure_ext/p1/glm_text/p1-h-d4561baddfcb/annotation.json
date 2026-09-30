@@ -1,0 +1,47 @@
+{
+  "id": "p1-h-d4561baddfcb",
+  "problem": "1",
+  "sha256": "d4561baddfcbee9d1d5969be84b4970d61db62f08a17182034606afe6f9679d8",
+  "path": "checkpoint_inputs_ext/d4561baddfcbee9d1d5969be84b4970d61db62f08a17182034606afe6f9679d8.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 5,
+  "record_ids": [
+    "p1-gpt-5.6-sol-pro-main-t005",
+    "p1-deedy-gpt-5.6-sol-pro-final"
+  ],
+  "bytes": 5185,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1572,
+        "output_tokens": 2461,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 34.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "monovariant P+K (product drops when gcd>1, nonunit count drops when gcd=1), plus a move always leaves a nonunit",
+    "upper_bound_mechanism": "gcd of all p-adic valuations invariant via gcd(b,a-b)=gcd(a,b), equals v_p(M) at termination",
+    "wrong_answer_stated": false,
+    "notes": "All three mechanisms fully written: valuation reduction (min,|a-b|) with never-two-1s; termination by strict decrease of P+K in both cases; exactly-one-survivor both directions; invariance handles equal and zero exponents and states gcd(0,...,0)=0; explicit M formula. Python check only supplementary, not relied on."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

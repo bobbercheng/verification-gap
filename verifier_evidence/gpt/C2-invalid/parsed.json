@@ -1,0 +1,18 @@
+{
+ "claim_id": "C2",
+ "condition": "invalid",
+ "verifier": "gpt",
+ "model": "gpt-5.6-sol",
+ "status": 200,
+ "parsed": {
+  "claim_true": true,
+  "claim_reason": "Choose a member E; pairwise intersection makes E a finite transversal. Induct on |E|. Every minimal transversal T meets E. For e in T∩E, T\\{e} is a minimal transversal of the subfamily whose members omit e, and E\\{e} transverses that subfamily. Induction and finite union give finiteness.",
+  "witness_valid": false,
+  "witness_reason": "The singleton sets F_n are pairwise disjoint, not pairwise intersecting. Moreover, {x_k} fails to meet F_n whenever n≠k, so it is not a transversal."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 50.0
+}

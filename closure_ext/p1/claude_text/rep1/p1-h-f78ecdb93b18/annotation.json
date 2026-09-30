@@ -1,0 +1,71 @@
+{
+  "id": "p1-h-f78ecdb93b18",
+  "problem": "1",
+  "sha256": "f78ecdb93b18abef5b7d850d309efc95f948f323b7ad82134dbbce3f15137353",
+  "path": "checkpoint_inputs_ext/f78ecdb93b18abef5b7d850d309efc95f948f323b7ad82134dbbce3f15137353.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p1-claude-fable-5-main-t005",
+    "p1-deedy-claude-fable-5-final"
+  ],
+  "bytes": 7832,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6085,
+        "output_tokens": 615,
+        "output_tokens_details": {
+          "thinking_tokens": 312
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 615,
+            "cache_read_input_tokens": 6085,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Phi = sum Omega(x_i) + #{x_i>1} strictly decreases; Lemma 2 gives N>=1, stop iff N<=1",
+    "upper_bound_mechanism": "per-prime invariance of gcd(v_p(x_i)) via gcd(a,b-a)=gcd(a,b)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: Lemma 1 gives (min, max-min) valuation move; Lemma 2 ensures a move never yields two 1s; Phi monovariant gives termination and exactly one survivor; Lemma 4 proves gcd-of-valuations invariance including zero/equal cases; explicit M = prod p^{gcd_i v_p(a_i)} stated and derived."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

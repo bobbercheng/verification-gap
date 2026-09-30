@@ -1,0 +1,46 @@
+{
+  "id": "muse-spark-1.1-main-t005",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 5,
+  "ts": "2026-07-21T03:49:31.729610+00:00",
+  "path": "checkpoint_inputs/71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa.md",
+  "bytes": 24081,
+  "sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 7818,
+        "output_tokens": 11692,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 249.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "even-multiples division (2d,…,2d,d) with parity/rank-pair cancellation — covers only replies splitting each big piece once",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Conjectures wrong c=(n+1)/(2n+1); only n=1 correct. Draft reduced to odd-position sum implicitly, never justified. Parity-cancellation invariance proved for all n but only when Xiang splits each 2d piece once; other replies unhandled (n=2 counterexample 0.4,0.35,0.1,0.1,0.05 gives 0.55<0.6). Upper bound: only failed attempts."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+  "original_bytes": 24081,
+  "input_anonymized": false
+}

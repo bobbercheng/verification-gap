@@ -1,0 +1,44 @@
+{
+  "id": "kimi-r2-c4",
+  "lineage": "ours-kimi-R2",
+  "model": "kimi-k3",
+  "context": 4,
+  "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+  "bytes": 4134,
+  "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 28,
+        "output_tokens": 2041,
+        "cache_read_input_tokens": 1856,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 26.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "dyadic division (1:2:...:2^n) + toggle/symmetric-difference game",
+    "upper_bound_mechanism": "set-game restriction (pair cancellation/toggle moves) with recursion",
+    "wrong_answer_stated": false,
+    "notes": "Correct form appears only as labeled CONJECTURE. Draft reduction asserted with numerics; greedy-optimality lemma explicitly unwritten. LB: dyadic division identified, one inequality of toggle relaxation proved, crux g(n,n)≥1 open; only n=1 full. UB: set-game restriction valid, hand strategies for n≤2 only; general covering argument open."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+  "original_bytes": 4134,
+  "input_anonymized": false
+}

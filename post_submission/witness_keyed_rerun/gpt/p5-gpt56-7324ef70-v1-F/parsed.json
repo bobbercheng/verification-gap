@@ -1,0 +1,55 @@
+{
+ "gate": "witness",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-F",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "F",
+ "problem": "5",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 79.8,
+  "input_tokens": 17316,
+  "output_tokens": 2342,
+  "reasoning_output_tokens": 2010,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_but_invalid",
+    "quote": "&=(t-y)^2+4(t+c)(b-c).\n\\end{aligned}\n\\]\nIt follows that\n\\[\nb-c\\le \\frac{(t-y)^2}{4(t+c)}\\le \\frac{(t-y)^2}{4t}. \\tag{5}",
+    "witness": "The displayed algebraic identity has the sign reversed. The correct expansion is (t-y)^2+4(t+c)(c-b). For example, t=1, y=2, c=2, b=0 gives the preceding expression (1+4+2)^2-4(3)(2)=25, whereas the claimed expression is (1-2)^2+4(3)(0-2)=-23. Thus (5) does not follow from the equality actually written.",
+    "load_bearing": "Estimate (5) is combined with (6) to obtain the quadratic bound (7), which is then the sole basis for proving that d is constant. Therefore the all-cases necessity argument depends on this invalid displayed step."
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": true,
+  "notes": "The classification and converse are correct, but the necessity proof contains a load-bearing sign error in its first local expansion."
+ },
+ "anchors": {
+  "upper_bound": {
+   "anchored": true,
+   "length": 119,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    2938,
+    3057
+   ]
+  }
+ }
+}

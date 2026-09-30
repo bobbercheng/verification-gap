@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__deedy-deepseek-v4-pro-final__e1",
+ "case": "deedy-deepseek-v4-pro-final",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.6,
+  "input_tokens": 2,
+  "output_tokens": 456,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 3367,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1591,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001686,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 456,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 3367,
+    "webSearchRequests": 0,
+    "costUSD": 0.04508000000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 117,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "none",
+  "explanation": "The quoted passage only describes Xiang's reply to one specific Liu division (marks at k/(2n+1)), and even there it is hedged (\"seems to be\"). L3.2 requires a Xiang reply with at most n cuts bounding Liu's gain for EVERY Liu division, via subset-sum pigeonhole plus a mirrored-cut/cancellation construction; none of that appears. The write-up itself concedes \"Upper bound: ... Strategy for X?\" and \"Full proof (To be completed)\". Moreover the asserted value (n+1)/(2n+1) is not the correct c_n = 2^n/(2^{n+1}-1), so no local edit repairs it.",
+  "objection_correct_reason": null
+ },
+ "elsewhere_anchor": null
+}

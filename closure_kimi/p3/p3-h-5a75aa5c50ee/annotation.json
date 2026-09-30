@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-5a75aa5c50ee",
+  "problem": "3",
+  "sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+  "path": "checkpoint_inputs/5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8.md",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "kimi-r1-c3"
+  ],
+  "bytes": 14257,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 157.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position majorization (Lemma E) via induction on rank pairs over geometric division",
+    "upper_bound_mechanism": "subset-sum pigeonhole (gap <= 1/N) plus greedy supply-demand cancellation into equal pairs + leftovers",
+    "wrong_answer_stated": false,
+    "notes": "Complete self-contained proof for all n. Lemma 1's pairing argument rigorously reduces to odd alternating sum; Lemma E is proved for arbitrary refinements of the geometric split; Theorem B's pigeonhole+cancellation works against every composition with cut count verified (<= n). Numeric checks are supplementary only. Minor compression in Lemma 1's case analysis, but argument is sound."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

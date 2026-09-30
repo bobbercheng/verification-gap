@@ -1,0 +1,44 @@
+{
+  "id": "deedy-grok-4.5-final",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": 99,
+  "path": "checkpoint_inputs/13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe.md",
+  "bytes": 17437,
+  "sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5921,
+        "output_tokens": 6171,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 85.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "power-of-two division with induction (incomplete)",
+    "upper_bound_mechanism": "pairing/cancellation to force D=1 (sketch)",
+    "wrong_answer_stated": false,
+    "notes": "Correct final answer stated. D defined and Lemma A genuinely proved, but the key reduction V=(sum+D)/2 and greedy optimality are only asserted. Lower bound: 1:2:...:2^n division correct; induction case k=0 fine, main subcases garbled/hand-waved, relies on n<=3 numerics. Upper bound: pairing-to-D=1 idea sketched, <=n-cuts feasibility unjustified; some auxiliary formulas (D(B_n) closed form, target multiset) wrong."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+  "original_bytes": 17437,
+  "input_anonymized": false
+}

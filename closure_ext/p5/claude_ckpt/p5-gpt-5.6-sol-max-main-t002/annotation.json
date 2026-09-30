@@ -1,0 +1,66 @@
+{
+  "id": "p5-gpt-5.6-sol-max-main-t002",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 2,
+  "path": "checkpoint_inputs_ext/66a2948b3fd5a27039c4d713c83fbff7da5163356cf3ad3fdaf211387420aacb.md",
+  "bytes": 5820,
+  "sha256": "66a2948b3fd5a27039c4d713c83fbff7da5163356cf3ad3fdaf211387420aacb",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3763,
+        "cache_read_input_tokens": 1356,
+        "output_tokens": 1488,
+        "output_tokens_details": {
+          "thinking_tokens": 1183
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3763,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1488,
+            "cache_read_input_tokens": 1356,
+            "cache_creation_input_tokens": 3763,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3763
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to x and z=y+c, both inequalities, all c>=0",
+    "upper_bound_mechanism": "Orbit alignment (floor-index matching, Phi rationalization) gives p=q; then A/B both open + connectedness excludes mixed fixed/non-fixed case",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: (S) f(f(y))=2f(y)-y with arithmetic orbits and d>=0; (N)(i) asymptotic alignment of two orbits forces equal positive displacements, with valid index choice and error bound q^2/(x+v); (N)(ii) mixed case excluded rigorously via openness of A and B and connectedness; (V) verified for all x,y and c>=0."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

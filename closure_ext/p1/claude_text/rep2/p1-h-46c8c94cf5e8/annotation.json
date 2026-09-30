@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-46c8c94cf5e8",
+  "problem": "1",
+  "sha256": "46c8c94cf5e8321179e62981a21048334126d80a40fbe4b84018920003cca8cd",
+  "path": "checkpoint_inputs_ext/46c8c94cf5e8321179e62981a21048334126d80a40fbe4b84018920003cca8cd.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 10,
+  "record_ids": [
+    "p1-grok-4.5-main-t010"
+  ],
+  "bytes": 8877,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5881,
+        "output_tokens": 1322,
+        "output_tokens_details": {
+          "thinking_tokens": 1027
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1322,
+            "cache_read_input_tokens": 5881,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 19.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic (k, P) monovariant plus 'at least one output > 1' so k never drops below 1",
+    "upper_bound_mechanism": "per-prime gcd of valuations invariant via gcd(x, y-x) = gcd(x, y); terminal g_p = v_p(M)",
+    "wrong_answer_stated": false,
+    "notes": "All three mechanisms fully argued; explicit M = prod p^{gcd_i v_p(a_i)} given. Lemma 1/2 cover min, |a-b|, zero and equal valuations with stated gcd conventions. Termination case analysis complete, though one parenthetical is garbled self-correction and an 'alternative' remark in (a) is confused; the main argument stands unaffected."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

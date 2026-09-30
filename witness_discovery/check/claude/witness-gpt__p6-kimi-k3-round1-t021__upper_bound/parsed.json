@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p6-kimi-k3-round1-t021",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.2,
+  "input_tokens": 2,
+  "output_tokens": 579,
+  "cache_read_input_tokens": 1500,
+  "cache_creation_input_tokens": 2371,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2196,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002281,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 579,
+    "cacheReadInputTokens": 1500,
+    "cacheCreationInputTokens": 2371,
+    "webSearchRequests": 0,
+    "costUSD": 0.038945,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 232,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quoted sentence occurs verbatim and is exactly conditional: 'So it suffices: $S_\\infty$ is a union of residue classes mod $L$'. Nowhere in the text is such an $L$ produced or is invariance of membership under $m\\mapsto m+L$ proved; the text explicitly states 'Remaining crux: prove shrinkage stops (equivalently: finitely many permanents / $S_\\infty$ finitely generated)' and the periodicity is only 'verified' empirically for 100+ values of $a_1$, which the rubric bars from credit. Theorem A (sequence = $S_\\infty\\cap[a_1,\\infty)$) supplies the indexing step from $n=1$ but only once the residue-class structure is known. Hence obligation (P) is not written out for all cases, and the assembly is incomplete as written. "
+ }
+}

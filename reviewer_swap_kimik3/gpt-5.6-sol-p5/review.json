@@ -1,0 +1,32 @@
+{
+ "task_id": "imo-2026-p5",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Substituting x = f(y) makes both outer terms equal f(y), so the squeeze gives f(f(y)) = 2f(y) - y (equation 1); algebra independently re-derived and correct.",
+  "With d(t) = f(t) - t, equation (2) d(f(t)) = d(t) follows from (1), and the induction f^n(t) = t + n d(t) is valid since all iterates remain in the positive domain.",
+  "If d(t) < 0 then f^n(t) = t + n d(t) becomes nonpositive for large n, contradicting the positive codomain; hence d >= 0 everywhere.",
+  "Lower-inequality expansion with x = f(t) = t+c, f(x) = t+2c, f(y) = y+b: (f(x)+y)^2 - 4x f(y) = (t-y)^2 + 4(t+c)(c-b); independently expanded and confirmed, yielding b - c <= (t-y)^2/(4(t+c)) <= (t-y)^2/(4t).",
+  "Upper-inequality expansion: 2x^2 + 2f(y)^2 - (f(x)+y)^2 = (t-y)^2 + 2(b-c)(2y+b+c); independently expanded and confirmed, yielding c - b <= (t-y)^2/(2(2y+b+c)) <= (t-y)^2/(4y).",
+  "Squaring both inequalities is legitimate because all quantities are positive; combining the two bounds according to the sign of b - c gives |d(y)-d(t)| <= (y-t)^2/(4 min{t,y}) (equation 7).",
+  "The n-partition argument on [u,v] gives |d(v)-d(u)| <= (v-u)^2/(4un) for all n, hence d is constant C >= 0 and f(x) = x + C.",
+  "Converse verified: for f(x) = x + C with C >= 0 the chain is exactly RMS >= AM >= GM for the positive numbers x and y + C, so all such C work; C < 0 violates positivity of the codomain.",
+  "Exploratory falsification record is accurate: affine substitution forces (a-1)^2 = 0; the claimed squared margins -15 (f(x)=sqrt(x) at (1,4)), -260 (f(x)=x^2 at (4,2)), and -15/4 (piecewise example at (1,1/2)) all recompute correctly, and the piecewise example indeed satisfies the iterate law, confirming that (1) alone is insufficient and the quadratic estimate is load-bearing."
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is correct, complete, and fully self-contained. The key mechanism is the squeeze substitution x = f(y) yielding f(f(y)) = 2f(y) - y, hence the displacement d = f - id is f-invariant and nonnegative by positivity of iterates. Setting x = f(t) in both original inequalities produces exact quadratic identities whose cross-terms factor as (t-y)^2 plus a term linear in (b-c), giving the second-order local bound |d(y)-d(t)| = O((y-t)^2) with no regularity assumptions; a standard subdivision then forces d constant. The converse reduces to RMS-AM-GM. All algebra was independently re-derived and matches; the exploratory hypothesis record is explicitly non-load-bearing and its numerical claims check out. No hidden quantifier changes, unjustified limits, or degenerate-case gaps were found.",
+ "transfer_assessment": [
+  "Reusable: substituting x = f(y) (or similar self-compositions) to collapse a two-sided chain into an exact iterate identity via squeezing.",
+  "Reusable: from f(f(t)) = 2f(t) - t, defining the displacement d = f - id to obtain d invariant under f, then using codomain positivity of all iterates to force d >= 0.",
+  "Reusable: deriving an O((x-y)^2) local bound on the displacement difference from quadratic expansions of the constraint, then subdividing an interval n times and letting n -> infinity to prove constancy without assuming continuity or monotonicity.",
+  "Cautionary (correctly handled here): the iterate identity f(f(t)) = 2f(t) - t alone admits pathological non-translation solutions, so any solution must use the full inequality chain; the candidate's falsification record demonstrates this explicitly and does not over-rely on (1).",
+  "The numerical experiments and hypothesis record are exploratory only, clearly labeled as non-proof, and their reported values are accurate; they neither weaken nor substitute for the argument."
+ ]
+}

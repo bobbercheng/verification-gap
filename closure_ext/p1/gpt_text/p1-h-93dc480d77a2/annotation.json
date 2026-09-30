@@ -1,0 +1,45 @@
+{
+  "id": "p1-h-93dc480d77a2",
+  "problem": "1",
+  "sha256": "93dc480d77a2043cffb97690baca15d0ffbb94c75fb5c66fa51ea6df92605f0e",
+  "path": "checkpoint_inputs_ext/93dc480d77a2043cffb97690baca15d0ffbb94c75fb5c66fa51ea6df92605f0e.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-main",
+  "turn": 7,
+  "record_ids": [
+    "p1-kimi-k3-main-t007",
+    "p1-deedy-kimi-k3-final"
+  ],
+  "bytes": 8828,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 18005,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 159,
+        "reasoning_output_tokens": 48
+      },
+      "sec": 8.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "product and number-of-ones monovariant",
+    "upper_bound_mechanism": "prime-wise gcd-of-valuations invariant",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. It explicitly derives the valuation update, proves termination for every play, proves exactly one entry greater than 1 remains, handles zero and equal valuations in the invariant, and gives the correct explicit formula for M."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

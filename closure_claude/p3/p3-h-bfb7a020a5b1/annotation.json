@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-bfb7a020a5b1",
+  "problem": "3",
+  "sha256": "bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7",
+  "path": "checkpoint_inputs/bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7.md",
+  "lineage": "ours-glm52-repair",
+  "model": "glm-5.2",
+  "context": 4,
+  "turn": null,
+  "record_ids": [
+    "glm52-repair"
+  ],
+  "bytes": 8773,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5144,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 1691,
+        "output_tokens_details": {
+          "thinking_tokens": 1337
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 5144,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1691,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 5144,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 5144
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 21.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n opening + induction bounding partial even-position sums (v2+...+v_{2r} <= 2^n-2^{n-r}) via which original parts can host large pieces",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) on the n+1 parts, halving of untouched parts plus greedy max-vs-max cancellation pairing of P against Q, cut count |Z|+c <= n, then delta = delta(L) <= max L <= sum L",
+    "wrong_answer_stated": false,
+    "notes": "Complete and self-contained: Lemma 1 gives the alternating-sum reduction with both players' pairing strategies; lower bound induction is valid for all n (r <= floor(M/2) <= n); upper bound cut accounting t = c+2f+l yields c <= t-1 correctly. Checks verified."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

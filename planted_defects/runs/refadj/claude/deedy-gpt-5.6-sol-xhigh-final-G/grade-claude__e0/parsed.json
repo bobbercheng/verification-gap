@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-G",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 34.6,
+  "input_tokens": 2,
+  "output_tokens": 2399,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 5548,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4571,
+    "outputTokens": 22,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004681,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2399,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 5548,
+    "webSearchRequests": 0,
+    "costUSD": 0.11628650000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2094,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Section 3 states the overlay construction and the cut bound |A|+|B|-1, then explicitly writes \"standard; details omitted\". No other passage supplies the count; Section 5's budget (13) simply invokes (5). The bound is in fact correct — new cuts are the |B|-1 interior B-boundaries projected into A, the at most |A|-1 interior A-boundaries lying in (0,q) projected into B, and one cut at position q, minus coincidences — but this verification, which is exactly what guarantees Xiang stays within n marks, is nowhere carried out. One added sentence with this count would establish L3.2 as written."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

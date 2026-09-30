@@ -1,0 +1,17 @@
+{
+  "task_id": "imo-2026-p4",
+  "verdict": "confirm",
+  "weakest_inference": "The weakest inference is the clean-child invariant: from both children being non-clean, the proof must exhaust all possible witnesses and preserve positivity when subtracting multiples. The inherited clean angles A and B leave exactly the four listed pairings; their sums or strictly positive differences force C, A, B, or 180 degrees to be a positive integral multiple of theta, so the inference survives the audit.",
+  "counterexample_search": [
+    "Re-derived both child angle triples and checked that every strict split 0 < x < C gives positive child angles and is realized by a cut to a nonvertex point; no geometric or zero-angle counterexample exists.",
+    "Reversed the n >= 3 inequality chain, including the tight n = 3 equality case: in the no-multiple branch C > theta, so A < k theta <= A + theta < A + C < 180 degrees and hence 0 < x < C and 1 <= k <= n - 1.",
+    "Checked the n = 2 equivalence in both directions: x < C is equivalent to B < theta, while A < theta gives x > 0; the excluded endpoint cases are already-winning right triangles.",
+    "Exhaustively tested 84,867,272 clean-parent rational-grid cuts for totals 3 through 80 with nondivisor targets; no cut made both children non-clean.",
+    "Exhaustively tested the manufacturing construction on 344,513 rational triangles for n = 3 through 80 whose angles were off the theta lattice; every chosen x was strict and both successors contained the claimed complementary multiples.",
+    "Enumerated all four possible pairs of non-clean child witnesses; the two subtraction cases have positive differences A and B, and the addition cases force C or 180 degrees, so none yields a counterexample.",
+    "Reconstructed the dependency graph and checked the finite-descent and invariant branches independently; neither uses the computational experiment or the prior review, and no circular dependency was found."
+  ],
+  "dependency_gaps": [],
+  "required_fixes": [],
+  "summary": "The attempted second-order overturn failed. The cut parametrization is exact, all strict inequalities and nonzero/existence claims hold, the multiplier descent gives finite termination when 180 degrees/theta is integral, and the clean-triangle invariant supplies an infinite avoiding response otherwise. The classification theta = 180 degrees/n for integers n >= 2 is therefore confirmed."
+}

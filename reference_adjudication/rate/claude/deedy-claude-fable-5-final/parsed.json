@@ -1,0 +1,85 @@
+{
+ "rater": "claude",
+ "case": "deedy-claude-fable-5-final",
+ "problem": "3",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.6,
+  "input_tokens": 2,
+  "output_tokens": 1154,
+  "cache_read_input_tokens": 1358,
+  "cache_creation_input_tokens": 9026,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7275,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.00737,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1154,
+    "cacheReadInputTokens": 1358,
+    "cacheCreationInputTokens": 9026,
+    "webSearchRequests": 0,
+    "costUSD": 0.11979899999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 390,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "statements": {
+   "L3.1": {
+    "established": "yes",
+    "quote": "*Proof of 1.* Strategy: always claim a currently longest unclaimed piece. We show by strong induction on $|B|$ ... Thus, once the cutting is done and produces the multiset $A$, the quantity Liu Bang can guarantee from that position is exactly $\\tfrac{1+D(A)}{2}$, and Xiang Yu can prevent more.",
+    "note": "Lemma 2 proves both greedy bounds via (2.1),(2.2); D as alternating sum of sorted lengths."
+   },
+   "L3.2": {
+    "established": "yes",
+    "quote": "Consider the $2^m$ subset sums ... so some gap is at most $\\frac1{2^m-1}=u$: there are $S\\ne S'$ with $0\\le\\sigma(S')-\\sigma(S)\\le u$ ... The final multiset is therefore (equal pairs) $\\uplus\\,L$, and by Lemma 1, $D(A)=D(L)\\le\\Sigma(L)=\\Delta\\le u$",
+    "note": "Full universal upper bound: pigeonhole plus explicit mirrored-cut/midpoint construction with mark count ≤ n."
+   },
+   "L3.3": {
+    "established": "yes",
+    "quote": "If every component of $G$ contained a cycle or loop it would have at least as many edges as vertices, forcing $|E|\\ge|V|$ — impossible. Hence some component $T=(V_T,E_T)$ is a simple tree ... $u\\le|\\Xi|\\le\\sum_{P_i\\in E_T}\\varepsilon_i+[M\\text{ odd}]\\,a_M\\le D(A)$",
+    "note": "Tree-component 2-colouring plus signed-sum bound (3.1); valid for every Xiang refinement, all n."
+   }
+  },
+  "S_ref": 2,
+  "notes": "All three ledger items are proved in full generality: reduction (Lemma 2), lower bound by tree/signed subset-sum (Lemma 4), upper bound by subset-sum pigeonhole plus cross-pairing cuts (Lemma 5). Correct closed form stated. Numerics are supplementary, not load-bearing."
+ },
+ "anchors": {
+  "L3.1": {
+   "anchored": false,
+   "length": 294,
+   "length_ok": true,
+   "reason": "not found"
+  },
+  "L3.2": {
+   "anchored": false,
+   "length": 248,
+   "length_ok": true,
+   "reason": "not found"
+  },
+  "L3.3": {
+   "anchored": false,
+   "length": 264,
+   "length_ok": true,
+   "reason": "not found"
+  }
+ }
+}

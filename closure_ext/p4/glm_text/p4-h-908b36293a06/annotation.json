@@ -1,0 +1,46 @@
+{
+  "id": "p4-h-908b36293a06",
+  "problem": "4",
+  "sha256": "908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e",
+  "path": "checkpoint_inputs_ext/908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "0c164fc0",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-0c164fc0-v1"
+  ],
+  "bytes": 9794,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3381,
+        "output_tokens": 7716,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 128.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "force right angle then θ-split / kθ induction (complete only for θ=90,60,45)",
+    "upper_bound_mechanism": "invariant max angle < θ (proved only for θ>90°)",
+    "wrong_answer_stated": true,
+    "notes": "Stated answer θ≤90° is wrong (correct: θ=180/n). The kθ-induction (cut angle mθ by x=θ, both children carry multiples) is correctly written. Winning direction fully proved only for θ=90°,60°,45°; general θ<60° rests on unproved 'measure decreases', and 60<θ<90 is gappy/false. Avoidance invariant (max angle<θ) complete only for θ>90°."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

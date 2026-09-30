@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 27.0,
+  "input_tokens": 215,
+  "output_tokens": 1758,
+  "cache_read_input_tokens": 8192
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and read correctly: the text's sole candidate upper-bound strategy (Xiang completing the equal grid) is shown to fail and then explicitly abandoned ('So need different Xiang strategy to upper bound'; later 'upper bound proof must be clever'). Checking the entire text: the only upper bound argued anywhere is the n=1 analysis; for general n the text states the goal, discards the grid strategy, and defers to a computational search that is never executed ('code path issues', status 'partial'). No Xiang reply is constructed for arbitrary Liu divisions, so the all-n upper bound is genuinely absent. Since optimality of the claimed value depends entirely on this mechanism, the obligation is unmet and the objection is fatal."
+ }
+}

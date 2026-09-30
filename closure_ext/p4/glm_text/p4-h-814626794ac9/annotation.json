@@ -1,0 +1,46 @@
+{
+  "id": "p4-h-814626794ac9",
+  "problem": "4",
+  "sha256": "814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a",
+  "path": "checkpoint_inputs_ext/814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "7912bb42",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-7912bb42-v1"
+  ],
+  "bytes": 11500,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3754,
+        "output_tokens": 8260,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 136.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "immediate-win lemma (angle 2θ) plus dyadic ladder; θ=90° base proven, ladder step invalid",
+    "upper_bound_mechanism": "acute-triangle defense for θ>90°; unproven finite-lattice invariant for 180k/2ⁿ",
+    "wrong_answer_stated": true,
+    "notes": "Correct: one-move win iff an angle is 2θ; θ=90° win proven; θ>90° acute defense essentially proven. Ladder step 'both children get 2θ' is false for θ<45°, so 22.5° etc. unproven; 60°, 30° wrongly excluded. Lattice invariant for 180k/2ⁿ breaks under arbitrary cuts. Conjectured answer 180°/2ⁿ misses all 180/n with n≥3."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

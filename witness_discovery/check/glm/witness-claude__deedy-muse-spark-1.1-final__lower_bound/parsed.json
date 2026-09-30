@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 74.9,
+  "input_tokens": 287,
+  "output_tokens": 4912,
+  "cache_read_input_tokens": 8192
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and read correctly as an admission of a gap. The only general-n argument in the file (the delta-cancellation computation) explicitly assumes Xiang 'splits each big piece once'; all other replies are treated by two n=2 examples (0.7 > 0.6; 0.6 again), followed by 'Need to prove...' and 'Is it always at least (n+1)d?' — a question, not an argument. The remainder of the file discusses only the upper bound, so nowhere is the lower bound established against every Xiang reply for all n. The gap is real and in fact unfillable with this division: n=2, Liu pieces 0.4, 0.4, 0.2; Xiang splits 0.4 into 0.35+0.05 and 0.2 into 0.1+0.1; sorted 0.4, 0.35, 0.1, 0.1, 0.05 gives Liu 0.4+0.1+0.05 = 0.55 < 0.6. The lower-bound obligation is unmet as written."
+ }
+}

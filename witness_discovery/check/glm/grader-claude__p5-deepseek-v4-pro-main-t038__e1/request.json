@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "p5-deepseek-v4-pro-main-t038",
+ "tag": "e1",
+ "text_sha256": "98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "unspecified",
+  "status": "error reported by an ordinary grader",
+  "quote": "A(x,y) &= (x-y)^2 + 4cx + 2c^2 \\ge 0 \\quad\\text{(always true)},",
+  "witness": "Sign/typo in the expansion of A(x,y) for a=0,b=c: from the general formula the term is +4by = 4cy, not 4cx. Harmless since the inequality is only claimed to hold trivially, but it is an error in the displayed identity.",
+  "load_bearing": null
+ },
+ "started_utc": "2026-09-06 05:46:32 UTC"
+}

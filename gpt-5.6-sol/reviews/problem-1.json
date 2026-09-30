@@ -1,0 +1,29 @@
+{
+  "task_id": "imo-2026-p1",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "For every legal move, the lexicographic rank (P,K) strictly decreases: P is divided by gcd(m,n), and in the coprime case P is unchanged while K decreases by one.",
+    "Every play continued while possible terminates after finitely many moves with exactly one entry greater than 1.",
+    "For every prime p, gcd_i(v_p(x_i)) is invariant under every legal move, including zero-valuation and equal-valuation cases.",
+    "The unique terminal nonunit is M = product_p p^(gcd_i(v_p(A_i))), with finite prime support, so it is independent of all choices.",
+    "The exhaustive-search claims are reproducible: verify_small.py checks 1278 initial multisets and 9607 memoized reachable states, and the computation is explicitly separated from the proof."
+  ],
+  "unverified_claims": [],
+  "summary": "The solution is correct, complete, rigorous, and self-contained. Lexicographic descent proves termination, preservation of a nonunit establishes the terminal shape, and primewise Euclidean gcd invariants uniquely determine the final value. There are no limit, continuity, circularity, degenerate-case, or experiment-as-proof gaps. The conclusion's phrase 'every sequence' is mildly imprecise if read to include arbitrary finite prefixes; in context it clearly means every play continued while possible, so this does not require revision.",
+  "transfer_assessment": [
+    "Reusable: combine a nonincreasing multiplicative measure with a discrete tie-breaker to obtain well-founded lexicographic descent.",
+    "Reusable: translate gcd/lcm operations primewise into min/difference operations on valuations.",
+    "Reusable: preserving the gcd of a replaced coordinate pair preserves the gcd of the full coordinate vector by associativity.",
+    "Reusable: combine termination, terminal-shape analysis, and a complete family of invariants to prove choice-independence.",
+    "Potentially misleading wording: 'every sequence of legal moves ends' should be understood as 'every maximal play continued while possible ends.'",
+    "Not misleading: the finite computation is labeled and used only as falsification evidence, not as proof."
+  ]
+}

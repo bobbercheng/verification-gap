@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4950,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005050000000000001,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 6741,
+    "cacheReadInputTokens": 1473,
+    "cacheCreationInputTokens": 5949,
+    "webSearchRequests": 0,
+    "costUSD": 0.2287615,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 6414,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5949,
+   "cache_read_input_tokens": 1473,
+   "output_tokens": 6741,
+   "output_tokens_details": {
+    "thinking_tokens": 6414
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5949,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 6741,
+     "cache_read_input_tokens": 1473,
+     "cache_creation_input_tokens": 5949,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5949
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 77859,
+  "is_error": false,
+  "elapsed_seconds": 78.7,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"obligations\": {\"reduction\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}, \"lower_bound\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}, \"upper_bound\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}}, \"S_valid\": 2, \"wrong_answer_stated\": false, \"notes\": \"Drafting lemma's cancellation identity checks out (both parities). Lower bound: pairing multigraph has floor(r/2) <= q-1 edges on q vertices, forcing a tree component; bipartition gives distinct subsets with |s_U - s_W| <= D, so D >= Gamma = delta for the 1:2:...:2^n division. Upper bound: overlay construction respects the q-1 cut budget and pigeonhole gives Gamma <= 1/(2^{n+1}-1).\"}"
+   }
+  ]
+ }
+}

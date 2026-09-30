@@ -1,0 +1,58 @@
+{
+  "id": "p6-h-f7e426b7ffeb",
+  "problem": "6",
+  "sha256": "f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da",
+  "path": "checkpoint_inputs/f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "7030bbc7",
+  "turn": 3,
+  "record_ids": [
+    "p6-glm52-7030bbc7-v3"
+  ],
+  "bytes": 11701,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 4951,
+        "output_tokens": 24000,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 262.9,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4951,
+        "output_tokens": 2880,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 42.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 7,
+    "complete": true,
+    "main_gap": "none",
+    "notes": "Steps 1-4 (valid-set reduction, enumeration of V, periodicity) and Steps 6-8 are correctly argued. The crux Step 9 (Cofactor Bound) is fully proved: Lemmas A, B, C are each correct, and the contradiction construction (m = Dc with P(m) = tau*, a_1 < m <= a_{j-1}, forcing B_s nonempty then empty) is sound, including both cases D <= a_1 and D > a_1. Computational checks are supplementary, not load-bearing."
+  },
+  "S": null,
+  "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+  "path_base": "bundle root"
+}

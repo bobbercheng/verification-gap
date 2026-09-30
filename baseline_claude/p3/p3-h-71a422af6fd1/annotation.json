@@ -1,0 +1,67 @@
+{
+  "id": "p3-h-71a422af6fd1",
+  "problem": "3",
+  "sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+  "path": "checkpoint_inputs/71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-muse-spark-1.1-final",
+    "muse-spark-1.1-main-t005"
+  ],
+  "bytes": 24081,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 11146,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 26835,
+        "output_tokens_details": {
+          "thinking_tokens": 26597
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 11146,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 26835,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 11146,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 11146
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 300.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 1,
+    "complete": false,
+    "main_gap": "Conjectured answer (n+1)/(2n+1) appears wrong (n=2: Xiang holds Liu to ≤4/7<3/5 by pairing strategies); no upper-bound proof, and lower-bound only covers Xiang splitting each big piece once.",
+    "notes": "Reformulation-free notebook: correct n=1 value, a cute invariance computation for the equal-grid construction. But Xiang can beat that construction (e.g. n=2: pieces 0.4,0.4-δ,0.1,0.1,δ gives Liu ≈0.5), so the guarantee and the conjectured answer fail. Self-declared partial."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

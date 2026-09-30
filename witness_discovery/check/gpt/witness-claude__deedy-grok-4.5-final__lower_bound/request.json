@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-grok-4.5-final",
+ "tag": "lower_bound",
+ "text_sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "written_but_invalid",
+  "quote": "Observe that the mass \\(2^n-\\mu\\) together with all pieces of \\(P\\) may be viewed as a subdivision of a stick of length \\(2^n-\\mu+\\sum P=S_n-\\mu\\le S_{n-1}\\) performed with at most \\(m+(k-1)\\le n-1\\) cuts.",
+  "witness": "COUNTEREXAMPLE to the asserted inequality S_n - mu <= S_{n-1}, which only requires mu > tau = 2^{n-1}. Take n = 2, so B_2 = {1,2,4}, S_2 = 7, S_1 = 3, tau = 2. Use t = 1 <= n cut, placed inside the bin of length 4 at distance 3.5, so k = 1, m = 0, P = {1,2}, Q = {3.5,0.5}, mu = 3.5 > tau = 2 (subcase hypothesis holds). Then S_n - mu = 7 - 3.5 = 3.5 > 3 = S_1, contradicting the claimed bound. Consequently the dummy piece of length S_{n-1} - (S_n - mu) = -0.5 has negative length and the ensuing appeal to the inductive hypothesis on a padded copy of B_{n-1} is vacuous. (The text also silently identifies this dummy length with d = mu - tau, whereas S_{n-1}-(S_n-mu) = mu - 2^n, a different quantity.)",
+  "load_bearing": "The whole k>=1, mu>tau subcase derives D(M)>=1 from applying the induction hypothesis to the padded remainder; with the padding step invalid the subcase has no proof, and the remaining text there ('something that forces', 'the worst case', numerical checks for n<=3) supplies no substitute."
+ },
+ "started_utc": "2026-09-06 04:45:18 UTC"
+}

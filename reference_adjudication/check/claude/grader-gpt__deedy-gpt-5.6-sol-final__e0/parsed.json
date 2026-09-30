@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__deedy-gpt-5.6-sol-final__e0",
+ "case": "deedy-gpt-5.6-sol-final",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.9,
+  "input_tokens": 2,
+  "output_tokens": 942,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 3883,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3292,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003397,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 942,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 3883,
+    "webSearchRequests": 0,
+    "costUSD": 0.0632115,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 570,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "Part (i) of the refinement lemma is the write-up's only route to the universal upper bound (Section 4). The quoted sweep argument never defines the \"two arrays\", never shows the cancelled/uncancelled remnants form a multiset of at most s columns arising from at most s admissible splits of actual stick pieces, and never verifies the inductive hypothesis (at most s+1 members, total (T-d)/2) is met; the assertion about total lengths adding to T-d and \"interchange at the cut\" is stated, not proved. The only other reference is \"proved in full in lemmas/refinement.md\", an external file not contained in the text, which cannot be credited. Hence L3.2 is not established as written; a full proof of Lemma (i) (e.g. subset-sum pigeonhole plus mirrored-cut construction) is needed."
+ },
+ "elsewhere_anchor": null
+}

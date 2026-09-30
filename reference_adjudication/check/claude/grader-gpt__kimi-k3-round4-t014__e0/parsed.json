@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__kimi-k3-round4-t014__e0",
+ "case": "kimi-k3-round4-t014",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 42.2,
+  "input_tokens": 2,
+  "output_tokens": 3357,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 11628,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9463,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009562999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 3357,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 11628,
+    "webSearchRequests": 0,
+    "costUSD": 0.2010365,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2948,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Turn count: LB takes p_j, XY takes ell — two pieces removed, so on M'' it is again LB's move, not XY's. The induction hypothesis (stated for the first player on a multiset) therefore gives XY only even(M''), not odd(M''). Both case computations are built on the stronger unjustified value: for j=1 it asserts XY gets p_2 + sum_{i odd >= 3} p_i, and for j >= 2 it asserts p_1 + odd(M\\{p_1,p_j}) >= odd(M). With the correct even(M'') the j=1 case gives exactly even(M) and the j >= 2 case needs a fresh pairing argument (p_1 >= p_2, p_3 >= p_4, ...) that is nowhere written. Lemma 1.1's XY half — the upper half of the reduction — is thus not established as written, though repairable within the proof.",
+  "objection_correct_confidence": 0.9
+ },
+ "elsewhere_anchor": null
+}

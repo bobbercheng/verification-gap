@@ -1,0 +1,44 @@
+{
+  "id": "p3-h-7a92204a1295",
+  "problem": "3",
+  "sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+  "path": "checkpoint_inputs/7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "gpt56-ours-timeout"
+  ],
+  "bytes": 8900,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17409,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 618,
+        "reasoning_output_tokens": 501
+      },
+      "sec": 20.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "subset-gap graph pairing",
+    "upper_bound_mechanism": "subset-sum pigeonhole and overlay cancellation",
+    "wrong_answer_stated": false,
+    "notes": "Complete all-n proof. The drafting lemma reduces optimal play to the sorted alternating sum. The refinement lemma rigorously handles arbitrary Xiang refinements and fewer cuts. Binary lengths attain the subset-sum gap, while pigeonhole spacing and overlay cancellation give the matching universal upper bound."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

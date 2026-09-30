@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-b9bcc2557880",
+  "problem": "1",
+  "sha256": "b9bcc2557880ee6eaaafb84dc81dbae13190592c29cbd0e531c0be1eb572cb1b",
+  "path": "checkpoint_inputs_ext/b9bcc2557880ee6eaaafb84dc81dbae13190592c29cbd0e531c0be1eb572cb1b.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "7ff751bc",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-7ff751bc-v1"
+  ],
+  "bytes": 5641,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1901,
+        "output_tokens": 12915,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 196.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic (K, ΣΩ) monovariant",
+    "upper_bound_mechanism": "gcd of p-adic valuations invariant",
+    "wrong_answer_stated": false,
+    "notes": "Termination rigorously proved via lex (K, ΣΩ); at-most-one survivor correct; valuation move description complete. But 'at least one > 1' is argued fallaciously: product never exceeding initial > 1 does not imply final product > 1. Invariance of gcd of valuations covers all cases (a=b, zeros); explicit M correct."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

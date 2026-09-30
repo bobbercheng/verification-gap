@@ -1,0 +1,42 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "O",
+ "problem": "6",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 16.2,
+  "input_tokens": 18360,
+  "output_tokens": 587,
+  "reasoning_output_tokens": 342,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L6.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "Conversely, if $S$ meets every member of $\\mathcal F$, choose an integer $x\\ge a_1$ with support $S$. Every accepted integer smaller than $x$ has support in $\\mathcal F$, and thus is noncoprime to $x$. Hence the greedy scan accepts $x$, proving $S\\in\\mathcal F$.",
+  "status_as_written": "established",
+  "repair_distance": "sentence",
+  "explanation": "The reverse implication in (2) silently uses upward closure: if $C\\in\\mathcal F$ and $C\\subseteq S$, then $S\\in\\mathcal F$. The quoted passage does not say this. However, the fully proved self-duality (1) establishes it immediately: $C$ meets every member of $\\mathcal F$, so its superset $S$ does too, and the displayed converse gives $S\\in\\mathcal F$. Thus the required characterization is established elsewhere; adding one sentence would remove the local omission."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 262,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   4228,
+   4490
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

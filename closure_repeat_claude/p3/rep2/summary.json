@@ -1,0 +1,3374 @@
+{
+  "annotator": "claude-opus-5",
+  "items": [
+    {
+      "id": "p3-h-0df01e264dd8",
+      "problem": "3",
+      "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+      "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-claude-fable-5-final",
+        "claude-fable-5-main-t013"
+      ],
+      "bytes": 15474,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 9656,
+            "output_tokens": 526,
+            "output_tokens_details": {
+              "thinking_tokens": 228
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 526,
+                "cache_read_input_tokens": 9656,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "tree-pairing multigraph on pieces + signed subset-sum separation of powers of 2",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) + midpoint/overlay cross-pairing cuts cancelling equal pairs",
+        "wrong_answer_stated": false,
+        "notes": "Complete: Lemma 2 proves the odd-rank/alternating-sum reduction with greedy strategies for both players; Lemma 4 gives an all-n lower bound via a component-tree 2-colouring and edge count |E|<=n<|V|; Lemma 5 gives an all-n Xiang reply using at most n marks. Numerics are supplementary, not load-bearing."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ca88f79fb210",
+      "problem": "3",
+      "sha256": "ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7",
+      "path": "checkpoint_inputs/ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-deepseek-v4-pro-final",
+        "deepseek-v4-pro-main-t009"
+      ],
+      "bytes": 1934,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2253,
+            "output_tokens": 187,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 187,
+                "cache_read_input_tokens": 2253,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 4.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Write-up conjectures c=(n+1)/(2n+1), which is wrong (correct: 2^n/(2^{n+1}-1)); matches only n=1,2. No reduction to alternating sums, no lower- or upper-bound argument; both explicitly left 'to do'. Proof section empty."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-e3e333cc4847",
+      "problem": "3",
+      "sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+      "path": "checkpoint_inputs/e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-gpt-5.6-sol-final"
+      ],
+      "bytes": 7191,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4355,
+            "output_tokens": 1272,
+            "output_tokens_details": {
+              "thinking_tokens": 996
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1272,
+                "cache_read_input_tokens": 4355,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "column-sweep parity/strip induction on geometric partition 1:2:...:2^n (Lemma ii)",
+        "upper_bound_mechanism": "column-sweep with cancellation and halving induction (Lemma i); no subset-sum pigeonhole",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form; claiming-phase reduction fully proved via matching longest-piece strategies. Lower bound parity/strip induction is written for general n. Upper bound's key structural claim (two arrays, each <= s blocks and total <= (T-d)/2) is only asserted in a parenthetical, so the general-n argument is a sketch; external lemma file not counted."
+      },
+      "S": 1,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-357c84e12d44",
+      "problem": "3",
+      "sha256": "357c84e12d443fa53d1a04486d5d68d50b666376ca3546588bf1cedcad8a7e54",
+      "path": "checkpoint_inputs/357c84e12d443fa53d1a04486d5d68d50b666376ca3546588bf1cedcad8a7e54.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-gpt-5.6-sol-max-final",
+        "gpt-5.6-sol-max-main-t001"
+      ],
+      "bytes": 1274,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 1921,
+            "output_tokens": 183,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 183,
+                "cache_read_input_tokens": 1921,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 4.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Only the claiming-phase reduction is established: greedy play yields the alternating sum of sorted lengths, expressed as (1+D)/2. No answer given (status 'unsolved'), no Liu division, no Xiang counter-construction; only a vague statement that investigation of refinements has begun."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-e9214da8ecf1",
+      "problem": "3",
+      "sha256": "e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0",
+      "path": "checkpoint_inputs/e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-gpt-5.6-sol-pro-final",
+        "gpt-5.6-sol-pro-main-t011"
+      ],
+      "bytes": 3625,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2991,
+            "output_tokens": 594,
+            "output_tokens_details": {
+              "thinking_tokens": 353
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 594,
+                "cache_read_input_tokens": 2991,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "n=1 only: explicit 2/3,1/3 split with case analysis on Xiang's single cut",
+        "upper_bound_mechanism": "n=1 only: explicit Xiang cut (near a-b,b or near-halving) bounding every a",
+        "wrong_answer_stated": false,
+        "notes": "Claiming-phase reduction to alternating sum proved in full for all n, plus layer-cake identity. General formula only conjectured from brute-force grids for n=2,3,4; the key refinement theorem is explicitly left open. Only n=1 has complete both-direction proof."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-c833554e3cbb",
+      "problem": "3",
+      "sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+      "path": "checkpoint_inputs/c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-gpt-5.6-sol-xhigh-final",
+        "gpt-5.6-sol-xhigh-main-t008"
+      ],
+      "bytes": 11015,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6264,
+            "output_tokens": 390,
+            "output_tokens_details": {
+              "thinking_tokens": 101
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 390,
+                "cache_read_input_tokens": 6264,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 6.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "powers-of-two division + adjacent-pairing multigraph with tree component / signed distinct powers of 2",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) plus common-refinement equal-pairing with <= n cuts",
+        "wrong_answer_stated": false,
+        "notes": "Full argument: induction proves claiming value = alternating discrepancy; pairing lemma (exchange argument) proved; Liu's 1:2:...:2^n construction analyzed for arbitrary Xiang reply via tree component bipartition; Xiang's reply built from subset-sum pigeonhole plus refinement cut count <= n. All directions written for general n."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-13eda1f40c36",
+      "problem": "3",
+      "sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+      "path": "checkpoint_inputs/13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-grok-4.5-final",
+        "grok-4.5-main-t080"
+      ],
+      "bytes": 17437,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 9756,
+            "output_tokens": 1013,
+            "output_tokens_details": {
+              "thinking_tokens": 718
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1013,
+                "cache_read_input_tokens": 9756,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "power-of-two division + induction on cuts via alternating-sum D (incomplete)",
+        "upper_bound_mechanism": "pair pieces into equal pairs plus leftover 1 so D=1 (vague sketch, n=1,2 only)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form. D-functional and V=(sum+D)/2 stated but greedy optimality asserted, not proved; Lemma A proved. Lower-bound induction collapses in case k>=1 (literal 'something that forces', reliance on n<=3 numerics). Upper bound is self-contradictory, garbled text; only a hand-wavy pairing sketch and n=1,2 checks; no subset-sum pigeonhole."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-12bcf1f34411",
+      "problem": "3",
+      "sha256": "12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c",
+      "path": "checkpoint_inputs/12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-kimi-k3-final"
+      ],
+      "bytes": 24463,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 13775,
+            "output_tokens": 651,
+            "output_tokens_details": {
+              "thinking_tokens": 336
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 651,
+                "cache_read_input_tokens": 13775,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 10.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "matching/odd-set formula for D + component counting (e<=m-1 forces a tree component) + bipartite signed-sum tree inequality vs super-increasing margin",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap <= S/(2^{n+1}-1) + greedy realizability of nested-absolute-difference chain + halve/cancel cuts with equal-pair cancellation (Cor 2.3)",
+        "wrong_answer_stated": false,
+        "notes": "Complete: claiming game solved (odd/even guarantees, both parities handled), D characterized by measure and matching formulas, general-n lower bound via tree-component argument, general-n upper bound via pigeonhole plus explicit cut construction with cut-count and distinctness verified. Sharpness remark included."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-71a422af6fd1",
+      "problem": "3",
+      "sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+      "path": "checkpoint_inputs/71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "deedy-muse-spark-1.1-final",
+        "muse-spark-1.1-main-t005"
+      ],
+      "bytes": 24081,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 11888,
+            "output_tokens": 784,
+            "output_tokens_details": {
+              "thinking_tokens": 540
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 784,
+                "cache_read_input_tokens": 11888,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 12.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none (uses wrong 2d,...,2d,d division; parity cancellation only for single splits)",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Conjectures c=(n+1)/(2n+1), which is wrong. Odd-position sorted-sum rule is used but never proved (sketch only). Lower-bound construction (equal-grid, pieces 2d and d) is the wrong division and its analysis covers only one-split-per-piece responses. Upper bound explicitly unresolved; author notes the grid-completion plan fails."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-bfb7a020a5b1",
+      "problem": "3",
+      "sha256": "bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7",
+      "path": "checkpoint_inputs/bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7.md",
+      "lineage": "ours-glm52-repair",
+      "model": "glm-5.2",
+      "context": 4,
+      "turn": null,
+      "record_ids": [
+        "glm52-repair"
+      ],
+      "bytes": 8773,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5886,
+            "output_tokens": 907,
+            "output_tokens_details": {
+              "thinking_tokens": 597
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 907,
+                "cache_read_input_tokens": 5886,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 12.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "even-position partial-sum majorization: induction on r giving v_2+...+v_{2r} <= 2^n - 2^{n-r} for the 1:2:...:2^n opening",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) plus halving of unused parts and greedy max-vs-max cancellation pairing with cut count |Z|+c <= n",
+        "wrong_answer_stated": false,
+        "notes": "All three components written out for general n: Lemma 1 gives the alternating-sum reduction with explicit pairing strategies for both players; the lower bound induction covers arbitrary refinements with M <= 2n+1; the upper bound construction verifies the cut budget and leftover sum. Complete and correct."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-7ab3c4244f77",
+      "problem": "3",
+      "sha256": "7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce",
+      "path": "checkpoint_inputs/7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce.md",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "glm52-simple-c1"
+      ],
+      "bytes": 4902,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3585,
+            "output_tokens": 393,
+            "output_tokens_details": {
+              "thinking_tokens": 176
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 393,
+                "cache_read_input_tokens": 3585,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 6.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "geometric 1:2:...:2^n division (numerically verified n<=5 only)",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form given explicitly as a conjecture, not proven. Odd-rank-sum reduction stated and numerically verified, proof only named ('greedy exchange/induction'), not written. Lower bound: geometric division named but verified only n=1..5. Upper bound: only grid/random search; no argument for any n."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-513b242ad9b4",
+      "problem": "3",
+      "sha256": "513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7",
+      "path": "checkpoint_inputs/513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7.md",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "glm52-simple-c2"
+      ],
+      "bytes": 9799,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5893,
+            "output_tokens": 570,
+            "output_tokens_details": {
+              "thinking_tokens": 313
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 570,
+                "cache_read_input_tokens": 5893,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric 2^n:...:1 division; proved only n=1, induction/merge inequality sketched as open",
+        "upper_bound_mechanism": "n=1 hand argument (Xiang marks 1/3); halving response only vs geometric config; no general construction",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula stated explicitly but self-labelled conjecture for n>=2. Claim-phase reduction to odd-rank sum is fully and correctly proved for all n. Both universal directions admitted open, supported only by exact-grid (n<=3) and float search (n<=5); merge inequality named but unproved."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-681ea6d2ed0a",
+      "problem": "3",
+      "sha256": "681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4",
+      "path": "checkpoint_inputs/681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4.md",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 3,
+      "turn": null,
+      "record_ids": [
+        "glm52-simple-c3"
+      ],
+      "bytes": 14776,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 8040,
+            "output_tokens": 574,
+            "output_tokens_details": {
+              "thinking_tokens": 276
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 574,
+                "cache_read_input_tokens": 8040,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric 2^n:...:1 config; head/tail induction with 'merge inequality' sketched only, proved for n=1",
+        "upper_bound_mechanism": "explicit Xiang cut at 1/3 for n=1 only; no subset-sum/pigeonhole for general n",
+        "wrong_answer_stated": false,
+        "notes": "Claim-phase reduction to odd-rank sum fully proved (both directions). Correct formula 2^n/(2^{n+1}-1) stated explicitly but only as a conjecture; c(1)=2/3 proved in full. Matched strategy pair gives only inf_B O(geom,B) <= 2^n/D, not a bound for all n. Both universal directions honestly declared open; numerics not credited."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-d84ec9b247fc",
+      "problem": "3",
+      "sha256": "d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8",
+      "path": "checkpoint_inputs/d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8.md",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 4,
+      "turn": null,
+      "record_ids": [
+        "glm52-simple-c4"
+      ],
+      "bytes": 19101,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 9840,
+            "output_tokens": 568,
+            "output_tokens_details": {
+              "thinking_tokens": 288
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 568,
+                "cache_read_input_tokens": 9840,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric 1:2:...:2^n config; only n=1 proved; induction/'merge inequality' named but explicitly unproven",
+        "upper_bound_mechanism": "n=1 only (Xiang cuts at 1/3 forcing median 1/3); no general mechanism (no subset-sum pigeonhole)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form given explicitly as conjecture, not proved for n>=2. Claim-phase reduction to odd-rank sum fully proved for all n. Both minimax directions proved only for n=1; general-n evidence is grid/floating-point search plus one matched strategy pair, which the write-up honestly disclaims."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ad0fee18a856",
+      "problem": "3",
+      "sha256": "ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb",
+      "path": "checkpoint_inputs/ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb.md",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "glm53-c1"
+      ],
+      "bytes": 7842,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5140,
+            "output_tokens": 1039,
+            "output_tokens_details": {
+              "thinking_tokens": 731
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1039,
+                "cache_read_input_tokens": 5140,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "n=1 only: Liu marks 1/3, median-of-three check; n=2 exhaustive case check for (4/9,1/3,2/9) toward a wrong target",
+        "upper_bound_mechanism": "n=1 only: max-median = max(a/2,b) optimized over a; n=2 named halving/pairing strategies S_i, incomplete",
+        "wrong_answer_stated": true,
+        "notes": "Correct c_1=2/3 proved both ways. Conjectures c_2=5/9 (true value 4/7), explicitly says no general formula found; no general Liu construction (1:2:...:2^n) and no subset-sum pigeonhole upper bound. Reduction to odd-position sum asserted proved but only sketched via greedy optimality, admitted as a gap."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-e8f9c35c4d32",
+      "problem": "3",
+      "sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+      "path": "checkpoint_inputs/e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d.md",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "glm53-c2"
+      ],
+      "bytes": 11002,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 7122,
+            "output_tokens": 699,
+            "output_tokens_details": {
+              "thinking_tokens": 395
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 699,
+                "cache_read_input_tokens": 7122,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 10.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "exhaustive case analysis for n=1,2; partial merge/pairing reduction (uncut-top case only) for general n",
+        "upper_bound_mechanism": "halving-the-n-largest bound V<=1/2+delta/2 (all n, not tight) plus three-strategy contradiction for n=2; Conjecture X unproved",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula 2^n/(2^{n+1}-1) given explicitly but labeled conjectural for n>=3. Odd-position-sum reduction merely asserted as 'standard'. Rigorous both directions only for n<=2. General lower bound blocked at interleaving case; general upper bound (subset-sum/cancellation) absent, only a non-tight halving bound."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-a9b1ddf110b3",
+      "problem": "3",
+      "sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+      "path": "checkpoint_inputs/a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829.md",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 3,
+      "turn": null,
+      "record_ids": [
+        "glm53-c3"
+      ],
+      "bytes": 9592,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6204,
+            "output_tokens": 1172,
+            "output_tokens_details": {
+              "thinking_tokens": 862
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1172,
+                "cache_read_input_tokens": 6204,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 16.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "layer-cake/XOR-merge with tail induction (insertion lemma unproven; only n<=2 and 'a_1 uncut' case)",
+        "upper_bound_mechanism": "macro-plans + split-at-k* with counting lemma min Delta_k <= 1/(2^{n+1}-1); reduced to unproven Lemma X1 (verified m<=4)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form given with geometric partition. Reduction V=sum of odd-indexed sorted pieces only asserted 'settled', not argued. Lower bound complete only for n<=2 and the uncut-largest case; author admits n>=3 conjectural. Upper bound: counting lemma proved, but key Lemma X1 verified only through m=4."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-323ceb8b7c17",
+      "problem": "3",
+      "sha256": "323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15",
+      "path": "checkpoint_inputs/323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15.md",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 4,
+      "turn": null,
+      "record_ids": [
+        "glm53-c4"
+      ],
+      "bytes": 9294,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6211,
+            "output_tokens": 505,
+            "output_tokens_details": {
+              "thinking_tokens": 198
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 505,
+                "cache_read_input_tokens": 6211,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "superincreasing induction, Case I (a1 uncut) only; Case II XOR-merge open; n<=2 verified",
+        "upper_bound_mechanism": "counting lemma min_k Delta_k <= d* + split-at-k* halving; only for Delta_1>=d* or all Delta_k>=0",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form c_n=2^n/(2^{n+1}-1) stated as the answer; greedy-claiming reduction to alternating sum fully proved. Lower bound proved only when largest piece uncut and for n<=2; the load-bearing Case II is admitted open. Upper bound proved only for superincreasing-like partitions; case min Delta_k<0 (Lemma X1) explicitly open."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-cb1bcbb2df8f",
+      "problem": "3",
+      "sha256": "cb1bcbb2df8fa81bfe15b7ceb9c74d06c914bb6052ab1c111784f8700e4fa645",
+      "path": "checkpoint_inputs/cb1bcbb2df8fa81bfe15b7ceb9c74d06c914bb6052ab1c111784f8700e4fa645.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "gpt56-ours-accepted"
+      ],
+      "bytes": 11127,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6579,
+            "output_tokens": 1312,
+            "output_tokens_details": {
+              "thinking_tokens": 1012
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1312,
+                "cache_read_input_tokens": 6579,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 16.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "binary 1:2:...:2^n division + multigraph component/tree bipartition on consecutive rank pairs giving D >= min subset-sum gap",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) + overlay/common-refinement construction with <= n cuts creating cancelling equal pairs",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form. Drafting lemma proved by induction with explicit cancellation. Refinement lemma both directions proved for all n: tree-component bipartition gives D >= Gamma; overlay construction with cut-count accounting gives D <= Gamma. Binary division yields Gamma = delta. Coherent and complete."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-7a92204a1295",
+      "problem": "3",
+      "sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+      "path": "checkpoint_inputs/7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "gpt56-ours-timeout"
+      ],
+      "bytes": 8900,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5503,
+            "output_tokens": 639,
+            "output_tokens_details": {
+              "thinking_tokens": 341
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 639,
+                "cache_read_input_tokens": 5503,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "pairing multigraph on parent intervals; edge-count forces a bipartite component, giving D >= subset-sum gap Gamma = delta for 1:2:...:2^n",
+        "upper_bound_mechanism": "subset-sum pigeonhole (2^{n+1} sums in [0,1]) gives Gamma <= 1/(2^{n+1}-1), plus overlay/concatenation cancellation construction using <= n cuts",
+        "wrong_answer_stated": false,
+        "notes": "All three components argued for general n. Drafting lemma has a garbled display line but the standard exchange argument is present. Refinement lemma both directions written out, including q<=n bisection case and B empty case. Small-case LP explicitly flagged as heuristic only."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-f7bcae33fcdd",
+      "problem": "3",
+      "sha256": "f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874",
+      "path": "checkpoint_inputs/f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874.md",
+      "lineage": "ours-kimi-K2-repair",
+      "model": "kimi-k3",
+      "context": 4,
+      "turn": null,
+      "record_ids": [
+        "kimi-k2-repair"
+      ],
+      "bytes": 17249,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 10239,
+            "output_tokens": 684,
+            "output_tokens_details": {
+              "thinking_tokens": 410
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 684,
+                "cache_read_input_tokens": 10239,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "even-position majorization (Lemma E) on geometric division 1:2:...:2^n, induction on r with two-case step",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) plus supply-demand greedy cancellation into equal pairs, with cut count <= n",
+        "wrong_answer_stated": false,
+        "notes": "All four components written out for general n: claiming-phase pairing lemma both directions, delta reduction, Lemma E induction, pigeonhole+cancellation with careful cut accounting and degenerate cases (L empty, one pool empty) handled. Legality of Xiang's marks addressed."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-0f9b4ecd6f83",
+      "problem": "3",
+      "sha256": "0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6",
+      "path": "checkpoint_inputs/0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6.md",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "kimi-r1-c1"
+      ],
+      "bytes": 3339,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3134,
+            "output_tokens": 453,
+            "output_tokens_details": {
+              "thinking_tokens": 207
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 453,
+                "cache_read_input_tokens": 3134,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 7.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "recursive Xiang cut strategies (halving / match-cut) with unfinished two-function induction",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form given explicitly as a conjecture verified only for n<=3. Claiming-phase reduction to odd-position sum is fully proved via two-sided pairing. Lower bound explicitly listed as an open gap. Upper bound only sketched: two recursive Xiang reply inequalities stated, induction and base values admittedly missing; no pigeonhole/subset-sum argument."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-53603b46ba72",
+      "problem": "3",
+      "sha256": "53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c",
+      "path": "checkpoint_inputs/53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c.md",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "kimi-r1-c2"
+      ],
+      "bytes": 8696,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5923,
+            "output_tokens": 466,
+            "output_tokens_details": {
+              "thinking_tokens": 201
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 466,
+                "cache_read_input_tokens": 5923,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 7.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "induction on cuts into top part (abstract combination step refuted; open)",
+        "upper_bound_mechanism": "deterministic peeling strategy (valid) with q(A)<=1/N proved only for |A|<=3",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form given explicitly as a conjecture, verified only n<=3. Claiming-phase reduction to odd-sum fully proved, plus delta-identities. Lower bound only reductions with the key combination step admitted false. Xiang's peeling strategy is well-defined for all n but the crucial bound q(A)<=1/N is unproved beyond |A|<=3."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-5a75aa5c50ee",
+      "problem": "3",
+      "sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+      "path": "checkpoint_inputs/5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8.md",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 3,
+      "turn": null,
+      "record_ids": [
+        "kimi-r1-c3"
+      ],
+      "bytes": 14257,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 8806,
+            "output_tokens": 738,
+            "output_tokens_details": {
+              "thinking_tokens": 450
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 738,
+                "cache_read_input_tokens": 8806,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "even-position majorization (Lemma E) on geometric composition 1:2:...:2^n, induction on r with two-case step",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) plus greedy supply-demand cancellation into equal pairs, with cut count <= n",
+        "wrong_answer_stated": false,
+        "notes": "Complete: claiming phase proved via explicit pairing strategies for both players; Lemma E induction valid for all n; Xiang's pigeonhole/cancellation with careful cut accounting (|Z|+|P|+|Q|-1=n) and Lemma 3 equal-pair cancellation. Tightness remark included."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-c2ce1631ca36",
+      "problem": "3",
+      "sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+      "path": "checkpoint_inputs/c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d.md",
+      "lineage": "ours-kimi-R2",
+      "model": "kimi-k3",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "kimi-r2-c1"
+      ],
+      "bytes": 3032,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2892,
+            "output_tokens": 571,
+            "output_tokens_details": {
+              "thinking_tokens": 292
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 571,
+                "cache_read_input_tokens": 2892,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "dyadic 1:2:...:2^n + toggle/symmetric-difference invariant (only BFS-verified; hand proof n=2)",
+        "upper_bound_mechanism": "explicit Xiang attacks (halve-largest, clone, etc.) with case analysis, n=2 only",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula stated explicitly as CONJECTURE, numerics n=1,2,3, full hand proof only n=2. Reduction to odd order-statistic sum asserted 'proof standard, to be written'. General lower bound rests on BFS evidence with invariant admittedly still being hunted; general upper bound absent. No wrong claims."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ad98327771c2",
+      "problem": "3",
+      "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+      "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+      "lineage": "ours-kimi-R2",
+      "model": "kimi-k3",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "kimi-r2-c2",
+        "kimi-r2-c3",
+        "kimi-r2-c4"
+      ],
+      "bytes": 4134,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3569,
+            "output_tokens": 556,
+            "output_tokens_details": {
+              "thinking_tokens": 238
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 556,
+                "cache_read_input_tokens": 3569,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "toggle/interval-symmetric-difference relaxation g(n,k) with dyadic 1:2:...:2^n (crux inequality open; only n=1 done)",
+        "upper_bound_mechanism": "reduced 'set game' with toggle {l,x,l-x} moves, DP-verified on grids; hand strategies for n=1,2",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula 2^n/(2^{n+1}-1) explicitly labeled CONJECTURE from grid values n=1,2,3. Draft reduction only numerically verified; greedy lemma unwritten. LB proves only the wrong-direction inequality; crux g(n,k)>=g(n-1,k-1) open. UB general strategy admittedly not extracted; only n=1,2 by hand."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-9b8187934c93",
+      "problem": "3",
+      "sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+      "path": "checkpoint_inputs/9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 1,
+      "turn": null,
+      "record_ids": [
+        "nemotron-p3-1"
+      ],
+      "bytes": 15914,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 9106,
+            "output_tokens": 440,
+            "output_tokens_details": {
+              "thinking_tokens": 217
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 440,
+                "cache_read_input_tokens": 9106,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 7.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "States c=(n+1)/(2n+1), which is wrong (correct: 2^n/(2^{n+1}-1)). Greedy sorted alternating-pick reduction is asserted without proof. Lower bound uses the equal-spacing division and a hand-waved case analysis toward the wrong value. Upper bound section visibly flounders, abandons several pairings, and defers to an unproved 'known lemma'."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ee57fd697d9c",
+      "problem": "3",
+      "sha256": "ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb",
+      "path": "checkpoint_inputs/ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 2,
+      "turn": null,
+      "record_ids": [
+        "nemotron-p3-2"
+      ],
+      "bytes": 15901,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 9089,
+            "output_tokens": 981,
+            "output_tokens_details": {
+              "thinking_tokens": 703
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 981,
+                "cache_read_input_tokens": 9089,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 13.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "binary 1:2:...:2^n division + 'splitting lemma' on odd/even ranks (final accounting asserted)",
+        "upper_bound_mechanism": "adaptive greedy pairing/halving strategy (only n=1 proved)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form and a full alternating-sum reduction. Lower bound gives the binary division and a splitting lemma (proof ignores rank shifts) but the decisive accounting over Xiang's n cuts is merely asserted. Upper bound: greedy pairing proved only for n=1; induction has 'one can show', an abandoned potential function, and appeals to 'standard in the literature'."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-24646b45f297",
+      "problem": "3",
+      "sha256": "24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0",
+      "path": "checkpoint_inputs/24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 3,
+      "turn": null,
+      "record_ids": [
+        "nemotron-p3-3"
+      ],
+      "bytes": 13473,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 7852,
+            "output_tokens": 696,
+            "output_tokens_details": {
+              "thinking_tokens": 409
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 696,
+                "cache_read_input_tokens": 7852,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 10.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none (wrong equal-ish 1,3,5,.../(2n+1) division; unproved split-parity claim)",
+        "upper_bound_mechanism": "none (greedy 'walk-and-group into 2/(2n+1) blocks'; key pairing lemma unproved)",
+        "wrong_answer_stated": true,
+        "notes": "States c=(n+1)/(2n+1), which is wrong; correct is 2^n/(2^{n+1}-1). Alternating-sum reduction is stated but not proved. Lower-bound construction is not the geometric 1:2:4:... division and its splitting lemma is asserted; the text visibly flounders. Upper bound is speculative with lemmas explicitly listed as open."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-53fcca77ed99",
+      "problem": "3",
+      "sha256": "53fcca77ed99823742d5d7e54be1df6e408d7e1877ca083dbd0e51803bffac96",
+      "path": "checkpoint_inputs/53fcca77ed99823742d5d7e54be1df6e408d7e1877ca083dbd0e51803bffac96.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 2,
+      "record_ids": [
+        "claude-fable-5-main-t002"
+      ],
+      "bytes": 1220,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 1918,
+            "output_tokens": 421,
+            "output_tokens_details": {
+              "thinking_tokens": 215
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 421,
+                "cache_read_input_tokens": 1918,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 7.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "geometric division 1:2:...:2^n (named only; n=1 by hand)",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula appears only as a conjecture, verified by hand for n=1 and slated for brute force. Reduction to odd-ranked sorted sum is asserted without proof. Liu's geometric division is named but no argument against arbitrary Xiang replies. No upper-bound work at all."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-a2a14ff8b369",
+      "problem": "3",
+      "sha256": "a2a14ff8b36953a77fa3fe426c8b070371a6c14a11fcd9260ac9e81489827c18",
+      "path": "checkpoint_inputs/a2a14ff8b36953a77fa3fe426c8b070371a6c14a11fcd9260ac9e81489827c18.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 7,
+      "record_ids": [
+        "claude-fable-5-main-t007"
+      ],
+      "bytes": 3325,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3003,
+            "output_tokens": 498,
+            "output_tokens_details": {
+              "thinking_tokens": 218
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 498,
+                "cache_read_input_tokens": 3003,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric 1:2:...:2^n division with sketched parity-measure / integrality argument (open gap)",
+        "upper_bound_mechanism": "XY cancellation operations (halve largest / B_ij difference cut) with recursion G(m), verified m<=3 only",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form appears but explicitly labeled CONJECTURED, based on brute force n<=4. Lemma A (reduction to odd-rank/alternating sum) is stated, not proved. Lower bound gives correct construction but proof ideas only, self-declared OPEN GAP. Upper bound names sound operations, general induction fails; hand-verified m<=3."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-569a398abb27",
+      "problem": "3",
+      "sha256": "569a398abb27f29df7b8947d714e83f6886a9804d6480608f9130b07b65afa76",
+      "path": "checkpoint_inputs/569a398abb27f29df7b8947d714e83f6886a9804d6480608f9130b07b65afa76.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 1,
+      "record_ids": [
+        "gpt-5.6-sol-main-t001"
+      ],
+      "bytes": 1162,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 1846,
+            "output_tokens": 783,
+            "output_tokens_details": {
+              "thinking_tokens": 524
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 783,
+                "cache_read_input_tokens": 1846,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 11.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "n=1 only: partition 1/3,2/3 asserted, no general 1:2:...:2^n construction or proof",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Status 'unsolved'; closed form c_n=2^n/(2^{n+1}-1) never stated. Only n=1 value 2/3 suggested by unwritten 'direct analysis'. Reduction to nonincreasing-order claiming asserted without proof. No general lower-bound argument against arbitrary Xiang replies and no upper-bound (pigeonhole/subset-sum) construction at all."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-17c52d5715c6",
+      "problem": "3",
+      "sha256": "17c52d5715c605b0d020b86bf397f79dca356d450a50f61beb7bfb0174e515b1",
+      "path": "checkpoint_inputs/17c52d5715c605b0d020b86bf397f79dca356d450a50f61beb7bfb0174e515b1.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 6,
+      "record_ids": [
+        "gpt-5.6-sol-main-t006"
+      ],
+      "bytes": 2764,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2432,
+            "output_tokens": 820,
+            "output_tokens_details": {
+              "thinking_tokens": 576
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 820,
+                "cache_read_input_tokens": 2432,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 12.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "n=1 only: Liu splits (1/3,2/3), case check sketch",
+        "upper_bound_mechanism": "n=1 only: Xiang either leaves pieces or splits the larger",
+        "wrong_answer_stated": false,
+        "notes": "Claiming phase rigorously reduced to odd-rank sum via exchange/backward induction (valid all n). General minimax explicitly left open; no 1:2:4:...:2^n construction, no pigeonhole/subset-sum upper bound. Only n=1 sketched, giving 2/3; general formula not stated even as conjecture."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-23591a31a955",
+      "problem": "3",
+      "sha256": "23591a31a955e0960363e3acbad293fe9367b80c1523a5b826262073de0af070",
+      "path": "checkpoint_inputs/23591a31a955e0960363e3acbad293fe9367b80c1523a5b826262073de0af070.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 11,
+      "record_ids": [
+        "gpt-5.6-sol-main-t011"
+      ],
+      "bytes": 4837,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3435,
+            "output_tokens": 539,
+            "output_tokens_details": {
+              "thinking_tokens": 223
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 539,
+                "cache_read_input_tokens": 3435,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "cited refinement lemma (ii): every <=n-split refinement of 1:2:...:2^n has Delta >= d (stated, not proved here)",
+        "upper_bound_mechanism": "cited refinement lemma (i): any <=n+1 parts can be refined by <=n splits to Delta <= T/(2^{n+1}-1) (stated, not proved here)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form and a complete, well-argued reduction of the claiming phase to the alternating sum, with O=(1+Delta)/2. Both bounds, however, are entirely delegated to an external file (lemmas/refinement.md); the key refinement lemma is only stated, so no all-n argument (pairing, majorization, or subset-sum pigeonhole) appears in the text."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ea7721ae800e",
+      "problem": "3",
+      "sha256": "ea7721ae800e8f71918b8eff70ed044ac78a00f2d1bd8014cb334c242b9ae4d5",
+      "path": "checkpoint_inputs/ea7721ae800e8f71918b8eff70ed044ac78a00f2d1bd8014cb334c242b9ae4d5.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 1,
+      "record_ids": [
+        "gpt-5.6-sol-pro-main-t001"
+      ],
+      "bytes": 1070,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 1795,
+            "output_tokens": 554,
+            "output_tokens_details": {
+              "thinking_tokens": 358
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 554,
+                "cache_read_input_tokens": 1795,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Status is 'unsolved'; no value of c is stated. Only the claiming-phase reduction is named as an open investigation ('whether optimal play is taking pieces in decreasing order'), with no argument given. No Liu division, no pairing/majorization, no pigeonhole/subset-sum upper bound. Nothing else to credit."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-3d3e6f9c8b93",
+      "problem": "3",
+      "sha256": "3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a",
+      "path": "checkpoint_inputs/3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 6,
+      "record_ids": [
+        "gpt-5.6-sol-pro-main-t006"
+      ],
+      "bytes": 3652,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2927,
+            "output_tokens": 597,
+            "output_tokens_details": {
+              "thinking_tokens": 351
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 597,
+                "cache_read_input_tokens": 2927,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "n=1 only: split 2/3:1/3, direct case analysis",
+        "upper_bound_mechanism": "n=1 only: explicit Xiang cut making middle piece b or a/2",
+        "wrong_answer_stated": false,
+        "notes": "Only c_1=2/3 established; no closed form for general n stated. Alternating-sum reduction asserted with induction explicitly deferred ('to be written'), so sketch-level. Layer-cake and pairing ideas are exploratory. No general Liu division (1:2:4:...) and no subset-sum pigeonhole upper bound for all n."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-5178d6ad7537",
+      "problem": "3",
+      "sha256": "5178d6ad7537678b73888a6da8e7d99bec43f4587384e99c7c5f6e243f80367e",
+      "path": "checkpoint_inputs/5178d6ad7537678b73888a6da8e7d99bec43f4587384e99c7c5f6e243f80367e.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 1,
+      "record_ids": [
+        "gpt-5.6-sol-xhigh-main-t001"
+      ],
+      "bytes": 1284,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 1883,
+            "output_tokens": 169,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 169,
+                "cache_read_input_tokens": 1883,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 4.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Write-up states 'unsolved'; only the reduction to alternating sum of sorted piece lengths (odd-ranked pieces to Liu) is given, stated for all n. No value determined, no construction for Liu, no Xiang counter-strategy."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-5e2ebb3f401c",
+      "problem": "3",
+      "sha256": "5e2ebb3f401cb782aad47beaebbad01ead43c20efd764961f63d9d03a9382699",
+      "path": "checkpoint_inputs/5e2ebb3f401cb782aad47beaebbad01ead43c20efd764961f63d9d03a9382699.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 2,
+      "record_ids": [
+        "gpt-5.6-sol-xhigh-main-t002"
+      ],
+      "bytes": 2102,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2280,
+            "output_tokens": 954,
+            "output_tokens_details": {
+              "thinking_tokens": 728
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 954,
+                "cache_read_input_tokens": 2280,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 13.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "bisect/pair intervals giving non-sharp D <= 1/(2n+1)",
+        "wrong_answer_stated": false,
+        "notes": "Reduction to alternating sum of sorted lengths is stated correctly but only asserted, not proved. No answer given; formula declared open. Candidate Liu partition (n copies of 1/(2n+1)) tested and refuted, so no lower bound. Upper bound argument is general but non-sharp, missing subset-sum pigeonhole."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-19dc570c8774",
+      "problem": "3",
+      "sha256": "19dc570c877417736d49a79851fa50a2d5776e505d4429b0a14628bdaf53c793",
+      "path": "checkpoint_inputs/19dc570c877417736d49a79851fa50a2d5776e505d4429b0a14628bdaf53c793.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 5,
+      "record_ids": [
+        "gpt-5.6-sol-xhigh-main-t005"
+      ],
+      "bytes": 2550,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2419,
+            "output_tokens": 705,
+            "output_tokens_details": {
+              "thinking_tokens": 461
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 705,
+                "cache_read_input_tokens": 2419,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 10.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "1:2:4:...:2^n division + tree-component bipartition imbalance (outline only)",
+        "upper_bound_mechanism": "subset-sum pigeonhole + sparse transportation matching creating equal pairs (outline only)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form asserted. Reduction to alternating discrepancy stated without proof. Both bound mechanisms correctly identified and sketched for all n, but the text explicitly defers pairing, transportation, and cut-realization details as 'remaining work'; small-n verification only for n=1,2."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-6cbe7f9a3f50",
+      "problem": "3",
+      "sha256": "6cbe7f9a3f50371ff3c714c58d4d546db8fbeba1e3983babe942519734596f73",
+      "path": "checkpoint_inputs/6cbe7f9a3f50371ff3c714c58d4d546db8fbeba1e3983babe942519734596f73.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 1,
+      "record_ids": [
+        "grok-4.5-main-t001"
+      ],
+      "bytes": 793,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 1705,
+            "output_tokens": 139,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 139,
+                "cache_read_input_tokens": 1705,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 3.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only: status 'unsolved', no approaches tried, current best 'None yet', full proof empty. No answer stated, no reduction, no bounds."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-f9fb9af1a368",
+      "problem": "3",
+      "sha256": "f9fb9af1a368266c234311e910e64dde7772f2248fb8950c96175d6074cb9d45",
+      "path": "checkpoint_inputs/f9fb9af1a368266c234311e910e64dde7772f2248fb8950c96175d6074cb9d45.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 14,
+      "record_ids": [
+        "grok-4.5-main-t014"
+      ],
+      "bytes": 1710,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2179,
+            "output_tokens": 823,
+            "output_tokens_details": {
+              "thinking_tokens": 570
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 823,
+                "cache_read_input_tokens": 2179,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 11.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "hand-checked n=1 cut at 1/3; n=2 cuts 1/7,3/7 found empirically",
+        "upper_bound_mechanism": "vague mention of pairing/matching Xiang response; n=1 by hand",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form 2^n/(2^{n+1}-1) appears only as a conjecture matched to n=1,2,3 data, alongside discarded wrong guesses. No reduction of the claiming phase, no general Liu strategy proof, no general Xiang counter-construction. Proof section explicitly empty/in progress."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-439ff9df8a77",
+      "problem": "3",
+      "sha256": "439ff9df8a779660e61d3efb16d48421efcbaf31eacf992bba17614c4f08eeb0",
+      "path": "checkpoint_inputs/439ff9df8a779660e61d3efb16d48421efcbaf31eacf992bba17614c4f08eeb0.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 24,
+      "record_ids": [
+        "grok-4.5-main-t024"
+      ],
+      "bytes": 1916,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2175,
+            "output_tokens": 603,
+            "output_tokens_details": {
+              "thinking_tokens": 357
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 603,
+                "cache_read_input_tokens": 2175,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "power-of-two bins (1:2:...:2^n); proved only n=1, numeric n=2",
+        "upper_bound_mechanism": "vague mirroring/pairing 'steal' sketch, no subset-sum pigeonhole",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula appears only as a conjecture. No reduction of the claiming phase to an alternating sorted-sum is written. Lower bound proved for n=1, numerically checked for n=2, n=3 pending. Upper bound only garbled heuristic ideas; no general construction. Full proof section empty."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-a354e6f7b1c5",
+      "problem": "3",
+      "sha256": "a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b",
+      "path": "checkpoint_inputs/a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 34,
+      "record_ids": [
+        "grok-4.5-main-t034"
+      ],
+      "bytes": 2547,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2502,
+            "output_tokens": 738,
+            "output_tokens_details": {
+              "thinking_tokens": 482
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 738,
+                "cache_read_input_tokens": 2502,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 11.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "power-of-two construction + D-functional induction sketch (verified numerically n<=3)",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form appears only as a conjecture. D-functional reduction named with sub-additivity lemmas cited elsewhere, not derived. Lower bound: correct 1:2:...:2^n construction but proof only sketched, induction plan visibly incomplete/garbled, small-n numerics. Upper bound explicitly 'need to prove'; only vague matching/dichotomy idea, no subset-sum pigeonhole."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-87db022a0736",
+      "problem": "3",
+      "sha256": "87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc",
+      "path": "checkpoint_inputs/87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 49,
+      "record_ids": [
+        "grok-4.5-main-t049"
+      ],
+      "bytes": 2794,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2880,
+            "output_tokens": 568,
+            "output_tokens_details": {
+              "thinking_tokens": 317
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 568,
+                "cache_read_input_tokens": 2880,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 8.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "power-of-two division 1:2:...:2^n with alternating-sum quantity D; only numerically checked (n<=3)",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula stated only as a numerically confirmed conjecture. Alternating-sum value V=(S+D)/2 used without proof; Lemma A (subadditivity) claimed proved but not shown. Key lower-bound claim D>=1 after n cuts only verified for n<=3. Upper bound entirely absent ('need a matching strategy'). Text is garbled in places."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-eb62923f791f",
+      "problem": "3",
+      "sha256": "eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6",
+      "path": "checkpoint_inputs/eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round1",
+      "turn": 8,
+      "record_ids": [
+        "kimi-k3-round1-t008"
+      ],
+      "bytes": 2684,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2634,
+            "output_tokens": 820,
+            "output_tokens_details": {
+              "thinking_tokens": 550
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 820,
+                "cache_read_input_tokens": 2634,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 12.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none (geometric 1:2:...:2^n division stated, no argument)",
+        "upper_bound_mechanism": "parity/pairing reduction + halve/cancel operations sketch; verified only numerically for n<=3",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form given explicitly as a conjecture, verified by grid computation for n=1,2,3 only. Reduction to alternating sum asserted 'proved' plus brute force, not written out. Both bounds explicitly listed as remaining work; upper bound has a partial mechanism sketch (equal-pair cancellation, halve/cancel ops) but no pigeonhole or general argument."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-15413cb68d86",
+      "problem": "3",
+      "sha256": "15413cb68d86a2d234cc0acaad29c1956a8d7fefb87b818c1d7d6c61e460a3f3",
+      "path": "checkpoint_inputs/15413cb68d86a2d234cc0acaad29c1956a8d7fefb87b818c1d7d6c61e460a3f3.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round3",
+      "turn": 7,
+      "record_ids": [
+        "kimi-k3-round3-t007"
+      ],
+      "bytes": 4794,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 3781,
+            "output_tokens": 1032,
+            "output_tokens_details": {
+              "thinking_tokens": 755
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1032,
+                "cache_read_input_tokens": 3781,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 14.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "matching formula + component/slack decomposition + block lemma (sketch)",
+        "upper_bound_mechanism": "subset-sum pigeonhole (realizability gap open)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form 2^n/(2^{n+1}-1) but stated as conjecture verified only for n=1,2,3. Reduction to alternating sum asserted 'proved by brute force', not argued. Lower bound is a detailed all-n sketch with key steps (exchange argument, triangle-inequality algebra) asserted and self-labeled unwritten. Upper bound explicitly open: pigeonhole gives unrealizable sign vectors."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-f4b82aeef8ab",
+      "problem": "3",
+      "sha256": "f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00",
+      "path": "checkpoint_inputs/f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round3",
+      "turn": 14,
+      "record_ids": [
+        "kimi-k3-round3-t014"
+      ],
+      "bytes": 2892,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2769,
+            "output_tokens": 998,
+            "output_tokens_details": {
+              "thinking_tokens": 729
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 998,
+                "cache_read_input_tokens": 2769,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 13.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "matching formula + component decomposition + block lemma on super-increasing (geometric) family (sketch only)",
+        "upper_bound_mechanism": "subset-sum pigeonhole on 2^{n+1} signed sums / greedy-chain conjecture (unproved)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form asserted. Reduction to alternating sum stated as proved but no argument written. Part A lower bound given only as a bullet-point sketch of a genuine all-n strategy (matchings, tree/block lemma), not written out. Part B upper bound explicitly incomplete: key chain theorem only numerically verified n<=4."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p3-h-ea4551d94017",
+      "problem": "3",
+      "sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+      "path": "checkpoint_inputs/ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round4",
+      "turn": 14,
+      "record_ids": [
+        "kimi-k3-round4-t014"
+      ],
+      "bytes": 20480,
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 12080,
+            "output_tokens": 626,
+            "output_tokens_details": {
+              "thinking_tokens": 341
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 626,
+                "cache_read_input_tokens": 12080,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 9.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "matching/odd-set formula + super-increasing geometric split with component-tree (loop) counting argument",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap <= S/(2^(n+1)-1) + greedy realizability of nested-absolute-difference chain, executed by halve/cancel cuts",
+        "wrong_answer_stated": false,
+        "notes": "Complete: claiming game reduced via induction to alternating sum (Lemma 1.1); layer-cake and matching formulas proved; lower bound proved for all n via tree component and margin; upper bound proved for all n via pigeonhole plus realizability lemma with explicit cut budget and distinctness check. Sharpness noted."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root"
+    }
+  ]
+}

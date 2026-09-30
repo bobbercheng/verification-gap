@@ -1,0 +1,66 @@
+{
+  "id": "p5-gpt-5.6-sol-pro-main-t002",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 2,
+  "path": "checkpoint_inputs_ext/8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e.md",
+  "bytes": 5034,
+  "sha256": "8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3223,
+        "cache_read_input_tokens": 1356,
+        "output_tokens": 1177,
+        "output_tokens_details": {
+          "thinking_tokens": 892
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3223,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1177,
+            "cache_read_input_tokens": 1356,
+            "cache_creation_input_tokens": 3223,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3223
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM on x and y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "squared inequality (5) + synchronized arithmetic orbits asymptotics forcing a=b; fixed-point separation |p-q|>c plus finite chain subdivision",
+    "wrong_answer_stated": false,
+    "notes": "Complete: derives f(f(y))=2f(y)-y from x=f(y), d>=0 from positivity of orbits, equality of positive displacements via limit of (5) along synchronized orbits, excludes mixed fixed/non-fixed points by separation plus subdivision chain, and verifies sufficiency for all c>=0 and both inequalities."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,80 @@
+{
+ "_note": "Post hoc author judgments (PROTOCOL.md endpoints E-A, E-B and Amendment 1.4), written 2026-09-06 from the published quotes and objections in RESULTS.md before the checker verdicts were read. target_match = the objection targets the documented defect named in cases.json (the step or lemma, not merely the same obligation). A text counts as recovered by a procedure only if target_match is true AND the analysis classifies that procedure's best objection on the text as substantiated or localized. distinct_defect labels are shared between texts carrying the same defect. conclusion_change records which side of the earlier evaluator disagreement the objections support and which lineage conclusion changes if the defect is applied with the validity_overrides.json criterion.",
+ "p6-gpt-5.6-sol-main-t009": {
+  "distinct_defect": "P6 false finite-transversal lemma (GPT-default lineage)",
+  "target_match": {"witness-gpt": true, "witness-claude": true, "grader-gpt": true, "grader-claude": true},
+  "note": "Both proposers attack the inductive proof of the finite-transversal lemma (the recursion applies the criterion 'X meets C' to F_c where C\\{c} need not be a member; explicit families {{1,2},{2,3}}). Both graders state the lemma is false and give an infinite family of minimal finite transversals (F_k = {x_0..x_k, y_k}; C={c1,c2} variant)."
+ },
+ "p6-deedy-gpt-5.6-sol-final": {
+  "distinct_defect": "P6 false finite-transversal lemma (GPT-default lineage)",
+  "target_match": {"witness-gpt": true, "witness-claude": true, "grader-gpt": true, "grader-claude": true},
+  "note": "Both proposers identify the non-sequitur in the Konig-tree proof of the blocker lemma (inserting c changes the branch; no contradiction with the pruning rule follows). Both graders state the blocker lemma is false with the F_i = {c, a_i, b_1..b_{i-1}} / E_i = {a_1..a_i, b_i} families (the same construction as validity_overrides.json)."
+ },
+ "p6-kimi-k3-round2-t007": {
+  "distinct_defect": "P6 self-duality applied to a possibly infinite minimal transversal (Kimi round 2)",
+  "target_match": {"witness-gpt": true, "witness-claude": true, "grader-gpt": true, "grader-claude": true},
+  "note": "Both proposers: Claim 3.2 forms pi(T) for a minimal transversal T not shown finite (pi defined only for finite sets); GPT adds the family {{2,x_n}} with the infinite minimal transversal {x_n}. Both graders name the same step and its use at the final Zorn extraction."
+ },
+ "deedy-gpt-5.6-sol-final": {
+  "distinct_defect": "P3 refinement lemma proved by an unverifiable column sweep (GPT-default final)",
+  "target_match": {"witness-gpt": true, "witness-claude": true, "grader-gpt": true, "grader-claude": true},
+  "note": "Both proposers target the refinement lemma's proof: GPT gives counterexamples to 'a cut can interchange the two parity rows only above its level' (column 2d cut into d/2 and 3d/2) and to the existence of the prescribed first cut (two columns of height T/2, s=1); Claude gives the arithmetic mismatch of the strip counts and the unjustified (T-d)/2 split. Both graders name parts (i) and (ii) of the lemma."
+ },
+ "deedy-grok-4.5-final": {
+  "distinct_defect": "P3 Grok: Theorem B induction step / Theorem C incomplete",
+  "target_match": {"witness-gpt": true, "witness-claude": true, "grader-gpt": true, "grader-claude": true},
+  "note": "GPT: counterexample to the 'common refinement of two virtual halves' step (n=2, cuts at 1.5 and 2.5 in the bin of length 4) and to D(R)=s in Theorem C (L={4,1.5,1.5}: D(R)=0, not 3); Claude: counterexample to S_n - mu <= S_{n-1} (n=2, cut at 3.5 in the bin of length 4: 3.5 > 3) and Theorem C not written (the text records its own contradiction). Graders name the same steps."
+ },
+ "deedy-muse-spark-1.1-final": {
+  "distinct_defect": "P3 Muse: wrong answer and false guarantee of the even-multiples construction",
+  "target_match": {"witness-gpt": true, "witness-claude": true, "grader-gpt": true, "grader-claude": true},
+  "note": "Both proposers: the invariance lemma covers only the case in which Xiang splits each big piece once; other replies are unproved (localized concern, not a refutation), upper bound absent. Claude's grader supplies the refutation itself: Liu 0.4,0.4,0.2 and one Xiang cut halving the 0.2 piece gives Liu 0.5 < 0.6 (checked: scripts/witness_checks.py p3-odd-rank --pieces 2/5 2/5 1/10 1/10 -> 1/2)."
+ },
+ "deedy-deepseek-v4-pro-final": {
+  "distinct_defect": "P3 DeepSeek: wrong answer and false guarantee of the equally spaced construction; no proof",
+  "target_match": {"witness-gpt": true, "witness-claude": true, "grader-gpt": true, "grader-claude": true},
+  "note": "Both proposers: not_written on both bounds with the deferring lines quoted ('Strategy for X?', '(To be completed)'). Claude's grader refutes the construction: marks at 1/5, 2/5 and one Xiang cut halving the 3/5 piece give Liu 1/2 < 3/5 (checked: p3-odd-rank --pieces 1/5 1/5 3/10 3/10 -> 1/2)."
+ },
+ "kimi-k3-round3-t007": {
+  "distinct_defect": null,
+  "target_match": {},
+  "note": "Open dispute C1 (lower_bound scored 2 by Kimi, Claude, GPT and 1 by GLM).",
+  "conclusion_change": "Both proposers return not_written on both bounds (the text calls its lower bound a 'SKETCH' with the matching identity 'by an exchange argument' unproved, and its upper bound 'still open'). This supports GLM's rating. The conservative (written) layer already has S=0 for this text, so no released count changes; a majority-of-three layer would move it from S=1 to S=0."
+ },
+ "kimi-k3-round4-t014": {
+  "distinct_defect": null,
+  "target_match": {},
+  "note": "Open dispute C2 (upper_bound scored 2 by GLM, Kimi, Claude and 1 by GPT).",
+  "conclusion_change": "Both proposers find the same non-sequitur in the upper bound: the chain value is defined by the decreasing order, while Theorem 4.2 / Lemma 4.1 produce only some ordering with the small nested difference; order matters (checked: p3-nested 10 9 8 7 5 -> 5 versus 10 8 7 9 5 -> 1; 8 7 6 5 4 -> 4 versus 8 6 5 7 4 -> 0). This supports GPT's rating. Whether it is fatal is disputed by the graders (Claude's grader: cosmetic, the cut strategy can process the lemma's ordering); the checkers' fatal field is reported. If applied as a correction, the public Kimi P3 lineage's first S=2 crossing moves from round-4 turn 14 to its later repaired final (public re-grade 7/7)."
+ },
+ "p6-kimi-k3-round1-t021": {
+  "distinct_defect": null,
+  "target_match": {},
+  "note": "Open dispute C3 (upper_bound scored 2 by Kimi, <=1 by GLM, Claude, GPT).",
+  "conclusion_change": "Both proposers return not_written on both obligations, quoting the text's own 'Remaining crux: prove shrinkage stops' and the conditional 'So it suffices'. This supports GLM, Claude and GPT against Kimi's 2. The conservative layer already has S=0; no released count changes."
+ },
+ "p1-glm52-2ede1c6b-v1": {
+  "distinct_defect": null,
+  "target_match": {},
+  "note": "Open dispute D1 (GPT S=1 with a {2,3} counterexample against Claude and GLM S=2).",
+  "conclusion_change": "Neither proposer nor grader raises any objection (S_valid 2, grade 7 from all four). GPT's earlier counterexample does not stand: for the board {2,3} the valuation gcds are gcd(1,0)=1 for p=2 and gcd(0,1)=1 for p=3, so M=6 (checked: p1-board --board 2 3). This supports Claude and GLM; the ours-glm52 lineage's conclusion (S=2 from its first candidate) stands."
+ },
+ "p5-deepseek-v4-pro-main-t033": {
+  "distinct_defect": "P5 DeepSeek: negative values of g never excluded (turns 33 and 38)",
+  "target_match": {},
+  "note": "Open dispute D2 (GPT S=1 against Claude and GLM S=2).",
+  "conclusion_change": "Both proposers find the same gap in the necessity argument: from 'V contains at most one positive number' the text concludes V is {0} or {0,c}, never excluding negative values of g=f-x; GPT adds the counterexample f(x)=x+1 (V={1}, neither branch of the stated dichotomy applies). Both graders (6/7) name the same gap. This supports GPT's S=1. Applied as a correction, the DeepSeek P5 lineage's first S=2 crossing moves from turn 33 (Claude, GLM) to turn 39, i.e. to GPT's index; the crossing-index flip of the replication is resolved in GPT's favour."
+ },
+ "p5-deepseek-v4-pro-main-t038": {
+  "distinct_defect": "P5 DeepSeek: negative values of g never excluded (turns 33 and 38)",
+  "target_match": {},
+  "note": "Open dispute D3 (GPT and GLM S=1 against Claude S=2).",
+  "conclusion_change": "Same gap as turn 33 found by both proposers and both graders; supports GPT and GLM against Claude's 2. Same conclusion change as turn 33."
+ },
+ "p5-nemotron-2587b733-v2": {
+  "distinct_defect": "P5 Nemotron: wrong middle term in the sufficiency chain",
+  "target_match": {},
+  "note": "Open dispute D4 (Claude's three text passes scored 1, 2, 0; GPT and GLM 1).",
+  "conclusion_change": "Both proposers refute the displayed sufficiency chain: for f(x)=x+c the middle term is (x+y+c)/2, the text writes (x+y+2c)/2, and the written left inequality fails at x=y=c=1 (sqrt(5/2) >= 2 is false; checked: p5-chain 1 1 1). Both graders (6/7) also flag the O(n+m) bookkeeping in display (5). This supports S<2 for the text, against the single Claude pass that scored it 2; the ours-nemotron lineage's regression/crossing conclusions under that pass are not supported."
+ }
+}

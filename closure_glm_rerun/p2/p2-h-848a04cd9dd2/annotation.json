@@ -1,0 +1,62 @@
+{
+  "id": "p2-h-848a04cd9dd2",
+  "problem": "2",
+  "sha256": "848a04cd9dd2194c81c0c75b2395f7c1582513961751d667ecff82bbbc60356c",
+  "path": "checkpoint_inputs/848a04cd9dd2194c81c0c75b2395f7c1582513961751d667ecff82bbbc60356c.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p2-deedy-gpt-5.6-sol-xhigh-final"
+  ],
+  "bytes": 11389,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 4091,
+        "output_tokens": 30000,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 252.9,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4859,
+        "output_tokens": 983,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 14.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "complex power-difference determinant factorization (D = scalar·incidence determinant)",
+    "upper_bound_mechanism": "equal powers of M and N w.r.t. (AKL) via augmented determinant",
+    "wrong_answer_stated": false,
+    "notes": "Fully analytic complex-coordinate proof. (T): coordinates (2)-(5) encode all three angle hypotheses with ray orientations; incidence Q=0 correctly derived. Key step: proved factorization lemma with explicit coefficient check (30)-(32), remainders vanish via e(u-1)=p from (21); tangent cases handled by density/continuity. Finish: D=0 gives equal powers, hence OM=ON."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

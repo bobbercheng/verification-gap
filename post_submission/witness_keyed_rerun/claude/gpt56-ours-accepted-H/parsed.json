@@ -1,0 +1,74 @@
+{
+ "gate": "witness",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 121.6,
+  "input_tokens": 2,
+  "output_tokens": 10595,
+  "cache_read_input_tokens": 1473,
+  "cache_creation_input_tokens": 5946,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4948,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005048,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 10595,
+    "cacheReadInputTokens": 1473,
+    "cacheCreationInputTokens": 5946,
+    "webSearchRequests": 0,
+    "costUSD": 0.3250815,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 10281,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Drafting greedy induction checked (cancellation identities verified). Tree/bipartition argument: edges = floor(r/2) <= q-1 forces a tree component; sign expansion bounds a distinct subset-sum difference by D. Overlay construction with cut count |A|+|B|-1+(q-|A|-|B|) <= q-1 verified. Minor slip: Liu's mark positions written as 2^j*delta instead of partial sums, not load-bearing."
+ },
+ "anchors": {}
+}

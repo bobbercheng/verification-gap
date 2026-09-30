@@ -1,0 +1,47 @@
+{
+ "gate": "closure",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 16.2,
+  "input_tokens": 18168,
+  "output_tokens": 589,
+  "reasoning_output_tokens": 470,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "tree pairing and binary subset sums",
+  "upper_bound_mechanism": "subset-sum pigeonhole and overlay cancellation",
+  "wrong_answer_stated": false,
+  "notes": "Complete all-n proof. The drafting lemma rigorously yields the alternating-sum value. The refinement lemma handles arbitrary cuts via a rank-pair multigraph and constructs matching refinements by overlay. Binary lengths give the lower bound, while subset-sum spacing gives the upper bound."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 18168,
+    "cached_input_tokens": 12672,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 589,
+    "reasoning_output_tokens": 470
+   },
+   "sec": 16.2,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 2,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

@@ -1,0 +1,8567 @@
+{
+ "meta": {
+  "generated_utc": "2026-09-07T02:28:11Z",
+  "problems": [
+   "1",
+   "4",
+   "5"
+  ],
+  "protocol": "artifacts/replication_ext/PROTOCOL.md",
+  "freeze": {
+   "file": "artifacts/replication_ext/freeze.json",
+   "frozen_utc": "2026-09-06T03:38:40Z",
+   "glm_rated_counts": {
+    "1": 30,
+    "4": 25,
+    "5": 27
+   }
+  },
+  "public_grades": {
+   "dir": "artifacts/replication_ext/public_grades",
+   "source_repository": "https://github.com/deedy/imo-2026",
+   "source_commit": "dbe872307883296c5f06bf8bcb90e6bfd0879364",
+   "captured_utc": "2026-09-06T04:37:12Z"
+  },
+  "evaluators": [
+   "claude_ckpt",
+   "claude_rep1",
+   "claude_rep2",
+   "claude_rep3",
+   "claude_maj3",
+   "gpt",
+   "glm"
+  ],
+  "conclusion_definitions": {
+   "improved": "last S > first S",
+   "regressed": "some adjacent decrease",
+   "crossing": "0-based index of the first S=2 checkpoint, or 'none'; null = undetermined"
+  },
+  "identical_definition": "a lineage counts as identical for a conclusion when the conclusion is equal and determined under every evaluator with complete coverage of the lineage, the five core evaluators (Claude per-checkpoint, Claude text passes 1-3, GPT) being required"
+ },
+ "pooled": {
+  "n_checkpoints": 106,
+  "n_distinct_texts": 82,
+  "n_lineages": 36,
+  "identical_text_repeated_texts": 23,
+  "identical_text_differ": 0,
+  "claude_q_three_passes": {
+   "pairs": 246,
+   "pairs_differ": 7,
+   "q": 0.0285
+  },
+  "n_lineages_core_complete": 36,
+  "n_lineages_complete": 36,
+  "conclusions_identical_all_complete": {
+   "improved": 36,
+   "regressed": 35,
+   "crossing": 33
+  },
+  "conclusions_identical_all_evaluators": {
+   "improved": 36,
+   "regressed": 35,
+   "crossing": 33
+  },
+  "denominators": "conclusions_identical_all_complete is over n_lineages_core_complete lineages (evaluators with complete coverage; the five core evaluators required); conclusions_identical_all_evaluators is over n_lineages_complete lineages (all six single evaluators, GLM included, complete)"
+ },
+ "problems": {
+  "1": {
+   "n_checkpoints": 38,
+   "n_distinct_texts": 30,
+   "n_lineages": 12,
+   "n_public_lineages": 9,
+   "n_repeated_texts": 8,
+   "rating_stats": {
+    "claude_ckpt": {
+     "dirs": 38,
+     "excluded_after_freeze": 0,
+     "parsed": 38,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+     ]
+    },
+    "claude_rep1": {
+     "dirs": 30,
+     "excluded_after_freeze": 0,
+     "parsed": 30,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+     ]
+    },
+    "claude_rep2": {
+     "dirs": 30,
+     "excluded_after_freeze": 0,
+     "parsed": 30,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+     ]
+    },
+    "claude_rep3": {
+     "dirs": 30,
+     "excluded_after_freeze": 0,
+     "parsed": 30,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+     ]
+    },
+    "gpt": {
+     "dirs": 30,
+     "excluded_after_freeze": 0,
+     "parsed": 30,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "gpt-5.6-sol",
+     "rubric_sha256": [
+      "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+     ]
+    },
+    "glm": {
+     "dirs": 30,
+     "excluded_after_freeze": 0,
+     "parsed": 30,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "glm-5.3",
+     "rubric_sha256": [
+      "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+     ]
+    }
+   },
+   "coverage": {
+    "claude_rep1": {
+     "rated_texts": 30,
+     "of_texts": 30
+    },
+    "claude_rep2": {
+     "rated_texts": 30,
+     "of_texts": 30
+    },
+    "claude_rep3": {
+     "rated_texts": 30,
+     "of_texts": 30
+    },
+    "claude_maj3": {
+     "rated_texts": 30,
+     "of_texts": 30
+    },
+    "gpt": {
+     "rated_texts": 30,
+     "of_texts": 30
+    },
+    "glm": {
+     "rated_texts": 30,
+     "of_texts": 30
+    },
+    "claude_ckpt": {
+     "rated_checkpoints": 38,
+     "of_checkpoints": 38
+    }
+   },
+   "complete_evaluators": [
+    "claude_ckpt",
+    "claude_maj3",
+    "claude_rep1",
+    "claude_rep2",
+    "claude_rep3",
+    "glm",
+    "gpt"
+   ],
+   "identical_text_control_claude_ckpt": {
+    "texts": 8,
+    "texts_all_equal_S": 8,
+    "pairs": 8,
+    "pairs_differ": 0,
+    "pairs_lower_differ": 0,
+    "pairs_upper_differ": 0,
+    "q": 0.0,
+    "q_lower": 0.0,
+    "q_upper": 0.0,
+    "repeated_texts": 8,
+    "texts_with_different_S": 0,
+    "texts_with_different_fields": 0,
+    "detail": [
+     {
+      "text": "p1-h-f78ecdb93b18",
+      "record_ids": [
+       "p1-claude-fable-5-main-t005",
+       "p1-deedy-claude-fable-5-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p1-h-1d52d4fe1b74",
+      "record_ids": [
+       "p1-deepseek-v4-pro-main-t017",
+       "p1-deedy-deepseek-v4-pro-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p1-h-e781d3fd1787",
+      "record_ids": [
+       "p1-gpt-5.6-sol-max-main-t006",
+       "p1-deedy-gpt-5.6-sol-max-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p1-h-d4561baddfcb",
+      "record_ids": [
+       "p1-gpt-5.6-sol-pro-main-t005",
+       "p1-deedy-gpt-5.6-sol-pro-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p1-h-2a2d73e81318",
+      "record_ids": [
+       "p1-gpt-5.6-sol-xhigh-main-t004",
+       "p1-deedy-gpt-5.6-sol-xhigh-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p1-h-b031b8f1dcb2",
+      "record_ids": [
+       "p1-grok-4.5-main-t012",
+       "p1-deedy-grok-4.5-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p1-h-93dc480d77a2",
+      "record_ids": [
+       "p1-kimi-k3-main-t007",
+       "p1-deedy-kimi-k3-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p1-h-e073e996239a",
+      "record_ids": [
+       "p1-muse-spark-1.1-main-t006",
+       "p1-deedy-muse-spark-1.1-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     }
+    ]
+   },
+   "claude_q_three_text_passes": {
+    "texts": 30,
+    "texts_all_equal_S": 30,
+    "pairs": 90,
+    "pairs_differ": 0,
+    "pairs_lower_differ": 0,
+    "pairs_upper_differ": 0,
+    "q": 0.0,
+    "q_lower": 0.0,
+    "q_upper": 0.0
+   },
+   "claude_q_all_claude_ratings": {
+    "texts": 30,
+    "texts_all_equal_S": 30,
+    "pairs": 212,
+    "pairs_differ": 0,
+    "pairs_lower_differ": 0,
+    "pairs_upper_differ": 0,
+    "q": 0.0,
+    "q_lower": 0.0,
+    "q_upper": 0.0
+   },
+   "agreement": {
+    "claude_rep1_vs_gpt": {
+     "n": 30,
+     "observed": 0.9,
+     "kappa": 0.793,
+     "confusion": {
+      "00": 4,
+      "01": 1,
+      "10": 1,
+      "11": 3,
+      "21": 1,
+      "22": 20
+     }
+    },
+    "claude_maj3_vs_gpt": {
+     "n": 30,
+     "observed": 0.9,
+     "kappa": 0.793,
+     "confusion": {
+      "00": 4,
+      "01": 1,
+      "10": 1,
+      "11": 3,
+      "21": 1,
+      "22": 20
+     }
+    },
+    "claude_rep1_vs_glm": {
+     "n": 30,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 5,
+      "11": 4,
+      "22": 21
+     }
+    },
+    "claude_maj3_vs_glm": {
+     "n": 30,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 5,
+      "11": 4,
+      "22": 21
+     }
+    },
+    "gpt_vs_glm": {
+     "n": 30,
+     "observed": 0.9,
+     "kappa": 0.793,
+     "confusion": {
+      "00": 4,
+      "01": 1,
+      "10": 1,
+      "11": 3,
+      "12": 1,
+      "22": 20
+     }
+    },
+    "claude_rep2_vs_gpt": {
+     "n": 30,
+     "observed": 0.9,
+     "kappa": 0.793,
+     "confusion": {
+      "00": 4,
+      "01": 1,
+      "10": 1,
+      "11": 3,
+      "21": 1,
+      "22": 20
+     }
+    },
+    "claude_rep3_vs_gpt": {
+     "n": 30,
+     "observed": 0.9,
+     "kappa": 0.793,
+     "confusion": {
+      "00": 4,
+      "01": 1,
+      "10": 1,
+      "11": 3,
+      "21": 1,
+      "22": 20
+     }
+    }
+   },
+   "field_agreement": {
+    "claude_rep1_vs_gpt": {
+     "both_present": 30,
+     "lower_equal": 29,
+     "upper_equal": 28
+    },
+    "claude_rep1_vs_glm": {
+     "both_present": 30,
+     "lower_equal": 30,
+     "upper_equal": 30
+    }
+   },
+   "conclusions_identical": {
+    "core": {
+     "improved": 12,
+     "regressed": 12,
+     "crossing": 11
+    },
+    "all_complete": {
+     "improved": 12,
+     "regressed": 12,
+     "crossing": 11
+    },
+    "all_evaluators": {
+     "improved": 12,
+     "regressed": 12,
+     "crossing": 11
+    },
+    "core_evaluators": [
+     "claude_ckpt",
+     "claude_rep1",
+     "claude_rep2",
+     "claude_rep3",
+     "gpt"
+    ],
+    "single_evaluators": [
+     "claude_ckpt",
+     "claude_rep1",
+     "claude_rep2",
+     "claude_rep3",
+     "gpt",
+     "glm"
+    ],
+    "lineages_with_glm_complete": 12,
+    "n_lineages_core_complete": 12,
+    "n_lineages_complete": 12,
+    "lineages_not_evaluable": [],
+    "definitions": {
+     "all_complete": "identical and determined under every evaluator with complete coverage of the lineage; denominator n_lineages_core_complete (the five core evaluators must be complete)",
+     "all_evaluators": "identical under all six single evaluators (Claude per-checkpoint, Claude passes 1-3, GPT, GLM); denominator n_lineages_complete (every evaluator rated every checkpoint of the lineage)"
+    }
+   },
+   "flips": [
+    {
+     "lineage": "ours-glm52",
+     "conclusions": [
+      "crossing"
+     ],
+     "values": {
+      "crossing": {
+       "claude_ckpt": 0,
+       "claude_rep1": 0,
+       "claude_rep2": 0,
+       "claude_rep3": 0,
+       "claude_maj3": 0,
+       "gpt": "none",
+       "glm": 0
+      }
+     },
+     "sequences": {
+      "claude_ckpt": [
+       2
+      ],
+      "claude_rep1": [
+       2
+      ],
+      "claude_rep2": [
+       2
+      ],
+      "claude_rep3": [
+       2
+      ],
+      "claude_maj3": [
+       2
+      ],
+      "gpt": [
+       1
+      ],
+      "glm": [
+       2
+      ]
+     }
+    }
+   ],
+   "per_evaluator": {
+    "claude_ckpt": {
+     "complete": true,
+     "n_S1_checkpoints": 4,
+     "n_S0_checkpoints": 5,
+     "n_S2_checkpoints": 29,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 12,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 6,
+     "n_improved": 6,
+     "n_ramps_1_to_2": 1,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep1": {
+     "complete": true,
+     "n_S1_checkpoints": 4,
+     "n_S0_checkpoints": 5,
+     "n_S2_checkpoints": 29,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 12,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 6,
+     "n_improved": 6,
+     "n_ramps_1_to_2": 1,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep2": {
+     "complete": true,
+     "n_S1_checkpoints": 4,
+     "n_S0_checkpoints": 5,
+     "n_S2_checkpoints": 29,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 12,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 6,
+     "n_improved": 6,
+     "n_ramps_1_to_2": 1,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep3": {
+     "complete": true,
+     "n_S1_checkpoints": 4,
+     "n_S0_checkpoints": 5,
+     "n_S2_checkpoints": 29,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 12,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 6,
+     "n_improved": 6,
+     "n_ramps_1_to_2": 1,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_maj3": {
+     "complete": true,
+     "n_S1_checkpoints": 4,
+     "n_S0_checkpoints": 5,
+     "n_S2_checkpoints": 29,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 12,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 6,
+     "n_improved": 6,
+     "n_ramps_1_to_2": 1,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "gpt": {
+     "complete": true,
+     "n_S1_checkpoints": 5,
+     "n_S0_checkpoints": 5,
+     "n_S2_checkpoints": 28,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 11,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 6,
+     "n_improved": 6,
+     "n_ramps_1_to_2": 2,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "glm": {
+     "complete": true,
+     "n_S1_checkpoints": 4,
+     "n_S0_checkpoints": 5,
+     "n_S2_checkpoints": 29,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 12,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 6,
+     "n_improved": 6,
+     "n_ramps_1_to_2": 1,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    }
+   },
+   "S1_range_complete_single_evaluators": [
+    4,
+    5
+   ],
+   "lineages": [
+    {
+     "lineage": "deedy-claude-fable-5",
+     "model": "claude-fable-5",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p1-claude-fable-5-main-t005",
+       "sha12": "f78ecdb93b18"
+      },
+      {
+       "id": "p1-deedy-claude-fable-5-final",
+       "sha12": "f78ecdb93b18"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-deepseek-v4-pro",
+     "model": "deepseek-v4-pro",
+     "source": "public",
+     "n_checkpoints": 5,
+     "checkpoints": [
+      {
+       "id": "p1-deepseek-v4-pro-main-t007",
+       "sha12": "c54249331b4b"
+      },
+      {
+       "id": "p1-deepseek-v4-pro-main-t009",
+       "sha12": "927a091f84a0"
+      },
+      {
+       "id": "p1-deepseek-v4-pro-main-t014",
+       "sha12": "d01f8a0286d6"
+      },
+      {
+       "id": "p1-deepseek-v4-pro-main-t017",
+       "sha12": "1d52d4fe1b74"
+      },
+      {
+       "id": "p1-deedy-deepseek-v4-pro-final",
+       "sha12": "1d52d4fe1b74"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2,
+       2,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol",
+     "model": "gpt-5.6-sol",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p1-gpt-5.6-sol-main-t001",
+       "sha12": "9c047f0e353e"
+      },
+      {
+       "id": "p1-gpt-5.6-sol-main-t003",
+       "sha12": "8aa11e4857a3"
+      },
+      {
+       "id": "p1-deedy-gpt-5.6-sol-final",
+       "sha12": "d3a4433040ba"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "model": "gpt-5.6-sol-max",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p1-gpt-5.6-sol-max-main-t002",
+       "sha12": "cedf6cf88069"
+      },
+      {
+       "id": "p1-gpt-5.6-sol-max-main-t006",
+       "sha12": "e781d3fd1787"
+      },
+      {
+       "id": "p1-deedy-gpt-5.6-sol-max-final",
+       "sha12": "e781d3fd1787"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       1,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 1,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "model": "gpt-5.6-sol-pro",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p1-gpt-5.6-sol-pro-main-t001",
+       "sha12": "4cd157582356"
+      },
+      {
+       "id": "p1-gpt-5.6-sol-pro-main-t005",
+       "sha12": "d4561baddfcb"
+      },
+      {
+       "id": "p1-deedy-gpt-5.6-sol-pro-final",
+       "sha12": "d4561baddfcb"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "model": "gpt-5.6-sol-xhigh",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p1-gpt-5.6-sol-xhigh-main-t001",
+       "sha12": "0db62b6e6ab5"
+      },
+      {
+       "id": "p1-gpt-5.6-sol-xhigh-main-t004",
+       "sha12": "2a2d73e81318"
+      },
+      {
+       "id": "p1-deedy-gpt-5.6-sol-xhigh-final",
+       "sha12": "2a2d73e81318"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-grok-4.5",
+     "model": "grok-4.5",
+     "source": "public",
+     "n_checkpoints": 4,
+     "checkpoints": [
+      {
+       "id": "p1-grok-4.5-main-t001",
+       "sha12": "870ed6b2558a"
+      },
+      {
+       "id": "p1-grok-4.5-main-t010",
+       "sha12": "46c8c94cf5e8"
+      },
+      {
+       "id": "p1-grok-4.5-main-t012",
+       "sha12": "b031b8f1dcb2"
+      },
+      {
+       "id": "p1-deedy-grok-4.5-final",
+       "sha12": "b031b8f1dcb2"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       2,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-kimi-k3",
+     "model": "kimi-k3",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p1-kimi-k3-main-t007",
+       "sha12": "93dc480d77a2"
+      },
+      {
+       "id": "p1-deedy-kimi-k3-final",
+       "sha12": "93dc480d77a2"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-muse-spark-1.1",
+     "model": "muse-spark-1.1",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p1-muse-spark-1.1-main-t001",
+       "sha12": "ca0cfe79b32c"
+      },
+      {
+       "id": "p1-muse-spark-1.1-main-t006",
+       "sha12": "e073e996239a"
+      },
+      {
+       "id": "p1-deedy-muse-spark-1.1-final",
+       "sha12": "e073e996239a"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "ours-glm52",
+     "model": "glm-5.2",
+     "source": "ours",
+     "n_checkpoints": 1,
+     "checkpoints": [
+      {
+       "id": "p1-glm52-2ede1c6b-v1",
+       "sha12": "e44bf6e39892"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2
+      ],
+      "claude_rep1": [
+       2
+      ],
+      "claude_rep2": [
+       2
+      ],
+      "claude_rep3": [
+       2
+      ],
+      "claude_maj3": [
+       2
+      ],
+      "gpt": [
+       1
+      ],
+      "glm": [
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": false
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": false
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": false
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 1,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 1,
+      "glm": 0
+     }
+    },
+    {
+     "lineage": "ours-gpt56sol-ultra",
+     "model": "gpt-5.6-sol",
+     "source": "ours",
+     "n_checkpoints": 1,
+     "checkpoints": [
+      {
+       "id": "p1-gpt56-5aca5e52-v1",
+       "sha12": "cdc88080cd21"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2
+      ],
+      "claude_rep1": [
+       2
+      ],
+      "claude_rep2": [
+       2
+      ],
+      "claude_rep3": [
+       2
+      ],
+      "claude_maj3": [
+       2
+      ],
+      "gpt": [
+       2
+      ],
+      "glm": [
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     }
+    },
+    {
+     "lineage": "ours-nemotron",
+     "model": "nemotron-3-ultra",
+     "source": "ours",
+     "n_checkpoints": 8,
+     "checkpoints": [
+      {
+       "id": "p1-nemotron-35c91371-v1",
+       "sha12": "252f3c8d29b6"
+      },
+      {
+       "id": "p1-nemotron-7ff751bc-v1",
+       "sha12": "b9bcc2557880"
+      },
+      {
+       "id": "p1-nemotron-57ce82c6-v1",
+       "sha12": "6d17430cc840"
+      },
+      {
+       "id": "p1-nemotron-6c9c2439-v1",
+       "sha12": "ae440d9edfba"
+      },
+      {
+       "id": "p1-nemotron-e1fce43d-v1",
+       "sha12": "1a10db6e23dc"
+      },
+      {
+       "id": "p1-nemotron-a71e54bb-v1",
+       "sha12": "de44a94b0ce2"
+      },
+      {
+       "id": "p1-nemotron-a71e54bb-v2",
+       "sha12": "507d8352552b"
+      },
+      {
+       "id": "p1-nemotron-da850012-v1",
+       "sha12": "f34c81fda467"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       2,
+       2
+      ],
+      "gpt": [
+       1,
+       1,
+       0,
+       2,
+       1,
+       2,
+       2,
+       2
+      ],
+      "glm": [
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "glm": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 4,
+      "claude_rep1": 4,
+      "claude_rep2": 4,
+      "claude_rep3": 4,
+      "claude_maj3": 4,
+      "gpt": 3,
+      "glm": 4
+     }
+    }
+   ],
+   "per_text": [
+    {
+     "text": "p1-h-f78ecdb93b18",
+     "lineage": "deedy-claude-fable-5",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-c54249331b4b",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-927a091f84a0",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-d01f8a0286d6",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-1d52d4fe1b74",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-9c047f0e353e",
+     "lineage": "deedy-gpt-5.6-sol",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p1-h-8aa11e4857a3",
+     "lineage": "deedy-gpt-5.6-sol",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-d3a4433040ba",
+     "lineage": "deedy-gpt-5.6-sol",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-cedf6cf88069",
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 1,
+     "glm": 0
+    },
+    {
+     "text": "p1-h-e781d3fd1787",
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-4cd157582356",
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p1-h-d4561baddfcb",
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-0db62b6e6ab5",
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p1-h-2a2d73e81318",
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-870ed6b2558a",
+     "lineage": "deedy-grok-4.5",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p1-h-46c8c94cf5e8",
+     "lineage": "deedy-grok-4.5",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-b031b8f1dcb2",
+     "lineage": "deedy-grok-4.5",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-93dc480d77a2",
+     "lineage": "deedy-kimi-k3",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-ca0cfe79b32c",
+     "lineage": "deedy-muse-spark-1.1",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-e073e996239a",
+     "lineage": "deedy-muse-spark-1.1",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-e44bf6e39892",
+     "lineage": "ours-glm52",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 1,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-cdc88080cd21",
+     "lineage": "ours-gpt56sol-ultra",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-252f3c8d29b6",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      1,
+      1,
+      1
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p1-h-b9bcc2557880",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      1,
+      1,
+      1
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p1-h-6d17430cc840",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      1,
+      1,
+      1
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 0,
+     "glm": 1
+    },
+    {
+     "text": "p1-h-ae440d9edfba",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-1a10db6e23dc",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      1,
+      1,
+      1
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p1-h-de44a94b0ce2",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-507d8352552b",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p1-h-f34c81fda467",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    }
+   ]
+  },
+  "4": {
+   "n_checkpoints": 33,
+   "n_distinct_texts": 25,
+   "n_lineages": 12,
+   "n_public_lineages": 9,
+   "n_repeated_texts": 8,
+   "rating_stats": {
+    "claude_ckpt": {
+     "dirs": 33,
+     "excluded_after_freeze": 0,
+     "parsed": 33,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8"
+     ]
+    },
+    "claude_rep1": {
+     "dirs": 25,
+     "excluded_after_freeze": 0,
+     "parsed": 25,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8"
+     ]
+    },
+    "claude_rep2": {
+     "dirs": 25,
+     "excluded_after_freeze": 0,
+     "parsed": 25,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8"
+     ]
+    },
+    "claude_rep3": {
+     "dirs": 25,
+     "excluded_after_freeze": 0,
+     "parsed": 25,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8"
+     ]
+    },
+    "gpt": {
+     "dirs": 25,
+     "excluded_after_freeze": 0,
+     "parsed": 25,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "gpt-5.6-sol",
+     "rubric_sha256": [
+      "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8"
+     ]
+    },
+    "glm": {
+     "dirs": 25,
+     "excluded_after_freeze": 0,
+     "parsed": 25,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "glm-5.3",
+     "rubric_sha256": [
+      "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8"
+     ]
+    }
+   },
+   "coverage": {
+    "claude_rep1": {
+     "rated_texts": 25,
+     "of_texts": 25
+    },
+    "claude_rep2": {
+     "rated_texts": 25,
+     "of_texts": 25
+    },
+    "claude_rep3": {
+     "rated_texts": 25,
+     "of_texts": 25
+    },
+    "claude_maj3": {
+     "rated_texts": 25,
+     "of_texts": 25
+    },
+    "gpt": {
+     "rated_texts": 25,
+     "of_texts": 25
+    },
+    "glm": {
+     "rated_texts": 25,
+     "of_texts": 25
+    },
+    "claude_ckpt": {
+     "rated_checkpoints": 33,
+     "of_checkpoints": 33
+    }
+   },
+   "complete_evaluators": [
+    "claude_ckpt",
+    "claude_maj3",
+    "claude_rep1",
+    "claude_rep2",
+    "claude_rep3",
+    "glm",
+    "gpt"
+   ],
+   "identical_text_control_claude_ckpt": {
+    "texts": 8,
+    "texts_all_equal_S": 8,
+    "pairs": 8,
+    "pairs_differ": 0,
+    "pairs_lower_differ": 0,
+    "pairs_upper_differ": 0,
+    "q": 0.0,
+    "q_lower": 0.0,
+    "q_upper": 0.0,
+    "repeated_texts": 8,
+    "texts_with_different_S": 0,
+    "texts_with_different_fields": 0,
+    "detail": [
+     {
+      "text": "p4-h-f8938f118ca0",
+      "record_ids": [
+       "p4-claude-fable-5-main-t005",
+       "p4-deedy-claude-fable-5-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p4-h-459e07a52e70",
+      "record_ids": [
+       "p4-deepseek-v4-pro-main-t013",
+       "p4-deedy-deepseek-v4-pro-final"
+      ],
+      "S": [
+       0,
+       0
+      ],
+      "lower": [
+       1,
+       1
+      ],
+      "upper": [
+       0,
+       0
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p4-h-b98ad9eb5d44",
+      "record_ids": [
+       "p4-gpt-5.6-sol-main-t003",
+       "p4-deedy-gpt-5.6-sol-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p4-h-788aced15a04",
+      "record_ids": [
+       "p4-gpt-5.6-sol-max-main-t011",
+       "p4-deedy-gpt-5.6-sol-max-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p4-h-14f66095291e",
+      "record_ids": [
+       "p4-gpt-5.6-sol-pro-main-t002",
+       "p4-deedy-gpt-5.6-sol-pro-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p4-h-43ca23749f7e",
+      "record_ids": [
+       "p4-gpt-5.6-sol-xhigh-main-t007",
+       "p4-deedy-gpt-5.6-sol-xhigh-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p4-h-ca6c9452996c",
+      "record_ids": [
+       "p4-grok-4.5-main-t002",
+       "p4-deedy-grok-4.5-final"
+      ],
+      "S": [
+       0,
+       0
+      ],
+      "lower": [
+       0,
+       0
+      ],
+      "upper": [
+       0,
+       0
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p4-h-2c885229d69d",
+      "record_ids": [
+       "p4-muse-spark-1.1-main-t005",
+       "p4-deedy-muse-spark-1.1-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     }
+    ]
+   },
+   "claude_q_three_text_passes": {
+    "texts": 25,
+    "texts_all_equal_S": 25,
+    "pairs": 75,
+    "pairs_differ": 0,
+    "pairs_lower_differ": 0,
+    "pairs_upper_differ": 2,
+    "q": 0.0,
+    "q_lower": 0.0,
+    "q_upper": 0.0267
+   },
+   "claude_q_all_claude_ratings": {
+    "texts": 25,
+    "texts_all_equal_S": 25,
+    "pairs": 182,
+    "pairs_differ": 0,
+    "pairs_lower_differ": 0,
+    "pairs_upper_differ": 4,
+    "q": 0.0,
+    "q_lower": 0.0,
+    "q_upper": 0.022
+   },
+   "agreement": {
+    "claude_rep1_vs_gpt": {
+     "n": 25,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 14,
+      "22": 11
+     }
+    },
+    "claude_maj3_vs_gpt": {
+     "n": 25,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 14,
+      "22": 11
+     }
+    },
+    "claude_rep1_vs_glm": {
+     "n": 25,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 14,
+      "22": 11
+     }
+    },
+    "claude_maj3_vs_glm": {
+     "n": 25,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 14,
+      "22": 11
+     }
+    },
+    "gpt_vs_glm": {
+     "n": 25,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 14,
+      "22": 11
+     }
+    },
+    "claude_rep2_vs_gpt": {
+     "n": 25,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 14,
+      "22": 11
+     }
+    },
+    "claude_rep3_vs_gpt": {
+     "n": 25,
+     "observed": 1.0,
+     "kappa": 1.0,
+     "confusion": {
+      "00": 14,
+      "22": 11
+     }
+    }
+   },
+   "field_agreement": {
+    "claude_rep1_vs_gpt": {
+     "both_present": 25,
+     "lower_equal": 25,
+     "upper_equal": 22
+    },
+    "claude_rep1_vs_glm": {
+     "both_present": 25,
+     "lower_equal": 25,
+     "upper_equal": 24
+    }
+   },
+   "conclusions_identical": {
+    "core": {
+     "improved": 12,
+     "regressed": 12,
+     "crossing": 12
+    },
+    "all_complete": {
+     "improved": 12,
+     "regressed": 12,
+     "crossing": 12
+    },
+    "all_evaluators": {
+     "improved": 12,
+     "regressed": 12,
+     "crossing": 12
+    },
+    "core_evaluators": [
+     "claude_ckpt",
+     "claude_rep1",
+     "claude_rep2",
+     "claude_rep3",
+     "gpt"
+    ],
+    "single_evaluators": [
+     "claude_ckpt",
+     "claude_rep1",
+     "claude_rep2",
+     "claude_rep3",
+     "gpt",
+     "glm"
+    ],
+    "lineages_with_glm_complete": 12,
+    "n_lineages_core_complete": 12,
+    "n_lineages_complete": 12,
+    "lineages_not_evaluable": [],
+    "definitions": {
+     "all_complete": "identical and determined under every evaluator with complete coverage of the lineage; denominator n_lineages_core_complete (the five core evaluators must be complete)",
+     "all_evaluators": "identical under all six single evaluators (Claude per-checkpoint, Claude passes 1-3, GPT, GLM); denominator n_lineages_complete (every evaluator rated every checkpoint of the lineage)"
+    }
+   },
+   "flips": [],
+   "per_evaluator": {
+    "claude_ckpt": {
+     "complete": true,
+     "n_S1_checkpoints": 0,
+     "n_S0_checkpoints": 16,
+     "n_S2_checkpoints": 17,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 9,
+     "n_regressing_lineages": 0,
+     "n_crossings_inside_record": 3,
+     "n_improved": 3,
+     "n_ramps_1_to_2": 0,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep1": {
+     "complete": true,
+     "n_S1_checkpoints": 0,
+     "n_S0_checkpoints": 16,
+     "n_S2_checkpoints": 17,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 9,
+     "n_regressing_lineages": 0,
+     "n_crossings_inside_record": 3,
+     "n_improved": 3,
+     "n_ramps_1_to_2": 0,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep2": {
+     "complete": true,
+     "n_S1_checkpoints": 0,
+     "n_S0_checkpoints": 16,
+     "n_S2_checkpoints": 17,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 9,
+     "n_regressing_lineages": 0,
+     "n_crossings_inside_record": 3,
+     "n_improved": 3,
+     "n_ramps_1_to_2": 0,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep3": {
+     "complete": true,
+     "n_S1_checkpoints": 0,
+     "n_S0_checkpoints": 16,
+     "n_S2_checkpoints": 17,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 9,
+     "n_regressing_lineages": 0,
+     "n_crossings_inside_record": 3,
+     "n_improved": 3,
+     "n_ramps_1_to_2": 0,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_maj3": {
+     "complete": true,
+     "n_S1_checkpoints": 0,
+     "n_S0_checkpoints": 16,
+     "n_S2_checkpoints": 17,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 9,
+     "n_regressing_lineages": 0,
+     "n_crossings_inside_record": 3,
+     "n_improved": 3,
+     "n_ramps_1_to_2": 0,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "gpt": {
+     "complete": true,
+     "n_S1_checkpoints": 0,
+     "n_S0_checkpoints": 16,
+     "n_S2_checkpoints": 17,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 9,
+     "n_regressing_lineages": 0,
+     "n_crossings_inside_record": 3,
+     "n_improved": 3,
+     "n_ramps_1_to_2": 0,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "glm": {
+     "complete": true,
+     "n_S1_checkpoints": 0,
+     "n_S0_checkpoints": 16,
+     "n_S2_checkpoints": 17,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 9,
+     "n_regressing_lineages": 0,
+     "n_crossings_inside_record": 3,
+     "n_improved": 3,
+     "n_ramps_1_to_2": 0,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    }
+   },
+   "S1_range_complete_single_evaluators": [
+    0,
+    0
+   ],
+   "lineages": [
+    {
+     "lineage": "deedy-claude-fable-5",
+     "model": "claude-fable-5",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p4-claude-fable-5-main-t005",
+       "sha12": "f8938f118ca0"
+      },
+      {
+       "id": "p4-deedy-claude-fable-5-final",
+       "sha12": "f8938f118ca0"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-deepseek-v4-pro",
+     "model": "deepseek-v4-pro",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p4-deepseek-v4-pro-main-t005",
+       "sha12": "793ec386e18e"
+      },
+      {
+       "id": "p4-deepseek-v4-pro-main-t013",
+       "sha12": "459e07a52e70"
+      },
+      {
+       "id": "p4-deedy-deepseek-v4-pro-final",
+       "sha12": "459e07a52e70"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       0,
+       0
+      ],
+      "claude_rep1": [
+       0,
+       0,
+       0
+      ],
+      "claude_rep2": [
+       0,
+       0,
+       0
+      ],
+      "claude_rep3": [
+       0,
+       0,
+       0
+      ],
+      "claude_maj3": [
+       0,
+       0,
+       0
+      ],
+      "gpt": [
+       0,
+       0,
+       0
+      ],
+      "glm": [
+       0,
+       0,
+       0
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 1,
+     "final_grade": 1,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol",
+     "model": "gpt-5.6-sol",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p4-gpt-5.6-sol-main-t003",
+       "sha12": "b98ad9eb5d44"
+      },
+      {
+       "id": "p4-deedy-gpt-5.6-sol-final",
+       "sha12": "b98ad9eb5d44"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "model": "gpt-5.6-sol-max",
+     "source": "public",
+     "n_checkpoints": 4,
+     "checkpoints": [
+      {
+       "id": "p4-gpt-5.6-sol-max-main-t001",
+       "sha12": "4eb42a7830fb"
+      },
+      {
+       "id": "p4-gpt-5.6-sol-max-main-t008",
+       "sha12": "dcc0680e3d90"
+      },
+      {
+       "id": "p4-gpt-5.6-sol-max-main-t011",
+       "sha12": "788aced15a04"
+      },
+      {
+       "id": "p4-deedy-gpt-5.6-sol-max-final",
+       "sha12": "788aced15a04"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "model": "gpt-5.6-sol-pro",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p4-gpt-5.6-sol-pro-main-t001",
+       "sha12": "9a62517b51bc"
+      },
+      {
+       "id": "p4-gpt-5.6-sol-pro-main-t002",
+       "sha12": "14f66095291e"
+      },
+      {
+       "id": "p4-deedy-gpt-5.6-sol-pro-final",
+       "sha12": "14f66095291e"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "model": "gpt-5.6-sol-xhigh",
+     "source": "public",
+     "n_checkpoints": 4,
+     "checkpoints": [
+      {
+       "id": "p4-gpt-5.6-sol-xhigh-main-t002",
+       "sha12": "8f044a272117"
+      },
+      {
+       "id": "p4-gpt-5.6-sol-xhigh-main-t003",
+       "sha12": "404415785358"
+      },
+      {
+       "id": "p4-gpt-5.6-sol-xhigh-main-t007",
+       "sha12": "43ca23749f7e"
+      },
+      {
+       "id": "p4-deedy-gpt-5.6-sol-xhigh-final",
+       "sha12": "43ca23749f7e"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-grok-4.5",
+     "model": "grok-4.5",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p4-grok-4.5-main-t002",
+       "sha12": "ca6c9452996c"
+      },
+      {
+       "id": "p4-deedy-grok-4.5-final",
+       "sha12": "ca6c9452996c"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       0
+      ],
+      "claude_rep1": [
+       0,
+       0
+      ],
+      "claude_rep2": [
+       0,
+       0
+      ],
+      "claude_rep3": [
+       0,
+       0
+      ],
+      "claude_maj3": [
+       0,
+       0
+      ],
+      "gpt": [
+       0,
+       0
+      ],
+      "glm": [
+       0,
+       0
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 0,
+     "final_grade": 0,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-kimi-k3",
+     "model": "kimi-k3",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p4-kimi-k3-main-t020",
+       "sha12": "25c5ce51b7e0"
+      },
+      {
+       "id": "p4-deedy-kimi-k3-final",
+       "sha12": "3c87e40d7e02"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-muse-spark-1.1",
+     "model": "muse-spark-1.1",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p4-muse-spark-1.1-main-t002",
+       "sha12": "220590cd38ed"
+      },
+      {
+       "id": "p4-muse-spark-1.1-main-t005",
+       "sha12": "2c885229d69d"
+      },
+      {
+       "id": "p4-deedy-muse-spark-1.1-final",
+       "sha12": "2c885229d69d"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "ours-glm52",
+     "model": "glm-5.2",
+     "source": "ours",
+     "n_checkpoints": 1,
+     "checkpoints": [
+      {
+       "id": "p4-glm52-0d682cd0-v1",
+       "sha12": "bc0c538d972f"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2
+      ],
+      "claude_rep1": [
+       2
+      ],
+      "claude_rep2": [
+       2
+      ],
+      "claude_rep3": [
+       2
+      ],
+      "claude_maj3": [
+       2
+      ],
+      "gpt": [
+       2
+      ],
+      "glm": [
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     }
+    },
+    {
+     "lineage": "ours-gpt56sol-ultra",
+     "model": "gpt-5.6-sol",
+     "source": "ours",
+     "n_checkpoints": 1,
+     "checkpoints": [
+      {
+       "id": "p4-gpt56-affe2f21-v1",
+       "sha12": "4d0a20e17bde"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2
+      ],
+      "claude_rep1": [
+       2
+      ],
+      "claude_rep2": [
+       2
+      ],
+      "claude_rep3": [
+       2
+      ],
+      "claude_maj3": [
+       2
+      ],
+      "gpt": [
+       2
+      ],
+      "glm": [
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     }
+    },
+    {
+     "lineage": "ours-nemotron",
+     "model": "nemotron-3-ultra",
+     "source": "ours",
+     "n_checkpoints": 6,
+     "checkpoints": [
+      {
+       "id": "p4-nemotron-0da3d62d-v1",
+       "sha12": "442b65045661"
+      },
+      {
+       "id": "p4-nemotron-7912bb42-v1",
+       "sha12": "814626794ac9"
+      },
+      {
+       "id": "p4-nemotron-7e3e9be3-v1",
+       "sha12": "d09e65992b10"
+      },
+      {
+       "id": "p4-nemotron-0c164fc0-v1",
+       "sha12": "908b36293a06"
+      },
+      {
+       "id": "p4-nemotron-9a63b14e-v1",
+       "sha12": "7e9068250570"
+      },
+      {
+       "id": "p4-nemotron-c1c5994c-v1",
+       "sha12": "440c35229a2f"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "claude_rep1": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "claude_rep2": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "claude_rep3": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "claude_maj3": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "gpt": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "glm": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     }
+    }
+   ],
+   "per_text": [
+    {
+     "text": "p4-h-f8938f118ca0",
+     "lineage": "deedy-claude-fable-5",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-793ec386e18e",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-459e07a52e70",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 2,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0,
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-b98ad9eb5d44",
+     "lineage": "deedy-gpt-5.6-sol",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-4eb42a7830fb",
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-dcc0680e3d90",
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-788aced15a04",
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-9a62517b51bc",
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-14f66095291e",
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-8f044a272117",
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-404415785358",
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-43ca23749f7e",
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-ca6c9452996c",
+     "lineage": "deedy-grok-4.5",
+     "records": 2,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0,
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-25c5ce51b7e0",
+     "lineage": "deedy-kimi-k3",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-3c87e40d7e02",
+     "lineage": "deedy-kimi-k3",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-220590cd38ed",
+     "lineage": "deedy-muse-spark-1.1",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-2c885229d69d",
+     "lineage": "deedy-muse-spark-1.1",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-bc0c538d972f",
+     "lineage": "ours-glm52",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-4d0a20e17bde",
+     "lineage": "ours-gpt56sol-ultra",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p4-h-442b65045661",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-814626794ac9",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-d09e65992b10",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-908b36293a06",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-7e9068250570",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p4-h-440c35229a2f",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    }
+   ]
+  },
+  "5": {
+   "n_checkpoints": 35,
+   "n_distinct_texts": 27,
+   "n_lineages": 12,
+   "n_public_lineages": 9,
+   "n_repeated_texts": 7,
+   "rating_stats": {
+    "claude_ckpt": {
+     "dirs": 35,
+     "excluded_after_freeze": 0,
+     "parsed": 35,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26"
+     ]
+    },
+    "claude_rep1": {
+     "dirs": 27,
+     "excluded_after_freeze": 0,
+     "parsed": 27,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26"
+     ]
+    },
+    "claude_rep2": {
+     "dirs": 27,
+     "excluded_after_freeze": 0,
+     "parsed": 27,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26"
+     ]
+    },
+    "claude_rep3": {
+     "dirs": 27,
+     "excluded_after_freeze": 0,
+     "parsed": 27,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "claude-opus-5",
+     "rubric_sha256": [
+      "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26"
+     ]
+    },
+    "gpt": {
+     "dirs": 27,
+     "excluded_after_freeze": 0,
+     "parsed": 27,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "gpt-5.6-sol",
+     "rubric_sha256": [
+      "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26"
+     ]
+    },
+    "glm": {
+     "dirs": 27,
+     "excluded_after_freeze": 0,
+     "parsed": 27,
+     "unparsed": 0,
+     "fallbacks": 0,
+     "annotator": "glm-5.3",
+     "rubric_sha256": [
+      "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26"
+     ]
+    }
+   },
+   "coverage": {
+    "claude_rep1": {
+     "rated_texts": 27,
+     "of_texts": 27
+    },
+    "claude_rep2": {
+     "rated_texts": 27,
+     "of_texts": 27
+    },
+    "claude_rep3": {
+     "rated_texts": 27,
+     "of_texts": 27
+    },
+    "claude_maj3": {
+     "rated_texts": 26,
+     "of_texts": 27
+    },
+    "gpt": {
+     "rated_texts": 27,
+     "of_texts": 27
+    },
+    "glm": {
+     "rated_texts": 27,
+     "of_texts": 27
+    },
+    "claude_ckpt": {
+     "rated_checkpoints": 35,
+     "of_checkpoints": 35
+    }
+   },
+   "complete_evaluators": [
+    "claude_ckpt",
+    "claude_rep1",
+    "claude_rep2",
+    "claude_rep3",
+    "glm",
+    "gpt"
+   ],
+   "identical_text_control_claude_ckpt": {
+    "texts": 7,
+    "texts_all_equal_S": 7,
+    "pairs": 9,
+    "pairs_differ": 0,
+    "pairs_lower_differ": 0,
+    "pairs_upper_differ": 0,
+    "q": 0.0,
+    "q_lower": 0.0,
+    "q_upper": 0.0,
+    "repeated_texts": 7,
+    "texts_with_different_S": 0,
+    "texts_with_different_fields": 0,
+    "detail": [
+     {
+      "text": "p5-h-24b98fb52e90",
+      "record_ids": [
+       "p5-deepseek-v4-pro-main-t039",
+       "p5-deepseek-v4-pro-main-t043",
+       "p5-deedy-deepseek-v4-pro-final"
+      ],
+      "S": [
+       2,
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p5-h-434f061a54d1",
+      "record_ids": [
+       "p5-gpt-5.6-sol-main-t001",
+       "p5-deedy-gpt-5.6-sol-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p5-h-8ef6ff5fdef4",
+      "record_ids": [
+       "p5-gpt-5.6-sol-pro-main-t002",
+       "p5-deedy-gpt-5.6-sol-pro-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p5-h-4f7baed6471b",
+      "record_ids": [
+       "p5-gpt-5.6-sol-xhigh-main-t002",
+       "p5-deedy-gpt-5.6-sol-xhigh-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p5-h-72f3ae519eb2",
+      "record_ids": [
+       "p5-grok-4.5-main-t008",
+       "p5-deedy-grok-4.5-final"
+      ],
+      "S": [
+       0,
+       0
+      ],
+      "lower": [
+       0,
+       0
+      ],
+      "upper": [
+       0,
+       0
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p5-h-4213eec1d7f4",
+      "record_ids": [
+       "p5-kimi-k3-main-t001",
+       "p5-deedy-kimi-k3-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     },
+     {
+      "text": "p5-h-b31f33063abf",
+      "record_ids": [
+       "p5-muse-spark-1.1-main-t001",
+       "p5-deedy-muse-spark-1.1-final"
+      ],
+      "S": [
+       2,
+       2
+      ],
+      "lower": [
+       2,
+       2
+      ],
+      "upper": [
+       2,
+       2
+      ],
+      "differs": false,
+      "field_differs": false
+     }
+    ]
+   },
+   "claude_q_three_text_passes": {
+    "texts": 27,
+    "texts_all_equal_S": 24,
+    "pairs": 81,
+    "pairs_differ": 7,
+    "pairs_lower_differ": 8,
+    "pairs_upper_differ": 4,
+    "q": 0.0864,
+    "q_lower": 0.0988,
+    "q_upper": 0.0494
+   },
+   "claude_q_all_claude_ratings": {
+    "texts": 27,
+    "texts_all_equal_S": 24,
+    "pairs": 195,
+    "pairs_differ": 12,
+    "pairs_lower_differ": 17,
+    "pairs_upper_differ": 9,
+    "q": 0.0615,
+    "q_lower": 0.0872,
+    "q_upper": 0.0462
+   },
+   "agreement": {
+    "claude_rep1_vs_gpt": {
+     "n": 27,
+     "observed": 0.889,
+     "kappa": 0.82,
+     "confusion": {
+      "00": 6,
+      "10": 1,
+      "11": 5,
+      "21": 2,
+      "22": 13
+     }
+    },
+    "claude_maj3_vs_gpt": {
+     "n": 26,
+     "observed": 0.885,
+     "kappa": 0.809,
+     "confusion": {
+      "00": 6,
+      "10": 1,
+      "11": 4,
+      "21": 2,
+      "22": 13
+     }
+    },
+    "claude_rep1_vs_glm": {
+     "n": 27,
+     "observed": 0.963,
+     "kappa": 0.939,
+     "confusion": {
+      "00": 6,
+      "11": 6,
+      "21": 1,
+      "22": 14
+     }
+    },
+    "claude_maj3_vs_glm": {
+     "n": 26,
+     "observed": 0.962,
+     "kappa": 0.935,
+     "confusion": {
+      "00": 6,
+      "11": 5,
+      "21": 1,
+      "22": 14
+     }
+    },
+    "gpt_vs_glm": {
+     "n": 27,
+     "observed": 0.926,
+     "kappa": 0.882,
+     "confusion": {
+      "00": 6,
+      "01": 1,
+      "11": 6,
+      "12": 1,
+      "22": 13
+     }
+    },
+    "claude_rep2_vs_gpt": {
+     "n": 27,
+     "observed": 0.815,
+     "kappa": 0.692,
+     "confusion": {
+      "00": 6,
+      "10": 1,
+      "11": 3,
+      "21": 4,
+      "22": 13
+     }
+    },
+    "claude_rep3_vs_gpt": {
+     "n": 27,
+     "observed": 0.889,
+     "kappa": 0.82,
+     "confusion": {
+      "00": 7,
+      "01": 1,
+      "11": 4,
+      "21": 2,
+      "22": 13
+     }
+    }
+   },
+   "field_agreement": {
+    "claude_rep1_vs_gpt": {
+     "both_present": 27,
+     "lower_equal": 25,
+     "upper_equal": 23
+    },
+    "claude_rep1_vs_glm": {
+     "both_present": 27,
+     "lower_equal": 27,
+     "upper_equal": 25
+    }
+   },
+   "conclusions_identical": {
+    "core": {
+     "improved": 12,
+     "regressed": 11,
+     "crossing": 10
+    },
+    "all_complete": {
+     "improved": 12,
+     "regressed": 11,
+     "crossing": 10
+    },
+    "all_evaluators": {
+     "improved": 12,
+     "regressed": 11,
+     "crossing": 10
+    },
+    "core_evaluators": [
+     "claude_ckpt",
+     "claude_rep1",
+     "claude_rep2",
+     "claude_rep3",
+     "gpt"
+    ],
+    "single_evaluators": [
+     "claude_ckpt",
+     "claude_rep1",
+     "claude_rep2",
+     "claude_rep3",
+     "gpt",
+     "glm"
+    ],
+    "lineages_with_glm_complete": 12,
+    "n_lineages_core_complete": 12,
+    "n_lineages_complete": 12,
+    "lineages_not_evaluable": [],
+    "definitions": {
+     "all_complete": "identical and determined under every evaluator with complete coverage of the lineage; denominator n_lineages_core_complete (the five core evaluators must be complete)",
+     "all_evaluators": "identical under all six single evaluators (Claude per-checkpoint, Claude passes 1-3, GPT, GLM); denominator n_lineages_complete (every evaluator rated every checkpoint of the lineage)"
+    }
+   },
+   "flips": [
+    {
+     "lineage": "deedy-deepseek-v4-pro",
+     "conclusions": [
+      "crossing"
+     ],
+     "values": {
+      "crossing": {
+       "claude_ckpt": 4,
+       "claude_rep1": 4,
+       "claude_rep2": 2,
+       "claude_rep3": 4,
+       "claude_maj3": 4,
+       "gpt": 6,
+       "glm": 4
+      }
+     },
+     "sequences": {
+      "claude_ckpt": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       1,
+       0,
+       2,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "gpt": [
+       1,
+       0,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       2
+      ],
+      "glm": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       1,
+       2,
+       2,
+       2
+      ]
+     }
+    },
+    {
+     "lineage": "ours-nemotron",
+     "conclusions": [
+      "regressed",
+      "crossing"
+     ],
+     "values": {
+      "regressed": {
+       "claude_ckpt": true,
+       "claude_rep1": false,
+       "claude_rep2": false,
+       "claude_rep3": true,
+       "gpt": true,
+       "glm": false
+      },
+      "crossing": {
+       "claude_ckpt": 3,
+       "claude_rep1": 3,
+       "claude_rep2": 2,
+       "claude_rep3": 3,
+       "gpt": 3,
+       "glm": 3
+      }
+     },
+     "sequences": {
+      "claude_ckpt": [
+       1,
+       0,
+       1,
+       2
+      ],
+      "claude_rep1": [
+       1,
+       1,
+       1,
+       2
+      ],
+      "claude_rep2": [
+       1,
+       1,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       1,
+       0,
+       0,
+       2
+      ],
+      "gpt": [
+       1,
+       0,
+       1,
+       2
+      ],
+      "glm": [
+       1,
+       1,
+       1,
+       2
+      ]
+     }
+    }
+   ],
+   "per_evaluator": {
+    "claude_ckpt": {
+     "complete": true,
+     "n_S1_checkpoints": 5,
+     "n_S0_checkpoints": 8,
+     "n_S2_checkpoints": 22,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 11,
+     "n_regressing_lineages": 2,
+     "n_crossings_inside_record": 5,
+     "n_improved": 5,
+     "n_ramps_1_to_2": 2,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep1": {
+     "complete": true,
+     "n_S1_checkpoints": 6,
+     "n_S0_checkpoints": 7,
+     "n_S2_checkpoints": 22,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 11,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 5,
+     "n_improved": 5,
+     "n_ramps_1_to_2": 2,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep2": {
+     "complete": true,
+     "n_S1_checkpoints": 4,
+     "n_S0_checkpoints": 7,
+     "n_S2_checkpoints": 24,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 11,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 5,
+     "n_improved": 5,
+     "n_ramps_1_to_2": 2,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_rep3": {
+     "complete": true,
+     "n_S1_checkpoints": 4,
+     "n_S0_checkpoints": 9,
+     "n_S2_checkpoints": 22,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 11,
+     "n_regressing_lineages": 2,
+     "n_crossings_inside_record": 5,
+     "n_improved": 5,
+     "n_ramps_1_to_2": 1,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "claude_maj3": {
+     "complete": false,
+     "n_S1_checkpoints": 5,
+     "n_S0_checkpoints": 7,
+     "n_S2_checkpoints": 22,
+     "n_unknown_checkpoints": 1,
+     "n_S_final_2": 11,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 4,
+     "n_improved": 5,
+     "n_ramps_1_to_2": 2,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "gpt": {
+     "complete": true,
+     "n_S1_checkpoints": 7,
+     "n_S0_checkpoints": 8,
+     "n_S2_checkpoints": 20,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 11,
+     "n_regressing_lineages": 2,
+     "n_crossings_inside_record": 5,
+     "n_improved": 5,
+     "n_ramps_1_to_2": 2,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    },
+    "glm": {
+     "complete": true,
+     "n_S1_checkpoints": 7,
+     "n_S0_checkpoints": 7,
+     "n_S2_checkpoints": 21,
+     "n_unknown_checkpoints": 0,
+     "n_S_final_2": 11,
+     "n_regressing_lineages": 1,
+     "n_crossings_inside_record": 5,
+     "n_improved": 5,
+     "n_ramps_1_to_2": 2,
+     "grade_agreement_first_pass": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     },
+     "grade_agreement_final": {
+      "agree": 9,
+      "of": 9,
+      "disagree": []
+     }
+    }
+   },
+   "S1_range_complete_single_evaluators": [
+    4,
+    7
+   ],
+   "lineages": [
+    {
+     "lineage": "deedy-claude-fable-5",
+     "model": "claude-fable-5",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p5-claude-fable-5-main-t005",
+       "sha12": "c3411aff6e4a"
+      },
+      {
+       "id": "p5-deedy-claude-fable-5-final",
+       "sha12": "4d5351b57f71"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-deepseek-v4-pro",
+     "model": "deepseek-v4-pro",
+     "source": "public",
+     "n_checkpoints": 9,
+     "checkpoints": [
+      {
+       "id": "p5-deepseek-v4-pro-main-t018",
+       "sha12": "7bb0208a2a47"
+      },
+      {
+       "id": "p5-deepseek-v4-pro-main-t025",
+       "sha12": "d3725770ef39"
+      },
+      {
+       "id": "p5-deepseek-v4-pro-main-t031",
+       "sha12": "2b4b78de5356"
+      },
+      {
+       "id": "p5-deepseek-v4-pro-main-t032",
+       "sha12": "e37aef179cf7"
+      },
+      {
+       "id": "p5-deepseek-v4-pro-main-t033",
+       "sha12": "cd94261ef509"
+      },
+      {
+       "id": "p5-deepseek-v4-pro-main-t038",
+       "sha12": "98f919cec9ce"
+      },
+      {
+       "id": "p5-deepseek-v4-pro-main-t039",
+       "sha12": "24b98fb52e90"
+      },
+      {
+       "id": "p5-deepseek-v4-pro-main-t043",
+       "sha12": "24b98fb52e90"
+      },
+      {
+       "id": "p5-deedy-deepseek-v4-pro-final",
+       "sha12": "24b98fb52e90"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       1,
+       0,
+       2,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ],
+      "gpt": [
+       1,
+       0,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       2
+      ],
+      "glm": [
+       1,
+       0,
+       1,
+       1,
+       2,
+       1,
+       2,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 4
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 4
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 2
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 4
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 4
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 6
+      },
+      "glm": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 4
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": false
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": false
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": false
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 3,
+      "claude_rep1": 3,
+      "claude_rep2": 2,
+      "claude_rep3": 3,
+      "claude_maj3": 3,
+      "gpt": 5,
+      "glm": 4
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol",
+     "model": "gpt-5.6-sol",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p5-gpt-5.6-sol-main-t001",
+       "sha12": "434f061a54d1"
+      },
+      {
+       "id": "p5-deedy-gpt-5.6-sol-final",
+       "sha12": "434f061a54d1"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "model": "gpt-5.6-sol-max",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p5-gpt-5.6-sol-max-main-t001",
+       "sha12": "edd956c8c5a1"
+      },
+      {
+       "id": "p5-gpt-5.6-sol-max-main-t002",
+       "sha12": "66a2948b3fd5"
+      },
+      {
+       "id": "p5-deedy-gpt-5.6-sol-max-final",
+       "sha12": "5323a7625b4d"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "model": "gpt-5.6-sol-pro",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p5-gpt-5.6-sol-pro-main-t001",
+       "sha12": "7115bacba58e"
+      },
+      {
+       "id": "p5-gpt-5.6-sol-pro-main-t002",
+       "sha12": "8ef6ff5fdef4"
+      },
+      {
+       "id": "p5-deedy-gpt-5.6-sol-pro-final",
+       "sha12": "8ef6ff5fdef4"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "model": "gpt-5.6-sol-xhigh",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p5-gpt-5.6-sol-xhigh-main-t001",
+       "sha12": "b80a6935fe6b"
+      },
+      {
+       "id": "p5-gpt-5.6-sol-xhigh-main-t002",
+       "sha12": "4f7baed6471b"
+      },
+      {
+       "id": "p5-deedy-gpt-5.6-sol-xhigh-final",
+       "sha12": "4f7baed6471b"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep1": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep2": [
+       0,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       0,
+       2,
+       2
+      ],
+      "claude_maj3": [
+       0,
+       2,
+       2
+      ],
+      "gpt": [
+       0,
+       2,
+       2
+      ],
+      "glm": [
+       0,
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 1
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-grok-4.5",
+     "model": "grok-4.5",
+     "source": "public",
+     "n_checkpoints": 3,
+     "checkpoints": [
+      {
+       "id": "p5-grok-4.5-main-t003",
+       "sha12": "f5979fee4e92"
+      },
+      {
+       "id": "p5-grok-4.5-main-t008",
+       "sha12": "72f3ae519eb2"
+      },
+      {
+       "id": "p5-deedy-grok-4.5-final",
+       "sha12": "72f3ae519eb2"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       0,
+       0,
+       0
+      ],
+      "claude_rep1": [
+       0,
+       0,
+       0
+      ],
+      "claude_rep2": [
+       0,
+       0,
+       0
+      ],
+      "claude_rep3": [
+       0,
+       0,
+       0
+      ],
+      "claude_maj3": [
+       0,
+       0,
+       0
+      ],
+      "gpt": [
+       0,
+       0,
+       0
+      ],
+      "glm": [
+       0,
+       0,
+       0
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": "none"
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 1,
+     "final_grade": 1,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-kimi-k3",
+     "model": "kimi-k3",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p5-kimi-k3-main-t001",
+       "sha12": "4213eec1d7f4"
+      },
+      {
+       "id": "p5-deedy-kimi-k3-final",
+       "sha12": "4213eec1d7f4"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "deedy-muse-spark-1.1",
+     "model": "muse-spark-1.1",
+     "source": "public",
+     "n_checkpoints": 2,
+     "checkpoints": [
+      {
+       "id": "p5-muse-spark-1.1-main-t001",
+       "sha12": "b31f33063abf"
+      },
+      {
+       "id": "p5-deedy-muse-spark-1.1-final",
+       "sha12": "b31f33063abf"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2,
+       2
+      ],
+      "claude_rep1": [
+       2,
+       2
+      ],
+      "claude_rep2": [
+       2,
+       2
+      ],
+      "claude_rep3": [
+       2,
+       2
+      ],
+      "claude_maj3": [
+       2,
+       2
+      ],
+      "gpt": [
+       2,
+       2
+      ],
+      "glm": [
+       2,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     },
+     "first_pass_grade": 7,
+     "final_grade": 7,
+     "last_is_final": true
+    },
+    {
+     "lineage": "ours-glm52",
+     "model": "glm-5.2",
+     "source": "ours",
+     "n_checkpoints": 1,
+     "checkpoints": [
+      {
+       "id": "p5-glm52-e7798221-v1",
+       "sha12": "d2bc30e7b324"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2
+      ],
+      "claude_rep1": [
+       2
+      ],
+      "claude_rep2": [
+       2
+      ],
+      "claude_rep3": [
+       2
+      ],
+      "claude_maj3": [
+       2
+      ],
+      "gpt": [
+       2
+      ],
+      "glm": [
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     }
+    },
+    {
+     "lineage": "ours-gpt56sol-ultra",
+     "model": "gpt-5.6-sol",
+     "source": "ours",
+     "n_checkpoints": 1,
+     "checkpoints": [
+      {
+       "id": "p5-gpt56-7324ef70-v1",
+       "sha12": "3090f2134de4"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       2
+      ],
+      "claude_rep1": [
+       2
+      ],
+      "claude_rep2": [
+       2
+      ],
+      "claude_rep3": [
+       2
+      ],
+      "claude_maj3": [
+       2
+      ],
+      "gpt": [
+       2
+      ],
+      "glm": [
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep1": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep2": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_rep3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "claude_maj3": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "gpt": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      },
+      "glm": {
+       "improved": false,
+       "regressed": false,
+       "crossing": 0
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "claude_maj3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": true,
+      "crossing": true
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 0,
+      "claude_rep1": 0,
+      "claude_rep2": 0,
+      "claude_rep3": 0,
+      "claude_maj3": 0,
+      "gpt": 0,
+      "glm": 0
+     }
+    },
+    {
+     "lineage": "ours-nemotron",
+     "model": "nemotron-3-ultra",
+     "source": "ours",
+     "n_checkpoints": 4,
+     "checkpoints": [
+      {
+       "id": "p5-nemotron-8edc6458-v1",
+       "sha12": "bfe4b2a3f1e3"
+      },
+      {
+       "id": "p5-nemotron-2587b733-v1",
+       "sha12": "27f4dde8c553"
+      },
+      {
+       "id": "p5-nemotron-2587b733-v2",
+       "sha12": "b2b39d07c157"
+      },
+      {
+       "id": "p5-nemotron-dbcab3c5-v1",
+       "sha12": "28cf6b5ebb02"
+      }
+     ],
+     "S_sequences": {
+      "claude_ckpt": [
+       1,
+       0,
+       1,
+       2
+      ],
+      "claude_rep1": [
+       1,
+       1,
+       1,
+       2
+      ],
+      "claude_rep2": [
+       1,
+       1,
+       2,
+       2
+      ],
+      "claude_rep3": [
+       1,
+       0,
+       0,
+       2
+      ],
+      "claude_maj3": [
+       1,
+       1,
+       null,
+       2
+      ],
+      "gpt": [
+       1,
+       0,
+       1,
+       2
+      ],
+      "glm": [
+       1,
+       1,
+       1,
+       2
+      ]
+     },
+     "conclusions": {
+      "claude_ckpt": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "claude_rep1": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 3
+      },
+      "claude_rep2": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 2
+      },
+      "claude_rep3": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "claude_maj3": {
+       "improved": true,
+       "regressed": null,
+       "crossing": null
+      },
+      "gpt": {
+       "improved": true,
+       "regressed": true,
+       "crossing": 3
+      },
+      "glm": {
+       "improved": true,
+       "regressed": false,
+       "crossing": 3
+      }
+     },
+     "evaluators_complete": [
+      "claude_ckpt",
+      "claude_rep1",
+      "claude_rep2",
+      "claude_rep3",
+      "gpt",
+      "glm"
+     ],
+     "identical_core": {
+      "improved": true,
+      "regressed": false,
+      "crossing": false
+     },
+     "identical_all_complete": {
+      "improved": true,
+      "regressed": false,
+      "crossing": false
+     },
+     "core_complete": true,
+     "all_complete": true,
+     "identical_all_evaluators": {
+      "improved": true,
+      "regressed": false,
+      "crossing": false
+     },
+     "S_final": {
+      "claude_ckpt": 2,
+      "claude_rep1": 2,
+      "claude_rep2": 2,
+      "claude_rep3": 2,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 2
+     },
+     "n_S1": {
+      "claude_ckpt": 2,
+      "claude_rep1": 3,
+      "claude_rep2": 2,
+      "claude_rep3": 1,
+      "claude_maj3": 2,
+      "gpt": 2,
+      "glm": 3
+     }
+    }
+   ],
+   "per_text": [
+    {
+     "text": "p5-h-c3411aff6e4a",
+     "lineage": "deedy-claude-fable-5",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-4d5351b57f71",
+     "lineage": "deedy-claude-fable-5",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-7bb0208a2a47",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      1,
+      1,
+      1
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p5-h-d3725770ef39",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p5-h-2b4b78de5356",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      1,
+      2,
+      1
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p5-h-e37aef179cf7",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      1,
+      1,
+      1
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p5-h-cd94261ef509",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 1,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-98f919cec9ce",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p5-h-24b98fb52e90",
+     "lineage": "deedy-deepseek-v4-pro",
+     "records": 3,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-434f061a54d1",
+     "lineage": "deedy-gpt-5.6-sol",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-edd956c8c5a1",
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p5-h-66a2948b3fd5",
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-5323a7625b4d",
+     "lineage": "deedy-gpt-5.6-sol-max",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-7115bacba58e",
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p5-h-8ef6ff5fdef4",
+     "lineage": "deedy-gpt-5.6-sol-pro",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-b80a6935fe6b",
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p5-h-4f7baed6471b",
+     "lineage": "deedy-gpt-5.6-sol-xhigh",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-f5979fee4e92",
+     "lineage": "deedy-grok-4.5",
+     "records": 1,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p5-h-72f3ae519eb2",
+     "lineage": "deedy-grok-4.5",
+     "records": 2,
+     "claude_rep": [
+      0,
+      0,
+      0
+     ],
+     "claude_ckpt": [
+      0,
+      0
+     ],
+     "gpt": 0,
+     "glm": 0
+    },
+    {
+     "text": "p5-h-4213eec1d7f4",
+     "lineage": "deedy-kimi-k3",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-b31f33063abf",
+     "lineage": "deedy-muse-spark-1.1",
+     "records": 2,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2,
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-d2bc30e7b324",
+     "lineage": "ours-glm52",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-3090f2134de4",
+     "lineage": "ours-gpt56sol-ultra",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    },
+    {
+     "text": "p5-h-bfe4b2a3f1e3",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      1,
+      1,
+      1
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p5-h-27f4dde8c553",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      1,
+      1,
+      0
+     ],
+     "claude_ckpt": [
+      0
+     ],
+     "gpt": 0,
+     "glm": 1
+    },
+    {
+     "text": "p5-h-b2b39d07c157",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      1,
+      2,
+      0
+     ],
+     "claude_ckpt": [
+      1
+     ],
+     "gpt": 1,
+     "glm": 1
+    },
+    {
+     "text": "p5-h-28cf6b5ebb02",
+     "lineage": "ours-nemotron",
+     "records": 1,
+     "claude_rep": [
+      2,
+      2,
+      2
+     ],
+     "claude_ckpt": [
+      2
+     ],
+     "gpt": 2,
+     "glm": 2
+    }
+   ]
+  }
+ },
+ "reference_p3_p6": {
+  "3": {
+   "n_lineages": 17,
+   "n_checkpoints": 57,
+   "n_distinct_texts": 48,
+   "layer0_repeated_texts": 8,
+   "layer0_repeated_consistent_S": 8,
+   "claude_q": 0.0243,
+   "claude_q_pairs": 288,
+   "claude_q_texts": 48,
+   "kappa_claude_vs_gpt_released": {
+    "n": 48,
+    "observed": 0.958,
+    "kappa": 0.882,
+    "confusion": {
+     "00": 37,
+     "11": 1,
+     "20": 1,
+     "21": 1,
+     "22": 8
+    }
+   },
+   "kappa_claude_vs_glm_released": {
+    "n": 48,
+    "observed": 0.979,
+    "kappa": 0.94,
+    "confusion": {
+     "00": 37,
+     "10": 1,
+     "22": 10
+    }
+   },
+   "kappa_glm_vs_claude_paper": 0.94,
+   "kappa_glm_vs_gpt_paper": 0.815,
+   "identical_across_evaluators": {
+    "improved": 16,
+    "regressed": 16,
+    "crossing": 15
+   },
+   "S1_range_single_evaluators": [
+    0,
+    2
+   ],
+   "S1_layers": {
+    "raw": 0,
+    "glm": 0,
+    "kimi": 1,
+    "claude": 1,
+    "gpt": 2
+   },
+   "grade_agreement_first_pass_public_finals": {
+    "claude": {
+     "agree": 8,
+     "of": 9
+    },
+    "gpt": {
+     "agree": 9,
+     "of": 9
+    }
+   },
+   "grade_agreement_final_public_finals": {
+    "claude": {
+     "agree": 8,
+     "of": 9
+    },
+    "gpt": {
+     "agree": 9,
+     "of": 9
+    }
+   }
+  },
+  "6": {
+   "n_lineages": 12,
+   "n_checkpoints": 42,
+   "n_distinct_texts": 36,
+   "layer0_repeated_texts": 6,
+   "layer0_repeated_consistent_S": 6,
+   "claude_q": 0.0324,
+   "claude_q_pairs": 216,
+   "claude_q_texts": 36,
+   "kappa_claude_vs_gpt_released": {
+    "n": 36,
+    "observed": 0.972,
+    "kappa": 0.949,
+    "confusion": {
+     "00": 22,
+     "11": 5,
+     "21": 1,
+     "22": 8
+    }
+   },
+   "kappa_claude_vs_glm_released": {
+    "n": 36,
+    "observed": 0.944,
+    "kappa": 0.897,
+    "confusion": {
+     "00": 22,
+     "11": 3,
+     "12": 2,
+     "22": 9
+    }
+   },
+   "kappa_glm_vs_claude_paper": 0.897,
+   "kappa_glm_vs_gpt_paper": 0.847,
+   "identical_across_evaluators": {
+    "improved": 12,
+    "regressed": 11,
+    "crossing": 10
+   },
+   "S1_range_single_evaluators": [
+    4,
+    7
+   ],
+   "S1_layers": {
+    "raw": 4,
+    "glm": 4,
+    "kimi": 5,
+    "claude": 6,
+    "gpt": 7
+   },
+   "grade_agreement_first_pass_public_finals": {
+    "claude": {
+     "agree": 8,
+     "of": 9
+    },
+    "gpt": {
+     "agree": 8,
+     "of": 9
+    }
+   },
+   "grade_agreement_final_public_finals": {
+    "claude": {
+     "agree": 9,
+     "of": 9
+    },
+    "gpt": {
+     "agree": 9,
+     "of": 9
+    }
+   }
+  },
+  "layer0_identical_text_paper": {
+   "3": {
+    "repeated_texts": 8,
+    "consistent_S": 8,
+    "differ": 0
+   },
+   "6": {
+    "repeated_texts": 6,
+    "consistent_S": 6,
+    "differ": 0
+   },
+   "2": {
+    "repeated_texts": 5,
+    "consistent_S": 3,
+    "differ": 2
+   },
+   "pooled": {
+    "repeated_texts": 19,
+    "differ": 2
+   }
+  }
+ },
+ "audit_anchors": {
+  "p1-nemotron-e1fce43d-v1": {
+   "description": "Nemotron P1 draft accepted by two gates on 2026-07-20 (paper id 2853f8e6, run imo-2026-p1-2853f8e62db44a6a8b6f604ae1fce43d): 'nonincreasing product stays above one'",
+   "S_by_evaluator": {
+    "claude_ckpt": 1,
+    "claude_rep1": 1,
+    "claude_rep2": 1,
+    "claude_rep3": 1,
+    "claude_maj3": 1,
+    "gpt": 1,
+    "glm": 1
+   }
+  },
+  "p1-nemotron-da850012-v1": {
+   "description": "Nemotron P1 corrected fresh attempt of 2026-07-21 (paper id dd064edd, run imo-2026-p1-dd064edd0e094391befec955da850012)",
+   "S_by_evaluator": {
+    "claude_ckpt": 2,
+    "claude_rep1": 2,
+    "claude_rep2": 2,
+    "claude_rep3": 2,
+    "claude_maj3": 2,
+    "gpt": 2,
+    "glm": 2
+   }
+  }
+ }
+}

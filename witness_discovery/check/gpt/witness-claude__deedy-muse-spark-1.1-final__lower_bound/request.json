@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "lower_bound",
+ "text_sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "not_written",
+  "quote": "But we also need to consider other Xiang strategies that do not split each big piece exactly once. We argued they give Liu at least as much. Need to prove best response for Xiang among all allowed splits is indeed to split each big once (any way).",
+  "witness": "Missing statement: for the proposed Liu division and EVERY Xiang reply with at most n cuts (arbitrary distribution of cuts among pieces, including leaving pieces uncut or splitting one piece several times), Liu's guaranteed share is at least the claimed constant. The text proves the delta-cancellation identity only under the assumption that Xiang splits each big piece exactly once; other replies are checked only for n=2 by two examples ('0.7 >0.6', '0.6 again'), and the text itself flags the general case as still 'to prove'. (Additionally the claimed target (n+1)/(2n+1) is not the correct value.)",
+  "load_bearing": "The lower bound claim c >= (n+1)/(2n+1) is asserted only after this admitted gap; without covering all Xiang replies the division gives no guarantee."
+ },
+ "started_utc": "2026-09-06 04:45:43 UTC"
+}

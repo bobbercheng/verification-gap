@@ -1,0 +1,126 @@
+# imo-2026-03 — tracking file
+
+## Status
+solved
+
+## Problem
+Let $n$ be a positive integer. Liu Bang and Xiang Yu have a stick of length $1$ and want to divide it between themselves. Liu marks at most $n$ points on the stick, and then Xiang marks at most $n$ points on the stick. The marked points are distinct. Then, the stick is cut at all marked points, creating a number of pieces. Afterwards, they take turns claiming any unclaimed piece of the stick, with Liu going first. Each player's goal is to maximise the total length of their own pieces.
+
+For each $n$, determine the largest value $c$ such that Liu may guarantee a total length of at least $c$, regardless of Xiang's play.
+
+## Approaches tried
+- **Claiming-phase reduction (Lemma 1).** With final piece lengths $v_1\ge\cdots\ge v_M$ fixed, optimal alternating play gives Liu exactly the odd sum $v_1+v_3+\cdots$ (two pairing strategies). So the game becomes: Liu picks a composition into $\le n+1$ parts; Xiang refines with $\le n$ cuts; payoff = odd sum.
+- **δ-reformulation.** With $\delta(S)=\sum_i(-1)^{i+1}v_i=\operatorname{odd}(S)-\operatorname{even}(S)$, Liu's take $=(1+\delta)/2$; answer $c_n=(1+\delta_n)/2$, $\delta_n=\max_A\min_{\text{refinements}}\delta$. Target: $\delta_n=1/N$, $N=2^{n+1}-1$.
+- **Dead ends (recorded in `approaches/dead-ends.md`).** (i) Xiang's recursive "peeling" strategy gives a deterministic leftover $q(A)$, but $q(A)\le 1/N$ is FALSE ($A=(5,3,3,2)/13$ has $q=1/13$ yet Xiang achieves $\delta=0$; $A=(1.2,1,0.9)$ has $q=0.7$ but Xiang achieves $0.1$). (ii) Naive lower-bound inductions fail: $\delta$ not monotone under cutting; the abstract combination statement is refuted ($X=(1.5,1.5,1)$, $R=(1.3,1.3,1)$: $\delta(X\cup R)=0$). (iii) $\mu(S)=\min|\sum\pm\text{pieces}|$ is not monotone under cutting ($\mu(\{10,7,4,2\})=1$ but cutting $10\to(6,4)$ gives $\mu=0$), so $\delta(S)\ge\mu(A)$ cannot be proved by uncutting.
+- **WINNING IDEA 1 — lower bound via even-position majorization (Lemma E).** For any refinement of the geometric composition $G_n=(2^n,\dots,1)$ (units), sorted pieces satisfy $\sum_{i\le r}v_{2i}\le 2^n-2^{n-r}$ for all $r\le n$; induction on $r$ with a two-case step (if $v_{2r}>2^{n-r}$, the top-$2r$ pieces lie in the $r$ biggest parts, of total mass $2^{n+1}-2^{n-r+1}$, and the even half is at most half of that). At $r=\lfloor M/2\rfloor\le n$: Xiang's even sum $\le 2^n-1$, so Liu's odd sum $\ge 2^n$.
+- **WINNING IDEA 2 — upper bound via pigeonhole + supply–demand cancellation.** $2^{n+1}$ subset sums of $A$ lie in $[0,1]$, so two differ by $\le 1/N$; i.e. disjoint $P,Q$ with $|\sum_P a-\sum_Q a|\le 1/N$. Xiang halves the remaining parts (self-pairs) and greedily cancels $P$ against $Q$ (cut the larger side's biggest piece to match the smaller side's biggest; pair the equal pieces). Final config = equal pairs + leftovers of total $\le 1/N$; equal pairs contribute $0$ to $\delta$ (Lemma 3), so $\delta\le 1/N$. Cuts $\le n$. Tight on $G_n$ (subset sums are distinct integers; min gap $=1$).
+- **Verification.** `code/verify_bounds.py`: Lemma E checked on 3000 random refinements of $G_n$ per $n=1..5$ (min $\delta$ seen $=1$, tight); Xiang's strategy checked on 3000 random compositions per $n=1..5$ (always $\delta\le 1/N$ with $\le n$ cuts; exactly $1/N$ on geometric). `code/exact_general.py` (exact vertex-enumeration solver): Liu's value on geometric $=2^n/N$ for $n=1,2,3$.
+- **Repair round (defects D1, D2 in Theorem B).** D1: in the one-empty-pool branch the text claimed cuts $=|Z|\le n-1$, false when the nonempty side is a singleton (then $|Z|=n$); the correct bound $|Z|=n+1-|P|\le n$ suffices and is now asserted (numerically exercised in `code/repair_checks.py`: 54 instances with $|Z|=n$, all cuts $\le n$). D2: the evaluation step used $\delta(L)\le\max L$, undefined when the leftover family $L=\varnothing$ (possible when $D=0$, e.g. $n=1$, $A=(1/2,1/2)$); the $L=\varnothing$ case gives $\delta=0$ directly and is now handled separately (exercised 24679 times in `code/repair_checks.py`, always $\delta=0$). Also hardened two cosmetic degenerate spots: Theorem A at $r=0$ (empty even sum) and Lemma 1's claim proof (complete enumeration of Liu's claim modes).
+
+## Current best
+**Answer: $c_n=\dfrac{2^n}{2^{n+1}-1}$.** Liu guarantees it by marking so the parts are $\left(\tfrac{2^n}{N},\tfrac{2^{n-1}}{N},\dots,\tfrac{1}{N}\right)$ with $N=2^{n+1}-1$ (Lemma E then caps Xiang's even-position total at $(2^n-1)/N$). Xiang caps Liu at it, against *any* opening composition, by the pigeonhole/cancellation strategy achieving $\delta\le 1/N$. Complete self-contained proof below (defects D1, D2 repaired; no remaining gaps). Supporting files: `lemmas/claiming-phase.md`, `lemmas/delta-basics.md`, `lemmas/even-majorization.md`, `lemmas/xiang-capping.md`, `approaches/winning-strategies.md`, `approaches/dead-ends.md`.
+
+## Full proof
+
+### Setup and notation
+Liu's $k_L\le n$ distinct marks split $[0,1]$ into $m=k_L+1\le n+1$ **parts** with lengths $a_1,\dots,a_m>0$, $\sum a_i=1$ (marks at $0$ or $1$ do nothing; assume all marks interior). Xiang's $k_X\le n$ marks are distinct from Liu's and from each other, so each lands in the interior of one current part and splits it into two; hence Xiang refines Liu's composition using at most $n$ cuts, and the final number of pieces is $M=m+k_X\le 2n+1$.
+
+For a finite multiset $S$ of positive reals, $|S|=M$, write its elements in decreasing order $v_1\ge v_2\ge\cdots\ge v_M$ and define
+$$\operatorname{odd}(S)=\sum_{i\text{ odd}}v_i,\qquad \operatorname{even}(S)=\sum_{i\text{ even}}v_i,\qquad \delta(S)=\operatorname{odd}(S)-\operatorname{even}(S)=\sum_{i=1}^M(-1)^{i+1}v_i\ge 0,$$
+where $\delta(S)\ge0$ follows from $v_1\ge v_2,\ v_3\ge v_4,\ \dots$ (pairing consecutive terms).
+
+### Lemma 1 (the claiming phase is greedy)
+With the final multiset $S$ fixed, the value of the alternating-claim game (Liu first) equals $\operatorname{odd}(S)$ for Liu and $\operatorname{even}(S)$ for Xiang.
+
+*Proof.* Since $\operatorname{odd}(S)+\operatorname{even}(S)=\sum S=1$, it suffices to show Liu can guarantee $\ge\operatorname{odd}(S)$ and Xiang can guarantee $\ge\operatorname{even}(S)$.
+
+*Liu's strategy.* Liu first claims $v_1$. Fix the pairing $(v_2,v_3),(v_4,v_5),\dots$ of the remaining pieces; if $M$ is even, $v_M$ is left unpaired. From then on Liu answers each Xiang move as follows: if the piece Xiang just took has its mate still unclaimed, Liu claims the mate; otherwise (Xiang took the unpaired piece, or a piece whose mate is already claimed), Liu claims the larger element of any still-untouched pair, if one exists, and otherwise the largest remaining piece.
+
+**Claim.** From each pair $(v_{2k},v_{2k+1})$, Liu ends up holding at least one piece, of value $\ge v_{2k+1}=\min(\text{pair})$. *Proof of claim.* Suppose some pair ended with both pieces claimed by Xiang, and consider the moment the second of them was claimed; the first was claimed earlier. It was not claimed by Xiang: at that earlier moment the mate was still unclaimed (it is only claimed later, by Xiang), so Liu's rule would have immediately given Liu the mate — but the mate ends with Xiang, contradiction. It was also not claimed by Liu: any piece Liu ever claims — whether as a mate-response, as the larger element of an untouched pair, or as the fallback "largest remaining piece" — stays with Liu until the end, again contradicting that both pieces end with Xiang. So every pair leaves at least one piece to Liu.
+
+That piece has value $\ge\min(\text{pair})$: if Liu got it as a mate-response, it is the mate of Xiang's piece, hence $\ge\min(\text{pair})$; if as the larger element of an untouched pair, it is $\ge\min(\text{pair})$; if Liu claims a pair's smaller element $y$ as the fallback "largest remaining piece", then the pair was already touched, and its larger element $x$ was claimed by Liu — had Xiang claimed $x$ while $y$ was free, Liu's rule would have forced him to take $y$ immediately, so $y$ would not be available now — hence Liu holds both $x$ and $y$, contributing $x+y\ge\min(\text{pair})$.
+
+Since distinct pairs contribute distinct pieces, Liu's total is at least $v_1+\sum_{k\ge1}v_{2k+1}=\operatorname{odd}(S)$.
+
+*Xiang's strategy.* Fix the pairing $(v_1,v_2),(v_3,v_4),\dots$; if $M$ is odd, $v_M$ is left unpaired. Whenever Liu takes a piece whose mate is free, Xiang takes the mate; otherwise Xiang takes the larger element of an untouched pair if one exists, else the largest remaining piece. (After each Liu move, except the last one when $M$ is odd, at least one piece remains, so Xiang's move exists.) The same argument with roles reversed shows Xiang holds, from each pair $(v_{2k-1},v_{2k})$, at least one piece of value $\ge v_{2k}$, so his total is $\ge\operatorname{even}(S)$, whence Liu's is $\le\operatorname{odd}(S)$. ∎
+
+### Lemma 2 (reduction to a one-dimensional game)
+The answer is $c_n=\dfrac{1+\delta_n}{2}$, where
+$$\delta_n=\max_{A:\,|A|\le n+1}\ \min_{\text{refinements of }A\text{ with }\le n\text{ cuts}}\delta(S).$$
+*Proof.* Immediate from Lemma 1: Liu's take is $\operatorname{odd}(S)=(1+\delta(S))/2$ since the pieces sum to $1$; Liu chooses $A$ to maximize this, then Xiang chooses the refinement to minimize it. ∎
+
+We will show $\delta_n=1/N$ where $N=2^{n+1}-1$, i.e. $c_n=\dfrac{1+1/N}{2}=\dfrac{2^n}{2^{n+1}-1}$.
+
+### Lemma 3 (equal pairs cancel)
+If a multiset $S$ can be partitioned into pairs of equal pieces and a sub-multiset $L$, then $\delta(S)=\delta(L)$ (with $\delta(\varnothing)=0$).
+
+*Proof.* Sort $S$ decreasingly. Remove one equal pair $\{p,p\}$: all pieces of value $p$ form a consecutive block, so we may assume the pair occupies adjacent positions $j,j+1$. Their contribution to $\delta$ is $(-1)^{j+1}p+(-1)^{j+2}p=0$, and every later piece keeps the parity of its position (indices shift by $2$). Hence $\delta$ is unchanged by removing the pair. Repeat until only $L$ remains. ∎
+
+### Theorem A (Liu's strategy — the lower bound)
+Liu marks the $n$ points that split the stick into parts of lengths $\dfrac{2^n}{N},\dfrac{2^{n-1}}{N},\dots,\dfrac{1}{N}$. Then Liu guarantees $\dfrac{2^n}{N}$.
+
+*Proof.* Work in units of $1/N$: the parts are $2^n,2^{n-1},\dots,2,1$, total $N=2^{n+1}-1$. Let $S$ be any refinement with $\le n$ cuts, pieces $v_1\ge v_2\ge\cdots\ge v_M$, $M\le 2n+1$.
+
+**Lemma E (even-position majorization).** For every $1\le r\le\lfloor M/2\rfloor$,
+$$v_2+v_4+\cdots+v_{2r}\ \le\ 2^n-2^{\,n-r}.$$
+
+*Proof of Lemma E.* Induction on $r$.
+
+*Base $r=1$.* Suppose $v_2>2^{n-1}$. Then $v_1\ge v_2>2^{n-1}$. A piece exceeding $2^{n-1}$ must come from a part of size $>2^{n-1}$, and the only such part is $2^n$; so $v_1,v_2$ are both sub-pieces of the part $2^n$, giving $2v_2\le v_1+v_2\le 2^n$, i.e. $v_2\le 2^{n-1}$, contradiction. Hence $v_2\le 2^{n-1}=2^n-2^{n-1}$.
+
+*Step $r-1\to r$.* Two cases.
+
+Case 1: $v_{2r}\le 2^{n-r}$. Then by the induction hypothesis,
+$$\sum_{i=1}^{r}v_{2i}=\sum_{i=1}^{r-1}v_{2i}+v_{2r}\le\bigl(2^n-2^{\,n-r+1}\bigr)+2^{\,n-r}=2^n-2^{\,n-r}.$$
+
+Case 2: $v_{2r}>2^{n-r}$. Then each of $v_1\ge\cdots\ge v_{2r}$ exceeds $2^{n-r}$, so each comes from a part of size $>2^{n-r}$; part sizes being powers of $2$, those parts have size $\ge 2^{n-r+1}$, i.e. they are among the $r$ parts $2^{n-r+1},\dots,2^n$, whose total length is $\sum_{j=n-r+1}^{n}2^j=2^{n+1}-2^{n-r+1}$. The pieces $v_1,\dots,v_{2r}$ are pairwise disjoint subintervals of these parts, so
+$$\sum_{i=1}^{2r}v_i\le 2^{n+1}-2^{\,n-r+1}.$$
+But $v_2\le v_1,\ v_4\le v_3,\ \dots,\ v_{2r}\le v_{2r-1}$, so $\sum_{i=1}^r v_{2i}\le\tfrac12\sum_{i=1}^{2r}v_i\le 2^n-2^{\,n-r}$. ∎ (Lemma E)
+
+Now Xiang's total is $\operatorname{even}(S)=\sum_{i=1}^{\lfloor M/2\rfloor}v_{2i}$. Set $r:=\lfloor M/2\rfloor$; since $M\le 2n+1$ we have $r\le n$. If $r=0$ (i.e. $M=1$), the sum is empty and $\operatorname{even}(S)=0\le 2^n-1$ trivially. Otherwise, by Lemma E,
+$$\operatorname{even}(S)\le 2^n-2^{\,n-r}\le 2^n-1,$$
+where the last inequality uses $r\le n$. Therefore Liu's total is $\operatorname{odd}(S)=N-\operatorname{even}(S)\ge N-(2^n-1)=2^n$ units, i.e. $\dfrac{2^n}{N}$ of the stick. ∎ (Theorem A)
+
+### Theorem B (Xiang's strategy — the upper bound)
+For every composition $A$ with $m\le n+1$ parts summing to $1$, Xiang has a refinement with $\le n$ cuts achieving $\delta\le\dfrac1N$. Consequently Liu's take is at most $\dfrac{1+1/N}{2}=\dfrac{2^n}{N}$ no matter what Liu plays.
+
+*Proof.* If $m\le n$, Xiang cuts every part into two equal halves ($m\le n$ cuts): all pieces come in equal pairs, so by Lemma 3 (with $L=\varnothing$), $\delta=0\le 1/N$.
+
+Now assume $m=n+1$.
+
+**Step 1: a near-cancelling sign pattern (pigeonhole).** Consider the $2^{n+1}$ subset sums $\sum_{i\in I}a_i$, $I\subseteq\{1,\dots,n+1\}$. They lie in $[0,1]$. Sort them: $s_0\le s_1\le\cdots\le s_N$ (there are $2^{n+1}=N+1$ sums, hence $N$ consecutive gaps). If all $N$ gaps exceeded $1/N$, the total spread $s_N-s_0\le 1$ would exceed $N\cdot\tfrac1N=1$, impossible. Hence there are $I\ne J$ with $\bigl|\sum_I a_i-\sum_J a_i\bigr|\le 1/N$. Set
+$$P=I\setminus J,\qquad Q=J\setminus I,\qquad Z=\{1,\dots,n+1\}\setminus(P\cup Q).$$
+Then $P,Q$ are disjoint, $P\cup Q\ne\varnothing$, and since $\sum_I a_i-\sum_J a_j=\sum_{i\in P}a_i-\sum_{j\in Q}a_j$ (the terms indexed by $I\cap J$ cancel),
+$$D:=\Bigl|\sum_{i\in P}a_i-\sum_{j\in Q}a_j\Bigr|\le \frac1N.$$
+
+**Step 2: Xiang's cuts.** Xiang cuts each part $a_i$, $i\in Z$, in half — producing an equal pair $(a_i/2,a_i/2)$ — using $|Z|$ cuts.
+
+If both $P,Q$ are nonempty, he processes the parts of $P$ ("supply") and $Q$ ("demand") as follows. Maintain two pools $S=\{a_i:i\in P\}$, $T=\{a_j:j\in Q\}$. Repeat while both pools are nonempty: let $s=\max S$, $t=\max T$.
+- If $s=t$: pair the two pieces off (no cut); remove both from the pools.
+- If $s>t$: cut the piece $s$ into $(t,\,s-t)$; pair the new $t$-piece with the demand piece $t$; return $s-t$ to $S$. (One cut.)
+- If $s<t$: symmetrically, cut $t$ into $(s,\,t-s)$, pair the two $s$'s, return $t-s$ to $T$. (One cut.)
+
+Each cut step strictly reduces $|S|+|T|$ by $1$ (one piece is consumed from the smaller-value side; the larger side trades one piece for one piece), and each free pairing reduces it by $2$; hence the process terminates, and it ends when one pool is empty, leaving $\ell\ge 0$ leftover pieces in the other pool. Since the paired mass removed from the two sides is equal, the leftover total is $\bigl|\sum_P a_i-\sum_Q a_j\bigr|=D$.
+
+*Cut count.* If $c$ and $f$ are the numbers of cut and free steps, then $c+2f=|P|+|Q|-\ell$. If $\ell\ge1$, then $c\le|P|+|Q|-1$. If $\ell=0$, the last step must have been free: indeed, a cut step returns a positive piece ($s-t$ or $t-s$) to one pool, so immediately after a cut step that pool is nonempty, i.e. a cut step cannot leave both pools empty; hence $f\ge1$ and $c\le|P|+|Q|-2$. In all cases $c\le|P|+|Q|-1$, and the total number of cuts is
+$$|Z|+c\ \le\ |Z|+|P|+|Q|-1\ =\ n.$$
+
+If one of $P,Q$ is empty (say $Q=\varnothing$; then $P\ne\varnothing$ since $P\cup Q\ne\varnothing$), no process cuts are made; the parts of $P$ are left whole as leftovers, again with total $D=\sum_P a_i$, and the total number of cuts is
+$$|Z|\ =\ (n+1)-|P|\ \le\ n,$$
+since $|P|\ge1$. (Note that $|P|=1$ gives $|Z|=n$: all $n$ marks may genuinely be needed here, e.g. $n=1$, $A=(1/3,2/3)$ with $P=\{1\}$, $Q=\varnothing$, where Xiang halves the second part and $\delta=1/3$ results.)
+
+**Step 3: evaluation.** The final multiset of pieces consists of equal pairs plus a leftover family $L$ (the $\ell$ unpaired pool pieces, resp. the whole parts of the nonempty side) with $\sum L=D\le 1/N$. By Lemma 3, $\delta(\text{final})=\delta(L)$.
+
+- If $L=\varnothing$ — which happens exactly when the cancellation removes both pools entirely (possible only when $D=0$; e.g. $n=1$, $A=(1/2,1/2)$, $P=\{1\}$, $Q=\{2\}$) — then $\delta(\text{final})=\delta(\varnothing)=0\le 1/N$.
+- If $L\ne\varnothing$, let $\ell_1=\max L$; then, using $\delta(\cdot)\ge0$,
+$$\delta(L)=\ell_1-\delta\bigl(L\setminus\{\ell_1\}\bigr)\le\ell_1\le\sum L=D\le\frac1N.$$
+
+In all cases $\delta(\text{final})\le 1/N$.
+
+All cuts are made in the interior of current pieces, hence at distinct points (each new cut lies strictly inside a current piece, while previous cut points are boundary points of the current pieces) and different from Liu's marks (which are part boundaries) — a legal set of at most $n$ marks for Xiang. ∎ (Theorem B)
+
+### Conclusion
+By Theorem A, Liu guarantees $\dfrac{2^n}{N}$ by marking geometrically. By Theorem B, Xiang prevents Liu from getting more than $\dfrac{2^n}{N}$ against any opening. Hence
+$$\boxed{\,c_n=\frac{2^n}{\,2^{n+1}-1\,}\,}.$$
+
+**Tightness remark.** Against Liu's geometric composition, Xiang's strategy of Theorem B must use a pattern with $D=1/N$ exactly: the subset sums of $\{1,2,4,\dots,2^n\}$ are all distinct integers (binary representation), so the minimum gap is $1$ unit $=1/N$, attained e.g. by $\{2^n\}$ vs $\{1,2,\dots,2^{n-1}\}$. The resulting play halves parts $2^n,\dots,2$ once each, leaving pieces $(2^{n-1},2^{n-1},\dots,1,1,1)$ with $\delta=1/N$. So the value is attained, not just approached.

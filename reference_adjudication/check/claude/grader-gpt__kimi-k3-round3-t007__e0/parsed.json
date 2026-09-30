@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__kimi-k3-round3-t007__e0",
+ "case": "kimi-k3-round3-t007",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.6,
+  "input_tokens": 2,
+  "output_tokens": 447,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 3302,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2849,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0029389999999999998,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 447,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 3302,
+    "webSearchRequests": 0,
+    "costUSD": 0.0450265,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 138,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The write-up itself states Part B (the universal upper bound, ledger L3.2) is open, and explicitly flags the realizability gap: the pigeonhole yields a sign vector in {-1,0,1}^{n+1} with small signed sum, but no argument shows Xiang can realize it with at most n cuts (their own {1,2} example shows +1+1 signs are not realizable by their cancel/chain ops). No other passage supplies the construction; the published route needs the mirrored-cut pairing of S against T with bisection of the remaining segments, which is absent. That is a missing lemma, not a local misprint.",
+  "objection_correct_note": null
+ },
+ "elsewhere_anchor": null
+}

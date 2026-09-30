@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-24b98fb52e90",
+  "problem": "5",
+  "sha256": "24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931",
+  "path": "checkpoint_inputs_ext/24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 39,
+  "record_ids": [
+    "p5-deepseek-v4-pro-main-t039",
+    "p5-deepseek-v4-pro-main-t043",
+    "p5-deedy-deepseek-v4-pro-final"
+  ],
+  "bytes": 10024,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 19349,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1265,
+        "reasoning_output_tokens": 1134
+      },
+      "sec": 37.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM verification",
+    "upper_bound_mechanism": "orbit comparison and fixed-point separation/covering",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof of the structural identity, nonnegative orbit differences, equality of positive differences, and exclusion of mixed fixed/non-fixed points. Sufficiency checks both inequalities. Minor harmless issues: an unused 4cx typo (should be 4cy) and an imprecise dichotomy temporarily omitting the already-allowed constant-positive case."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

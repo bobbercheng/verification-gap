@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3110,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003195,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1368,
+    "cacheReadInputTokens": 2097,
+    "cacheCreationInputTokens": 3561,
+    "webSearchRequests": 0,
+    "costUSD": 0.0708685,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1019,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3561,
+   "cache_read_input_tokens": 2097,
+   "output_tokens": 1368,
+   "output_tokens_details": {
+    "thinking_tokens": 1019
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3561,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1368,
+     "cache_read_input_tokens": 2097,
+     "cache_creation_input_tokens": 3561,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3561
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 19279,
+  "is_error": false,
+  "elapsed_seconds": 20.0,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L1.1\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"sentence\",\n  \"explanation\": \"The quoted inference is exactly the false lemma flagged in the rubric: a nonincreasing positive integer sequence (2,1,0) can reach 0, so monotonicity of K plus K=2026 initially does not give K>=1 forever. The correct reason — a move never outputs two 1s (if g=1 the outputs are 1 and mn>1; if g>1 the output gcd = g > 1) — is nowhere asserted as a general fact. The termination section only notes 'If g=1, the new entries are 1 and mn ... K'=K-1', and the audit only exhibits the special cases (m,m)->(m,1) and (m,n)->(1,mn); the general g>1 case is never covered. One added sentence would repair it.\",\n  \"affected_statement_note\": null\n}"
+   }
+  ]
+ }
+}

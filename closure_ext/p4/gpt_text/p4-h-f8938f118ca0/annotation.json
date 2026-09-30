@@ -1,0 +1,45 @@
+{
+  "id": "p4-h-f8938f118ca0",
+  "problem": "4",
+  "sha256": "f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3",
+  "path": "checkpoint_inputs_ext/f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p4-claude-fable-5-main-t005",
+    "p4-deedy-claude-fable-5-final"
+  ],
+  "bytes": 11887,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 18990,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 259,
+        "reasoning_output_tokens": 160
+      },
+      "sec": 8.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "double-threat cut plus chain lemma",
+    "upper_bound_mechanism": "safe-angle invariant",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. The chain lemma handles every discard, the double-threat construction is legal and covers n=2 separately, and the four-case safe-triangle argument proves indefinite avoidance for every other theta."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

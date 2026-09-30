@@ -1,0 +1,29 @@
+{
+ "status": 200,
+ "response": {
+  "model": "gpt-5.6-sol",
+  "cli": "codex",
+  "reasoning_effort": "high",
+  "usage": {
+   "input_tokens": 17506,
+   "cached_input_tokens": 12672,
+   "cache_write_input_tokens": 0,
+   "output_tokens": 1997,
+   "reasoning_output_tokens": 1708
+  },
+  "events": [
+   "item.completed",
+   "thread.started",
+   "turn.completed",
+   "turn.started"
+  ],
+  "stop_reason": "end_turn",
+  "elapsed_seconds": 51.8,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"obligations\":{\"reduction\":{\"status\":\"written_and_valid\",\"quote\":null,\"witness\":null,\"load_bearing\":null},\"lower_bound\":{\"status\":\"written_and_valid\",\"quote\":null,\"witness\":null,\"load_bearing\":null},\"upper_bound\":{\"status\":\"not_written\",\"quote\":\"**Proof.** This follows by a descent on the weight $w$ (standard; details omitted). $\\\\square$\",\"witness\":\"The write-up must prove, for every $C\\\\in\\\\mathcal C$ and every $p\\\\in C$, the existence of $D\\\\in\\\\mathcal C$ with $p\\\\in D$ and $w(D\\\\setminus\\\\{p\\\\})<a_1$. Merely naming a weight descent and explicitly omitting its details proves none of its cases.\",\"load_bearing\":\"This lemma is the sole reason every prime appearing in any minimal support must occur in one of finitely many terminal supports. Without it, the finite prime set $P$, finiteness of $\\\\mathcal C$, and the resulting period are unsupported.\"}},\"S_valid\":1,\"wrong_answer_stated\":false,\"notes\":\"Mapping: lower_bound is bounded-size finiteness via the infinite sunflower lemma and self-duality. Upper_bound is localization of every occurring prime into a bounded-size terminal minimal support via strict weight descent.\"}"
+   }
+  ]
+ }
+}

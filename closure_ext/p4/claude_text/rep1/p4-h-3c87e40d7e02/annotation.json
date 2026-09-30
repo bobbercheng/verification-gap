@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-3c87e40d7e02",
+  "problem": "4",
+  "sha256": "3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248",
+  "path": "checkpoint_inputs_ext/3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p4-deedy-kimi-k3-final"
+  ],
+  "bytes": 12563,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 8436,
+        "output_tokens": 2358,
+        "output_tokens_details": {
+          "thinking_tokens": 2077
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2358,
+            "cache_read_input_tokens": 8436,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 29.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "round-up cut making both halves contain a multiple of theta (uses 180=n*theta), then halving lemma",
+    "upper_bound_mechanism": "invariant 'no angle is an integer multiple of theta' from equilateral start, 3-case analysis",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer. Lemma 1 (induct on k, both pieces covered) complete; cut parametrization stated with IVT justification (proof offloaded but sketched, content standard). Theorem 1 handles all initial triangles incl. n=2 via Claims 1-2 and covers both discards. Theorem 2 case analysis exhaustive and correct; computer checks are supplementary only."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

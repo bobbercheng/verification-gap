@@ -1,0 +1,28 @@
+{
+  "task_id": "imo-2026-p1",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "For each prime p, the multiset of p-adic valuations undergoes the transformation {a,b} → {min(a,b), |a-b|} at each move, which is exactly one step of the Euclidean algorithm.",
+    "For each prime p, G_p = gcd_i(v_p(a_i)) is invariant under any legal move.",
+    "The lexicographic measure (K, Ω) where K = count of integers > 1 and Ω = total prime factor count (with multiplicity) strictly decreases at each move.",
+    "The process terminates after finitely many moves because (K, Ω) takes values in ℕ² with well-founded lexicographic order.",
+    "At termination, exactly one integer M > 1 remains (K = 1) because K starts at 2026, never increases, and every move leaves at least one integer > 1 on the board.",
+    "The final integer M satisfies v_p(M) = G_p for every prime p, hence M = ∏_p p^{G_p}.",
+    "M depends only on the initial multiset, not on the sequence of moves."
+  ],
+  "unverified_claims": [],
+  "summary": "The proof is complete, correct, and rigorous. Part 1 establishes termination via a well-founded lexicographic measure (K, Ω) and proves K=1 at termination by showing K never drops below 1. Part 2 identifies the invariant G_p = gcd of p-adic valuations (which equals the gcd of the initial exponents for each prime), and uses the termination result (K=1) to conclude v_p(M) = G_p. The final M = ∏ p^{G_p} is uniquely determined by the initial multiset. All claims are verified; the minor redundancy in the per-prime sum-decrease argument does not affect correctness.",
+  "transfer_assessment": [
+    "prime-exponent-gcd-invariant: Reusable. The invariant G_p = gcd of p-adic valuations under (a,b) → (min(a,b), |a-b|) is a clean number-theoretic mechanism applicable to Euclidean-algorithm-style processes on exponent multisets.",
+    "lexicographic-descent-termination: Reusable. The (K, Ω) measure (count of active elements, sum of complexities) strictly decreasing lexicographically is a robust termination argument for combinatorial processes where moves can either reduce the number of active elements or reduce total complexity while keeping the count fixed.",
+    "endgame-determination: Reusable. The pattern of (1) proving global termination with a specific end-state structure (exactly one non-trivial element), then (2) using a per-component invariant to compute the final value from that end state, is a powerful and generalizable proof strategy."
+  ]
+}

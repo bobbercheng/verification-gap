@@ -1,0 +1,18 @@
+{
+ "claim_id": "C3",
+ "condition": "valid",
+ "verifier": "gpt",
+ "model": "gpt-5.6-sol",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "Greedy minimality concerns the integer’s numerical value, not inclusion-minimality of its full prime-factor set. A least admissible integer can contain an unnecessary prime factor.",
+  "witness_valid": true,
+  "witness_reason": "From 6, the least admissible next integer is 8. Above 8, 9 fails to share a prime with 8, while 10 shares 2 with both 6 and 8. Yet {2} alone hits {{2,3},{2}}, so {2,5} is not inclusion-minimal."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": true
+ },
+ "elapsed_seconds": 9.6
+}

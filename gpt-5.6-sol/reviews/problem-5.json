@@ -1,0 +1,31 @@
+{
+  "task_id": "imo-2026-p5",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "Substituting x=f(y) makes both outer quantities equal to f(y), so the middle quantity is equal to them and f(f(y))+y=2f(y).",
+    "For d(t)=f(t)-t, the iterate law f^n(t)=t+n d(t) follows by induction, and positivity of every forward iterate forces d(t)>=0.",
+    "At x=f(t), the lower squared margin expands to (t-y)^2+4(t+d(t))(d(t)-d(y)), and the upper squared margin expands to (t-y)^2+2(d(y)-d(t))(2y+d(y)+d(t)).",
+    "The two sign-dependent bounds combine validly to give |d(y)-d(t)| <= (y-t)^2/(4 min(t,y)); all denominators are positive and all squaring steps are reversible.",
+    "Telescoping this quadratic bound over arbitrarily fine partitions of any compact interval [u,v] contained in the positive reals forces d(v)=d(u) without assuming continuity.",
+    "The resulting constant displacement is nonnegative, and every f(x)=x+C with C>=0 satisfies the original chain by RMS-AM-GM; equivalently, both squared margins are (x-y-C)^2.",
+    "The affine, power-law, and piecewise orbitwise-shift falsification examples are consistent with the proof and are not used as substitutes for it."
+  ],
+  "unverified_claims": [],
+  "summary": "The classification f(x)=x+C for C>=0 is proved completely. Independent algebra checks, edge-case analysis, and counterexample searches found no logical gap, hidden regularity assumption, invalid limiting step, or missing boundary case. This remains a model review rather than an official proof certificate.",
+  "transfer_assessment": [
+    "Reusable: an endpoint-locking substitution can turn a two-sided inequality into equality and yield an exact iterate identity.",
+    "Reusable: an orbit-invariant displacement together with positivity of all forward iterates can force a global sign constraint.",
+    "Reusable: complementary squared margins can yield a quadratic modulus of variation after a sign split.",
+    "Reusable: an O(h^2) local difference bound telescoped over O(1/h) subintervals forces constancy without any assumed continuity.",
+    "Reusable: verify the converse by exact factorization of both squared margins, here into the same square.",
+    "Potentially misleading if isolated: numerical grids and restricted ansatz checks only falsify examples; the candidate correctly keeps them separate from the exhaustive proof."
+  ]
+}

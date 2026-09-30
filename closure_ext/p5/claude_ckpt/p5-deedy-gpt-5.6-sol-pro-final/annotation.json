@@ -1,0 +1,66 @@
+{
+  "id": "p5-deedy-gpt-5.6-sol-pro-final",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e.md",
+  "bytes": 5034,
+  "sha256": "8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4579,
+        "output_tokens": 1696,
+        "output_tokens_details": {
+          "thinking_tokens": 1397
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1696,
+            "cache_read_input_tokens": 4579,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 19.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to x and y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "squared first inequality + synchronized arithmetic orbits (X_m-Y_m bounded, ratio->1) giving a=b; then fixed/non-fixed separation |p-q|>c plus finite chain subdivision",
+    "wrong_answer_stated": false,
+    "notes": "Complete: (S) from x=f(y) with d>=0 via positivity of iterates; (N) both the equality of positive displacements (asymptotic orbit comparison in both orders) and the exclusion of mixed fixed/non-fixed points via the separation bound and a fine subdivision chain; (V) verified for all x,y and c>=0."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

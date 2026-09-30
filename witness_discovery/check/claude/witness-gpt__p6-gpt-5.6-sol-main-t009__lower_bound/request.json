@@ -1,0 +1,19 @@
+{
+ "checker": "claude",
+ "transport": "claude-cli",
+ "model": "claude-opus-5",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p6-gpt-5.6-sol-main-t009",
+ "tag": "lower_bound",
+ "text_sha256": "6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3",
+ "system_sha256": "31de4cf340b3317b69b72a289f2bf83e8cd8e25b4b29993a83818b46831ff9f5",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "written_but_invalid",
+  "quote": "Every transversal $X$ of $\\mathcal F$ meets $C$, since $C$ itself is a member of $\\mathcal F$ whenever this assertion is applied below; more generally, for the inductive assertion we only need to restrict attention to transversals meeting $C$.",
+  "witness": "Counterexample to the recursive justification: take $\\mathcal F=\\{\\{1,2\\},\\{2,3\\}\\}$ and $C=\\{1,2\\}$. For $c=1$, one gets $\\mathcal F_c=\\{\\{2,3\\}\\}$ and the proposed smaller transversal $C\\setminus\\{c\\}=\\{2\\}$. But $X=\\{3\\}$ traverses $\\mathcal F_c$ and does not meet $\\{2\\}$. Thus the restricted inductive criterion does not characterize all transversals of $\\mathcal F_c$; in the original family it can miss the transversal $\\{1,3\\}$.",
+  "load_bearing": "The finite list of prime transversals $B_j$ is obtained solely from this induction. Without a valid all-cases proof of that lemma, the claimed reduction to finitely many relevant divisibility patterns is unproved."
+ },
+ "started_utc": "2026-09-06 04:44:06 UTC"
+}

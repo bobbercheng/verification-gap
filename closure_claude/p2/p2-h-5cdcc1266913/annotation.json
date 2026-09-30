@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-5cdcc1266913",
+  "problem": "2",
+  "sha256": "5cdcc1266913c18480480bc73e3cb4ce33f42df0c721464952beb3566d34e22d",
+  "path": "checkpoint_inputs/5cdcc1266913c18480480bc73e3cb4ce33f42df0c721464952beb3566d34e22d.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 33,
+  "record_ids": [
+    "p2-gpt-5.6-sol-pro-main-t033"
+  ],
+  "bytes": 4695,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3331,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 2692,
+        "output_tokens_details": {
+          "thinking_tokens": 2393
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3331,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2692,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 3331,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3331
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 34.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "trig identity (F)/(9) — key step left open",
+    "upper_bound_mechanism": "circumcircle of AKL meets AB,AC at D,E; OM=ON ⟺ cd−be=(c²−b²)/2 via O=w/2 projections",
+    "wrong_answer_stated": false,
+    "notes": "Sine-rule setup correctly encodes all three angle hypotheses (A),(B),(1),(C). Finish is rigorous: OM=ON reduced to cd−be=(c²−b²)/2 and then to identity (F). But (F) is only partly proved: variable harmonics done, constant terms reduced to (8)→(9), explicitly admitted unproved (numerically checked only). No key-circle argument; core step incomplete."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

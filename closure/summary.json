@@ -1,0 +1,1401 @@
+{
+  "annotator": "glm-5.3",
+  "items": [
+    {
+      "id": "kimi-r1-c1",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 1,
+      "path": "checkpoint_inputs/0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6.md",
+      "bytes": 3339,
+      "sha256": "0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1656,
+            "output_tokens": 4997,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 65.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric 1:2:...:2^n division (conjectured, verified n<=3 only)",
+        "upper_bound_mechanism": "recursive halve-ell1 / match-cut Xiang induction (sketch)",
+        "wrong_answer_stated": false,
+        "notes": "Lemma 1 gives a full two-direction pairing proof of the odd-sum reduction. Correct closed form c_n=2^n/(2^(n+1)-1) appears only as a conjecture verified for n<=3 by an exact solver. Lower bound proof against arbitrary Xiang replies and the general upper-bound induction are explicitly listed as open gaps; only strategy sketches (A)/(B) given."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6",
+      "original_bytes": 3339,
+      "input_anonymized": false
+    },
+    {
+      "id": "kimi-r1-c2",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 2,
+      "path": "checkpoint_inputs/53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c.md",
+      "bytes": 8696,
+      "sha256": "53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3518,
+            "output_tokens": 3741,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 64.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division 1:2:…:2^n with induction on cuts into largest part",
+        "upper_bound_mechanism": "deterministic peeling (halving + top-pair cancellation)",
+        "wrong_answer_stated": false,
+        "notes": "Closed form appears only as conjecture (numerics n≤3). Lemma 1 (odd-sum value) fully proved for all n. Lower bound: geometric division given, j=0 case proved, but the all-refinements induction is open (abstract combination refuted). Upper bound: peeling strategy valid for all n via proved peel-lemma, but q(A)≤1/N proved only for |A|≤3; general case open."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c",
+      "original_bytes": 8696,
+      "input_anonymized": false
+    },
+    {
+      "id": "kimi-r1-c3",
+      "lineage": "ours-kimi-R1",
+      "model": "kimi-k3",
+      "context": 3,
+      "path": "checkpoint_inputs/5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8.md",
+      "bytes": 14257,
+      "sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5449,
+            "output_tokens": 10292,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 123.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "even-position majorization on geometric division 2^n:...:1 (Lemma E induction)",
+        "upper_bound_mechanism": "subset-sum pigeonhole + greedy equal-pair (supply-demand) cancellation",
+        "wrong_answer_stated": false,
+        "notes": "All components fully proved for all n. Lemma 1 pairing proof handles deviation case correctly. Lemma E base and two-case inductive step are valid, yielding even(S) <= 2^n - 1. Theorem B: N-gap pigeonhole, halving of Z-parts, cancellation with cut count c <= |P|+|Q|-1, and delta(L) <= max L. Boxed answer matches."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+      "original_bytes": 14257,
+      "input_anonymized": false
+    },
+    {
+      "id": "kimi-r2-c1",
+      "lineage": "ours-kimi-R2",
+      "model": "kimi-k3",
+      "context": 1,
+      "path": "checkpoint_inputs/c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d.md",
+      "bytes": 3032,
+      "sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1449,
+            "output_tokens": 2924,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 57.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "dyadic division (1:2:4:...:2^n) with toggle/symmetric-difference invariant (BFS-verified n<=3 only, invariant not found)",
+        "upper_bound_mechanism": "n=2 explicit attack case analysis (halve-largest, clone, etc.); no all-n strategy",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form appears only as a labeled CONJECTURE (numerics n<=3, n=2 claimed proved, details 'to write up'). Draft-game reduction to odd-sum is named, proof explicitly deferred. Lower bound: dyadic division stated, but resistance argument only BFS-tested; general invariant missing. Upper bound: nothing for general n; four n=2 attacks merely named. No all-n argument is written out."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+      "original_bytes": 3032,
+      "input_anonymized": false
+    },
+    {
+      "id": "kimi-r2-c2",
+      "lineage": "ours-kimi-R2",
+      "model": "kimi-k3",
+      "context": 2,
+      "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+      "bytes": 4134,
+      "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1884,
+            "output_tokens": 2184,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 33.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "dyadic division + toggle/symmetric-difference relaxation (g(n,k) game)",
+        "upper_bound_mechanism": "set-game cancellation strategy (halve/clone/3-piece toggle)",
+        "wrong_answer_stated": false,
+        "notes": "Correct c_n stated only as conjecture with grid numerics for n≤3. Reduction (odd-sum) asserted, greedy lemma explicitly unwritten. LB: dyadic Liu division identified, easy inequality proved, but crux g(n,k)≥g(n-1,k-1) open; only n=1 complete. UB: n=1,2 by hand; general covering argument missing. Proof section empty."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+      "original_bytes": 4134,
+      "input_anonymized": false
+    },
+    {
+      "id": "kimi-r2-c3",
+      "lineage": "ours-kimi-R2",
+      "model": "kimi-k3",
+      "context": 3,
+      "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+      "bytes": 4134,
+      "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1884,
+            "output_tokens": 1397,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 16.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "dyadic cuts (1:2:...:2^n) + symmetric-difference toggle game (crux inequality g(n,n)>=1 open)",
+        "upper_bound_mechanism": "set-game restriction with halve/clone/2-move-combo Xiang strategy (general covering argument open)",
+        "wrong_answer_stated": false,
+        "notes": "Correct form 2^n/(2^(n+1)-1) stated only as conjecture. Reduction, dyadic LB toggle argument, and UB set-game strategy are all sketched and numerically checked, but key lemmas (greedy draft lemma, g(n,n)>=1, general Xiang strategy) are explicitly listed as open; only n=1 (and n=2 UB) fully proved."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+      "original_bytes": 4134,
+      "input_anonymized": false
+    },
+    {
+      "id": "kimi-r2-c4",
+      "lineage": "ours-kimi-R2",
+      "model": "kimi-k3",
+      "context": 4,
+      "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+      "bytes": 4134,
+      "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 28,
+            "output_tokens": 2041,
+            "cache_read_input_tokens": 1856,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 26.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "dyadic division (1:2:...:2^n) + toggle/symmetric-difference game",
+        "upper_bound_mechanism": "set-game restriction (pair cancellation/toggle moves) with recursion",
+        "wrong_answer_stated": false,
+        "notes": "Correct form appears only as labeled CONJECTURE. Draft reduction asserted with numerics; greedy-optimality lemma explicitly unwritten. LB: dyadic division identified, one inequality of toggle relaxation proved, crux g(n,n)≥1 open; only n=1 full. UB: set-game restriction valid, hand strategies for n≤2 only; general covering argument open."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+      "original_bytes": 4134,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm53-c1",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 1,
+      "path": "checkpoint_inputs/ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb.md",
+      "bytes": 7842,
+      "sha256": "ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3115,
+            "output_tokens": 7496,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 96.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "n=1 explicit case analysis (Liu marks 1/3); n=2 partial check only",
+        "upper_bound_mechanism": "n=1 median-maximizing cut analysis; n=2 partial strategy balancing",
+        "wrong_answer_stated": true,
+        "notes": "Reduction to odd-position sum is stated with the correct two-sided greedy argument for all n. Bounds are fully written out only for n=1 (c_1=2/3 correct). n=2 lower bound partially verified, upper bound incomplete; conjectured c_2=5/9 is wrong (true 4/7). No general-n Liu construction or subset-sum upper bound; no closed form."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb",
+      "original_bytes": 7842,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm53-c2",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 2,
+      "path": "checkpoint_inputs/e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d.md",
+      "bytes": 11002,
+      "sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4468,
+            "output_tokens": 5757,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 64.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "superincreasing alternating-sum (Conjecture L) with pairing reduction; proved only for n≤2",
+        "upper_bound_mechanism": "halving n largest pieces (V=1/2+δ/2, non-tight); exhaustive case analysis for n≤2",
+        "wrong_answer_stated": false,
+        "notes": "Correct formula stated only as conjecture; rigorous both-direction proofs only for n=1,2. Reduction to odd-sum asserted as 'standard', not argued. General-n lower bound (Conjecture L, interleaving case) and tight upper bound (Conjecture X) open; halving yields only weak all-n upper bound 1/2+1/(2(n+1)). Earlier wrong candidates explicitly disproved."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+      "original_bytes": 11002,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm53-c3",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 3,
+      "path": "checkpoint_inputs/a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829.md",
+      "bytes": 9592,
+      "sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3687,
+            "output_tokens": 4861,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 62.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric partition + superincreasing (Δ_k) induction, incomplete",
+        "upper_bound_mechanism": "subset-sum gap Lemma X1 + macro plans, incomplete",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form stated as claimed answer but explicitly conditional/conjectural for n≥3. Reduction (sorted alternating sum, A=2V−1) precisely stated as settled lemma. Lower: geometric partition given; superincreasing Theorem L proved only for n≤2 and uncut-largest case; insertion lemma open. Upper: min Δ_k counting and split-at-k* proved; Lemma X1 verified only through m≤4."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+      "original_bytes": 9592,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm53-c4",
+      "lineage": "ours-glm53-thin",
+      "model": "glm-5.3",
+      "context": 4,
+      "path": "checkpoint_inputs/323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15.md",
+      "bytes": 9294,
+      "sha256": "323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3684,
+            "output_tokens": 4161,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 49.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric partition + layer-cake XOR-merge induction (incomplete)",
+        "upper_bound_mechanism": "split-at-k* + counting lemma / pairing-refinement moves (incomplete)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form stated as proposed answer. Greedy reduction to alternating sum written out with pairing argument. Lower bound: geometric division given; only n≤2 and uncut-largest case proved; XOR-merge induction explicitly open. Upper bound: counting lemma and split-at-k* proved only for nonnegative-gap regime plus n≤2; negative-gap Lemma X1 open. Both all-n mechanisms sketched, not established."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15",
+      "original_bytes": 9294,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm52-simple-c1",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 1,
+      "path": "checkpoint_inputs/7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce.md",
+      "bytes": 4902,
+      "sha256": "7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1984,
+            "output_tokens": 1964,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 32.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "geometric 1:2:...:2^n division (numerical only, n≤5)",
+        "upper_bound_mechanism": "none (numerical optimization search only)",
+        "wrong_answer_stated": false,
+        "notes": "Correct form 2^n/(2^{n+1}-1) stated only as numerical conjecture for n≤5. Reduction (odd-rank sum of sorted pieces) correctly stated but proof merely asserted (greedy/induction not written). Lower bound: geometric strategy named, no all-n argument against arbitrary Xiang. Upper bound: pure numerics, no pigeonhole/cancellation mechanism. Refuted (n+1)/(2n+1) not credited."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce",
+      "original_bytes": 4902,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm52-simple-c2",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 2,
+      "path": "checkpoint_inputs/513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7.md",
+      "bytes": 9799,
+      "sha256": "513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3551,
+            "output_tokens": 2672,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 35.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division 2^n:...:2:1 (proved n=1 only)",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Reduction fully proved: odd-rank sum lemma with greedy strategies, both directions, all n; c(1)=2/3 proved by hand. Geometric Liu division and halving Xiang reply constructed with exact meeting value, but both all-n bounds explicitly declared open for n>=2, supported only by grid/float numerics. Correct formula stated as conjecture, not proved."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7",
+      "original_bytes": 9799,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm52-simple-c3",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 3,
+      "path": "checkpoint_inputs/681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4.md",
+      "bytes": 14776,
+      "sha256": "681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5047,
+            "output_tokens": 3827,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 47.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric 1:2:…:2^n division; incomplete induction/merge sketch (n=1 only proved)",
+        "upper_bound_mechanism": "midpoint-halving reply vs geometric config only; n=1 universal case proved",
+        "wrong_answer_stated": false,
+        "notes": "Reduction (odd-rank-sum lemma) fully proved with clean greedy argument, plus sup/inf minimax framing. Correct formula explicitly labeled conjecture; c(1)=2/3 proved both directions. LB: geometric division exhibited for all n but 'every Xiang reply' argument open, only induction sketch; UB: no all-n mechanism, halving proved only against geometric config. Honest status; no wrong answer."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4",
+      "original_bytes": 14776,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm52-simple-c4",
+      "lineage": "ours-glm52-simple",
+      "model": "glm-5.2",
+      "context": 4,
+      "path": "checkpoint_inputs/d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8.md",
+      "bytes": 19101,
+      "sha256": "d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 6263,
+            "output_tokens": 2464,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 43.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division (1:2:…:2^n) exhibited; induction/merge-inequality only sketched, admitted open for n≥2",
+        "upper_bound_mechanism": "halving response vs geometric config only; universal bound proved for n=1 (cut at 1/3), no all-n mechanism",
+        "wrong_answer_stated": false,
+        "notes": "Draft-game lemma (odd-rank sum) fully proved, plus sup/inf minimax formulation. c(1)=2/3 proved both directions with attainment. For n≥2 the formula is explicitly conjectural: lower bound lacks any 'every Xiang reply' argument (merge inequality unresolved); upper bound has no universal construction beyond n=1. Honest, self-aware partial write-up."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8",
+      "original_bytes": 19101,
+      "input_anonymized": false
+    },
+    {
+      "id": "gpt56-ours-timeout",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": 1,
+      "path": "checkpoint_inputs/7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29.md",
+      "bytes": 8900,
+      "sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3165,
+            "output_tokens": 7770,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 98.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "rank-pair multigraph / bipartite-component argument",
+        "upper_bound_mechanism": "subset-sum pigeonhole + overlay/cancellation construction",
+        "wrong_answer_stated": false,
+        "notes": "Complete, correct proof. Drafting lemma proved by full induction (minor typo in displayed formula, argument sound). Refinement lemma proved both directions: graph bipartite-component lower bound valid for all replies and parities; overlay construction with cut count ≤ q−1. Binary division attains; pigeonhole matches. Falsified hypotheses clearly labeled, never asserted as answers."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+      "original_bytes": 8900,
+      "input_anonymized": false
+    },
+    {
+      "id": "gpt56-ours-accepted",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": 2,
+      "path": "checkpoint_inputs/cb1bcbb2df8fa81bfe15b7ceb9c74d06c914bb6052ab1c111784f8700e4fa645.md",
+      "bytes": 11127,
+      "sha256": "cb1bcbb2df8fa81bfe15b7ceb9c74d06c914bb6052ab1c111784f8700e4fa645",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3927,
+            "output_tokens": 7689,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 97.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "rank-pair tree/graph bipartition argument",
+        "upper_bound_mechanism": "subset-sum pigeonhole + overlay cancellation construction",
+        "wrong_answer_stated": false,
+        "notes": "Complete rigorous solution. Drafting lemma proved by induction (greedy optimal, value (1+D)/2). Refinement lemma proved both directions for all n: multigraph/tree bipartition lower bound; overlay construction with exact cut count ≤ q−1. Pigeonhole gives Γ ≤ 1/(2^(n+1)−1); binary division achieves equality. Section 5 alternatives are explicitly refuted, not asserted."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "cb1bcbb2df8fa81bfe15b7ceb9c74d06c914bb6052ab1c111784f8700e4fa645",
+      "original_bytes": 11127,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-kimi-k3-final",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "path": "checkpoint_inputs/12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c.md",
+      "bytes": 24463,
+      "sha256": "12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 8843,
+            "output_tokens": 9722,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 171.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "matching formula + tree-component argument on super-increasing (geometric 1:2:4:...) split",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap + greedy chain-realizability lemma + bisect/cancel equal-pair construction",
+        "wrong_answer_stated": false,
+        "notes": "Complete all-n proof. Lemma 1.1 (full induction) reduces game to alternating sum. Lower bound: D(M)=min matching cost, loop-aware component graph yields a tree component, tree inequality + margin gives D≥T_n for any refinement. Upper bound: chain theorem via 2^m subset sums and realizability lemma, cut count exactly ≤ n, equal pairs cancel. Answer c=2^n/(2^{n+1}-1) proved."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c",
+      "original_bytes": 24463,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-claude-fable-5-final",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": 99,
+      "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+      "bytes": 15474,
+      "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5961,
+            "output_tokens": 8463,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 108.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "rank-pair tree component + signed subset-sum (geometric 1:2:...:2^n marking)",
+        "upper_bound_mechanism": "subset-sum pigeonhole + overlay equal-pair/cross-pairing cuts",
+        "wrong_answer_stated": false,
+        "notes": "Full rigorous all-n proof. Lemma 2 fully proves picking-phase value (1+D)/2 for both players. Lower bound: pairing graph on original pieces must contain a tree component; 2-coloring plus signed subset-sum (3.1) yields D≥u against every reply. Upper bound: pigeonhole gap ≤u plus overlay construction with ≤n marks forces D≤u; mark counts and distinctness checked. Correct closed form boxed."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+      "original_bytes": 15474,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-gpt-5.6-sol-xhigh-final",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": 99,
+      "path": "checkpoint_inputs/c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89.md",
+      "bytes": 11015,
+      "sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3765,
+            "output_tokens": 8756,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 177.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "powers-of-two (1:2:...:2^n) division with tree-component bipartition argument on pairing graph",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap + common-refinement equal-pairing overlay with ≤n cuts",
+        "wrong_answer_stated": false,
+        "notes": "Complete rigorous proof for all n. Reduction: backward-induction proof that greedy draft yields alternating sorted-sum D. Lower: 1:2:...:2^n split; pairing graph with ≤n edges must contain a tree; bipartition plus dominance of largest power of two forces D≥1/(2^{n+1}-1). Upper: subset-sum pigeonhole and careful refinement cut-count verified. Answer matches 2^n/(2^{n+1}-1)."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+      "original_bytes": 11015,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-gpt-5.6-sol-final",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": 99,
+      "path": "checkpoint_inputs/e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb.md",
+      "bytes": 7191,
+      "sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 2461,
+            "output_tokens": 12000,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 158.6,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2461,
+            "output_tokens": 193,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 4.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "geometric partition + refinement lemma part (ii) upward-sweep induction",
+        "upper_bound_mechanism": "column-sweep alternating-imbalance refinement lemma part (i)",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form stated. Claiming-phase reduction fully proved via greedy matching strategies. Both lemma parts proved for all n (column sweep with parity rows and induction); applied to geometric partition for lower bound and arbitrary partition for upper bound. Minor hand-waving in sweep details, but complete for all n."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+      "original_bytes": 7191,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-gpt-5.6-sol-pro-final",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": 99,
+      "path": "checkpoint_inputs/e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0.md",
+      "bytes": 3625,
+      "sha256": "e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1537,
+            "output_tokens": 3299,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 41.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "geometric division 1:2:4:...:2^n (conjectured; proved only for n=1)",
+        "upper_bound_mechanism": "case analysis of Xiang cuts for n=1 only; general case open",
+        "wrong_answer_stated": false,
+        "notes": "Claiming-phase reduction to alternating sum D=x1-x2+... is proved inline for all n (greedy both sides). Correct closed form c_n=2^n/(2^{n+1}-1) stated only as a conjecture backed by brute force for n<=4. Geometric Liu division named but no all-n argument; upper bound proved only for n=1; refinement theorem left open."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0",
+      "original_bytes": 3625,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-gpt-5.6-sol-max-final",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": 99,
+      "path": "checkpoint_inputs/357c84e12d443fa53d1a04486d5d68d50b666376ca3546588bf1cedcad8a7e54.md",
+      "bytes": 1274,
+      "sha256": "357c84e12d443fa53d1a04486d5d68d50b666376ca3546588bf1cedcad8a7e54",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 814,
+            "output_tokens": 965,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 14.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Explicitly marked unsolved; no answer or bounds given. Only content is a correctly stated but unproven reduction: greedy claiming of longest piece yields the alternating sum of sorted lengths, D = x1 - x2 + x3 - ... . No Liu division, no Xiang reply construction, no small-n values."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "357c84e12d443fa53d1a04486d5d68d50b666376ca3546588bf1cedcad8a7e54",
+      "original_bytes": 1274,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-deepseek-v4-pro-final",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": 99,
+      "path": "checkpoint_inputs/ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7.md",
+      "bytes": 1934,
+      "sha256": "ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1065,
+            "output_tokens": 1381,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 25.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "uniform spacing (conjectured only, false)",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Conjectures c=(n+1)/(2n+1), which is wrong for n>=2 (true value 4/7 at n=2, not 3/5). No reduction, no proofs written; lower-bound strategy only numerically suggested and false; upper bound merely posed as an open question. 'Full proof' section empty."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "ca88f79fb210b7f04efa2e2d249db11f004339827e12234f8327b4b3a3e8bbc7",
+      "original_bytes": 1934,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-muse-spark-1.1-final",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": 99,
+      "path": "checkpoint_inputs/71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa.md",
+      "bytes": 24081,
+      "sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 7818,
+            "output_tokens": 8878,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 122.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "rank-pair parity cancellation on (2d,...,2d,d) division",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Wrong conjecture (n+1)/(2n+1) stated; only n=1 correct. Sorted alternating-sum reduction used throughout but never justified. Lower bound: parity argument on symmetric pairs written for all n but only covers Xiang splitting each big piece once; misses cuts inside the small piece (construction actually fails for n=2). Upper bound: no argument; grid completion shown insufficient, brute force never run."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+      "original_bytes": 24081,
+      "input_anonymized": false
+    },
+    {
+      "id": "deedy-grok-4.5-final",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": 99,
+      "path": "checkpoint_inputs/13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe.md",
+      "bytes": 17437,
+      "sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5921,
+            "output_tokens": 6171,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 85.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "power-of-two division with induction (incomplete)",
+        "upper_bound_mechanism": "pairing/cancellation to force D=1 (sketch)",
+        "wrong_answer_stated": false,
+        "notes": "Correct final answer stated. D defined and Lemma A genuinely proved, but the key reduction V=(sum+D)/2 and greedy optimality are only asserted. Lower bound: 1:2:...:2^n division correct; induction case k=0 fine, main subcases garbled/hand-waved, relies on n<=3 numerics. Upper bound: pairing-to-D=1 idea sketched, <=n-cuts feasibility unjustified; some auxiliary formulas (D(B_n) closed form, target multiset) wrong."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+      "original_bytes": 17437,
+      "input_anonymized": false
+    },
+    {
+      "id": "kimi-k2-repair",
+      "lineage": "ours-kimi-K2-repair",
+      "model": "kimi-k3",
+      "context": 4,
+      "path": "checkpoint_inputs/f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874.md",
+      "bytes": 17249,
+      "sha256": "f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 6432,
+            "output_tokens": 5557,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 68.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "geometric division (2^n:...:1) + even-position majorization (Lemma E induction)",
+        "upper_bound_mechanism": "subset-sum pigeonhole (gap <= 1/N) + greedy supply-demand cancellation into equal pairs",
+        "wrong_answer_stated": false,
+        "notes": "Complete proof for all n. Lemma 1 fully proves the odd/even alternating-sum value via explicit pairing strategies. Theorem A/Lemma E lower bound handles arbitrary Xiang refinements by induction on rank pairs. Theorem B upper bound works for every Liu division, with cut count, empty-pool and L=empty cases repaired. Degenerate cases addressed."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874",
+      "original_bytes": 17249,
+      "input_anonymized": false
+    },
+    {
+      "id": "glm52-repair",
+      "lineage": "ours-glm52-repair",
+      "model": "glm-5.2",
+      "context": 4,
+      "path": "checkpoint_inputs/bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7.md",
+      "bytes": 8773,
+      "sha256": "bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3522,
+            "output_tokens": 6781,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 117.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "geometric 1:2:...:2^n opening with inductive even-position majorization (v_2+...+v_2r ≤ 2^n−2^{n−r})",
+        "upper_bound_mechanism": "subset-sum pigeonhole gap ≤ 1/(2^{n+1}−1) plus greedy max-cancellation into equal pairs, δ ≤ max leftover",
+        "wrong_answer_stated": false,
+        "notes": "Correct closed form. Lemma 1 fully proves value = odd(S) via both pairing strategies. Lower bound induction on rank r valid for all n. Upper bound cut count |Z|+c ≤ n, invariance, and δ(L) ≤ ΣL = D ≤ 1/N all written out, including edge cases. Complete."
+      },
+      "S": 2,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "bfb7a020a5b191b5463366b04582a35cf2ea82c939a050f303f34a7c89a9a6e7",
+      "original_bytes": 8773,
+      "input_anonymized": false
+    },
+    {
+      "id": "nemotron-p3-1",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 1,
+      "path": "checkpoint_inputs/9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293.md",
+      "bytes": 15914,
+      "sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5941,
+            "output_tokens": 10519,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 138.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "equal 1/(2n+1)-grid division with pairing (invalid)",
+        "upper_bound_mechanism": "bisect n largest intervals + majorization lemma (omitted)",
+        "wrong_answer_stated": true,
+        "notes": "Stated closed form (n+1)/(2n+1) is wrong for n>=2 (true: 2^n/(2^(n+1)-1)). Lower bound's equal division fails: for n=2 Xiang (cut small piece into halves, cut a large piece near its end) holds Liu to ~1/2, refuting the unproven claim that Xiang shouldn't cut the small piece. Upper bound's key lemma explicitly omitted. Reduction asserted, never proved."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+      "original_bytes": 15914,
+      "input_anonymized": false
+    },
+    {
+      "id": "nemotron-p3-2",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 2,
+      "path": "checkpoint_inputs/ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb.md",
+      "bytes": 15901,
+      "sha256": "ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5762,
+            "output_tokens": 3772,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 48.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "dyadic partition 1:2:...:2^n with splitting lemma",
+        "upper_bound_mechanism": "greedy splitting/pairing (halve or match top two)",
+        "wrong_answer_stated": false,
+        "notes": "Answer correct and stated as final. Reduction to alternating sum of sorted pieces argued for all n. Lower bound: dyadic division fully explicit, but the against-every-reply argument is merely asserted ('careful accounting') and the Splitting Lemma is false (fragments interleaving, e.g. [5,4,1] split 5 into 2.5,2.5 raises A). Upper bound: greedy strategy only sketched; n=1 proven, induction/majorization steps explicitly incomplete."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb",
+      "original_bytes": 15901,
+      "input_anonymized": false
+    },
+    {
+      "id": "nemotron-p3-3",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": 3,
+      "path": "checkpoint_inputs/24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0.md",
+      "bytes": 13473,
+      "sha256": "24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0",
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 4904,
+            "output_tokens": 12000,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 144.3,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4904,
+            "output_tokens": 280,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 5.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "equal-spacing division with alternating-sum analysis (only worst-case reply computed)",
+        "upper_bound_mechanism": "walk-along-stick grouping into 2/(2n+1) segments (unverified)",
+        "wrong_answer_stated": true,
+        "notes": "States incorrect answer (n+1)/(2n+1). Alternating-sum reduction asserted with sketch only. Lower bound verified only against one Xiang reply; admits 'we must also show no other strategy gives less' without proof. Upper bound abandons first pairing as invalid; grouping construction and key lemma 'can be shown' — unproven."
+      },
+      "S": 0,
+      "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+      "path_base": "bundle root",
+      "original_sha256": "24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0",
+      "original_bytes": 13473,
+      "input_anonymized": false
+    }
+  ]
+}

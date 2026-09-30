@@ -1,0 +1,32 @@
+{
+ "task_id": "imo-2026-p6",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "The sequence is strictly increasing, pairwise non-coprime, and unbounded; moreover, a multiple of a_1 gives the bound a_{n+1} <= a_n + a_1.",
+  "For every m >= a_1, m is a sequence term exactly when its prime support meets the prime support of every sequence term.",
+  "The inductive large-prime-erasure lemma is sound: for every sequence term x, its set of prime factors at most a_1 is good.",
+  "The construction R p^k preserves the small-prime support, stays at least a_1, and lies strictly below x, including the boundary case where the unmodified small-prime radical would fall below a_1.",
+  "The skipped-integer argument used in the induction is causal: a nonselected m > a_1 must be coprime to some earlier sequence term, allowing the induction hypothesis to be applied to that term.",
+  "Membership for m >= a_1 depends exactly on the goodness of its trace on the finite set of primes at most a_1.",
+  "Taking L to be the product of all primes at most a_1 gives membership invariance under translation by L throughout the entire range [a_1, infinity), not merely eventually.",
+  "The count T in one complete residue interval modulo L is positive and invariant under shifts, so (a_n, a_n + L] contains exactly T sequence terms.",
+  "Since a_n + L is itself a sequence term and is the T-th term encountered after a_n, the identity a_{n+T} = a_n + L holds for every n >= 1."
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is correct and complete. Its finite-trace reduction, threshold-repair construction, causal induction, and conversion from global membership periodicity to index periodicity are all justified. The computational remarks are extraneous to the proof.",
+ "transfer_assessment": [
+  "Reusable mechanism: characterize a greedily selected integer by compatibility with all previously selected terms; any skipped candidate must have been blocked by an earlier term.",
+  "Reusable mechanism: reduce an infinite prime-intersection condition to a finite trace by deleting primes above a controlled threshold while constructing a smaller witness that remains above the initial threshold.",
+  "Reusable mechanism: establish translation invariance from the initial threshold and then count selected terms in one complete residue interval to obtain an exact index-periodic identity.",
+  "Cautionary mechanism: the finite reduction is not a generic compactness theorem for arbitrary intersecting families; it relies on the greedy numerical scan and the threshold-repair construction.",
+  "Cautionary mechanism: eventual periodicity alone would not imply the identity from n = 1; the proof correctly establishes global periodicity on [a_1, infinity)."
+ ]
+}

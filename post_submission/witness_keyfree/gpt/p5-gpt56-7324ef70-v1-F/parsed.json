@@ -1,0 +1,51 @@
+{
+ "gate": "witness_blind",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-F",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "F",
+ "problem": "5",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 94.5,
+  "input_tokens": 16764,
+  "output_tokens": 4404,
+  "reasoning_output_tokens": 4089,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_but_invalid",
+    "quote": "&=(t-y)^2+4(t+c)(b-c).\n\\end{aligned}\nIt follows that\n\\[\nb-c\\le \\frac{(t-y)^2}{4(t+c)}\\le \\frac{(t-y)^2}{4t}. \\tag{5}",
+    "witness": "NON-SEQUITUR: Direct expansion gives (t-y)^2+4(t+c)(c-b), not the displayed expression with (b-c). Moreover, from the displayed inequality 0≤(t-y)^2+4(t+c)(b-c), one obtains b-c≥-(t-y)^2/[4(t+c)], not the claimed upper bound (5).",
+    "load_bearing": "Estimate (5) supplies one direction of the quadratic displacement control (7). The partition argument proving that d is constant relies on that two-sided control, so the rigidity classification is not validly established as written."
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "Mapping: reduction is the iterate law and d≥0; lower_bound verifies all translations by RMS–AM–GM; upper_bound excludes all other functions using quadratic displacement control and partitioning."
+ },
+ "anchors": {
+  "upper_bound": {
+   "anchored": false,
+   "length": 116,
+   "length_ok": true,
+   "reason": "not found"
+  }
+ }
+}

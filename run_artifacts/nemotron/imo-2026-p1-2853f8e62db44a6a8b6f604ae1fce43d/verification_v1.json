@@ -1,0 +1,18 @@
+{
+  "task_id": "imo-2026-p1",
+  "verdict": "confirm",
+  "weakest_inference": "The claim in Part 2 that 'the process cannot get stuck for p before its valuations reduce to the invariant gcd' informally argues per-prime progress under adversarial global move choices, but this per-prime progress argument is not logically required—the proof instead correctly relies on global termination (Part 1) forcing K=1, which simultaneously forces at most one positive p-valuation for all primes.",
+  "counterexample_search": [
+    "Tested {2,3} → M=6=2^1·3^1, gcd(v2)={1,0}=1, gcd(v3)={0,1}=1 ✓",
+    "Tested {4,8} → M=2, v2={2,3} gcd=1 ✓",
+    "Tested {4,9} → M=36, v2={2,0} gcd=2, v3={0,2} gcd=2 ✓",
+    "Tested {6,10,15} → M=30, all prime gcds=1 ✓",
+    "Tested {8,12,18} → M=6, v2={3,2,1} gcd=1, v3={0,1,2} gcd=1 ✓",
+    "Tested {2,2,2} (N=3) → M=2, v2={1,1,1} gcd=1 ✓",
+    "Tested {4,9,25} → M=900, each prime gcd=2 ✓",
+    "No counterexample found; invariant holds in all tested cases"
+  ],
+  "dependency_gaps": [],
+  "required_fixes": [],
+  "summary": "The proof is fully correct and rigorous. Part 1 establishes termination via the well-founded lexicographic measure (K, ΣΩ) where K=count>1 and S=sum of prime factor counts. Every move strictly decreases (K,S), forcing termination with K≤1; since the product never increases from its initial value >1, K=1 exactly. Part 2 proves uniqueness via the invariant that for each prime p, the gcd of the multiset of p-adic valuations is preserved by the move (a,b)→(min(a,b),|a-b|), a Euclidean step. At termination K=1 implies the final multiset for p is {v_p(M),0,…,0} whose gcd is v_p(M), so v_p(M) equals the initial gcd. The final M=∏p p^{gcd_i v_p(a_i)} is uniquely determined by the initial multiset. No circular dependencies, no gaps, no required fixes. The informal per-prime progress remark in Part 2 is expositionally weak but logically superfluous."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "p5-deedy-deepseek-v4-pro-final",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931.md",
+  "bytes": 10024,
+  "sha256": "24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7942,
+        "output_tokens": 3442,
+        "output_tokens_details": {
+          "thinking_tokens": 3097
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3442,
+            "cache_read_input_tokens": 7942,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 37.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to x and y+c, both inequalities, all c>=0",
+    "upper_bound_mechanism": "|A-B|<=A+B inequality (7) + orbit AP density (rational/irrational ratio) excludes two positive differences; level-set separation |x-y|>c plus backward lemma giving u in (0,c] and covering by intervals kills S_0",
+    "wrong_answer_stated": false,
+    "notes": "All obligations met: (S) f(f(x))=2f(x)-x with orbits AP and g>=0; (V) full QM-AM-GM check for all c>=0; (N) uniqueness of positive difference via density argument, plus rigorous exclusion of mixed fixed/non-fixed case via separation and covering. Identities (5)-(8) verified correct; only a harmless typo (4cx vs 4cy) in the always-true A(x,y)."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

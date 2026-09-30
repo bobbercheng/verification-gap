@@ -1,0 +1,44 @@
+{
+  "id": "p3-h-24646b45f297",
+  "problem": "3",
+  "sha256": "24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0",
+  "path": "checkpoint_inputs/24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-3"
+  ],
+  "bytes": 13473,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 19124,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 368,
+        "reasoning_output_tokens": 241
+      },
+      "sec": 12.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "flawed splitting monotonicity",
+    "upper_bound_mechanism": "flawed adjacent-pair construction",
+    "wrong_answer_stated": true,
+    "notes": "The stated formula is wrong except at n=1. The claiming phase is correctly reduced to odd-ranked sorted pieces and an alternating sum. The proposed lower bound relies on false, unproved splitting claims and analyzes only one Xiang response. The upper construction neither respects Liu’s existing cuts nor proves its key sorted-pair lemma."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

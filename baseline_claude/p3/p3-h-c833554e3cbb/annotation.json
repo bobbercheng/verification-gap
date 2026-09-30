@@ -1,0 +1,67 @@
+{
+  "id": "p3-h-c833554e3cbb",
+  "problem": "3",
+  "sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+  "path": "checkpoint_inputs/c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-gpt-5.6-sol-xhigh-final",
+    "gpt-5.6-sol-xhigh-main-t008"
+  ],
+  "bytes": 11015,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6192,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 9544,
+        "output_tokens_details": {
+          "thinking_tokens": 9378
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6192,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 9544,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 6192,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 6192
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 111.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 7,
+    "complete": true,
+    "main_gap": "none",
+    "notes": "Answer 2^n/(2^{n+1}-1) verified for n=1 by hand. Claiming-stage value D, min-cost pairing lemma, common-refinement cut count (r+s-1), tree-component/powers-of-two lower bound, and subset-sum pigeonhole upper bound all check out. Only trivial hand-waves (cut points possibly coinciding with existing marks, which only helps)."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

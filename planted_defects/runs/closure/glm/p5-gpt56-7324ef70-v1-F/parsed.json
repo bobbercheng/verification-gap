@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "p5-gpt56-7324ef70-v1-F",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "F",
+ "problem": "5",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 31.1,
+  "input_tokens": 2598,
+  "output_tokens": 3301,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "RMS-AM-GM on x and y+C (since f(x)+y = x+f(y)), all C>=0",
+  "upper_bound_mechanism": "quadratic displacement estimate |d(y)-d(t)| <= (y-t)^2/(4 min{t,y}) via both inequalities at x=f(t), then telescoping partition; fixed points covered",
+  "wrong_answer_stated": false,
+  "notes": "Complete proof. (S): x=f(y) forces f(f)=2f-t, orbits AP, d>=0 via positivity. (N): algebra expands both squared inequalities exactly; (5),(6) verified; partition chaining with n->infty forces d constant, no extra assumptions, mixed fixed/non-fixed case included. (V): RMS-AM-GM, C>=0 including C=0. Numerical checks explicitly not used as proof."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 2598,
+    "output_tokens": 3301,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 31.1,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 2,
+ "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26"
+}

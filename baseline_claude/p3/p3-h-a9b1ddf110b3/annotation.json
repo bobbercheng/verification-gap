@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-a9b1ddf110b3",
+  "problem": "3",
+  "sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+  "path": "checkpoint_inputs/a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "glm53-c3"
+  ],
+  "bytes": 9592,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5462,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 2399,
+        "output_tokens_details": {
+          "thinking_tokens": 2169
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 5462,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2399,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 5462,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 5462
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 31.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 2,
+    "complete": false,
+    "main_gap": "Neither bound proved in general: lower bound only for n≤2 / uncut-a₁ case; upper bound reduced to unproven Lemma X1 (verified m≤4). Most cited lemmas are asserted, not written out.",
+    "notes": "Correct answer c_n=2^n/(2^{n+1}-1) with sensible reductions (layer-cake/matching identities, Δ_k potential bound ≤1/(2^{n+1}-1), split-at-k* construction). But the document is a status report: both main theorems are explicitly open for n≥3, and supporting proofs are referenced rather than presented."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

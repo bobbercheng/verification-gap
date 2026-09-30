@@ -1,0 +1,18 @@
+{
+ "claim_id": "C3",
+ "condition": "valid",
+ "verifier": "glm",
+ "model": "glm-5.3",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "Greedy minimality constrains integer size, not set inclusion. If every earlier term is even, the least admissible next term is just the least larger even integer, which can carry extra odd prime factors (e.g. 10 = 2·5); then {2} alone hits all earlier prime-factor sets, so P(a_{n+1}) is not inclusion-minimal.",
+  "witness_valid": true,
+  "witness_reason": "The greedy rule is satisfied: 8 is the least integer >6 sharing a factor with 6 (7 fails), and 10 is the least >8 sharing factors with 6 and 8 (9 fails since gcd(9,8)=1). {2,5} hits {{2,3},{2}} but proper subset {2} also hits, so minimality fails."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": true
+ },
+ "elapsed_seconds": 67.9
+}

@@ -1,0 +1,34 @@
+{
+  "id": "pilot-b8f1189e80f9",
+  "lineage": "pilot",
+  "model": "pilot",
+  "context": null,
+  "turn": null,
+  "path": "pilot_critique_ext/p3-low-N-r1/output.md",
+  "bytes": 8823,
+  "sha256": "b8f1189e80f9b4c62931c1239d57af7f65236e06fb9e62946b66c79b9a96d3c9",
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 122.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "signed-sum lemma via pairing graph/tree (bipartite signing) + binary uniqueness",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap 1/D + overlay refinement into equal pairs",
+    "wrong_answer_stated": false,
+    "notes": "Complete, rigorous proof. Lemma 1 proves greedy optimal, reducing to alternating sum. Lemma 2's tree component yields a nontrivial signed block sum <= Delta, forcing Delta >= 1/D for the dyadic division. Upper bound: 2^{n+1} subset sums give gap <= 1/D, overlay pairing built with <= n cuts, degenerate cases handled."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

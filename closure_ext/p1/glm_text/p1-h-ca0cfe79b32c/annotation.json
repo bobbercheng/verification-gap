@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-ca0cfe79b32c",
+  "problem": "1",
+  "sha256": "ca0cfe79b32c8331a031d11c8f5a84b17d45747b04f92580fb7be6b5d21ff3a6",
+  "path": "checkpoint_inputs_ext/ca0cfe79b32c8331a031d11c8f5a84b17d45747b04f92580fb7be6b5d21ff3a6.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 1,
+  "record_ids": [
+    "p1-muse-spark-1.1-main-t001"
+  ],
+  "bytes": 6487,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2455,
+        "output_tokens": 1979,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 28.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "count of >1 entries stabilizes, then product strictly decreases (lexicographic k,P monovariant)",
+    "upper_bound_mechanism": "per-prime gcd of p-adic valuations invariant via Euclidean identity",
+    "wrong_answer_stated": false,
+    "notes": "Complete. (E): (min,|a-b|) derived; never two 1s proved in all cases. (T): k nonincreasing bounded below, then P strictly decreases when k constant; terminal k<=1 plus k>=1 gives exactly one survivor. (I): G_p invariance with zero/equal cases handled; M explicitly prod p^gcd of initial valuations."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

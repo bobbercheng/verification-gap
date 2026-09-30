@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p6-gpt-5.6-sol-main-t009",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 456.1,
+  "input_tokens": 3472,
+  "output_tokens": 4922,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "The quote admits the induction only characterizes transversals meeting C, justified by C∈F — but in the recursion the hypothesis is applied to F_c with transversal C∖{c}, which is generally not a member of F_c. Checking the witness F={{1,2},{2,3}}, C={1,2}: X={1,3} is a transversal of F, meets C only in c=1, but does not meet C∖{1}={2}. The induction hypothesis on F_1 (transversals meeting {2}) then yields D-lists forcing 2, so the derived criterion requires X⊇{1,2}, which X fails. Hence the stated biconditional ('X traverses F ⟺ {c}∪D⊆X for some c∈X∩C') is false, and the lemma's conclusion (a finite list characterizing all finite transversals) is not established. No other part of the text proves finiteness, so the lower_bound obligation (F) fails as written, even though the lemma happens to be true."
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "checker": "gpt",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "deedy-deepseek-v4-pro-final",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.7,
+  "input_tokens": 15824,
+  "output_tokens": 348,
+  "reasoning_output_tokens": 165,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "For n=2, Liu’s proposed marks at 1/5 and 2/5 create lengths 1/5, 1/5, 3/5. Xiang may use just one of his allowed two marks to bisect the 3/5 piece, producing lengths 3/10, 3/10, 1/5, 1/5. Under optimal alternating selection, Liu takes one 3/10 piece and one 1/5 piece, totaling 1/2, while Xiang receives the same. Thus this strategy does not guarantee the claimed 3/5. The objection is fatal to the proposed lower-bound strategy, and the write-up contains no later proof repairing it."
+ }
+}

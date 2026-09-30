@@ -1,0 +1,137 @@
+{
+ "annotator": "kimi-k3",
+ "items": [
+  {
+   "id": "pilot-c473124a3778",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique/p3-high-C-r1/output.md",
+   "bytes": 15120,
+   "sha256": "c473124a3778f64e325b270174210641c039144626e7947846ae6bc6c098e58b",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 59.7,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position majorization via induction on rank pairs",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/N plus midpoint/greedy-matching cancellation construction",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Lemma 1 proves claiming value = odd sum via a careful pairing principle. Theorem A: geometric division with Lemma E (induction bounding even-position sums) valid against all refinements. Theorem B: pigeonhole on 2^{n+1} subset sums, midpoint pairs plus overlay matching, with cut-count case analysis (ell>=1/ell=0/empty side) proving <=n marks; delta <= max L <= D <= 1/N."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  },
+  {
+   "id": "pilot-b81de4e701ac",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique/p3-high-C-r2/output.md",
+   "bytes": 13505,
+   "sha256": "b81de4e701acf71a6ff544b797faad368c5c75559989852613426334e75910d4",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 106.7,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position majorization",
+    "upper_bound_mechanism": "subset-sum pigeonhole + equal-pair cancellation",
+    "wrong_answer_stated": false,
+    "notes": "Complete and rigorous: the claiming phase is reduced to sorted alternating sums; the geometric split is protected by an all-n even-position majorization; arbitrary Liu divisions are handled by subset-sum pigeonhole plus equal-pair cancellation within n cuts."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  },
+  {
+   "id": "pilot-25a02f9148ef",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique/p3-high-N-r1/output.md",
+   "bytes": 12481,
+   "sha256": "25a02f9148ef9d0100689e342763065fd8f063f2d523c11c94a9db597e0f9719",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 124.3,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-rank majorization by induction (sum of v_{2i} <= 2^n - 2^{n-r})",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/N plus greedy equal-pair cancellation with cut count",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct all-n proof. Lemma 1 gives rigorous pairing strategies for the odd-sum reduction; Lemma E inducts on rank pairs handling arbitrary interleaving; upper bound uses sorted subset-sum gaps plus a cancellation procedure with careful count |P|+|Q|=c+2f+ℓ ≤ n marks and legality check. No gaps found."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  },
+  {
+   "id": "pilot-96514f704580",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique/p3-high-N-r2/output.md",
+   "bytes": 9412,
+   "sha256": "96514f704580da32f1f32e223688c7b4fa054fa32f2371ab268b266f93c14e38",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 239.4,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "geometric division + even-position majorization (Lemma E)",
+    "upper_bound_mechanism": "subset-sum gap pigeonhole + equal-pair cancellation",
+    "wrong_answer_stated": false,
+    "notes": "Complete and rigorous: Lemma 1 proves the claiming value is the odd sum; geometric marks with Lemma E bound every even partial sum for any Xiang reply; subset-sum gap plus equal-pair cancellation uses at most n cuts and leaves leftover at most 1/N."
+   },
+   "S": 2,
+   "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+  }
+ ]
+}

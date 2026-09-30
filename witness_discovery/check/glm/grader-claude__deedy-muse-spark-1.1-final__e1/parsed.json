@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 114.1,
+  "input_tokens": 179,
+  "output_tokens": 7744,
+  "cache_read_input_tokens": 8192
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and means what the objection says: the write-up proves the invariance (Liu gets exactly (n+1)d) only when Xiang splits each big piece once and leaves the small piece intact; it then asserts other replies 'give Liu at least as much' from two hand-checked n=2 examples, explicitly flags 'Need to prove', and never establishes the statement anywhere else (later it only restates 'We need to show...'). The claim is also genuinely false: for n=2 with Liu pieces 0.4, 0.4, 0.2, let Xiang cut one 0.4 into 0.39/0.01 and the 0.2 into 0.18/0.02; sorted pieces 0.4, 0.39, 0.18, 0.02, 0.01 give Liu 0.4+0.18+0.01 = 0.59 < 0.60 = (n+1)d. Thus the all-n lower-bound mechanism rests on an unproved, false step, so the lower-bound obligation fails as written."
+ }
+}

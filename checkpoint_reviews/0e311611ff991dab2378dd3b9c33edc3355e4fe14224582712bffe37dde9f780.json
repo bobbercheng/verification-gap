@@ -1,0 +1,40 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "reject",
+  "scores": {
+    "correctness": 0,
+    "completeness": 0,
+    "rigor": 1,
+    "self_contained": 2
+  },
+  "fatal_issues": [
+    "Key observation (Lemma 1 dependency) is false: P(a_{n+1}) is NOT necessarily a minimal hitting set for F_n. Counterexample: a_1=6, a_2=8, a_3=10. P(a_3)={2,5} but minimal hitting set for {{2,3},{2}} is {2}.",
+    "Lemma 1 proof (finiteness of prime set) is fatally flawed: The CRT construction creates x_k ≡ 0 (mod p_k), x_k ≡ 1 (mod p_i) for i<k. This makes x_k coprime to ALL previous terms (gcd=1), not a valid candidate to contradict minimality of a_{n_k}. The proof claims x_k satisfies the gcd condition, but it does the opposite.",
+    "Lemma 1 also claims p_k > L_k for large k (where L_k = primorial of first k primes). This is false: primorial grows as e^{(1+o(1))k log k} while p_k ~ k log k, so L_k ≫ p_k for large k.",
+    "Lemma 2 (stabilization of M_n) depends on Lemma 1's finiteness of P*. Even if P* were finite, the stabilization argument is incomplete: M_n is not monotone, and finiteness of state space only implies eventual periodicity, not necessarily a fixed point."
+  ],
+  "required_fixes": [
+    "Replace the false key observation with the correct one: P(a_{n+1}) CONTAINS a minimal hitting set for F_n, but is not necessarily minimal itself.",
+    "Provide a correct proof of finiteness of the prime set (Lemma 1). The standard IMO 2026 P6 solution uses a different CRT argument or an inductive bound on the number of new primes.",
+    "Re-prove stabilization of minimal hitting sets (Lemma 2) without assuming finiteness of P*, or after correctly establishing finiteness.",
+    "Re-verify Lemma 3 (eventual exact minimal hitting sets) with correct foundations."
+  ],
+  "verified_claims": [
+    "Lemma 4: If the tail equals the merge of progressions A_H = {k·m_H} with m_H | L, then the residue set R = ∪_H {0, m_H, 2m_H, ..., L-m_H} mod L is periodic with period T = |R| and a_{n+T} = a_n + L for n ≥ N. (Correct conditional on Lemma 3.)",
+    "Lemma 5: The merge of arithmetic progressions with moduli dividing L visits residues in R cyclically; after T = |R| steps the value increases by exactly L. (Correct.)",
+    "Lemma 6: Backward induction via uniqueness of the greedy sequence. If a_{n+T} = a_n + L for all n ≥ N, then b_n = a_{n+T} - L satisfies the same recurrence and agrees for large n, hence b_n = a_n for all n. (Correct conditional on forward periodicity.)"
+  ],
+  "unverified_claims": [
+    "Lemma 1: The set of all primes appearing in the sequence is finite. (Proof is invalid; claim is true but unproven here.)",
+    "Lemma 2: The family of minimal hitting sets M_n stabilizes to a fixed family M. (Depends on Lemma 1; argument incomplete even if Lemma 1 held.)",
+    "Lemma 3: Eventually P(a_n) equals a minimal hitting set exactly (no extra primes). (Depends on Lemmas 1-2; proof sketch uses unjustified pigeonhole argument.)",
+    "The example computation for a_1=15 yielding T=8, L=30, M={{2,3},{2,5},{3,5}}. (Plausible but not verified as part of the proof.)"
+  ],
+  "summary": "The proof has a fatal error in its foundational Lemma 1. The 'key observation' that P(a_{n+1}) is a minimal hitting set is false (explicit counterexample provided). The CRT proof of Lemma 1 constructs a number coprime to all previous terms instead of one hitting them, and incorrectly claims primorial grows slower than primes. All subsequent lemmas depend on this. The proof does not establish the required result.",
+  "transfer_assessment": [
+    "The hitting-set framework (minimal transversals of prime factor families) is the correct conceptual structure for this problem and is reusable.",
+    "The merge-of-progressions characterization of the tail (Lemmas 4-5) is correct and reusable once the hitting sets are proven to stabilize.",
+    "The backward-induction uniqueness argument (Lemma 6) is a clean, reusable technique for greedy sequences with periodic tails.",
+    "The flawed CRT construction in Lemma 1 is a misleading mechanism: it inverts the hitting requirement (produces a number coprime to all previous terms) and misstates primorial growth. Do not reuse this argument."
+  ]
+}

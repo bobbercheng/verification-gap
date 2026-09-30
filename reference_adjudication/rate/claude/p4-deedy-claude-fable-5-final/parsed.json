@@ -1,0 +1,74 @@
+{
+ "rater": "claude",
+ "case": "p4-deedy-claude-fable-5-final",
+ "problem": "4",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.3,
+  "input_tokens": 2,
+  "output_tokens": 1048,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 8358,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5368,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005463,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1048,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 8358,
+    "webSearchRequests": 0,
+    "costUSD": 0.10979000000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 575,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "statements": {
+   "lower_bound": {
+    "established": "yes",
+    "quote": "In the latter case Mulan plays the cut of Lemma 2; whichever child Shan-Yu keeps, the next round starts with a triangle containing an angle $k'\\theta$ with $1\\le k'\\le n-1$, and by Lemma 1 Mulan wins within $k'-1\\le n-2$ further cuts.",
+    "note": "Lemma 1 chain (induction on k, both pieces) + Lemma 2 double threat, with n=2 case treated separately."
+   },
+   "upper_bound": {
+    "established": "yes",
+    "quote": "Assume for contradiction both children are unsafe. There are four cases... 4. $180^\\circ-B-\\alpha=k\\theta$ and $B+\\alpha=m\\theta$. Adding: $180^\\circ=(k+m)\\theta\\in\\theta\\mathbb N$ — contradicting the hypothesis of Part 2.",
+    "note": "Safe-angle invariant with existence of safe start and full four-case closure under every cut."
+   }
+  },
+  "S_ref": 2,
+  "notes": "No ledger statements exist for P4, so the two obligations were judged directly. Cut parametrization (Lemma 0) is proved; chain lemma covers both discard options; Lemma 2 handles n=2 and n>=3 with legality of alpha verified; avoidance direction is complete."
+ },
+ "anchors": {
+  "lower_bound": {
+   "anchored": true,
+   "length": 234,
+   "length_ok": true,
+   "reason": null
+  },
+  "upper_bound": {
+   "anchored": false,
+   "length": 222,
+   "length_ok": true,
+   "reason": "not found"
+  }
+ }
+}

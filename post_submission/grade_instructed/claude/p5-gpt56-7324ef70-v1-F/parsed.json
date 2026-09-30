@@ -1,0 +1,62 @@
+{
+ "gate": "grade_im",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p5-gpt56-7324ef70-v1-F",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "F",
+ "problem": "5",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 22.1,
+  "input_tokens": 2,
+  "output_tokens": 1944,
+  "cache_read_input_tokens": 3364,
+  "cache_creation_input_tokens": 4984,
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1944,
+    "cacheReadInputTokens": 3364,
+    "cacheCreationInputTokens": 4984,
+    "webSearchRequests": 0,
+    "costUSD": 0.100132,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1608,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "Sign typo in the lower-inequality expansion: (t+2c+y)^2-4(t+c)(y+b) actually equals (t-y)^2+4(t+c)(c-b), not 4(t+c)(b-c). The stated conclusion (5), b-c ≤ (t-y)^2/(4(t+c)), is nevertheless the correct consequence of the correct expansion, so the argument is unaffected.",
+    "quote": "=(t-y)^2+4(t+c)(b-c)."
+   }
+  ],
+  "notes": "Clean, complete proof: x=f(y) gives f(f(y))=2f(y)-y, positivity forces d≥0, substitution x=f(t) yields the quadratic Lipschitz-type bound |d(y)-d(t)|≤(y-t)^2/(4min), and a telescoping partition forces d constant. Converse verified. Only a harmless intermediate sign typo."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 21,
+   "length_ok": false,
+   "reason": "short",
+   "span": [
+    2939,
+    2960
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_im",
+ "run_tag": "",
+ "transport_choice": "cli"
+}

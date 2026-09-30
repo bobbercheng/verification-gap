@@ -1,0 +1,66 @@
+{
+  "id": "p1-grok-4.5-main-t010",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 10,
+  "path": "checkpoint_inputs_ext/46c8c94cf5e8321179e62981a21048334126d80a40fbe4b84018920003cca8cd.md",
+  "bytes": 8877,
+  "sha256": "46c8c94cf5e8321179e62981a21048334126d80a40fbe4b84018920003cca8cd",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4518,
+        "cache_read_input_tokens": 1363,
+        "output_tokens": 1491,
+        "output_tokens_details": {
+          "thinking_tokens": 1175
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4518,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1491,
+            "cache_read_input_tokens": 1363,
+            "cache_creation_input_tokens": 4518,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4518
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 20.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic potential (k = #entries>1, P = product); k drops by at most 1 per move so k>=1, and no move possible means k<=1",
+    "upper_bound_mechanism": "per-prime invariance of gcd of valuations via gcd(min, |a-b|) = gcd(a,b); terminal g_p = v_p(M)",
+    "wrong_answer_stated": false,
+    "notes": "All four components present and correct: valuation move description with 'at least one output >1' from g*l = lcm > 1; lexicographic termination plus exactly-one-survivor; gcd-of-valuations invariance covering equal and zero cases; explicit M = prod p^{gcd v_p(a_i)}. Some garbled parenthetical asides (e.g. 'product may increase') are noise, not load-bearing."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

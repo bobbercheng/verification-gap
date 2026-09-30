@@ -1,0 +1,47 @@
+{
+  "id": "p5-h-4f7baed6471b",
+  "problem": "5",
+  "sha256": "4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b",
+  "path": "checkpoint_inputs_ext/4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 2,
+  "record_ids": [
+    "p5-gpt-5.6-sol-xhigh-main-t002",
+    "p5-deedy-gpt-5.6-sol-xhigh-final"
+  ],
+  "bytes": 5533,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1824,
+        "output_tokens": 3077,
+        "cache_read_input_tokens": 1024,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 39.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM chain on x and y+c (f(x)+y = x+f(y)), all c>=0",
+    "upper_bound_mechanism": "orbit asymptotic comparison of two APs (bounded-gap subsequences, RMS-AM gap -> 0) plus open sets A,B and connectedness to kill mixed case",
+    "wrong_answer_stated": false,
+    "notes": "Complete and rigorous: identity f(f(y))=2f(y)-y derived, orbits are APs forcing d>=0; positive displacements compared via floor-chosen bounded-gap iterates with explicit error term (p-q)^2/(...) -> 0; mixed fixed/non-fixed case excluded by openness of both displacement sets plus connectedness; sufficiency verified for all c>=0."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

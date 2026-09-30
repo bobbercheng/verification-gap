@@ -1,0 +1,44 @@
+{
+  "id": "p4-h-7e9068250570",
+  "problem": "4",
+  "sha256": "7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8",
+  "path": "checkpoint_inputs_ext/7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9a63b14e",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-9a63b14e-v1"
+  ],
+  "bytes": 12849,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 19081,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 400,
+        "reasoning_output_tokens": 261
+      },
+      "sec": 14.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "explicit strategies for 60° and 90°",
+    "upper_bound_mechanism": "maximum-angle invariant for θ>90°",
+    "wrong_answer_stated": false,
+    "notes": "Correctly proves the winning cases n=2,3 and avoidance for θ>90°, including all discard/cut choices there. It also proves the k=2 preparatory step only for θ=60°. It does not state or prove the full classification, general multiple-angle lemma, all n≥2 winning direction, or avoidance for every remaining θ."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

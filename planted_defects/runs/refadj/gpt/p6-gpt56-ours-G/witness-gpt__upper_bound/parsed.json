@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "objection_key": "witness-gpt__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.1,
+  "input_tokens": 17091,
+  "output_tokens": 287,
+  "reasoning_output_tokens": 141,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L6.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The deduction of (4) from equality of small-prime supports is logically valid only after (3). But (3)'s forward implication relies wholly on the lemma that every term’s small-prime support is good, whose proof is replaced by “details omitted.” The later reference to an Rp^k construction does not supply that construction or prove it for all terms. Thus unconditional periodicity from A is not established; a full large-prime-erasure lemma is required."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "upper_bound"
+}

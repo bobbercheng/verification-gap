@@ -1,0 +1,54 @@
+{
+ "rater": "glm",
+ "case": "p6-deedy-gpt-5.6-sol-pro-final",
+ "problem": "6",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 135.2,
+  "input_tokens": 2852,
+  "output_tokens": 11089,
+  "cache_read_input_tokens": 960
+ },
+ "parsed": {
+  "statements": {
+   "L6.1": {
+    "established": "yes",
+    "quote": "scan the integers $a_1+1,a_1+2,\\ldots$ in increasing order, accepting an integer if and only if it has greatest common divisor greater than $1$ with every integer accepted earlier. The accepted integers, in increasing order, are exactly $a_1,a_2,\\ldots$.",
+    "note": "Greedy-scan equivalence justified; support-only dependence then proved for all x<y, giving the characterization."
+   },
+   "L6.2": {
+    "established": "yes",
+    "quote": "If a prime $p$ occurs in any $C\\in\\mathcal C$, Lemma 2 supplies a terminal $D\\in\\mathcal C$ containing $p$. Therefore every prime occurring in any member of $\\mathcal C$ belongs to $P$. It follows that every member of $\\mathcal C$ is a subset of the finite set $P$, and hence $\\mathcal C$ itself is finite, as desired.",
+    "note": "Equivalent route: sunflower Lemma 1 plus weight-descent Lemma 2, proved for all terms; no a_1^2 bound needed."
+   },
+   "L6.3": {
+    "established": "yes",
+    "quote": "Taking $x=a_n$ and using (6), the endpoint $a_n+L$ is accepted. It is consequently the $T$-th accepted integer after $a_n$, so\n\\[\na_{n+T}=a_n+L\n\\]\nfor every positive integer $n$.",
+    "note": "Invariance m→m+L stated for all m≥a_1; T counted in residues; periodicity from n=1."
+   }
+  },
+  "S_ref": 2,
+  "notes": "Complete, correct alternative proof: reduction to prime supports with self-duality; finiteness via infinite sunflower lemma and full weight-descent (not the false minimal-transversal route); global periodicity from n=1. Both obligations fully written out for all cases."
+ },
+ "anchors": {
+  "L6.1": {
+   "anchored": true,
+   "length": 254,
+   "length_ok": true,
+   "reason": null
+  },
+  "L6.2": {
+   "anchored": true,
+   "length": 318,
+   "length_ok": true,
+   "reason": null
+  },
+  "L6.3": {
+   "anchored": true,
+   "length": 178,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

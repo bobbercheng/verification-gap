@@ -1,0 +1,44 @@
+{
+  "id": "p3-h-f4b82aeef8ab",
+  "problem": "3",
+  "sha256": "f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00",
+  "path": "checkpoint_inputs/f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round3",
+  "turn": 14,
+  "record_ids": [
+    "kimi-k3-round3-t014"
+  ],
+  "bytes": 2892,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 15551,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 304,
+        "reasoning_output_tokens": 169
+      },
+      "sec": 11.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "matching/tree and block-lemma sketch",
+    "upper_bound_mechanism": "subset-sum pigeonhole/greedy-chain sketch",
+    "wrong_answer_stated": false,
+    "notes": "The correct closed form is stated. Greedy claiming and the alternating-sum reduction are asserted without their proof. The lower-bound framework is outlined for all n, but key matching/component steps are not written out and it is explicitly “modulo write-up.” The upper bound depends on an unproved chain theorem, so neither bound is complete."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

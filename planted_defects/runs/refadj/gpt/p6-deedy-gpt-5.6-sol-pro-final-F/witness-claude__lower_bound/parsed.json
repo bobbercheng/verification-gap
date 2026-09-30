@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-F",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "F",
+ "problem": "6",
+ "objection_key": "witness-claude__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 19.8,
+  "input_tokens": 18679,
+  "output_tokens": 823,
+  "reasoning_output_tokens": 671,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The asserted infinite sunflower fact is false for families of unbounded finite sets; both counterexamples correctly demonstrate this, and the proposed induction need not terminate. Lemma 1 therefore is not proved, so the later conclusion that only finitely many terminal supports—and hence finitely many relevant primes—exist is unsupported. No independent bounded-size sunflower argument appears elsewhere. Repair requires replacing Lemma 1 with the bounded-cardinality version and proving it by induction on the size bound; this is a lemma-level repair."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "lower_bound"
+}

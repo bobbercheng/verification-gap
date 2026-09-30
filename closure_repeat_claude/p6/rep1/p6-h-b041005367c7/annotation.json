@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-b041005367c7",
+  "problem": "6",
+  "sha256": "b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58",
+  "path": "checkpoint_inputs/b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round1",
+  "turn": 21,
+  "record_ids": [
+    "p6-kimi-k3-round1-t021"
+  ],
+  "bytes": 2820,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2927,
+        "output_tokens": 915,
+        "output_tokens_details": {
+          "thinking_tokens": 609
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 915,
+            "cache_read_input_tokens": 2927,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none (finiteness of minimal generators of S_inf left as open crux; only empirics)",
+    "upper_bound_mechanism": "conditional assembly: S_inf a union of residue classes mod L + Theorem A gives a_{n+T}=a_n+L for all n, T=#(S_inf∩[1,L]) (sketched)",
+    "wrong_answer_stated": false,
+    "notes": "Correct hitting-set framework; Theorem A (sequence = S_inf ∩ [a_1,∞)) gives the characterization (C). L is never identified as a product of finitely many small primes; the finiteness/large-prime-erasure step is explicitly unproved and supported only by numerics. Periodicity assembly is stated conditionally, briefly. Honest 'partial' status."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

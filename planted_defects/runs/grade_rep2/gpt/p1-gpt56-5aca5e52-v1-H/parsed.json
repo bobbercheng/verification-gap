@@ -1,0 +1,42 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p1-gpt56-5aca5e52-v1-H",
+ "base_id": "p1-gpt56-5aca5e52-v1",
+ "type": "H",
+ "problem": "1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 19.3,
+  "input_tokens": 16509,
+  "output_tokens": 488,
+  "reasoning_output_tokens": 341,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": false,
+  "main_gap": "A mistaken lcm formula creates a local inconsistency in the descent calculation; replacing mn/g² by mn/g repairs the proof.",
+  "errors": [
+   {
+    "description": "The equality is false: lcm(m,n)=mn/g, not mn/g². The subsequent conclusion P'=P/g is correct under the proper formula, so this is a straightforward local repair.",
+    "quote": "\\operatorname{lcm}(m,n)=\\frac{mn}{g^{2}}."
+   }
+  ],
+  "notes": "Apart from this algebraic slip, the lexicographic termination argument and the primewise gcd invariant correctly establish both required claims and the stated formula for M."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 41,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    967,
+    1007
+   ]
+  }
+ ]
+}

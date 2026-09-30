@@ -1,0 +1,19 @@
+{
+ "checker": "claude",
+ "transport": "claude-cli",
+ "model": "claude-opus-5",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-grok-4.5-final",
+ "tag": "upper_bound",
+ "text_sha256": "13eda1f40c36141ba704bb16e6a8d6ca25d07d3e21c5ba3108dca292b1a228fe",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "written_but_invalid",
+  "quote": "Taking the remainder as_a single piece (using 0 cuts) already yields \\(D(R)=s=S_n-\\mu\\), hence",
+  "witness": "Counterexample: for n=2, let L={4,1.5,1.5}, with total S_2=7, τ=4, and unique large piece μ=4. The existing remainder is R={1.5,1.5}, so D(R)=1.5−1.5=0, not s=3. Xiang may cut pieces but cannot merge the two remainder pieces into one.",
+  "load_bearing": "The proposed large-piece case needs a lower bound on D(R) strong enough to make μ−D(R)≤1. Treating an already partitioned remainder as one piece is the claimed source of that control, so this case remains unproved."
+ },
+ "started_utc": "2026-09-06 04:46:58 UTC"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-7ab3c4244f77",
+  "problem": "3",
+  "sha256": "7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce",
+  "path": "checkpoint_inputs/7ab3c4244f77175b47df7d32f9c0f2c61adabef287fadc83c9bc0bf1137cdfce.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c1"
+  ],
+  "bytes": 4902,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3585,
+        "output_tokens": 393,
+        "output_tokens_details": {
+          "thinking_tokens": 176
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 393,
+            "cache_read_input_tokens": 3585,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 6.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n division (numerically verified n<=5 only)",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form given explicitly as a conjecture, not proven. Odd-rank-sum reduction stated and numerically verified, proof only named ('greedy exchange/induction'), not written. Lower bound: geometric division named but verified only n=1..5. Upper bound: only grid/random search; no argument for any n."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

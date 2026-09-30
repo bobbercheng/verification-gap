@@ -1,0 +1,44 @@
+{
+ "rater": "gpt",
+ "case": "p1-deedy-kimi-k3-final",
+ "problem": "1",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 17.0,
+  "input_tokens": 18300,
+  "output_tokens": 298,
+  "reasoning_output_tokens": 58,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "statements": {
+   "L1.1": {
+    "established": "yes",
+    "quote": "Since $z$ is non-decreasing, takes values in $\\{0,1,\\dots,N\\}$, and increases by $1$ at every type B move, the whole play contains **at most $N$ type B moves**. Since $P$ is always a positive integer and each type A move at least halves it",
+    "note": "Termination and exactly one surviving entry are rigorously proved for every play."
+   },
+   "L1.2": {
+    "established": "yes",
+    "quote": "Consequently the set of positive common divisors of the whole $N$-tuple of valuations is unchanged by the move. If the tuple is not identically zero, its gcd is the largest element of this set, hence unchanged. If the tuple is identically zero, then in particular $\\alpha = \\beta = 0$",
+    "note": "Prime-wise invariance covers equal, zero, and identically-zero valuation cases and determines M."
+   }
+  },
+  "S_ref": 2,
+  "notes": "Both required obligations are fully established, including all edge cases and the explicit choice-independent formula."
+ },
+ "anchors": {
+  "L1.1": {
+   "anchored": true,
+   "length": 239,
+   "length_ok": true,
+   "reason": null
+  },
+  "L1.2": {
+   "anchored": true,
+   "length": 284,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

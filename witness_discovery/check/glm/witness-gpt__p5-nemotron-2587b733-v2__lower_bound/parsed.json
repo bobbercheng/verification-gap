@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 85.5,
+  "input_tokens": 2622,
+  "output_tokens": 7491,
+  "cache_read_input_tokens": 1344
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "With f(x) = x + c, the middle term is (f(x)+y)/2 = (x+y+c)/2, not (x+y+2c)/2; the write-up double-counts c. The witness is valid: at x=y=c=1 the displayed left inequality asserts sqrt((1+4)/2) = sqrt(5/2) ≈ 1.58 >= (1+1+2)/2 = 2, which is false, while the true middle term is 3/2. Moreover, for the displayed chain the claimed equivalence to (x-y-c)^2 >= 0 is wrong: the left inequality reduces to (x-y)^2 >= 4cx + 2c^2. Section 5 is the entire sufficiency verification and no corrected substitution appears elsewhere in the text, so the lower_bound obligation is invalid as written. The repair is a one-symbol typo fix, but per the grading rules only what is written can be credited."
+ }
+}

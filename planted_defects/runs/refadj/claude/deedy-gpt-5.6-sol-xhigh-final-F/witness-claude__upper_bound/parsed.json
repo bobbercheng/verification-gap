@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-F",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "F",
+ "problem": "3",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 26.3,
+  "input_tokens": 2,
+  "output_tokens": 2052,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 6108,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5029,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005118999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2052,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 6108,
+    "webSearchRequests": 0,
+    "costUSD": 0.11321149999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1652,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The text restricts to the 2^{n+1}-2 nonempty proper subsets, whose sums lie in the open interval (0,1); the 2^{n+1}-3 gaps sum to less than 1, so pigeonhole gives only a gap < 1/(2^{n+1}-3) > d. The inference to (11) is a non-sequitur, and the objection's counterexample (n=1, a=(0.9,0.1): only sums 0.1 and 0.9, gap 0.8 > 1/3) shows (11)/(12) is actually false as stated. No other passage derives the near-equal subset pair, so L3.2 is not established. The standard fix — use all 2^{n+1} sums in [0,1], giving 2^{n+1}-1 gaps summing to 1 — is a one-sentence edit; the rest of Section 5 (including the empty A or B case) then goes through.",
+  "objection_correct_note": null
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

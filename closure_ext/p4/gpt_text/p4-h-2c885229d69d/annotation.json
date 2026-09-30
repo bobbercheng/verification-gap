@@ -1,0 +1,45 @@
+{
+  "id": "p4-h-2c885229d69d",
+  "problem": "4",
+  "sha256": "2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc",
+  "path": "checkpoint_inputs_ext/2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 5,
+  "record_ids": [
+    "p4-muse-spark-1.1-main-t005",
+    "p4-deedy-muse-spark-1.1-final"
+  ],
+  "bytes": 8787,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 18309,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 423,
+        "reasoning_output_tokens": 304
+      },
+      "sec": 16.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "force an integer multiple, then descend by splitting off theta",
+    "upper_bound_mechanism": "safe-triangle invariant under adversarial discarding",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. The induction proves all integer multiples are winning; the divisor construction sends both children to winning positions, including a separate n=2 argument; and the four-case invariant proof gives Shan-Yu a safe surviving child after every cut."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

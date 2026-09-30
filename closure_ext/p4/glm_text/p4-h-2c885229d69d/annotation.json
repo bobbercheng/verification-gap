@@ -1,0 +1,47 @@
+{
+  "id": "p4-h-2c885229d69d",
+  "problem": "4",
+  "sha256": "2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc",
+  "path": "checkpoint_inputs_ext/2c885229d69dd4dccd0058ec4b290f5e7a82864344f1e56cc148cc00618142cc.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 5,
+  "record_ids": [
+    "p4-muse-spark-1.1-main-t005",
+    "p4-deedy-muse-spark-1.1-final"
+  ],
+  "bytes": 8787,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3141,
+        "output_tokens": 6294,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 100.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "W_k two-sided closure: cut max angle with r=(k+1)θ−p so both children carry multiples, then descend kθ→θ+(k−1)θ; n=2 handled by explicit 90−p cut",
+    "upper_bound_mechanism": "Safe set I (no kθ angle) invariant; four-case child lemma, case 180=(k1+k3)θ uses 180 not a multiple of θ; Shan-Yu always keeps safe child",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Answer θ=180°/n, n≥2, explicit. Cut model (1) is verified correct. Level-k induction makes kθ universally winning with BOTH children multiples; n=2 one-move cut fully written; avoidance lemma covers all cuts and discards, using 180∉θZ exactly. Initial safe triangle existence terse but justified by finiteness of M."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

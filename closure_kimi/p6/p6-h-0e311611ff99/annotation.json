@@ -1,0 +1,38 @@
+{
+  "id": "p6-h-0e311611ff99",
+  "problem": "6",
+  "sha256": "0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780",
+  "path": "checkpoint_inputs/0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8828b58a",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-8828b58a-v2"
+  ],
+  "bytes": 16700,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 241.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "CRT large-prime erasure (invalid)",
+    "upper_bound_mechanism": "merge of progressions with residue counting mod L, plus fallacious backward induction",
+    "wrong_answer_stated": true,
+    "notes": "Key observation is false: supports need not be minimal hitting sets — its own example has 30 with support {2,3,5} properly containing {2,3}, contradicting Lemmas 1–3. Lemma 1's contradiction is vacuous (x_k is coprime to all earlier terms, hence not a valid candidate) and 'p_k > L_k' is false. No (C). Only eventual periodicity shown; 'uniqueness' backward step is fallacious."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-ae440d9edfba",
+  "problem": "1",
+  "sha256": "ae440d9edfbabe407aaab8871be17d24d4941aa3b6337bac8d2c036059b662ce",
+  "path": "checkpoint_inputs_ext/ae440d9edfbabe407aaab8871be17d24d4941aa3b6337bac8d2c036059b662ce.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "6c9c2439",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-6c9c2439-v1"
+  ],
+  "bytes": 6836,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5276,
+        "output_tokens": 1881,
+        "output_tokens_details": {
+          "thinking_tokens": 1609
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1881,
+            "cache_read_input_tokens": 5276,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 24.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic monovariant (Omega, C) + C>=1 since each move leaves an output >1",
+    "upper_bound_mechanism": "prime-wise gcd of valuations invariant via gcd(a,b)=gcd(min,|a-b|)",
+    "wrong_answer_stated": false,
+    "notes": "All four components present: valuation description of the move, non-degenerate outputs, well-founded lexicographic termination with exactly one survivor, and prime-wise gcd invariance yielding M = prod p^{G_p}. Equal/zero valuation cases covered implicitly by the uniform identity; minor clumsiness in the d>1 subcase but no false lemma."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

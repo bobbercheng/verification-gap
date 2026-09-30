@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-8184613190d7",
+  "problem": "6",
+  "sha256": "8184613190d78c40e9e952f3d2840443b66a20d356fb6052c81cbd433646c639",
+  "path": "checkpoint_inputs/8184613190d78c40e9e952f3d2840443b66a20d356fb6052c81cbd433646c639.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "7030bbc7",
+  "turn": 2,
+  "record_ids": [
+    "p6-glm52-7030bbc7-v2"
+  ],
+  "bytes": 7558,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2842,
+        "output_tokens": 8041,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 108.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "defect/self-duality stabilization with cofactor entry bound (finiteness unproved)",
+    "upper_bound_mechanism": "periodic valid set: residue classes mod L, T per window, from n=1",
+    "wrong_answer_stated": false,
+    "notes": "Steps 1–3 rigorously prove (C): sequence is the increasing enumeration of V from a_1, unconditionally. Step 4 fully assembles (P): L=product of essential primes, T=window count, a_{n+T}=a_n+L from n=1—but conditional on finiteness of essential primes, which is admitted open. (F) only sketched via cofactor/defect lemma plus computation. No false lemma relied on."
+  },
+  "S": 1,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

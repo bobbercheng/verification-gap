@@ -1,0 +1,67 @@
+{
+  "id": "p4-nemotron-c1c5994c-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "c1c5994c",
+  "turn": 1,
+  "path": "checkpoint_inputs_ext/440c35229a2f9e2f0e32406bcb086d3a4a9f50600d8d17a854d75251ed9ac8de.md",
+  "recorded_mtime_utc": "2026-07-24T15:46:09Z",
+  "bytes": 2470,
+  "sha256": "440c35229a2f9e2f0e32406bcb086d3a4a9f50600d8d17a854d75251ed9ac8de",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1872,
+        "cache_read_input_tokens": 1504,
+        "output_tokens": 1315,
+        "output_tokens_details": {
+          "thinking_tokens": 1053
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1872,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1315,
+            "cache_read_input_tokens": 1504,
+            "cache_creation_input_tokens": 1872,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1872
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 18.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "explicit one/two-move constructions for theta = 90 and 60 only",
+    "upper_bound_mechanism": "equilateral start with invariant 'max angle < theta' (valid only for theta > 90)",
+    "wrong_answer_stated": false,
+    "notes": "Answer left open: 180/n appears only as one of three competing hypotheses, not asserted. Key lemma proved only for k=2 (angle = 2theta), no induction on k. Mulan's win fully shown only for theta = 90 and 60. Shan-Yu avoidance argument correct but covers only theta > 90; 0-60 and 60-90 explicitly unresolved."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

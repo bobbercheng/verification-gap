@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-e44bf6e39892",
+  "problem": "1",
+  "sha256": "e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55",
+  "path": "checkpoint_inputs_ext/e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "2ede1c6b",
+  "turn": 1,
+  "record_ids": [
+    "p1-glm52-2ede1c6b-v1"
+  ],
+  "bytes": 6115,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5317,
+        "output_tokens": 524,
+        "output_tokens_details": {
+          "thinking_tokens": 241
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 524,
+            "cache_read_input_tokens": 5317,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic (Omega-sum, count of entries >1) well-founded monovariant; nonempty via positive G_p",
+    "upper_bound_mechanism": "per-prime gcd of valuations invariant under (min, |diff|) via Euclid",
+    "wrong_answer_stated": false,
+    "notes": "Complete: move rewritten as (min, |alpha-beta|) per prime; lexicographic potential strictly decreases (g>1 lowers Omega, g=1 lowers count of entries >1); at least one entry >1 shown via invariant positivity, not circular; invariance covers equal/zero valuations by stated gcd conventions; final M explicit. Numerics clearly labeled non-essential."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

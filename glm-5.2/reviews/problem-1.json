@@ -1,0 +1,36 @@
+{
+  "task_id": "imo-2026-p1",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "Move reduction: with g=gcd(m,n), m=ga, n=gb, gcd(a,b)=1, the move (m,n)->(g, lcm(m,n)/gcd(m,n)) equals (g, ab), since lcm(m,n)=mn/g=gab so lcm/gcd=gab/g=ab. Re-derived independently and correct.",
+    "Per-prime exponent step: v_p(g)=min(alpha,beta) and v_p(ab)=(alpha-min)+(beta-min)=|alpha-beta|, so the p-exponent pair transforms as (alpha,beta)->(min(alpha,beta),|alpha-beta|), a subtractive Euclidean step. Verified.",
+    "Pairwise gcd preservation: gcd(min(alpha,beta),|alpha-beta|)=gcd(alpha,beta) (WLOG alpha<=beta: gcd(alpha,beta-alpha)=gcd(alpha,beta) by Euclid). Verified.",
+    "Invariant G_p = gcd of ALL board p-exponents is preserved: since untouched exponents are fixed and gcd(E u {alpha,beta}) = gcd(E u {gcd(alpha,beta)}) = gcd(E u {alpha',beta'}), the whole-multiset gcd is unchanged. Re-derived; the implicit gcd-grouping identity is standard and correct.",
+    "Termination potential: with T=sum Omega and c=#entries>1, Delta T = Omega(g)+Omega(ab)-Omega(ga)-Omega(gb) = -Omega(g) (using complete additivity Omega(xy)=Omega(x)+Omega(y)). Correct.",
+    "Case analysis for lex decrease: if g>1 then Omega(g)>=1 so T strictly decreases (lex decrease regardless of c); if g=1 then m,n are coprime >1 so outputs are (1, mn) with exactly one of the two outgoing entries >1, giving Delta c=-1 with Delta T=0 (lex decrease). Covers all cases.",
+    "Lexicographic order on Z>=0^2 is well-founded (no infinite strictly decreasing chain), so only finitely many moves occur; a move exists iff c>=2, hence at termination c<=1. Verified.",
+    "Exactly one entry >1: if termination had all entries 1 then every exponent 0 so all G_p=0; by invariance all G_p=0 initially, forcing no prime to divide any a_i, i.e. all a_i=1, contradicting a_i>1. Contradiction is valid; equivalently some a_i>1 has a prime divisor p with G_p>=1 forever, forcing a >1 entry at termination. Verified.",
+    "Independence of M: at the unique terminal entry the p-exponent multiset is {v_p(M),0,...,0} with gcd = v_p(M), equal by invariance to initial G_p, so v_p(M)=gcd_i v_p(a_i) and M=prod_p p^{gcd_i v_p(a_i)} depends only on the initial board. Verified.",
+    "N=2026 plays no special role; argument holds for any N>=1 (N=1 trivially: single entry already M). Verified.",
+    "Independent brute-force DFS over ALL legal move orderings on 14 edge multisets (incl. equal entries, coprime sets, pure powers, repeated factors) always terminated with exactly one entry >1 and the same M=prod p^{gcd of valuations}. Zero mismatches.",
+    "Independent randomized play over 4000 instances / 28780 moves: 0 violations of the lexicographic (T,c) decrease and 0 violations of the per-prime G_p invariant. Confirms the proof's two analytical pillars.",
+    "Falsification of tempting wrong answers (M=lcm; M=gcd) refuted by counterexample: {4,6}->6 (not lcm=12, not gcd=2); {6,10,15}->30 (gcd=1). Correctly rejected."
+  ],
+  "unverified_claims": [],
+  "summary": "Correct, complete, rigorous, and self-contained proof of both required statements. The move is reduced to (ga,gb)->(g,ab) and, per prime, to the subtractive Euclidean step (alpha,beta)->(min,|alpha-beta|) which preserves gcd(alpha,beta); this yields the per-prime invariant G_p=gcd of all board valuations. Termination is proved by the lexicographic potential (T=sum Omega, c=#entries>1) with Delta T=-Omega(g) (strict T-decrease when g>1; when g=1 the move (m,n)->(1,mn) drops c by 1), and lex well-foundedness gives finite termination with c<=1. 'Exactly one entry >1' follows by contradiction (all-entries-1 forces all G_p=0, contradicting a_i>1). Uniqueness/value of M follows since at the sole terminal entry v_p(M)=G_p(initial)=gcd_i v_p(a_i), so M=prod_p p^{gcd_i v_p(a_i)} depends only on the initial board. I independently re-derived all six crux steps and corroborated with exhaustive DFS (14 edge multisets, all orderings) and randomized play (28780 moves) showing 0 violations of termination, the unique single-entry terminal state, M-invariance, and the per-prime invariant. No fatal gaps, no unjustified limit/continuity/circularity issues, no degenerate-case failures (g=1, m=n, all-equal, pure powers, coprime sets all handled). Minor presentation note only: the step 'gcd of two touched exponents unchanged => whole-multiset gcd unchanged' could spell out the grouping identity gcd(E u {a,b})=gcd(E u {gcd(a,b)}), but it is standard and mathematically sound.",
+  "transfer_assessment": [
+    "REUSABLE: Reduce gcd/lcm board-rewrite moves to prime-valuation arithmetic. The identity lcm/gcd = ab (with m=ga,n=gb,gcd(a,b)=1) and the resulting per-prime subtractive Euclidean step (alpha,beta)->(min(alpha,beta),|alpha-beta|) is a general transferable device for any process built from gcd/lcm.",
+    "REUSABLE: 'gcd-of-all-valuations per prime' as an invariant that pins down a unique terminal value. Whenever a rewrite preserves gcd of the per-coordinate multiset, the unique surviving aggregate equals prod_p p^{gcd_i v_p(a_i)}.",
+    "REUSABLE: Lexicographic two-tier potential (T,c) for termination of value-decreasing rewriting processes, with a secondary counter c that strictly decreases precisely when the primary mass T is momentarily stationary (the g=1 coprime move). A clean template for proving confluence-free termination.",
+    "REUSABLE: The associative 'gcd-star' product x*y := prod_p p^{gcd(v_p x,v_p y)}; the final M is the fold a_1*...*a_N, giving a compact closed form and a confluence/uniqueness viewpoint.",
+    "MISLEADING (correctly avoided here, but a trap for transfer): the final M is NEITHER the lcm NOR the ordinary gcd of the inputs (e.g. {4,6}->6 vs lcm=12, gcd=2; {6,10,15}->30 vs gcd=1). Naive lcm/gcd guesses for the 'absorbed value' of such processes are wrong; the correct aggregate is the per-prime valuation gcd."
+  ]
+}

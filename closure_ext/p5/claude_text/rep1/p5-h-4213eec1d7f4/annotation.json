@@ -1,0 +1,71 @@
+{
+  "id": "p5-h-4213eec1d7f4",
+  "problem": "5",
+  "sha256": "4213eec1d7f42f7b259d0d1ca1d9ee82dc37da7d8c1485bfd1cebc32c9f4a990",
+  "path": "checkpoint_inputs_ext/4213eec1d7f42f7b259d0d1ca1d9ee82dc37da7d8c1485bfd1cebc32c9f4a990.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-main",
+  "turn": 1,
+  "record_ids": [
+    "p5-kimi-k3-main-t001",
+    "p5-deedy-kimi-k3-final"
+  ],
+  "bytes": 7150,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6056,
+        "output_tokens": 2263,
+        "output_tokens_details": {
+          "thinking_tokens": 1882
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2263,
+            "cache_read_input_tokens": 6056,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 26.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM on a=x, b=y+c since f(x)+y=x+f(y); both inequalities verified for all c>=0",
+    "upper_bound_mechanism": "Descent lemma (p(t-c)=c) giving orbit r+nc, plus forbidden-interval: left inequality forces x_n outside (A-s,A+s) of length 2s>c, so orbit must land inside; d=0 (fixed points) handled explicitly",
+    "wrong_answer_stated": false,
+    "notes": "Reformulation |(f(x)+y)^2-(x+f(y))^2| <= (x-f(y))^2 is correct; x=f(y) yields f(f(y))=2f(y)-y; iterates give p>=0. Descent computation (5) checked and valid; forbidden-interval quadratic Q(X)=(X-A)^2-s^2 correct, step c<2s ensures orbit hits interval. Fixed-point case d=0 covered. Sufficiency fully verified."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

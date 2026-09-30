@@ -1,0 +1,66 @@
+{
+  "id": "p4-deedy-gpt-5.6-sol-final",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1.md",
+  "bytes": 7126,
+  "sha256": "b98ad9eb5d4438705803e22a18afb18131f497f9f5c267a79705ab8d3f49d2b1",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5276,
+        "output_tokens": 1110,
+        "output_tokens_details": {
+          "thinking_tokens": 803
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1110,
+            "cache_read_input_tokens": 5276,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 16.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Lemma 1 integer k with b<k<a+b gives cut whose two children have angles k*theta and (N-k)*theta; then descent m -> m-1 from the integral angle",
+    "upper_bound_mechanism": "Safe = no angle in theta*Z; equilateral start; in R/thetaZ at least one child safe since t=[180] != 0",
+    "wrong_answer_stated": false,
+    "notes": "Answer theta=180/N, N>=2 stated correctly. Descent lemma splitting m*theta into theta+(m-1)theta written out with both children handled. Lemma 1 proof correct and covers N=2. Cut legality (0<x<a) verified, child angles computed correctly. Avoidance argument exhaustive over the four cases, uses t != 0."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

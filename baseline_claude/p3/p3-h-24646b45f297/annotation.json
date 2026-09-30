@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-24646b45f297",
+  "problem": "3",
+  "sha256": "24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0",
+  "path": "checkpoint_inputs/24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-3"
+  ],
+  "bytes": 13473,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 7110,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 29278,
+        "output_tokens_details": {
+          "thinking_tokens": 29014
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 7110,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 29278,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 7110,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 7110
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 329.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 1,
+    "complete": false,
+    "main_gap": "Final answer (n+1)/(2n+1) is wrong for n>=2: against Liu's proposed cuts at odd/(2n+1), Xiang can force ~1/2 (e.g. n=2: split one 2/5 into (2/5-e, e) and 1/5 into 1/10+1/10, giving Liu 1/2+e).",
+    "notes": "Only the greedy/alternating-sum reduction L=(1+A)/2 is correct. Both bounds are unproved: the key splitting lemma and the pairing-to-alternating-sum lemma are explicitly deferred, and the text contains self-corrections ('Wait') and an 'Open Issues' section. n=1 case (2/3) is right; general answer is not."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

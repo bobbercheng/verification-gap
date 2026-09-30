@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-bba234862995",
+  "problem": "6",
+  "sha256": "bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988",
+  "path": "checkpoint_inputs/bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "fb285ec4",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-fb285ec4-v2"
+  ],
+  "bytes": 15030,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5171,
+        "output_tokens": 14990,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 188.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Core Lemma 2 (essential primes eventually divide all terms) is false: for a_1=15 odd terms 15+30j recur forever and every prime divides infinitely many terms, so E is infinite; Corollary 3's finiteness of E is a non sequitur and Lemma 4's eventual step-L AP is wrong. Proofs hand-wavy; (C) and (F) absent; periodicity rests on false lemmas; example miscomputed (a_9=45)."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

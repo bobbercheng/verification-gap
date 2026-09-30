@@ -1,0 +1,59 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "reject",
+  "scores": {
+    "correctness": 1,
+    "completeness": 1,
+    "rigor": 1,
+    "self_contained": 1
+  },
+  "fatal_issues": [
+    "Lemma 2 (finiteness of the set of all primes appearing in the sequence) is stated as 'Open — Critical Gap' and 'Unproven'. This is a central lemma without which the entire proof collapses. The flawed CRT construction mentioned was correctly identified as producing numbers coprime to all previous terms, i.e., the opposite of a valid candidate.",
+    "The Ubiquitous Prime Lemma (Part 4) is explicitly marked as a 'Hypothesis to Verify' and 'Not yet verified experimentally'. The claim that D = ∩_{H∈M} H is nonempty and exactly the set of primes eventually dividing all terms is unproven and forms the foundation for the periodicity argument.",
+    "The stabilization of minimal hitting sets M_n (Part 3) is conditional on Lemma 2 (prime finiteness), which is unproven. Even assuming finiteness, the argument that M_n 'can only shrink' needs justification that no new minimal hitting sets can appear — this requires analyzing how P_{n+1} interacts with existing minimal hitting sets.",
+    "The backward extension (Part 6) is marked 'Unproven' and 'Open'. The proposed approach using 'uniqueness of the greedy sequence' and 'translation invariance of the hitting condition' is only sketched and lacks rigorous justification. The false identity gcd(x+L, y+L) = gcd(x,y) was correctly identified and rejected, but no correct replacement proof is provided.",
+    "The periodicity argument (Part 5) assumes L = ∏_{p∈E} p is the correct shift. It is not proved that the shift per period equals this L (it could be a proper divisor, e.g., lcm{m_H : H ∈ M}). The claim that 'after T steps the value increases by exactly L' is asserted without proof that the covered residues R are exactly a complete set of residues modulo L with uniform spacing."
+  ],
+  "required_fixes": [
+    "Prove Lemma 2: ∪_n P_n is finite. This requires a correct minimality contradiction using the definition a_{n+1} = min{m > a_n : gcd(m, a_i) > 1 ∀i ≤ n}. A valid approach must bound the size of a new prime when it first appears, showing that infinitely many distinct primes would force a_{n+1} to be too large relative to some product of existing primes.",
+    "Prove the Ubiquitous Prime Lemma: D = ∩_{H∈M} H ≠ ∅, every p ∈ D divides all sufficiently large a_n, and every H ∈ M contains D. This must be derived from the stabilized hitting family M and the greedy construction, not assumed.",
+    "Prove M_n stabilizes (assuming prime finiteness). Show that the family of minimal hitting sets for {P_1, ..., P_n} eventually becomes constant. This requires proving that for large n, P_{n+1} either contains a ubiquitous prime (hence adds no new constraints) or is a subset of E that doesn't create new minimal hitting sets beyond those already in M.",
+    "Prove backward extension rigorously. Establish that the recurrence a_{n+1} = min{m > a_n : P(m) hits {P_1, ..., P_n}} has a unique solution given a_1. Then show that for the stabilized tail, the hitting condition becomes translation-invariant modulo the ubiquitous primes, so the shifted sequence satisfies the same recurrence and must equal the original by uniqueness.",
+    "Determine the exact shift L. Prove that a_{n+T} = a_n + ∏_{p∈E} p (or identify the correct L as lcm{m_H : H ∈ M}) and that T = |R| where R is the set of covered residues modulo L."
+  ],
+  "verified_claims": [
+    "Lemma 1: E ≠ ∅ (essential primes exist). Proof by pigeonhole principle on P(a_1) is correct: since gcd(a_n, a_1) > 1 for all n ≥ 2, each P_n intersects the finite set P(a_1), so some p ∈ P(a_1) belongs to infinitely many P_n.",
+    "Key Observation: a_{n+1} is the smallest integer > a_n that is a multiple of m_H = ∏_{p∈H} p for some minimal hitting set H ∈ M_n. The equivalence gcd(m, a_i) > 1 ∀i ⇔ P(m) is a hitting set ⇔ m is a multiple of some m_H is correctly stated and verified.",
+    "Falsified hypotheses from prior runs are correctly identified: (1) E = D is false (counterexamples a_1 = 21, 105); (2) P(a_{n+1}) is a minimal hitting set is false (counterexample a_1 = 6); (3) gcd(x+L, y+L) = gcd(x,y) is false; (4) the CRT construction produces numbers coprime to all previous terms, not valid candidates."
+  ],
+  "unverified_claims": [
+    "The set of all primes P* = ∪_n P_n is finite (Lemma 2).",
+    "The family of minimal hitting sets M_n stabilizes to a fixed family M.",
+    "The ubiquitous primes D = ∩_{H∈M} H is nonempty.",
+    "Every p ∈ D divides a_n for all sufficiently large n.",
+    "Every H ∈ M contains D.",
+    "The tail of the sequence is exactly the increasing merge of the arithmetic progressions A_H = {k · m_H : k ≥ 1} for H ∈ M.",
+    "The sequence is periodic modulo L = ∏_{p∈E} p with period T = |R| where R = ∪_{H∈M} {multiples of m_H mod L}.",
+    "The periodicity a_{n+T} = a_n + L extends to all n ≥ 1.",
+    "The shift per period equals L = ∏_{p∈E} p (as opposed to lcm{m_H})."
+  ],
+  "summary": "The candidate proof is a proof sketch with multiple acknowledged fatal gaps. Only Lemma 1 (nonemptiness of essential primes) and the hitting-set reformulation are rigorously established. The core lemmas — prime finiteness, ubiquitous prime characterization, stabilization of minimal hitting sets, and backward extension — are all explicitly marked as unproven or hypothetical. The manuscript correctly identifies and rejects several false lemmas from prior attempts, but does not provide valid replacements. As a complete proof, it fails to establish the theorem.",
+  "transfer_assessment": [
+    {
+      "mechanism": "hitting-set-framework",
+      "assessment": "REUSABLE. The translation of the gcd condition to hitting sets of prime factors is correct and fundamental. The equivalence 'gcd(m, a_i) > 1 ∀i ⇔ P(m) hits {P_1,...,P_n} ⇔ m is a multiple of some minimal hitting set product m_H' is solid and should be the foundation of any correct proof."
+    },
+    {
+      "mechanism": "essential-ubiquitous-dichotomy",
+      "assessment": "REUSABLE CONCEPT, UNPROVEN LEMMAS. The distinction between essential primes (infinite frequency) and ubiquitous primes (eventually always present) is experimentally validated and conceptually correct. However, the key lemma D = ∩_{H∈M} H ≠ ∅ and D = ubiquitous primes remains unproven. The dichotomy itself is a valuable structural insight."
+    },
+    {
+      "mechanism": "merge-of-progressions-periodicity",
+      "assessment": "CONDITIONALLY REUSABLE. If M_n stabilizes and D is correctly characterized, the tail-as-merge-of-progressions structure is experimentally verified and the periodicity modulo L is plausible. However, the exact shift L and period T need rigorous derivation from the stabilized M."
+    },
+    {
+      "mechanism": "backward-uniqueness-propagation",
+      "assessment": "PROMISING BUT UNPROVEN. The idea of using uniqueness of the greedy sequence to extend periodicity backward is the correct approach (avoiding the false gcd translation identity). However, the translation invariance of the hitting condition for the stabilized tail must be rigorously established — this is nontrivial because the recurrence for early n involves primes not in the stabilized M."
+    }
+  ]
+}

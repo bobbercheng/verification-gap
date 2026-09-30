@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-claude__deedy-gpt-5.6-sol-final__upper_bound",
+ "case": "deedy-gpt-5.6-sol-final",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.1,
+  "input_tokens": 2,
+  "output_tokens": 850,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 4069,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3436,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003541,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 850,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 4069,
+    "webSearchRequests": 0,
+    "costUSD": 0.0627715,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 484,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "Part (i) of the refinement lemma is the write-up's only route to the universal upper bound (L3.2). Its proof rests on the column-sweep paragraph, where the two key quantitative claims — that each uncancelled array has at most s column-blocks and total length at most (T-d)/2 — are asserted, not derived. The parenthetical only gives that the two uncancelled totals sum to T-d; splitting a sum evenly requires equality of the two parts, which is nowhere shown, and the induction recurses on one array without bounding the other's odd-level contribution. No other passage proves the upper bound (the cited lemmas/refinement.md is outside the text). Repair needs a genuine lemma-level argument (e.g. subset-sum pigeonhole plus mirrored cuts).",
+  "objection_correct_note": null
+ },
+ "elsewhere_anchor": null
+}

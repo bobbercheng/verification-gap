@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-908b36293a06",
+  "problem": "4",
+  "sha256": "908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e",
+  "path": "checkpoint_inputs_ext/908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "0c164fc0",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-0c164fc0-v1"
+  ],
+  "bytes": 9794,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6946,
+        "output_tokens": 1631,
+        "output_tokens_details": {
+          "thinking_tokens": 1362
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1631,
+            "cache_read_input_tokens": 6946,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 23.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "force 90 degree angle, then split off theta (multiples-of-theta induction sketched)",
+    "upper_bound_mechanism": "invariant: keep max angle < theta (valid only for theta > 90)",
+    "wrong_answer_stated": true,
+    "notes": "States wrong answer: theta <= 90. Complete winning proofs only for theta = 90 and 60; the theta < 60 and 60<theta<90 cases are hand-waved ('a detailed case analysis shows', bogus 'well-founded measure'), and 180/n cases like 36 are not covered. Multiples-of-theta induction only sketched. Avoidance proved solely for theta > 90."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

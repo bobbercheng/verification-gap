@@ -1,0 +1,25 @@
+{
+ "checker": "gpt",
+ "objection_key": "witness-claude__p5-deepseek-v4-pro-main-t038__upper_bound",
+ "case": "p5-deepseek-v4-pro-main-t038",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.2,
+  "input_tokens": 19831,
+  "output_tokens": 373,
+  "reasoning_output_tokens": 211,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "affected_statement": "L5.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Section 3 proves only that g has at most one positive value. The write-up never excludes negative values: §1 states merely g(x)>-x, and later arguments assume without proof that V⊆{0,c}. A single sentence completing the orbit argument would repair this: induction from (3) gives f^n(t)=t+n g(t)>0 for every n≥0, which forces g(t)≥0. Without that sentence or an equivalent argument, L5.3 and the subsequent dichotomy are not established as written."
+ },
+ "elsewhere_anchor": null
+}

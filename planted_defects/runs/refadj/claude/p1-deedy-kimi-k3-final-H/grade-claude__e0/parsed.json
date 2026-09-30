@@ -1,0 +1,72 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p1-deedy-kimi-k3-final-H",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "H",
+ "problem": "1",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 10.9,
+  "input_tokens": 2,
+  "output_tokens": 761,
+  "cache_read_input_tokens": 2097,
+  "cache_creation_input_tokens": 5074,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4302,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004392,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 761,
+    "cacheReadInputTokens": 2097,
+    "cacheCreationInputTokens": 5074,
+    "webSearchRequests": 0,
+    "costUSD": 0.07082350000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 374,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L1.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "If $g = 1$, then the new entry $\\ell = mn \\ge 4$ exceeds $1$. All entries not involved in the move are unchanged, so after the move some entry still exceeds $1$.",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "When gcd(m,n)=1, lcm(m,n)/gcd(m,n) = mn, not m+n, so the displayed identity is indeed a misprint. It is inert: the same sentence immediately states the replacement pair as (1, mn), the Type B analysis only uses that the product is unchanged (P -> P/g = P) and that z increases by one, and Step 2 independently and correctly derives ℓ = mn ≥ 4 > 1 for the 'at least one entry > 1' half of L1.1. The termination bound and the exactly-one-survivor conclusion are therefore unaffected; a one-symbol fix (m+n -> mn) removes the slip."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 161,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   4719,
+   4880
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

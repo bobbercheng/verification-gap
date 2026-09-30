@@ -1,0 +1,18 @@
+{
+ "claim_id": "C1",
+ "condition": "valid",
+ "verifier": "glm",
+ "model": "glm-5.3",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "A nonincreasing sequence starting above 1 can drop to 1 or below. Nonincreasing plus q_1 > 1 does not prevent q_2 <= 1; nothing in the hypotheses enforces a positive lower bound above 1.",
+  "witness_valid": true,
+  "witness_reason": "The sequence has positive terms, q_1 = 2 > 1, and q_{k+1} <= q_k throughout (1 <= 2, then 1 <= 1). Yet q_2 = 1, violating the conclusion q_k > 1."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": true
+ },
+ "elapsed_seconds": 5.9
+}

@@ -1,0 +1,66 @@
+{
+  "id": "p2-h-088f590da6f5",
+  "problem": "2",
+  "sha256": "088f590da6f5c49d4cfb2725ddded1a12cfb095c95d65ef423fe73abe0f1fa1f",
+  "path": "checkpoint_inputs/088f590da6f5c49d4cfb2725ddded1a12cfb095c95d65ef423fe73abe0f1fa1f.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 66,
+  "record_ids": [
+    "p2-gpt-5.6-sol-max-main-t066"
+  ],
+  "bytes": 7207,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4954,
+        "cache_read_input_tokens": 666,
+        "output_tokens": 28168,
+        "output_tokens_details": {
+          "thinking_tokens": 27955
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4954,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 28168,
+            "cache_read_input_tokens": 666,
+            "cache_creation_input_tokens": 4954,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4954
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 284.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 7,
+    "complete": true,
+    "main_gap": "none",
+    "notes": "Angle chase and sine-rule derivation of (14) checks out; coordinates, |K|^2,|L|^2, Cramer's rule for P,Q, and OM^2-ON^2 reduction are correct. I verified numerically that the key certificate V*T = A0*E_R + B0*E_D holds modulo sin^2+cos^2=1 (and spot-checked the G_0 term), so identity (23), though only asserted 'by expansion', is a genuine explicit checkable certificate. Positivity/nondegeneracy caveats addressed."
+  },
+  "S": null,
+  "rubric_sha256": "fbce39b97af5920477908d5c805bf2680da544eb0cc15ffb5f46543bbb3dfc68",
+  "path_base": "bundle root"
+}

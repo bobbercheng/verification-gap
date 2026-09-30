@@ -1,0 +1,71 @@
+{
+  "id": "p6-h-7834430cd6c4",
+  "problem": "6",
+  "sha256": "7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132",
+  "path": "checkpoint_inputs/7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p6-deedy-gpt-5.6-sol-xhigh-final",
+    "p6-gpt-5.6-sol-xhigh-main-t006"
+  ],
+  "bytes": 8618,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5444,
+        "output_tokens": 1983,
+        "output_tokens_details": {
+          "thinking_tokens": 1633
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1983,
+            "cache_read_input_tokens": 5444,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 26.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Descent on c(H,p)=rad(H\\{p}) via scanning property: if >a_1 it is a non-term, yielding a coprime earlier term whose minimal support K contains p with smaller cofactor; then each small core C pairs only with primes in a fixed disjoint witness F_C",
+    "upper_bound_mechanism": "L = product of the finite relevant prime set U; membership condition 'some H in H is contained in P(x)' is L-periodic for all x >= a_1; T = count of admissible residues in a window, giving a_{n+T}=a_n+L for all n>=1",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: blocker family F equals support family G, minimal supports H, descent proves U finite for all primes, and periodicity is established from x >= a_1 (not merely eventually). Edge cases (empty core, nonemptiness of U, T>0) handled."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

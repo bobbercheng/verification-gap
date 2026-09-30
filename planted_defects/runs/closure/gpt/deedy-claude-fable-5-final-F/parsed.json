@@ -1,0 +1,47 @@
+{
+ "gate": "closure",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-claude-fable-5-final-F",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "F",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 22.4,
+  "input_tokens": 20174,
+  "output_tokens": 909,
+  "reasoning_output_tokens": 763,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 1,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "tree-pairing / signed subset-sum",
+  "upper_bound_mechanism": "subset-sum pigeonhole with cross-pairing overlay",
+  "wrong_answer_stated": false,
+  "notes": "Lemma 4 contains a false graph inference: |E|<|V| does not imply the whole multigraph has no cycle or loop, since cyclic components may coexist with isolated vertices. Thus the selected component containing vertex n need not be a tree. The lower-bound mechanism is close—one could instead select a component with fewer edges than vertices—but that repair is not written."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 20174,
+    "cached_input_tokens": 12672,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 909,
+    "reasoning_output_tokens": 763
+   },
+   "sec": 22.4,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 1,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

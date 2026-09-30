@@ -1,0 +1,22 @@
+{
+ "checker": "gpt",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.5,
+  "input_tokens": 19384,
+  "output_tokens": 346,
+  "reasoning_output_tokens": 166,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "Section 3 proves only that V contains at most one positive value. It never excludes negative values of g; earlier it records merely g(x)>-x. Thus neither “g≡0” nor “V⊆{0,c}” follows from the established result. The missing fact g(x)≥0 can be proved from (4): if g(x)=d<0, induction gives g(x+nd)=d and hence f^n(x)=x+nd>0 for every n, impossible for sufficiently large n. Since this argument is absent, the later use of b∈{0,c} in Lemma 1 is unjustified, and the necessity proof remains incomplete as written."
+ }
+}

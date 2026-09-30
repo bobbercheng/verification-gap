@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-e3e333cc4847",
+  "problem": "3",
+  "sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+  "path": "checkpoint_inputs/e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-gpt-5.6-sol-final"
+  ],
+  "bytes": 7191,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 277.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n partition + strip/parity sweep invariant induction (imbalance lemma ii)",
+    "upper_bound_mechanism": "column-sweep cut-and-cancel refinement induction (lemma i, overlay/cancellation type)",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer; claiming reduction fully proved via matching greedy strategies. But the key refinement lemma is only telegraphically argued: (i) sweep bookkeeping/closing inequality asserted, not shown to close; (ii) invariant induction one sentence, and 'a cut interchanges parity rows only above its level' is false as stated (a split flips parity on two intervals). Real mechanisms, sketch-level proofs."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

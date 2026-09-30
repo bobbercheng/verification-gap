@@ -1,0 +1,31 @@
+{
+ "task_id": "imo-2026-p5",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Substituting x=f(y) is legitimate because f(y)>0; both outer terms collapse to f(y), forcing equality in the middle and hence f(f(y))=2f(y)-y for all y>0.",
+  "With g(x)=f(x)-x, the relation f(f(y))=2f(y)-y is equivalently g(y+g(y))=g(y); induction then gives g(x+n g(x))=g(x) and f^n(x)=x+n g(x) for all nonnegative integers n.",
+  "Since every iterate f^n(x) is positive, x+n g(x)>0 for all n; this rules out g(x)<0, so g(x)>=0 everywhere.",
+  "The two squared-defect computations are correct and combine to the two-sided bound |g(x)-g(y)|(2x+2y+g(x)+g(y)) <= (x-y-g(y))^2 for all x,y>0.",
+  "If g attained two distinct positive values A and B at x and y, then for n large one can choose m>=0 with x+nA-y-mB-B bounded; the defect bound then has left side growing linearly in n while the right side stays bounded, a contradiction. Thus g has at most one positive value.",
+  "If the range of g were {0,c} with c>0, the cross-level inequality c(2x+2y+c)<=(x-y)^2 gives uniform positive separation of each c-level point from the zero level and of each zero-level point from the c-level; hence both level sets would be open in (0,infty), contradicting connectedness.",
+  "Therefore g is constant c>=0 and f(x)=x+c. These functions indeed map positive reals to positive reals and satisfy the chain by QM-AM-GM applied to the positive numbers x and y+c."
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is sound and complete. The key collapse at x=f(y), the linearization g=f-id, positivity of iterates, and the exact squared-defect identity all check out. The orbit approximation excludes two distinct positive values of g, and the separation estimate makes a two-value range {0,c} impossible by connectedness. The claimed family f(x)=x+c, c>=0, verifies exactly by QM-AM-GM.",
+ "transfer_assessment": [
+  "Reusable mechanism: when the outer endpoints become equal after substituting x=f(y), equality is forced in the middle, producing a rigid relation for f composed with f.",
+  "Reusable mechanism: for f(x)=x+g(x), the relation f(f(x))=2f(x)-x becomes the invariance g(x+g(x))=g(x); positivity of forward iterates then excludes negative g.",
+  "Reusable mechanism: adding and subtracting the two squared defects can convert two one-sided inequalities into a single absolute bound |P|<=S; here S is a square and P separates level values.",
+  "Reusable with care: in the two-orbit argument, first take n large enough that x+nA is in the range of the one-sided lattice y+kB, k>=1; then bounded error makes one side of the defect inequality bounded while the other grows linearly in n. The displayed asymptotic coefficient is immaterial; linear divergence is the usable point.",
+  "Reusable mechanism: a pointwise uniform positive separation between two level sets proves both are open; on an interval this contradicts connectedness.",
+  "Not evidence: the recorded confidence and prior portfolio gates add no mathematical force; the verification rests on the algebra, the orbit bound, and connectedness."
+ ]
+}

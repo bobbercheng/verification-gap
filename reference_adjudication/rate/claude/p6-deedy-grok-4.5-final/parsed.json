@@ -1,0 +1,75 @@
+{
+ "rater": "claude",
+ "case": "p6-deedy-grok-4.5-final",
+ "problem": "6",
+ "group": "F",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 8.9,
+  "input_tokens": 2,
+  "output_tokens": 591,
+  "cache_read_input_tokens": 1451,
+  "cache_creation_input_tokens": 1930,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1818,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001913,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 591,
+    "cacheReadInputTokens": 1451,
+    "cacheCreationInputTokens": 1930,
+    "webSearchRequests": 0,
+    "costUSD": 0.0348105,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 218,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "statements": {
+   "L6.1": {
+    "established": "partial",
+    "quote": "Key observation: a number m is a candidate for future terms iff gcd(m, a_i)>1 for all previous a_i. Equivalently, for every previous a_i, m shares a prime factor with a_i.",
+    "note": "Stated as an unproved observation; no argument that every such m actually appears."
+   },
+   "L6.2": {
+    "established": "no",
+    "quote": null,
+    "note": "Finiteness of relevant primes is only conjectured (\"Conjecture: there is a finite set of primes S\"); no erasure argument."
+   },
+   "L6.3": {
+    "established": "no",
+    "quote": null,
+    "note": "Periodicity asserted empirically (\"Empirically the sequence is always eventually periodic\"); no proof, and only eventual."
+   }
+  },
+  "S_ref": 0,
+  "notes": "Tracking file of computational exploration and conjectures; explicitly states \"Full proof (Not yet complete.)\". Characterization is named but unproved; finiteness and periodicity are conjectural/empirical only. Neither lower_bound (F) nor upper_bound (P) is established."
+ },
+ "anchors": {
+  "L6.1": {
+   "anchored": true,
+   "length": 171,
+   "length_ok": true,
+   "reason": null
+  },
+  "L6.2": null,
+  "L6.3": null
+ }
+}

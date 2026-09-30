@@ -1,0 +1,18 @@
+{
+ "claim_id": "C2",
+ "condition": "valid",
+ "verifier": "glm",
+ "model": "glm-5.3",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "The family F_n={x_1,...,x_n,y_n} is pairwise intersecting (all members share x_1), yet each T_k={y_1,...,y_{k-1},x_k} is a distinct inclusion-minimal finite transversal, yielding infinitely many. So the asserted finiteness fails.",
+  "witness_valid": true,
+  "witness_reason": "Every F_n is nonempty, finite, and contains x_1, so hypotheses hold. Each T_k is finite, meets F_n via y_n when n<k and via x_k when n≥k, and dropping y_i (i<k) misses F_i while dropping x_k misses F_k; the T_k are distinct, so infinitely many minimal transversals exist."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": true
+ },
+ "elapsed_seconds": 31.4
+}

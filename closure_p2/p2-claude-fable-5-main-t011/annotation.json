@@ -1,0 +1,61 @@
+{
+  "id": "p2-claude-fable-5-main-t011",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 11,
+  "path": "checkpoint_inputs/395f0a04411246017ef8233aba7c446d136ba871a7e485f64d4979e5b3f3ab40.md",
+  "bytes": 26960,
+  "sha256": "395f0a04411246017ef8233aba7c446d136ba871a7e485f64d4979e5b3f3ab40",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 9218,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 1792,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 95.2,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 9218,
+        "output_tokens": 325,
+        "cache_read_input_tokens": 1792,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 5.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "affine power identity F≡0 (pow(·,ω)−pow(·,ω_K)−pow(·,ω_L)+pow(·,ω_1)) vanishing at A,K,L, fully proved",
+    "upper_bound_mechanism": "median-length formula with computed powers pow(B,ω)=c(c−x)/2, pow(C,ω)=b(b−y)/2 and cx=by",
+    "wrong_answer_stated": false,
+    "notes": "Complete rigorous write-up: X,Y constructed via crossbar with sign proofs; all three concyclicities (ω_1, ω_K, ω_L) proved via directed angles incl. tangency cases; affine F fully executed; finish algebra explicit. Numerical checks only supplementary."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "395f0a04411246017ef8233aba7c446d136ba871a7e485f64d4979e5b3f3ab40",
+  "original_bytes": 26960,
+  "input_anonymized": false
+}

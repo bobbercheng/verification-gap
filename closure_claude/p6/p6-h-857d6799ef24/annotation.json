@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-857d6799ef24",
+  "problem": "6",
+  "sha256": "857d6799ef248f817f132869630f965518d1b9faa60a9eb4c19c730d810717b8",
+  "path": "checkpoint_inputs/857d6799ef248f817f132869630f965518d1b9faa60a9eb4c19c730d810717b8.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 1,
+  "record_ids": [
+    "p6-gpt-5.6-sol-pro-main-t001"
+  ],
+  "bytes": 2174,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1440,
+        "cache_read_input_tokens": 901,
+        "output_tokens": 950,
+        "output_tokens_details": {
+          "thinking_tokens": 692
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1440,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 950,
+            "cache_read_input_tokens": 901,
+            "cache_creation_input_tokens": 1440,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1440
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none (only 'every term shares a prime with a_1'; large-prime erasure absent)",
+    "upper_bound_mechanism": "finite-exception lifting from eventual periodicity (sketch, conditional)",
+    "wrong_answer_stated": false,
+    "notes": "Self-admittedly incomplete: no proof given. Characterization of membership is described as a viewpoint without full argument; the finiteness/large-prime-domination lemma is missing entirely (only the weak observation that each term shares a prime with a_1); periodicity is reduced to unproven eventual periodicity plus a sketched lifting. L's explicit form is not identified."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

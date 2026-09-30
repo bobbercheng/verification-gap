@@ -1,0 +1,28 @@
+{
+  "task_id": "imo-2026-p1",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "The lexicographic measure (K, S) where K = count of integers > 1 and S = sum of Ω(x) strictly decreases with every legal move, guaranteeing termination.",
+    "At termination exactly one integer M > 1 remains because the total product never exceeds the initial product (> 1) and cannot exceed 1 if all numbers were 1.",
+    "For each prime p, the gcd of the multiset of p-adic valuations is invariant under the operation (a,b) → (min(a,b), |a-b|).",
+    "At termination, the final integer M has p-adic valuation equal to this invariant gcd, so M = ∏_p p^{gcd_i v_p(a_i)}.",
+    "The final integer M is independent of the sequence of moves chosen."
+  ],
+  "unverified_claims": [],
+  "summary": "The proof is complete, correct, and rigorous. Part 1 uses a well-founded lexicographic measure (K, sum Ω) to prove termination with exactly one integer M > 1. Part 2 establishes the invariant that for each prime p, the gcd of the multiset of p-adic valuations is preserved (since (a,b) → (min(a,b), |a-b|) preserves the multiset gcd, being a Euclidean algorithm step). Termination from Part 1 guarantees exactly one integer M > 1 at termination, so for each prime p the multiset of p-adic valuations is {v_p(M), 0, ..., 0} whose gcd is v_p(M). By invariance, v_p(M) equals the initial gcd of p-adic exponents, giving M = ∏ p^{gcd_i v_p(a_i)} uniquely determined by the initial multiset. All claims are verified; no fatal gaps or missing steps. The proof is self-contained, uses only elementary number theory and well-foundedness of ℕ², and correctly identifies that 2026 is arbitrary (works for any N ≥ 2).",
+  "transfer_assessment": [
+    "Lexicographic descent with well-founded measure is a transferable termination technique for combinatorial processes.",
+    "The prime-exponent gcd invariant is a powerful transferable technique: gcd of a multiset is invariant under pairwise Euclidean steps, useful for many invariant problems.",
+    "The endgame analysis—using termination to force a canonical final configuration that reveals the invariant—is a transferable proof pattern for confluence/uniqueness problems.",
+    "The distinction between gcd of exponents vs min of exponents (exponent-wise gcd vs integer gcd) is a transferable number-theory insight.",
+    "The proof structure (termination + invariant + endgame) is a reusable template for IMO-style process problems."
+  ]
+}

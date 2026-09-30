@@ -1,0 +1,46 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final-H",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 50.8,
+  "input_tokens": 2,
+  "output_tokens": 4354,
+  "cache_read_input_tokens": 3382,
+  "cache_creation_input_tokens": 10759,
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 4354,
+    "cacheReadInputTokens": 3382,
+    "cacheCreationInputTokens": 10759,
+    "webSearchRequests": 0,
+    "costUSD": 0.21814099999999997,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 4155,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [],
+  "notes": "Answer c = 2^n/(2^{n+1}-1). Lemma 2 (greedy picking value) is proved carefully via (2.1)/(2.2). Lower bound: tree-component pairing argument with signed binary sums (|Ξ|≥u) is correct and complete. Upper bound: subset-sum pigeonhole plus aligned cross-cuts using ≤n marks, equal pairs cancel; mark counting, distinctness and interiority all verified. Complete proof."
+ },
+ "anchors": [],
+ "parse_path": "strict",
+ "run_dir": "grade_retest",
+ "run_tag": "_retest",
+ "transport_choice": "cli"
+}

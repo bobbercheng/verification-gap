@@ -1,0 +1,67 @@
+{
+  "id": "p1-nemotron-a71e54bb-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "a71e54bb",
+  "turn": 1,
+  "path": "checkpoint_inputs_ext/de44a94b0ce22126c5e5d8068a9604c3d5436089aa890d09bed64478d993a262.md",
+  "recorded_mtime_utc": "2026-07-21T01:30:29Z",
+  "bytes": 8075,
+  "sha256": "de44a94b0ce22126c5e5d8068a9604c3d5436089aa890d09bed64478d993a262",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4485,
+        "cache_read_input_tokens": 1363,
+        "output_tokens": 1646,
+        "output_tokens_details": {
+          "thinking_tokens": 1363
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4485,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1646,
+            "cache_read_input_tokens": 1363,
+            "cache_creation_input_tokens": 4485,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4485
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 21.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic (K, Omega) monovariant + at least one output >1 so K never hits 0",
+    "upper_bound_mechanism": "per-prime invariance of gcd of valuations via gcd(a,b)=gcd(min(a,b),|a-b|)",
+    "wrong_answer_stated": false,
+    "notes": "Move description, Euclid-step valuations, and no-two-1s all proved. Termination via well-founded lex pair with correct case split (g=1, g>1 with m=n or m!=n); K>=1 argued independently. Invariance stated in full generality (edge cases true but not explicitly case-checked). Stray erroneous remark that some G_p>=1 forces M>1, but unused."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

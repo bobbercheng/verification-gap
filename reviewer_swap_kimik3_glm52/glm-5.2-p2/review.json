@@ -1,0 +1,44 @@
+{
+ "task_id": "imo-2026-p2",
+ "verdict": "revise",
+ "scores": {
+  "correctness": 3,
+  "completeness": 2,
+  "rigor": 3,
+  "self_contained": 2
+ },
+ "fatal_issues": [
+  "The decisive step — the exact polynomial identity num(E) = Q·num(G2) in Q[t_theta,t_alpha,t_beta,t_gamma] — is asserted via external artifacts (certificate_quotient.txt, review_symbolic.py output) that are not included in the document. The quotient Q (26 terms, degree 10), the 1486-term num(E), and the 395-term num(G2) are nowhere displayed, and no pseudocode is given, so the single load-bearing inference of the proof cannot be verified from the text as written. No error was found in it, but an unverifiable decisive step is a fatal gap for a written proof until the certificate is embedded."
+ ],
+ "required_fixes": [
+  "Embed the certificate in the proof: print the explicit polynomial Q (all 26 terms) and state the precise rational expressions num(E), den(E), num(G2), den(G2) (or complete, self-contained pseudocode that regenerates K, L, b via (5.1), A' via (4), E via (5.2), G2, performs the Weierstrass substitution, and does the polynomial division). The document currently only points to files.",
+  "Clarify the status of b inside G2 for the identity: state explicitly that in the polynomial identity both E and G2 have b eliminated via (5.1), so that both are genuinely rational functions of (t_theta,t_alpha,t_beta,t_gamma) only (Q is claimed independent of t_gamma; the b-elimination in G2 is not stated).",
+  "Replace the assertion 'every denominator factor is immediate from the construction' with an explicit list of the denominator factors of the CAS-reduced forms den(E), den(G2) after together/fraction, and prove each is non-zero at valid configurations (the current argument is plausible — a reduced denominator divides the unreduced product of the listed nonzero factors — but should be made exact, since cancellation behavior of the CAS is being invoked).",
+  "Optionally but strongly preferred: provide a human-derivable simplification of the identity (e.g., a compact closed form for Q or a synthetic proof that A' lies on the perpendicular bisector of BC); absent that, include an independent second verification (different CAS or by-hand multiplication of Q·num(G2))."
+ ],
+ "verified_claims": [
+  "Coordinate setup and point formulas: M=B/2, N=C/2; (2K) K=(c/2)(2-p cos α, p sin α) with p=sin γ/sin(α+γ) and (2L) L=(b/2)(2cos θ - q cos(θ+α), 2sin θ - q sin(θ+α)) with q=sin β/sin(α+β) — independently re-derived, including both ray directions (BK at angle α from BA into the upper half-plane; CL at angle α from CA toward the B-side, direction (-cos(θ+α), -sin(θ+α))).",
+  "Angle bookkeeping: ray BM = ray BA and ray CN = ray CA, so ∠MBK=α, ∠LCN=α; strict interiors force non-degeneracy of △MBK and △LCN, hence α,β,γ>0, α+β<π, α+γ<π, sin(α±·)>0, and all half-angle parameters t_X=tan(X/2) finite and positive.",
+  "Additive orderings from the strict interiors (§3.0): K∈int△ABL forces ray BK strictly inside the wedge ∠ABL, giving ∠LBA=α+β; L∈int△AKC forces ray CL strictly inside the wedge ∠ACK, giving ∠ACK=α+γ. Correct, and correctly identified as load-bearing.",
+  "Constraint G1: re-derived from scratch via the cross-product parallelism of L-B with (-cos(α+β), sin(α+β)) and product-to-sum; obtains b[cos θ - cos(θ+2α+β)cos β] = 2c sin²(α+β) exactly as stated (both the intermediate form and the boxed form match).",
+  "Constraint G2: independently re-derived (not just via the claimed B↔C analogy): parallelism of K-C with (-cos(θ+α+γ), -sin(θ+α+γ)) yields 2b sin²(α+γ) = c[cos θ - cos(θ+2α+γ)cos γ], matching the boxed G2.",
+  "Antipode reformulation: A'=2O satisfies A'·K=|K|², A'·L=|L|² (equivalently A'K⊥AK, A'L⊥AL); OM=½|A'-B|, ON=½|A'-C|; hence OM=ON ⇔ A'·(C-B)=(b²-c²)/2 (★). All algebra checked.",
+  "Non-degeneracy guarantees: det(K,L)≠0 (K∈int△ABL excludes line AL); the G1-bracket equals 2c sin²(α+β)/b > 0 at every valid configuration, so the expression (5.1) for b involves no division by zero; scaling to c=1 is legitimate.",
+  "Logical skeleton of the closing step: IF the numerator-level identity num(E)=Q·num(G2) holds as a polynomial identity AND den(E), den(G2)≠0 at all valid configurations, THEN G2=0 ⇒ E=0 ⇒ (★) ⇒ OM=ON. The proof correctly uses numerator-level divisibility rather than the (failing) value-level equality E=Q·G2; the implication chain (5.4) is valid. No circularity: G1, G2, and the identity never use the conclusion.",
+  "All three given angle equalities are genuinely used (α in △MBK/△LCN; β as ∠LNC in △LCN and as ∠LBK in the ordering for G1; γ as ∠BMK in △MBK and as ∠LCK in the ordering for G2); all four strict-interior hypotheses are used (two for non-degeneracy/half-plane information, two for the orderings)."
+ ],
+ "unverified_claims": [
+  "The exact polynomial identity num(E) = Q·num(G2) in Q[t_theta,t_alpha,t_beta,t_gamma] (zero remainder, num(E) 1486 terms, num(G2) 395 terms, Q of total degree 10 with 26 terms and independent of t_gamma). The certificate is not in the document, so this could not be checked at all.",
+  "The claim that the CAS-reduced denominators den(E), den(G2) have all their factors among det(K,L), the G1-bracket, sin(α+β), sin(α+γ), and 1+t_X² (plausible by the divisor-of-unreduced-denominator argument, but the actual CAS output was not exhibited).",
+  "All numerical evidence: |OM-ON|≤1.6e-13 on 1698 valid configurations, the §3.1 counterexample with |OM-ON|≈0.381 and negative barycentric coordinates, and the repaired experiment.py outputs. These corroborate but were not reproduced in this review."
+ ],
+ "summary": "The human-checkable 90% of this proof is correct: I independently re-derived the coordinate formulas for K and L (including ray directions), the additive angle orderings from the strict-interior hypotheses, both algebraic constraints G1 and G2 (full product-to-sum computations match exactly), and the antipode criterion OM=ON ⇔ A'·(C-B)=(b²-c²)/2. The logical architecture — hypotheses ⇒ G1∧G2 ⇒ (via exact numerator-level divisibility plus a denominator audit) E=0 ⇒ OM=ON — is sound, non-circular, and the v1 numerator-vs-value-level flaw is correctly repaired. However, the decisive closing step is a computer-algebra identity whose certificate (the 26-term quotient Q and the 1486/395-term numerators) is only referenced as external files, never displayed, and no regenerating pseudocode is included; the proof as written therefore cannot be verified, and the b-elimination inside G2 for the identity is left implicit. Strong candidate, but it must embed the certificate (or a human derivation) before it can pass.",
+ "transfer_assessment": [
+  "Reusable: the antipode trick — for circumcenter O of △AKL with A at the origin, A'=2O converts 'circumcenter constraints' into the linear conditions A'·K=|K|², A'·L=|L|², and OM=ON with midpoints M=B/2, N=C/2 becomes the clean linear target A'·(C-B)=(b²-c²)/2 (A' on the perpendicular bisector of BC). Elegant and general.",
+  "Reusable: extracting additive angular orderings (∠LBA=α+β, ∠ACK=α+γ) from strict-interior hypotheses via the wedge-addition argument at a vertex; the exhibited near-miss counterexample (bare unsigned-angle equations with |OM-ON|≈0.381) demonstrates concretely why such ordering lemmas are load-bearing in angle-chasing problems.",
+  "Reusable pipeline: encode each remaining angle condition as ray-parallelism (2D cross product = 0) after sine-rule parametrization of the points, then product-to-sum to reach compact constraints like G1/G2 — a reliable analytic-geometry method for olympiad angle conditions.",
+  "Reusable methodology (with caveats): proving E vanishes on the locus {G2=0} by exact polynomial division after Weierstrass substitution, at the NUMERATOR level with an explicit denominator non-vanishing audit at valid configurations. The correct notion is divisibility of num(E) by num(G2), not the value-level identity E=Q·G2 — the v1/v2 history shows how easily these are conflated (denominators differ; value-level fails at O(10^11)).",
+  "Misleading/dangerous pattern: citing CAS output ('ZERO! Identity confirmed', term counts, external certificate files) as a proof step without embedding the certificate or regenerating code. Term counts and file names are evidence, not proof text; any reuse of this technique must ship the explicit quotient polynomial or complete pseudocode, and must state precisely which substitutions (here b via G1) are applied before the identity is formed.",
+  "Caution: the claimed t_gamma-independence of the quotient Q is a strong, surprising structural fact; in similar problems, verify such independence explicitly rather than assuming the quotient inherits the symmetries of the target."
+ ]
+}

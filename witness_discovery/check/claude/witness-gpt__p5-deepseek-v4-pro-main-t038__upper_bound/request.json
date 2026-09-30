@@ -1,0 +1,19 @@
+{
+ "checker": "claude",
+ "transport": "claude-cli",
+ "model": "claude-opus-5",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p5-deepseek-v4-pro-main-t038",
+ "tag": "upper_bound",
+ "text_sha256": "98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "not_written",
+  "quote": "Thus $V$ contains **at most one** positive number.  Consequently, either  \n\n* (i) $g\\equiv 0$ (constant), which gives $f(x)=x$, a solution; or  \n* (ii) there is $c>0$ such that $V \\subseteq \\{0, c\\}$ with both values attainable.",
+  "witness": "The argument has shown only that two distinct positive values cannot occur; it has not written an argument excluding negative values of $g$. To cover all cases it must prove that $g(t)<0$ is impossible by iterating the orbit until $t+n g(t)\\le0$. Without that step, the asserted dichotomy and all subsequent level-set arguments omit a case.",
+  "load_bearing": "Sections 4–6 assume every point lies in $S_0\\cup S_c$. Thus the claimed constancy of $g$ depends on the unwritten exclusion of negative differences."
+ },
+ "started_utc": "2026-09-06 04:48:22 UTC"
+}

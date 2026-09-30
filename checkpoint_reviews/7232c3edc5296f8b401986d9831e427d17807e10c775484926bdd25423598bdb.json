@@ -1,0 +1,39 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "reject",
+  "scores": {
+    "correctness": 1,
+    "completeness": 2,
+    "rigor": 1,
+    "self_contained": 2
+  },
+  "fatal_issues": [
+    "Lemma 2 (essential primes eventually divide all terms) is not rigorously proved. The induction on 'essential rank' is undefined; the argument that a_{m_k} must use k distinct primes to hit k p-divisible predecessors is invalid (a single prime q could hit multiple such predecessors, and the attempted induction on q ∈ E is circular — we are trying to prove the very statement for all essential primes). The bounded-gap argument ('by induction on the number of essential primes one can bound this maximum gap by a function of E alone') assumes the stabilization of minimal hitting sets, which itself depends on Lemma 2, creating circular reasoning.",
+    "Lemma 6 (backward propagation) uses the false claim that gcd(x+L, y+L) = gcd(x,y) when L is a multiple of all prime factors of the sequence. Counterexample: x=6, y=10, L=30 gives gcd(36,40)=4 ≠ 2=gcd(6,10). The translation invariance of the gcd condition under subtraction of L is not established, so the argument that (b_n) satisfies the same greedy recurrence fails.",
+    "Part 2 claims minimal hitting sets stabilize to subsets of E without justification that non-essential primes can be eliminated from minimal hitting sets. A minimal hitting set for {P_1,...,P_n} (n ≥ N_0) could contain a non-essential prime q that hits some early P_i more efficiently than any essential prime; the proof does not show why such q cannot appear in a minimal hitting set."
+  ],
+  "required_fixes": [
+    "Provide a rigorous proof of Lemma 2, e.g., by considering the minimal counterexample sequence or by analyzing the structure of minimal hitting sets without assuming stabilization. The standard approach uses the fact that if p ∈ E does not eventually divide all terms, one can construct a strictly increasing sequence of indices where p is absent, and the greedy minimality forces a_{m_k} to have unbounded prime factors while the gap to the previous term is bounded by the maximum difference of the finitely many progressions active at that stage — but this requires proving the set of active progressions is bounded independently of k without assuming Lemma 2.",
+    "Fix Lemma 6 by correctly proving translation invariance: show that for n ≥ N, a_{n+T} - L shares a prime factor with a_{i+T} - L for all i ≤ n, using the fact that every term in the tail is a multiple of L and the covered residues modulo L are exactly R. Alternatively, use the uniqueness of the greedy sequence satisfying the recurrence and the fact that both (a_n) and (b_n) satisfy the same recurrence with the same initial conditions from some point onward.",
+    "Justify the stabilization of minimal hitting sets to subsets of E by showing that any minimal hitting set containing a non-essential prime can be replaced by one using only essential primes, or by proving directly that for large n the family M_n consists of minimal transversals of the initial sets within E."
+  ],
+  "verified_claims": [
+    "Lemma 1: The set of essential primes E is nonempty (pigeonhole principle on prime factors of a_1).",
+    "Key Observation: a_{n+1} is the smallest integer > a_n whose prime set is a hitting set for {P_1,...,P_n}, equivalently a multiple of m_H for some minimal hitting set H ∈ M_n.",
+    "If Lemma 2 holds, then Corollary 3 follows: there exists N_0 such that E ⊆ P_n for all n ≥ N_0, and L = ∏_{p∈E} p divides all subsequent terms.",
+    "If M_n stabilizes to a fixed family M of subsets of E, then V_n stabilizes to a fixed union V of arithmetic progressions with differences dividing L, and the tail of the sequence is the increasing enumeration of V, which is periodic modulo L with period T = |R| where R is the set of covered residues.",
+    "The example (a_1 = 15) is correctly computed and illustrates the claimed structure."
+  ],
+  "unverified_claims": [
+    "Lemma 2: Every p ∈ E eventually divides all a_n (the proof as written is invalid).",
+    "Part 2: The family M_n stabilizes to minimal subsets of E hitting the initial sets (depends on Lemma 2 and lacks justification for eliminating non-essential primes).",
+    "Lemma 6: The periodicity extends backward to all n ≥ 1 (the proof uses a false gcd identity).",
+    "Implicit claim that E is finite (stated in open issues but not proved in the text; follows from Lemma 2 but Lemma 2 is unproven)."
+  ],
+  "summary": "The proof outlines the standard structural approach (essential primes, hitting sets, stabilization, periodicity modulo L, backward extension) but contains fatal gaps in the two core lemmas (Lemma 2 and Lemma 6). Lemma 2's proof is circular and uses an undefined induction; Lemma 6 relies on a mathematically false statement about gcd. The stabilization of minimal hitting sets (Part 2) is also not properly justified. As written, the proof does not establish the result.",
+  "transfer_assessment": [
+    "The mechanism 'essential-primes-stabilization' is a reusable concept for greedy sequences with gcd constraints, but the execution here is flawed; a correct implementation requires a delicate minimal-counterexample or induction argument.",
+    "The mechanism 'minimal-hitting-sets-merge' correctly translates the gcd condition into a union of arithmetic progressions; this part is sound and transferable.",
+    "The mechanism 'backward-uniqueness-propagation' is a known technique for deterministic greedy recurrences, but the proof's attempt to use gcd(x+L,y+L)=gcd(x,y) is incorrect; a correct version would use the uniqueness of the greedy sequence given the stabilized recurrence."
+  ]
+}

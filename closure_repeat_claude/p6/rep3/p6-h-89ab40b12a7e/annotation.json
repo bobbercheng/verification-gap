@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-89ab40b12a7e",
+  "problem": "6",
+  "sha256": "89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998",
+  "path": "checkpoint_inputs/89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p6-deedy-gpt-5.6-sol-pro-final"
+  ],
+  "bytes": 9717,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5735,
+        "output_tokens": 1269,
+        "output_tokens_details": {
+          "thinking_tokens": 940
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1269,
+            "cache_read_input_tokens": 5735,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "infinite sunflower lemma on bounded-size minimal supports + multiplicative weight descent (Lemma 2) forcing every prime into a terminal minimal support with w(D\\{p}) < a_1",
+    "upper_bound_mechanism": "acceptance = support contains some C in finite C; divisibility by primes of P invariant mod L, so acceptance invariant for all m >= a_1; T = number of accepted residues, each window (x, x+L] holds exactly T",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: greedy-scan recast, support-only acceptance and self-duality give (C); sunflower + weight descent give genuine finiteness of minimal supports for all cases; periodicity established from n=1 via residue counting. L and T explicit. No reliance on the false minimal-hitting-set lemma."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

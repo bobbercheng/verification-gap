@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-6d17430cc840",
+  "problem": "1",
+  "sha256": "6d17430cc8409eaec292509b3906f361d79b72f2a842ebeccf2e3b9b7c68de69",
+  "path": "checkpoint_inputs_ext/6d17430cc8409eaec292509b3906f361d79b72f2a842ebeccf2e3b9b7c68de69.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "57ce82c6",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-57ce82c6-v1"
+  ],
+  "bytes": 5403,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4475,
+        "output_tokens": 1719,
+        "output_tokens_details": {
+          "thinking_tokens": 1439
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1719,
+            "cache_read_input_tokens": 4475,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 23.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "product strictly decreases (invalid: assumes gcd(m,n)>1 always)",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations via gcd(a,b)=gcd(min(a,b),|a-b|)",
+    "wrong_answer_stated": true,
+    "notes": "Correct final value and a clean, fully general valuation-gcd invariance (zero and equal cases covered). But Section 1 rests on the false claim gcd(m,n)>1 whenever m,n>1, so both the strictly-decreasing-product termination and the 'at least one number stays >1' step are invalid. Move description of valuations is correct; the never-two-1s case is mishandled."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "p6-glm52-7030bbc7-v3",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "7030bbc7",
+  "turn": 3,
+  "path": "checkpoint_inputs/f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da.md",
+  "bytes": 11701,
+  "sha256": "f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 4567,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 111.3,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4503,
+        "output_tokens": 658,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 9.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Cofactor Bound: large essential prime forces smaller valid term Dc in [a_1,a_{j-1}], contradiction via blocker-monotonicity",
+    "upper_bound_mechanism": "V is union of residue classes mod L=product of essential primes; sequence = increasing enumeration of V from a_1, T = count per period",
+    "wrong_answer_stated": false,
+    "notes": "Reduction (Step 1) and periodicity assembly (Steps 3-4, from n=1) are fully written out. Finiteness (CB, Step 9) is a genuine all-cases contradiction argument, not example-based; computations are supplementary. L and T explicitly identified."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da",
+  "original_bytes": 11701,
+  "input_anonymized": false
+}

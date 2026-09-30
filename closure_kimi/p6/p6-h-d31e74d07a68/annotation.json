@@ -1,0 +1,38 @@
+{
+  "id": "p6-h-d31e74d07a68",
+  "problem": "6",
+  "sha256": "d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1",
+  "path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "turn": 1,
+  "record_ids": [
+    "p6-gpt56-ours"
+  ],
+  "bytes": 6345,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 101.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "large-prime erasure: Rp^k descent with induction over all terms",
+    "upper_bound_mechanism": "membership invariant under m->m+L (L=product of primes<=A); T=term count in length-L window",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. (C) proved via greedy-skip argument; (F) proved inductively for all terms by replacing x with smaller term m=Rp^k having same <=A support, boundary case m<A repaired; (P) global from threshold A: sigma(m+L)=sigma(m) gives term-residue invariance, yielding a_{n+T}=a_n+L for all n>=1. Falsification section is commentary only."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

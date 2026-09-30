@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-bfe4b2a3f1e3",
+  "problem": "5",
+  "sha256": "bfe4b2a3f1e332ca276a20b503987c39b5d55ca9612ee224d90712aa11f87168",
+  "path": "checkpoint_inputs_ext/bfe4b2a3f1e332ca276a20b503987c39b5d55ca9612ee224d90712aa11f87168.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8edc6458",
+  "turn": 1,
+  "record_ids": [
+    "p5-nemotron-8edc6458-v1"
+  ],
+  "bytes": 4047,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4457,
+        "output_tokens": 787,
+        "output_tokens_details": {
+          "thinking_tokens": 518
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 787,
+            "cache_read_input_tokens": 4457,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 10.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "QM-AM and (x-y-c)^2>=0, both inequalities, all c>=0",
+    "upper_bound_mechanism": "none (false identity (4) plus hand-waving)",
+    "wrong_answer_stated": true,
+    "notes": "Answer, structural identity f(f(t))=2f(t)-t with f^n(x)=x+ng(x), g>=0, and full verification are correct. Section 6 is invalid: the claimed factorization (4) is false — actually (L^2)-(R^2)=2(x-f(y))^2>=0 always — and the conclusion that g is constant is pure hand-waving; fixed-point/mixed case never addressed."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

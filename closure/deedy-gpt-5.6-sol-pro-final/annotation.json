@@ -1,0 +1,44 @@
+{
+  "id": "deedy-gpt-5.6-sol-pro-final",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": 99,
+  "path": "checkpoint_inputs/e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0.md",
+  "bytes": 3625,
+  "sha256": "e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1537,
+        "output_tokens": 3299,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 41.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division 1:2:4:...:2^n (conjectured; proved only for n=1)",
+    "upper_bound_mechanism": "case analysis of Xiang cuts for n=1 only; general case open",
+    "wrong_answer_stated": false,
+    "notes": "Claiming-phase reduction to alternating sum D=x1-x2+... is proved inline for all n (greedy both sides). Correct closed form c_n=2^n/(2^{n+1}-1) stated only as a conjecture backed by brute force for n<=4. Geometric Liu division named but no all-n argument; upper bound proved only for n=1; refinement theorem left open."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0",
+  "original_bytes": 3625,
+  "input_anonymized": false
+}

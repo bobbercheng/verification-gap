@@ -1,0 +1,45 @@
+{
+  "id": "p1-h-1d52d4fe1b74",
+  "problem": "1",
+  "sha256": "1d52d4fe1b749925ad678a27bc1ef9eef82a148ad2791631d15dba9ed1d75996",
+  "path": "checkpoint_inputs_ext/1d52d4fe1b749925ad678a27bc1ef9eef82a148ad2791631d15dba9ed1d75996.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 17,
+  "record_ids": [
+    "p1-deepseek-v4-pro-main-t017",
+    "p1-deedy-deepseek-v4-pro-final"
+  ],
+  "bytes": 7302,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17642,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 341,
+        "reasoning_output_tokens": 238
+      },
+      "sec": 12.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "strict monovariant K+sum Omega",
+    "upper_bound_mechanism": "primewise valuation-gcd invariance",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. The move is analyzed primewise, termination and exactly one survivor are established for every play, zero and equal valuations are covered, and the explicit invariant formula for M follows."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

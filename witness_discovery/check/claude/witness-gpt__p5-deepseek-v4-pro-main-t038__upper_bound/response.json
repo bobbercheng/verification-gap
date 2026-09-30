@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5680,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005775,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1319,
+    "cacheReadInputTokens": 1955,
+    "cacheCreationInputTokens": 6359,
+    "webSearchRequests": 0,
+    "costUSD": 0.09755250000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 922,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6359,
+   "cache_read_input_tokens": 1955,
+   "output_tokens": 1319,
+   "output_tokens_details": {
+    "thinking_tokens": 922
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 6359,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1319,
+     "cache_read_input_tokens": 1955,
+     "cache_creation_input_tokens": 6359,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 6359
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 17550,
+  "is_error": false,
+  "elapsed_seconds": 18.1,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"quote_faithful\": \"yes\", \"verdict\": \"confirmed\", \"evidence_kind\": \"missing_justification\", \"fatal\": \"yes\", \"explanation\": \"The quoted passage is in \\u00a73 and the objection reads it correctly: \\u00a73 only rules out two distinct *positive* values of g (the argument fixes c_1 > c_2 > 0 and derives a contradiction from (9)). Scanning the whole write-up, the only statement about the sign of g is the parenthetical 'Then g(x) > -x' after (4); no argument anywhere shows g(x) \\u2265 0. The standard proof (iterating (4)/(3) to get f^n(x) = x + n g(x) < 0 for large n when g(x) < 0, contradicting positivity of the codomain) is not written. Yet the dichotomy (i)/(ii), the claim '(Because V has only the two values, every x>0 belongs to S_0 \\u222a S_c)', and \\u00a7\\u00a74\\u20136 all presuppose V \\u2286 {0, c}; if some g(t) < 0 were allowed, the level-set covering argument would not apply. Hence the necessity obligation is incomplete as written.\"}"
+   }
+  ]
+ }
+}

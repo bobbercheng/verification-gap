@@ -1,0 +1,44 @@
+{
+ "rater": "glm",
+ "case": "p6-deedy-grok-4.5-final",
+ "problem": "6",
+ "group": "F",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 29.3,
+  "input_tokens": 752,
+  "output_tokens": 2476,
+  "cache_read_input_tokens": 1088
+ },
+ "parsed": {
+  "statements": {
+   "L6.1": {
+    "established": "partial",
+    "quote": "Key observation: a number m is a candidate for future terms iff gcd(m, a_i)>1 for all previous a_i. Equivalently, for every previous a_i, m shares a prime factor with a_i.",
+    "note": "Correct characterization asserted as an observation; no inductive proof is written out."
+   },
+   "L6.2": {
+    "established": "no",
+    "quote": null,
+    "note": "Finiteness of core primes is only conjectured from computations; no large-prime erasure argument (q^k c construction) given."
+   },
+   "L6.3": {
+    "established": "no",
+    "quote": null,
+    "note": "Periodicity only conjectured ('Empirically... eventually periodic'); no proof, and validity from n=1 never addressed."
+   }
+  },
+  "S_ref": 0,
+  "notes": "Tracking file: computations, correct but unproved characterization (C), and conjectures for finiteness (F) and periodicity (P). Full proof section says 'Not yet complete'; no mechanism written for all cases."
+ },
+ "anchors": {
+  "L6.1": {
+   "anchored": true,
+   "length": 171,
+   "length_ok": true,
+   "reason": null
+  },
+  "L6.2": null,
+  "L6.3": null
+ }
+}

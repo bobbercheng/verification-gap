@@ -1,0 +1,47 @@
+{
+  "id": "p1-h-b031b8f1dcb2",
+  "problem": "1",
+  "sha256": "b031b8f1dcb2566444bd17c37374c84f9ae706cc66267b1c49caa27bfa8f141d",
+  "path": "checkpoint_inputs_ext/b031b8f1dcb2566444bd17c37374c84f9ae706cc66267b1c49caa27bfa8f141d.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 12,
+  "record_ids": [
+    "p1-grok-4.5-main-t012",
+    "p1-deedy-grok-4.5-final"
+  ],
+  "bytes": 8573,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2244,
+        "output_tokens": 2670,
+        "cache_read_input_tokens": 1088,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 37.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic potential (count of entries >1, product of board)",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations per prime",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Lemma 1 gives the (min, |α−β|) valuation rule and the lcm>1 bound ruling out two 1s. Termination via lex (k,P) with full case analysis; k≥1 argued. Lemma 2/Corollary 3 prove gcd invariance including zero and equal exponents (a parenthetical misidentifies a difference, but the sum argument suffices). M=∏p^{gcd v_p(a_i)} stated explicitly."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

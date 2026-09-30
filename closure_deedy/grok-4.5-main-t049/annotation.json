@@ -1,0 +1,46 @@
+{
+  "id": "grok-4.5-main-t049",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 49,
+  "ts": "2026-07-21T04:37:18.293498+00:00",
+  "path": "checkpoint_inputs/87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc.md",
+  "bytes": 2794,
+  "sha256": "87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1508,
+        "output_tokens": 1887,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 24.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "power-of-two division with alternating-sum deficit D≥1",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form appears only as a conjecture, numerically checked for n≤3. V=(S+D)/2 is used as a black box, never derived. Lower bound: power-of-two division named, but D≥D(B_{n-t}) is an unproved hypothesis from small-case pattern. Upper bound explicitly deferred ('need a matching strategy'). Full proof section empty."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc",
+  "original_bytes": 2794,
+  "input_anonymized": false
+}

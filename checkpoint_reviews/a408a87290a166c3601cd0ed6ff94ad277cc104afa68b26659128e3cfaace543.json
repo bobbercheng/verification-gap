@@ -1,0 +1,60 @@
+{
+  "task_id": "imo-2026-p2",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 1,
+    "completeness": 0,
+    "rigor": 1,
+    "self_contained": 1
+  },
+  "fatal_issues": [
+    "Core lemma KA = KB (equivalently Re(K) = 1/2) is unproven; the proposed algebraic elimination has not been executed.",
+    "Complex-number translation of the third angle condition (∠LCK = ∠BMK) appears incorrect: candidate gives (L-z)(2K-1)/(K-z) ∈ ℝ but correct derivation yields (L-z)/((K-z)(2K-1)) ∈ ℝ. This error invalidates the claimed algebraic system unless it is a typo in attribution (conditions 2 and 3 are swapped in labeling but condition 2's formula does not match either angle equality).",
+    "Symmetric argument for LA = LC is not verified and cannot be handwaved because the configuration is not fully symmetric (K ∈ △BMC, L ∈ △BNC; K ∈ △ABL, L ∈ △AKC).",
+    "Final circumcenter algebra (|O'-1|² = |O'-z|² given Re(k)=1/2, Re(lz̄)=|z|²/2) is claimed numerically verified but not derived.",
+    "Interior/strictness conditions (K,L strictly inside specified triangles) are not used to exclude degenerate branches (e.g., Q=0 branch in claimed factorization)."
+  ],
+  "required_fixes": [
+    "Correct the complex-number translation of all three angle conditions and re-derive the algebraic system.",
+    "Execute the full algebraic elimination (e.g., via CAS) to determine whether the resultant on K factors as (2Re(K)-1)·Q=0 and whether Q≠0 on valid interior configurations.",
+    "If the factorization holds, provide the complete symbolic derivation; if it fails, identify the correct synthetic lemma (e.g., from Lemma 2: k(1-z)/[z(1-k)(2k-1)] ∈ ℝ) and complete the synthetic proof.",
+    "Verify the symmetric derivation for L independently (not by symmetry assumption).",
+    "Complete the circumcenter algebra: substitute Re(k)=1/2, Re(lz̄)=|z|²/2 into O' = 2(|k|²l - |l|²k)/(\\bar{k}l - k\\bar{l}) and prove |O'-1|² = |O'-z|².",
+    "Explicitly handle boundary/degenerate cases and verify interior conditions select the correct branch."
+  ],
+  "verified_claims": [
+    "Spiral similarity S at A with ratio AC/AB and rotation ∠A sends B→C and M→N (since M,N are midpoints).",
+    "Lemma 1: S(K) = K₁ lies on ray CL (from ∠KBA = ∠ACL and S(BA)=CA).",
+    "Lemma 2: ∠(CA, NK₁) = γ = ∠(CK₁, CK) (from S(BM)=CN, S(MK)=NK₁ and ∠BMK = ∠LCK).",
+    "Lemma 3: ∠(CL₁, CK₁) = β = ∠(LN, CA) where L₁=S(L) (from S(BL)=CL₁, S(BK)=CK₁ and ∠LBK = ∠LNC).",
+    "CNK₁K is cyclic with CK = CK₁ (equal inscribed angles ∠CNK₁ = ∠CK₁K subtend chords CK₁ and CK).",
+    "Homothety reduction: OM = ON ⇔ O ∈ ⟂bis(MN) ⇔ O' = H_{A,2}(O) ∈ ⟂bis(BC); O' is circumcenter of A, 2K, 2L."
+  ],
+  "unverified_claims": [
+    "The three angle conditions translate to the candidate's three reality conditions (condition 2 is likely incorrect).",
+    "Eliminating L yields Im(z(K-1)(2K-1)/(K-z)) = 0 which factors as (2Re(K)-1)·Q = 0.",
+    "Q ≠ 0 on all valid interior configurations, forcing Re(K) = 1/2 (i.e., KA = KB).",
+    "Symmetric argument gives Re(L\\bar{z}) = |z|²/2 (i.e., LA = LC).",
+    "With KA=KB and LA=LC, the circumcenter algebra yields |O'-1| = |O'-z|.",
+    "Interior conditions are sufficient to exclude degenerate or extraneous solutions."
+  ],
+  "summary": "The candidate proof correctly establishes the spiral similarity framework (Lemmas 1-3), the cyclic quadrilateral CNK₁K with CK=CK₁, and the homothety reduction of OM=ON to O' on ⟂bis(BC). However, the core step—proving KA=KB and LA=LC—is missing. The proposed algebraic path contains a likely error in the complex translation of ∠LCK = ∠BMK (condition 2), and the claimed factorization has never been computed. The symmetric argument for L is not justified. The proof is at a 'Partial' stage as acknowledged by the author; it requires complete algebraic verification or a synthetic alternative.",
+  "transfer_assessment": [
+    {
+      "mechanism": "spiral-similarity-at-vertex",
+      "assessment": "reusable — correctly identifies S at A sending B→C, M→N as central mechanism; Lemmas 1-3 are rigorously derived and transferable to other midpoint/spiral-similarity configurations."
+    },
+    {
+      "mechanism": "cyclic-quadrilateral-chord-equality",
+      "assessment": "reusable — clean deduction that equal inscribed angles in CNK₁K give CK=CK₁; standard directed-angle technique."
+    },
+    {
+      "mechanism": "homothety-reduction",
+      "assessment": "reusable — reduces OM=ON to circumcenter of scaled triangle lying on ⟂bis(BC); standard midpoints→homothety technique."
+    },
+    {
+      "mechanism": "algebraic-elimination-via-complex-numbers",
+      "assessment": "misleading in current form — the specific reality conditions contain a probable sign/error in condition 2; the claimed factorization is unverified and may not hold. The correct condition from Lemma 2 (k(1-z)/[z(1-k)(2k-1)] ∈ ℝ) gives a purely k-equation that should be pursued instead."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+ "claim_id": "C2",
+ "condition": "invalid",
+ "verifier": "kimi",
+ "model": "kimi-k3",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "Counterexample: edges A_n = {x_n, y_1, ..., y_n} (n>=1) are finite and pairwise intersecting (share y_1). Each T_j = {x_1, ..., x_{j-1}, y_j} meets every A_n, and each element has a private edge (A_i for x_i; A_j for y_j), so T_j is an inclusion-minimal transversal. Infinitely many distinct T_j.",
+  "witness_valid": false,
+  "witness_reason": "The family F_n = {x_n} with distinct x_n is not pairwise intersecting: {x_1} and {x_2} are disjoint. It violates the claim's key hypothesis, so it is not a valid counterexample, even though it does have infinitely many minimal transversals."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 110.3
+}

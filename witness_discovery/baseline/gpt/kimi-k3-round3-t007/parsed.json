@@ -1,0 +1,44 @@
+{
+ "grader": "gpt",
+ "case": "kimi-k3-round3-t007",
+ "problem": "3",
+ "group": "C",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 22.5,
+  "input_tokens": 16304,
+  "output_tokens": 724,
+  "reasoning_output_tokens": 488,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "grade": 3,
+  "complete": false,
+  "main_gap": "The matching upper bound is not proved: no valid Xiang strategy forcing D ≤ 1/(2^{n+1}−1) is established.",
+  "errors": [
+   {
+    "description": "Part B, essential for optimality, is explicitly left open. The signed-sum pigeonhole argument does not imply that the small sum can be realized using at most n permitted subdivisions/cancellation operations.",
+    "quote": "Part B (XY always forces $D\\le T_n$) still open: best candidate \"min over subsets of greedy chain $\\le T_n S$\" — needs verification & proof."
+   },
+   {
+    "description": "The lower-bound argument remains a compressed sketch: the multigraph construction, slack identities, and component cost inequality are asserted without enough formal definition and derivation to constitute a fully checkable proof as written.",
+    "quote": "Part A proof (lower bound) SKETCH — looks complete"
+   }
+  ],
+  "notes": "The write-up identifies a plausible exact answer and gives substantial structural progress, including a credible lower-bound strategy. However, numerical verification earns no proof credit, and the entire converse direction remains unresolved."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 140,
+   "length_ok": true,
+   "reason": null
+  },
+  {
+   "anchored": true,
+   "length": 50,
+   "length_ok": true,
+   "reason": null
+  }
+ ]
+}

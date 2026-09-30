@@ -1,0 +1,22 @@
+{
+ "checker": "gpt",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.9,
+  "input_tokens": 19133,
+  "output_tokens": 428,
+  "reasoning_output_tokens": 272,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "no",
+  "explanation": "The specialization is algebraically incorrect. From the established formula A(x,y)=(x-y)^2-a^2-2a(x+y)+4by+2b^2, substituting a=0 and b=c gives A(x,y)=(x-y)^2+4cy+2c^2, not the displayed expression with 4cx. This is harmless: the corrected expression is still strictly positive, and the subsequent separation argument uses B(x,y) and A(y,x), both of which are specialized correctly. Thus the typo does not invalidate the proof or any rubric obligation."
+ }
+}

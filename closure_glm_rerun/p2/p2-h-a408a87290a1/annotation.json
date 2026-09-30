@@ -1,0 +1,46 @@
+{
+  "id": "p2-h-a408a87290a1",
+  "problem": "2",
+  "sha256": "a408a87290a166c3601cd0ed6ff94ad277cc104afa68b26659128e3cfaace543",
+  "path": "checkpoint_inputs/a408a87290a166c3601cd0ed6ff94ad277cc104afa68b26659128e3cfaace543.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "109446af",
+  "turn": 1,
+  "record_ids": [
+    "p2-nemotron-109446af-v1"
+  ],
+  "bytes": 5767,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2497,
+        "output_tokens": 22928,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 258.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "perpendicular-bisector via homothety H_{A,2}",
+    "wrong_answer_stated": true,
+    "notes": "No circle through A,K,L is ever produced. Complex translation has a sign error in condition 1 (encodes ∠KBA=−∠ACL; correct is z/((K−1)(L−z))∈ℝ) and conditions 2/3 are swapped; elimination never executed. The 'verified equivalence' (KA=KB, LA=LC ⟹ |O'−1|=|O'−z|) is false as stated. Only Lemma 1 and the homothety/perp-bisector reduction are sound; the cyclic CNK₁K deduction is invalid."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

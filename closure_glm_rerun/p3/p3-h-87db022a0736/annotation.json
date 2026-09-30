@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-87db022a0736",
+  "problem": "3",
+  "sha256": "87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc",
+  "path": "checkpoint_inputs/87db022a07368dcce153751d3aaa7ab44fa2fd7f83f9c34faf58b07e8b32a2cc.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 49,
+  "record_ids": [
+    "grok-4.5-main-t049"
+  ],
+  "bytes": 2794,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1060,
+        "output_tokens": 1559,
+        "cache_read_input_tokens": 448,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 17.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "power-of-two division B_n with alternating-difference D (numerical n≤3, unproved hypothesis)",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Correct c_n appears only as a conjecture verified numerically to n=3. Reduction V=(S+D)/2 asserted, not proved. Lower bound: power-of-two division named, D≥1 after ≤n cuts only numerically checked; minD=D(B_{n-t}) is an unproved hypothesis; Lemma A asserted proved but unused. Upper bound: explicitly 'need a matching strategy' — absent. 'Full proof (in progress)'."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

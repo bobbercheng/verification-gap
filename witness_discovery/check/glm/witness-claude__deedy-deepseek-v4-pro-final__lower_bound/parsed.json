@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-deepseek-v4-pro-final",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": null,
+  "input_tokens": 229,
+  "output_tokens": 2579,
+  "cache_read_input_tokens": 1472
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote appears verbatim under 'Approaches tried' and, as the objection reads it, reports only discretized numerical evidence ('results suggest'), not a proof — a faithful reading. Checking the whole text: the 'Current best' section merely states a conjectured division (marks at k/(2n+1)) and explicitly says 'Need to prove both' and 'Lower bound: Liu Bang's strategy ensures at least (n+1)/(2n+1)'; 'Full proof' reads '(To be completed)'. Nowhere is there a pairing, majorization, or induction argument handling arbitrary Xiang replies for all n, so the lower-bound mechanism is indeed not written. Moreover the witness's side point is mathematically sound: (n+1)/(2n+1) > 2^n/(2^{n+1}-1) for n≥2 (e.g. n=2: 3/5 > 4/7), so no such proof could exist. The lower-bound obligation remains unfulfilled as written."
+ }
+}

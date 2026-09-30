@@ -1,0 +1,61 @@
+{
+  "id": "p6-kimi-k3-main-t005",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-main",
+  "turn": 5,
+  "path": "checkpoint_inputs/ca355972e2bea920b8a954d18745abda6732c30157eb3b0694d19a21ec105376.md",
+  "bytes": 16597,
+  "sha256": "ca355972e2bea920b8a954d18745abda6732c30157eb3b0694d19a21ec105376",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 5861,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 85.9,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5861,
+        "output_tokens": 506,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 7.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "killing property (K′) + compactness (no infinite minimal transversals) + peeling yields finiteness of minimal elements",
+    "upper_bound_mechanism": "L = lcm of finitely many minimal elements of S_∞; T = count in [a_1, a_1+L); global periodicity from n=1",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Step 1 gives full membership characterization; Steps 3–4b prove finiteness of M via an erasure lemma (K′) applied to all terms, compactness, and peeling; Step 2 assembles a_{n+T}=a_n+L from the first term. Only cosmetic typos."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "ca355972e2bea920b8a954d18745abda6732c30157eb3b0694d19a21ec105376",
+  "original_bytes": 16597,
+  "input_anonymized": false
+}

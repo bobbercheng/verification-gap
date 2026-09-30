@@ -1,0 +1,42 @@
+{
+  "id": "pilot-25a02f9148ef",
+  "lineage": "pilot",
+  "model": "pilot",
+  "context": null,
+  "turn": null,
+  "path": "pilot_critique/p3-high-N-r1/output.md",
+  "bytes": 12481,
+  "sha256": "25a02f9148ef9d0100689e342763065fd8f063f2d523c11c94a9db597e0f9719",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4845,
+        "output_tokens": 5993,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 64.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "geometric opening (2^n:...:1) with even-index sum majorization proved by induction (Lemma E)",
+    "upper_bound_mechanism": "subset-sum pigeonhole (gap <= 1/(2^{n+1}-1)) plus greedy max-max cancellation pairing with halved common parts",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Lemma 1 fully proves the odd(S) value via both pairing strategies. Theorem 1's Lemma E induction is valid for all n against any Xiang reply. Theorem 2's pigeonhole and cancellation procedure are fully written with correct cut count, legality, and delta(L) <= D. Answer matches 2^n/(2^{n+1}-1)."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

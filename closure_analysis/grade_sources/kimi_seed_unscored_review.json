@@ -1,0 +1,31 @@
+{
+  "candidate_sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+  "defects": [
+    "D1 [Theorem B, Step 2, one-empty-pool branch: “the total number of cuts is |Z|≤n−1”]: If the nonempty set among P,Q is a singleton, then |Z|=(n+1)-1=n, so the asserted bound is false.",
+    "D2 [Theorem B, Step 3: “δ(L)≤max L≤∑L”]: The leftover family L can be empty when D=0, making max L undefined; for example, with n=1, A=(1/2,1/2), P={1}, and Q={2}, cancellation leaves L=∅. This quantified degenerate case is not handled."
+  ],
+  "reviewer_receipt": {
+    "artifact_dir": "<local-runtime>/reviewer/001-review-r000",
+    "artifact_sha256": {
+      "invocation.json": "7e2893c55931982929c319f024df6115ccfe4dbc9d3e52d42ceebc9792db9d27",
+      "prompt.md": "479bee274bac4d040e73d3ae93dfa9b2003307b3376e2be2cda27277395b4948",
+      "request.json": "26753aa5e05765b2f793fc55100831dbac70b69a39a696e0409b5f78ca5815af",
+      "stdout.jsonl": "5d11c89b2c15a5dcc490aa22401e23d7fedfaccb02ece8b57d61605b537b003c"
+    },
+    "engine_identity": {
+      "base_url": null,
+      "checkpoint_timeout_seconds": 600.0,
+      "engine": "codex-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "provider": "OpenAI",
+      "timeout_seconds": 1800.0
+    },
+    "returncode": 0,
+    "route_attested": true,
+    "timed_out": false
+  },
+  "revision": 0,
+  "schema_version": 1,
+  "score": null,
+  "verdict": "revise"
+}

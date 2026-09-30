@@ -1,0 +1,17 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-H",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "H",
+ "problem": "5",
+ "text_sha256": "9cea7fee7985867255c7a84849295ff961b13b1d4386ea13633341050a82c520",
+ "text_path": "texts/p5-gpt56-7324ef70-v1/H.md",
+ "system_sha256": "274cb361e3f0a55f4046e261f1c3bb01fe14d40f240c0e9f59a3d2f4a5cf1199",
+ "system": "You are an IMO coordinator grading ONE write-up for IMO 2026 Problem 5 on the standard 0-7 scale.\n\n## Problem statement\n# IMO 2026 Problem 5\n\nLet $\\mathbb{R}_{>0}$ be the set of positive real numbers. Determine all functions $f:\\mathbb{R}_{>0}\\to\\mathbb{R}_{>0}$ such that\n\n$$\n\\sqrt{\\frac{x^2+f(y)^2}{2}} \\geq \\frac{f(x)+y}{2} \\geq \\sqrt{x f(y)}\n$$\n\nfor every $x,y\\in\\mathbb{R}_{>0}$.\n\nSource: https://www.imo-official.org/problems/2026/\n\n## Instructions\nGrade only what is written in the text below. Do not consult, recall, or compare against any published solution, and do not use\na fixed list of required lemmas: judge the write-up on its own terms as a proof attempt, as a coordinator would.\nScale: 7 = complete and correct proof; 5-6 = essentially complete, with minor gaps or a small error that is straightforwardly\nrepairable; 3-4 = substantial correct progress with a major part missing or unjustified; 1-2 = minor correct progress\n(e.g. correct answer or reduction with the main argument absent); 0 = no meaningful progress, or the text is not a proof attempt.\nNumerical checks, conjectures, and claims left \"to do\" earn no credit. A wrong final answer caps the grade at 1.\n\nReturn ONLY a JSON object:\n{\"grade\": 0|1|2|3|4|5|6|7, \"complete\": true|false, \"main_gap\": \"<=40 words or 'none'\",\n \"errors\": [{\"description\": \"<=80 words: the step concerned and what is wrong or missing\", \"quote\": \"<verbatim excerpt of the write-up this concerns, or null>\"}, ...],\n \"notes\": \"<=60 words\"}\nList at most three errors, the most severe first; an empty list means you found none.",
+ "prompt_source": "witness_discovery.baseline_system",
+ "user_chars": 4664,
+ "started_utc": "2026-09-06 19:15:29 UTC"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "p6-h-7232c3edc529",
+  "problem": "6",
+  "sha256": "7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb",
+  "path": "checkpoint_inputs/7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "244edfad",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-244edfad-v1"
+  ],
+  "bytes": 8615,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3557,
+        "output_tokens": 10935,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 124.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 3,
+    "complete": false,
+    "main_gap": "Lemma 2/Corollary 3 (every essential prime eventually divides every term) is false — the write-up's own example contradicts it (e.g., a_11 = 50 lacks factor 3) — and its proof is invalid; the central stabilization step is unjustified.",
+    "notes": "Correct hitting-set reformulation and a workable conditional endgame (Parts 3–4, though Lemma 6 cites a false gcd identity). The heart of the problem—stabilization of the hitting-set structure—is established only via a false lemma with a hand-wavy proof, so the derived L and V are wrong; internal inconsistency with the example."
+  },
+  "S": null,
+  "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+  "path_base": "bundle root"
+}

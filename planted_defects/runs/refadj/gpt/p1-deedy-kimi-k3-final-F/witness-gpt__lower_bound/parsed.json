@@ -1,0 +1,42 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p1-deedy-kimi-k3-final-F",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "F",
+ "problem": "1",
+ "objection_key": "witness-gpt__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 19.4,
+  "input_tokens": 18586,
+  "output_tokens": 723,
+  "reasoning_output_tokens": 496,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L1.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "*Type A: $g \\ge 2$.* Then $P$ is multiplied by $1/g \\le \\tfrac12$.\n\n*Type B: $g = 1$.* Then $\\ell = mn \\ge 2\\cdot 2 = 4 > 1$, so the pair $(m,n)$ is replaced by $(1, mn)$",
+  "status_as_written": "false_display",
+  "repair_distance": "sentence",
+  "explanation": "The quoted inference is false, exactly as the counterexample shows. Nevertheless, the surrounding case analysis establishes survival: when $g\\ge2$, the first output $g$ exceeds 1; when $g=1$, the second output $mn$ exceeds 1. Thus no move outputs two 1s, so induction from the initially non-all-1 board gives at least one survivor after every move. Replacing the faulty sentence with this case-based argument repairs Step 2."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 170,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   3543,
+   3711
+  ]
+ },
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "lower_bound"
+}

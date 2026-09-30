@@ -1,0 +1,70 @@
+{
+  "id": "p1-h-de44a94b0ce2",
+  "problem": "1",
+  "sha256": "de44a94b0ce22126c5e5d8068a9604c3d5436089aa890d09bed64478d993a262",
+  "path": "checkpoint_inputs_ext/de44a94b0ce22126c5e5d8068a9604c3d5436089aa890d09bed64478d993a262.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "a71e54bb",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-a71e54bb-v1"
+  ],
+  "bytes": 8075,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5848,
+        "output_tokens": 2243,
+        "output_tokens_details": {
+          "thinking_tokens": 1917
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2243,
+            "cache_read_input_tokens": 5848,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 29.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic monovariant (K, Omega) with well-founded descent, plus 'a move always leaves an output > 1' so K never reaches 0",
+    "upper_bound_mechanism": "per-prime invariance of gcd of valuations via gcd(a,b)=gcd(min(a,b),|a-b|); final board gives v_p(M)=G_p",
+    "wrong_answer_stated": false,
+    "notes": "Complete: move valuation description (min, |a-b|) derived; termination via lexicographic (K, Omega) with correct case split g=1 / g>1 / m=n; K>=1 preserved so exactly one survivor; invariance stated as a general Euclidean identity (equal/zero valuation cases correct though not itemized); explicit M = prod p^{gcd_i v_p(a_i)} with M>1 justified."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

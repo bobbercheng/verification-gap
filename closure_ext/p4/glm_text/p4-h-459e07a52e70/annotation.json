@@ -1,0 +1,47 @@
+{
+  "id": "p4-h-459e07a52e70",
+  "problem": "4",
+  "sha256": "459e07a52e70e58b20fb2486669d8e2dc4d35e357343efd58f84962c6e034e30",
+  "path": "checkpoint_inputs_ext/459e07a52e70e58b20fb2486669d8e2dc4d35e357343efd58f84962c6e034e30.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 13,
+  "record_ids": [
+    "p4-deepseek-v4-pro-main-t013",
+    "p4-deedy-deepseek-v4-pro-final"
+  ],
+  "bytes": 2172,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1539,
+        "output_tokens": 5841,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 92.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 0,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "one-move split making both pieces contain θ, worked only for θ=90° and conditional on both other angles <90°",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Tracking file, not a proof. No kθ induction lemma (only a question mark) and no Shan-Yu avoidance/safe-angle argument; search-based 'loses' claims uncredited. Winning side has just a conditional θ=90° one-move sketch, vertex-choice/existence gap. Answer never settled; floated conjectures (complement of 180/n, or only 90°) are wrong."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

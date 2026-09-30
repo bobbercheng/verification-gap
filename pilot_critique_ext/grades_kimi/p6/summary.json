@@ -1,0 +1,137 @@
+{
+ "annotator": "kimi-k3",
+ "items": [
+  {
+   "id": "pilot-6bd572498c1a",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p6-low-C-r2/output.md",
+   "bytes": 6974,
+   "sha256": "6bd572498c1a98b44821a521e93923d194288711884cf9fcee7e947430862bc5",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 468.8,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "finite transversal + iterated adjoining to force D inside infinitely many minimal supports, then D realized as a term's support (Lemma 2)",
+    "upper_bound_mechanism": "V as union of multiples of minimal hitting-set radicals; residues mod L; T = #residue classes; window count",
+    "wrong_answer_stated": false,
+    "notes": "(C) proved globally: sequence = increasing enumeration of V from a_1 (eq. 3); Lemma 2 correct. But Lemma 3 (finitely many minimal supports) is gapped: the adjoining process need not terminate—primes outside S can be adjoined forever; the purely combinatorial termination claim is false in general. Periodicity assembly complete and from n=1, conditional on Lemma 3."
+   },
+   "S": 1,
+   "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+  },
+  {
+   "id": "pilot-8629891d4586",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p6-mid-C-r1/output.md",
+   "bytes": 10066,
+   "sha256": "8629891d458639118d9465fe18c5a0f01675e0c675cc841f0093090ade261f64",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 42.0,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "permanents (minimal transversals): pairwise-intersecting self-dual antichain + killing property forces large primes into permanents with cofactor ≤ a_1, contradiction",
+    "upper_bound_mechanism": "L = lcm of finitely many permanents, m↔m+L membership invariance, T = count in [a_1, a_1+L), block enumeration",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Lemma 1 gives exact enumeration characterization (C). Finiteness of permanents proved rigorously for all terms via Lemmas 2-7 and the antichain contradiction. Lemma 8 assembles global periodicity from n=1 with explicit L (lcm of minimal elements) and T (window count). No false lemmas; nothing left asserted or checked only on examples."
+   },
+   "S": 2,
+   "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+  },
+  {
+   "id": "pilot-4c7e7227a106",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p6-mid-N-r1/output.md",
+   "bytes": 8161,
+   "sha256": "4c7e7227a1060dcc87ce38ff679ecb2f7cba67e592b270ff0b539ddb83914dd9",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 79.1,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "minimal-transversal antichain finiteness: killing-property descent (π(d) ≤ a₁p) + pigeonhole on Q with π(Q) ≤ a₁, antichain contradiction",
+    "upper_bound_mechanism": "S_∞ periodic mod L = lcm of finitely many minimal generators; T = terms in [a₁, a₁+L) window",
+    "wrong_answer_stated": false,
+    "notes": "Complete correct proof. Lemma 1.1 proves characterization (C) for all m ≥ a₁. §§3–5 prove finiteness of minimal generators rigorously via squarefree reduction, pairwise-intersecting antichain, descent lemma, and pigeonhole. Lemma 2.1 assembles full periodicity from n=1: membership invariant under m→m+L for all m, T counts window terms, yielding a_{n+T}=a_n+L for all n≥1."
+   },
+   "S": 2,
+   "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+  },
+  {
+   "id": "pilot-dcf72678bb60",
+   "lineage": "pilot",
+   "model": "pilot",
+   "context": null,
+   "turn": null,
+   "path": "pilot_critique_ext/p6-mid-N-r2/output.md",
+   "bytes": 12504,
+   "sha256": "dcf72678bb605fe117a4dc56e34708142ec997d8bae9552dfc90300a41992dfa",
+   "annotator": "kimi-k3",
+   "attempts": [
+    {
+     "attempt": 0,
+     "status": 200,
+     "stop": "stop",
+     "usage": null,
+     "sec": 163.5,
+     "parsed": true
+    }
+   ],
+   "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "finite minimal transversals via killing descent + pigeonhole",
+    "upper_bound_mechanism": "L-invariance + T block-count induction",
+    "wrong_answer_stated": false,
+    "notes": "Complete: enumeration of S∞, finite minimal transversals via killing descent/pigeonhole, and L-invariance for all positive m with block count T prove the recurrence from n=1. Minor overstatement: translation is not onto all S∞, but the needed block bijections are justified."
+   },
+   "S": 2,
+   "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+  }
+ ]
+}

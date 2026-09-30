@@ -1,0 +1,71 @@
+{
+  "id": "p5-h-4213eec1d7f4",
+  "problem": "5",
+  "sha256": "4213eec1d7f42f7b259d0d1ca1d9ee82dc37da7d8c1485bfd1cebc32c9f4a990",
+  "path": "checkpoint_inputs_ext/4213eec1d7f42f7b259d0d1ca1d9ee82dc37da7d8c1485bfd1cebc32c9f4a990.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-main",
+  "turn": 1,
+  "record_ids": [
+    "p5-kimi-k3-main-t001",
+    "p5-deedy-kimi-k3-final"
+  ],
+  "bytes": 7150,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6056,
+        "output_tokens": 2246,
+        "output_tokens_details": {
+          "thinking_tokens": 1920
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2246,
+            "cache_read_input_tokens": 6056,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 26.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to a=x, b=y+c since f(x)+y=x+f(y)",
+    "upper_bound_mechanism": "descent lemma (t-c has same increment) + forbidden-interval: c-orbit step c<2s must land in I=(A-s,A+s)",
+    "wrong_answer_stated": false,
+    "notes": "Equivalent form |(f(x)+y)^2-(x+f(y))^2|<=(x-f(y))^2 is derived correctly; x=f(y) gives f(f(y))=2f(y)-y, iterates arithmetic, p>=0. Descent to r in (0,c] verified, forbidden-interval contradiction valid, d=0 (fixed points) explicitly covered. Sufficiency proven for both inequalities, all c>=0. Checked algebra: correct."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

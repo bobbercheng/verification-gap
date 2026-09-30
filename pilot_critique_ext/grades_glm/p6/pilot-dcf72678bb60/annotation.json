@@ -1,0 +1,42 @@
+{
+  "id": "pilot-dcf72678bb60",
+  "lineage": "pilot",
+  "model": "pilot",
+  "context": null,
+  "turn": null,
+  "path": "pilot_critique_ext/p6-mid-N-r2/output.md",
+  "bytes": 12504,
+  "sha256": "dcf72678bb605fe117a4dc56e34708142ec997d8bae9552dfc90300a41992dfa",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4614,
+        "output_tokens": 8121,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 79.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "descent on permanents via killing property + pigeonhole (finiteness of minimal transversals)",
+    "upper_bound_mechanism": "L = lcm of minimal elements, shift-invariance by L, T = terms per length-L block",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Lemma 1.1 fully proves the term characterization (C). Step 4 proves finiteness for all cases: descent Lemma 4.1 (killing property applied to π(t)/p), iterated descent 4.2, pigeonhole/contradiction 4.3. Lemma 2.2 assembles a_{n+T}=a_n+L globally from n=1. No false lemmas; all steps verified."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "p2-h-ec1ad94b7a34",
+  "problem": "2",
+  "sha256": "ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a",
+  "path": "checkpoint_inputs/ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9c3c93da",
+  "turn": 2,
+  "record_ids": [
+    "p2-nemotron-9c3c93da-v2"
+  ],
+  "bytes": 17780,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 10250,
+        "cache_read_input_tokens": 666,
+        "output_tokens": 4303,
+        "output_tokens_details": {
+          "thinking_tokens": 4062
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 10250,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 4303,
+            "cache_read_input_tokens": 666,
+            "cache_creation_input_tokens": 10250,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 10250
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 54.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 1,
+    "complete": false,
+    "main_gap": "Key step is an unproven asserted factorization ((2x−1)·Q) with 'one checks Q≠0'; final step's claim that KA=KB, LA=LC alone force OM=ON is false (counterexample K=.5+.9i, L=.7+.5i, C=i).",
+    "notes": "Text is largely a record of failed synthetic attempts ('this is getting too tangled'), with hand-waved algebra substituting for proof. Lemma 1 (S(K) on line CL) is a genuine correct observation; condition (★) derivation is valid, but everything after is asserted, and the concluding lemma is provably insufficient."
+  },
+  "S": null,
+  "rubric_sha256": "fbce39b97af5920477908d5c805bf2680da544eb0cc15ffb5f46543bbb3dfc68",
+  "path_base": "bundle root"
+}

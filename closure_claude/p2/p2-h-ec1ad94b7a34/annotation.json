@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-ec1ad94b7a34",
+  "problem": "2",
+  "sha256": "ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a",
+  "path": "checkpoint_inputs/ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9c3c93da",
+  "turn": 2,
+  "record_ids": [
+    "p2-nemotron-9c3c93da-v2"
+  ],
+  "bytes": 17780,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 10250,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 5180,
+        "output_tokens_details": {
+          "thinking_tokens": 4904
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 10250,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 5180,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 10250,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 10250
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 64.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none (homothety reduction plus asserted, false computation)",
+    "wrong_answer_stated": true,
+    "notes": "Goal stated correctly, but the central claim KA=KB, LA=LC is false: the hypotheses cut out a 1-parameter family, and the asserted factorization (2x-1)Q of (★) fails (e.g. z=i, K=1/2+yi works only for y=1/2). Even granting it, KA=KB & LA=LC do not force OM=ON. No key circle through A,K,L; synthetic sections openly stall (\"too tangled\"); finish is an unexecuted \"direct computation\"."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-c54249331b4b",
+  "problem": "1",
+  "sha256": "c54249331b4bc0f67d3b59fbea23f33a33e488d8bb75ede000385f90b2d7e7d9",
+  "path": "checkpoint_inputs_ext/c54249331b4bc0f67d3b59fbea23f33a33e488d8bb75ede000385f90b2d7e7d9.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 7,
+  "record_ids": [
+    "p1-deepseek-v4-pro-main-t007"
+  ],
+  "bytes": 6350,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3057,
+        "output_tokens": 2023,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 31.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "monovariant K+S strictly decreasing (K = count >1, S = total Ω), plus case analysis showing each move leaves at least one output >1",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations under (α,β)→(min,|α−β|) via divisibility both directions, then v_p(M)=d_p",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Case analysis covers g=1, g>1 with m=n, m≠n; termination and K≥1 both rigorous. Invariance handles α=β (zero valuation) via the min/|α−β| algebra; final multiset gcd gives v_p(M)=d_p explicitly."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

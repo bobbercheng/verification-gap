@@ -1,0 +1,61 @@
+{
+  "id": "p2-deedy-gpt-5.6-sol-max-final",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs/4efadec329eb35343006fe8b233a7bb1cd42d5ba856d8e8ca9cf2ff9147d7c74.md",
+  "bytes": 6534,
+  "sha256": "4efadec329eb35343006fe8b233a7bb1cd42d5ba856d8e8ca9cf2ff9147d7c74",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 2597,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 95.4,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2277,
+        "output_tokens": 723,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 12.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "analytic circumcircle equation of AKL with explicit polynomial certificate",
+    "upper_bound_mechanism": "power/algebra: OM^2-ON^2 as linear relation in circle coefficients",
+    "wrong_answer_stated": false,
+    "notes": "Full analytic proof: all three angle conditions explicitly translated into sine-law relations (1)-(13); circumcircle of AKL computed in Cartesian coordinates; explicit certificate (22) with fully displayed multipliers reduces target to the two quadratics and Pythagorean identities; finish OM^2-ON^2=0 carried out with signs/positivity handled."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "4efadec329eb35343006fe8b233a7bb1cd42d5ba856d8e8ca9cf2ff9147d7c74",
+  "original_bytes": 6534,
+  "input_anonymized": false
+}

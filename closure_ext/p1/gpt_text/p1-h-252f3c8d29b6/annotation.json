@@ -1,0 +1,44 @@
+{
+  "id": "p1-h-252f3c8d29b6",
+  "problem": "1",
+  "sha256": "252f3c8d29b64dd963743aa6c5d058f24a0ff2b69af39e575ee820f053944374",
+  "path": "checkpoint_inputs_ext/252f3c8d29b64dd963743aa6c5d058f24a0ff2b69af39e575ee820f053944374.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "35c91371",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-35c91371-v1"
+  ],
+  "bytes": 5344,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 16790,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 904,
+        "reasoning_output_tokens": 775
+      },
+      "sec": 29.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic monovariant; flawed product argument for survival",
+    "upper_bound_mechanism": "prime-valuation gcd invariant",
+    "wrong_answer_stated": true,
+    "notes": "Termination is valid, but the proof that the board never becomes all 1s relies on the false claim that an integer product starting above 1 and never increasing cannot reach 1. The needed move-by-move survival argument is not given there. The remarks also incorrectly identify the valuation gcd with a minimum."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2021,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0021109999999999996,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 392,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 2199,
+    "webSearchRequests": 0,
+    "costUSD": 0.032668,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 85,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 2199,
+   "cache_read_input_tokens": 1736,
+   "output_tokens": 392,
+   "output_tokens_details": {
+    "thinking_tokens": 85
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 2199,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 392,
+     "cache_read_input_tokens": 1736,
+     "cache_creation_input_tokens": 2199,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 2199
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 5994,
+  "is_error": false,
+  "elapsed_seconds": 6.6,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"affected_statement\":\"L6.2\",\"objection_correct\":\"yes\",\"established_elsewhere\":\"no\",\"elsewhere_quote\":null,\"status_as_written\":\"not_established\",\"repair_distance\":\"lemma\",\"explanation\":\"The write-up is an exploratory tracking file: it states 'Full proof (Not yet complete.)' and the quoted passage is explicitly labelled 'Conjecture', supported only by computed examples (a1=15, 35, etc.). Nowhere does it argue, for all terms, that a term divisible by a large prime is dominated by a smaller admissible integer with the same small-prime support, nor bound the relevant primes by a_1 or a_1^2. The 'Current best' section even admits 'Need a rigorous proof that (1) only finitely many primes can ever be forced'. So L6.2 is absent; supplying it requires a whole lemma, not a local edit.\",\"wrong_answer_stated\":false}"
+   }
+  ]
+ }
+}

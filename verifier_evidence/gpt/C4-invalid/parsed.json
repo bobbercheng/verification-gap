@@ -1,0 +1,18 @@
+{
+ "claim_id": "C4",
+ "condition": "invalid",
+ "verifier": "gpt",
+ "model": "gpt-5.6-sol",
+ "status": 200,
+ "parsed": {
+  "claim_true": true,
+  "claim_reason": "Each subset sum is the sum of distinct powers of two, hence has a unique binary representation. Therefore different subsets give different sums.",
+  "witness_valid": false,
+  "witness_reason": "For n=2 the available parts are 1, 2, and 4. The purported subset {2, 3} is invalid because there is no part of length 3."
+ },
+ "expected": {
+  "claim_true": true,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 6.9
+}

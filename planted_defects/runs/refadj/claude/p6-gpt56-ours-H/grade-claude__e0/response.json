@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3442,
+    "outputTokens": 14,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0035120000000000004,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1573,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3910,
+    "webSearchRequests": 0,
+    "costUSD": 0.07930300000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1169,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3910,
+   "cache_read_input_tokens": 1736,
+   "output_tokens": 1573,
+   "output_tokens_details": {
+    "thinking_tokens": 1169
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3910,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1573,
+     "cache_read_input_tokens": 1736,
+     "cache_creation_input_tokens": 3910,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3910
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 18925,
+  "is_error": false,
+  "elapsed_seconds": 19.5,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L6.2\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"yes\",\n  \"elsewhere_quote\": \"**Lemma.** For every sequence term \\\\(x\\\\), the set \\\\(\\\\sigma(x)\\\\) is good.\",\n  \"status_as_written\": \"false_display\",\n  \"repair_distance\": \"symbol\",\n  \"explanation\": \"Check: a_1=15, a_2=18 (16,17 coprime to 15), a_3=20 (gcd(20,15)=5, gcd(20,18)=2), and 22 is coprime to 15 so it is not a term. So the listed \\\"15,18,22\\\" is wrong; the objection is correct, and the very next clause (\\\"21 is skipped because gcd(21,20)=1\\\") presupposes 20, confirming a misprint. The line sits in the non-proof \\\"Hypotheses tested\\\" discussion; the large-prime-erasure lemma (L6.2) is proved in Section 2 by induction on terms via m=Rp^k with P(m)=sigma(x), m<x, independently of this example. Replacing \\\"22\\\" by \\\"20\\\" fixes it.\",\n  \"wrong_answer_stated\": false\n}"
+   }
+  ]
+ }
+}

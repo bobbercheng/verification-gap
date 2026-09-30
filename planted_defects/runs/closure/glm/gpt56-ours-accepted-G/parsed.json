@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "gpt56-ours-accepted-G",
+ "base_id": "gpt56-ours-accepted",
+ "type": "G",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 164.7,
+  "input_tokens": 3779,
+  "output_tokens": 13624,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 1,
+  "lower_bound_mechanism": "rank-pair pairing/tree argument (refinement lemma lower bound)",
+  "upper_bound_mechanism": "subset-sum pigeonhole + overlay cancellation (sketched)",
+  "wrong_answer_stated": false,
+  "notes": "Answer and reduction (Section 1 induction) fully proved. Lower bound complete for all n: 1:2:...:2^n division, Γ=δ, and a rigorous tree-on-rank-pairs argument giving D≥Γ. Upper bound: pigeonhole rigorous, but the B≠∅ overlay construction's cut-count/pairing verification is explicitly 'details omitted', so only sketched."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 3779,
+    "output_tokens": 13624,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 164.7,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 1,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

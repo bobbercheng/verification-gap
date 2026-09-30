@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p5-gpt56-7324ef70-v1-G",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "G",
+ "problem": "5",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 28.6,
+  "input_tokens": 2,
+  "output_tokens": 2332,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 3241,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2919,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003019,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2332,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 3241,
+    "webSearchRequests": 0,
+    "costUSD": 0.091861,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1990,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.5",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Section 3's telescoping argument (and hence the whole necessity half, including the fixed-point case) depends entirely on (7). The text derives (7) nowhere: it says 'squaring... rearranging... (standard; details omitted)'. No other passage supplies the computation. The estimate is in fact true and short: with y=t+s, the AM-GM branch at x=f(t) gives (t+2c+y)^2-4(t+c)(y+b) = s^2+4(c-b)(t+c) >= 0, so d(y)-d(t) <= (y-t)^2/(4t), and swapping t,y gives the other side. That two-line computation plus the explicit swap is the missing sentence; since it is omitted, the estimate is asserted, not established."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

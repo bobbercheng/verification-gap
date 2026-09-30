@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-5",
+ "cli": "claude",
+ "cli_model_usage": {
+  "claude-haiku-4-5-20251001": {
+   "inputTokens": 2792,
+   "outputTokens": 19,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0028870000000000002,
+   "contextWindow": 200000,
+   "maxOutputTokens": 32000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-4-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 2,
+   "outputTokens": 474,
+   "cacheReadInputTokens": 4375,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0140475,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 213,
+   "canonicalModel": "claude-opus-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 4375,
+  "output_tokens": 474,
+  "output_tokens_details": {
+   "thinking_tokens": 213
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "not_available",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 474,
+    "cache_read_input_tokens": 4375,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "num_turns": 1,
+ "duration_ms": 7534,
+ "is_error": false,
+ "elapsed_seconds": 8.2,
+ "content": [
+  {
+   "type": "text",
+   "text": "{\"answer\": 2, \"reduction\": 2, \"lower_bound\": 2, \"upper_bound\": 2, \"lower_bound_mechanism\": \"product monovariant with tie-break on count of nonunits; each move leaves an output >1\", \"upper_bound_mechanism\": \"invariance of gcd of p-adic valuations via gcd(a,b-a)=gcd(a,b)\", \"wrong_answer_stated\": false, \"notes\": \"Complete: explicit M = prod p^{gcd v_p(x_i)}; move valuation description with both gcd=1 and gcd>1 cases; termination via nonincreasing product then decreasing count, plus 'never all ones'; invariance proved with zero/equal-valuation conventions stated. Numerical check explicitly excluded from proof.\"}"
+  }
+ ]
+}

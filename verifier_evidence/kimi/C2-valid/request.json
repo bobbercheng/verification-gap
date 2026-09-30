@@ -1,0 +1,8 @@
+{
+ "system": "You are a careful mathematical verifier. You will be shown a claim and possibly a proposed counterexample (a witness). Assess them separately and independently. Do not defer to the confidence of the proposer. Do not retrieve or recall published solutions; reason from first principles. Return ONLY a JSON object with exactly these fields: {\"claim_true\": true|false, \"claim_reason\": \"<=60 words\", \"witness_valid\": true|false|null, \"witness_reason\": \"<=60 words or null\"}. witness_valid is null when no witness is given; otherwise it is true only if the witness satisfies every hypothesis of the claim and violates its conclusion.",
+ "user": "## Claim\nEvery family of nonempty finite sets that is pairwise intersecting (any two members share an element) has only finitely many inclusion-minimal finite transversals (finite sets meeting every member of the family).\n\n## Proposed counterexample\nTake distinct symbols x_1, x_2, ... and y_1, y_2, ..., and let F_n = {x_1, ..., x_n, y_n} for n >= 1. Any two members share x_1, so the family is pairwise intersecting. For each k >= 1, T_k = {y_1, ..., y_{k-1}, x_k} meets F_n through y_n when n < k and through x_k when n >= k, so it is a finite transversal; removing y_i misses F_i and removing x_k misses F_k, so it is inclusion-minimal. The T_k are pairwise distinct, so there are infinitely many.\n\nAssess (1) whether this witness is a valid counterexample to the claim and (2) whether the claim is true.",
+ "model": "kimi-k3",
+ "condition": "valid",
+ "claim_id": "C2",
+ "claim_truth": false
+}

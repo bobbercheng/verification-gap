@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "p5-deepseek-v4-pro-main-t038",
+ "tag": "upper_bound",
+ "text_sha256": "98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "written_but_invalid",
+  "quote": "* (ii) there is $c>0$ such that $V \\subseteq \\{0, c\\}$ with both values attainable.",
+  "witness": "NON-SEQUITUR. What §3 establishes is only: V contains at most one POSITIVE number (the rational/irrational-ratio argument compares two positive values c_1 > c_2 > 0). The text nowhere proves g(x) = f(x) - x >= 0 for all x (the standard argument, that f^n(t) = t + n d(t) must stay positive so d(t) >= 0, is absent; §1 only gives g(x) > -x). Hence from 'at most one positive value' one cannot conclude V ⊆ {0} or V ⊆ {0,c}: a priori V could contain negative values, or one positive value together with negative values, and then the parenthetical 'every x>0 belongs to S_0 ∪ S_c' fails. All later steps (the level-set inequalities (10)-(12), Lemma 1's use of 'b = g(z) ∈ {0,c}', and the covering argument) presuppose this unjustified dichotomy.",
+  "load_bearing": "The whole necessity argument (§4-§7) is a case analysis over the alleged two-element value set {0, c}; if negative values of g are not excluded, neither the exclusion of mixed fixed/non-fixed points nor the conclusion g ≡ c is established for all x."
+ },
+ "started_utc": "2026-09-06 05:45:19 UTC"
+}

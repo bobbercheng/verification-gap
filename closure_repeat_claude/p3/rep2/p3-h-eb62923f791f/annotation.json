@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-eb62923f791f",
+  "problem": "3",
+  "sha256": "eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6",
+  "path": "checkpoint_inputs/eb62923f791fe62c514ad4fa73456807d4d27da1e05893c399e60c7508b9d0f6.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round1",
+  "turn": 8,
+  "record_ids": [
+    "kimi-k3-round1-t008"
+  ],
+  "bytes": 2684,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2634,
+        "output_tokens": 820,
+        "output_tokens_details": {
+          "thinking_tokens": 550
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 820,
+            "cache_read_input_tokens": 2634,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none (geometric 1:2:...:2^n division stated, no argument)",
+    "upper_bound_mechanism": "parity/pairing reduction + halve/cancel operations sketch; verified only numerically for n<=3",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form given explicitly as a conjecture, verified by grid computation for n=1,2,3 only. Reduction to alternating sum asserted 'proved' plus brute force, not written out. Both bounds explicitly listed as remaining work; upper bound has a partial mechanism sketch (equal-pair cancellation, halve/cancel ops) but no pigeonhole or general argument."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

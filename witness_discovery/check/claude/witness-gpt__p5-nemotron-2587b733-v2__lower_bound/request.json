@@ -1,0 +1,19 @@
+{
+ "checker": "claude",
+ "transport": "claude-cli",
+ "model": "claude-opus-5",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "lower_bound",
+ "text_sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "written_but_invalid",
+  "quote": "For $f(x) = x + c$ ($c \\ge 0$) the chain becomes\n$$\n\\sqrt{\\frac{x^2 + (y+c)^2}{2}} \\;\\ge\\; \\frac{x + y + 2c}{2} \\;\\ge\\; \\sqrt{x(y+c)}.\n$$",
+  "witness": "Counterexample to this substitution: take x=y=c=1. Then f(x)+y=(1+1)+1=3, so the actual middle term is 3/2, not the quoted value (1+1+2)/2=2. Indeed the quoted left inequality would assert sqrt(5/2) >= 2, which is false.",
+  "load_bearing": "This displayed substitution is the entire verification of the proposed family. Because it uses an extra c in the middle term, the subsequent claim that both inequalities reduce to the same square does not verify the original inequalities."
+ },
+ "started_utc": "2026-09-06 04:48:41 UTC"
+}

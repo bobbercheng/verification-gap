@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted-G",
+ "base_id": "gpt56-ours-accepted",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.6,
+  "input_tokens": 2,
+  "output_tokens": 726,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 5887,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4898,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004992999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 726,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 5887,
+    "webSearchRequests": 0,
+    "costUSD": 0.07785149999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 383,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "L3.2 requires an explicit Xiang reply with at most n cuts realizing G <= Sigma(S)-Sigma(T). The write-up's only construction for the general case B != empty is the overlay, whose realization and the crucial count 'at most q-1 cuts in total' are expressly waived as '(standard; details omitted)'. Under the no-credit-for-asserted-claims rule this is not established; only the degenerate B = empty case is written out (q-|A| bisections), which does not cover general attaining pairs, and Section 3 merely invokes the lemma. Supplying the ordering, truncation at s_B and the |A|+|B|-1 overlay-cut count is a self-contained lemma-sized addition.",
+  "repair_note": null
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

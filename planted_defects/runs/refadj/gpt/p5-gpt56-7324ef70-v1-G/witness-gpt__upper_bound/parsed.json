@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-G",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "G",
+ "problem": "5",
+ "objection_key": "witness-gpt__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 30.6,
+  "input_tokens": 17371,
+  "output_tokens": 1188,
+  "reasoning_output_tokens": 1034,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L5.5",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Estimate (7) is the decisive step proving that d is constant, including across fixed and non-fixed points, but its derivation is explicitly omitted. It can be repaired locally: the squared right-hand inequality gives (y-t)^2 >= 4(t+c)(b-c), and swapping t,y gives (y-t)^2 >= 4(y+b)(c-b); these imply (7). Without those lines, the write-up merely asserts the required local estimate, and no alternative fixed-point argument appears elsewhere."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "upper_bound"
+}

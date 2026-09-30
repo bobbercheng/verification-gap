@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-f77b2d46f736",
+  "problem": "6",
+  "sha256": "f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39",
+  "path": "checkpoint_inputs/f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "12402695",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-12402695-v1"
+  ],
+  "bytes": 11926,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3889,
+        "output_tokens": 8100,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 93.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "First-appearance minimality contradiction (sketched, unexecuted)",
+    "upper_bound_mechanism": "Residue counting mod L = lcm(m_H), T = |R| (tail only, conditional)",
+    "wrong_answer_stated": true,
+    "notes": "Reduction (hitting-set equivalence, multiple of m_H) is correctly written, including the non-minimality caveat. Finiteness of primes is explicitly conjectured; the minimality-contradiction sketch is named but not executed. Periodicity assembly is only eventual (Lemma 4) and conditional; backward extension to n=1 is open. Table row a_1=105 (T=19, L=69) is numerically wrong (actual L=210)."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

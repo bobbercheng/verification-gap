@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-25c5ce51b7e0",
+  "problem": "4",
+  "sha256": "25c5ce51b7e0a913a5bb986febfeb1255711ab9824ffff55f6085b23fd398f89",
+  "path": "checkpoint_inputs_ext/25c5ce51b7e0a913a5bb986febfeb1255711ab9824ffff55f6085b23fd398f89.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-main",
+  "turn": 20,
+  "record_ids": [
+    "p4-kimi-k3-main-t020"
+  ],
+  "bytes": 12381,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 8354,
+        "output_tokens": 1323,
+        "output_tokens_details": {
+          "thinking_tokens": 1011
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1323,
+            "cache_read_input_tokens": 8354,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 16.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "round-up cut alpha=d(u) makes both halves contain a multiple of theta (uses 180=n*theta), then halving lemma",
+    "upper_bound_mechanism": "invariant 'no angle is an integer multiple of theta' from equilateral triangle; three exhaustive cases show one half keeps it",
+    "wrong_answer_stated": false,
+    "notes": "Answer correct and explicit. Lemma 1 (halving) fully inducted with both pieces handled. Theorem 1 covers every initial triangle, all discards, and n=2 via Claim 2. Theorem 2's case analysis is complete and uses 180 not a multiple of theta exactly where needed. Only blemish: Lemma 0's angle chase/IVT existence is deferred to an external file, though precisely stated."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

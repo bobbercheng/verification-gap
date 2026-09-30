@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.3,
+  "input_tokens": 2,
+  "output_tokens": 594,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 11474,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9199,
+    "outputTokens": 22,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009309000000000001,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 594,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 11474,
+    "webSearchRequests": 0,
+    "costUSD": 0.13027049999999998,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 221,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote appears verbatim and, in context, is the text's own admission that the lower-bound claim for its construction (n pieces of 2d, one of d) is still to be proved. The text establishes only the parity/cancellation invariance f=(n+1)d under the restricted hypothesis that Xiang splits each 2d piece into exactly two parts; other allocations are handled only by two n=2 numerical examples (\"split one big into 3\", \"uses only 1 cut\") and the vague remark \"We argued they give Liu at least as much... Need to prove best response for Xiang... is indeed to split each big once.\" No all-n argument covering arbitrary distributions of the n cuts appears anywhere. Moreover the targeted value (n+1)/(2n+1) is not the correct c_n = 2^n/(2^{n+1}-1) (n=2: 0.6 vs 4/7), so the construction itself is wrong. The lower-bound obligation is unmet."
+ }
+}

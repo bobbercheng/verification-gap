@@ -1,0 +1,73 @@
+{
+  "id": "p5-h-d3725770ef39",
+  "problem": "5",
+  "sha256": "6542041052c426dc1011edf76fe6753a19b6e9158af2d242292c102e58f9a957",
+  "path": "checkpoint_inputs_ext/d3725770ef392dcf1c4e6b988e60b5294f18df251b6364cf615e6b1b2c6f3459.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 25,
+  "record_ids": [
+    "p5-deepseek-v4-pro-main-t025"
+  ],
+  "bytes": 11440,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 9109,
+        "output_tokens": 905,
+        "output_tokens_details": {
+          "thinking_tokens": 647
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 905,
+            "cache_read_input_tokens": 9109,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Answer f(x)=x+c, c>=0 stated correctly. Structural identity f(f(y))=2f(y)-y rigorously derived via x=f(y), plus g(x+g(x))=g(x) and correct A+B, A-B identities. No verification that f(x)=x+c satisfies either inequality (only numerical search claimed). Necessity unfinished: sections 5-7 explicitly stall ('need a different choice', 'compute with sympy later'); g never shown constant; fixed-point case untouched."
+  },
+  "S": 0,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root",
+  "original_sha256": "d3725770ef392dcf1c4e6b988e60b5294f18df251b6364cf615e6b1b2c6f3459",
+  "original_bytes": 11496,
+  "input_anonymized": true
+}

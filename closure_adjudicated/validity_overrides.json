@@ -1,0 +1,27 @@
+{
+ "_criterion": "A mechanism field scored 2 by the annotation instrument is set to 0 in the validity layer when an independent record shows the written argument for that mechanism is invalid as written: an explicit counterexample to a lemma it relies on, or a recorded fatal invalid step in that mechanism by the public verifier or our gate. The criterion is applied to every retained text carrying the same defect, not only to final files. S_written (instrument) and S_valid (after these entries) are both released; the paper's trajectory counts use S_valid and report S_written alongside.",
+ "6:fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de": {
+  "lower": 0,
+  "record_ids": [
+   "p6-deedy-gpt-5.6-sol-final"
+  ],
+  "reason": "Finiteness rests on the lemma 'every pairwise-intersecting family of finite sets has finitely many minimal finite transversals' (here proved by a tree/Konig argument). The lemma is false.",
+  "evidence": "Counterexample: F_n = {x_1,...,x_n, y_n} (n>=1) is pairwise intersecting (all contain x_1); T_k = {y_1,...,y_{k-1}, x_k} is an inclusion-minimal finite transversal for every k, so there are infinitely many. Public verifier grade 1/7 records a machine-verified counterexample of the same kind (deedy/imo-2026 grades/problem-06.json)."
+ },
+ "6:6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3": {
+  "lower": 0,
+  "record_ids": [
+   "p6-gpt-5.6-sol-main-t009"
+  ],
+  "reason": "Same false finite-transversal lemma as the final file (earlier checkpoint of the same lineage; different purported proof by induction). Applying the criterion only to the final file would manufacture a 2->1 regression.",
+  "evidence": "Same false lemma in the released text of closure corpus record p6-gpt-5.6-sol-main-t009 (sha256 6990dbe90da7..., bundled as checkpoint_inputs/6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3.md): its 'Lemma' asserts that for every pairwise-intersecting family F of nonempty finite sets there are finitely many finite sets B_1,...,B_s such that a finite set is a transversal of F iff it contains some B_j, and proves it by induction on |C|. Same counterexample as for the final file: F_n = {x_1,...,x_n, y_n} (n>=1) is pairwise intersecting (all contain x_1) and T_k = {y_1,...,y_{k-1}, x_k} is an inclusion-minimal finite transversal for every k; each B_j would itself be a transversal, so the infinitely many distinct minimal T_k cannot all contain one of s sets. The final file of the same lineage (sibling entry, record p6-deedy-gpt-5.6-sol-final) rests on the same lemma with a Konig-tree proof and carries the public verifier's grade 1/7 with a machine-verified counterexample of the same kind (deedy/imo-2026 grades/problem-06.json, released copy replication_ext/public_grades/problem-06.json)."
+ },
+ "6:bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757": {
+  "lower": 0,
+  "record_ids": [
+   "p6-kimi-k3-round2-t007"
+  ],
+  "reason": "Finiteness proved via a self-dual-clutter theorem established for finite minimal transversals but applied to a Zorn-extracted minimal transversal that is infinite in the needed case; the step is invalid as written.",
+  "evidence": "Public verifier first-pass grade 3/7 recording this as the fatal defect; the harness's own critique to the next session quotes it ('self-duality was only established for FINITE minimal transversals'); the lineage later replaced the step by a compactness theorem (main session, S=2, re-grade 7/7)."
+ }
+}

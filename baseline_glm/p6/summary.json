@@ -1,0 +1,1619 @@
+{
+  "annotator": "glm-5.3",
+  "items": [
+    {
+      "id": "p6-h-1a0f167db7d0",
+      "problem": "6",
+      "sha256": "1a0f167db7d0a3e445df7c089e6f962cfb02954d37e889f26ec2119aeb9f90fb",
+      "path": "checkpoint_inputs/1a0f167db7d0a3e445df7c089e6f962cfb02954d37e889f26ec2119aeb9f90fb.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 5,
+      "record_ids": [
+        "p6-claude-fable-5-main-t005",
+        "p6-deedy-claude-fable-5-final"
+      ],
+      "bytes": 13571,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5582,
+            "output_tokens": 6176,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 63.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Complete rigorous proof. Lemmas 1-3 correctly extract self-consistency and the greedy 'smaller coprime witness'. Lemma 4 gives S as union of multiples of minimal transversals; Lemma 6's cheap-witness bound and Lemma 7's geometric descent (d < (a1/q)d, impossible) prove finiteness; Step 5's block/bijection argument yields a_{n+T}=a_n+M from n=1. All details check out."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-1a17db061508",
+      "problem": "6",
+      "sha256": "1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897",
+      "path": "checkpoint_inputs/1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-deepseek-v4-pro-final",
+        "p6-deepseek-v4-pro-main-t053"
+      ],
+      "bytes": 4597,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1737,
+            "output_tokens": 5603,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 89.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "The key lemma (finiteness and stabilization of minimal transversals) is only asserted with hand-waving; step 7's periodicity is unresolved; the 'Full proof' section is explicitly left to be written.",
+        "notes": "Correct framing: sequence enumerates 'good' numbers, good = containing a minimal transversal, finite transversal family yields periodic structure; a2=a1+p and P(a1)∩P(a2)={p} are right. But the crux (only early primes matter) is unproven, the 'first three terms' claim conflicts with its own argument, and the all-divisible-by-p case is asserted."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-fc5dfc45e082",
+      "problem": "6",
+      "sha256": "fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de",
+      "path": "checkpoint_inputs/fc5dfc45e082cb7098a6eacd00e75ec55f5cc92126933e3e344e7fc02a6877de.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-gpt-5.6-sol-final"
+      ],
+      "bytes": 6599,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 2332,
+            "output_tokens": 24000,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 267.7,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2332,
+            "output_tokens": 97,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 2.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Finite-transversal lemma correctly proven via pruned search tree and König's lemma; application to prime-divisor sets, characterization of S, and counting argument giving a_{n+T}=a_n+L are all complete and rigorous."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-5effa7f8941a",
+      "problem": "6",
+      "sha256": "5effa7f8941a24e7e3fb4e6a5d9c0a4a0df080fc87b3bec389a596379a2cd372",
+      "path": "checkpoint_inputs/5effa7f8941a24e7e3fb4e6a5d9c0a4a0df080fc87b3bec389a596379a2cd372.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-gpt-5.6-sol-max-final",
+        "p6-gpt-5.6-sol-max-main-t006"
+      ],
+      "bytes": 3406,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1408,
+            "output_tokens": 3237,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 40.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 3,
+        "complete": false,
+        "main_gap": "The crux—proving finite stabilization, i.e., that some S_N is pairwise non-coprime (equivalently, only finitely many primes ever appear)—is only conjectured, not proved. The all-n periodicity indexing is also left implicit.",
+        "notes": "Correct and useful pieces: bounded gaps via multiples of a_1; correct sufficient criterion for stabilization; periodicity of a stabilized S_N and sketch of the translation argument; verified worked example (a_1=15, T=8, L=30). But the central existence lemma is absent ('a likely route'), so the main content of the problem is unproved."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-89ab40b12a7e",
+      "problem": "6",
+      "sha256": "89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998",
+      "path": "checkpoint_inputs/89ab40b12a7e881c4bdc97e0be88857d1ef30b87d5ded8382ba9aebc36a09998.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-gpt-5.6-sol-pro-final"
+      ],
+      "bytes": 9717,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3246,
+            "output_tokens": 14265,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 190.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Greedy-scan reformulation, support-only acceptance, and self-duality are correctly established. Sunflower lemma with self-duality proves finitely many bounded-size minimal supports; weight descent confines all minimal supports to a finite prime set P. Periodicity modulo L=product of P and the counting argument over length-L intervals correctly yield a_{n+T}=a_n+L for all n."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-7834430cd6c4",
+      "problem": "6",
+      "sha256": "7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132",
+      "path": "checkpoint_inputs/7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-gpt-5.6-sol-xhigh-final",
+        "p6-gpt-5.6-sol-xhigh-main-t006"
+      ],
+      "bytes": 8618,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3098,
+            "output_tokens": 13543,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 126.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Complete and rigorous. Scanning property, blocker equality G=F, self-blocking/intersecting structure, infinite descent bounding each relevant prime's co-core by m, finiteness of U via disjoint witness, and full characterization of terms by minimal supports give periodicity mod product of U. All steps (descent inequality, core counting, final counting of terms per block) check out."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-158954bdd49b",
+      "problem": "6",
+      "sha256": "158954bdd49bff9ebe0d117062217554da62563e0b879d04eb8d09d07eb2c785",
+      "path": "checkpoint_inputs/158954bdd49bff9ebe0d117062217554da62563e0b879d04eb8d09d07eb2c785.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-grok-4.5-final",
+        "p6-grok-4.5-main-t009"
+      ],
+      "bytes": 3023,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1274,
+            "output_tokens": 596,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 9.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 1,
+        "complete": false,
+        "main_gap": "No proof is present; the 'Full proof' section is empty. Content is only numerical experiments, heuristics, and conjectures about eventual periodicity.",
+        "notes": "The write-up is a research tracking file, not a proof attempt. The key observation given merely restates the problem's defining condition, and all structural claims (finitely many core primes, stabilization of admissible classes) are unproven conjectures explicitly left open."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-535f08f8f805",
+      "problem": "6",
+      "sha256": "535f08f8f805554c7558dcc8d63875bb10abf5214967d9f9c022e536194db24f",
+      "path": "checkpoint_inputs/535f08f8f805554c7558dcc8d63875bb10abf5214967d9f9c022e536194db24f.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-kimi-k3-final"
+      ],
+      "bytes": 17140,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 6434,
+            "output_tokens": 13942,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 194.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Complete and correct. Step 1 (greedy enumeration of S∞), Step 2 (periodicity from finiteness of minimal elements), and Step 3 (antichain, intersecting, finite self-duality, killing properties K/K′) are all sound. Step 4a compactness (descent via K′, pigeonhole on π≤a1, antichain contradiction) and Step 4b peeling (index argument, Case A via finite self-duality) correctly yield finiteness of C. Edge cases and loop invariants check out."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-1ff4d9dbde77",
+      "problem": "6",
+      "sha256": "1ff4d9dbde777e1bc2c18067f4cff7e52b1f46ce1a6fd1a4cfefcca38e488ed7",
+      "path": "checkpoint_inputs/1ff4d9dbde777e1bc2c18067f4cff7e52b1f46ce1a6fd1a4cfefcca38e488ed7.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p6-deedy-muse-spark-1.1-final",
+        "p6-muse-spark-1.1-main-t015"
+      ],
+      "bytes": 17527,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 6441,
+            "output_tokens": 13607,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 202.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 4,
+        "complete": false,
+        "main_gap": "Stabilization of M_n (finiteness of the prime ground, Section 5) is not proven: the induction on τ≤|S_1| is only sketched with no formulated hypothesis, and the author concedes 'Given time, we accept finiteness of final ground as proved.'",
+        "notes": "Sections 1–4 and 6 are essentially correct and rigorous: blocker framework, Lemma A, pure-multiple mechanism, fixed-ground termination via up-set growth, and the L-periodicity finish (one small directional wobble in §6, repairable). Section 5 is exploratory working notes with abandoned attempts; the central stabilization lemma is unproven, and everything depends on it."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-b65c27609918",
+      "problem": "6",
+      "sha256": "b65c27609918a13c888b0b0d755818ac6e41a5b57533860519a9fed21333689c",
+      "path": "checkpoint_inputs/b65c27609918a13c888b0b0d755818ac6e41a5b57533860519a9fed21333689c.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "7030bbc7",
+      "turn": 1,
+      "record_ids": [
+        "p6-glm52-7030bbc7-v1"
+      ],
+      "bytes": 2225,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1192,
+            "output_tokens": 3012,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 32.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "Step 1 (stabilization of the minimal prime-set family / finiteness of essential primes), the crux, is entirely unproven; Steps 2 and 3 are only sketched ideas, explicitly left as open issues.",
+        "notes": "Correct and useful reduction: validity depends only on radicals, phrased as transversals of the minimal family; sound overall strategy. But no part is actually proved — the write-up itself lists all three steps as 'must still be proved.' The verified example (a1=15, T=8, L=30) is computation, earning no credit."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-8184613190d7",
+      "problem": "6",
+      "sha256": "8184613190d78c40e9e952f3d2840443b66a20d356fb6052c81cbd433646c639",
+      "path": "checkpoint_inputs/8184613190d78c40e9e952f3d2840443b66a20d356fb6052c81cbd433646c639.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "7030bbc7",
+      "turn": 2,
+      "record_ids": [
+        "p6-glm52-7030bbc7-v2"
+      ],
+      "bytes": 7558,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3226,
+            "output_tokens": 6815,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 72.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 4,
+        "complete": false,
+        "main_gap": "No proof that the antichain stabilizes (only finitely many essential primes). The write-up itself flags this as the open crux; conjectures and computations substitute for the missing termination argument.",
+        "notes": "Steps 1-5 and 7 are rigorous and correct: clean reduction via blockers to the valid set, proof that the sequence enumerates V, growth bound, and cofactor entry lemma. Step 6's equivalence is argued plausibly. But the heart of the problem—proving stabilization—is entirely absent, acknowledged as open, with only numerical evidence."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-f7e426b7ffeb",
+      "problem": "6",
+      "sha256": "f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da",
+      "path": "checkpoint_inputs/f7e426b7ffebf7d25ee95d493f8a4682706aefeb4eec9e1b8d0bb0eaaf6251da.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "7030bbc7",
+      "turn": 3,
+      "record_ids": [
+        "p6-glm52-7030bbc7-v3"
+      ],
+      "bytes": 11701,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 4951,
+            "output_tokens": 24000,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 262.9,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4951,
+            "output_tokens": 2880,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 42.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Steps 1-4 (valid-set reduction, enumeration of V, periodicity) and Steps 6-8 are correctly argued. The crux Step 9 (Cofactor Bound) is fully proved: Lemmas A, B, C are each correct, and the contradiction construction (m = Dc with P(m) = tau*, a_1 < m <= a_{j-1}, forcing B_s nonempty then empty) is sound, including both cases D <= a_1 and D > a_1. Computational checks are supplementary, not load-bearing."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-a292544be62e",
+      "problem": "6",
+      "sha256": "a292544be62ee35c5a442eb3df7d2d2b1cbae0314acf9ab88d786927e27a16ec",
+      "path": "checkpoint_inputs/a292544be62ee35c5a442eb3df7d2d2b1cbae0314acf9ab88d786927e27a16ec.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 5,
+      "record_ids": [
+        "p6-gpt-5.6-sol-main-t005"
+      ],
+      "bytes": 2189,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1050,
+            "output_tokens": 1815,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 31.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "Periodicity of S — the core of the problem — is entirely unproved; the write-up itself states the needed lemma is 'still under development'.",
+        "notes": "The S-enumeration lemma is correctly proven: each term lies in S, and any x between consecutive terms fails some gcd condition by minimality. This is a genuine but small reduction. All hard work (finiteness of relevant primes, S a finite union of residue classes, alignment at a_1) is absent; computations and conjectures earn no credit."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-6990dbe90da7",
+      "problem": "6",
+      "sha256": "6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3",
+      "path": "checkpoint_inputs/6990dbe90da76622b26f9510d0b8163b19fe175412bcdc7e018e9ca7b6bef1b3.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 9,
+      "record_ids": [
+        "p6-gpt-5.6-sol-main-t009"
+      ],
+      "bytes": 6687,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 599,
+          "stop": null,
+          "usage": null,
+          "sec": 2400.2,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2447,
+            "output_tokens": 175,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 3.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Correct, complete proof. Lemma (finite characterization of transversals of a pairwise-intersecting family) is proven by a valid induction; applying it to prime-divisor sets shows the admissible integers form a finite union of divisor sets, so membership is periodic mod lcm, and the sequence enumerates this set increasingly, giving a_{n+T}=a_n+L."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-064a2411d75d",
+      "problem": "6",
+      "sha256": "064a2411d75d373c2abb09e1f26ab04dd077a7e37af5ed43ec7aa01a00ecf54e",
+      "path": "checkpoint_inputs/064a2411d75d373c2abb09e1f26ab04dd077a7e37af5ed43ec7aa01a00ecf54e.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 1,
+      "record_ids": [
+        "p6-gpt-5.6-sol-max-main-t001"
+      ],
+      "bytes": 1606,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 866,
+            "output_tokens": 6920,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 75.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "No proof at all: the file itself says 'unsolved' and 'not yet complete'. The crux — proving the admissible set eventually stabilizes to a pairwise non-coprime set — is entirely absent.",
+        "notes": "Contains correct, relevant observations: bounded gaps (a_{n+1}-a_n ≤ a_1 via multiples of a_1), support-set reformulation, and a correctly identified sufficient endpoint (pairwise non-coprime stabilization gives periodicity). All are one-line sketches; the main argument is missing."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-857d6799ef24",
+      "problem": "6",
+      "sha256": "857d6799ef248f817f132869630f965518d1b9faa60a9eb4c19c730d810717b8",
+      "path": "checkpoint_inputs/857d6799ef248f817f132869630f965518d1b9faa60a9eb4c19c730d810717b8.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 1,
+      "record_ids": [
+        "p6-gpt-5.6-sol-pro-main-t001"
+      ],
+      "bytes": 2174,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 935,
+            "output_tokens": 3823,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 57.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 1,
+        "complete": false,
+        "main_gap": "The core claim—eventual periodicity of the accepted/rejected indicator—is explicitly left unproven; only elementary reformulations (greedy scan, pairwise noncoprimality, static maximality, finite prime types) and a sketched lifting argument are given.",
+        "notes": "A research log, not a proof: 'A complete proof has not yet been obtained.' The observations listed are correct but immediate (greedy scan equivalence, shared prime with a1, maximality characterization). The sufficiency lifting is only 'should yield.' No substantive argument toward the actual crux."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-cc00e6162436",
+      "problem": "6",
+      "sha256": "cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a",
+      "path": "checkpoint_inputs/cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 6,
+      "record_ids": [
+        "p6-gpt-5.6-sol-pro-main-t006"
+      ],
+      "bytes": 9581,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3205,
+            "output_tokens": 19828,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 193.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Complete, correct proof. Greedy-scan reinterpretation, support-determinacy, self-dual family F, sunflower lemma giving finitely many minimal supports of bounded size, weight descent bounding all primes in minimal supports, then periodicity mod L with residue-class counting. Minor implicit steps (converse of (2), w(E\\{p})<w(E)) are immediate one-liners."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-6a21f32effe8",
+      "problem": "6",
+      "sha256": "6a21f32effe8a8488a14d581dfa2f3ee816e7cfa2153697813dbab84e92964f2",
+      "path": "checkpoint_inputs/6a21f32effe8a8488a14d581dfa2f3ee816e7cfa2153697813dbab84e92964f2.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 4,
+      "record_ids": [
+        "p6-gpt-5.6-sol-xhigh-main-t004"
+      ],
+      "bytes": 2351,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1009,
+            "output_tokens": 3114,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 43.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "The core lemma (finiteness of the relevant primes) is only asserted via vague 'arithmetic descent' and 'disjoint witness' hints; the write-up ends with details 'being written below' and no step is actually proved.",
+        "notes": "Contains a correct reformulation (greedy scan/filter) and a broadly correct conditional final step (finite relevant primes imply periodic enumeration with L = prime product, T = admissible classes). But the entire difficult finiteness argument is absent; this is only a plan/sketch."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-1f900cf0679b",
+      "problem": "6",
+      "sha256": "1f900cf0679bc7a427d6df10d999f1fad13207495174b96a304f7042b74a6373",
+      "path": "checkpoint_inputs/1f900cf0679bc7a427d6df10d999f1fad13207495174b96a304f7042b74a6373.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 5,
+      "record_ids": [
+        "p6-gpt-5.6-sol-xhigh-main-t005"
+      ],
+      "bytes": 5846,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2180,
+            "output_tokens": 8759,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 92.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 4,
+        "complete": false,
+        "main_gap": "Descent only yields cores with product ≤ m; the disjoint-witness pairing step finishing finiteness of U is omitted, and the entire periodicity conclusion (choice of T, L) is absent.",
+        "notes": "Written part is correct and rigorous: scanning property, characterization G=F, upward-closed/intersecting/self-blocking structure, minimal supports, and the descent bounding c(H,p) ≤ m. But finiteness of relevant primes and the final periodicity are only sketched, not proved; write-up self-labels 'partial'."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-0ce2641363f3",
+      "problem": "6",
+      "sha256": "0ce2641363f3d31f3450dddd46a06892c1fb8d794aba581c842b5db2e9e83262",
+      "path": "checkpoint_inputs/0ce2641363f3d31f3450dddd46a06892c1fb8d794aba581c842b5db2e9e83262.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 2,
+      "record_ids": [
+        "p6-gpt-5.6-sol-xhigh-round1-t002"
+      ],
+      "bytes": 813,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 667,
+            "output_tokens": 137,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 3.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 0,
+        "complete": false,
+        "main_gap": "No proof is present; the file explicitly states the problem is unsolved and the proof is 'not yet complete'.",
+        "notes": "This is a tracking/status file, not a proof attempt. It contains only the problem restatement and vague mentions of computational exploration and a reformulation, with no mathematical argument or verifiable progress."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-d31e74d07a68",
+      "problem": "6",
+      "sha256": "d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1",
+      "path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": 1,
+      "turn": 1,
+      "record_ids": [
+        "p6-gpt56-ours"
+      ],
+      "bytes": 6345,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2401,
+            "output_tokens": 11726,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 123.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Complete and rigorous. Characterization (1) of terms via good prime supports is correctly proved using unboundedness and the greedy rule. The key lemma (erasing primes >A preserves goodness) uses a clean induction with the Rp^k construction; all inequalities and the threshold case m=A check out. Periodicity by L=product of primes ≤A and the counting argument correctly yield a_{n+T}=a_n+L for all n."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-ca355972e2be",
+      "problem": "6",
+      "sha256": "ca355972e2bea920b8a954d18745abda6732c30157eb3b0694d19a21ec105376",
+      "path": "checkpoint_inputs/ca355972e2bea920b8a954d18745abda6732c30157eb3b0694d19a21ec105376.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-main",
+      "turn": 5,
+      "record_ids": [
+        "p6-kimi-k3-main-t005"
+      ],
+      "bytes": 16597,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 5861,
+            "output_tokens": 24000,
+            "cache_read_input_tokens": 448,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 270.3,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 6309,
+            "output_tokens": 1136,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 17.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Steps 1–3 are correct and standard. The killing property (K′) follows correctly from greedy minimality, and the descent/pigeonhole compactness argument (4a) plus peeling argument (4b) are fully justified using only finite self-duality. Line-by-line checks of all cases and index arguments hold."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-b041005367c7",
+      "problem": "6",
+      "sha256": "b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58",
+      "path": "checkpoint_inputs/b041005367c76bdecd527f7a3ba3deb4d9ef23108061075cf0a357761e4e6d58.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round1",
+      "turn": 21,
+      "record_ids": [
+        "p6-kimi-k3-round1-t021"
+      ],
+      "bytes": 2820,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1384,
+            "output_tokens": 9131,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 124.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 3,
+        "complete": false,
+        "main_gap": "The central stabilization lemma (H_n stops shrinking / S_∞ finitely generated) is explicitly left unproven, and the claimed Theorem A and Lemmas A–D include no proofs in this text.",
+        "notes": "The transversal framework and the bounded-gap argument (via rad(a_1) being a transversal) are correct and genuinely argued. But Theorem A and Lemmas A–D are only asserted as 'proved' with no proofs written here, and the file itself admits the crux is open ('in progress'). Numerics earn no credit. Substantial reduction, main argument absent."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-bd6057aef3ec",
+      "problem": "6",
+      "sha256": "bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757",
+      "path": "checkpoint_inputs/bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round2",
+      "turn": 7,
+      "record_ids": [
+        "p6-kimi-k3-round2-t007"
+      ],
+      "bytes": 11071,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 4266,
+            "output_tokens": 24000,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 269.0,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4266,
+            "output_tokens": 1045,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 14.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 7,
+        "complete": true,
+        "main_gap": "none",
+        "notes": "Steps 1–3 (enumeration of S_infty, reduction to finiteness of minimal elements, intersecting + self-dual antichain properties) are correct. The combinatorial core theorem (Step 4) is fully proved: the peeling argument with least-index eligible sets, Zorn-based minimal transversals, and antichain contradiction is sound."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-01814ca40bb4",
+      "problem": "6",
+      "sha256": "01814ca40bb47cfc5ce9166ce02789daaecec123cc5191e5f7baab1795f5d41c",
+      "path": "checkpoint_inputs/01814ca40bb47cfc5ce9166ce02789daaecec123cc5191e5f7baab1795f5d41c.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-round3",
+      "turn": 9,
+      "record_ids": [
+        "p6-kimi-k3-round3-t009"
+      ],
+      "bytes": 15786,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5634,
+            "output_tokens": 6877,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 77.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 4,
+        "complete": false,
+        "main_gap": "Step 4 Part 2 (compactness: every transversal of C contains a finite one) is unproven; the contradiction assembly from (C1) is explicitly 'in progress'. This missing piece is the core finiteness of C, i.e. the heart of the problem.",
+        "notes": "Steps 1–3 and Step 4 Part 1 (peeling) are rigorous and correct, including derived facts (K) and (C1); only a trivial external citation (increasing indices) is omitted. But the final number-theoretic contradiction is absent, and the notes concede all attempted routes (i)–(iv) stall. Substantial reduction with the crux missing."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-8d1286ceedd9",
+      "problem": "6",
+      "sha256": "8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4",
+      "path": "checkpoint_inputs/8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": "muse-spark-1.1-main",
+      "turn": 12,
+      "record_ids": [
+        "p6-muse-spark-1.1-main-t012"
+      ],
+      "bytes": 135155,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 30842,
+            "output_tokens": 13841,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 174.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 4,
+        "complete": false,
+        "main_gap": "No proof that the minimal-family evolution terminates (new primes could appear infinitely often); the attempt cuts off mid-sentence. The global from-n=1 periodicity (no skipped multiples in the initial segment) is also unproved.",
+        "notes": "Correct reformulation via prime supports, minimal families, and blockers; proves the nontrivial lemma that an intersecting clutter has intersecting blocker iff every minimal transversal contains an edge (stable = self-dual); shows instability forces a change via 'pure multiples'; fully handles the singleton case; verifies a1=35. But finiteness of changes and exact global periodicity—two central parts—remain open."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-f77b2d46f736",
+      "problem": "6",
+      "sha256": "f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39",
+      "path": "checkpoint_inputs/f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "12402695",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-12402695-v1"
+      ],
+      "bytes": 11926,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4337,
+            "output_tokens": 6651,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 78.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 3,
+        "complete": false,
+        "main_gap": "Core finiteness lemma (only finitely many primes appear) is unproven; backward extension of periodicity to all n is unproven; ubiquitous-prime lemma (Claim 4) unverified.",
+        "notes": "Correct framework and key observation (candidates = multiples of minimal hitting-set products), plus a valid conditional argument that prime-finiteness implies tail periodicity via merge of arithmetic progressions. Only the trivial Lemma 1 is proven unconditionally; the two hardest parts are explicitly left open, and the stated D≠∅ conjecture is contradicted by the write-up's own data."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-7232c3edc529",
+      "problem": "6",
+      "sha256": "7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb",
+      "path": "checkpoint_inputs/7232c3edc5296f8b401986d9831e427d17807e10c775484926bdd25423598bdb.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "244edfad",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-244edfad-v1"
+      ],
+      "bytes": 8615,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3557,
+            "output_tokens": 10935,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 124.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 3,
+        "complete": false,
+        "main_gap": "Lemma 2/Corollary 3 (every essential prime eventually divides every term) is false — the write-up's own example contradicts it (e.g., a_11 = 50 lacks factor 3) — and its proof is invalid; the central stabilization step is unjustified.",
+        "notes": "Correct hitting-set reformulation and a workable conditional endgame (Parts 3–4, though Lemma 6 cites a false gcd identity). The heart of the problem—stabilization of the hitting-set structure—is established only via a false lemma with a hand-wavy proof, so the derived L and V are wrong; internal inconsistency with the example."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-c734a640cdef",
+      "problem": "6",
+      "sha256": "c734a640cdef6ea313666115130884bc6f3b92af3083cc71a707085f13ee8c0b",
+      "path": "checkpoint_inputs/c734a640cdef6ea313666115130884bc6f3b92af3083cc71a707085f13ee8c0b.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "8828b58a",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-8828b58a-v1"
+      ],
+      "bytes": 7513,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2738,
+            "output_tokens": 10700,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 127.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 4,
+        "complete": false,
+        "main_gap": "Lemma 1 (only finitely many primes appear; hitting sets stabilize) is the crux and is unproven: the greedy pairwise-disjoint subsequence claim is false, and the promised rigorous pigeonhole argument never appears; backward propagation to all n is also merely asserted.",
+        "notes": "The hitting-set reformulation and Step 2 (tail = increasing merge of finitely many APs with moduli dividing L, giving T=|R|, shift L) are essentially sound conditional on stabilization. But the 'Key Observation' is false (extra primes can appear, e.g. 42=2·3·7 in the write-up's own example), and Step 1's proof collapses into hand-waving."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-0e311611ff99",
+      "problem": "6",
+      "sha256": "0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780",
+      "path": "checkpoint_inputs/0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "8828b58a",
+      "turn": 2,
+      "record_ids": [
+        "p6-nemotron-8828b58a-v2"
+      ],
+      "bytes": 16700,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 6480,
+            "output_tokens": 24000,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 272.5,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 6480,
+            "output_tokens": 999,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 15.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 3,
+        "complete": false,
+        "main_gap": "Lemma 1's proof is incorrect (earlier terms may contain primes larger than p_k, and the bound L_k < p_k is false); Lemma 3 is a hand-waving sketch deferring to Lemma 4; Lemma 6's backward step is circular and the claimed gcd identity is false.",
+        "notes": "Overall framework (finiteness of primes, stabilizing hitting sets, merge of residue progressions mod L, periodicity) is the right one, and Lemmas 2, 4, 5 are essentially fine. But Lemma 1 contains a real error, Lemma 3 is asserted not proved, and Lemma 6's uniqueness/circularity argument fails. Major parts unjustified."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-49ab81e1743d",
+      "problem": "6",
+      "sha256": "49ab81e1743d761069a714a8e724cc74056bcb83956e3d6062db34ce65c3f217",
+      "path": "checkpoint_inputs/49ab81e1743d761069a714a8e724cc74056bcb83956e3d6062db34ce65c3f217.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "cab6a0da",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-cab6a0da-v1"
+      ],
+      "bytes": 7612,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2811,
+            "output_tokens": 2734,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 35.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "Core content unproven: finiteness of primes appearing (Lemma 2), ubiquitous prime lemma (conjecture only), stabilization, and backward extension are all explicitly left open; only a reformulation and a pigeonhole lemma are proved.",
+        "notes": "Correct: hitting-set reformulation of the greedy rule and Lemma 1 (trivial pigeonhole). Part 5's merge-of-progressions argument is a reasonable conditional sketch, but rests on unproven lemmas; Part 3's monotonicity claim is also flawed. Essentially the main argument is absent."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-961eadba7a83",
+      "problem": "6",
+      "sha256": "961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671",
+      "path": "checkpoint_inputs/961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "cab6a0da",
+      "turn": 2,
+      "record_ids": [
+        "p6-nemotron-cab6a0da-v2"
+      ],
+      "bytes": 11627,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4167,
+            "output_tokens": 5257,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 68.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 3,
+        "complete": false,
+        "main_gap": "The core lemma — finiteness of the set of primes appearing (Lemma 2) — is admitted open, with only a vague proof sketch; backward extension to all n (Lemma 7) is also unproven, and Lemmas 3 and 5 are only sketched.",
+        "notes": "Correct and useful reduction of the greedy rule to multiples of minimal hitting-set products, and Lemma 1 is properly proved. Conditional on the unproven finiteness of primes, the stabilization and merge-of-progressions argument for eventual periodicity is essentially sound. However, the problem's crux (finiteness) and the extension to all n are absent, so only partial progress."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-99df0a828c44",
+      "problem": "6",
+      "sha256": "99df0a828c44a165cd008d7abf5b50582cc6f698542a5725c2d6e29d830fe6de",
+      "path": "checkpoint_inputs/99df0a828c44a165cd008d7abf5b50582cc6f698542a5725c2d6e29d830fe6de.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "d024e848",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-d024e848-v1"
+      ],
+      "bytes": 14933,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5528,
+            "output_tokens": 10847,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 140.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 4,
+        "complete": false,
+        "main_gap": "The central stabilization lemma (only finitely many primes ever enter minimal hitting sets) is not proven—only a promised 'potential function' sketch; Lemma 2's monotonicity and 'no new primes' claims are also hand-waved. This is the core of the problem.",
+        "notes": "Sections 1–4 give a correct framework: valid integers are exactly those containing a stabilized minimal hitting set, a periodic set, and greedy enumeration then yields a_{n+T}=a_n+L correctly. But everything hinges on the unproven stabilization (admitted in Open Issues 4). Section 5's explicit classification is speculative and unneeded."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-7c6e3fdd966a",
+      "problem": "6",
+      "sha256": "7c6e3fdd966a88237fe0c9b74525925388762d27048262cee6d5b6b121a775a7",
+      "path": "checkpoint_inputs/7c6e3fdd966a88237fe0c9b74525925388762d27048262cee6d5b6b121a775a7.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "dbbb2d6f",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-dbbb2d6f-v1"
+      ],
+      "bytes": 10479,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3834,
+            "output_tokens": 3534,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 41.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "Core lemmas (finiteness of involved primes; essential primes are ubiquitous) and backward extension are explicitly unproved; only the conditional eventual-periodicity reduction is given.",
+        "notes": "Only Lemma 1 (trivial pigeonhole) is proved. Parts 3 and 6 are correct but conditional on the unproved finiteness lemma. Part 5's claim that minimal hitting sets contain all of E is false (contradicted by the write-up's own example). The hardest arguments are admitted gaps."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-5749fe90f16d",
+      "problem": "6",
+      "sha256": "5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f",
+      "path": "checkpoint_inputs/5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "fb285ec4",
+      "turn": 1,
+      "record_ids": [
+        "p6-nemotron-fb285ec4-v1"
+      ],
+      "bytes": 8151,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 3026,
+            "output_tokens": 9286,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 139.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "Core lemma (Step 2) is false: an essential prime need not divide all large terms. Steps 4-5 assert the periodicity without proof. The claimed eventual structure P_n = E, a_{n+1}=a_n+L is wrong.",
+        "notes": "Counterexample a_1=15: the true sequence is 15,18,20,24,30,36,40,42,45,... (write-up omits 45); prime 3 is essential yet fails to divide a_{8k+3} (20,50,80,...), refuting Step 2 and hence Steps 3-5. Step 1's claim is true but its argument is hand-waving. Steps 4-5 are 'one proves by induction' assertions with no argument."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p6-h-bba234862995",
+      "problem": "6",
+      "sha256": "bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988",
+      "path": "checkpoint_inputs/bba234862995bf92f1da5abec257a53d2483d1ad67b5b6ef4a99eace7d858988.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "fb285ec4",
+      "turn": 2,
+      "record_ids": [
+        "p6-nemotron-fb285ec4-v2"
+      ],
+      "bytes": 15030,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 599,
+          "stop": null,
+          "usage": null,
+          "sec": 2400.5,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 5619,
+            "output_tokens": 982,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 16.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "grade": 2,
+        "complete": false,
+        "main_gap": "Lemma 2 (essential primes eventually divide every term) is false—e.g. for a_1=15, prime 5 is essential but never divides 36—and its 'proof' is hand-waving; Lemma 4 (a_{n+1}=a_n+L) is also false, as the write-up's own example (a_9=45, not 48) shows.",
+        "notes": "Only Lemma 1 and the vague eventual-periodicity idea are sound. The central structure (essential primes, step L) is incorrect, and the 'verification' example is fabricated/wrong, contradicting the lemmas it claims to check."
+      },
+      "S": null,
+      "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+      "path_base": "bundle root"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-H",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 49.2,
+  "input_tokens": 17024,
+  "output_tokens": 1858,
+  "reasoning_output_tokens": 1704,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "There is a minor arithmetic typo: the sum of all powers from 1 through 2^{k-1} is 2^k-1, not 2^k-2. The required strict inequality and noncancellation conclusion remain valid.",
+    "quote": "the sum $1+2+\\cdots+2^{k-1}=2^k-2$ of all smaller powers"
+   }
+  ],
+  "notes": "The minimax reduction, pairing lemma, refinement construction, graph lower bound, and subset-sum upper bound are otherwise rigorous and establish the stated value. The sole error is immediately repairable and does not affect the argument."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 56,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    8862,
+    8918
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_retest",
+ "run_tag": "_retest",
+ "transport_choice": "cli"
+}

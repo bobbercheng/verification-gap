@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-cc00e6162436",
+  "problem": "6",
+  "sha256": "cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a",
+  "path": "checkpoint_inputs/cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 6,
+  "record_ids": [
+    "p6-gpt-5.6-sol-pro-main-t006"
+  ],
+  "bytes": 9581,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5675,
+        "output_tokens": 1552,
+        "output_tokens_details": {
+          "thinking_tokens": 1193
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1552,
+            "cache_read_input_tokens": 5675,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 20.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "sunflower lemma for bounded-size minimal supports + strict weight descent (w(H) ≤ rad(y) < w(E\\{p})) forcing terminal minimal supports of weight < a_1",
+    "upper_bound_mechanism": "membership ⇔ supp contains some C ∈ 𝒞, invariant mod L = ∏_{p∈P} p for all m ≥ a_1; each window (a_n, a_n+L] holds exactly T accepted residues",
+    "wrong_answer_stated": false,
+    "notes": "Complete: greedy-scan recast, support-only acceptance, self-duality, minimal antichain, sunflower + weight-descent finiteness, and global periodicity valid from n=1. Only nitpick: Lemma 2 tacitly needs w(S) > a_1 (not =), which follows since a_1 is accepted. Structure L, T stated explicitly."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

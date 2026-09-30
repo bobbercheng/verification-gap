@@ -1,0 +1,44 @@
+{
+  "id": "p4-h-908b36293a06",
+  "problem": "4",
+  "sha256": "908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e",
+  "path": "checkpoint_inputs_ext/908b36293a06004992059d61ed8eff53315c2b390afee4ce2db2319e6108244e.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "0c164fc0",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-0c164fc0-v1"
+  ],
+  "bytes": 9794,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 18523,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 520,
+        "reasoning_output_tokens": 375
+      },
+      "sec": 19.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "multiple-angle induction; complete only for 90° and 60°",
+    "upper_bound_mechanism": "maximum-angle invariant for θ>90°",
+    "wrong_answer_stated": true,
+    "notes": "The claimed interval θ≤90° is wrong. The kθ induction is valid. Winning is rigorously established only for θ=90° and 60°; both general interval arguments contain unsupported Euclidean-algorithm/invariant claims. Avoidance is correctly proved for θ>90° but omits all non-reciprocal angles below 90°."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

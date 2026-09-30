@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-cdc88080cd21",
+  "problem": "1",
+  "sha256": "cdc88080cd219cde88e04afe43130a98d92617c0aa91fe0dbf2d0d2cf070bc50",
+  "path": "checkpoint_inputs_ext/cdc88080cd219cde88e04afe43130a98d92617c0aa91fe0dbf2d0d2cf070bc50.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": "5aca5e52",
+  "turn": 1,
+  "record_ids": [
+    "p1-gpt56-5aca5e52-v1"
+  ],
+  "bytes": 5788,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1767,
+        "output_tokens": 1429,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 21.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic descent (product, count of entries >1)",
+    "upper_bound_mechanism": "per-prime gcd of p-adic valuations invariant via Euclidean identity",
+    "wrong_answer_stated": false,
+    "notes": "Complete. Move description (min,|a-b|) and never-two-1s given; lexicographic (P,K) descent is well-founded and covers g=1 and g>1; exactly-one-survivor argued both directions; invariance proved for all cases including a=b, zeros (audit); M formula explicit and correct."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__kimi-k3-round3-t007__e1",
+ "case": "kimi-k3-round3-t007",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.6,
+  "input_tokens": 2,
+  "output_tokens": 435,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 3269,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2823,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002928,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 435,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 3269,
+    "webSearchRequests": 0,
+    "costUSD": 0.044396500000000005,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 153,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The write-up's only support for the reduction is the parenthetical claim 'proved (and verified by brute force)'; no argument (e.g. exchange/greedy-optimality induction showing each player takes the largest remaining piece, so Liu obtains the odd-ranked pieces) appears anywhere in the text. Elsewhere the alternating sum D = p1 - p2 + p3 - ... and the share (1+D)/2 are simply used as given. Under grade-only-what-is-written, an asserted plus numerically checked claim does not establish L3.1. Supplying the short exchange-argument lemma would repair it.",
+  "note": null
+ },
+ "elsewhere_anchor": null
+}

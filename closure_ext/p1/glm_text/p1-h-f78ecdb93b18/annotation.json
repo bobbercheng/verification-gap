@@ -1,0 +1,47 @@
+{
+  "id": "p1-h-f78ecdb93b18",
+  "problem": "1",
+  "sha256": "f78ecdb93b18abef5b7d850d309efc95f948f323b7ad82134dbbce3f15137353",
+  "path": "checkpoint_inputs_ext/f78ecdb93b18abef5b7d850d309efc95f948f323b7ad82134dbbce3f15137353.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p1-claude-fable-5-main-t005",
+    "p1-deedy-claude-fable-5-final"
+  ],
+  "bytes": 7832,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3616,
+        "output_tokens": 1608,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 21.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "monovariant Φ = Σ Ω(x_i) + #{x_i > 1}, strictly decreasing (cases gcd = 1 and gcd > 1)",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations via gcd(a, b−a) = gcd(a, b)",
+    "wrong_answer_stated": false,
+    "notes": "Complete rigorous proof. Lemma 1 gives the valuation dynamics (min, max−min); Lemma 2 shows a move never outputs two 1s; Lemma 3's monovariant Φ = T + N strictly decreases in both cases, giving termination, and N ≥ 1 is preserved by induction, so exactly one survivor. Lemma 4 proves gcd-invariance handling equal/zero valuations. Explicit M formula stated and derived."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-5",
+ "cli": "claude",
+ "cli_model_usage": {
+  "claude-haiku-4-5-20251001": {
+   "inputTokens": 2792,
+   "outputTokens": 21,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0028970000000000003,
+   "contextWindow": 200000,
+   "maxOutputTokens": 32000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-4-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 2,
+   "outputTokens": 559,
+   "cacheReadInputTokens": 4375,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0161725,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 308,
+   "canonicalModel": "claude-opus-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 4375,
+  "output_tokens": 559,
+  "output_tokens_details": {
+   "thinking_tokens": 308
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "not_available",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 559,
+    "cache_read_input_tokens": 4375,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "num_turns": 1,
+ "duration_ms": 7945,
+ "is_error": false,
+ "elapsed_seconds": 8.7,
+ "content": [
+  {
+   "type": "text",
+   "text": "{\"answer\": 2, \"reduction\": 2, \"lower_bound\": 2, \"upper_bound\": 2, \"lower_bound_mechanism\": \"product monovariant plus count of nonunits; every move leaves an output >1\", \"upper_bound_mechanism\": \"per-prime gcd of valuations invariant via gcd(a,b-a)=gcd(a,b)\", \"wrong_answer_stated\": false, \"notes\": \"Complete: move description with min/|a-b| and the 'never two 1s' case check; termination via product decrease when d>1 and K decrease when d=1; K>=1 invariant gives exactly one survivor; valuation-gcd invariance with gcd(0,r)=r conventions covering equal/zero cases; explicit formula for M.\"}"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-220590cd38ed",
+  "problem": "4",
+  "sha256": "220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181",
+  "path": "checkpoint_inputs_ext/220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 2,
+  "record_ids": [
+    "p4-muse-spark-1.1-main-t002"
+  ],
+  "bytes": 9420,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7122,
+        "output_tokens": 3390,
+        "output_tokens_details": {
+          "thinking_tokens": 3062
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3390,
+            "cache_read_input_tokens": 7122,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 43.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "induction: k*theta universally winning (split into theta + (k-1)theta); from no-multiple triangle cut r = ceil(p/theta)theta - p so both children carry a multiple; theta=90 handled separately in one move",
+    "upper_bound_mechanism": "invariant I = no angle an integer multiple of theta; four-case analysis shows some child stays in I, the 180 = (k1+k3)theta case excluded by non-divisibility",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer and both directions written out with full case analysis covering every cut and both children/discards, including n=2 and existence of a safe starting triangle. Cut parametrization (any x in (0,D) realizable) is asserted rather than proved by continuity, a minor gap; angle bounds (r<theta<=D, p+r<=120) are checked."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

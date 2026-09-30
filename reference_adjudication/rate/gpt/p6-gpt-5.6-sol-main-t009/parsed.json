@@ -1,0 +1,50 @@
+{
+ "rater": "gpt",
+ "case": "p6-gpt-5.6-sol-main-t009",
+ "problem": "6",
+ "group": "A",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 19.4,
+  "input_tokens": 17223,
+  "output_tokens": 720,
+  "reasoning_output_tokens": 473,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "statements": {
+   "L6.1": {
+    "established": "yes",
+    "quote": "We next show that $a_1,a_2,\\ldots$ are exactly the members of $S$ that are at least $a_1$, in increasing order.",
+    "note": "The subsequent minimality argument proves both directions for all integers at least a_1."
+   },
+   "L6.2": {
+    "established": "no",
+    "quote": null,
+    "note": "The claimed finite-transversal lemma is false; its induction unjustifiably restricts to transversals meeting C."
+   },
+   "L6.3": {
+    "established": "yes",
+    "quote": "Take $y=a_n$. Then $a_n+L\\in S$, and among the integers strictly greater than $a_n$ and at most $a_n+L$ there are exactly $T$ members of $S$.",
+    "note": "Conditional on finite-prime dependence, the residue-counting assembly correctly gives periodicity from n=1."
+   }
+  },
+  "S_ref": 1,
+  "notes": "The characterization and final periodicity assembly are sound, but the essential finiteness step rests entirely on a false set-theoretic lemma, so the overall proof is incomplete."
+ },
+ "anchors": {
+  "L6.1": {
+   "anchored": true,
+   "length": 111,
+   "length_ok": true,
+   "reason": null
+  },
+  "L6.2": null,
+  "L6.3": {
+   "anchored": true,
+   "length": 141,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

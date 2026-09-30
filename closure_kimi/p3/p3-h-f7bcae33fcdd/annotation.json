@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-f7bcae33fcdd",
+  "problem": "3",
+  "sha256": "f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874",
+  "path": "checkpoint_inputs/f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874.md",
+  "lineage": "ours-kimi-K2-repair",
+  "model": "kimi-k3",
+  "context": 4,
+  "turn": null,
+  "record_ids": [
+    "kimi-k2-repair"
+  ],
+  "bytes": 17249,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 142.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position majorization (Lemma E) for the geometric division",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <=1/N plus supply-demand cancellation with equal-pair cancellation lemma",
+    "wrong_answer_stated": false,
+    "notes": "Complete self-contained proof. Lemma 1 fully proves greedy value via pairing strategies; Theorem A proves Lemma E by induction with a two-case step, valid for every refinement; Theorem B gives pigeonhole plus greedy cancellation with correct cut count, degenerate cases (one pool empty, L empty) handled. All rigorous for all n."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

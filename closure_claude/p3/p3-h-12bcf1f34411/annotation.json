@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-12bcf1f34411",
+  "problem": "3",
+  "sha256": "12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c",
+  "path": "checkpoint_inputs/12bcf1f3441139610f821337b4267cedfba82ab8f47e67abab212d3d1ce3039c.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-kimi-k3-final"
+  ],
+  "bytes": 24463,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 13033,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 502,
+        "output_tokens_details": {
+          "thinking_tokens": 204
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 13033,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 502,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 13033,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 13033
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "matching/min-cost formula for D plus component-graph counting (e<=m-1 forces a tree component) and super-increasing margin inequality",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= S/(2^{n+1}-1), greedy realizability of nested-absolute-difference chain, cut/cancel construction with <= n cuts plus even-multiplicity cancellation",
+    "wrong_answer_stated": false,
+    "notes": "Complete and self-contained: claiming game solved by induction (odd/even sums), layer-cake and matching representations of D, geometric split lower bound for all n, and XY counterstrategy for all n via pigeonhole plus explicit cut schedule with distinctness and cut-count checks."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

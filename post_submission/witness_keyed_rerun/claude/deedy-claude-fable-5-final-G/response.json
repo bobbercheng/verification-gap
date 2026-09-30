@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 6782,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.006882,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 3259,
+    "cacheReadInputTokens": 1473,
+    "cacheCreationInputTokens": 8373,
+    "webSearchRequests": 0,
+    "costUSD": 0.1659515,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2538,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 8373,
+   "cache_read_input_tokens": 1473,
+   "output_tokens": 3259,
+   "output_tokens_details": {
+    "thinking_tokens": 2538
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 8373,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 3259,
+     "cache_read_input_tokens": 1473,
+     "cache_creation_input_tokens": 8373,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 8373
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 38775,
+  "is_error": false,
+  "elapsed_seconds": 39.6,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"obligations\": {\"reduction\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}, \"lower_bound\": {\"status\": \"not_written\", \"quote\": \"such that the signed sum $\\\\Xi:=\\\\sum_{j\\\\in V_T}s(j)\\\\,q_j$ satisfies $|\\\\Xi|\\\\le\\\\sum_i\\\\varepsilon_i+[M\\\\text{ odd}]\\\\,a_M$ (standard; details omitted)\", \"witness\": \"MISSING STATEMENT: for every refinement A of the geometric configuration by at most n cuts, one must actually construct (and prove existence of) a nonempty vertex set V_T with signs s such that |sum_{j in V_T} s(j) q_j| <= sum_i eps_i + [M odd] a_M. The text merely asserts this key combinatorial fact and explicitly defers its proof (\\\"standard; details omitted\\\"); no tree/component analysis, no case handling of arbitrary interleavings of Xiang Yu's cuts, and no argument that V_T is nonempty (needed to invoke (3.1)) appears anywhere. Numerical Monte Carlo checks are stated but do not constitute a proof.\", \"load_bearing\": \"Lemma 4's entire conclusion D(A) >= u is obtained by chaining u <= |Xi| <= sum eps_i = D(A), so the omitted step is the only bridge between the pairing structure and the signed subset-sum property (3.1); without it the lower bound has no proof.\"}, \"upper_bound\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}}, \"S_valid\": 1, \"wrong_answer_stated\": false, \"notes\": \"Reduction (Lemma 2) fully proved via (2.1)/(2.2). Upper bound (Lemma 5) fully written: pigeonhole gap <= 1/(2^{n+1}-1), mark budget m-1=n verified, grid-matching gives equal pairs plus leftover of total Delta. Lower bound's core pairing-to-signed-sum step is explicitly deferred.\"}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "deedy-deepseek-v4-pro-final",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 45.5,
+  "input_tokens": 150,
+  "output_tokens": 2883,
+  "cache_read_input_tokens": 1472
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "The quoted sentence appears verbatim in 'Current best' and, in context, presents these uniform marks as Liu's strategy guaranteeing c=(n+1)/(2n+1). The witness checks out: for n=2, Liu marks 1/5, 2/5 (pieces 1/5, 1/5, 3/5); Xiang marks 7/10 (a legal, distinct, single cut), giving pieces 3/10, 3/10, 1/5, 1/5. These pair into equal-length pairs, so Xiang mirrors and Liu gets exactly 3/10+1/5=1/2<3/5=0.6. (Equivalently the alternating sorted sum is 0.) Hence the claimed strategy fails for n=2 and the conjectured value is refuted (the true value for n=2 is 4/7). The 'Full proof' section is empty ('To be completed'), so no other lower-bound argument repairs this anywhere in the text."
+ }
+}

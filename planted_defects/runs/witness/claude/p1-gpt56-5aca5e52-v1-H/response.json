@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2969,
+    "outputTokens": 12,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003029,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2619,
+    "cacheReadInputTokens": 2094,
+    "cacheCreationInputTokens": 3368,
+    "webSearchRequests": 0,
+    "costUSD": 0.100212,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2296,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3368,
+   "cache_read_input_tokens": 2094,
+   "output_tokens": 2619,
+   "output_tokens_details": {
+    "thinking_tokens": 2296
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3368,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 2619,
+     "cache_read_input_tokens": 2094,
+     "cache_creation_input_tokens": 3368,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3368
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 34573,
+  "is_error": false,
+  "elapsed_seconds": 35.6,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"obligations\": {\"reduction\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}, \"lower_bound\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}, \"upper_bound\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}}, \"S_valid\": 2, \"wrong_answer_stated\": false, \"notes\": \"Move description (min, |a-b|) and the 'never two 1s' fact are both proved. Termination uses the lex pair (P,K) with correct two-case analysis and the at-most-one/at-least-one endgame. Invariance uses gcd(a,b)=gcd(min,|a-b|) with zero and equal cases addressed. Minor slip: 'lcm(m,n)=mn/g^2' (should be mn/g), but the used conclusion P'=P/g and both cases are unaffected.\"}"
+   }
+  ]
+ }
+}

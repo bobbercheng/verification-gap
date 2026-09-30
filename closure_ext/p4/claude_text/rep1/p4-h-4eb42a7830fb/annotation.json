@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-4eb42a7830fb",
+  "problem": "4",
+  "sha256": "4eb42a7830fbb66541ac02a8772b7a6e5ec62b13a271959f7b861b6332cdeae4",
+  "path": "checkpoint_inputs_ext/4eb42a7830fbb66541ac02a8772b7a6e5ec62b13a271959f7b861b6332cdeae4.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 1,
+  "record_ids": [
+    "p4-gpt-5.6-sol-max-main-t001"
+  ],
+  "bytes": 1971,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2986,
+        "output_tokens": 845,
+        "output_tokens_details": {
+          "thinking_tokens": 585
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 845,
+            "cache_read_input_tokens": 2986,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "recursive splitting of multiples of 1/n; largest-angle cut hitting grid point m/n",
+    "upper_bound_mechanism": "keep an acute triangle (only sketched for theta > 90 degrees)",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer only stated as a 'leading conjecture'. Angle-coordinate model is exact. Multiple-of-theta lemma and the 180/n strategy are sketched without full proof (no n=2 case, no verification both pieces are winning). Avoidance handled only for theta>90 by assertion; the main case 0<theta<=90 explicitly left open."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

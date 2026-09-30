@@ -1,0 +1,67 @@
+{
+  "id": "p4-nemotron-7912bb42-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "7912bb42",
+  "turn": 1,
+  "path": "checkpoint_inputs_ext/814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a.md",
+  "recorded_mtime_utc": "2026-07-20T18:58:30Z",
+  "bytes": 11500,
+  "sha256": "814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5918,
+        "cache_read_input_tokens": 1504,
+        "output_tokens": 2373,
+        "output_tokens_details": {
+          "thinking_tokens": 2072
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 5918,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2373,
+            "cache_read_input_tokens": 1504,
+            "cache_creation_input_tokens": 5918,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 5918
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 33.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "theta=90 one-move win (x=90-B) plus flawed doubling ladder for 180/2^n",
+    "upper_bound_mechanism": "acute-triangle defense for theta>90; bogus finite lattice invariant for other dyadics",
+    "wrong_answer_stated": true,
+    "notes": "Final conjecture theta=180/2^n is wrong (misses 60, 36, ...), and it is only conjectured. The k=2 lemma (angle 2theta wins) is correct, but the induction step 'cut x=2theta-B gives both children 2theta' is false. Lattice invariant for 67.5 wrongly assumes Mulan cuts at multiples of 22.5. General safe-angle avoidance argument absent; ends by proposing computer search."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-d84ec9b247fc",
+  "problem": "3",
+  "sha256": "d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8",
+  "path": "checkpoint_inputs/d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 4,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c4"
+  ],
+  "bytes": 19101,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 42.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division 2^n:...:1, but guarantee-vs-all-replies lemma open (failed induction sketched; proved only n=1)",
+    "upper_bound_mechanism": "halving reply vs geometric config only; no general mechanism for arbitrary Liu divisions (proved only n=1)",
+    "wrong_answer_stated": false,
+    "notes": "Scrupulously honest partial. Draft-game reduction (odd-rank sum) and sup/inf formalism fully proved; c(1)=2/3 both directions with attainment. Correct formula stated only as conjecture, supported by a matched strategy pair; both universal directions explicitly open for n>=2; grid/float evidence acknowledged as non-proof. No subset-sum/pigeonhole UB idea."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

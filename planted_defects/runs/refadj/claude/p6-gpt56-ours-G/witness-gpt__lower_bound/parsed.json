@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "objection_key": "witness-gpt__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 8.8,
+  "input_tokens": 2,
+  "output_tokens": 601,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 3164,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2819,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0029089999999999997,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 601,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3164,
+    "webSearchRequests": 0,
+    "costUSD": 0.047543,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 242,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The large-prime-erasure lemma is the load-bearing finiteness step (L6.2), and the write-up's entire proof of it is \"Induction over the sequence terms in increasing order (standard; details omitted).\" No construction of the dominating smaller term q^k c is given, no verification that it lies in [A, x) and is itself a term, and no case analysis. Elsewhere the text only gestures at it (\"The construction Rp^k repairs this boundary issue ... the lemma proves the strengthened hypothesis\") and offers computational checks explicitly labeled \"not used as proof.\" Since (3), (4) and hence the whole periodicity assembly rest on this lemma, the statement is not established as written; supplying the full lemma proof is required.",
+  "elsewhere_quote_note": null
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "lower_bound"
+}

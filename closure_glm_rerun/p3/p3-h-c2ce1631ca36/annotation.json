@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-c2ce1631ca36",
+  "problem": "3",
+  "sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+  "path": "checkpoint_inputs/c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d.md",
+  "lineage": "ours-kimi-R2",
+  "model": "kimi-k3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "kimi-r2-c1"
+  ],
+  "bytes": 3032,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1449,
+        "output_tokens": 1769,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 22.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "dyadic division (1:2:...:2^n) + toggle/symmetric-difference sketch; BFS numerics n≤3 only",
+    "upper_bound_mechanism": "n=2 only: four named Xiang attacks (halve-largest/smallest, clone); case analysis unwritten",
+    "wrong_answer_stated": false,
+    "notes": "Tracking file, status partial. Correct closed form only as conjecture backed by numerics n≤3. Odd-sum reduction asserted, proof 'to be written'. Dyadic Liu division stated but no all-n resistance argument; toggle invariant still being hunted. n=2 bounds claimed but details 'to write up'."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

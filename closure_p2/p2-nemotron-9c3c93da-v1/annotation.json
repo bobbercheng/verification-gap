@@ -1,0 +1,61 @@
+{
+  "id": "p2-nemotron-9c3c93da-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9c3c93da",
+  "turn": 1,
+  "path": "checkpoint_inputs/7022b811ec7499899e40ad37908f298d39b162dabff8e2cb6b7353e1ddf88748.md",
+  "bytes": 7237,
+  "sha256": "7022b811ec7499899e40ad37908f298d39b162dabff8e2cb6b7353e1ddf88748",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 2460,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 99.9,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2460,
+        "output_tokens": 506,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 8.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Lemmas 1-3 (spiral similarity at A) are written out, but the crucial perpendicularities KM⊥AB, LN⊥AC are only a 'sketch' with an unexecuted angle chase, and are almost certainly false. The final algebraic verification is asserted, not performed. No key circle; no complete finish."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "7022b811ec7499899e40ad37908f298d39b162dabff8e2cb6b7353e1ddf88748",
+  "original_bytes": 7237,
+  "input_anonymized": false
+}

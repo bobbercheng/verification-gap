@@ -1,0 +1,67 @@
+{
+  "id": "p3-h-0df01e264dd8",
+  "problem": "3",
+  "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+  "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-claude-fable-5-final",
+    "claude-fable-5-main-t013"
+  ],
+  "bytes": 15474,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 9584,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 11519,
+        "output_tokens_details": {
+          "thinking_tokens": 11305
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 9584,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 11519,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 9584,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 9584
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 126.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 7,
+    "complete": true,
+    "main_gap": "none",
+    "notes": "Correct answer 2^n/(2^{n+1}-1). Reduction to alternating-sum D via greedy is proved correctly (2.1)/(2.2). Lower bound: elegant pairing-multigraph + tree 2-colouring with the binary separation property; edge count floor(M/2)<=n<|V| is valid. Upper bound: subset-sum gap plus cross-pairing cut construction, mark count m-1<=n verified; grids match. Checked edge cases (single-vertex component, Delta=0, ties in subset sums) hold."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

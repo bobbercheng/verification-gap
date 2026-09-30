@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-claude__p5-deepseek-v4-pro-main-t033__upper_bound",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 17.1,
+  "input_tokens": 2,
+  "output_tokens": 1249,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 6049,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5389,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0054789999999999995,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1249,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 6049,
+    "webSearchRequests": 0,
+    "costUSD": 0.09286599999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 877,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Scanning the whole text: the only bound on g recorded is 'g(x) > -x' right after (4). Section 3's dichotomy argument explicitly starts 'Suppose V contains two distinct positive numbers c1 > c2 > 0' and its orbit construction g(u+nc1)=c1 presupposes positive differences; it never excludes negative values. Sections 4-6 all assume V ⊆ {0,c}. So the step 'either g ≡ 0 or V ⊆ {0,c}' indeed does not follow, and L5.3 (f(t) - t >= 0 for all t) is never proved. The repair is one sentence: if g(x) < 0, iterating (4) gives f^n(x) = x + n g(x) <= 0 eventually, contradicting positivity of f.",
+  "repair_distance_note": null
+ },
+ "elsewhere_anchor": null
+}

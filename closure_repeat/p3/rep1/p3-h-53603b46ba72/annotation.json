@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-53603b46ba72",
+  "problem": "3",
+  "sha256": "53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c",
+  "path": "checkpoint_inputs/53603b46ba729efb58079f34a3adea6ca3da6a79283458083348c3de9aab689c.md",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "kimi-r1-c2"
+  ],
+  "bytes": 8696,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3518,
+        "output_tokens": 3132,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 42.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division G_n with attempted refinement induction (open; exact checks n<=3)",
+    "upper_bound_mechanism": "deterministic peeling / equal-pair cancellation (q(A)<=1/N unproved beyond |A|<=3)",
+    "wrong_answer_stated": false,
+    "notes": "Lemma 1 (odd-sum reduction) fully proved via two pairing strategies; delta reformulation also proved. Correct closed form only conjectured, gaps explicitly listed as open. Lower bound: right division, small-n exact verification, induction attempt refuted in abstract form. Upper bound: peeling strategy valid and achieves delta<=q(A), but key inequality only verified for |A|<=3 and numerically."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,73 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p5-gpt56-7324ef70-v1-F",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "F",
+ "problem": "5",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 25.8,
+  "input_tokens": 2,
+  "output_tokens": 2229,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 3385,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3045,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003145,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2229,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 3385,
+    "webSearchRequests": 0,
+    "costUSD": 0.090726,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1762,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.5",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "It follows that\n\\[\nb-c\\le \\frac{(t-y)^2}{4(t+c)}\\le \\frac{(t-y)^2}{4t}. \\tag{5}\n\\]",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "Direct expansion: (t+2c+y)^2 - 4(t+c)(y+b) = (t-y)^2 + 4c(t+c) - 4b(t+c) = (t-y)^2 + 4(t+c)(c-b). So the displayed line's factor (b-c) is a sign misprint. The very next line, inequality (5) (b - c <= (t-y)^2/(4(t+c)) <= (t-y)^2/(4t)), is exactly what the corrected expansion yields, and (6) checks out independently (2(t+c)^2+2(y+b)^2-(t+2c+y)^2 = (t-y)^2+2(b-c)(2y+b+c)). Hence (7), and Section 3's telescoping-partition argument giving d constant on all of R_{>0} (covering fixed points), stand. Single-symbol repair.",
+  "wrong_answer_stated": false
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 82,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   2978,
+   3060
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

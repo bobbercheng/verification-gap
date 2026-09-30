@@ -1,0 +1,34 @@
+{
+  "task_id": "imo-2026-p5",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "Verification: for f(x)=x+c (c>=0), the squared right gap (x+y+c)^2-4x(y+c) and the squared left gap 2x^2+2(y+c)^2-(x+y+c)^2 both expand EXACTLY to (x-y-c)^2>=0. Confirmed by symbolic expansion both ways.",
+    "Squaring is order-preserving in the verification and in (C1)/(C2) because all quantities (square roots of positive reals, and (f(x)+y)/2 with f(x),y>0) are strictly positive.",
+    "c>=0 is necessary: c<0 gives f(x)=x+c<0 for 0<x<-c, violating codomain R_{>0}; c=0 gives f(x)=x>0, c>0 gives f(x)>c>0. So the parameter range is exact.",
+    "Step 1: substituting (x,y)=(f(t),t) (valid since f(t),t>0) makes the outer sqrt in (C1) equal sqrt((f(t)^2+f(t)^2)/2)=f(t), and the right sqrt in (C2) equal sqrt(f(t)*f(t))=f(t), so the shared middle term (f(f(t))+t)/2 is squeezed to f(t), yielding f(f(t))=2f(t)-t for all t>0.",
+    "Step 2: D(f(t))=f(f(t))-f(t)=(2f(t)-t)-f(t)=D(t); the iterate recurrence a_{n+1}=2a_n-a_{n-1} has characteristic (r-1)^2=0, giving a_n=t+n*D(t) (verified for n=0..6 and by closed-form induction). If D(t)<0 then t+nD(t)->-infty<0, contradicting positivity of every iterate; hence D(t)>=0.",
+    "Step 3: completing the square in (C2), (f(u)+v)^2-4uv = (v-(2u-f(u)))^2+4u*D(u) (verified symbolically); dividing by 4u gives D(v)<=D(u)+(v-(2u-f(u)))^2/(4u); setting u=f(s) and using D(f(s))=D(s) and 2f(s)-f(f(s))=s (from (1)) yields D(v)<=D(s)+(v-s)^2/(4f(s)) for all s,v>0.",
+    "Step 4: swapping s<->v in (3) (valid since (3) holds for ALL s,v>0) gives D(s)-D(v)<=(v-s)^2/(4f(v)); with f(v)>=v>s/2 near s, both D(v)-D(s) and D(s)-D(v) are <=(v-s)^2/(2s)->0, so D is continuous. No regularity assumed; continuity is derived.",
+    "Step 5: on compact [a,b], f continuous & positive => m=min f>0; from (3) and its swap |D(v)-D(s)|<=(v-s)^2/(4m). Partitioning [p,q] into n equal steps and applying the triangle inequality gives |D(q)-D(p)|<=n*((q-p)/n)^2/(4m)=(q-p)^2/(4mn)->0, verified symbolically; hence D(p)=D(q) on [a,b], and since (0,infinity)=union_n[1/n,n], D is constant globally.",
+    "Both (C1) and (C2) are used in the proof: (C1) supplies the upper bound in the Step-1 squeeze (and excluding e.g. f=2x which actually satisfies C2 but fails C1 with a large negative gap, confirmed numerically), (C2) supplies the lower bound and the master inequality. No unused/redundant structure.",
+    "Numerical re-check (independent of the author): master bound (3) shows zero violations for f=x+c across c in {0,0.5,1,2,5,17.3}; f=x+c satisfies both inequalities (min gap ~0, FP noise only); f=2x violates (C1) badly. Consistent with the analytical proof."
+  ],
+  "unverified_claims": [],
+  "summary": "The solution correctly determines the full solution set f(x)=x+c with constant c>=0. The verification is correct and tight: both squared inequalities reduce exactly to (x-y-c)^2>=0 (confirmed by symbolic expansion). The uniqueness proof is rigorous and self-contained with no regularity assumptions: (1) the (f(t),t) substitution squeezes the shared middle term to f(t), forcing the iterate identity f(f(t))=2f(t)-t; (2) the resulting arithmetic-progression iterates t+nD(t) must all stay positive, so D=f-id>=0; (3) completing the square in (C2) and evaluating at u=f(s) yields the quadratic master bound D(v)<=D(s)+(v-s)^2/(4f(s)); (4) this bound plus its swap and f>=id give continuity of D; (5) a uniform (v-s)^2/(4m) bound on compact intervals, telescoped over an n-partition to (q-p)^2/(4mn)->0, forces D constant. I independently re-derived every algebraic identity (symbolic) and confirmed the master bound is tight for f=x+c and that (C1) genuinely excludes non-solutions like f=2x. No fatal gaps, no circularity (continuity is derived from (2)+(3), not assumed), no quantifier changes (all bounds hold for every s,v>0), and the squaring steps are justified by strict positivity. The only non-proof material is clearly-labeled numerical evidence; I re-ran representative checks independently and they agree, but they are non-load-bearing. This is a complete, correct IMO-level proof.",
+  "transfer_assessment": [
+    "REUSABLE — Equality-squeeze substitution (x,y)=(f(t),t): when a two-sided functional inequality has a shared middle term, choosing inputs that collapse one outer bound from each side onto the same value forces the middle to equality. Broadly applicable to functional inequalities (not just equations).",
+    "REUSABLE — Iterate/recurrence analysis with positivity: converting a self-composition identity into a linear recurrence on forward orbits, then using a global positivity/range constraint on ALL iterates to sign the drift D(t). Powerful when the codomain is a half-line; turns iteration into a global constraint.",
+    "REUSABLE — Quadratic-Lipschitz => constant (partition telescoping): a pointwise bound |g(v)-g(s)|<=C*(v-s)^2 on a compact interval, summed over an n-partition, yields |g(q)-g(p)|<=C'*(q-p)^2/n -> 0, forcing g constant. Classic and very transferable; here the quadratic (rather than linear) modulus is exactly what makes the telescoping vanish.",
+    "REUSABLE — Completing the square to localize a global bound: rewriting (f(u)+v)^2-4uv as (v-(2u-f(u)))^2+4u*D(u), then choosing u=f(s) so the shifted center lands exactly at s, turns a global inequality into a local quadratic upper bound on D. A clean localization trick worth remembering.",
+    "REUSABLE — Deriving continuity from a two-sided bound before using it: proving continuity of D from the master inequality (rather than assuming f is continuous) is the correct way to handle 'no regularity' hypotheses; this pattern should be reused whenever a problem states no regularity.",
+    "NOT MISLEADING — The falsification entries (e.g. rejecting D=k*sqrt(x) via (C1) at y->0) are consistent with the proof: a first-order/local expansion alone is insufficient because the D^2 slack term absorbs first-order constraints; only the global quadratic+partition argument is decisive. Correctly flagged as evidence, not proof."
+  ]
+}

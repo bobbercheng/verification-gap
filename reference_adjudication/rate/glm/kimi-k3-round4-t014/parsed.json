@@ -1,0 +1,65 @@
+{
+ "rater": "glm",
+ "case": "kimi-k3-round4-t014",
+ "problem": "3",
+ "group": "C",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 425.0,
+  "input_tokens": 8008,
+  "output_tokens": 501,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "statements": {
+   "L3.1": {
+    "established": "yes",
+    "quote": "In the claiming game played on a multiset M with Liu Bang moving first, Liu Bang can guarantee a total of at least odd(M), and Xiang Yu can guarantee a total of at least even(M). Hence under optimal play Liu Bang obtains exactly odd(M)",
+    "note": "Full induction proof given; reduction to alternating sum fully written."
+   },
+   "L3.2": {
+    "established": "yes",
+    "quote": "some consecutive gap satisfies g:=t_{j+1}-t_j\\le\\frac{S}{2^m-1} ... The total number of cuts is at most (r-1)+(n+1-r)=n ... D(M)=v(B)\\le T_n",
+    "note": "Equivalent route: pigeonhole on subset sums plus chain-realizability and explicit cut strategy, proved for all n."
+   },
+   "L3.3": {
+    "established": "yes",
+    "quote": "Let a_1\\le\\dots\\le a_m be super-increasing with margin \\delta, and let M be obtained from these pieces by at most m-1 cuts ... Then D(M)\\ge\\delta.",
+    "note": "Equivalent route: matching formula plus tree-component argument handles arbitrary interleaving for geometric family; all n."
+   },
+   "answer": {
+    "established": "yes",
+    "quote": "the largest value LB can guarantee is \\boxed{c=\\frac{1+T_n}{2}=\\frac{2^n}{2^{n+1}-1}}",
+    "note": "Correct closed form proved as theorem."
+   }
+  },
+  "S_ref": 2,
+  "notes": "Complete proof: reduction via induction on claiming game, matching-formula lower bound with tree-component argument, pigeonhole/chain upper bound with realizability lemma; all arguments written out for general n."
+ },
+ "anchors": {
+  "L3.1": {
+   "anchored": false,
+   "length": 235,
+   "length_ok": true,
+   "reason": "not found"
+  },
+  "L3.2": {
+   "anchored": false,
+   "length": 140,
+   "length_ok": true,
+   "reason": "not found"
+  },
+  "L3.3": {
+   "anchored": false,
+   "length": 146,
+   "length_ok": true,
+   "reason": "not found"
+  },
+  "answer": {
+   "anchored": false,
+   "length": 85,
+   "length_ok": true,
+   "reason": "not found"
+  }
+ }
+}

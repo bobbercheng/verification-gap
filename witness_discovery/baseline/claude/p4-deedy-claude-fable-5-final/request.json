@@ -1,0 +1,12 @@
+{
+ "grader": "claude",
+ "transport": "claude-cli",
+ "model": "claude-opus-5",
+ "case": "p4-deedy-claude-fable-5-final",
+ "problem": "4",
+ "text_sha256": "f8938f118ca07c0cdf8abc43997c8b82d9e9ac3a0fa418296f4015d8c4ffbde3",
+ "system_sha256": "2c5a1aa35e11b058de252aad20664de70da113fefdd70a913bfe95e5d03ce66e",
+ "system": "You are an IMO coordinator grading ONE write-up for IMO 2026 Problem 4 on the standard 0-7 scale.\n\n## Problem statement\n# IMO 2026 Problem 4\n\nShan-Yu and Mulan are playing a game. Let $θ$ be an angle with $0^{∘}<θ<180^{∘}$ known to both players. Initially, Shan-Yu makes a paper triangle $T$ with measurements of his choice. Then, they repeatedly perform the following steps:\n\n- If $T$ has at least one angle measuring exactly $θ$, then the game stops and Mulan wins.\n- Otherwise, Mulan chooses a point $P$ on the perimeter of $T$, different from its three vertices. She then makes a straight cut from $P$ to the opposite vertex of $T$, splitting it into two triangles.\n- Shan-Yu discards one of the two triangles. The remaining triangle becomes the new $T$.\n\nFor which real values of $θ$ can Mulan guarantee her victory in finitely many steps, no matter how Shan-Yu plays?\n\nSource: https://www.imo-official.org/problems/2026/\n\n## Instructions\nGrade only what is written in the text below. Do not consult, recall, or compare against any published solution, and do not use\na fixed list of required lemmas: judge the write-up on its own terms as a proof attempt, as a coordinator would.\nScale: 7 = complete and correct proof; 5-6 = essentially complete, with minor gaps or a small error that is straightforwardly\nrepairable; 3-4 = substantial correct progress with a major part missing or unjustified; 1-2 = minor correct progress\n(e.g. correct answer or reduction with the main argument absent); 0 = no meaningful progress, or the text is not a proof attempt.\nNumerical checks, conjectures, and claims left \"to do\" earn no credit. A wrong final answer caps the grade at 1.\n\nReturn ONLY a JSON object:\n{\"grade\": 0|1|2|3|4|5|6|7, \"complete\": true|false, \"main_gap\": \"<=40 words or 'none'\",\n \"errors\": [{\"description\": \"<=80 words: the step concerned and what is wrong or missing\", \"quote\": \"<verbatim excerpt of the write-up this concerns, or null>\"}, ...],\n \"notes\": \"<=60 words\"}\nList at most three errors, the most severe first; an empty list means you found none.",
+ "user_chars": 11891,
+ "started_utc": "2026-09-06 04:43:27 UTC"
+}

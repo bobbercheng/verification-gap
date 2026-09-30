@@ -1,0 +1,61 @@
+{
+  "id": "p2-gpt-5.6-sol-pro-main-t028",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 28,
+  "path": "checkpoint_inputs/829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b.md",
+  "bytes": 4768,
+  "sha256": "829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 1496,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 87.1,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1560,
+        "output_tokens": 377,
+        "cache_read_input_tokens": 704,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 6.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "trigonometric factorization reduced to unproven identity (8)",
+    "wrong_answer_stated": false,
+    "notes": "Sine-rule setup (A),(B),(1) correctly encodes all three angle hypotheses, and OM=ON is correctly reduced to (2)/(6). But the final factorization (F) rests on identity (8), explicitly left underived, so the finish is incomplete. No key circle (K) appears; a different, incomplete trig mechanism."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b",
+  "original_bytes": 4768,
+  "input_anonymized": false
+}

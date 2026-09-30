@@ -1,0 +1,30 @@
+{
+ "checker": "gpt",
+ "objection_key": "grader-claude__kimi-k3-round4-t014__e0",
+ "case": "kimi-k3-round4-t014",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 28.8,
+  "input_tokens": 22631,
+  "output_tokens": 1253,
+  "reasoning_output_tokens": 1034,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "So the hypothesis of Lemma 4.1(b) holds, and some ordering of $P\\cup N$ has chain value $g\\le\\frac{S}{2^m-1}$.",
+  "status_as_written": "false_display",
+  "repair_distance": "sentence",
+  "explanation": "Nested absolute difference can depend on ordering, so Theorem 4.2 does not prove the claim for decreasing order. However, its proof explicitly supplies an ordering with the required value, and the subsequent cutting construction works for any specified processing order; it never uses $b_1\\ge\\cdots\\ge b_r$. Thus the universal upper-bound mechanism is present, while the decreasing-order notation is a false cosmetic display. Replace the quoted sentence by one taking the pieces in the ordering supplied by Lemma 4.1."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 110,
+  "length_ok": true,
+  "reason": null
+ }
+}

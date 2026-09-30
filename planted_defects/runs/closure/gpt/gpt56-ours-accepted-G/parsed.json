@@ -1,0 +1,47 @@
+{
+ "gate": "closure",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-G",
+ "base_id": "gpt56-ours-accepted",
+ "type": "G",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.8,
+  "input_tokens": 18021,
+  "output_tokens": 544,
+  "reasoning_output_tokens": 425,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 1,
+  "lower_bound_mechanism": "rank-pair tree argument",
+  "upper_bound_mechanism": "subset-sum pigeonhole with overlay cancellation sketch",
+  "wrong_answer_stated": false,
+  "notes": "The drafting reduction and all-n lower bound are fully argued. The upper bound hinges on the refinement lemma’s overlay construction, but the essential construction and q−1 cut count are explicitly left as “standard; details omitted,” so this mechanism is only sketched, not proved."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 18021,
+    "cached_input_tokens": 12672,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 544,
+    "reasoning_output_tokens": 425
+   },
+   "sec": 14.8,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 1,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

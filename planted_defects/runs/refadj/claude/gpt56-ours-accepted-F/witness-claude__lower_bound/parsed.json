@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted-F",
+ "base_id": "gpt56-ours-accepted",
+ "type": "F",
+ "problem": "3",
+ "objection_key": "witness-claude__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 34.7,
+  "input_tokens": 2,
+  "output_tokens": 2641,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 6620,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5447,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005541999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2641,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 6620,
+    "webSearchRequests": 0,
+    "costUSD": 0.1330565,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2308,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The inference is invalid: floor(r/2) <= q-1 is a global edge count, so a component may carry a loop or cycle while isolated/deficient components compensate. The objection's instance is legitimate (Liu's own 1:2:4 division, Xiang bisecting 4delta; the tie block may be ordered so (x1,x2) is a loop at a_3), and the proof specifically selects the component of a_q, which there is a loop admitting no distinct bipartition, so (3) is never derived. The correct repair (some component must satisfy e_C <= v_C-1, hence is a tree; use that one) appears nowhere in the text; Section 5 only handles n=1. One-sentence fix.",
+  "status_note": null
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "lower_bound"
+}

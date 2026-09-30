@@ -1,0 +1,71 @@
+{
+  "id": "p1-h-93dc480d77a2",
+  "problem": "1",
+  "sha256": "93dc480d77a2043cffb97690baca15d0ffbb94c75fb5c66fa51ea6df92605f0e",
+  "path": "checkpoint_inputs_ext/93dc480d77a2043cffb97690baca15d0ffbb94c75fb5c66fa51ea6df92605f0e.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-main",
+  "turn": 7,
+  "record_ids": [
+    "p1-kimi-k3-main-t007",
+    "p1-deedy-kimi-k3-final"
+  ],
+  "bytes": 8828,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6169,
+        "output_tokens": 623,
+        "output_tokens_details": {
+          "thinking_tokens": 367
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 623,
+            "cache_read_input_tokens": 6169,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 10.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Product/number-of-ones monovariant (type A halves P, type B increases z), plus induction that some entry >1 always survives",
+    "upper_bound_mechanism": "Prime-wise invariance of gcd of valuations under (α,β)→(min,|α−β|), with zero-tuple case handled",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: explicit M = prod p^{gcd_i v_p(a_i)}, valuation move description, finite-move bound with both stopping directions, and full invariance argument including the all-zero valuation case. Computer checks are supplementary, not load-bearing."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

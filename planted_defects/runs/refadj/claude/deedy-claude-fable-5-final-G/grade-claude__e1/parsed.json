@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final-G",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "grade-claude__e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.2,
+  "input_tokens": 2,
+  "output_tokens": 566,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 8508,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 6877,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.006972,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 566,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 8508,
+    "webSearchRequests": 0,
+    "costUSD": 0.1000615,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 220,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The lower bound rests entirely on Lemma 4, whose only substantive step is deferred: \"By a tree-component argument on the multigraph whose vertices are the original pieces ... (standard; details omitted).\" No construction of V_T, no proof that |Xi| <= sum eps_i + [M odd]a_M, and no alternative induction (e.g. x2+x4+...+x_{2k} <= 2^{n-1}+...+2^{n-k}) appears anywhere else in the text. The remaining support for Lemma 4 is a 40000-trial Monte Carlo, which is not a proof. Hence L3.3 is not established as written; only writing out the omitted tree-pairing lemma repairs it.",
+  "objection_severity": "critical"
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e1"
+}

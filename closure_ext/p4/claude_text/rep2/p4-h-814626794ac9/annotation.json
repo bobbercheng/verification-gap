@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-814626794ac9",
+  "problem": "4",
+  "sha256": "814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a",
+  "path": "checkpoint_inputs_ext/814626794ac9fa90e5a285a4426914d61d66d3b97041717bfb2fefc5109c510a.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "7912bb42",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-7912bb42-v1"
+  ],
+  "bytes": 11500,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7422,
+        "output_tokens": 2360,
+        "output_tokens_details": {
+          "thinking_tokens": 2069
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2360,
+            "cache_read_input_tokens": 7422,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 32.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "doubling ladder 2^k*theta up to 90 degrees (flawed step)",
+    "upper_bound_mechanism": "acute-triangle defense for theta>90; claimed finite dyadic invariant",
+    "wrong_answer_stated": true,
+    "notes": "Concludes only theta=180/2^n as a conjecture, omitting 180/n for non-powers of 2; explicitly unresolved for 60, 30. Ladder step 'cut x=2theta-B gives both children 2theta' is false (T1 lacks 2theta) and cut existence unverified. Dyadic finite-invariant claim broken since Mulan may cut off-lattice. Acute defense asserted, not proved. Ends in computational exploration plans."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

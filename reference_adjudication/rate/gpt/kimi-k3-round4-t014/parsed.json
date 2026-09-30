@@ -1,0 +1,55 @@
+{
+ "rater": "gpt",
+ "case": "kimi-k3-round4-t014",
+ "problem": "3",
+ "group": "C",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 118.4,
+  "input_tokens": 47489,
+  "output_tokens": 5345,
+  "reasoning_output_tokens": 4670,
+  "cached_input_tokens": 32640
+ },
+ "parsed": {
+  "statements": {
+   "L3.1": {
+    "established": "partial",
+    "quote": "Suppose LB first takes $p_j$. XY takes a largest remaining piece $\\ell$ [...] and then, moving first on $M''=M\\setminus\\{p_j,\\ell\\}$, guarantees $\\operatorname{odd}(M'')$ by induction.",
+    "note": "After XY takes ℓ, Liu moves next; thus Xiang’s claimed induction and the exact-value reduction are not proved."
+   },
+   "L3.2": {
+    "established": "partial",
+    "quote": "So the hypothesis of Lemma 4.1(b) holds, and some ordering of $P\\cup N$ has chain value $g\\le\\frac{S}{2^m-1}$.",
+    "note": "The lemma supplies some ordering, but the strategy re-sorts B decreasingly; nested absolute differences depend on order."
+   },
+   "L3.3": {
+    "established": "yes",
+    "quote": "With the geometric split, whatever XY does, $D(M)\\ge T_n$, so LB guarantees a share of at least $\\frac{1+T_n}{2}=\\frac{2^n}{2^{n+1}-1}$.",
+    "note": "The matching/tree argument proves the geometric split’s bound against every reply for all n."
+   }
+  },
+  "S_ref": 1,
+  "notes": "The all-n lower bound is complete. The reduction misidentifies whose turn follows Xiang’s move, while the upper-bound construction has an unresolved ordering mismatch."
+ },
+ "anchors": {
+  "L3.1": {
+   "anchored": false,
+   "length": 184,
+   "length_ok": true,
+   "reason": "not found"
+  },
+  "L3.2": {
+   "anchored": true,
+   "length": 110,
+   "length_ok": true,
+   "reason": null
+  },
+  "L3.3": {
+   "anchored": false,
+   "length": 136,
+   "length_ok": true,
+   "reason": "not found"
+  }
+ }
+}

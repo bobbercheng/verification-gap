@@ -1,0 +1,66 @@
+{
+  "id": "p5-deedy-gpt-5.6-sol-max-final",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/5323a7625b4d809f954c00362ee755e7f15b26e98877bd66cfcb782802b3b7fe.md",
+  "bytes": 6311,
+  "sha256": "5323a7625b4d809f954c00362ee755e7f15b26e98877bd66cfcb782802b3b7fe",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3964,
+        "cache_read_input_tokens": 1356,
+        "output_tokens": 1261,
+        "output_tokens_details": {
+          "thinking_tokens": 948
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3964,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1261,
+            "cache_read_input_tokens": 1356,
+            "cache_creation_input_tokens": 3964,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3964
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "RMS-AM-GM applied to x and z=y+c for all c>=0, both inequalities",
+    "upper_bound_mechanism": "Orbit alignment (floor-index matching) forcing p=q, plus openness of {d=0},{d=c} via continuity of Phi and connectedness of R_{>0}",
+    "wrong_answer_stated": false,
+    "notes": "Complete: (S) via x=f(y) equality case giving arithmetic orbits and d>=0; (N) positive displacements equalized by asymptotic alignment with Phi(u,v)=(u-v)^2/(...)->0, then mixed fixed/non-fixed case excluded by open-set/connectedness argument; (V) verified for all x,y and c>=0. Checks of the index bounds and inequalities are valid."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "p5-h-27f4dde8c553",
+  "problem": "5",
+  "sha256": "27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0",
+  "path": "checkpoint_inputs_ext/27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "2587b733",
+  "turn": 1,
+  "record_ids": [
+    "p5-nemotron-2587b733-v1"
+  ],
+  "bytes": 2982,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 16370,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 982,
+        "reasoning_output_tokens": 847
+      },
+      "sec": 22.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "QM-AM-GM verification with algebraic typo",
+    "upper_bound_mechanism": "orbit comparison plus invalid connectedness claim",
+    "wrong_answer_stated": true,
+    "notes": "Structural identity and nonnegativity are correct. Step 3 does not specify the needed coupled choice of orbit indices and misstates the linear term. Step 4 falsely claims two nonempty subsets of a connected set contain arbitrarily close points. Verification incorrectly uses x+y+2c instead of x+y+c, though the intended square is correct."
+  },
+  "S": 0,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

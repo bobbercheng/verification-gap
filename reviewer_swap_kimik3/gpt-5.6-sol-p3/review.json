@@ -1,0 +1,32 @@
+{
+ "task_id": "imo-2026-p3",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Drafting lemma: independently re-derived. The advantage induction V(x)=max_i(x_i - D(x\\{x_i})) is valid, and the parity computation of D(x)-A_i (telescoping to twice a sum of consecutive differences, nonnegative for both odd and even i) is correct; hence greedy is optimal for both players and the first drafter gets exactly (1+D)/2.",
+  "Refinement lemma, lower bound (D >= Gamma): re-derived. With k<=q-1 cuts, r=q+k<=2q-1 pieces give floor(r/2)<=q-1 rank-pair edges on q interval-vertices, so sum of (e_C - v_C) <= -1 and some component is a tree (connected multigraph with e=v-1 has no loops/parallel edges). The bipartition sign assignment makes each in-tree pair contribute +/-(x_{2j-1}-x_{2j}) and all other pairs 0; the unpaired piece contributes at most x_r; the isolated-vertex case (its piece must be the unpaired x_r) is consistent. Since the color classes are distinct subsets, Gamma <= |s_U - s_W| <= D.",
+  "Refinement lemma, upper bound (D <= Gamma): overlay construction verified. Cuts: <=|A|-1 on the B-row, <=(|B|-1)+1 on the A-row (including the s_B cut), plus q-|A|-|B| bisections, totaling <= q-1. Common-refinement cells on [0,s_B] genuinely occur in equal-length pairs; deleting two equal sorted entries preserves D (adjacent copies in a tie block cancel, later ranks shift by two); the residual (A-tail, or the intact A-intervals when B is empty) has discrepancy <= its maximum <= its total = Gamma.",
+  "Xiang's upper bound: for q<=n, bisecting all intervals (q marks, distinct interior points) pairs every piece, D=0, Liu gets 1/2 < c_n. For q=n+1, the 2^{n+1} subset sums in [0,1] with 2^{n+1}-1 gaps summing to 1 give a gap <= 1/(2^{n+1}-1) from two distinct occurrences (even at gap zero); combined with the lemma and (1) this caps Liu at 2^n/(2^{n+1}-1); the algebra in (8) checks out.",
+  "Liu's lower bound: intervals delta,2delta,...,2^n*delta with delta=1/(2^{n+1}-1) sum to 1; marks (2^j-1)delta are distinct and interior; binary uniqueness makes the subset sums exactly 0,delta,...,1, so Gamma=delta; the lemma's lower bound applies to every Xiang play (including fewer or repeated-in-one-interval cuts) giving D>=delta, and greedy drafting yields >= (1+delta)/2 = 2^n/(2^{n+1}-1); the algebra in (10) checks out.",
+  "n=1 case independently solved in full: against the 1/3-2/3 split, any Xiang cut leaves second-largest piece <= 1/3, so Liu gets >= 2/3, and Xiang can hold Liu to exactly 2/3; matches c_1=2/3.",
+  "Section 5 counterexamples recomputed: with marks 1/5,3/5 vs 1/10 the pieces are 1/10,1/10,2/5,2/5 and Liu gets exactly 1/2; with epsilon,1/10 Liu gets 1/2+epsilon < 3/5; the 56-unit grid example gives pieces (7,1,13,17,18) and Liu 32/56=4/7. All arithmetic confirmed.",
+  "Legality of all constructed strategies: overlay cuts and bisection midpoints lie strictly inside Liu's intervals (never at Liu's marks), distinct virtual boundaries map to distinct physical points, cuts in disjoint intervals cannot coincide; the at-most-n mark budget is respected (q-1=n in the critical case).",
+  "Reported values c_1=2/3, c_2=4/7, c_3=8/15, c_4=16/31 and the limit 1/2 are arithmetically correct."
+ ],
+ "unverified_claims": [],
+ "summary": "The proposed answer c_n = 2^n/(2^{n+1}-1) is proved correctly in both directions. The solution decomposes the game into (i) an exact drafting analysis (greedy optimality, value (1+D)/2 with D the alternating sum of sorted piece lengths) and (ii) an exact refinement lemma identifying the minimal achievable D under <=q-1 added cuts with the minimum gap Gamma between distinct subset sums of Liu's interval lengths. The lower bound on D uses a clean rank-pairing/multigraph/tree-component signed-subset-sum argument that I re-derived, including loops, isolated vertices, and odd piece counts. The upper bound uses a common-refinement overlay with a correct cut count (|A|+|B|-1 plus bisections = q-1) and a correct equal-pair cancellation argument. Xiang's cap follows from a subset-sum pigeonhole (or full bisection when q<=n); Liu's matching guarantee uses binary interval lengths 2^j/(2^{n+1}-1) whose subset sums are equispaced. Small cases (n=1 fully, n=2 constructions) and all Section 5 refutation arithmetic check out. Distinctness and at-most-n constraints are respected by every construction; degenerate cases (B empty, Gamma=0, fewer cuts, ties, ineffective marks) are handled. The grid-check references are explicitly non-load-bearing, so there is no experiment-to-proof gap. No fatal or substantive issues found.",
+ "transfer_assessment": [
+  "Reusable: for sequential piece-claiming with static items, greedy is optimal and the first player's value is (total + alternating sum of sorted items)/2; the advantage-induction with the parity identity D(x)-A_i>=0 is a clean template.",
+  "Reusable: pairing adjacent ranks of a refinement to build a multigraph on the coarse partition, then extracting a tree component whose bipartition yields a signed subset-sum bounded by the alternating discrepancy — a general device linking cut/refinement games to subset-sum structure.",
+  "Reusable: the overlay/common-refinement construction that realizes a subset-sum gap s_A - s_B using only |A|+|B|-1 cuts, plus the fact that deleting equal pairs from a sorted list never changes the alternating sum.",
+  "Reusable: superincreasing (binary) weights make all 2^q subset sums distinct and equispaced, which simultaneously maximizes the minimum subset-sum gap and, via the pigeonhole on 2^q sums in [0,1], matches the universal upper bound 1/(2^q-1).",
+  "Potentially misleading: equal-length interval heuristics for the first player (they collapse to value 1/2 under bisection responses); any transfer must retain the 'at most n marks' quantifier and the possibility of using fewer marks, repeated cuts inside one interval, and coincident boundaries, all of which this proof explicitly handles."
+ ]
+}

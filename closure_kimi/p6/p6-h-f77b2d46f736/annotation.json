@@ -1,0 +1,38 @@
+{
+  "id": "p6-h-f77b2d46f736",
+  "problem": "6",
+  "sha256": "f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39",
+  "path": "checkpoint_inputs/f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "12402695",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-12402695-v1"
+  ],
+  "bytes": 11926,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 184.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "new-prime minimality contradiction via smaller candidate from earlier primes (sketched only, explicitly unexecuted)",
+    "upper_bound_mechanism": "merge-of-progressions residues mod L plus shifted-sequence uniqueness b_n=a_{n+T}-L (sketched only)",
+    "wrong_answer_stated": true,
+    "notes": "Candidate/hitting-set observation proved, but full 'm is a term iff support hits all terms' only conditional for tail. Prime finiteness explicitly OPEN (core gap). Tail periodicity conditional on unproven Lemmas 2-4; extension to n=1 open. Internal inconsistencies: lcm formula gives L=210 for a_1=105 but table claims 69; Claim 4.1 contradicted by own a_1=15 data."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

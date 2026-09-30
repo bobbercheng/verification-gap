@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted",
+ "base_id": "gpt56-ours-accepted",
+ "type": "O",
+ "problem": "3",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.7,
+  "input_tokens": 18936,
+  "output_tokens": 471,
+  "reasoning_output_tokens": 307,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "none",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_applicable",
+  "repair_distance": "none",
+  "explanation": "The objection’s calculation is correct: the Liu intervals are 7,14,35 over 56, whose distinct subset sums have minimum gap 7/56=1/8. By the proved refinement lemma, optimal Xiang play yields D=1/8 and Liu’s total 9/16, below 4/7. Thus the displayed moves are suboptimal. However, the passage explicitly labels the example as evidence rather than proof, so this error concerns none of L3.1–L3.3 and does not affect the established answer or either bound."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

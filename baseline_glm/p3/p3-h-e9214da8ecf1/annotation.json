@@ -1,0 +1,59 @@
+{
+  "id": "p3-h-e9214da8ecf1",
+  "problem": "3",
+  "sha256": "e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0",
+  "path": "checkpoint_inputs/e9214da8ecf1dc2da356029bbaa0f9fe782ca3ff1a5ac4d9134bb763df9d8cc0.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-gpt-5.6-sol-pro-final",
+    "gpt-5.6-sol-pro-main-t011"
+  ],
+  "bytes": 3625,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 1502,
+        "output_tokens": 24000,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 290.3,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1502,
+        "output_tokens": 196,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 4.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 3,
+    "complete": false,
+    "main_gap": "The full proof is absent: the key partition-refinement theorem (alternating excess extremal bound) is only conjectured, verified numerically for small n, and proved only for n=1.",
+    "notes": "Correct draft-phase reduction (value = x1+x3+...) with a plausible proof, layer-cake reformulation, complete n=1 case, and a conjectured (apparently correct) answer. However, the central argument for general n is missing."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

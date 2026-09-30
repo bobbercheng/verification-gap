@@ -1,0 +1,71 @@
+{
+  "id": "p1-h-e073e996239a",
+  "problem": "1",
+  "sha256": "e073e996239a09dc7f07165fc08db8248312169f6e5468505e4c00950e064580",
+  "path": "checkpoint_inputs_ext/e073e996239a09dc7f07165fc08db8248312169f6e5468505e4c00950e064580.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 6,
+  "record_ids": [
+    "p1-muse-spark-1.1-main-t006",
+    "p1-deedy-muse-spark-1.1-final"
+  ],
+  "bytes": 6757,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5776,
+        "output_tokens": 1036,
+        "output_tokens_details": {
+          "thinking_tokens": 689
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1036,
+            "cache_read_input_tokens": 5776,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "count of entries >1 nonincreasing & bounded by 1 (each move leaves one >1); if it stabilizes at >=2 all later moves have gcd>1 so product strictly decreases forever — contradiction; terminal state has exactly one >1",
+    "upper_bound_mechanism": "per-prime invariant G_p = gcd_i v_p(x_i) preserved via gcd(a,b)=gcd(min(a,b),|a-b|), evaluated at terminal state to give v_p(M)=G_p",
+    "wrong_answer_stated": false,
+    "notes": "Complete: exponent map (min,|a-b|) plus proof that a move never yields two 1s; termination via k-monovariant with product descent, correctly excluding k=0; invariance handles equal and zero valuations parenthetically; explicit M = prod p^{gcd_i v_p(a_i)} with M>1 justified."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

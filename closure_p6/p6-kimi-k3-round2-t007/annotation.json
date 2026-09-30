@@ -1,0 +1,61 @@
+{
+  "id": "p6-kimi-k3-round2-t007",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round2",
+  "turn": 7,
+  "path": "checkpoint_inputs/bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757.md",
+  "bytes": 11071,
+  "sha256": "bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 3818,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 102.8,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3818,
+        "output_tokens": 1270,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 18.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "self-dual intersecting antichain finiteness theorem (Zorn + infinite peeling)",
+    "upper_bound_mechanism": "L = lcm of minimal elements of S_inf; T = count of terms per period; periodicity from a_1",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Step 1 gives the membership characterization (C). Step 2 assembles global periodicity from a_1 with explicit L, T. Finiteness (F) is proved via the self-dual antichain theorem (Step 4), fully written for all cases; Steps 3's claims are correctly argued (pure powers realize minimal supports). No false lemmas."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "bd6057aef3ec542eb8c7f56e42cab32e612e55f6a646d5944e0699df0c3ff757",
+  "original_bytes": 11071,
+  "input_anonymized": false
+}

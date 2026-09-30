@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-ee57fd697d9c",
+  "problem": "3",
+  "sha256": "ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb",
+  "path": "checkpoint_inputs/ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-2"
+  ],
+  "bytes": 15901,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5762,
+        "output_tokens": 16908,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 264.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "1:2:…:2^n division with (false) Splitting Lemma, key accounting asserted",
+    "upper_bound_mechanism": "greedy pairing/halving strategy, verified only for n=1",
+    "wrong_answer_stated": false,
+    "notes": "Answer correct. Reduction to alternating sum established for all n (proof slightly muddled). Lower bound: correct 1:2:…:2^n division, but key A≥1/D step merely asserted via a false Splitting Lemma (5,4→4,3,2 raises A). Upper bound: greedy strategy proved only for n=1; induction abandoned; potential attempt admits 'needs checking'; strategy fails on equal thirds (n=2)."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

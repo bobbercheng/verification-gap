@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "objection_key": "grade-claude__e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 12.6,
+  "input_tokens": 2,
+  "output_tokens": 897,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 6121,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5084,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005179,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 897,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 6121,
+    "webSearchRequests": 0,
+    "costUSD": 0.0844665,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 545,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "none",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_applicable",
+  "repair_distance": "none",
+  "explanation": "Liu's marks (7,21) on 56 units give segments 7,14,35 with subset sums 0,7,14,21,35,42,49,56, so Γ=7 and by the write-up's own refinement lemma Xiang could force D=7, holding Liu to 31.5/56 < 32/56. So the illustration's outcome 4/7 arises from a suboptimal Xiang reply and its match with c_2 is coincidental; the objection's local reading is correct. However, the passage is in Section 5 and is expressly labelled 'This is evidence, not part of the proof.' None of the ledger items (L3.1 reduction, L3.2 upper bound, L3.3 lower bound) rests on it; the proof's bounds come from Sections 1-4. Hence no required statement is affected."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e1"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "deedy-claude-fable-5-final",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+  "bytes": 15474,
+  "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5961,
+        "output_tokens": 8463,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 108.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "rank-pair tree component + signed subset-sum (geometric 1:2:...:2^n marking)",
+    "upper_bound_mechanism": "subset-sum pigeonhole + overlay equal-pair/cross-pairing cuts",
+    "wrong_answer_stated": false,
+    "notes": "Full rigorous all-n proof. Lemma 2 fully proves picking-phase value (1+D)/2 for both players. Lower bound: pairing graph on original pieces must contain a tree component; 2-coloring plus signed subset-sum (3.1) yields D≥u against every reply. Upper bound: pigeonhole gap ≤u plus overlay construction with ≤n marks forces D≤u; mark counts and distinctness checked. Correct closed form boxed."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+  "original_bytes": 15474,
+  "input_anonymized": false
+}

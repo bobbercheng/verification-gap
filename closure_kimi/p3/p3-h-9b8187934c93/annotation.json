@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-9b8187934c93",
+  "problem": "3",
+  "sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+  "path": "checkpoint_inputs/9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-1"
+  ],
+  "bytes": 15914,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 157.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "equal-spacing division (1:2:...:2 over 2n+1) with flawed case analysis",
+    "upper_bound_mechanism": "bisect n largest intervals + unproven (false) pairing lemma",
+    "wrong_answer_stated": true,
+    "notes": "States wrong answer (n+1)/(2n+1) (correct only for n=1; true value 2^n/(2^{n+1}-1)). Sorted alternating-pick reduction used but unjustified. Lower-bound proof rests on false claim Xiang must cut distinct large pieces (n=2: cut small piece plus tiny sliver holds Liu to ~1/2). Upper-bound strategy fails (1/2,1/4,1/4 gives Liu 5/8>3/5); key lemma admitted omitted; text repeatedly abandons attempts."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

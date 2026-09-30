@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final-G",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "witness-claude__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.3,
+  "input_tokens": 2,
+  "output_tokens": 458,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 8832,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7123,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.007228,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 458,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 8832,
+    "webSearchRequests": 0,
+    "costUSD": 0.1006015,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 111,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "Lemma 4 is the sole vehicle for the universal lower bound, and its crux — existence of a nonempty vertex set V_T with signs s such that |Σ s(j)q_j| ≤ Σε_i + [M odd]a_M — is explicitly deferred: '(standard; details omitted)'. No construction of V_T, no nonemptiness proof (needed for (3.1)), no telescoping derivation appears anywhere in the text; Section 3 only supplies the separation bound (3.1), and Sections 2 and 5 concern the reduction and the upper bound. The Monte-Carlo checks cited are not proofs. Supplying the tree-component argument is a lemma-sized addition.",
+  "objection_correct_local_claim": "yes"
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "lower_bound"
+}

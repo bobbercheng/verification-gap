@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3902,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004002,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 3697,
+    "cacheReadInputTokens": 1955,
+    "cacheCreationInputTokens": 4329,
+    "webSearchRequests": 0,
+    "costUSD": 0.1367025,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 3259,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 4329,
+   "cache_read_input_tokens": 1955,
+   "output_tokens": 3697,
+   "output_tokens_details": {
+    "thinking_tokens": 3259
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 4329,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 3697,
+     "cache_read_input_tokens": 1955,
+     "cache_creation_input_tokens": 4329,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 4329
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 42717,
+  "is_error": false,
+  "elapsed_seconds": 43.4,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"quote_faithful\": \"yes\", \"verdict\": \"confirmed\", \"evidence_kind\": \"missing_justification\", \"fatal\": \"yes\", \"explanation\": \"The quote is in the text and means what the objector says: all remaining linear terms are lumped into O(n+m). Expanding (4) at x=x_0+nc, y=y_0+me exactly gives (cn-em)^2 + 2(x_0-y_0)(cn-em) + n[2c^2-4ce+2c(x_0-y_0)] + m[2ce-2e(x_0-y_0)] + const. Since in both cases m grows proportionally to n (Case 1: m=pk, n=qk; Case 2: em=cn+O(1)), an O(n+m) remainder is Theta(n) and can dominate 4c(c-e)n, so (5) as displayed supports nothing. The claim is rescued only by the omitted regrouping 2ce\\u00b7m = 2c(em) = 2c(cn-theta), which converts the m-terms into 4c^2 n plus bounded terms, yielding exactly 4c(c-e)n + O(1). The text merely asserts \\\"+O(1)\\\" in Case 2 and ignores the remainder in Case 1; this computation appears nowhere, so obligation (N)(i) is incomplete as written.\"}"
+   }
+  ]
+ }
+}

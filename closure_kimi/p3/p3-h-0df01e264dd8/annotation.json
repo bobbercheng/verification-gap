@@ -1,0 +1,39 @@
+{
+  "id": "p3-h-0df01e264dd8",
+  "problem": "3",
+  "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+  "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-claude-fable-5-final",
+    "claude-fable-5-main-t013"
+  ],
+  "bytes": 15474,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 102.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "tree-pairing on rank pairs + signed subset-sum (2-color a tree component, geometric signed sum >= u)",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^(n+1)-1) + overlay/cross-pairing cuts leaving equal pairs plus leftover of total <= u",
+    "wrong_answer_stated": false,
+    "notes": "Complete self-contained proof. Lemma 2 proves the picking reduction by induction (greedy optimal both sides); Lemma 4 gives the all-n lower bound via a tree-component 2-coloring argument; Lemma 5 gives the all-n upper bound with an explicit <=n-cut construction, edge cases handled. Numerical checks are supplementary only."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

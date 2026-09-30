@@ -1,0 +1,44 @@
+{
+  "id": "p1-h-46c8c94cf5e8",
+  "problem": "1",
+  "sha256": "46c8c94cf5e8321179e62981a21048334126d80a40fbe4b84018920003cca8cd",
+  "path": "checkpoint_inputs_ext/46c8c94cf5e8321179e62981a21048334126d80a40fbe4b84018920003cca8cd.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 10,
+  "record_ids": [
+    "p1-grok-4.5-main-t010"
+  ],
+  "bytes": 8877,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17698,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 395,
+        "reasoning_output_tokens": 287
+      },
+      "sec": 14.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "well-founded lexicographic potential (k,P)",
+    "upper_bound_mechanism": "primewise gcd of valuations invariant",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. It correctly describes each move primewise, proves termination and exactly one survivor for every play, establishes valuation-gcd invariance including zero/equal cases, and explicitly derives the unique formula for M."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

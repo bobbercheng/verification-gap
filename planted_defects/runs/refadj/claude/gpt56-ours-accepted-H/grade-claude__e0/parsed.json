@@ -1,0 +1,73 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.4,
+  "input_tokens": 2,
+  "output_tokens": 1028,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 6111,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5080,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005175,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1028,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 6111,
+    "webSearchRequests": 0,
+    "costUSD": 0.0876415,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 606,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "Therefore \\(\\Gamma=\\delta\\). Xiang has at most \\(n=(n+1)-1\\) cuts, so the\nlower half of the refinement lemma gives \\(D\\ge\\delta\\) for every one of his\nmarking choices.",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The cut points for consecutive lengths δ,2δ,...,2^nδ are the partial sums (2^j−1)δ, j=1..n, not 2^jδ; e.g. n=1 gives marks at δ=1/3, not 2δ=2/3. So the quoted sentence is literally false. But nothing downstream uses the mark coordinates: the lower bound uses only the interval lengths (9), their unique binary subset sums, Γ=δ, and the refinement lemma's lower half, all stated separately. The corrected positions are still distinct and interior, so L3.3 stands; only the parenthetical description needs the symbol change 2^j → (2^j−1).",
+  "confidence": 0.9
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 167,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   7115,
+   7282
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

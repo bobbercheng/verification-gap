@@ -1,0 +1,71 @@
+{
+  "id": "p4-h-14f66095291e",
+  "problem": "4",
+  "sha256": "14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed",
+  "path": "checkpoint_inputs_ext/14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 2,
+  "record_ids": [
+    "p4-gpt-5.6-sol-pro-main-t002",
+    "p4-deedy-gpt-5.6-sol-pro-final"
+  ],
+  "bytes": 6485,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4933,
+        "output_tokens": 898,
+        "output_tokens_details": {
+          "thinking_tokens": 575
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 898,
+            "cache_read_input_tokens": 4933,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 14.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Normalized angles (units of theta); induction on integer angle m splitting into 1 and m-1; from arbitrary triangle choose integer k in (b, a+b), cut x=k-b so pieces carry angles k and N-k; N=2 case handled",
+    "upper_bound_mechanism": "Shan-Yu keeps a triangle with all three normalized angles nonintegral, starting equilateral; four-case parity check shows at least one child is safe, using s nonintegral",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct on all three obligations: cut formula with existence of cut point, induction lemma covering both pieces, sufficiency including N=2, and necessity via nonintegral-angle invariant with exhaustive four-case argument. Answer stated correctly as theta = 180/N, N >= 2."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

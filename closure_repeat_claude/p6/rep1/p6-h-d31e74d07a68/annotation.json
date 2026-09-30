@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-d31e74d07a68",
+  "problem": "6",
+  "sha256": "d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1",
+  "path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "turn": 1,
+  "record_ids": [
+    "p6-gpt56-ours"
+  ],
+  "bytes": 6345,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4505,
+        "output_tokens": 1873,
+        "output_tokens_details": {
+          "thinking_tokens": 1548
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1873,
+            "cache_read_input_tokens": 4505,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 24.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "large-prime erasure via induction on terms: replace x by m=R·p^k with same small-prime support, R=prod of primes ≤A dividing x, shown m<x, m≥A, and m must be a term",
+    "upper_bound_mechanism": "L=product of primes ≤ a_1 makes σ(m+L)=σ(m) for all m≥a_1, so membership is L-periodic from the first term; T=#terms in [A,A+L-1]",
+    "wrong_answer_stated": false,
+    "notes": "All three components proved in general, not just sampled. Characterization (1) with greedy-skip argument, erasure lemma by induction with careful bound p^k<A<q, and global (not eventual) periodicity from threshold A with correct counting. Numerics explicitly labeled non-essential. Minor edge cases (m=A) handled."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

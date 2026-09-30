@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-gpt__kimi-k3-round3-t007__lower_bound",
+ "case": "kimi-k3-round3-t007",
+ "procedure": "witness",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.2,
+  "input_tokens": 2,
+  "output_tokens": 582,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 3351,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2884,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0029739999999999996,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 582,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 3351,
+    "webSearchRequests": 0,
+    "costUSD": 0.0488915,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 276,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The write-up's lower-bound route (Part A) rests entirely on the matching formula D(M) = min over matchings of sum |p-q| + unmatched, whose proof is given only as \"by an exchange argument\" for the identity sum p_{2k} = max_mu sum min(p,q). No exchange argument appears anywhere in the text; the document itself labels Part A a \"SKETCH\" needing \"writing + numeric checks\". Hence the tree-component/block-lemma chain yielding G >= Delta = 1/(2^{n+1}-1) is conditional on an unproved identity, so L3.3 is not established as written. Supplying the exchange proof is a lemma-sized repair."
+ },
+ "elsewhere_anchor": null
+}

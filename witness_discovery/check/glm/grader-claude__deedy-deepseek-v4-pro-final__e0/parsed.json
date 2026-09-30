@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "deedy-deepseek-v4-pro-final",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 2409.4,
+  "input_tokens": 610,
+  "output_tokens": 426,
+  "cache_read_input_tokens": 1024
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "The write-up's only stated candidate answer is c = (n+1)/(2n+1), which is incorrect for n ≥ 2: the true value is 2^n/(2^{n+1}-1), e.g. 4/7 ≈ 0.571 for n=2, strictly less than 3/5. The witness's n=2 analysis (Xiang splitting the smallest piece and the largest pieces to cap Liu below 3/5) is consistent with this and the halving-of-a argument correctly derives a contradiction from assuming Liu guarantees 3/5. Since the answer obligation is scored 0 for a wrong formula, and the write-up proves nothing, the objection is fatal."
+ }
+}

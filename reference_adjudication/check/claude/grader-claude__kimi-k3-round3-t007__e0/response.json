@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2868,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002963,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 412,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 3322,
+    "webSearchRequests": 0,
+    "costUSD": 0.0443515,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 100,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3322,
+   "cache_read_input_tokens": 1643,
+   "output_tokens": 412,
+   "output_tokens_details": {
+    "thinking_tokens": 100
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3322,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 412,
+     "cache_read_input_tokens": 1643,
+     "cache_creation_input_tokens": 3322,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3322
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 6554,
+  "is_error": false,
+  "elapsed_seconds": 7.2,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"affected_statement\": \"L3.2\", \"objection_correct\": \"yes\", \"established_elsewhere\": \"no\", \"elsewhere_quote\": null, \"status_as_written\": \"not_established\", \"repair_distance\": \"none\", \"explanation\": \"The write-up itself states Part B is open: the pigeonhole gives a signed vector with |sum delta_i a_i| <= T_n S but the text explicitly flags that such a signed sum is 'NOT always realizable by cancel/chain ops' and gives {1,2} as a failing case; the fallback is labelled 'Empirics from prev session ... needs verification & proof'. No mirrored-cut/overlay construction realizing Sigma(S)-Sigma(T) with at most n cuts appears anywhere. Hence L3.2 (upper bound universal over Liu's divisions) is not established; only n=1,2,3 grid computations support it. Supplying it requires a new construction, not a local edit.\"}"
+   }
+  ]
+ }
+}

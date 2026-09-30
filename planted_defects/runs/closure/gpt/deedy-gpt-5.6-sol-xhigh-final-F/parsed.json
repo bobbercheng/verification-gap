@@ -1,0 +1,47 @@
+{
+ "gate": "closure",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-F",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "F",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 18.2,
+  "input_tokens": 18010,
+  "output_tokens": 657,
+  "reasoning_output_tokens": 516,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 1,
+  "lower_bound_mechanism": "weighted tree pairing argument",
+  "upper_bound_mechanism": "subset-sum pigeonhole and common refinement",
+  "wrong_answer_stated": false,
+  "notes": "The lower bound and claiming-stage reduction are complete. The upper-bound pigeonhole step is invalid as written: 2^(n+1)-2 proper subset sums have only 2^(n+1)-3 consecutive gaps, yielding no gap bound of 1/(2^(n+1)-1). Including the empty and full subset sums would repair it, but that argument is not written."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 18010,
+    "cached_input_tokens": 10624,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 657,
+    "reasoning_output_tokens": 516
+   },
+   "sec": 18.2,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 1,
+ "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-b2b39d07c157",
+  "problem": "5",
+  "sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+  "path": "checkpoint_inputs_ext/b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "2587b733",
+  "turn": 2,
+  "record_ids": [
+    "p5-nemotron-2587b733-v2"
+  ],
+  "bytes": 6189,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5400,
+        "output_tokens": 5061,
+        "output_tokens_details": {
+          "thinking_tokens": 4713
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 5061,
+            "cache_read_input_tokens": 5400,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 59.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "substitute f(x)=x+c; both inequalities reduce to (x-y-c)^2>=0 (QM-AM and AM-GM)",
+    "upper_bound_mechanism": "orbit iteration in expanded right inequality + rational/Dirichlet approximation for equal differences; connectedness separation lemma plus (x-y)^2>=c^2+2c(x+y) to exclude mixed fixed/non-fixed case",
+    "wrong_answer_stated": false,
+    "notes": "S (x=f(y) equality) and d>=0 correct; verification complete. Mixed-case exclusion (connectedness lemma + left inequality) is rigorous. But step (5) is incoherent: the residual is called O(n+m), same order as the claimed dominant 4c(c-e)n, then silently treated as O(1); the needed cancellation is never verified, so 'all positive d equal' is only sketched."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

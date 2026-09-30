@@ -1,0 +1,46 @@
+{
+  "task_id": "imo-2026-p2",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 2,
+    "completeness": 2,
+    "rigor": 2,
+    "self_contained": 2
+  },
+  "fatal_issues": [
+    "The cyclic quadrilateral argument incorrectly concludes CK = KK₁ from ∠CNK₁ = ∠CK₁K. In circle (CNK₁K), ∠CNK₁ subtends chord CK₁ and ∠CK₁K subtends chord CK, so the correct deduction is CK = CK₁, not CK = KK₁. This error invalidates the subsequent synthetic proof of perpendicularities (Step 2 of the perpendicularity sketch uses CK = KK₁ to place K₁ on the perpendicular bisector of CK).",
+    "The proof of the critical perpendicularities KM ⟂ AB and LN ⟂ AC is only a sketch (Section 3, 'Proof sketch of perpendicularities') with no rigorous directed-angle chase. The sketch relies on the incorrect CK = KK₁ and does not demonstrate how the angle conditions β, γ together with the cyclic quadrilateral force K onto the perpendicular bisector of AB.",
+    "The algebraic verification in Section 4 is stated but not carried out. The claim that Re(k)=1/2 and Re(l\\bar{z})=|z|²/2 imply |O'-1| = |O'-z| for O' = 2(|k|²l - |l|²k)/(\\bar{k}l - k\\bar{l}) is unproven and non-trivial; a complete write-up would require explicit computation.",
+    "The final conclusion OM = ON depends entirely on the unproven perpendicularities KA = KB and LA = LC, making the proof incomplete as a standalone argument."
+  ],
+  "required_fixes": [
+    "Correct the cyclic quadrilateral conclusion: from ∠CNK₁ = ∠CK₁K = γ and ∠K₁CK = γ (hypothesis), deduce triangle CK₁K is isosceles with CK = CK₁ (not CK = KK₁).",
+    "Provide a complete directed-angle proof that KM ⟂ AB (i.e., K lies on the perpendicular bisector of AB) using the correct equalities CK = CK₁, the cyclic quadrilateral CNK₁K, and the angle conditions β, γ. The symmetric argument for LN ⟂ AC must also be fully written.",
+    "Either complete the synthetic perpendicularity proof, or fully expand the complex-number verification showing |O'-1|² = |O'-z|² from Re(k)=1/2 and Re(l\\bar{z})=|z|²/2 with the given formula for O'.",
+    "Ensure all steps are justified without gaps; the current proof has multiple 'proof sketch' and 'algebraic verification (stated but not fully expanded)' sections that must be replaced with complete reasoning."
+  ],
+  "verified_claims": [
+    "The spiral similarity S centered at A with ratio AC/AB and rotation ∠BAC sends B ↦ C and M ↦ N (since M,N are midpoints).",
+    "Lemma 1: S(K) lies on ray CL (from ∠KBA = ∠ACL = α and angle preservation of S).",
+    "Lemma 2: ∠(CA, NS(K)) = γ = ∠(CS(K), CK) (from ∠BMK = ∠LCK = γ and angle preservation).",
+    "Lemma 3: ∠(CS(L), CS(K)) = β = ∠(LN, CA) (from ∠LBK = ∠LNC = β and angle preservation).",
+    "With directed angles modulo π, points C, N, K₁=S(K), K are concyclic because ∠CNK₁ = ∠CK₁K = γ.",
+    "From the cyclic quadrilateral and ∠K₁CK = γ (hypothesis), triangle CK₁K is isosceles with CK = CK₁.",
+    "The homothety reduction: OM = ON ⇔ O lies on perpendicular bisector of MN ⇔ O' = H_{A,2}(O) lies on perpendicular bisector of BC, where O' is the circumcenter of A, 2K, 2L.",
+    "If KA = KB and LA = LC, then in complex coordinates with A=0, B=1, C=z, we have Re(k)=1/2 and Re(l\\bar{z})=|z|²/2, and O' = 2(|k|²l - |l|²k)/(\\bar{k}l - k\\bar{l}) is the correct circumcenter formula."
+  ],
+  "unverified_claims": [
+    "CK = KK₁ (false; the correct equality is CK = CK₁).",
+    "KM ⟂ AB and LN ⟂ AC (the perpendicularities are only sketched, not proven).",
+    "KA = KB and LA = LC (depend on the unproven perpendicularities).",
+    "The algebraic implication Re(k)=1/2 and Re(l\\bar{z})=|z|²/2 ⇒ |O'-1| = |O'-z| (stated without computation).",
+    "The final conclusion OM = ON (depends on all the above unverified claims)."
+  ],
+  "summary": "The candidate proof identifies the correct central mechanism (spiral similarity at A mapping B→C, M→N) and correctly establishes the first three lemmas and the cyclic quadrilateral CNK₁K. However, it contains a fatal algebraic error in deducing CK = KK₁ instead of CK = CK₁ from the cyclic quadrilateral. The critical perpendicularities KM ⟂ AB and LN ⟂ AC are only sketched and rely on this error. The complex-number verification is stated but not executed. The proof is incomplete and requires substantial revision to fix the chord-equality error, complete the perpendicularity proof, and verify the algebraic step.",
+  "transfer_assessment": [
+    "Reusable: Spiral similarity at a vertex mapping midpoints (B→C, M→N) is a powerful and standard technique for IMO geometry problems with midpoints and angle conditions.",
+    "Reusable: Homothety reduction OM=ON ⇔ circumcenter of scaled triangle on perpendicular bisector of BC (via H_{A,2}) is a clean equivalence transformation.",
+    "Misleading: The incorrect deduction CK = KK₁ from equal inscribed angles in a cyclic quadrilateral is a cautionary example; one must carefully identify which chords are subtended by which angles (here ∠CNK₁ subtends CK₁, ∠CK₁K subtends CK).",
+    "Reusable: Converting angle conditions to distance equalities (perpendicular bisectors) via cyclic quadrilaterals and isosceles triangles is a standard synthetic strategy, but the execution here is flawed."
+  ]
+}

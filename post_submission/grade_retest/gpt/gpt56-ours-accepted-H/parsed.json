@@ -1,0 +1,46 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 49.6,
+  "input_tokens": 17191,
+  "output_tokens": 2485,
+  "reasoning_output_tokens": 2320,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": false,
+  "main_gap": "The stated explicit cut positions do not produce the claimed binary interval lengths; replacing them by the cumulative sums fixes the proof.",
+  "errors": [
+   {
+    "description": "For interval lengths δ, 2δ, …, 2^nδ, the marks must be (2^j−1)δ for 1≤j≤n, not 2^jδ. The preceding construction is valid, so this is a straightforward local correction.",
+    "quote": "Thus his marks are \\(2^j\\delta\\) for \\(1\\le j\\le n\\)"
+   }
+  ],
+  "notes": "Apart from this erroneous formula for the mark locations, the drafting lemma, refinement lemma, and matching bounds form a coherent and essentially complete proof."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 52,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    6887,
+    6939
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_retest",
+ "run_tag": "_retest",
+ "transport_choice": "cli"
+}

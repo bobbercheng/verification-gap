@@ -1,0 +1,44 @@
+{
+  "id": "p1-h-e44bf6e39892",
+  "problem": "1",
+  "sha256": "e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55",
+  "path": "checkpoint_inputs_ext/e44bf6e398926288265458bf46e3c88c73121bce41f2f70ea19c5c151b1dca55.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "2ede1c6b",
+  "turn": 1,
+  "record_ids": [
+    "p1-glm52-2ede1c6b-v1"
+  ],
+  "bytes": 6115,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17322,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 611,
+        "reasoning_output_tokens": 478
+      },
+      "sec": 21.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic potential; flawed survivor argument",
+    "upper_bound_mechanism": "per-prime valuation-gcd invariant",
+    "wrong_answer_stated": true,
+    "notes": "Termination is valid. However Section 3 falsely claims that a prime dividing some initial entry implies the gcd of all its valuations is positive; e.g. board {2,3} has every such gcd zero. Although Section 2 contains ingredients showing each move retains a non-1 output, it never turns them into the required preservation argument."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

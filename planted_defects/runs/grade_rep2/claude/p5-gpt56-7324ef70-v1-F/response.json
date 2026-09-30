@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2953,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003048,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 3096,
+    "cacheReadInputTokens": 699,
+    "cacheCreationInputTokens": 3273,
+    "webSearchRequests": 0,
+    "costUSD": 0.11048949999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2702,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3273,
+   "cache_read_input_tokens": 699,
+   "output_tokens": 3096,
+   "output_tokens_details": {
+    "thinking_tokens": 2702
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3273,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 3096,
+     "cache_read_input_tokens": 699,
+     "cache_creation_input_tokens": 3273,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3273
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 32461,
+  "is_error": false,
+  "elapsed_seconds": 33.0,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"grade\": 7, \"complete\": true, \"main_gap\": \"none\", \"errors\": [{\"description\": \"Sign typo in the expansion for the lower (AM-GM) inequality: the correct expansion is (t-y)^2 + 4(t+c)(c-b), not (b-c). The subsequent displayed conclusion (5), b-c \\u2264 (t-y)^2/(4(t+c)), is the correct consequence of the correct expansion, so this is a transcription slip that does not affect the argument.\", \"quote\": \"&=(t-y)^2+4(t+c)(b-c).\\n\\\\end{aligned}\\n\\\\]\\nIt follows that\\n\\\\[\\nb-c\\\\le \\\\frac{(t-y)^2}{4(t+c)}\"}], \"notes\": \"Substitution x=f(y) gives f(f(y))+y=2f(y); iterate law forces d\\u22650; the two-sided quadratic estimate |d(y)-d(t)|\\u2264(y-t)^2/(4min) plus telescoping over n subintervals correctly forces d constant. Converse verified as RMS\\u2013AM\\u2013GM. Numerics explicitly non-load-bearing.\"}"
+   }
+  ]
+ }
+}

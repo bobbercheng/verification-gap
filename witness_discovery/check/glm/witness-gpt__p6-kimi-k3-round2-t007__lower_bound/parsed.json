@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p6-kimi-k3-round2-t007",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 252.0,
+  "input_tokens": 3,
+  "output_tokens": 21677,
+  "cache_read_input_tokens": 5184
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and read correctly: the proof of Claim 3.2 derives 'π(T) ∈ S_∞' only from 'T meets every supp(a_i)'. But π is defined only for finite sets, and transversals are not required finite anywhere (Step 4(a) even uses Zorn on possibly infinite chains). The witness {{2,x_n}} is an intersecting antichain of finite prime sets whose minimal transversal {x_n} is infinite, so finiteness of T needs an argument the text nowhere supplies (Lemmas A–D are declared 'NOT needed'). The gap is load-bearing: in Step 4(c), any finite subset of I∪Z_ω lies in some I∪Z_s, which is not a transversal (Case B held), so every transversal in I∪Z_ω is infinite; hypothesis (iii) is thus applied exactly to an infinite minimal transversal, which Claim 3.2 does not cover. Finiteness of C — the write-up's substitute for the erasure lemma (F) — is therefore unproven."
+ }
+}

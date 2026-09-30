@@ -1,0 +1,31 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "The next multiple of a_1 is always admissible, so the greedy sequence exists, is unbounded, and has gaps at most a_1.",
+    "For every m at least a_1, m is selected if and only if its prime support meets the prime support of every sequence term; a skipped m has an earlier coprime witness by greedy minimality.",
+    "For a selected x, the construction m=R p^k has exactly the primes at most a_1 that divide x and satisfies a_1 <= m < x whenever x has a prime factor greater than a_1.",
+    "The small-prime trace induction is non-circular: if the constructed m were skipped, its coprime witness b is strictly smaller than x, so the induction hypothesis for b contradicts disjointness from x.",
+    "Consequently, membership for every m at least a_1 depends only on which primes at most a_1 divide m.",
+    "With L equal to the product of the primes at most a_1, membership is L-periodic on the full half-line starting at a_1, not merely eventually periodic.",
+    "Every length-L integer block starting at or after a_1 contains the same positive number T of terms, and the endpoint a_n+L is selected; hence a_(n+T)=a_n+L for every n.",
+    "The supplied trace experiment was rerun and reported 19,585 tested large-prime terms with no failures; this is consistent evidence and is not used as proof."
+  ],
+  "unverified_claims": [],
+  "summary": "The proposed solution is complete and correct. Its key descent lemma handles the threshold a_1, large-prime erasure, and induction order rigorously, and the resulting modular membership periodicity is correctly converted into the required index translation for all n, including n=1.",
+  "transfer_assessment": [
+    "Reusable: characterize a greedy increasing sequence as the ordered scan of all objects compatible with the eventual selected family; a skipped object then carries an earlier incompatibility witness.",
+    "Reusable: reduce infinite prime-support states to a finite trace by constructing a smaller exact-trace representative above the initial threshold and applying minimal-counterexample induction.",
+    "Reusable: once membership is periodic by value from the initial threshold, count one complete residue block to convert value-periodicity into a fixed index shift.",
+    "Misleading if detached from the proof: pairwise intersection alone does not imply finite constraint stabilization; the causal greedy order and arithmetic descent are essential.",
+    "Misleading if used alone: finite computational trace checks support the lemma but cannot establish its universal quantifiers or exact global periodicity."
+  ]
+}

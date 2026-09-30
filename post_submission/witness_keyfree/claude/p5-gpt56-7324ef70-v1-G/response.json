@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2627,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002727,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 4123,
+    "cacheReadInputTokens": 1318,
+    "cacheCreationInputTokens": 2899,
+    "webSearchRequests": 0,
+    "costUSD": 0.13273400000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 3260,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 2899,
+   "cache_read_input_tokens": 1318,
+   "output_tokens": 4123,
+   "output_tokens_details": {
+    "thinking_tokens": 3260
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 2899,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 4123,
+     "cache_read_input_tokens": 1318,
+     "cache_creation_input_tokens": 2899,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 2899
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 43566,
+  "is_error": false,
+  "elapsed_seconds": 44.2,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"obligations\": {\"reduction\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}, \"lower_bound\": {\"status\": \"not_written\", \"quote\": \"Squaring the lower and the upper inequality, rearranging, and using \\\\(b,c\\\\ge0\\\\) (standard; details omitted) yields\", \"witness\": \"Missing statement: for all t,y>0 with c=d(t), b=d(y), the lower inequality (f(t+c)+y)^2 >= 4(t+c)f(y), i.e. (t+2c+y)^2 >= 4(t+c)(y+b), must be expanded to (t-y)^2 + 4(c-b)(c+t) >= 0 and then, using c+t >= t > 0, yield d(y)-d(t) <= (y-t)^2/(4t) (the one-sided half of (7)). The quoted passage merely asserts the result with 'details omitted'; no algebra is written.\", \"load_bearing\": \"Estimate (7) is the sole input to the telescoping in Section 3; without the GM-side half, |d(v)-d(u)| cannot be bounded and constancy of d does not follow.\"}, \"upper_bound\": {\"status\": \"not_written\", \"quote\": \"Squaring the lower and the upper inequality, rearranging, and using \\\\(b,c\\\\ge0\\\\) (standard; details omitted) yields\", \"witness\": \"Missing statement: for all t,y>0 with c=d(t), b=d(y), the upper inequality 2((t+c)^2+(y+b)^2) >= (t+2c+y)^2 must be expanded to (t-y)^2 + 2(b-c)(b+c+2y) >= 0 and then, using b+c >= 0 so b+c+2y >= 2y, yield d(t)-d(y) <= (t-y)^2/(4y) (the other half of (7)). The text asserts this outcome with 'details omitted' and writes no derivation.\", \"load_bearing\": \"The other one-sided half of (7) is needed for the absolute value in (7) and hence for the telescoping bound on |d(v)-d(u)| in Section 3; it is not written.\"}}, \"S_valid\": 0, \"wrong_answer_stated\": false, \"notes\": \"Correct answer f(x)=x+C, C>=0. Section 1 (iterate law, d(f(t))=d(t), d>=0) and Section 4 converse are fully written and valid. The key two-sided estimate (7) is asserted 'standard; details omitted', so both halves are not_written; Section 3 telescoping is valid given (7).\"}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-G",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "G",
+ "problem": "5",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 36.4,
+  "input_tokens": 17468,
+  "output_tokens": 1453,
+  "reasoning_output_tokens": 1271,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L5.5",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Estimate (7) is asserted with its algebra explicitly omitted, and Section 3 depends entirely on it. No other passage proves constancy while covering fixed points. A short derivation would suffice: the squared lower inequality gives b-c <= (y-t)^2/(4(t+c)) <= (y-t)^2/(4t); interchanging t and y gives c-b <= (y-t)^2/(4(y+b)) <= (y-t)^2/(4y). Combining these yields (7). As written, that derivation is absent."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

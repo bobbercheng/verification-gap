@@ -1,0 +1,53 @@
+{
+ "checker": "claude",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 49.0,
+  "input_tokens": 2,
+  "output_tokens": 3607,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 7897,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5337,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005431999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 3607,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 7897,
+    "webSearchRequests": 0,
+    "costUSD": 0.169155,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 3245,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and is the case split the rest of §4–§7 rests on. As literally stated the dichotomy is false: f(x)=x+1 satisfies (1) (QM-AM-GM, as the text's own Verification shows), has V={1} with at most one positive value, yet g is not identically 0 and branch (ii) fails since it demands 'both values attainable'. This particular omission is nearly self-repairing (V={c} is exactly the target conclusion, and §7 states g≡c). The second half of the witness is a real gap: the dichotomy presupposes g≥0, but the text only records g(x)>-x and §3 rules out two distinct POSITIVE values; nowhere is a negative value of g excluded (the easy orbit argument x+ng(x)>0 from (4) is never written). Hence necessity as written does not cover all cases.",
+  "confidence": "high"
+ }
+}

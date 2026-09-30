@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-681ea6d2ed0a",
+  "problem": "3",
+  "sha256": "681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4",
+  "path": "checkpoint_inputs/681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c3"
+  ],
+  "bytes": 14776,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 7298,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 465,
+        "output_tokens_details": {
+          "thinking_tokens": 195
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 7298,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 465,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 7298,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 7298
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 7.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n config + halving pair; induction/merge inequality named but unproved (only n=1 proved, grid/FP evidence)",
+    "upper_bound_mechanism": "explicit b=1/3 cut for n=1 only; no subset-sum/pigeonhole argument for general n",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula stated explicitly but honestly labeled conjecture for n>=2. Draft-game odd-rank reduction is fully and correctly proved for all n. Both bounds proved only for n=1; general-n claims rest on numerics/grid search, which the author correctly declines to treat as proof."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

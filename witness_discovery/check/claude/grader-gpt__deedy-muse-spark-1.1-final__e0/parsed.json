@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.2,
+  "input_tokens": 2,
+  "output_tokens": 990,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 11350,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9119,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009214,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 990,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 11350,
+    "webSearchRequests": 0,
+    "costUSD": 0.1389305,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 630,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quoted sentences appear in the text (separated by one sentence: \"Need to prove best response for Xiang among all allowed splits is indeed to split each big once... We tested n=2 case where splitting one big into 3 gave larger Liu share.\"), and mean what the objection says. The only rigorous computation in the write-up is the parity/cancellation argument for the multiset {d+δ_i, d-δ_i} ∪ {d}, i.e. exactly the case where each 2d piece receives exactly one cut. For Xiang responses that split some piece into 3+ parts, or use fewer than n cuts, the text offers only two n=2 numerical examples (0.7 > 0.6, and 0.6) and then explicitly writes \"Need to prove...\". Nowhere else in the text is this case handled. Hence the lower bound (L) is not established for all n; the step is essential to the claimed guarantee."
+ }
+}

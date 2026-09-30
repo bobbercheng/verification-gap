@@ -1,0 +1,38 @@
+{
+  "id": "p2-h-2e75528ccfd1",
+  "problem": "2",
+  "sha256": "2e75528ccfd14f24a629b7e148b17e0e565560a6d9b2e1fffa16844879a99596",
+  "path": "checkpoint_inputs/2e75528ccfd14f24a629b7e148b17e0e565560a6d9b2e1fffa16844879a99596.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 31,
+  "record_ids": [
+    "p2-gpt-5.6-sol-max-main-t031"
+  ],
+  "bytes": 4923,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 112.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "algebraic key relation 2bq-2cp=b^2-c^2 reduced to Groebner elimination (claimed, not written)",
+    "upper_bound_mechanism": "oblique-coordinate identity OM^2-ON^2 = -cp/2+bq/2+(c^2-b^2)/4, so (V) forces OM=ON",
+    "wrong_answer_stated": false,
+    "notes": "Sound computational route: three angle conditions fully encoded as quadratics (II) with derivation shown; finish from (V) proved. But the central implication (II)=>(V) — the analogue of the key circle — is only certified by an unpresented Groebner computation and numerics; explicitly flagged as the open gap. No human-verifiable proof of the core step."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

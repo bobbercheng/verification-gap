@@ -1,0 +1,44 @@
+{
+  "id": "glm53-c4",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 4,
+  "path": "checkpoint_inputs/323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15.md",
+  "bytes": 9294,
+  "sha256": "323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3684,
+        "output_tokens": 4161,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 49.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric partition + layer-cake XOR-merge induction (incomplete)",
+    "upper_bound_mechanism": "split-at-k* + counting lemma / pairing-refinement moves (incomplete)",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form stated as proposed answer. Greedy reduction to alternating sum written out with pairing argument. Lower bound: geometric division given; only n≤2 and uncut-largest case proved; XOR-merge induction explicitly open. Upper bound: counting lemma and split-at-k* proved only for nonnegative-gap regime plus n≤2; negative-gap Lemma X1 open. Both all-n mechanisms sketched, not established."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "323ceb8b7c17cbba12fcf7c40ea21c615fbe5bdb4fa07523244fa4524e560b15",
+  "original_bytes": 9294,
+  "input_anonymized": false
+}

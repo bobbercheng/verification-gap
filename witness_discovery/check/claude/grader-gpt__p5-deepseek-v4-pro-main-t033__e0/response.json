@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5238,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005332999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1888,
+    "cacheReadInputTokens": 1955,
+    "cacheCreationInputTokens": 5813,
+    "webSearchRequests": 0,
+    "costUSD": 0.1063175,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1503,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5813,
+   "cache_read_input_tokens": 1955,
+   "output_tokens": 1888,
+   "output_tokens_details": {
+    "thinking_tokens": 1503
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5813,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1888,
+     "cache_read_input_tokens": 1955,
+     "cache_creation_input_tokens": 5813,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5813
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 25275,
+  "is_error": false,
+  "elapsed_seconds": 25.9,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"quote_faithful\": \"yes\", \"verdict\": \"confirmed\", \"evidence_kind\": \"invalid_inference\", \"fatal\": \"yes\", \"explanation\": \"The quoted dichotomy is verbatim and is used essentially: Lemma 1 invokes \\\"b = g(z) \\\\in \\\\{0,c\\\\} (because V \\\\subseteq \\\\{0,c\\\\})\\\", and \\u00a77 concludes from S_0 = \\u2205 that g \\u2261 c. But \\u00a73 only proves that V contains at most one POSITIVE number; nothing there or anywhere else in the text excludes negative values of g. The only remark on sign is \\\"g(x) > -x\\\", which does not give g \\u2265 0. So the step from \\\"at most one positive value\\\" to \\\"V \\u2286 {0,c}\\\" does not follow. The objector's repair is also correct: if g(x) = d < 0, then (4) gives g(x+nd) = d by induction, and each x+nd = f(x+(n-1)d) > 0, contradicting x+nd \\u2192 -\\u221e. Since this fact is needed but never proved, the necessity/structural obligation is incomplete as written.\"}"
+   }
+  ]
+ }
+}

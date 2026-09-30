@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-66a2948b3fd5",
+  "problem": "5",
+  "sha256": "66a2948b3fd5a27039c4d713c83fbff7da5163356cf3ad3fdaf211387420aacb",
+  "path": "checkpoint_inputs_ext/66a2948b3fd5a27039c4d713c83fbff7da5163356cf3ad3fdaf211387420aacb.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 2,
+  "record_ids": [
+    "p5-gpt-5.6-sol-max-main-t002"
+  ],
+  "bytes": 5820,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5119,
+        "output_tokens": 1259,
+        "output_tokens_details": {
+          "thinking_tokens": 957
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1259,
+            "cache_read_input_tokens": 5119,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "RMS-AM-GM applied to x and z=y+c for all c>=0",
+    "upper_bound_mechanism": "orbit alignment (floor-index matching) forcing p=q, then openness of A={d=0}, B={d=c} via continuity of Phi plus connectedness of R_{>0}",
+    "wrong_answer_stated": false,
+    "notes": "Complete: (S) f(f(y))=2f(y)-y with d>=0 from positivity of orbit; (N)(i) rigorous asymptotic alignment giving p<=q and q<=p; (N)(ii) mixed case excluded by c<=Phi(x,y) plus connectedness, covering the identity/fixed-point case; (V) both inequalities verified for all x,y,c>=0."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

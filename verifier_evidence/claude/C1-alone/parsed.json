@@ -1,0 +1,18 @@
+{
+ "claim_id": "C1",
+ "condition": "alone",
+ "verifier": "claude",
+ "model": "claude-opus-5",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "The sequence is non-increasing, so later terms may fall below 1. E.g., q_1 = 2, q_k = 1/2 for k >= 2: positive, q_1 > 1, q_{k+1} <= q_k, yet q_2 = 1/2 < 1. Monotone decrease from above 1 gives no lower bound of 1.",
+  "witness_valid": null,
+  "witness_reason": null
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": null
+ },
+ "elapsed_seconds": 5.1
+}

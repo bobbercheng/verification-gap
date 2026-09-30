@@ -1,0 +1,44 @@
+{
+  "id": "glm53-c2",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 2,
+  "path": "checkpoint_inputs/e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d.md",
+  "bytes": 11002,
+  "sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4468,
+        "output_tokens": 5757,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 64.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "superincreasing alternating-sum (Conjecture L) with pairing reduction; proved only for n≤2",
+    "upper_bound_mechanism": "halving n largest pieces (V=1/2+δ/2, non-tight); exhaustive case analysis for n≤2",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula stated only as conjecture; rigorous both-direction proofs only for n=1,2. Reduction to odd-sum asserted as 'standard', not argued. General-n lower bound (Conjecture L, interleaving case) and tight upper bound (Conjecture X) open; halving yields only weak all-n upper bound 1/2+1/(2(n+1)). Earlier wrong candidates explicitly disproved."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+  "original_bytes": 11002,
+  "input_anonymized": false
+}

@@ -1,0 +1,71 @@
+{
+  "id": "p6-h-5effa7f8941a",
+  "problem": "6",
+  "sha256": "5effa7f8941a24e7e3fb4e6a5d9c0a4a0df080fc87b3bec389a596379a2cd372",
+  "path": "checkpoint_inputs/5effa7f8941a24e7e3fb4e6a5d9c0a4a0df080fc87b3bec389a596379a2cd372.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p6-deedy-gpt-5.6-sol-max-final",
+    "p6-gpt-5.6-sol-max-main-t006"
+  ],
+  "bytes": 3406,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2967,
+        "output_tokens": 827,
+        "output_tokens_details": {
+          "thinking_tokens": 551
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 827,
+            "cache_read_input_tokens": 2967,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "sketched: S_N periodic mod product of primes dividing a_1...a_N gives constant index shift (indexing argument admitted incomplete)",
+    "wrong_answer_stated": false,
+    "notes": "Sets up admissible sets S_n, bounded gaps 1<=a_{n+1}-a_n<=a_1, and a conditional stabilization criterion (S_N pairwise non-coprime => S_n=S_N). Finiteness/large-prime erasure is explicitly unproved ('remains to prove finite stabilization'); the n=1 periodicity assembly is only outlined. Examples computed, no false lemma asserted."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,31 @@
+{
+ "task_id": "imo-2026-p1",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Move output product: gcd(m,n) * lcm(m,n)/gcd(m,n) = mn/g, hence new board product P' = P/g; with g>=2 this strictly decreases P, and with g=1 (coprime pair, outputs 1 and mn) P is unchanged while the count K of entries >1 drops by exactly 1. So (P,K) strictly decreases lexicographically and the order is well-founded (P is a positive integer bounded below, K <= 2026), proving termination for every strategy.",
+  "A legal move never eliminates all nonunits (if g>1 output g>1; if g=1 output mn>1), and with two nonunits a move is always available; since initially all 2026 entries exceed 1, every maximal play ends after finitely many moves with exactly one entry M>1. This proves part 1.",
+  "Prime-wise reduction: a move sends the pair of p-adic exponents (a,b) to (min(a,b), |a-b|), because v_p(gcd)=min and v_p(lcm/gcd)=max-min; verified including the zero cases (0,b)->(0,b) and (a,a)->(a,0).",
+  "Euclid's identity gcd(a,b)=gcd(min(a,b),|a-b|) holds for all nonnegative a,b including zeros, so the gcd of each prime's full exponent list G_p is invariant under every move (associativity of gcd).",
+  "At termination the exponent list is (v_p(M),0,...,0), whose gcd is v_p(M); hence v_p(M) equals the initial G_p for every prime p. Primes absent initially stay absent (min(0,0)=0, |0-0|=0), and unique factorization yields M = prod_p p^{gcd(v_p(A_1),...,v_p(A_2026))}, which depends only on the initial board. This proves part 2 and is a strengthening of it.",
+  "Independently re-derived sanity checks: (2,3)->(1,6) (sum rises 5->7, product fixed, showing naive monotone potentials fail); (4,8)->(4,2)->(2,2)->(2,1) terminal 2, matching gcd(2,3)=1 and refuting 'final = lcm'; (12,18)->(6,6)->(6,1) terminal 6 matches formula; (6,10)->(2,15)->(1,30) terminal 30 matches formula; (4,8,9) terminates at 18 = 2^gcd(2,3,0) * 3^gcd(0,0,2) along two different move orders; (m,m)->(m,1) confirms legality of equal values in different places.",
+  "Boundary conventions used are sound: gcd(0,...,0)=0, gcd(c,0,...,0)=c, and lcm/gcd is an integer since gcd | m | lcm; all board entries remain positive integers so P is well defined throughout."
+ ],
+ "unverified_claims": [],
+ "summary": "Correct, complete, and self-contained solution. Part 1 is proved by a lexicographic potential (board product, number of entries >1) that strictly decreases in every move, with a clean two-case split on gcd=1 vs gcd>1, plus the observation that a move never removes the last nonunit and a stuck position has at most one nonunit. Part 2 is proved by tracking, for each prime separately, the gcd of the exponent vector: a move acts on exponents as the Euclidean-style map (a,b)->(min(a,b),|a-b|), which preserves the gcd, so the terminal value satisfies v_p(M)=gcd of initial p-adic valuations for every p, giving the closed form in (1). Degenerate cases (equal entries in different places, coprime pairs, zero exponents, primes absent initially) are explicitly handled. The listed computational evidence is explicitly non-load-bearing and was not re-executed, but the proof does not depend on it. No gaps, circularity, or quantifier changes found; all critical steps independently re-derived and spot-checked on examples.",
+ "transfer_assessment": [
+  "Reusable: lexicographic potential (P, K) = (product of entries, count of nonunits) with a case split on whether the chosen gcd equals 1 — a general pattern for proving termination of replacement systems where a single monotone quantity fails.",
+  "Reusable: reducing a multiplicative replacement rule prime-by-prime to an additive operation on exponent tuples; here (a,b)->(min(a,b),|a-b|), a Euclidean step, so the multiset gcd of exponents is an invariant that pins down the unique terminal value without needing Newman's lemma or local confluence.",
+  "Reusable: 'a move never destroys the last nonunit' combined with 'stuck iff fewer than two nonunits' to force a unique-count terminal configuration.",
+  "Reusable: expressing the terminal value as a product over primes of p^{gcd of valuations}, which is stronger than choice-independence and immediately settles invariance questions.",
+  "Misleading: naive monotone potentials — the sum of entries increases under (2,3)->(1,6) and the product alone is unchanged there, so both fail without the second coordinate K.",
+  "Misleading: guessing the terminal value as lcm or gcd of the initial entries; the true value uses gcd of valuations (not min), e.g. (4,8) ends at 2 while gcd(4,8)=4 and lcm=8; also prime factors migrate between places (e.g. (6,10)->(2,15)), so tracking whole integers per position is the wrong bookkeeping."
+ ]
+}

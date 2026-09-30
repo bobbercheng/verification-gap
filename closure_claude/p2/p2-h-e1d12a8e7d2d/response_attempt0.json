@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-5",
+ "cli": "claude",
+ "cli_model_usage": {
+  "claude-haiku-4-5-20251001": {
+   "inputTokens": 2941,
+   "outputTokens": 20,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.003041,
+   "contextWindow": 200000,
+   "maxOutputTokens": 32000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-4-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 2,
+   "outputTokens": 1749,
+   "cacheReadInputTokens": 947,
+   "cacheCreationInputTokens": 3302,
+   "webSearchRequests": 0,
+   "costUSD": 0.0772285,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 1481,
+   "canonicalModel": "claude-opus-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3302,
+  "cache_read_input_tokens": 947,
+  "output_tokens": 1749,
+  "output_tokens_details": {
+   "thinking_tokens": 1481
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3302,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "not_available",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1749,
+    "cache_read_input_tokens": 947,
+    "cache_creation_input_tokens": 3302,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3302
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "num_turns": 1,
+ "duration_ms": 23404,
+ "is_error": false,
+ "elapsed_seconds": 24.0,
+ "content": [
+  {
+   "type": "text",
+   "text": "{\"answer\": 1, \"reduction\": 2, \"lower_bound\": 0, \"upper_bound\": 1, \"lower_bound_mechanism\": \"none\", \"upper_bound_mechanism\": \"OM^2-ON^2 via circle coefficients P,Q; reduced to unproved polynomial identity T=0\", \"wrong_answer_stated\": false, \"notes\": \"Goal correctly stated but strategy is pure elimination, admittedly incomplete ('no human-readable proof yet'). All three angle hypotheses are genuinely encoded via sine-law relations in BMK/BCK and CNL/BCL, giving E_R=E_D=0 (some simplification asserted). No key circle through A,K,L is even attempted. Finish is only a reduction to an unexecuted Groebner/residual computation.\"}"
+  }
+ ]
+}

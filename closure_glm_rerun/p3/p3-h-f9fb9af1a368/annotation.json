@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-f9fb9af1a368",
+  "problem": "3",
+  "sha256": "f9fb9af1a368266c234311e910e64dde7772f2248fb8950c96175d6074cb9d45",
+  "path": "checkpoint_inputs/f9fb9af1a368266c234311e910e64dde7772f2248fb8950c96175d6074cb9d45.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 14,
+  "record_ids": [
+    "grok-4.5-main-t014"
+  ],
+  "bytes": 1710,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1037,
+        "output_tokens": 4356,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 64.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:4-style cuts (1/7, 3/7), n≤2 only, n=2 numerical",
+    "upper_bound_mechanism": "pairing/matching Xiang response (named only)",
+    "wrong_answer_stated": false,
+    "notes": "Tracking file, full proof empty. Correct form 2^n/(2^(n+1)-1) appears only as a conjecture matching n≤2 data. n=1 claimed by hand; n=2 cuts 1/7,3/7 unverified numerics. Upper bound is one named idea with no instance. No reduction to alternating sum of sorted lengths anywhere."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

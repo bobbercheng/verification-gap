@@ -1,0 +1,84 @@
+{
+ "grader": "claude",
+ "case": "kimi-k3-round3-t007",
+ "problem": "3",
+ "group": "C",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 17.9,
+  "input_tokens": 2,
+  "output_tokens": 1239,
+  "cache_read_input_tokens": 761,
+  "cache_creation_input_tokens": 3093,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2738,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002843,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1239,
+    "cacheReadInputTokens": 761,
+    "cacheCreationInputTokens": 3093,
+    "webSearchRequests": 0,
+    "costUSD": 0.062295500000000004,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 713,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 2,
+  "complete": false,
+  "main_gap": "Upper bound (Part B) entirely open; answer only conjectured and checked for n=1,2,3. Part A is a compressed sketch with unproved supporting claims.",
+  "errors": [
+   {
+    "description": "The upper bound — that Xiang can always force Liu's share down to 2^n/(2^{n+1}-1) — is not proved at all; the pigeonhole attempt is explicitly noted to fail (realizability gap) and the fallback is only an empirical guess.",
+    "quote": "Part B (XY always forces $D\\le T_n$) still open: best candidate \"min over subsets of greedy chain $\\le T_n S$\" — needs verification & proof."
+   },
+   {
+    "description": "Reduction of the claiming game to the alternating sum (greedy is optimal, Liu gets odd-ranked pieces) is asserted with only brute-force verification, not proved.",
+    "quote": "proved (and verified by brute force) that optimal play = greedy, so LB gets odd-position pieces"
+   },
+   {
+    "description": "Part A is a bulleted sketch: the matching formula is justified only as \"by an exchange argument\", the slack/component counting and the per-tree-component inequality are stated without full derivation, and the author flags it as needing write-up and checks.",
+    "quote": "**Part A proof (lower bound) SKETCH — looks complete**"
+   }
+  ],
+  "notes": "Tracking/progress document rather than a submitted proof. Correct-looking answer and a promising lower-bound plan earn minor credit, but neither half is written to a verifiable standard."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 140,
+   "length_ok": true,
+   "reason": null
+  },
+  {
+   "anchored": true,
+   "length": 95,
+   "length_ok": true,
+   "reason": null
+  },
+  {
+   "anchored": true,
+   "length": 54,
+   "length_ok": true,
+   "reason": null
+  }
+ ]
+}

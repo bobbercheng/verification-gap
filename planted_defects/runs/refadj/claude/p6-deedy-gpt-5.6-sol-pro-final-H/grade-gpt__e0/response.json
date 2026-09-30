@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4261,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004356,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1066,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 5095,
+    "webSearchRequests": 0,
+    "costUSD": 0.07847799999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 706,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5095,
+   "cache_read_input_tokens": 1736,
+   "output_tokens": 1066,
+   "output_tokens_details": {
+    "thinking_tokens": 706
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5095,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1066,
+     "cache_read_input_tokens": 1736,
+     "cache_creation_input_tokens": 5095,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5095
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 13832,
+  "is_error": false,
+  "elapsed_seconds": 14.6,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L6.2\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"false_display\",\n  \"repair_distance\": \"symbol\",\n  \"explanation\": \"The set D\\\\{p} has |D|-1 elements, so the correct bound is 2^{|D|-1} \\\\le w(D\\\\setminus\\\\{p\\\\}); the displayed 2^{|D|} \\\\le w(D\\\\setminus\\\\{p\\\\}) is a misprint (off by one), so the objection's local claim is right. But the only use of the display is the conclusion |D| \\\\le a_1, which still follows: 2^{|D|-1} < a_1 gives |D| < 1 + log_2 a_1 \\\\le a_1 for a_1 \\\\ge 2. Lemma 1 (finitely many members of C of size \\\\le K) then applies with K = a_1, and Lemma 2's descent yields the finite prime set P. The finiteness/erasure argument stands; only the exponent needs fixing.\"\n}"
+   }
+  ]
+ }
+}

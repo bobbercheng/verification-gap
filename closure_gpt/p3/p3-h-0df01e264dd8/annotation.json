@@ -1,0 +1,45 @@
+{
+  "id": "p3-h-0df01e264dd8",
+  "problem": "3",
+  "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+  "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-claude-fable-5-final",
+    "claude-fable-5-main-t013"
+  ],
+  "bytes": 15474,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 20180,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 411,
+        "reasoning_output_tokens": 286
+      },
+      "sec": 15.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "tree-pairing with signed subset sums",
+    "upper_bound_mechanism": "subset-sum pigeonhole with cross-pairing cuts",
+    "wrong_answer_stated": false,
+    "notes": "Complete all-n proof. The claiming phase is rigorously reduced to the odd-ranked sum. The geometric construction is protected by a valid tree-pairing argument, and the universal upper bound follows from subset-sum pigeonholing plus an explicit overlay construction using at most n cuts."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

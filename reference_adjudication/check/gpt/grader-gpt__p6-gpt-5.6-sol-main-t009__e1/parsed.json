@@ -1,0 +1,25 @@
+{
+ "checker": "gpt",
+ "objection_key": "grader-gpt__p6-gpt-5.6-sol-main-t009__e1",
+ "case": "p6-gpt-5.6-sol-main-t009",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 22.1,
+  "input_tokens": 17559,
+  "output_tokens": 367,
+  "reasoning_output_tokens": 196,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The recursive induction hypothesis purports to classify all finite transversals of F_c using C\\{c}, but its argument only handles transversals meeting C\\{c}; that set need not belong to F_c, so such intersection is not guaranteed. Indeed, pairwise intersection alone does not imply finitely many minimal transversals, as noted in L6.2. The remaining text merely applies this invalid lemma and gives no separate all-terms large-prime-erasure argument. Repair therefore requires replacing the lemma/application with a valid finiteness lemma exploiting the sequence’s arithmetic structure."
+ },
+ "elsewhere_anchor": null
+}

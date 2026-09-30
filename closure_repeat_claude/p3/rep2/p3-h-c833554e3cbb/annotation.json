@@ -1,0 +1,71 @@
+{
+  "id": "p3-h-c833554e3cbb",
+  "problem": "3",
+  "sha256": "c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89",
+  "path": "checkpoint_inputs/c833554e3cbbbd8148c245009f933e45244dad5fe4e7498146f055782434ba89.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-gpt-5.6-sol-xhigh-final",
+    "gpt-5.6-sol-xhigh-main-t008"
+  ],
+  "bytes": 11015,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6264,
+        "output_tokens": 390,
+        "output_tokens_details": {
+          "thinking_tokens": 101
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 390,
+            "cache_read_input_tokens": 6264,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 6.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "powers-of-two division + adjacent-pairing multigraph with tree component / signed distinct powers of 2",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) plus common-refinement equal-pairing with <= n cuts",
+    "wrong_answer_stated": false,
+    "notes": "Full argument: induction proves claiming value = alternating discrepancy; pairing lemma (exchange argument) proved; Liu's 1:2:...:2^n construction analyzed for arbitrary Xiang reply via tree component bipartition; Xiang's reply built from subset-sum pigeonhole plus refinement cut count <= n. All directions written for general n."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

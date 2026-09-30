@@ -1,0 +1,76 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 38.4,
+  "input_tokens": 2,
+  "output_tokens": 2912,
+  "cache_read_input_tokens": 3382,
+  "cache_creation_input_tokens": 4672,
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2912,
+    "cacheReadInputTokens": 3382,
+    "cacheCreationInputTokens": 4672,
+    "webSearchRequests": 0,
+    "costUSD": 0.121221,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2362,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 1,
+  "complete": false,
+  "main_gap": "The key Lemma (that the small-prime support σ(x)=P(x)∩{p≤a_1} of every term is itself good) is asserted with 'details omitted'; it carries the entire difficulty of the problem.",
+  "errors": [
+   {
+    "description": "The central lemma, on which the whole finiteness/periodicity argument rests, is not proved at all. Its statement is nontrivial (the write-up itself notes the boundary problem 102/17=6<15 and alludes to an 'Rp^k' construction that is never presented). Without it the argument shows nothing beyond an easy reformulation.",
+    "quote": "**Proof.** Induction over the sequence terms in increasing order (standard; details omitted). \\(\\square\\)"
+   },
+   {
+    "description": "The 'surviving hypothesis' paragraph gestures at a proof idea (repairing the quotient x/p by a construction Rp^k preserving the ≤A support) but gives no definition of R, no argument, and no verification that the construction yields a term; this cannot substitute for the omitted lemma proof.",
+    "quote": "The construction \\(Rp^k\\) repairs this boundary issue while preserving exactly the small-prime support; the lemma proves the strengthened hypothesis."
+   }
+  ],
+  "notes": "Sections 1 and 3 are correct and cleanly written: characterization (1) of terms via 'good' prime sets, unboundedness, and the derivation of a_{n+T}=a_n+L from translation-invariance mod L. But these are routine; the entire substance is the unproved lemma. Computational evidence and hypothesis discussion earn no credit."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 105,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    1316,
+    1419
+   ]
+  },
+  {
+   "anchored": true,
+   "length": 149,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    4255,
+    4404
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_retest",
+ "run_tag": "_retest",
+ "transport_choice": "cli"
+}

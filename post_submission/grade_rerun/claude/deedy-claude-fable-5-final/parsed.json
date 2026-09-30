@@ -1,0 +1,56 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 107.4,
+  "input_tokens": 2,
+  "output_tokens": 9641,
+  "cache_read_input_tokens": 761,
+  "cache_creation_input_tokens": 9026,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7275,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.007365,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 9641,
+    "cacheReadInputTokens": 761,
+    "cacheCreationInputTokens": 9026,
+    "webSearchRequests": 0,
+    "costUSD": 0.3316755,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 9454,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [],
+  "notes": "Answer 2^n/(2^{n+1}-1). Picking-phase value lemma proved correctly (inequalities (2.1),(2.2) verified). Lower bound via tree-component 2-colouring plus binary signed-sum separation is valid; upper bound via subset-sum pigeonhole and cross-pairing cuts has correct mark counting (≤ m-1 = n) and grid alignment. Spot-checked n=1,2 by hand."
+ },
+ "anchors": []
+}

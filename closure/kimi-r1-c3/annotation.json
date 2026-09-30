@@ -1,0 +1,44 @@
+{
+  "id": "kimi-r1-c3",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 3,
+  "path": "checkpoint_inputs/5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8.md",
+  "bytes": 14257,
+  "sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5449,
+        "output_tokens": 10292,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 123.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position majorization on geometric division 2^n:...:1 (Lemma E induction)",
+    "upper_bound_mechanism": "subset-sum pigeonhole + greedy equal-pair (supply-demand) cancellation",
+    "wrong_answer_stated": false,
+    "notes": "All components fully proved for all n. Lemma 1 pairing proof handles deviation case correctly. Lemma E base and two-case inductive step are valid, yielding even(S) <= 2^n - 1. Theorem B: N-gap pigeonhole, halving of Z-parts, cancellation with cut count c <= |P|+|Q|-1, and delta(L) <= max L. Boxed answer matches."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "5a75aa5c50ee7b18bdd20a85e5e8e2a901f8892ae2d4108bc7463b38bfaebce8",
+  "original_bytes": 14257,
+  "input_anonymized": false
+}

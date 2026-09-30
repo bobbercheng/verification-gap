@@ -1,0 +1,54 @@
+{
+ "rater": "glm",
+ "case": "kimi-k3-round3-t007",
+ "problem": "3",
+ "group": "C",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 154.0,
+  "input_tokens": 1635,
+  "output_tokens": 6630,
+  "cache_read_input_tokens": 832
+ },
+ "parsed": {
+  "statements": {
+   "L3.1": {
+    "established": "partial",
+    "quote": "proved (and verified by brute force) that optimal play = greedy, so LB gets odd-position pieces (sorted decreasing). Game reduces to: LB picks ≤ n+1 pieces (composition of 1), XY subdivides with ≤ n cuts, payoff = alternating sum $D = p_1 - p_2 + p_3 - \\cdots$; LB share $= (1+D)/2$.",
+    "note": "Reduction correctly stated and used throughout, but 'proved' is only asserted; no written argument for greedy/alternating-sum."
+   },
+   "L3.2": {
+    "established": "partial",
+    "quote": "Pigeonhole: $2^{n+1}$ signed sums $\\sum\\epsilon_i a_i \\in [-S,S]$ ⇒ two within $2S/(2^{n+1}-1)$ ⇒ difference gives $\\delta\\in\\{-1,0,1\\}^{n+1}\\setminus\\{0\\}$ with $|\\sum\\delta_i a_i| \\le T_n S$. BUT such a signed sum is NOT always realizable by cancel/chain ops",
+    "note": "Only pigeonhole sub-step written (with factor-2 slip); mirrored-cuts/cancellation construction absent; author states Part B open."
+   },
+   "L3.3": {
+    "established": "partial",
+    "quote": "take optimal matching $\\mu$; build multigraph on pieces (edge = matched pair of fragments, unmatched frag = mark). Components. Cyclic components (E≥V) have slack $\\ge 1$ where slack(K) = frags(K) − 2·pieces(K) + 1; total slack = $c - m + \\#\\text{comp} \\le \\#\\text{comp}-1$ (since cuts $c\\le m-1$) ⇒ at least one TREE component.",
+    "note": "Full-route sketch (matching, tree component, block lemma) for all n, but labelled SKETCH, 'not yet verified', sub-lemmas compressed; not written out."
+   }
+  },
+  "S_ref": 0,
+  "notes": "Answer only conjectured, with n≤3 grid numerics. Part A lower bound: complete-route detailed sketch for all n, explicitly unwritten/unverified. Part B upper bound: open; only pigeonhole numerics, no construction, realizability gap flagged. Reduction asserted only. Neither obligation established."
+ },
+ "anchors": {
+  "L3.1": {
+   "anchored": true,
+   "length": 283,
+   "length_ok": true,
+   "reason": null
+  },
+  "L3.2": {
+   "anchored": true,
+   "length": 260,
+   "length_ok": true,
+   "reason": null
+  },
+  "L3.3": {
+   "anchored": true,
+   "length": 327,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

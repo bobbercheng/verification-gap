@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__p5-deepseek-v4-pro-main-t038__e0",
+ "case": "p5-deepseek-v4-pro-main-t038",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 15.8,
+  "input_tokens": 2,
+  "output_tokens": 1154,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 6356,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5657,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005751999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1154,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 6356,
+    "webSearchRequests": 0,
+    "costUSD": 0.09356099999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 806,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The write-up only records g(x) > -x after defining g, and §3 supposes two distinct POSITIVE values c1 > c2 > 0; nothing anywhere rules out g(x) < 0 for some x. Hence the jump from \"V contains at most one positive number\" to \"V ⊆ {0,c}\" (or g ≡ 0) is unsupported, and the ledger statement L5.3 (f(t) - t ≥ 0 for every t) is never proved. Sections 4-7 all presuppose V ⊆ {0,c}. The gap is closable by one sentence: (4) gives f^n(x) = x + n g(x) > 0 for all n, so g(x) ≥ 0; but that sentence is absent, so the statement is not established as written."
+ },
+ "elsewhere_anchor": null
+}

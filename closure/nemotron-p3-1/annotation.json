@@ -1,0 +1,44 @@
+{
+  "id": "nemotron-p3-1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 1,
+  "path": "checkpoint_inputs/9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293.md",
+  "bytes": 15914,
+  "sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5941,
+        "output_tokens": 10519,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 138.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "equal 1/(2n+1)-grid division with pairing (invalid)",
+    "upper_bound_mechanism": "bisect n largest intervals + majorization lemma (omitted)",
+    "wrong_answer_stated": true,
+    "notes": "Stated closed form (n+1)/(2n+1) is wrong for n>=2 (true: 2^n/(2^(n+1)-1)). Lower bound's equal division fails: for n=2 Xiang (cut small piece into halves, cut a large piece near its end) holds Liu to ~1/2, refuting the unproven claim that Xiang shouldn't cut the small piece. Upper bound's key lemma explicitly omitted. Reduction asserted, never proved."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "9b8187934c9350554c78caddf7b3a021342bd561f059327b3e6dbfbb976a1293",
+  "original_bytes": 15914,
+  "input_anonymized": false
+}

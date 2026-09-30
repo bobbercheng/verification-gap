@@ -1,0 +1,57 @@
+{
+  "task_id": "imo-2026-p1",
+  "status": "complete",
+  "answer": "The process always terminates with exactly one integer M > 1 on the blackboard. The final integer is M = ∏_p p^{gcd_i v_p(a_i)}, the product over all primes of p raised to the gcd of the p-adic valuations of the initial 2026 integers. This value depends only on the initial multiset, not on the choices made during the process.",
+  "claims": [
+    "The lexicographic measure (K, S) where K = count of integers > 1 and S = sum of Ω(x) strictly decreases with every legal move, guaranteeing termination.",
+    "At termination exactly one integer M > 1 remains because the total product never exceeds the initial product (> 1) and cannot exceed 1 if all numbers were 1.",
+    "For each prime p, the gcd of the multiset of p-adic valuations is invariant under the operation (a,b) → (min(a,b), |a-b|).",
+    "At termination, the final integer M has p-adic valuation equal to this invariant gcd, so M = ∏_p p^{gcd_i v_p(a_i)}.",
+    "The final integer M is independent of the sequence of moves chosen."
+  ],
+  "assumptions": [
+    "The initial 2026 integers are all > 1 (given in problem statement).",
+    "Standard arithmetic properties: gcd(m,n) * lcm(m,n) = m*n, and v_p(gcd) = min(v_p(m), v_p(n)), v_p(lcm) = max(v_p(m), v_p(n)).",
+    "The process continues while there exist two integers > 1 on the board (given in problem statement).",
+    "Well-foundedness of lexicographic order on ℕ²."
+  ],
+  "mechanisms": [
+    {
+      "name": "lexicographic-descent-termination",
+      "summary": "A well-founded measure (K, S) = (count of integers > 1, sum of prime factor counts) strictly decreases lexicographically at each move, forcing termination with exactly one integer > 1.",
+      "transfer_tags": ["termination-argument", "lexicographic-order", "well-foundedness", "combinatorial-process", "IMO"]
+    },
+    {
+      "name": "prime-exponent-gcd-invariant",
+      "summary": "For each prime p, the gcd of the multiset of p-adic valuations is preserved by the transformation (a,b) → (min(a,b), |a-b|), which is exactly one step of the Euclidean algorithm on exponents.",
+      "transfer_tags": ["invariant", "p-adic-valuation", "euclidean-algorithm", "gcd-invariant", "number-theory", "IMO"]
+    },
+    {
+      "name": "endgame-determination",
+      "summary": "At termination with exactly one integer M > 1, its p-adic valuation equals the invariant gcd of initial exponents, giving M = ∏ p^{gcd_i v_p(a_i)} uniquely determined by the initial multiset.",
+      "transfer_tags": ["uniqueness-proof", "endgame-analysis", "invariants", "prime-factorization", "IMO"]
+    }
+  ],
+  "falsification_attempts": [
+    {
+      "hypothesis": "The process might not terminate if gcd(m,n) = 1 infinitely often without decreasing the count of >1 integers.",
+      "attack": "Attempt to construct an infinite sequence of moves where gcd = 1 always, keeping product constant but cycling numbers > 1.",
+      "outcome": "Refuted: When gcd(m,n) = 1, the new numbers are 1 and mn. The count K of integers > 1 decreases by 1. Since K starts at 2026 and never increases, at most 2025 such moves can occur consecutively without a move that decreases the product (which strictly decreases S). The lexicographic measure (K, S) prevents infinite descent."
+    },
+    {
+      "hypothesis": "The invariant gcd of p-adic valuations might not fully determine the final number if the process could terminate with multiple integers > 1 for different primes.",
+      "attack": "Check whether the termination condition (exactly one M > 1) is proven rigorously or if edge cases could leave multiple >1 numbers for different primes.",
+      "outcome": "Refuted: Part 1 rigorously proves termination with exactly one integer > 1 overall. Thus for every prime p, at most one number has positive v_p, and the final multiset is {v_p(M), 0, ..., 0} with gcd = v_p(M)."
+    },
+    {
+      "hypothesis": "The formula M = ∏ p^{gcd_i v_p(a_i)} might not be an integer, or might not be achievable if the Euclidean algorithm on exponents requires choices that conflict across primes.",
+      "attack": "Consider whether the requirement to pick the same pair (m,n) for all primes simultaneously could prevent reaching the per-prime gcd.",
+      "outcome": "Refuted: The operation on exponents is (a,b) → (min(a,b), |a-b|) for ALL primes simultaneously. The gcd of a multiset is invariant under this operation regardless of the order of pairwise applications (a standard fact: gcd of a set is unchanged by replacing two elements with their gcd and absolute difference). The process terminates at the unique configuration where at most one exponent is positive, which must equal the invariant gcd."
+    }
+  ],
+  "evidence": [
+    "run_artifacts/nemotron/imo-2026-p1-2853f8e62db44a6a8b6f604ae1fce43d/candidate_v1.md"
+  ],
+  "confidence": 1.0,
+  "open_issues": []
+}

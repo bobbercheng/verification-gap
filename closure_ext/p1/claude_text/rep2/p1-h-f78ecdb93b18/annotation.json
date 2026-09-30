@@ -1,0 +1,71 @@
+{
+  "id": "p1-h-f78ecdb93b18",
+  "problem": "1",
+  "sha256": "f78ecdb93b18abef5b7d850d309efc95f948f323b7ad82134dbbce3f15137353",
+  "path": "checkpoint_inputs_ext/f78ecdb93b18abef5b7d850d309efc95f948f323b7ad82134dbbce3f15137353.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p1-claude-fable-5-main-t005",
+    "p1-deedy-claude-fable-5-final"
+  ],
+  "bytes": 7832,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6085,
+        "output_tokens": 664,
+        "output_tokens_details": {
+          "thinking_tokens": 359
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 664,
+            "cache_read_input_tokens": 6085,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "monovariant Phi = sum Omega(x_i) + #{x_i>1} strictly decreases; move possible iff N>=2; N>=1 preserved via Lemma 2",
+    "upper_bound_mechanism": "per-prime invariance of g_p = gcd of valuations, using gcd(min, max-min) = gcd(a,b)",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: Lemma 1 (valuations), Lemma 2 (no move yields two 1s, since h=1 forces g=m>1), Lemma 3 monovariant with both gcd=1 and gcd>1 cases, termination plus exactly-one-survivor, and gcd invariance handling zero/equal valuations. Explicit formula for M stated."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,45 @@
+{
+ "status": 200,
+ "response": {
+  "model": "gpt-5.6-sol",
+  "cli": "codex",
+  "reasoning_effort": "high",
+  "usage": {
+   "input_tokens": 16831,
+   "cached_input_tokens": 10624,
+   "cache_write_input_tokens": 0,
+   "output_tokens": 637,
+   "reasoning_output_tokens": 516
+  },
+  "events": [
+   "item.completed",
+   "thread.started",
+   "turn.completed",
+   "turn.started"
+  ],
+  "stop_reason": "end_turn",
+  "elapsed_seconds": 17.3,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"answer\":2,\"reduction\":2,\"lower_bound\":1,\"upper_bound\":2,\"lower_bound_mechanism\":\"RMS-AM-GM with algebra error\",\"upper_bound_mechanism\":\"quadratic local estimate and partition\",\"wrong_answer_stated\":false,\"notes\":\"Necessity is complete, rigorous, and includes fixed points. Sufficiency has a substitution error: the middle term should be (x+y+C)/2, not (x+y+2C)/2. Thus the invoked RMS-AM-GM argument is recognizable but not correctly written.\"}"
+   }
+  ],
+  "attempts": [
+   {
+    "attempt": 0,
+    "status": 200,
+    "stop": "end_turn",
+    "usage": {
+     "input_tokens": 16831,
+     "cached_input_tokens": 10624,
+     "cache_write_input_tokens": 0,
+     "output_tokens": 637,
+     "reasoning_output_tokens": 516
+    },
+    "sec": 17.3,
+    "parsed": true
+   }
+  ]
+ }
+}

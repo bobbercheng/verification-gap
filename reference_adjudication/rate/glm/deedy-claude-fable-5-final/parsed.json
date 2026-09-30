@@ -1,0 +1,54 @@
+{
+ "rater": "glm",
+ "case": "deedy-claude-fable-5-final",
+ "problem": "3",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 105.2,
+  "input_tokens": 5522,
+  "output_tokens": 8983,
+  "cache_read_input_tokens": 832
+ },
+ "parsed": {
+  "statements": {
+   "L3.1": {
+    "established": "yes",
+    "quote": "Consequently, under (0.1), the first player can guarantee exactly $\\tfrac{1+D(A)}2$ from the picking phase and no more.",
+    "note": "Lemma 2 proved by strong induction with inequalities (2.1),(2.2); greedy strategies for both players fully written out."
+   },
+   "L3.2": {
+    "established": "yes",
+    "quote": "The final multiset is therefore (equal pairs) $\\uplus\\,L$, and by Lemma 1, $D(A)=D(L)\\le\\Sigma(L)=\\Delta\\le u. \\qquad\\blacksquare$",
+    "note": "Lemma 5: pigeonhole on 2^{n+1} subset sums plus mirrored-overlay cuts and bisection of remaining pieces, all cases (m<=n, B* empty/nonempty) done for all n."
+   },
+   "L3.3": {
+    "established": "yes",
+    "quote": "Hence, using (4.1), $u\\le|\\Xi|\\le\\sum_{P_i\\in E_T}\\varepsilon_i+[M\\text{ odd}]\\,a_M\\le D(A).$",
+    "note": "Lemma 4: tree component of pair multigraph, bipartition signed sum, geometric-config property (3.1) proved; valid against every Xiang refinement for all n."
+   }
+  },
+  "S_ref": 2,
+  "notes": "Answer 2^n/(2^{n+1}-1) stated, boxed, and proved for all n. Reduction (Lemma 2), lower bound (Lemma 4, tree/signed subset-sum), and upper bound (Lemma 5, pigeonhole plus mirrored cuts) are each written as complete all-n arguments; numerical checks are supplementary only."
+ },
+ "anchors": {
+  "L3.1": {
+   "anchored": true,
+   "length": 119,
+   "length_ok": true,
+   "reason": null
+  },
+  "L3.2": {
+   "anchored": true,
+   "length": 130,
+   "length_ok": true,
+   "reason": null
+  },
+  "L3.3": {
+   "anchored": true,
+   "length": 93,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

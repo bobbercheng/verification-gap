@@ -1,0 +1,42 @@
+{
+  "id": "pilot-96514f704580",
+  "lineage": "pilot",
+  "model": "pilot",
+  "context": null,
+  "turn": null,
+  "path": "pilot_critique/p3-high-N-r2/output.md",
+  "bytes": 9412,
+  "sha256": "96514f704580da32f1f32e223688c7b4fa054fa32f2371ab268b266f93c14e38",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3860,
+        "output_tokens": 7165,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 89.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position sum induction (Lemma E) on 1:2:4:...:2^n division",
+    "upper_bound_mechanism": "subset-sum pigeonhole near-equal disjoint subsums + greedy equal-pair cancellation",
+    "wrong_answer_stated": false,
+    "notes": "Complete and rigorous. Lemma 1 pairing strategies correctly establish value = odd(S) = (1+delta)/2 and reduce marking to sup-inf delta. Lower bound: Lemma E induction bounds every even-position partial sum by 2^n-2^{n-r}, valid for all n and all replies. Upper bound: pigeonhole gap <= 1/N, halving Z, greedy cancellation with exact cut count <= n, delta <= 1/N via Lemmas 2 and (1)."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

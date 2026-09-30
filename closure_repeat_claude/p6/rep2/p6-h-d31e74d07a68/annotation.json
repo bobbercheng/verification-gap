@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-d31e74d07a68",
+  "problem": "6",
+  "sha256": "d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1",
+  "path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "turn": 1,
+  "record_ids": [
+    "p6-gpt56-ours"
+  ],
+  "bytes": 6345,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4505,
+        "output_tokens": 1574,
+        "output_tokens_details": {
+          "thinking_tokens": 1302
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1574,
+            "cache_read_input_tokens": 4505,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 19.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "large-prime erasure via m = R·p^k with same small-prime support, induction over terms in increasing order",
+    "upper_bound_mechanism": "L = product of primes ≤ a_1 makes σ(m+L)=σ(m) for all m ≥ a_1; T = count of terms per length-L window",
+    "wrong_answer_stated": false,
+    "notes": "All three mechanisms are argued in full generality: characterization (1) via greedy skip, the erasure lemma proved by induction with correct m<x bound and boundary case m≥A handled, and periodicity established from the threshold a_1 (not merely eventual), yielding a_{n+T}=a_n+L for all n."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

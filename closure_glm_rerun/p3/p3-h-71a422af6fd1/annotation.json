@@ -1,0 +1,47 @@
+{
+  "id": "p3-h-71a422af6fd1",
+  "problem": "3",
+  "sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+  "path": "checkpoint_inputs/71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-muse-spark-1.1-final",
+    "muse-spark-1.1-main-t005"
+  ],
+  "bytes": 24081,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 7818,
+        "output_tokens": 9336,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 98.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "symmetric-pair parity invariance (d±δ pairs), valid only for replies splitting every 2d-piece once",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "Conjectures c=(n+1)/(2n+1) — wrong; only n=1 value (2/3) correct. Parity-pair invariance is written for all n but only covers Xiang splitting each 2d-piece once; splitting the small d-piece instead beats Liu (n=2 gives 0.5), so claimed lower bound is unproven and false. Upper bound: no argument, ends at brute-force plan. Reduction used, never justified."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

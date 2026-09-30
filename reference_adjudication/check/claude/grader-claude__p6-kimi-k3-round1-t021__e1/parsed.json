@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__p6-kimi-k3-round1-t021__e1",
+ "case": "p6-kimi-k3-round1-t021",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.7,
+  "input_tokens": 2,
+  "output_tokens": 1036,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 2318,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2106,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0021959999999999996,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1036,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 2318,
+    "webSearchRequests": 0,
+    "costUSD": 0.049958,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 669,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The quoted line is a one-sentence label (\"Proof via stabilization of minimal elements inside a fixed m\") with no argument; the same holds for Theorem A and Lemmas A–C, which are only named. More decisively, the write-up itself states the crux is unresolved: \"Remaining crux: prove shrinkage stops (equivalently: finitely many permanents / S_infty finitely generated)\" and \"Proof of that lemma is in progress\". That crux is exactly the ledger's finiteness/large-prime-erasure content (L6.2); support for it is only empirical (\"Empirics (100+ values of a_1) ... shrinkage ALWAYS stops\"), which cannot be credited. Nothing elsewhere supplies it, so L6.2 is not established; a full lemma-level argument is required."
+ },
+ "elsewhere_anchor": null
+}

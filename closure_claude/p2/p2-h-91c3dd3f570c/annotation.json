@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-91c3dd3f570c",
+  "problem": "2",
+  "sha256": "91c3dd3f570cbe4663adebe41ff36aff4b040f07d2ce998122ccf823e9ae3560",
+  "path": "checkpoint_inputs/91c3dd3f570cbe4663adebe41ff36aff4b040f07d2ce998122ccf823e9ae3560.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 11,
+  "record_ids": [
+    "p2-gpt-5.6-sol-pro-main-t011"
+  ],
+  "bytes": 4259,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2962,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 2309,
+        "output_tokens_details": {
+          "thinking_tokens": 1999
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2962,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2309,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 2962,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2962
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 31.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "trig parametrisation: cotangent relations + compatibility identity (C); crux identity (6) left unproved (numerics only)",
+    "upper_bound_mechanism": "equal powers of M,N: OM=ON reduced to cd-be=(c^2-b^2)/2 with d,e second intersections of (AKL) with AB,AC",
+    "wrong_answer_stated": false,
+    "notes": "Goal and strategy explicit; all three angle conditions genuinely encoded via sine rule (cot x = cot p + 2cot r, etc.) and relation (C) derived. No key circle through A,K,L is identified/proved; the decisive identity (6) is only checked numerically and admitted open. Finish equivalence (2)-(3) asserted via 'direct expansion' rather than written out."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

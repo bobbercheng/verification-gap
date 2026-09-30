@@ -1,0 +1,46 @@
+{
+  "id": "kimi-k3-round4-t014",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round4",
+  "turn": 14,
+  "ts": "2026-07-18T04:17:02.164500+00:00",
+  "path": "checkpoint_inputs/ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b.md",
+  "bytes": 20480,
+  "sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 7615,
+        "output_tokens": 8166,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 108.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "matching formula + tree-component argument on super-increasing (geometric) pieces",
+    "upper_bound_mechanism": "subset-sum pigeonhole + greedy-scheduling chain realizability with bisect/cancel overlay",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Lemma 1.1 proves the claiming-game value (alternating sum) for all n by induction. Lower bound: matching formula plus tree-component inequality on the super-increasing geometric division, valid against every refinement. Upper bound: bisect case plus chain theorem via pigeonhole and realizability lemma, explicit all-n construction. Answer c=2^n/(2^{n+1}-1)."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+  "original_bytes": 20480,
+  "input_anonymized": false
+}

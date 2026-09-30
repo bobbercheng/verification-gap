@@ -1,0 +1,67 @@
+{
+  "id": "p5-nemotron-dbcab3c5-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "dbcab3c5",
+  "turn": 1,
+  "path": "checkpoint_inputs_ext/28cf6b5ebb024dc28091bd60d3256daed6a841d91b48cf06d85cc03a4ba4b0a6.md",
+  "recorded_mtime_utc": "2026-07-20T19:32:15Z",
+  "bytes": 5967,
+  "sha256": "28cf6b5ebb024dc28091bd60d3256daed6a841d91b48cf06d85cc03a4ba4b0a6",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3867,
+        "cache_read_input_tokens": 1356,
+        "output_tokens": 2464,
+        "output_tokens_details": {
+          "thinking_tokens": 2158
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3867,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2464,
+            "cache_read_input_tokens": 1356,
+            "cache_creation_input_tokens": 3867,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3867
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 28.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to x and y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "Exact squared-difference inequality |A-B|(2x+2y+A+B) <= (x-y-B)^2, orbit/unboundedness argument for two positive values, plus openness of level sets and connectedness for the mixed fixed-point case",
+    "wrong_answer_stated": false,
+    "notes": "S derived correctly via x=f(y); iterates give g>=0. Inequality (1) verified algebraically correct. Orbit argument (choice of m within B/2, LHS ~2nA|A-B|) is valid; mixed case excluded rigorously by openness of both level sets and connectedness. Verification complete via QM-AM-GM."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

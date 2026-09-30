@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-220590cd38ed",
+  "problem": "4",
+  "sha256": "220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181",
+  "path": "checkpoint_inputs_ext/220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 2,
+  "record_ids": [
+    "p4-muse-spark-1.1-main-t002"
+  ],
+  "bytes": 9420,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7122,
+        "output_tokens": 2803,
+        "output_tokens_details": {
+          "thinking_tokens": 2450
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2803,
+            "cache_read_input_tokens": 7122,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 37.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Multiples of theta are universally winning (split k*theta = theta + (k-1)*theta, both children carry a multiple); for a generic triangle cut the max angle at r = ceil(p/theta)*theta - p so C1 gets 180-(p+r) and C2 gets p+r, both multiples; theta=90 handled separately by x=90-p",
+    "upper_bound_mechanism": "Invariant I: no angle is an integer multiple of theta; four-case analysis shows some child stays in I, the last case needing 180 not a multiple of theta",
+    "wrong_answer_stated": false,
+    "notes": "Complete on all four obligations: correct answer, additive lemma with both children covered, winning strategy for every initial triangle and every discard (including n=2), and a fully verified invariant for the avoidance direction. Minor terseness in nonemptiness of I and in the n=2 angle conditions, but arguments are checkable."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

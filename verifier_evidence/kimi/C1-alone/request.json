@@ -1,0 +1,8 @@
+{
+ "system": "You are a careful mathematical verifier. You will be shown a claim and possibly a proposed counterexample (a witness). Assess them separately and independently. Do not defer to the confidence of the proposer. Do not retrieve or recall published solutions; reason from first principles. Return ONLY a JSON object with exactly these fields: {\"claim_true\": true|false, \"claim_reason\": \"<=60 words\", \"witness_valid\": true|false|null, \"witness_reason\": \"<=60 words or null\"}. witness_valid is null when no witness is given; otherwise it is true only if the witness satisfies every hypothesis of the claim and violates its conclusion.",
+ "user": "## Claim\nLet q_1, q_2, q_3, ... be a sequence of positive real numbers with q_1 > 1 and q_{k+1} <= q_k for every k. Then q_k > 1 for every k.\n\n## Witness\nNone. Assess the claim on its own.",
+ "model": "kimi-k3",
+ "condition": "alone",
+ "claim_id": "C1",
+ "claim_truth": false
+}

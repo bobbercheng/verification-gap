@@ -1,0 +1,18 @@
+{
+ "claim_id": "C3",
+ "condition": "alone",
+ "verifier": "glm",
+ "model": "glm-5.3",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "Take a_1=2: the greedy sequence is 2,4,6,8,... (all even). Then a_3=6 has prime set {2,3}, which hits {{2},{2}} but so does its proper subset {2}, so it is not inclusion-minimal. Integer-minimality of the greedy choice cannot prune redundant primes, since dividing them out may drop the value below a_n.",
+  "witness_valid": null,
+  "witness_reason": null
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": null
+ },
+ "elapsed_seconds": 53.0
+}

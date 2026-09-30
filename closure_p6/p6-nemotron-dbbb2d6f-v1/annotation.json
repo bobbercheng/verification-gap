@@ -1,0 +1,45 @@
+{
+  "id": "p6-nemotron-dbbb2d6f-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "dbbb2d6f",
+  "turn": 1,
+  "path": "checkpoint_inputs/7c6e3fdd966a88237fe0c9b74525925388762d27048262cee6d5b6b121a775a7.md",
+  "bytes": 10479,
+  "sha256": "7c6e3fdd966a88237fe0c9b74525925388762d27048262cee6d5b6b121a775a7",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3386,
+        "output_tokens": 4257,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 47.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "minimality-contradiction finiteness of P* (explicit open gap)",
+    "upper_bound_mechanism": "residue-counting in merge of APs mod L (tail only, conditional)",
+    "wrong_answer_stated": true,
+    "notes": "Structure (L = lcm of hitting-set products, T = number of covered residues mod L) is explicitly and correctly stated. Hitting-set reformulation of candidates is asserted, not proven as full term characterization. Finiteness/large-prime erasure and essential=ubiquitous are admitted open gaps. Periodicity assembly written only for the tail, conditional on unproved lemmas; backward extension to n=1 explicitly fails."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "7c6e3fdd966a88237fe0c9b74525925388762d27048262cee6d5b6b121a775a7",
+  "original_bytes": 10479,
+  "input_anonymized": false
+}

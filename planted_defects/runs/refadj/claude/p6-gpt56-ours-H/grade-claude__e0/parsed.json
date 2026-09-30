@@ -1,0 +1,73 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-H",
+ "base_id": "p6-gpt56-ours",
+ "type": "H",
+ "problem": "6",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 19.5,
+  "input_tokens": 2,
+  "output_tokens": 1573,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 3910,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3442,
+    "outputTokens": 14,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0035120000000000004,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1573,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3910,
+    "webSearchRequests": 0,
+    "costUSD": 0.07930300000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1169,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "**Lemma.** For every sequence term \\(x\\), the set \\(\\sigma(x)\\) is good.",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "Check: a_1=15, a_2=18 (16,17 coprime to 15), a_3=20 (gcd(20,15)=5, gcd(20,18)=2), and 22 is coprime to 15 so it is not a term. So the listed \"15,18,22\" is wrong; the objection is correct, and the very next clause (\"21 is skipped because gcd(21,20)=1\") presupposes 20, confirming a misprint. The line sits in the non-proof \"Hypotheses tested\" discussion; the large-prime-erasure lemma (L6.2) is proved in Section 2 by induction on terms via m=Rp^k with P(m)=sigma(x), m<x, independently of this example. Replacing \"22\" by \"20\" fixes it.",
+  "wrong_answer_stated": false
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 72,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   1242,
+   1312
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

@@ -1,0 +1,66 @@
+{
+ "task_id": "imo-2026-p3",
+ "route_reviewed": "p3-high-N-r2",
+ "reviewer_model": "glm-5.3",
+ "reviewer_endpoint": "https://api.z.ai/api/anthropic",
+ "api": "anthropic",
+ "statement_sha256": "ab675cfc6de08975903ef70e0a6e56683ff834dbef86af1b6a0b4c4fe920a7d3",
+ "candidate_file": "pilot_critique/p3-high-N-r2/output.md",
+ "candidate_sha256": "96514f704580da32f1f32e223688c7b4fa054fa32f2371ab268b266f93c14e38",
+ "rubric_sha256": "d56e11a6d333454237ecd22e31937150b2f55359410f0d84e17c3a2e3a274f75",
+ "attempts": [
+  {
+   "attempt": 0,
+   "thinking": {
+    "type": "enabled",
+    "budget_tokens": 16000
+   },
+   "http_status": 200,
+   "stop_reason": "max_tokens",
+   "usage": {
+    "input_tokens": 3827,
+    "output_tokens": 30000,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "elapsed_seconds": 376.4,
+   "model": "glm-5.3",
+   "json_parsed": false
+  },
+  {
+   "attempt": 1,
+   "thinking": {
+    "type": "disabled"
+   },
+   "http_status": 200,
+   "stop_reason": "end_turn",
+   "usage": {
+    "input_tokens": 3827,
+    "output_tokens": 3941,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "elapsed_seconds": 57.6,
+   "model": "glm-5.3",
+   "json_parsed": true
+  }
+ ],
+ "parsed": true,
+ "passes_gate": true,
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "n_fatal": 0,
+ "n_unverified": 0,
+ "finished_at": "2026-09-05T23:35:06Z"
+}

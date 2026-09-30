@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-a2a14ff8b369",
+  "problem": "3",
+  "sha256": "a2a14ff8b36953a77fa3fe426c8b070371a6c14a11fcd9260ac9e81489827c18",
+  "path": "checkpoint_inputs/a2a14ff8b36953a77fa3fe426c8b070371a6c14a11fcd9260ac9e81489827c18.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 7,
+  "record_ids": [
+    "claude-fable-5-main-t007"
+  ],
+  "bytes": 3325,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1595,
+        "output_tokens": 1816,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 32.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division (1:2:...:2^n) + parity/integrality sketch, open gap",
+    "upper_bound_mechanism": "recursive XY cut strategy (claims G(m), drop-largest/split ops), verified only m<=3",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form appears only as 'CONJECTURED ANSWER', numerically checked n<=4. Reduction to odd-rank alternating sum stated with proof deferred. Lower and upper bounds have right shapes but both carry explicit OPEN GAPs; upper recursion proved only for m<=3. No complete all-n argument written."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

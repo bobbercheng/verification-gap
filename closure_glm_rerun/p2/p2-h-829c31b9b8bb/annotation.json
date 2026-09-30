@@ -1,0 +1,62 @@
+{
+  "id": "p2-h-829c31b9b8bb",
+  "problem": "2",
+  "sha256": "829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b",
+  "path": "checkpoint_inputs/829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 28,
+  "record_ids": [
+    "p2-gpt-5.6-sol-pro-main-t028"
+  ],
+  "bytes": 4768,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 1496,
+        "output_tokens": 30000,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 274.5,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2264,
+        "output_tokens": 558,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 9.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "circumcircle of AKL with second intersections D,E on AB,AC",
+    "upper_bound_mechanism": "algebraic equivalence OM=ON ⇔ cd−be=(c²−b²)/2, reduced to trig identity",
+    "wrong_answer_stated": false,
+    "notes": "All three angle conditions are genuinely encoded via sine-rule relations (A),(B),(1). Equivalence (2),(3) is derived, but the crucial factorization (F) and identity (8) are admitted gaps ('remains to be inserted'), so the finish is incomplete: a correct reduction to an unexecuted computation."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

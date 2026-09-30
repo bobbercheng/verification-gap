@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-3c87e40d7e02",
+  "problem": "4",
+  "sha256": "3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248",
+  "path": "checkpoint_inputs_ext/3c87e40d7e0244959d1e625a48ca5ab43df3f5754eec52d5a58e237961698248.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p4-deedy-kimi-k3-final"
+  ],
+  "bytes": 12563,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 8436,
+        "output_tokens": 1691,
+        "output_tokens_details": {
+          "thinking_tokens": 1370
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1691,
+            "cache_read_input_tokens": 8436,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 22.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Round-up cut alpha=d(u)<v making both halves marked (k*theta and (n-k)*theta), then halving lemma; n=2 handled in Claim 2",
+    "upper_bound_mechanism": "Invariant 'no angle is an integer multiple of theta' from equilateral start; exhaustive 3-case analysis showing one half always safe",
+    "wrong_answer_stated": false,
+    "notes": "Complete: Lemma 0 gives cut formulas and range alpha in (0,A) (proof sketched/deferred but stated with IVT); Lemma 1 induction covers both pieces; Theorem 1 covers every initial triangle and both discards, including n=2 via Claims 1-2; Theorem 2 case analysis exhaustive and uses 180 not a multiple of theta exactly where needed."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

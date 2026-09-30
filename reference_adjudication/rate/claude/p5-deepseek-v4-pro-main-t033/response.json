@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5066,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005161,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2894,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 7656,
+    "webSearchRequests": 0,
+    "costUSD": 0.14892,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1914,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 7656,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 2894,
+   "output_tokens_details": {
+    "thinking_tokens": 1914
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 7656,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 2894,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 7656,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 7656
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 33288,
+  "is_error": false,
+  "elapsed_seconds": 33.9,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"statements\": {\"L5.1\": {\"established\": \"yes\", \"quote\": \"For $f(x)=x+c$ ($c\\\\ge 0$) the original inequalities become \\\\[\\\\sqrt{\\\\frac{x^2 + (y+c)^2}{2}} \\\\ge \\\\frac{x+y+c}{2} \\\\ge \\\\sqrt{x(y+c)} ,\\\\] which are exactly the Quadratic\\u2011Mean\\u2013Arithmetic\\u2011Mean inequality and the Arithmetic\\u2011Mean\\u2013Geometric\\u2011Mean inequality applied to the two positive numbers $x$ and $y+c$.\", \"note\": \"Both inequalities verified for all x,y>0 and every c>=0.\"}, \"L5.2\": {\"established\": \"yes\", \"quote\": \"Put $x = f(y)$ ... the chain collapses to equality: $\\\\bigl(f(f(y)) + y\\\\bigr)^2 = 4f(y)^2 .$ Taking square roots (all terms are positive) yields f(f(y)) + y = 2f(y)\", \"note\": \"Correct derivation; equivalently g(x+g(x))=g(x), giving arithmetic progressions.\"}, \"L5.3\": {\"established\": \"no\", \"quote\": null, \"note\": \"Only g(x) > -x noted; negative differences never excluded, yet V \\u2286 {0,c} is asserted from 'at most one positive value'.\"}, \"L5.4\": {\"established\": \"yes\", \"quote\": \"Suppose $V$ contains two distinct positive numbers $c_1 > c_2 > 0$ ... For large $t$ the inequality is violated \\u2013 contradiction. ... the set $\\\\{n c_1 - m c_2\\\\}$ is dense in $\\\\mathbb{R}$ ... the right\\u2011hand side of (9) tends to $0$ while the left\\u2011hand side tends to $+\\\\infty$\", \"note\": \"Both rational and irrational ratio cases treated completely via inequality (7).\"}, \"L5.5\": {\"established\": \"partial\", \"quote\": \"From (11) we immediately obtain $(x-y)^2 > c^2$, hence $|x-y| > c$ ... If $x \\\\in S_0$, then by (12) we must have $|x - (u + n c)| > c$ ... Hence $S_0 = \\\\emptyset$.\", \"note\": \"Mixed fixed/non-fixed case excluded rigorously, but the dichotomy f(x)\\u2208{x,x+c} rests on unproved nonnegativity of g.\"}}, \"S_ref\": 1, \"notes\": \"Sufficiency is fully verified (both inequalities, all c>=0). Structural identity and the equal-positive-differences argument are complete. Necessity is nearly complete: Lemma 1, (12) and the covering argument kill the mixed case, but negative values of g = f - x are never ruled out, so V \\u2286 {0,c} is unjustified.\"}"
+   }
+  ]
+ }
+}

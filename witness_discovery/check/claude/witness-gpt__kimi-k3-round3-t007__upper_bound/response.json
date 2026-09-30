@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2935,
+    "outputTokens": 22,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003045,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 414,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 3371,
+    "webSearchRequests": 0,
+    "costUSD": 0.044740499999999996,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 48,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3371,
+   "cache_read_input_tokens": 1341,
+   "output_tokens": 414,
+   "output_tokens_details": {
+    "thinking_tokens": 48
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3371,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 414,
+     "cache_read_input_tokens": 1341,
+     "cache_creation_input_tokens": 3371,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3371
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 6288,
+  "is_error": false,
+  "elapsed_seconds": 7.1,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"quote_faithful\": \"yes\", \"verdict\": \"confirmed\", \"evidence_kind\": \"missing_justification\", \"fatal\": \"yes\", \"explanation\": \"The quote appears verbatim under \\\"Part B (upper bound)\\\" and means exactly what the objection says: the pigeonhole gives a signed combination with |sum \\u03b5_i a_i| \\u2264 T_n S, but the text itself concedes such a signed sum is not generally realizable by Xiang's cancel/chain operations, giving the example {1,2} where only |2-1| is achievable. Scanning the whole write-up, no other construction converts the pigeonhole gap into an actual \\u2264 n-cut Xiang reply; the only alternative offered is the candidate \\\"min over subsets of greedy chain \\u2264 T_n S\\\", explicitly labelled \\\"needs verification & proof\\\" and supported only by empirics. The Status line says \\\"partial\\\" and Current best says \\\"Part B (XY always forces D\\u2264T_n) still open\\\". Hence the upper bound obligation is unproved for all n, which is fatal to that obligation.\"}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-4c4c04156f99",
+  "problem": "2",
+  "sha256": "4c4c04156f995a9a4c2f01d42c1eb7f6d39c54815446bbea397cbe05e3ee325e",
+  "path": "checkpoint_inputs/4c4c04156f995a9a4c2f01d42c1eb7f6d39c54815446bbea397cbe05e3ee325e.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 71,
+  "record_ids": [
+    "p2-gpt-5.6-sol-max-main-t071"
+  ],
+  "bytes": 6502,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4605,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 15210,
+        "output_tokens_details": {
+          "thinking_tokens": 14881
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4605,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 15210,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 4605,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4605
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 167.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "sine-rule relations 2Ub=cF(R), 2Uc=bF(D) derived in full, plus explicit displayed polynomial certificate (22) with all cofactors",
+    "upper_bound_mechanism": "Cartesian circle coefficients P,Q; OM^2-ON^2 = (b(CP+SQ)-cP)/2 + (c^2-b^2)/4 = 0",
+    "wrong_answer_stated": false,
+    "notes": "Analytic route, not the circle route. All three angle conditions correctly encoded; (1)-(3), (8)-(13), (15)-(17) and the final OM^2-ON^2 computation are correct (I re-derived them). Certificate (22) is fully explicit, though its expansion is asserted rather than shown; two specializations confirm it. Configuration/positivity handled via ray order."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

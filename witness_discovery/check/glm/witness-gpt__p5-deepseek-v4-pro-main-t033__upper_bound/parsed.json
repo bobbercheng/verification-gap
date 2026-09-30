@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 104.0,
+  "input_tokens": 5025,
+  "output_tokens": 9437,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim and the dichotomy is asserted unconditionally from 'V contains at most one positive number'. The witness f(x)=x+1 is a genuine solution (QM-AM-GM on x and y+1), has g≡1, so V={1} contains exactly one positive value, yet branch (i) fails (g≢0) and branch (ii) fails because 0 is not attainable ('both values attainable' is false). So the 'Consequently' inference is invalid: it omits the case V={c} with 0 unattained, and, as the objector notes, negative values of g. Checking the whole text: nowhere is g≥0 derived (§1 only notes g>-x; §3 iterates only positive differences; §7's conclusion 'Together with §3 this forces g≡c' also needs non-negativity and existence of a positive value). Lemma 1 moreover relies on the unestablished V⊆{0,c}. The gap is not repaired elsewhere, so the necessity argument is invalid as written."
+ }
+}

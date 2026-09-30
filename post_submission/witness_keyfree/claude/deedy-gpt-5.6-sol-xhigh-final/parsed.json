@@ -1,0 +1,74 @@
+{
+ "gate": "witness_blind",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 65.4,
+  "input_tokens": 2,
+  "output_tokens": 5641,
+  "cache_read_input_tokens": 1224,
+  "cache_creation_input_tokens": 5635,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4653,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004738,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 5641,
+    "cacheReadInputTokens": 1224,
+    "cacheCreationInputTokens": 5635,
+    "webSearchRequests": 0,
+    "costUSD": 0.19799700000000003,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 5331,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Claiming-stage value D verified via (1)-(2); pairing lemma and exchange argument check out. Powers-of-two construction with tree-component/bipartition signed-sum argument is correct for all n. Subset-sum pigeonhole plus common-refinement cut count (≤|A|+|B|-1, total ≤n) is correct. Answer 2^n/(2^{n+1}-1) matches n=1,2 checks."
+ },
+ "anchors": {}
+}

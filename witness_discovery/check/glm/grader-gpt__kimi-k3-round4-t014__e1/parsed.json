@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "kimi-k3-round4-t014",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 290.8,
+  "input_tokens": 165,
+  "output_tokens": 18695,
+  "cache_read_input_tokens": 8000
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "Section 4 defines v(B) as the nested difference of the decreasing order b_1>=...>=b_r, and the strategy explicitly processes b_2,...,b_r in that order, concluding D(M)=v(B)<=T_n by citing Theorem 4.2. But Theorem 4.2's proof, via Lemma 4.1, only produces some (greedy) ordering of P∪N with nested difference g<=S/(2^m-1); it never shows the decreasing ordering attains this, and the strategy never uses the constructed ordering. So the theorem's stated conclusion (decreasing-order chain value small) does not follow from what is proved, and the upper bound, as written, rests on an unproven statement; no repair appears elsewhere. (The stated theorem is in fact true—one can show by adjacent swaps that sorting decreasing never increases a nested difference—but that argument is not in the text.) The one-line fix (process the greedy ordering) is exactly what the objection demands."
+ }
+}

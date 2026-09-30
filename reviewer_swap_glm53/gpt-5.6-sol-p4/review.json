@@ -1,0 +1,33 @@
+{
+ "task_id": "imo-2026-p4",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Cut formulas (1)-(2): for P on open side AB and x = angle ACP in (0,C), the children have angle triples (A, x, 180-A-x) and (B, C-x, A+x); re-derived via angle sum and the supplementary angles at P (angle BPC = 180 - angle APC = A + x). Converse realizability of every x in (0,C) by an interior cevian is correct.",
+  "Lemma 1 (descent): if an angle equals m-theta with 1 <= m <= n-1, cutting that vertex into theta + (m-1)-theta is legal (both parts positive since m >= 2), one child contains theta and the other (m-1)-theta, so by induction Mulan forces a win in at most m-1 further cuts; the restriction m <= n-1 is automatic since angles are < 180 = n-theta.",
+  "Case n >= 3 manufacturing cut: in the branch where no angle is a multiple of theta, a largest angle C satisfies C >= 60 = n-theta/3 >= theta and C != theta (else it would be a multiple), hence C > theta. With k = floor(A/theta)+1 one gets A < k-theta <= A+theta < A+C < 180 = n-theta, so 1 <= k <= n-1 and x = k-theta - A lies in (0, C); children then contain (n-k)-theta and k-theta, both positive multiples, so Shan-Yu's choice is irrelevant at this step. Checked on concrete examples (theta=36 with (50,60,70) -> children (50,22,144),(60,48,72)).",
+  "Case n = 2 (theta = 90): with no right angle at least two angles are acute; for acute A, B the choice x = 90 - A is legal since x < C iff B < 90, and both children contain 90 (180-A-x = A+x = 90; also C-x = 90-B > 0), so exactly one cut suffices.",
+  "Uniform finite bound: total at most n-1 cuts for n >= 3 (one manufacturing cut plus at most n-2 descent cuts) and at most 1 cut for n = 2, so the win is guaranteed in a bounded number of steps against arbitrary Shan-Yu play and arbitrary initial triangles.",
+  "Cleanliness of the equilateral start when 180/theta is not an integer: 60 = m-theta would force 180/theta = 3m to be an integer.",
+  "Clean-child invariant: the four pairings are exhaustive (A and B cannot be multiples since the parent is clean); pairings 1-3 force C, A, B to be positive multiples (differences are positive because A > 0 and 180-A-C = B > 0; sums of positive multiples are multiples), contradicting parent cleanliness; pairing 4 forces 180 to be a multiple, contradicting non-integrality of 180/theta. Hence after any cut of a clean triangle at least one child is clean. Also spot-checked numerically at theta = 72.",
+  "Counter-strategy conclusion: Shan-Yu keeping a clean child forever means no angle ever equals theta (theta = 1-theta is a positive multiple), so no Mulan strategy can guarantee a finite win when 180/theta is not an integer; the strategy is defined at every node, so this defeats all (even adaptive) Mulan strategies.",
+  "Final characterization theta = 180/n with integer n >= 2: n = 1 is excluded by theta < 180, all such theta satisfy 0 < theta < 180, and Sections 2-3 prove both inclusions.",
+  "Auxiliary Section 5 is genuinely non-load-bearing, and its reported finding is in fact a corollary of the proof: when T | N the strategies of Section 2 use only lattice cuts (x = T or x = kT - A with integers), and when T does not divide N a clean lattice state always exists (one of (1,1,N-2) or (1,2,N-3) is clean: if T divides both N-2 and N-3 then T | 1; if T = 2 divides N-2 then 2 | N; N = 3 forces T = 2 and (1,1,1) is clean), and the pairing invariant holds verbatim over the lattice. The stated count of parameter pairs, sum_{N=3}^{60}(N-1) = 1769, is also correct."
+ ],
+ "unverified_claims": [],
+ "summary": "The answer theta = 180/n (n >= 2) is correct and the proof is complete and rigorous in both directions. Sufficiency: an explicit strategy with a uniform bound of n-1 cuts (Lemma 1 descent on the multiplier, plus a 'manufacturing' cut x = k-theta - A, k = floor(A/theta)+1, that puts a positive multiple of theta in both children so Shan-Yu's choice is irrelevant; theta = 90 handled separately). Necessity: Shan-Yu starts equilateral, which is clean when 180/theta is not an integer, and the four-pairing sum/difference closure argument shows every cut of a clean triangle admits a clean child, so the stopping condition is never met. All identities, inequalities, legality conditions (0 < x < C), degenerate cases (n = 2, n = 3, angles near 0 and 180), and quantifier structure (arbitrary initial triangle; adaptive adversary) check out under independent re-derivation. The computational section is clearly flagged as evidence only and is consistent with (indeed implied by) the proof.",
+ "transfer_assessment": [
+  "Reusable: angle-triple parametrization of a cevian cut, (A, x, 180-A-x) and (B, C-x, A+x) with the full converse that every x in (0,C) is attainable - the correct state space for cut-and-keep triangle games.",
+  "Reusable: 'double-threat manufacturing cut' - choose x so both children contain a value from the target arithmetic progression (here x = k-theta - A with k = floor(A/theta)+1), making the adversary's discard irrelevant; feasibility rests on a largest angle exceeding theta, available for all theta <= 60.",
+  "Reusable: integer-multiplier potential decreasing by exactly 1 per round, yielding a uniform termination bound (n-1 cuts), stronger than mere finite termination and directly satisfying 'finitely many steps no matter how Shan-Yu plays'.",
+  "Reusable: adversarial invariant built from closure of the forbidden set (multiples of theta) under the two-child sum/difference relations, with non-integrality of the total (180 degrees) closing the final pairing; equilateral triangle as the canonical witness start.",
+  "Misleading if over-trusted: finite lattice attractor computations omit off-grid cuts, so they can only suggest, never prove, real-angle statements; likewise the documented falsified heuristics (theta <= 90 threshold, dyadic-only, rational commensurability) show small-case intuition here was actively wrong - the document correctly quarantines all of these outside the proof."
+ ]
+}

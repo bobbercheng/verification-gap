@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p1-deedy-kimi-k3-final-F",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "F",
+ "problem": "1",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 27.2,
+  "input_tokens": 2,
+  "output_tokens": 1904,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 7128,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4266,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004356,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1904,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 7128,
+    "webSearchRequests": 0,
+    "costUSD": 0.11889,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1574,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L1.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "Step 2 is the only place in the full proof that argues some entry stays >1, and its stated principle is false: a nonincreasing positive-integer sequence certainly can drop from >1 to 1 (a product can become 1 exactly when all entries become 1, which is what must be excluded). So the inference is invalid as written. Elsewhere, only the 'Current best' summary asserts 'no move can produce two 1's, so some entry >1 always survives' without proof; Step 1's Type A (g>=2) and Type B (l=mn>1) facts are present but are never combined into that conclusion. Hence L1.1's 'at least one survivor' component is not established; a one-sentence replacement using Type A/B repairs it."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

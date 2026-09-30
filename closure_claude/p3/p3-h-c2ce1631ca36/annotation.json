@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-c2ce1631ca36",
+  "problem": "3",
+  "sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+  "path": "checkpoint_inputs/c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d.md",
+  "lineage": "ours-kimi-R2",
+  "model": "kimi-k3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "kimi-r2-c1"
+  ],
+  "bytes": 3032,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2150,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 525,
+        "output_tokens_details": {
+          "thinking_tokens": 256
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2150,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 525,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 2150,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2150
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "toggle/symmetric-difference measure invariant (BFS evidence, n=2 by hand only)",
+    "upper_bound_mechanism": "explicit Xiang attacks (halve-largest/clone/etc.), n=2 case analysis only",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula appears only as a labelled CONJECTURE, numerically verified n=1,2,3 and proved for n=2. Reduction to odd order-statistic sum is stated but proof deferred ('to be written'). General lower bound is BFS evidence with invariant admittedly still being hunted; upper bound exists only for n=2. No all-n argument written."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

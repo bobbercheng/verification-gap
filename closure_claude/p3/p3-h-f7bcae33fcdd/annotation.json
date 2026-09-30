@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-f7bcae33fcdd",
+  "problem": "3",
+  "sha256": "f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874",
+  "path": "checkpoint_inputs/f7bcae33fcdd490d3db226e9724cf6177e1d8235dedc6c53c70fa5fd018e6874.md",
+  "lineage": "ours-kimi-K2-repair",
+  "model": "kimi-k3",
+  "context": 4,
+  "turn": null,
+  "record_ids": [
+    "kimi-k2-repair"
+  ],
+  "bytes": 17249,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 9497,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 478,
+        "output_tokens_details": {
+          "thinking_tokens": 204
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 9497,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 478,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 9497,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 9497
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 7.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "even-position majorization (Lemma E) on geometric division 1:2:...:2^n",
+    "upper_bound_mechanism": "subset-sum pigeonhole gap <= 1/(2^{n+1}-1) plus greedy supply-demand cancellation into equal pairs",
+    "wrong_answer_stated": false,
+    "notes": "Self-contained: claiming-phase equals odd sum (both strategies proved), delta reduction, Lemma 3 pair cancellation, Lemma E proved by induction with two-case step for all n, and Xiang's cut-count bound (including P or Q empty) and leftover evaluation handled, incl. L=empty. Tightness noted."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

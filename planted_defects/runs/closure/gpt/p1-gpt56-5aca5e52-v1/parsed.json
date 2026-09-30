@@ -1,0 +1,47 @@
+{
+ "gate": "closure",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p1-gpt56-5aca5e52-v1",
+ "base_id": "p1-gpt56-5aca5e52-v1",
+ "type": "O",
+ "problem": "1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.5,
+  "input_tokens": 17079,
+  "output_tokens": 106,
+  "reasoning_output_tokens": 0,
+  "cached_input_tokens": 12800
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "lexicographic descent of (board product, nonunit count)",
+  "upper_bound_mechanism": "primewise gcd of valuation vector invariant",
+  "wrong_answer_stated": false,
+  "notes": "Complete proof: it derives the valuation move including zero/equal cases, proves termination for every play and exactly one survivor, establishes primewise valuation-gcd invariance, and explicitly identifies M."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 17079,
+    "cached_input_tokens": 12800,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 106,
+    "reasoning_output_tokens": 0
+   },
+   "sec": 7.5,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 2,
+ "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+}

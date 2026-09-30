@@ -1,0 +1,61 @@
+{
+  "id": "p2-gpt-5.6-sol-max-main-t026",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 26,
+  "path": "checkpoint_inputs/e2f41fa6f165fd2089170dadf80fc5f85b38985afce36db670852653c943355a.md",
+  "bytes": 5140,
+  "sha256": "e2f41fa6f165fd2089170dadf80fc5f85b38985afce36db670852653c943355a",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 1381,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 90.9,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1381,
+        "output_tokens": 469,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 8.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "coordinate/circle-equation reduction finished only by Gröbner computation",
+    "wrong_answer_stated": false,
+    "notes": "Tracking file, not a finished proof. Angle conditions fully translated into explicit quadratic identities (II) via sine law; target reduced to (IV), but final step relies on unexhibited computer-algebra ideal membership, not a written argument. No key-circle construction present."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "e2f41fa6f165fd2089170dadf80fc5f85b38985afce36db670852653c943355a",
+  "original_bytes": 5140,
+  "input_anonymized": false
+}

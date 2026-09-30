@@ -1,0 +1,65 @@
+{
+  "id": "p3-h-0f9b4ecd6f83",
+  "problem": "3",
+  "sha256": "0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6",
+  "path": "checkpoint_inputs/0f9b4ecd6f83446d5e28cfdd9818a5f2e44164e4ebd084db432f2776541667d6.md",
+  "lineage": "ours-kimi-R1",
+  "model": "kimi-k3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "kimi-r1-c1"
+  ],
+  "bytes": 3339,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2392,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 1744,
+        "output_tokens_details": {
+          "thinking_tokens": 1558
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2392,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1744,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 2392,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2392
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 21.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 2,
+    "main_gap": "Both bounds unproved: no strategy proof that the geometric composition guarantees 2^n/(2^{n+1}-1), and no proof that Xiang can cap every composition; only numerics for n≤3.",
+    "notes": "Correct answer conjectured and Lemma 1 (claiming phase = odd-position sum) is correctly proved, giving a clean reduction. Recursive Xiang strategies (A)/(B) are stated without proof or completion. Document self-describes as 'in progress' with open gaps."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

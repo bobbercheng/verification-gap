@@ -1,0 +1,48 @@
+{
+ "task_id": "imo-2026-p6",
+ "route_reviewed": "p6-mid-C-r1",
+ "reviewer_model": "glm-5.3",
+ "reviewer_endpoint": "https://api.z.ai/api/anthropic",
+ "api": "anthropic",
+ "statement_sha256": "ea3f916e232d74dc448de9bf132a32e09a8966d62aa0c98b2e6f29c69fee03e2",
+ "candidate_file": "pilot_critique_ext/p6-mid-C-r1/output.md",
+ "candidate_sha256": "8629891d458639118d9465fe18c5a0f01675e0c675cc841f0093090ade261f64",
+ "rubric_sha256": "45e5debb4c56f2cb610e3eb19d27eab36106f7bcf73c3d46efa582e714cc96f5",
+ "attempts": [
+  {
+   "attempt": 0,
+   "thinking": {
+    "type": "enabled",
+    "budget_tokens": 16000
+   },
+   "http_status": 200,
+   "stop_reason": "end_turn",
+   "usage": {
+    "input_tokens": 4030,
+    "output_tokens": 23249,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "elapsed_seconds": 261.6,
+   "model": "glm-5.3",
+   "json_parsed": true
+  }
+ ],
+ "parsed": true,
+ "passes_gate": true,
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "n_fatal": 0,
+ "n_unverified": 0,
+ "finished_at": "2026-09-06T00:46:08Z",
+ "candidate_file_as_recorded": "pilot_critique/p6-mid-C-r1/output.md",
+ "relabel_note": "2026-09-06T01:32:45Z: label corrected from the primary-run directory name to the extension run; candidate_sha256 unchanged and verified against the extension output."
+}

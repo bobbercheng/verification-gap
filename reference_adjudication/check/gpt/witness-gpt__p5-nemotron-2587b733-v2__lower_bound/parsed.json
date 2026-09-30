@@ -1,0 +1,25 @@
+{
+ "checker": "gpt",
+ "objection_key": "witness-gpt__p5-nemotron-2587b733-v2__lower_bound",
+ "case": "p5-nemotron-2587b733-v2",
+ "procedure": "witness",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 15.0,
+  "input_tokens": 18365,
+  "output_tokens": 519,
+  "reasoning_output_tokens": 377,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L5.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The substitution is incorrect: f(x)+y=x+c+y, so the middle term must be (x+y+c)/2, not (x+y+2c)/2. The stated counterexample is valid. Replacing “2c” by “c” repairs the display; then both inequalities follow from (x-y-c)^2≥0. Thus the intended sufficiency argument is present, but L5.1 is not correctly displayed as written."
+ },
+ "elsewhere_anchor": null
+}

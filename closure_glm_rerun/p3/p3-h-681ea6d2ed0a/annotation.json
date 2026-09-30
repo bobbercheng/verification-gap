@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-681ea6d2ed0a",
+  "problem": "3",
+  "sha256": "681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4",
+  "path": "checkpoint_inputs/681ea6d2ed0a57c1deb5ce9c55954ba85444c5da6b127393e71c92ba16e29be4.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c3"
+  ],
+  "bytes": 14776,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5047,
+        "output_tokens": 3581,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 50.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:4:...:2^n Liu division (proved only for n=1)",
+    "upper_bound_mechanism": "none (halving response works only against the geometric config; universal reply absent)",
+    "wrong_answer_stated": false,
+    "notes": "Honest status report. Draft/claim lemma fully proved for all n (greedy both sides), plus sup/inf minimax reduction. c(1)=2/3 proved in both directions covering all legal cases. Geometric/halving pair computes 2^n/D exactly for all n but only for that single pair; LB against every Xiang reply and universal UB explicitly open for n≥2. Formula stated only as conjecture with numerical support."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

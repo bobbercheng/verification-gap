@@ -1,0 +1,45 @@
+{
+  "id": "p5-h-72f3ae519eb2",
+  "problem": "5",
+  "sha256": "72f3ae519eb2c7e7ee5d768f2697068f3b2a36a55b5b344ec677e4c9630fb8bc",
+  "path": "checkpoint_inputs_ext/72f3ae519eb2c7e7ee5d768f2697068f3b2a36a55b5b344ec677e4c9630fb8bc.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 8,
+  "record_ids": [
+    "p5-grok-4.5-main-t008",
+    "p5-deedy-grok-4.5-final"
+  ],
+  "bytes": 1233,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 15544,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 314,
+        "reasoning_output_tokens": 187
+      },
+      "sec": 12.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "RMS-AM-GM for c=0 only",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": true,
+    "notes": "The specialization x=f(y) correctly yields f(f(y))=2f(y)-y, but d(y)>=0 and the orbit consequences are not established. Only the identity is verified, omitting c>0. No necessity argument proves constant difference or handles mixed fixed/non-fixed points; the claimed uniqueness of identity is false."
+  },
+  "S": 0,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

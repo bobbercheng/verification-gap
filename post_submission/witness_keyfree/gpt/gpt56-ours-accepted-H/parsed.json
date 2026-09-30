@@ -1,0 +1,55 @@
+{
+ "gate": "witness_blind",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 68.1,
+  "input_tokens": 18495,
+  "output_tokens": 2946,
+  "reasoning_output_tokens": 2588,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_but_invalid",
+    "quote": "Thus his marks are \\(2^j\\delta\\) for \\(1\\le j\\le n\\), all distinct and\nstrictly inside the stick.",
+    "witness": "COUNTEREXAMPLE: For n=2, δ=1/7. The stated marks are 2/7 and 4/7, producing lengths 2/7, 2/7, 3/7, not the claimed 1/7, 2/7, 4/7. Their subset sums are not unique: the two singleton 2/7 intervals have equal sums, so Γ=0. Indeed Xiang can bisect the 3/7 interval, leaving equal pairs 2/7,2/7 and 3/14,3/14, hence D=0 and Liu gets only 1/2 rather than 4/7.",
+    "load_bearing": "The matching lower bound requires a valid explicit Liu strategy for every n. The text identifies that strategy with these mark positions, but those positions do not create the binary interval lengths on which the Γ=δ argument depends."
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "The closed form is correct, and the reduction/refinement and Xiang upper bound are valid. The lower-bound construction contains a false conversion from desired interval lengths to mark positions; cumulative binary lengths would require different marks."
+ },
+ "anchors": {
+  "lower_bound": {
+   "anchored": true,
+   "length": 97,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    6887,
+    6984
+   ]
+  }
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-eb5dc17211c5",
+  "problem": "2",
+  "sha256": "eb5dc17211c56bd6c12af197b480a9a71205325ad395e19ff31f40b686ec0378",
+  "path": "checkpoint_inputs/eb5dc17211c56bd6c12af197b480a9a71205325ad395e19ff31f40b686ec0378.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 61,
+  "record_ids": [
+    "p2-gpt-5.6-sol-max-main-t061"
+  ],
+  "bytes": 4769,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3330,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 1457,
+        "output_tokens_details": {
+          "thinking_tokens": 1115
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3330,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1457,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 3330,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3330
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 20.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "unverified sparse polynomial certificate 4V·T = A·E_R + B·E_D + (C^2+S^2-1)G + (X^2+U^2-1)H",
+    "upper_bound_mechanism": "coordinate power computation: O=(P/2,Q/2), OM^2-ON^2 reduces to b(CP+SQ)-cP=(b^2-c^2)/2, i.e. T=0",
+    "wrong_answer_stated": false,
+    "notes": "Goal and coordinate strategy correct; finish from T=0 is fully computed. Translation of the three angle conditions is only sketched: (1),(2),(3) are stated but the passage to E_R=E_D=0 is 'elementary simplification'. Core certificate (IV) is explicit but admittedly unverified ('script ready to run'), so the key step is an unexecuted computation. No synthetic key circle."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

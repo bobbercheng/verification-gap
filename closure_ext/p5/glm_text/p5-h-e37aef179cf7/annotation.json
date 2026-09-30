@@ -1,0 +1,46 @@
+{
+  "id": "p5-h-e37aef179cf7",
+  "problem": "5",
+  "sha256": "e37aef179cf7b21a670f0cf886fa6e262271996c4befb5580325c1d04c66fd3c",
+  "path": "checkpoint_inputs_ext/e37aef179cf7b21a670f0cf886fa6e262271996c4befb5580325c1d04c66fd3c.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 32,
+  "record_ids": [
+    "p5-deepseek-v4-pro-main-t032"
+  ],
+  "bytes": 9029,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3722,
+        "output_tokens": 16548,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 221.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "QM-AM-GM on x and y+c",
+    "upper_bound_mechanism": "orbit density/diophantine comparison + separation and covering of mixed case",
+    "wrong_answer_stated": false,
+    "notes": "Identity (3) and AP reformulation fully proved; sufficiency verified for all c>=0. Necessity has both parts (positive differences equal via density; mixed 0/c case excluded via |x-y|>c and orbit covering) but never proves g>=0, so 'V⊆{0,c}' is asserted, leaving negative differences unexcluded. Minor typos: n=pt,m=qt indices; 'Lemma 2' never stated."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

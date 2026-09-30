@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-961eadba7a83",
+  "problem": "6",
+  "sha256": "961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671",
+  "path": "checkpoint_inputs/961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "cab6a0da",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-cab6a0da-v2"
+  ],
+  "bytes": 11627,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7132,
+        "output_tokens": 1325,
+        "output_tokens_details": {
+          "thinking_tokens": 1035
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1325,
+            "cache_read_input_tokens": 7132,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 19.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "none (Lemma 2 finiteness of prime support declared OPEN/conjectured)",
+    "upper_bound_mechanism": "none (Lemma 7 backward extension declared OPEN; only conditional eventual periodicity)",
+    "wrong_answer_stated": true,
+    "notes": "Key Observation (candidates = multiples of minimal-hitting-set products, greedy min) is proved, giving the reduction. Structure L=lcm(m_H), T=|R| stated explicitly, though the tabulated data (a1=105: L=69) is internally inconsistent. Finiteness of the prime set and the backward extension to n=1 are both explicitly labeled unproven; everything after Part 3 is conditional and only eventual."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

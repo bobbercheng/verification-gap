@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2865,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0029549999999999997,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 469,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 3270,
+    "webSearchRequests": 0,
+    "costUSD": 0.0451055,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 99,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 3270,
+   "cache_read_input_tokens": 1341,
+   "output_tokens": 469,
+   "output_tokens_details": {
+    "thinking_tokens": 99
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 3270,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 469,
+     "cache_read_input_tokens": 1341,
+     "cache_creation_input_tokens": 3270,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 3270
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 7144,
+  "is_error": false,
+  "elapsed_seconds": 7.8,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"quote_faithful\": \"yes\", \"verdict\": \"confirmed\", \"evidence_kind\": \"missing_justification\", \"fatal\": \"yes\", \"explanation\": \"The quoted sentence appears verbatim in the 'Current best' section and means exactly what the objection takes it to mean: the upper-bound obligation (U) is unproved. Scanning the whole text confirms this: Part B only reduces to m=n+1 pieces (halving kills m<=n), then offers a pigeonhole giving epsilon in {-1,0,1}^{n+1} with |sum delta_i a_i| <= T_n S, and the text itself flags the defect: 'BUT such a signed sum is NOT always realizable by cancel/chain ops (e.g. {1,2}: only |2-1| realizable, not 2+1). Realizability gap.' No cancellation/overlay construction converting the small signed sum into at most n actual Xiang cuts is given anywhere, and the remaining candidate is labeled 'needs verification & proof'. Hence obligation U is absent as written; only the answer is conjectured with small-n grid checks.\"}"
+   }
+  ]
+ }
+}

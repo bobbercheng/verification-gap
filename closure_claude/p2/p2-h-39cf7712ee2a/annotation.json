@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-39cf7712ee2a",
+  "problem": "2",
+  "sha256": "39cf7712ee2a14582f0ab955e513a22773f996ced8465fa017d39f1bf398a205",
+  "path": "checkpoint_inputs/39cf7712ee2a14582f0ab955e513a22773f996ced8465fa017d39f1bf398a205.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-round1",
+  "turn": 26,
+  "record_ids": [
+    "p2-gpt-5.6-sol-xhigh-round1-t026"
+  ],
+  "bytes": 2994,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2094,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 2658,
+        "output_tokens_details": {
+          "thinking_tokens": 2389
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2094,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2658,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 2094,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2094
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 36.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "equal-power determinant D = c*Q (CAS-checked identity, not proved)",
+    "upper_bound_mechanism": "equal powers of M,N w.r.t. (AKL) give OM^2-R^2=ON^2-R^2",
+    "wrong_answer_stated": false,
+    "notes": "Goal and strategy (equal powers) correct; coordinates explicitly encode all three angle conditions, with the third as incidence Q=0. The analogue of the key circle step is the boxed identity D=cQ, only 'checked symbolically' and admitted as an open rigor issue; degenerate/right-angle cases unhandled. Finish from equal powers is complete."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "p1-deedy-kimi-k3-final-H",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "H",
+ "problem": "1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 37.0,
+  "input_tokens": 3790,
+  "output_tokens": 3274,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "product/#ones lexicographic monovariant (P halves when gcd≥2, z increases when gcd=1) + never-two-1s survivor argument",
+  "upper_bound_mechanism": "gcd of p-adic valuations invariant via common-divisor equivalence (t|α,β ⟺ t|α',β')",
+  "wrong_answer_stated": false,
+  "notes": "Complete: move rule v_p→(min,|α−β|) and never-two-1s (Step 2) proved for all cases; termination bounded by ⌊log₂P₀⌋+N for every play; at-most/at-least-one survivor both argued; invariance handles α=β and all-zero tuple; boxed M explicit and correct. One harmless typo: 'ℓ=m+n' (should be mn) in Type B; conclusion unaffected."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 3790,
+    "output_tokens": 3274,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 37.0,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 2,
+ "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8"
+}

@@ -1,0 +1,18 @@
+{
+ "claim_id": "C2",
+ "condition": "invalid",
+ "verifier": "glm",
+ "model": "glm-5.3",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "Counterexample: let A_i = {x, y_i, z_1,...,z_{i-1}} for i≥1. All A_i share x, so the family is pairwise intersecting. Yet for each k≥1, T_k = {y_1,...,y_k, z_k} is an inclusion-minimal transversal (hits A_i via y_i if i≤k, via z_k if i>k), so there are infinitely many.",
+  "witness_valid": false,
+  "witness_reason": "The family of singletons {x_n} with distinct x_n is pairwise disjoint, not pairwise intersecting; it violates the hypothesis, so it cannot refute the claim (even though it does have infinitely many minimal transversals)."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 81.2
+}

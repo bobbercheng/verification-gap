@@ -1,0 +1,44 @@
+{
+  "id": "p1-h-b9bcc2557880",
+  "problem": "1",
+  "sha256": "b9bcc2557880ee6eaaafb84dc81dbae13190592c29cbd0e531c0be1eb572cb1b",
+  "path": "checkpoint_inputs_ext/b9bcc2557880ee6eaaafb84dc81dbae13190592c29cbd0e531c0be1eb572cb1b.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "7ff751bc",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-7ff751bc-v1"
+  ],
+  "bytes": 5641,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17026,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 437,
+        "reasoning_output_tokens": 317
+      },
+      "sec": 15.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic descent; flawed survivor argument",
+    "upper_bound_mechanism": "prime-valuation gcd invariant",
+    "wrong_answer_stated": true,
+    "notes": "Termination is valid, and the move analysis notes that at least one output exceeds 1. However, the final survivor argument explicitly uses the false inference that a product starting above 1 and never increasing must remain above 1. The needed induction from the earlier case analysis is not written."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

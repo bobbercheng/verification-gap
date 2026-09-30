@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-a9b1ddf110b3",
+  "problem": "3",
+  "sha256": "a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829",
+  "path": "checkpoint_inputs/a9b1ddf110b3ece0eb005f90f6555777b86c09a19d861e6624a2cc9a530e3829.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "glm53-c3"
+  ],
+  "bytes": 9592,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5462,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 1101,
+        "output_tokens_details": {
+          "thinking_tokens": 807
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 5462,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1101,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 5462,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 5462
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "XOR/odd-set merge + tail induction (incomplete; only n<=2 and 'a_1 uncut' case)",
+    "upper_bound_mechanism": "min_k Delta_k <= 1/(2^{n+1}-1) counting lemma + split-at-k*/macro-plan (Lemma X1 unproven beyond m<=4)",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form given as the answer, but both bounds are explicitly open for general n (lower: insertion/XOR lemma unproven; upper: Lemma X1 only verified m<=4). Reduction A=2V-1=sum of odd-ranked pieces is asserted/cited as proved elsewhere, not argued in the text."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

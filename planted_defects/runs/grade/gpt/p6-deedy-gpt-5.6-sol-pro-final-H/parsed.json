@@ -1,0 +1,42 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-H",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "H",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 30.3,
+  "input_tokens": 17531,
+  "output_tokens": 1138,
+  "reasoning_output_tokens": 961,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": false,
+  "main_gap": "The terminal-set cardinality estimate uses an incorrect exponent, though the needed boundedness follows immediately after correcting it.",
+  "errors": [
+   {
+    "description": "Since D\\{p} has |D|-1 primes, the valid inequality is 2^{|D|-1}≤w(D\\{p}), not 2^{|D|}≤w(D\\{p}). The corrected inequality still gives a uniform cardinality bound, so the proof is readily repaired.",
+    "quote": "2^{|D|}\\le w(D\\setminus\\{p\\})<a_1"
+   }
+  ],
+  "notes": "Apart from this localized off-by-one error, the support reduction, self-duality, sunflower argument, descent, finiteness of minimal supports, and final periodicity argument are coherent and complete."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 33,
+   "length_ok": false,
+   "reason": "short",
+   "span": [
+    8190,
+    8223
+   ]
+  }
+ ]
+}

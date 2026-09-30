@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-e8f9c35c4d32",
+  "problem": "3",
+  "sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+  "path": "checkpoint_inputs/e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "glm53-c2"
+  ],
+  "bytes": 11002,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6380,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 427,
+        "output_tokens_details": {
+          "thinking_tokens": 237
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6380,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 427,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 6380,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 6380
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 1,
+    "complete": false,
+    "main_gap": "General-n case entirely unproved: both Conjecture L (lower bound) and Conjecture X (upper bound) are explicitly open; only n=1,2 are settled.",
+    "notes": "Self-declared partial. Correct-looking closed form c_n=2^n/(2^{n+1}-1) is only conjectured, with rigorous proofs limited to n=1,2 plus a non-tight halving bound and an unfinished 'top piece uncut' case. Conjectures and numerical checks earn no credit."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

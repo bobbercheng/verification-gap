@@ -1,0 +1,55 @@
+{
+ "gate": "witness",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-G",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "G",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 82.3,
+  "input_tokens": 18274,
+  "output_tokens": 2399,
+  "reasoning_output_tokens": 2070,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "not_written",
+    "quote": "This is a common-refinement (overlay) construction: superimpose the concatenated intervals of $B$ on an initial segment of length $q$ of the concatenated intervals of $A$, cut both rows at the union of the division points and pair the corresponding cells; the bound on the number of cuts follows by counting the cells of the common refinement (standard; details omitted).",
+    "witness": "The missing statement is a proof, for arbitrary disjoint nonempty collections A and B, that this overlay can be implemented using at most |A|+|B|-1 legal new cuts while pairing all length q and leaving exactly p-q unpaired. The passage sketches the construction but explicitly omits the cut count, so it does not establish the required all-cases lemma.",
+    "load_bearing": "The upper bound's final cut budget in (13) directly uses this unproved |A|+|B|-1 estimate. Without it, the text has not shown that Xiang's proposed response always uses at most n marks."
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "The stated closed form is correct. The reduction and powers-of-two lower bound are complete; the upper bound depends on an explicitly omitted proof of the crucial overlay cut count."
+ },
+ "anchors": {
+  "upper_bound": {
+   "anchored": true,
+   "length": 371,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    5795,
+    6166
+   ]
+  }
+ }
+}

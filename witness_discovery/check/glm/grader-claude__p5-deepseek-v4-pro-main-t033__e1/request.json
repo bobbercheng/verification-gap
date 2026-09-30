@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "p5-deepseek-v4-pro-main-t033",
+ "tag": "e1",
+ "text_sha256": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "unspecified",
+  "status": "error reported by an ordinary grader",
+  "quote": "A(x,y) &= (x-y)^2 + 4cx + 2c^2 \\ge 0 \\quad\\text{(always true)}",
+  "witness": "Sign/variable typo in the specialization of A: with a=0, b=c the formula gives (x−y)²+4cy+2c², not 4cx. Harmless (conclusion 'always true' is unaffected), but it is an error in the displayed identity.",
+  "load_bearing": null
+ },
+ "started_utc": "2026-09-06 05:44:47 UTC"
+}

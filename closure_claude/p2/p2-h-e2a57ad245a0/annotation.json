@@ -1,0 +1,71 @@
+{
+  "id": "p2-h-e2a57ad245a0",
+  "problem": "2",
+  "sha256": "e2a57ad245a0214768436fb0735a8f7318f18780348ea7a9b16afa0109348622",
+  "path": "checkpoint_inputs/e2a57ad245a0214768436fb0735a8f7318f18780348ea7a9b16afa0109348622.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p2-deedy-kimi-k3-final",
+    "p2-kimi-k3-main-t023"
+  ],
+  "bytes": 10275,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6889,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 3574,
+        "output_tokens_details": {
+          "thinking_tokens": 3168
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6889,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3574,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 6889,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 6889
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 45.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "trig elimination (law of sines in BMK, CNL, BKC, BCL) → quadratics ConsP/ConsQ → closed forms pow(B)=c²/2−bc sinφ/(2sin(A+φ)), pow(C) analogous (equivalent to the key circle through A and midpoints of BY, CX)",
+    "upper_bound_mechanism": "Apollonius: pow(M)=pow(B)/2−c²/4, pow(N)=pow(C)/2−b²/4; OM=ON ⟺ pow(B)−pow(C)=(c²−b²)/2",
+    "wrong_answer_stated": false,
+    "notes": "All three angle conditions faithfully encoded via φ,β,γ and R1–R4. Power formulas are correct (they match the midpoints of BY, CX on the true key circle). But Step 3's final expansion is asserted ('everything simplifies to'), and Step 5's crucial identities are verified only for the pq-coefficient, the rest 'agree immediately' plus symbolic-code appeal. Finish is complete."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

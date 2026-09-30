@@ -1,0 +1,61 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__p5-deepseek-v4-pro-main-t038__e1",
+ "case": "p5-deepseek-v4-pro-main-t038",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 15.8,
+  "input_tokens": 2,
+  "output_tokens": 1220,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 6237,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5556,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005651,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1220,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 6237,
+    "webSearchRequests": 0,
+    "costUSD": 0.094021,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 665,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.5",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "A(y,x) &= (x-y)^2 - c^2 - 2c(x+y) \\ge 0 \\;\\Longrightarrow\\; (x-y)^2 \\ge c^2 + 2c(x+y). \\tag{11}\n\\end{aligned}\n\\]\n\nFrom (11) and $x,y>0$ we obtain $(x-y)^2 > c^2$, hence  \n\n\\[\n|x-y| > c \\qquad \\forall\\,x\\in S_0,\\;y\\in S_c . \\tag{12}",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The general formula gives A(x,y) = (x-y)^2 - a^2 - 2a(x+y) + 4by + 2b^2, so with a=0, b=c the term is +4cy, not +4cx; the objection's local claim is correct. But that line is inert: it only records that A(x,y) >= 0 holds trivially and is never used. The separation |x-y| > c (the content of L5.5 needed here) comes from (11), i.e. A(y,x) = (x-y)^2 - c^2 - 2c(x+y) >= 0, which is correctly expanded (a=c, b=0), and from B(x,y) = (x-y)^2 - 4cx in (10), also correct. Hence a one-symbol misprint beside a valid argument.",
+  "objection_severity": "cosmetic"
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 231,
+  "length_ok": true,
+  "reason": null
+ }
+}

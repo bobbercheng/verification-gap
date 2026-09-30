@@ -1,0 +1,45 @@
+{
+ "status": 200,
+ "response": {
+  "model": "gpt-5.6-sol",
+  "cli": "codex",
+  "reasoning_effort": "high",
+  "usage": {
+   "input_tokens": 16896,
+   "cached_input_tokens": 10624,
+   "cache_write_input_tokens": 0,
+   "output_tokens": 756,
+   "reasoning_output_tokens": 639
+  },
+  "events": [
+   "item.completed",
+   "thread.started",
+   "turn.completed",
+   "turn.started"
+  ],
+  "stop_reason": "end_turn",
+  "elapsed_seconds": 19.5,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"answer\":2,\"reduction\":2,\"lower_bound\":1,\"upper_bound\":2,\"lower_bound_mechanism\":\"lexicographic descent (P,K), but flawed survivor argument\",\"upper_bound_mechanism\":\"primewise gcd of valuations\",\"wrong_answer_stated\":true,\"notes\":\"Termination is correctly proved. However, the claimed inference that a nonnegative nonincreasing integer starting positive cannot reach 0 is false, so the written proof of at least one survivor is invalid, despite nearby move calculations containing the ingredients for a repair.\"}"
+   }
+  ],
+  "attempts": [
+   {
+    "attempt": 0,
+    "status": 200,
+    "stop": "end_turn",
+    "usage": {
+     "input_tokens": 16896,
+     "cached_input_tokens": 10624,
+     "cache_write_input_tokens": 0,
+     "output_tokens": 756,
+     "reasoning_output_tokens": 639
+    },
+    "sec": 19.5,
+    "parsed": true
+   }
+  ]
+ }
+}

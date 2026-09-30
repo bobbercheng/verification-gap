@@ -1,0 +1,76 @@
+{
+  "task_id": "imo-2026-p5",
+  "status": "complete",
+  "answer": "The only solutions are f(x) = x + c for any constant c ≥ 0.",
+  "claims": [
+    "f(f(x)) = 2f(x) - x for all x > 0",
+    "g(x) = f(x) - x satisfies g(x + g(x)) = g(x) and g(x) ≥ 0 for all x > 0",
+    "The squared differences yield the exact bound |g(x)-g(y)|(2x+2y+g(x)+g(y)) ≤ (x-y-g(y))²",
+    "All positive values of g are equal to a single constant c ≥ 0",
+    "The range of g cannot be {0, c} with c > 0 (connectedness of (0,∞))",
+    "Therefore g is constant, so f(x) = x + c with c ≥ 0"
+  ],
+  "assumptions": [
+    "Standard properties of QM-AM-GM inequality",
+    "Connectedness of (0, ∞) in the standard topology",
+    "Positivity of iterates implies g(x) ≥ 0"
+  ],
+  "mechanisms": [
+    {
+      "name": "functional-equation-from-equality-case",
+      "summary": "Setting x = f(y) forces equality in both outer inequalities, yielding f(f(y)) = 2f(y) - y.",
+      "transfer_tags": ["functional-equations", "equality-case", "IMOSL"]
+    },
+    {
+      "name": "iterate-linearization",
+      "summary": "From g(x+g(x)) = g(x) we get fⁿ(x) = x + n g(x), which forces g(x) ≥ 0 by positivity.",
+      "transfer_tags": ["functional-iteration", "positivity-constraint", "induction"]
+    },
+    {
+      "name": "exact-squared-difference-decomposition",
+      "summary": "Squaring both inequalities and subtracting gives R = ¼[(x-y-B)² + (A-B)(2x+2y+A+B)] and L = ¼[(x-y-B)² - (A-B)(2x+2y+A+B)], combining to the tight bound (1).",
+      "transfer_tags": ["algebraic-manipulation", "inequality-squaring", "difference-of-squares"]
+    },
+    {
+      "name": "orbit-growth-argument",
+      "summary": "On forward orbits g takes constant values A,B; choosing m to keep RHS bounded while LHS grows linearly forces A = B.",
+      "transfer_tags": ["diophantine-approximation", "orbit-argument", "unbounded-vs-bounded"]
+    },
+    {
+      "name": "topological-separation",
+      "summary": "If g takes both 0 and c > 0, the separation inequality makes both level sets open, contradicting connectedness of (0,∞).",
+      "transfer_tags": ["topological-argument", "connectedness", "level-set-separation"]
+    }
+  ],
+  "falsification_attempts": [
+    {
+      "hypothesis": "g could be negative somewhere",
+      "attack": "Iterates fⁿ(x) = x + n g(x) must remain positive for all n ∈ ℕ",
+      "outcome": "Falsified: g(x) < 0 would make fⁿ(x) negative for large n"
+    },
+    {
+      "hypothesis": "g could take two distinct positive values A ≠ B",
+      "attack": "Use orbits x+nA, y+mB with m chosen to make |x+nA-y-mB-B| ≤ B/2; RHS of (1) bounded by B²/4 while LHS ~ 2nA|A-B| → ∞",
+      "outcome": "Falsified: forces all positive values equal"
+    },
+    {
+      "hypothesis": "g could take values {0, c} with c > 0",
+      "attack": "For x with g(x)=c and y with g(y)=0, inequality (2) gives |x-y| ≥ √(c(2x+c)) and |x-y| ≥ √(c(2y+c)), making both level sets open",
+      "outcome": "Falsified: (0,∞) cannot be partitioned into two disjoint nonempty open sets"
+    },
+    {
+      "hypothesis": "f(x) = kx might work for k ≠ 1",
+      "attack": "Direct substitution into left inequality yields quadratic form condition requiring k=1",
+      "outcome": "Falsified: only k=1 works, which is the c=0 case"
+    }
+  ],
+  "evidence": [
+    "Algebraic derivation of bound (1) is internally verifiable",
+    "Inductive proof of fⁿ(x) = x + n g(x) from g(x+g(x)) = g(x)",
+    "Orbit argument uses only elementary Diophantine approximation (nearest integer)",
+    "Topological argument uses standard connectedness of (0,∞)",
+    "Verification step uses only QM-AM-GM inequality"
+  ],
+  "confidence": 0.99,
+  "open_issues": []
+}

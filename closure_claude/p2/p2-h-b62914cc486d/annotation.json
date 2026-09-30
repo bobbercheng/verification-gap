@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-b62914cc486d",
+  "problem": "2",
+  "sha256": "b62914cc486d8d1f93963b28191685878757b2ba601219a958ad21079da6be55",
+  "path": "checkpoint_inputs/b62914cc486d8d1f93963b28191685878757b2ba601219a958ad21079da6be55.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 16,
+  "record_ids": [
+    "p2-gpt-5.6-sol-pro-main-t016"
+  ],
+  "bytes": 4716,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3220,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 2601,
+        "output_tokens_details": {
+          "thinking_tokens": 2327
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3220,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2601,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 3220,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3220
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 33.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "vector/circle-chord criterion cd - be = (c^2-b^2)/2, reduced to unproven trig identity (T)",
+    "wrong_answer_stated": false,
+    "notes": "Goal correctly stated; trig parametrisation (p,q,r,x,y,delta) faithfully encodes all three angle conditions via sine rule in BMK/ABK, CNL/ACL, ACK/ABL. Correct vector criterion for OM=ON and chord lengths d,e. No auxiliary circle through A,K,L is identified or proved; final identity (T) admittedly open, only checked numerically. Honest about the gap."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-a354e6f7b1c5",
+  "problem": "3",
+  "sha256": "a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b",
+  "path": "checkpoint_inputs/a354e6f7b1c522fc35d11a85ca8a705aad96249fd89e34b6e4c700f8a166ff7b.md",
+  "lineage": "deedy-grok-4.5",
+  "model": "grok-4.5",
+  "context": "grok-4.5-main",
+  "turn": 34,
+  "record_ids": [
+    "grok-4.5-main-t034"
+  ],
+  "bytes": 2547,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2502,
+        "output_tokens": 552,
+        "output_tokens_details": {
+          "thinking_tokens": 321
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 552,
+            "cache_read_input_tokens": 2502,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "power-of-two division with D-functional/induction sketch (numerics n<=3)",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula appears only as a conjecture. D-functional reduction asserted with lemmas deferred to another file, not proved here. Lower bound gives the 1:2:...:2^n construction but only an incomplete induction plan plus numerical checks for n<=3. Upper bound is only a vague 'matching/dichotomy' idea plus n=2 numerics."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

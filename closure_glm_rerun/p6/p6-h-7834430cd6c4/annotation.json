@@ -1,0 +1,47 @@
+{
+  "id": "p6-h-7834430cd6c4",
+  "problem": "6",
+  "sha256": "7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132",
+  "path": "checkpoint_inputs/7834430cd6c427085b93eb3e9409a9975301a2370927223524ce27f2c21ca132.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p6-deedy-gpt-5.6-sol-xhigh-final",
+    "p6-gpt-5.6-sol-xhigh-main-t006"
+  ],
+  "bytes": 8618,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2650,
+        "output_tokens": 4866,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 60.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "minimal-support arithmetic descent (core ≤ a_1) + disjoint-witness pairing",
+    "upper_bound_mechanism": "membership periodic mod L = ∏U, T = count of admissible integers per length-L window",
+    "wrong_answer_stated": false,
+    "notes": "Complete rigorous proof. Scanning property plus the self-blocking identity 𝒢=ℱ gives the full characterization (8) for all x ≥ a_1. Finiteness of U is proved for all terms via descent on minimal supports to cores ≤ a_1 and a disjoint-witness bound. Periodicity mod L=∏U with window count T yields a_{n+T}=a_n+L for every n ≥ 1."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

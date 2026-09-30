@@ -1,0 +1,36 @@
+{
+ "task_id": "imo-2026-p3",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [
+  "In the tightness remark, the halving construction uses n−1 cuts, not n cuts (cosmetic miscount; still legal and δ = 1/N)."
+ ],
+ "verified_claims": [
+  "Observation 1: δ(S) ≥ 0 by pairing consecutive sorted terms; δ(S) ≤ max S via δ(S) = v1 − δ(S∖{v1}).",
+  "Lemma 1: the pairing-principle claim (P ends with at least one piece of each pair and first acquisition ≥ smaller member) — case analysis on mate-response vs. untouched-pair vs. largest-remaining is sound; hence Liu gets exactly odd(S) and Xiang exactly even(S) under optimal claiming.",
+  "Lemma 2 reduction to sup_A inf_R (1+δ)/2.",
+  "Lemma 3: deleting an equal pair leaves δ unchanged (adjacent copies in the sorted block contribute 0 and later indices shift by 2, preserving parity).",
+  "Theorem A / Lemma E: base case (two pieces > 2^{n−1} must both lie in the 2^n part) and inductive step (Case 2: pieces > 2^{n−r} fit only in the r parts of size ≥ 2^{n−r+1}, total 2^{n+1} − 2^{n−r+1}; evens ≤ half) both check out; even-sum ≤ 2^n − 2^{n−r} ≤ 2^n − 1, so Liu ≥ 2^n/N.",
+  "Theorem B pigeonhole: 2^{n+1} = N+1 subset sums in [0,1] give a gap ≤ 1/N; distinct subsets yield disjoint nonempty-or P,Q with |ΣP − ΣQ| ≤ 1/N, and the case Q=∅ gives ΣP ≤ 1/N directly.",
+  "Matching-process cut count: cut step decreases |S|+|T| by 1, free step by 2; a cut step always leaves a positive remainder, so ℓ=0 forces f≥1; hence |Z|+c ≤ n in case (b) and |Z| ≤ n in case (c).",
+  "Final configuration is equal pairs plus leftover of total D ≤ 1/N; δ(S) = δ(L) ≤ max L ≤ D ≤ 1/N (with δ=0 if L empty). Marks are interior to parts, hence legal and distinct.",
+  "n=1 sanity check: c_1 = 2/3.",
+  "Recounted the tightness construction independently: cutting the 2^n part successively against demands 2^{n−1},…,1 uses n−1 cuts, leaving pieces {2^{n−1},2^{n−1},…,1,1,1} with δ = 1/N, confirming exactness."
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is correct and essentially airtight. The claiming phase is resolved exactly via a clean pairing principle; the geometric opening with a majorization bound on even-position sums gives the lower bound 2^n/(2^{n+1}−1); the upper bound uses a pigeonhole on 2^{n+1} subset sums plus a greedy mass-matching process with a carefully verified cut budget, leaving δ ≤ 1/N. Both bounds match, so the value is attained. Only a trivial cosmetic miscount ('n cuts' vs n−1) in the tightness remark.",
+ "transfer_assessment": [
+  "Reusable: sorted-order alternating-sum δ as the exact value of an alternating greedy claiming game (Lemma 1 pairing principle).",
+  "Reusable: deleting equal pairs preserves δ (Lemma 3) — a general tool for cancellation arguments.",
+  "Reusable: pigeonhole on 2^{n+1} subset sums to find near-equal disjoint subfamilies (Step 1 of Theorem B).",
+  "Reusable: greedy supply/demand matching with the invariant c + 2f = |S|+|T| − ℓ for counting cuts (Step 2b).",
+  "Reusable: dyadic/powers-of-2 composition as the extremal opening, with the binary-uniqueness argument showing tightness.",
+  "Not misleading: no hidden quantifier swaps or continuity/limit claims were detected; sup/inf vs max/min is moot since both bounds are attained."
+ ]
+}

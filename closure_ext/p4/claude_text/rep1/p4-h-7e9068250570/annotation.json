@@ -1,0 +1,70 @@
+{
+  "id": "p4-h-7e9068250570",
+  "problem": "4",
+  "sha256": "7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8",
+  "path": "checkpoint_inputs_ext/7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9a63b14e",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-9a63b14e-v1"
+  ],
+  "bytes": 12849,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7971,
+        "output_tokens": 1451,
+        "output_tokens_details": {
+          "thinking_tokens": 1164
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1451,
+            "cache_read_input_tokens": 7971,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 20.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "Explicit forcing cuts for theta=90 (one move) and theta=60 (via a 120-degree state), both children handled",
+    "upper_bound_mechanism": "Max-angle < theta invariant from equilateral, valid only for theta > 90 (interval-emptiness 2theta > 180)",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer never identified; only 60 and 90 proven winning, rest declared open with hypothesis lists. No general k*theta lemma (only the theta=60, k=2 instance). Avoidance proven only for theta>90 via a correct max-angle invariant; (0,90) avoidance admitted unresolved. Transitions correct; no false lemma asserted."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

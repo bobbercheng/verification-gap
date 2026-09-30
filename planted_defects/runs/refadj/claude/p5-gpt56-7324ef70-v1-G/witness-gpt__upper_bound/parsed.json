@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p5-gpt56-7324ef70-v1-G",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "G",
+ "problem": "5",
+ "objection_key": "witness-gpt__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 24.7,
+  "input_tokens": 2,
+  "output_tokens": 1909,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 3131,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2799,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002894,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1909,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 3131,
+    "webSearchRequests": 0,
+    "costUSD": 0.08018600000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1557,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.5",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "Estimate (7) is the write-up's entire necessity mechanism (the calculus route of L5.5): Section 3 derives d = const solely from it. The text states it in a box and explicitly writes \"(standard; details omitted)\", supplying no algebra and no treatment of the two signs of d(y)-d(t). The estimate is in fact true — the lower inequality at x=f(t) gives (A+B)^2-4A(y+b) = (t-y)^2+4(t+c)(c-b) >= 0, i.e. b-c <= (t-y)^2/(4t), and swapping t,y gives the reverse bound — but that derivation, including the symmetric second application, appears nowhere in the text. No other passage establishes constancy of d. Repair = insert this short lemma."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "upper_bound"
+}

@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-5",
+ "cli": "claude",
+ "cli_model_usage": {
+  "claude-haiku-4-5-20251001": {
+   "inputTokens": 5368,
+   "outputTokens": 19,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.005463,
+   "contextWindow": 200000,
+   "maxOutputTokens": 32000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-4-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 2,
+   "outputTokens": 1483,
+   "cacheReadInputTokens": 8011,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0410905,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 1210,
+   "canonicalModel": "claude-opus-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 8011,
+  "output_tokens": 1483,
+  "output_tokens_details": {
+   "thinking_tokens": 1210
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "not_available",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1483,
+    "cache_read_input_tokens": 8011,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "num_turns": 1,
+ "duration_ms": 18684,
+ "is_error": false,
+ "elapsed_seconds": 19.3,
+ "content": [
+  {
+   "type": "text",
+   "text": "{\"answer\": 2, \"reduction\": 2, \"lower_bound\": 2, \"upper_bound\": 2, \"lower_bound_mechanism\": \"double-threat cut (both children get k\\u03b8) + chain lemma induction\", \"upper_bound_mechanism\": \"safe-triangle invariant (no angle in \\u03b8N), 4-case check\", \"wrong_answer_stated\": false, \"notes\": \"Answer \\u03b8=180/n stated correctly. Lemma 0 gives cut parametrization with existence/bijectivity of the cut point. Chain lemma proved by induction covering both discards. Lemma 2 handles n=2 separately and verifies 0<\\u03b1<A. Lemma 4's four-case argument uses 180\\u2209\\u03b8N exactly where needed; existence of safe start proved.\"}"
+  }
+ ]
+}

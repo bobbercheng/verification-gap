@@ -1,0 +1,32 @@
+{
+ "task_id": "imo-2026-p3",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Drafting lemma: by induction, the first drafter's optimal total is (1+D(x))/2 with D(x)=x1-x2+x3-...; the cancellation identity showing D(x)-A_i >= 0 for all i checks out.",
+  "Lower bound of the refinement lemma: with k<=q-1 cuts there are r<=2q-1 final pieces, floor(r/2)<=q-1 graph edges on q vertices, so some connected component is a tree (a connected component with e_C=v_C-1 cannot contain a loop); bipartition signs yield two distinct vertex subsets whose signed sum differs by at most sum of paired differences plus possibly x_r, i.e. at most D(x). The handling of isolated single-vertex components (whole interval equals the unpaired piece x_r <= D) is correct.",
+  "Upper bound of the refinement lemma: the overlay construction produces perfectly paired equal cells on [0,s_B] plus residual pieces of total Gamma; the cut count |A|+|B|-1 (from at most |A|-1 A-boundaries inside (0,s_B) on the B-row and at most |B| on the A-row including s_B) plus q-|A|-|B| bisections equals at most q-1. Deleting two equal entries from a sorted list preserves D, and D of a multiset is at most its total, giving D<=Gamma. The B=empty case is also correct.",
+  "Pigeonhole: 2^(n+1) subset sums in [0,1] including 0 and 1 give two distinct subsets with difference at most 1/(2^(n+1)-1), so Gamma <= delta; distinctness of subsets holds even for zero gaps.",
+  "Liu's construction: intervals delta,2delta,...,2^n delta sum to 1, marks (2^j-1)delta are distinct and interior, subset sums are unique multiples of delta, so Gamma = delta, and with n = (n+1)-1 cuts Xiang cannot push D below delta.",
+  "Final arithmetic: (1+delta)/2 = 2^n/(2^(n+1)-1); c_1 = 2/3, c_2 = 4/7.",
+  "Independent n=1 verification: Liu marks 1/3; whether Xiang cuts inside 1/3 (D = 1-2*max >= 1/3) or inside 2/3 (D = 1/3) or not at all, Liu secures 2/3.",
+  "The n=2 grid example: lengths (7,1,13,17,18)/56 give D = 18-17+13-7+1 = 8 = 56/7, Liu gets 4/7, matching the formula.",
+  "Degenerate cases handled: q<=n (Xiang bisects all intervals, D=0); ineffective/endpoint cuts; coincident overlay boundaries only reducing the count; tie-ordering invariance of D."
+ ],
+ "unverified_claims": [],
+ "summary": "The proof is complete and correct. The two-part refinement lemma (Xiang's best refinement of Liu's intervals achieves D exactly equal to the minimum distinct-subset-sum gap Gamma) is proved rigorously in both directions: the lower bound via a clever tree-component/bipartition argument on the pairing multigraph, the upper bound via an overlay construction with a correct cut count of at most q-1. Combining with the standard drafting value (1+D)/2, the pigeonhole bound on 2^(n+1) subset sums gives Liu at most 2^n/(2^(n+1)-1), and Liu's dyadic mark placement (delta, 2delta, ..., 2^n delta) attains it. Degenerate cases (fewer cuts, loops, ties, coincident boundaries, B empty, isolated components) are all addressed. Direct n=1 and n=2 checks confirm the formula.",
+ "transfer_assessment": [
+  "Reusable: the fact that the greedy drafting value of a sorted multiset is its alternating sum D(x), proved by the cancellation identity D - A_i >= 0.",
+  "Reusable: the 'minimum distinct subset-sum gap equals the best achievable refinement discrepancy' lemma, with the tree-component bipartition lower bound (edges = consecutive pairs in sorted order, some component must be a tree when edges < vertices) and the overlay/concatenation upper bound with the |A|+|B|-1 cut count — this is the key mechanism and is fully rigorous.",
+  "Reusable: the pigeonhole bound Gamma <= 1/(2^q - 1) for q intervals summing to 1, together with the powers-of-two construction showing sharpness.",
+  "Potentially misleading if transferred carelessly: one might think equal-pair removal from a sorted list changes D; it does not, but only because the two removed copies sit inside a single tie block — worth remembering when generalizing.",
+  "Misleading trap correctly flagged by the authors: naive equal-interval Liu strategies (e.g. c_n=(n+1)/(2n+1)) fail because Xiang can force D=0 against even equal splits; the 'at most n marks' slack is essential."
+ ]
+}

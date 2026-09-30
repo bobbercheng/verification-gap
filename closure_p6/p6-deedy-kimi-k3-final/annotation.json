@@ -1,0 +1,61 @@
+{
+  "id": "p6-deedy-kimi-k3-final",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs/535f08f8f805554c7558dcc8d63875bb10abf5214967d9f9c022e536194db24f.md",
+  "bytes": 17140,
+  "sha256": "535f08f8f805554c7558dcc8d63875bb10abf5214967d9f9c022e536194db24f",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 2978,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 3648,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 86.3,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 6626,
+        "output_tokens": 1014,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 21.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "killing property K′ (large-prime erasure) via descent + pigeonhole compactness",
+    "upper_bound_mechanism": "L = lcm(minimal elements), T = count of terms in [a_1, a_1+L), global periodicity from n=1",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Step 1 gives the enumeration/reduction; K′ is proved for all cases and drives the compactness theorem (no infinite minimal transversals); peeling gives finiteness of C; Step 2 assembles periodicity from n=1 with explicit L, T. All steps written out generally, not just examples."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "535f08f8f805554c7558dcc8d63875bb10abf5214967d9f9c022e536194db24f",
+  "original_bytes": 17140,
+  "input_anonymized": false
+}

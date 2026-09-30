@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__deedy-grok-4.5-final__e1",
+ "case": "deedy-grok-4.5-final",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.3,
+  "input_tokens": 2,
+  "output_tokens": 814,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 9345,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7591,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.007691,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 814,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 9345,
+    "webSearchRequests": 0,
+    "costUSD": 0.1146315,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 471,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "none",
+  "explanation": "The quote is verbatim and the k>=1 branch of Theorem B is the only place the write-up attempts the universal lower bound (L3.3). It literally contains the placeholder '(something that forces)', then asserts an 'identity' D_rest = mu-1 'in the worst case' with a self-contradictory parenthetical, and finally defers to 'numerical checks for n<=3'. The second subcase invokes a 'free' virtual cut, an unproven 'parity/lattice' claim, and again exhaustive small-n checks. No other passage supplies a valid all-n argument (no pairing/tree or even-position majorization is carried out). Repairing this requires supplying the entire missing mechanism, not a local edit.",
+  "objection_correct_note": null
+ },
+ "elsewhere_anchor": null
+}

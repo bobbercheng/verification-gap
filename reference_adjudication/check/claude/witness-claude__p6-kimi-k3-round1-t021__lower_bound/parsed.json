@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-claude__p6-kimi-k3-round1-t021__lower_bound",
+ "case": "p6-kimi-k3-round1-t021",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.7,
+  "input_tokens": 2,
+  "output_tokens": 418,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 2381,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2149,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002244,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 418,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 2381,
+    "webSearchRequests": 0,
+    "costUSD": 0.035138,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 77,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "L6.2 (large-prime erasure / finiteness of the relevant prime set) is exactly what the write-up calls the 'Remaining crux: prove shrinkage stops (equivalently: finitely many permanents / S_infty finitely generated)', supported only by 'Empirics (100+ values of a_1 ...): shrinkage ALWAYS stops'. Lemmas A-D establish permanence and identify permanents as minimal elements of S_infty, but never bound their number or show a term with a prime > a_1^2 is dominated. Without finiteness, L is not obtained, so the periodicity assembly is also unavailable. Supplying the missing lemma is a whole-lemma repair.",
+  "elsewhere_quote_note": null
+ },
+ "elsewhere_anchor": null
+}

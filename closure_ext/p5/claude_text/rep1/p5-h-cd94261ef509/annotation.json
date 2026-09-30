@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-cd94261ef509",
+  "problem": "5",
+  "sha256": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+  "path": "checkpoint_inputs_ext/cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 33,
+  "record_ids": [
+    "p5-deepseek-v4-pro-main-t033"
+  ],
+  "bytes": 8326,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6903,
+        "output_tokens": 4154,
+        "output_tokens_details": {
+          "thinking_tokens": 3800
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 4154,
+            "cache_read_input_tokens": 6903,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 53.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c, both inequalities, all c>=0",
+    "upper_bound_mechanism": "|A-B|<=A+B inequality (7): rational/irrational Kronecker density kills two distinct positive differences; level-set separation |x-y|>c plus Lemma 1 (small element of S_c) and interval covering kills the mixed fixed-point case",
+    "wrong_answer_stated": false,
+    "notes": "Identity f(f(y))=2f(y)-y and g(x+g(x))=g(x) derived cleanly, but d(x)>=0 is never proved (orbit-positivity argument absent); the dichotomy 'g==0 or V subset {0,c}' silently excludes negative values of g. Both necessity mechanisms (uniqueness of positive difference; exclusion of mixed fixed/non-fixed points) are written out in full and correct. Verification complete."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

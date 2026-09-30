@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.7,
+  "input_tokens": 2,
+  "output_tokens": 438,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 3125,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2792,
+    "outputTokens": 15,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002867,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 438,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 3125,
+    "webSearchRequests": 0,
+    "costUSD": 0.043078000000000005,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 89,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The large-prime erasure lemma (σ(x) good for every term x) is exactly ledger item L6.2 and carries the whole reduction to finitely many primes, hence L = product of p ≤ A. The write-up states it and replaces the proof with 'Induction over the sequence terms in increasing order (standard; details omitted).' No argument appears elsewhere: item 4 of 'Hypotheses tested' only names 'the construction Rp^k repairs this boundary issue' without defining R, k, or showing the resulting number is a term below x; the computational section explicitly says it 'only tests' the lemma. So L6.2 is unproved as written; supplying the omitted induction is a lemma-sized repair.",
+  "objection_correct_confidence": "high"
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

@@ -1,0 +1,55 @@
+{
+ "gate": "witness_blind",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p5-gpt56-7324ef70-v1-G",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "G",
+ "problem": "5",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 54.8,
+  "input_tokens": 16505,
+  "output_tokens": 2088,
+  "reasoning_output_tokens": 1834,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "not_written",
+    "quote": "Squaring the lower and the upper inequality, rearranging, and using \\(b,c\\ge0\\) (standard; details omitted) yields",
+    "witness": "The write-up must prove for every t,y>0 that the substituted inequalities imply |d(y)-d(t)|≤(y-t)^2/(4 min{t,y}). The quoted passage explicitly omits that derivation; merely asserting that squaring and rearranging yields (7) is not an all-cases argument.",
+    "load_bearing": "The partition argument proving that d is constant depends entirely on estimate (7). Without a proved all-cases estimate, the necessity classification does not follow as written."
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "Mapping: lower_bound is orbit iteration proving d≥0; upper_bound is the quadratic displacement estimate followed by partition constancy. The converse for translations is valid."
+ },
+ "anchors": {
+  "upper_bound": {
+   "anchored": true,
+   "length": 114,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    2837,
+    2951
+   ]
+  }
+ }
+}

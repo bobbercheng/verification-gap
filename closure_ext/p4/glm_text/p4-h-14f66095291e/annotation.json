@@ -1,0 +1,47 @@
+{
+  "id": "p4-h-14f66095291e",
+  "problem": "4",
+  "sha256": "14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed",
+  "path": "checkpoint_inputs_ext/14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 2,
+  "record_ids": [
+    "p4-gpt-5.6-sol-pro-main-t002",
+    "p4-deedy-gpt-5.6-sol-pro-final"
+  ],
+  "bytes": 6485,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1610,
+        "output_tokens": 3852,
+        "cache_read_input_tokens": 1152,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 68.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "integer-angle induction (split mθ into θ+(m−1)θ) plus interval cut (b, a+b) making both children carry integer multiples; N=2 case handled",
+    "upper_bound_mechanism": "Shan-Yu nonintegral-angle invariant from equilateral start with four-case check",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Cut realizability (any 0<x<a) proved; induction lemma makes both children winning. Sufficiency covers all triangles, all discards, and N=2 explicitly. Necessity: four-case argument uses s non-integer exactly; safe child always exists. Answer θ=180°/N, N≥2, correct."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

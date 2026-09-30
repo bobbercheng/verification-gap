@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-claude__p5-nemotron-2587b733-v2__lower_bound",
+ "case": "p5-nemotron-2587b733-v2",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 21.1,
+  "input_tokens": 2,
+  "output_tokens": 1746,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 4490,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3988,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0040880000000000005,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1746,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 4490,
+    "webSearchRequests": 0,
+    "costUSD": 0.089701,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1327,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The objection's arithmetic is right: for f(x)=x+c the middle term is (f(x)+y)/2=(x+c+y)/2, and the displayed (x+y+2c)/2 makes the left inequality false at c=1, x=2, y=1 (2 >= 2.5). So the display is a misprint. However, the accompanying argument is the correct one: with u=y+c, sqrt((x^2+u^2)/2) >= (x+u)/2 >= sqrt(xu) are both equivalent to (x-u)^2 >= 0, i.e. exactly the write-up's assertion 'Both inequalities are equivalent to (x-y-c)^2 >= 0 ... with equality exactly when x=y+c', which matches the correct middle term, not the mistyped one. Fixing '2c' to 'c' is a single-symbol repair; sufficiency for all x,y and all c>=0 is otherwise argued.",
+  "elsewhere_quote_note": null
+ },
+ "elsewhere_anchor": null
+}

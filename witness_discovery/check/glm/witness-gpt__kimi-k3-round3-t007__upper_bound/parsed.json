@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "kimi-k3-round3-t007",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 28.5,
+  "input_tokens": 229,
+  "output_tokens": 1845,
+  "cache_read_input_tokens": 2432
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote appears verbatim and, in context, concedes that the pigeonhole-signed-sum construction need not be realizable by Xiang's operations — i.e., the only proposed all-n upper-bound mechanism fails. Checking the entire text: Part B contains only (a) the asserted reduction for m ≤ n pieces (halving each piece ⇒ D = 0), which does not address the main case m = n+1; (b) the pigeonhole argument whose output is admitted non-realizable; and (c) unverified empirics explicitly marked 'needs verification & proof'. The 'Current best' and 'Full proof' sections state 'Part B still open' and 'Part B open'. Thus nowhere is it proved that every Liu division admits a Xiang reply with ≤ n cuts forcing D ≤ S/(2^(n+1)−1). The (U) obligation is unmet, so the objection is correct and fatal as written."
+ }
+}

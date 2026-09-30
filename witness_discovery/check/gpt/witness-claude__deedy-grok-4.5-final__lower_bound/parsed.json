@@ -1,0 +1,22 @@
+{
+ "checker": "gpt",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "deedy-grok-4.5-final",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.1,
+  "input_tokens": 21129,
+  "output_tokens": 433,
+  "reasoning_output_tokens": 220,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "The example satisfies every stated hypothesis: n=2, t=k=1, m=0, μ=3.5>τ=2. Here ΣP=3, so the alleged remainder has mass (4−3.5)+3=3.5=S_2−μ, which exceeds S_1=3. Thus it cannot be padded by a nonnegative piece to an order-1 instance. Indeed the required padding is S_{n-1}−(S_n−μ)=μ−2^n=−0.5, not d=μ−τ=1.5. The induction invocation is therefore invalid. The later parity discussion contains unsupported placeholders and assertions, while numerical checks only cover small n, so it does not supply an all-n replacement. This leaves the μ>τ subcase, and hence the lower bound proof, incomplete."
+ }
+}

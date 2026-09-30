@@ -1,0 +1,46 @@
+{
+  "id": "gpt-5.6-sol-pro-main-t006",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 6,
+  "ts": "2026-07-22T20:27:36.922975+00:00",
+  "path": "checkpoint_inputs/3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a.md",
+  "bytes": 3652,
+  "sha256": "3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1490,
+        "output_tokens": 3048,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 40.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "n=1-only case analysis (2:1 division)",
+    "upper_bound_mechanism": "n=1-only case analysis (middle-piece construction)",
+    "wrong_answer_stated": false,
+    "notes": "Only n=1 is solved correctly (c_1=2/3 via 2:1 division and middle-piece bound, both directions written out). Greedy-claiming reduction to alternating sum and layer-cake identity are stated but proofs explicitly deferred. No all-n lower/upper bound, no closed form for general n."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a",
+  "original_bytes": 3652,
+  "input_anonymized": false
+}

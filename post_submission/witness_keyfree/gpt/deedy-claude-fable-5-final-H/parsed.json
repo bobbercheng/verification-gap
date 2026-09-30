@@ -1,0 +1,55 @@
+{
+ "gate": "witness_blind",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-claude-fable-5-final-H",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 108.8,
+  "input_tokens": 20522,
+  "output_tokens": 3932,
+  "reasoning_output_tokens": 3624,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_but_invalid",
+    "quote": "She thereby secures at least $E(A)=\\frac{1-D(A)}2\\ge\\frac{1-u}{2}=\\frac{2^{n}-1}{2^{n+1}}$, so Liu Bang ends with at most",
+    "witness": "COUNTEREXAMPLE: For n=1, u=1/(2^2-1)=1/3, so (1-u)/2=1/3, whereas (2^1-1)/2^2=1/4. Thus the displayed equality is false; the correct denominator is 2^{n+1}-1.",
+    "load_bearing": "This is the numerical conversion used in the stated upper-bound conclusion to quantify Xiang's guaranteed share and hence Liu's cap. With the displayed value alone, for n=1 one obtains only Liu ≤3/4, not c=2/3."
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": false,
+  "notes": "The closed-form answer, reduction, and lower bound are correct. Lemma 5 itself establishes D(A)≤u, but the upper-bound conclusion contains the explicit false arithmetic identity identified above."
+ },
+ "anchors": {
+  "upper_bound": {
+   "anchored": true,
+   "length": 121,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    14636,
+    14757
+   ]
+  }
+ }
+}

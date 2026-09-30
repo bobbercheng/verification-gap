@@ -1,0 +1,12 @@
+{
+ "grader": "claude",
+ "transport": "claude-cli",
+ "model": "claude-opus-5",
+ "case": "kimi-k3-round3-t007",
+ "problem": "3",
+ "text_sha256": "15413cb68d86a2d234cc0acaad29c1956a8d7fefb87b818c1d7d6c61e460a3f3",
+ "system_sha256": "63713a400c317a190298ca6e602f5dc62a8c0431db87b467de7c816e62cd874b",
+ "system": "You are an IMO coordinator grading ONE write-up for IMO 2026 Problem 3 on the standard 0-7 scale.\n\n## Problem statement\n# IMO 2026 Problem 3\n\nLet $n$ be a positive integer. Liu Bang and Xiang Yu have a stick of length $1$ and want to divide it between themselves. Liu marks at most $n$ points on the stick, and then Xiang marks at most $n$ points on the stick. The marked points are distinct. Then, the stick is cut at all marked points, creating a number of pieces. Afterwards, they take turns claiming any unclaimed piece of the stick, with Liu going first. Each player's goal is to maximise the total length of their own pieces.\n\nFor each $n$, determine the largest value $c$ such that Liu may guarantee a total length of at least $c$, regardless of Xiang's play.\n\nSource: https://www.imo-official.org/problems/2026/\n\n## Instructions\nGrade only what is written in the text below. Do not consult, recall, or compare against any published solution, and do not use\na fixed list of required lemmas: judge the write-up on its own terms as a proof attempt, as a coordinator would.\nScale: 7 = complete and correct proof; 5-6 = essentially complete, with minor gaps or a small error that is straightforwardly\nrepairable; 3-4 = substantial correct progress with a major part missing or unjustified; 1-2 = minor correct progress\n(e.g. correct answer or reduction with the main argument absent); 0 = no meaningful progress, or the text is not a proof attempt.\nNumerical checks, conjectures, and claims left \"to do\" earn no credit. A wrong final answer caps the grade at 1.\n\nReturn ONLY a JSON object:\n{\"grade\": 0|1|2|3|4|5|6|7, \"complete\": true|false, \"main_gap\": \"<=40 words or 'none'\",\n \"errors\": [{\"description\": \"<=80 words: the step concerned and what is wrong or missing\", \"quote\": \"<verbatim excerpt of the write-up this concerns, or null>\"}, ...],\n \"notes\": \"<=60 words\"}\nList at most three errors, the most severe first; an empty list means you found none.",
+ "user_chars": 4779,
+ "started_utc": "2026-09-06 04:38:07 UTC"
+}

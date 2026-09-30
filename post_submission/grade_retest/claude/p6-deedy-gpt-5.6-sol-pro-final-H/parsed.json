@@ -1,0 +1,62 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-H",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "H",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 27.7,
+  "input_tokens": 2,
+  "output_tokens": 2322,
+  "cache_read_input_tokens": 3382,
+  "cache_creation_input_tokens": 6655,
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2322,
+    "cacheReadInputTokens": 3382,
+    "cacheCreationInputTokens": 6655,
+    "webSearchRequests": 0,
+    "costUSD": 0.126301,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2009,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "Bounding terminal members' size: the inequality should read 2^{|D|-1} ≤ w(D\\{p}) since p is excluded from the product; the stated 2^{|D|} is off by one factor. The conclusion |D| ≤ a_1 remains valid, so this is a harmless typo.",
+    "quote": "2^{|D|}\\le w(D\\setminus\\{p\\})<a_1"
+   }
+  ],
+  "notes": "Clean, complete argument: greedy-scan reinterpretation, support-only acceptance, self-dual family F, minimal supports C, infinite sunflower lemma giving finiteness of bounded-size minimal supports, weight-descent lemma forcing every prime into a bounded-size 'terminal' support, hence C finite and acceptance periodic mod L. All steps verified; only a trivial exponent typo."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 33,
+   "length_ok": false,
+   "reason": "short",
+   "span": [
+    8190,
+    8223
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_retest",
+ "run_tag": "_retest",
+ "transport_choice": "cli"
+}

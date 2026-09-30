@@ -1,0 +1,44 @@
+{
+  "id": "p4-h-bc0c538d972f",
+  "problem": "4",
+  "sha256": "bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e",
+  "path": "checkpoint_inputs_ext/bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "0d682cd0",
+  "turn": 1,
+  "record_ids": [
+    "p4-glm52-0d682cd0-v1"
+  ],
+  "bytes": 7667,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17908,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 421,
+        "reasoning_output_tokens": 318
+      },
+      "sec": 15.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "complementary-multiple cut plus induction",
+    "upper_bound_mechanism": "safe-angle invariant trap",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. The induction handles every discard choice, the main construction makes both pieces winning for all n including n=2, and the safe-angle trap gives a valid perpetual avoidance strategy for every remaining theta."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,58 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 1,
+    "completeness": 1,
+    "rigor": 1,
+    "self_contained": 2
+  },
+  "fatal_issues": [
+    "Step 1 (Lemma 1) claims the union of minimal hitting sets H_n is finite, but the proof sketch uses a circular argument: it assumes a hitting set using finitely many primes from before n_1 would give a 'much smaller candidate,' but this candidate must also be > a_{n_k}, which may force it to be large. The pigeonhole/modular argument is only gestured at ('see below') but never provided. This is the core combinatorial claim and it lacks a rigorous proof.",
+    "Step 3 claims backward propagation of periodicity from 'sufficiently large n' to 'all n' by 'unique backward extension' and 'minimality of choice,' but no induction is provided. The claim that any violation would contradict minimality is asserted without proof. This is a critical gap because the problem requires the identity for ALL positive integers n, not just sufficiently large n.",
+    "The claim that P(a_n) equals a minimal hitting set H_n for all sufficiently large n is asserted without proof. The proof says 'we may need to adjust finitely many initial terms' and 'for simplicity we assume the sequence starts after any transient,' but this hand-waves the possibility that extra prime factors could persist indefinitely or that the minimal hitting set structure might not align with the actual prime factor sets of the chosen terms.",
+    "The definition of T = |R| assumes the merge of arithmetic progressions cycles through all covered residues R in increasing order without skipping, but the proof that the residues are visited in sorted cyclic order without gaps relies on the unstated assumption that L = prod_{p in P*} p is a common period for all progressions, which requires that every m_H divides L. This holds by construction (L is the product of all primes in P*, so m_H | L), but the claim that the sum of increments over one period equals L needs proof (it's true because the residues cycle through a complete system modulo L, but this is not argued)."
+  ],
+  "required_fixes": [
+    "Provide a rigorous proof that the union of minimal hitting sets is finite. The standard approach: show that if infinitely many primes appear, one can construct a hitting set using only small primes that eventually beats the greedy choice, or use a pigeonhole argument on residues modulo the product of the first few primes to bound the growth.",
+    "Prove that for all sufficiently large n, P(a_n) is exactly a minimal hitting set (not a proper superset). This requires showing that if a_n had an 'extra' prime factor not needed for hitting, a smaller multiple of the minimal hitting set would have been available and chosen.",
+    "Give a rigorous inductive proof that a_{n+T} = a_n + L for all n >= 1, not just for large n. This typically requires showing the recurrence a_{n+T} = a_n + L is forced by the greedy minimality condition applied backwards, or that the initial segment must align with the periodic tail because the sequence is uniquely determined by the greedy rule from its starting value.",
+    "Formalize the merge-of-progressions argument: prove the set of covered residues R modulo L is exactly the set of multiples of some m_H (H in M), prove the greedy merge visits them in cyclic order, and prove the sum of increments over one cycle is exactly L."
+  ],
+  "verified_claims": [
+    "If the minimal hitting sets stabilize to a finite family M on a finite prime set P*, and if P(a_n) eventually equals a minimal hitting set, then the tail of the sequence is the increasing merge of the arithmetic progressions {k * m_H : k in N} for H in M.",
+    "If the tail is the merge of progressions with differences dividing L = prod_{p in P*} p, then the sequence of residues modulo L is eventually periodic, and the sequence satisfies a_{n+T} = a_n + L for all sufficiently large n, where T is the number of covered residues per period.",
+    "The example with a_1 = 15 correctly illustrates the stabilized minimal hitting sets M = {{2,3},{2,5},{3,5}}, P* = {2,3,5}, L = 30, R = {0,6,10,12,15,18,20,24}, T = 8, and a_{n+8} = a_n + 30 for all computed terms."
+  ],
+  "unverified_claims": [
+    "The union of all H_n is finite (Lemma 1).",
+    "The sequence H_n of minimal hitting sets eventually stabilizes to a constant family M.",
+    "For all sufficiently large n, P(a_n) is exactly a minimal hitting set (no extra prime factors).",
+    "The periodic relation a_{n+T} = a_n + L propagates backward to all n >= 1.",
+    "The backward propagation follows uniquely from minimality without additional assumptions about the initial terms.",
+    "The sum of increments over one period of residues equals L (true but unproven in the text)."
+  ],
+  "summary": "The proof outlines a known correct approach (hitting sets → merge of arithmetic progressions → periodicity) but has fatal gaps in the two main lemmas: (1) finiteness/stabilization of minimal hitting sets lacks a rigorous proof, and (2) backward propagation of periodicity to all n is asserted without induction. The claim that actual prime factor sets eventually equal minimal hitting sets is also unproven. The example is correct but does not compensate for the missing rigor in the general case. The proof structure is promising but requires substantial work to be complete.",
+  "transfer_assessment": [
+    {
+      "mechanism": "Hitting set stabilization",
+      "status": "reusable with major gaps",
+      "notes": "The hypergraph transversal framework is a valid and transferable lens for greedy sequences defined by intersection conditions. However, the finiteness proof is incomplete; a correct version would use the fact that the greedy choice minimizes a_{n+1}, which bounds the primes that can appear."
+    },
+    {
+      "mechanism": "Merge of arithmetic progressions",
+      "status": "reusable",
+      "notes": "Once the hitting sets stabilize to a finite family M on finite primes P*, the merge-of-progressions characterization is correct and rigorous. This mechanism transfers well to other greedy intersection problems."
+    },
+    {
+      "mechanism": "Periodicity from modular merge",
+      "status": "reusable with minor gap",
+      "notes": "The merge of finitely many arithmetic progressions with periods dividing L is eventually periodic with period dividing L. The claim that a_{n+T}=a_n+L holds eventually is correct; the gap is only in the backward propagation to all n."
+    },
+    {
+      "mechanism": "Backward propagation by minimality",
+      "status": "misleading without proof",
+      "notes": "The claim that eventual periodicity implies global periodicity with the same T,L 'by backward uniqueness' is not generally true for greedy sequences without additional argument. This is a known subtle point in IMO 2026 P6 solutions and requires a careful induction using the minimality of the greedy choice."
+    }
+  ]
+}

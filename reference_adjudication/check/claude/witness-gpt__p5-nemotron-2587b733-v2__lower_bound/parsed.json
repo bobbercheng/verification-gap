@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-gpt__p5-nemotron-2587b733-v2__lower_bound",
+ "case": "p5-nemotron-2587b733-v2",
+ "procedure": "witness",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 18.6,
+  "input_tokens": 2,
+  "output_tokens": 1503,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 4405,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3918,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004018,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1503,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 4405,
+    "webSearchRequests": 0,
+    "costUSD": 0.082776,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1107,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The objection is locally right: for f(x)=x+c the middle term is (f(x)+y)/2 = (x+y+c)/2, not (x+y+2c)/2, and at x=y=c=1 the displayed chain asserts sqrt(5/2) >= 2, which is false. But the displayed '2c' is a misprint standing beside the correct argument: the very next sentence asserts 'Both inequalities are equivalent to (x-y-c)^2 >= 0 ... with equality exactly when x = y+c', which is precisely the correct reduction of both sqrt((x^2+(y+c)^2)/2) >= (x+y+c)/2 and (x+y+c)/2 >= sqrt(x(y+c)) after squaring, valid for all x,y>0 and all c>=0. With '2c' the stated equality case x=y+c would not even match. One symbol (2c -> c) repairs it."
+ },
+ "elsewhere_anchor": null
+}

@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-gpt__p6-kimi-k3-round1-t021__e1",
+ "case": "p6-kimi-k3-round1-t021",
+ "procedure": "grader",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.2,
+  "input_tokens": 2,
+  "output_tokens": 424,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 2272,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2078,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.002163,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 424,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 2272,
+    "webSearchRequests": 0,
+    "costUSD": 0.034198,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 114,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The write-up is a tracking file: Theorem A (the characterization that the sequence equals S_infty ∩ [a_1,∞), i.e. L6.1) appears only as a bulleted claim tagged '(proved)', with no argument anywhere in the text — no derivation that a_{n+1} is the successor of a_n in the full intersection rather than in S_n. Grading only what is written, the statement is asserted, not established. Nothing else in the file supplies it; the 'Full proof' section reads '(in progress)'. Supplying the missing argument requires a full lemma-level addition, not a local edit.",
+  "elsewhere_quote_note": null
+ },
+ "elsewhere_anchor": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "p6-h-f77b2d46f736",
+  "problem": "6",
+  "sha256": "f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39",
+  "path": "checkpoint_inputs/f77b2d46f7360d0de0bd8b9f00513ee750a366784bb4c3e4107c0705e9d7fe39.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "12402695",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-12402695-v1"
+  ],
+  "bytes": 11926,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 18748,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1027,
+        "reasoning_output_tokens": 892
+      },
+      "sec": 23.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "first-new-prime minimality contradiction (unexecuted)",
+    "upper_bound_mechanism": "conditional residue-class tail merge",
+    "wrong_answer_stated": true,
+    "notes": "The hitting-set reformulation covers only the next-step rule, not characterization (C). Finiteness is explicitly open, with only a proposed contradiction strategy. The residue merge proves merely conditional eventual periodicity; global translation invariance is unproved. Parameters are conditional and internally inconsistent (e.g. L=69 versus the stated lcm)."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

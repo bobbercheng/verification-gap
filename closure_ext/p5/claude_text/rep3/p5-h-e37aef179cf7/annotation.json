@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-e37aef179cf7",
+  "problem": "5",
+  "sha256": "e37aef179cf7b21a670f0cf886fa6e262271996c4befb5580325c1d04c66fd3c",
+  "path": "checkpoint_inputs_ext/e37aef179cf7b21a670f0cf886fa6e262271996c4befb5580325c1d04c66fd3c.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 32,
+  "record_ids": [
+    "p5-deepseek-v4-pro-main-t032"
+  ],
+  "bytes": 9029,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7285,
+        "output_tokens": 4863,
+        "output_tokens_details": {
+          "thinking_tokens": 4489
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 4863,
+            "cache_read_input_tokens": 7285,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 61.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "QM–AM–GM applied to x and y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "Key inequality |g(x)-g(y)|(g(x)+g(y)+2x+2y) <= (x-y-g(y))^2; rational/irrational density on orbits gives at most one positive value; level-set separation |x-y|>c plus covering by orbit intervals kills mixed case",
+    "wrong_answer_stated": false,
+    "notes": "Identity f(f(x))=2f(x)-x and g(x+g(x))=g(x) fully derived; verification complete. Gap: g(x)>=0 is never proved, yet '§3 gives V⊆{0,c}' silently excludes negative values (orbit-positivity argument omitted), so necessity rests on an unproved assumption. Also cites a nonexistent 'Lemma 2' for strictness in (13) (though (11) gives it directly) and a 4cx/4cy typo."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

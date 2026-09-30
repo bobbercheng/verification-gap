@@ -1,0 +1,74 @@
+{
+ "gate": "witness",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 79.5,
+  "input_tokens": 2,
+  "output_tokens": 6856,
+  "cache_read_input_tokens": 1473,
+  "cache_creation_input_tokens": 5634,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4653,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004753,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 6856,
+    "cacheReadInputTokens": 1473,
+    "cacheCreationInputTokens": 5634,
+    "webSearchRequests": 0,
+    "costUSD": 0.2284865,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 6544,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Reduction proved by induction with correct cancellation identity (2); pairing lemma proved by exchange argument. Lower bound: multigraph on n+1 vertices with <=n edges, tree component, bipartite weighted-degree identity, distinct-powers-of-two nonvanishing — checked and correct. Upper bound: subset-sum pigeonhole plus common-refinement cut count (<= |A|+|B|-1) verified; total cuts exactly n."
+ },
+ "anchors": {}
+}

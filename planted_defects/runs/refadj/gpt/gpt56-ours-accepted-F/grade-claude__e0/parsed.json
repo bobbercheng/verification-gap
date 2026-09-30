@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-F",
+ "base_id": "gpt56-ours-accepted",
+ "type": "F",
+ "problem": "3",
+ "objection_key": "grade-claude__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 18.8,
+  "input_tokens": 18995,
+  "output_tokens": 611,
+  "reasoning_output_tokens": 448,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The inference is false: fewer total edges than vertices does not make every component acyclic, and the component containing a_q need not be a tree. However, summing e_C<v_C globally guarantees some component has e_C<v_C; since it is connected, it has e_C=v_C-1 and is a tree. Replacing the quoted assertion and choosing such a component repairs the proof locally. No other passage proves the universal lower-bound mechanism independently."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e0"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-17c52d5715c6",
+  "problem": "3",
+  "sha256": "17c52d5715c605b0d020b86bf397f79dca356d450a50f61beb7bfb0174e515b1",
+  "path": "checkpoint_inputs/17c52d5715c605b0d020b86bf397f79dca356d450a50f61beb7bfb0174e515b1.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": "gpt-5.6-sol-main",
+  "turn": 6,
+  "record_ids": [
+    "gpt-5.6-sol-main-t006"
+  ],
+  "bytes": 2764,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1690,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 294,
+        "output_tokens_details": {
+          "thinking_tokens": 145
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1690,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 294,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 1690,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1690
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 6.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 1,
+    "complete": false,
+    "main_gap": "No general answer or minimax argument; only the greedy-claiming reduction plus an unproved n=1 guess of 2/3.",
+    "notes": "Self-declared partial. The reduction to the odd-rank sum is standard and only sketched (exchange argument stated, not carefully verified). No construction for Liu, no bound for Xiang, no formula in n. Numerical code is not credited."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "p5-h-434f061a54d1",
+  "problem": "5",
+  "sha256": "434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1",
+  "path": "checkpoint_inputs_ext/434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": "gpt-5.6-sol-main",
+  "turn": 1,
+  "record_ids": [
+    "p5-gpt-5.6-sol-main-t001",
+    "p5-deedy-gpt-5.6-sol-final"
+  ],
+  "bytes": 6215,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5659,
+        "output_tokens": 2467,
+        "output_tokens_details": {
+          "thinking_tokens": 2121
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2467,
+            "cache_read_input_tokens": 5659,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 29.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to x and f(y), using f(x)+y = x+f(y)",
+    "upper_bound_mechanism": "Symmetrized substitution (x,y)=(f(u),v) and (f(v),u) yields |g(u)-g(v)| <= (sqrt f(u) - sqrt f(v))^2; hence strict monotonicity, g nondecreasing, continuity, then telescoping partition sum forces g constant",
+    "wrong_answer_stated": false,
+    "notes": "All obligations met: identity f(f(y))=2f(y)-y with g>=0 via iterates; full verification of both inequalities for all c>=0; necessity via the quadratic estimate (7), correctly derived, with monotonicity, continuity, and a mesh-refinement telescoping argument valid at fixed points too. Only trivial omission: positivity of the left limit f(t)-J."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-gpt56-ours-F",
+ "base_id": "p6-gpt56-ours",
+ "type": "F",
+ "problem": "6",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.2,
+  "input_tokens": 17605,
+  "output_tokens": 334,
+  "reasoning_output_tokens": 195,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "symbol",
+  "explanation": "As defined, Q contains only prime divisors of A, not every prime at most A. Thus both assertions identified in the objection are false, and they are essential to the induction proving large-prime erasure. The later discussion notices that all primes at most A are required but does not redefine Q or supply a valid alternative proof. Replacing the definition of Q by {p prime : p≤A} makes the displayed induction work."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

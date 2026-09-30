@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-24646b45f297",
+  "problem": "3",
+  "sha256": "24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0",
+  "path": "checkpoint_inputs/24646b45f2972818d26f13d89d030eb5a33329d6c4f87b035fa303e6859f6de0.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 3,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-3"
+  ],
+  "bytes": 13473,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4904,
+        "output_tokens": 11924,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 145.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "equal-spacing division + alternating-sum splitting sketch",
+    "upper_bound_mechanism": "equal-segment overlay + pairing lemma",
+    "wrong_answer_stated": true,
+    "notes": "Wrong answer (n+1)/(2n+1); true value is 2^n/(2^{n+1}-1) (n=2: 4/7, not 3/5). Alternating-sum reduction stated, unproved. Lower bound: only one Xiang reply computed; general case asserted via sketchy splitting lemma — actually false (Xiang attacks short piece). Upper bound: overlay construction sketched; pairing lemma asserted, admitted unproved; construction fails."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

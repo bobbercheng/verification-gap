@@ -1,0 +1,60 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 32.5,
+  "input_tokens": 15225,
+  "output_tokens": 1200,
+  "reasoning_output_tokens": 949,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "grade": 3,
+  "complete": false,
+  "main_gap": "The crucial lemma that every term’s primes at most A form a good set is wholly unproved; it is the central arithmetic step needed to deduce periodicity.",
+  "errors": [
+   {
+    "description": "The claimed induction provides neither an induction hypothesis nor an argument showing that deleting prime factors greater than A preserves intersection with every sequence term. This is not a standard or routine detail, and all subsequent periodicity depends on it.",
+    "quote": "**Proof.** Induction over the sequence terms in increasing order (standard; details omitted). \\(\\square\\)"
+   },
+   {
+    "description": "The later reference to a construction \\(Rp^k\\) does not repair the omission: neither \\(R,p,k\\) nor the construction’s properties are defined or proved anywhere in the solution.",
+    "quote": "The construction \\(Rp^k\\) repairs this boundary issue while preserving exactly the small-prime support; the lemma proves the strengthened hypothesis."
+   }
+  ],
+  "notes": "Sections 1 and 3 give a valid characterization and a correct deduction of the desired identity conditional on the lemma. However, the omitted lemma is the substantive heart of the problem, so the proof is far from complete."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 105,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    1316,
+    1419
+   ]
+  },
+  {
+   "anchored": true,
+   "length": 149,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    4255,
+    4404
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_retest",
+ "run_tag": "_retest",
+ "transport_choice": "cli"
+}

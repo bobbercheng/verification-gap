@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-claude__deedy-deepseek-v4-pro-final__lower_bound",
+ "case": "deedy-deepseek-v4-pro-final",
+ "procedure": "witness",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 8.7,
+  "input_tokens": 2,
+  "output_tokens": 544,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 1896,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1725,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001815,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 544,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 1896,
+    "webSearchRequests": 0,
+    "costUSD": 0.0333915,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 205,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "none",
+  "explanation": "The write-up contains no proof of a universal lower bound: the quoted line reports only a discretized numerical search on a guessed division, and the rest of the text is explicitly labelled \"Conjecture\", with \"Full proof (To be completed)\" and \"Need to prove both ... (lower bound)\". Nothing anywhere handles arbitrary interleavings of Xiang's at most n replies. Moreover the targeted value (n+1)/(2n+1) is wrong — the true c_n = 2^n/(2^{n+1}-1) equals 4/7 at n=2, not the claimed 3/5 — so no local edit repairs it; a correct division (1:2:...:2^n) plus a full argument is needed.",
+  "objection_correct_confidence": "high"
+ },
+ "elsewhere_anchor": null
+}

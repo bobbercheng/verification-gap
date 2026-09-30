@@ -1,0 +1,92 @@
+{
+  "task_id": "imo-2026-p1",
+  "status": "complete",
+  "answer": "The process always terminates after finitely many moves with exactly one integer M > 1 on the blackboard, where M = ∏_p p^{gcd(v_p(a_1),...,v_p(a_2026))}. This value depends only on the initial multiset, not on move choices.",
+  "claims": [
+    "For each prime p, the multiset of p-adic valuations undergoes the transformation {a,b} → {min(a,b), |a-b|} at each move, which is exactly one step of the Euclidean algorithm.",
+    "For each prime p, G_p = gcd_i(v_p(a_i)) is invariant under any legal move.",
+    "The lexicographic measure (K, Ω) where K = count of integers > 1 and Ω = total prime factor count (with multiplicity) strictly decreases at each move.",
+    "The process terminates after finitely many moves because (K, Ω) takes values in ℕ² with well-founded lexicographic order.",
+    "At termination, exactly one integer M > 1 remains (K = 1) because K starts at 2026, never increases, a move requires K ≥ 2, and a move from K = 2 cannot produce K = 0.",
+    "The final integer M satisfies v_p(M) = G_p for every prime p, hence M = ∏_p p^{G_p}.",
+    "M depends only on the initial multiset, not on the sequence of moves."
+  ],
+  "assumptions": [
+    "The initial 2026 integers are all strictly greater than 1.",
+    "Confucius chooses any pair of integers > 1 from different places on the board (i.e., distinct positions in the multiset).",
+    "Standard arithmetic: gcd(m,n) · lcm(m,n) = mn, v_p(gcd(m,n)) = min(v_p(m), v_p(n)), v_p(lcm(m,n)) = max(v_p(m), v_p(n)).",
+    "The Euclidean algorithm step (a,b) → (min(a,b), |a-b|) preserves gcd(a,b).",
+    "The lexicographic order on ℕ² is well-founded."
+  ],
+  "mechanisms": [
+    {
+      "name": "prime-exponent-gcd-invariant",
+      "summary": "For each prime p, the gcd of the multiset of p-adic valuations is preserved by the move (a,b) → (min(a,b), |a-b|), which is exactly one step of the Euclidean algorithm on exponents.",
+      "transfer_tags": [
+        "IMO",
+        "euclidean-algorithm",
+        "gcd-invariant",
+        "invariant",
+        "invariants",
+        "number-theory",
+        "p-adic-valuation",
+        "termination"
+      ]
+    },
+    {
+      "name": "lexicographic-descent-termination",
+      "summary": "A well-founded measure (K, Ω) = (count of integers > 1, sum of prime factor counts) strictly decreases lexicographically at each move, forcing termination with exactly one integer > 1.",
+      "transfer_tags": [
+        "IMO",
+        "combinatorial-process",
+        "invariants",
+        "lexicographic-order",
+        "number-theory",
+        "termination",
+        "termination-argument",
+        "well-foundedness"
+      ]
+    },
+    {
+      "name": "endgame-determination",
+      "summary": "At termination with exactly one integer M > 1, its p-adic valuation equals the invariant gcd of initial exponents, giving M = ∏ p^{gcd_i v_p(a_i)} uniquely determined by the initial multiset.",
+      "transfer_tags": [
+        "IMO",
+        "endgame-analysis",
+        "invariants",
+        "number-theory",
+        "prime-factorization",
+        "termination",
+        "uniqueness-proof"
+      ]
+    }
+  ],
+  "falsification_attempts": [
+    {
+      "hypothesis": "The product of all numbers on the board never exceeds the initial product, so the final product > 1, forcing K ≥ 1.",
+      "attack": "The product decreases by factor 1/gcd(m,n) at each move. It could theoretically decrease to 1 (all numbers become 1, K=0) while still being ≤ initial product. The conclusion K=1 is true but the product argument alone is insufficient.",
+      "outcome": "Found invalid inference in first candidate (review_v1.json for 2853f8e62db4). Fixed by using lexicographic measure (K, Ω) which strictly decreases, plus proof that K cannot reach 0 because every move leaves at least one number > 1."
+    },
+    {
+      "hypothesis": "For each prime p, Confucius is forced to eventually pick pairs with positive p-valuation, so p-valuations must reduce to the invariant gcd.",
+      "attack": "Confucius may choose any pair of numbers > 1; there is no requirement to pick numbers with positive p-valuation. The argument that 'we cannot perform infinitely many moves that involve two positive p-valuations' confuses possible moves with forced moves.",
+      "outcome": "Found imprecise reasoning in first candidate (logic_audit_v1.json for 2853f8e62db4). Fixed by relying on Part 1's global termination proof: termination with K=1 forces at most one positive p-valuation for all primes simultaneously. The invariant then forces that valuation to equal G_p."
+    },
+    {
+      "hypothesis": "The final integer M equals the usual gcd of the initial numbers.",
+      "attack": "Test with initial numbers {4, 8}. gcd(4,8) = 4. But v_2(4)=2, v_2(8)=3, G_2 = gcd(2,3) = 1, so M = 2^1 = 2 ≠ 4.",
+      "outcome": "Counterexample confirms M is the exponent-wise gcd, not the usual gcd. This is correctly handled in the proof by defining G_p = gcd of exponents."
+    }
+  ],
+  "evidence": [
+    "candidate_v1.md: Complete self-contained proof with lexicographic termination argument and prime-wise gcd invariant.",
+    "review_v1.json (from 2853f8e62db4 run): Validated the corrected proof with scores 4/4 on correctness, completeness, rigor, self-containedness.",
+    "logic_audit_v1.json (from 2853f8e62db4 run): Identified and documented the two main flaws in earlier attempts (product argument for K=1, forced-moves confusion for p-valuations), both fixed in current proof."
+  ],
+  "confidence": 0.98,
+  "open_issues": [
+    "The proof assumes standard identities (gcd·lcm = mn, valuation properties) without re-proving them. In a fully self-contained IMO solution these are typically cited as known facts.",
+    "The well-foundedness of lexicographic order on ℕ² is used without explicit justification; this is a standard mathematical fact.",
+    "The proof does not explicitly handle the case where the initial multiset has numbers with no common prime factors (some G_p = 0). This is handled implicitly since v_p(M) = 0 means p ∤ M, and the product formula still holds with empty product = 1. But M > 1 is guaranteed because at least one prime divides some initial number (all initial numbers > 1)."
+  ]
+}

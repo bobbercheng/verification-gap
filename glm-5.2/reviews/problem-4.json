@@ -1,0 +1,28 @@
+{
+  "task_id": "imo-2026-p4",
+  "verdict": "pass",
+  "scores": {"correctness": 4, "completeness": 4, "rigor": 4, "self_contained": 4},
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "Algebraic move reformulation: cutting toward the c-vertex with c=c1+c2 yields exactly T1={a,c1,b+c2} and T2={b,c2,a+c1}. Verified by computing the angle at P as 180-a-c1 = b+c2 (and 180-b-c2 = a+c1); the complementary pair (a+c1)+(b+c2)=180.",
+    "Necessity trap non-empty: equilateral {60,60,60} lies in S when theta does not divide 180, because 60=k*theta would imply theta|60 hence theta|180 (since 60|180).",
+    "Necessity trap closure (exhaustive 4-case): if both pieces T1,T2 of a cut of {a,b,c} in S carried a theta-multiple, then (c1,c2) forces c multiple; (c1,a+c1) forces a multiple; (b+c2,c2) forces b multiple; (b+c2,a+c1) sums to 180 forcing theta|180. Each contradicts the trap; independently confirmed computationally (0 cuts from equilateral place a 70-multiple in both pieces).",
+    "Sufficiency Lemma by strong induction on k: a triangle with a k*theta angle (1<=k<=n-1) is winning; k=1 terminal, k>=2 split into theta+(k-1)theta giving one terminal piece and one piece with index k-1. Induction is well-founded (index strictly decreases).",
+    "Sufficiency main Case B (n>=3): with c the largest angle, c>theta (since c>=60>=theta and c!=theta in Case B), so the open interval (a,a+c) of length c>theta strictly contains a theta-multiple m*theta with 1<=m<=n-1; setting c1=m*theta-a in (0,c) puts m*theta in T2 and (n-m)*theta in T1, both winning by the Lemma.",
+    "Sufficiency n=2 subcase (theta=90): a<=60<90 and b<90 (proven by case split on c>90 vs c<90, with c=90 excluded), so a<90<a+c; c1=90-a yields a+c1=90 and b+c2=90 in the two pieces.",
+    "Uniform finite bound: Mulan wins in <= n-1 cuts (1 main cut + <= k-1 <= n-2 cuts from a k*theta piece), so the guarantee is finite and uniform over Shan-Yu's replies.",
+    "Boundary: every divisor of 180 lying in (0,180) is <=90 (next divisor is 180 itself), so all winning theta are in (0,90]; irrational theta never divide 180 so Mulan loses from equilateral.",
+    "Independent backward-induction attractor over the 1-degree integer grid (2700 triangle states, all 179 integer theta): 0 mismatches with the theorem. Divisors {1,2,3,4,5,6,9,10,12,15,18,20,30,36,45,60,90} are all all-winning; every non-divisor is not all-winning and its winning set equals exactly the triangles having a theta-multiple angle.",
+    "Grid-artifact discriminator theta=72 (72|360 but 72 does not divide 180) is NOT all-winning (winning fraction ~0.027), refuting a 'divides the grid' alternative and corroborating 'divides 180'.",
+    "Quantifier robustness: Shan-Yu's trap gives a single defending strategy (initial equilateral, then keep an S-piece) that defeats every Mulan strategy forever; Mulan's sufficiency strategy gives a uniform n-1 bound. The answer is unaffected by whether 'finitely many steps' is read with or without a uniform bound."
+  ],
+  "unverified_claims": [],
+  "summary": "The candidate's answer — Mulan guarantees victory iff theta divides 180 degrees (theta=180/n, integer n>=2) — is correct and rigorously proven. I independently re-derived the move reformulation, the necessity trap (equilateral seeding + exhaustive 4-case closure), the sufficiency Lemma (strong induction on the multiple index), the interval-contains-multiple main argument, the n=2 edge, and the uniform n-1 step bound; all are sound. I also wrote a fresh backward-induction attractor (not reusing the candidate's scripts) over the 1-degree grid for all 179 integer theta and found 0 mismatches, confirmed theta=72 (divides 360, not 180) is not all-winning, confirmed equilateral is losing for non-divisors, and confirmed theta=90 is all-winning. No fatal gap, no hidden quantifier change, no degenerate-case hole, no circularity. The numerical section is supplementary and was independently reproduced. Minor (non-blocking) polish: the winning-region least-fixed-point and the 'open interval of length > theta contains a multiple' fact are stated slightly informally, but both are standard, correct, and concretized by the explicit n-1 bound.",
+  "transfer_assessment": [
+    "REUSABLE — angle-multiset reformulation of a cevian cut (split one angle c=c1+c2; pieces {a,c1,b+c2},{b,c2,a+c1}; complementary angles sum to 180). A clean state-space abstraction for any triangle-cutting / angle-chasing game; directly transferable.",
+    "REUSABLE — invariant/trap-set technique for necessity: define the complement of the target's multiples and show closure under the opponent's reply via a finite parity-style case analysis. Generalizes to reachability games with modular targets.",
+    "REUSABLE — 'interval longer than the step contains a grid point' + complement-angle trick (m*theta in one piece forces (n-m)*theta in the other) for sufficiency, plus a well-founded induction that reduces a k*theta angle toward theta. A general forcing-strategy template for divisor-type winning conditions.",
+    "MISLEADING if over-generalized — the answer 'divides 180' is specific to the angle sum 180 and to the target being a single prescribed angle; the grid-experiment discriminator (theta=72 divides 360 not 180) correctly prevents misreading this as 'divides the grid modulus'. Reuse the structural template, not the literal 'divides 180'."
+  ]
+}

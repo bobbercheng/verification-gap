@@ -1,0 +1,56 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-gpt__deedy-muse-spark-1.1-final__upper_bound",
+ "case": "deedy-muse-spark-1.1-final",
+ "procedure": "witness",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 6.8,
+  "input_tokens": 2,
+  "output_tokens": 421,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 11451,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9155,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009255,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 421,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 11451,
+    "webSearchRequests": 0,
+    "costUSD": 0.1258665,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 141,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "none",
+  "explanation": "The quote is verbatim and only announces a goal. The write-up then tries a grid-completion strategy for Xiang and explicitly abandons it: Xiang needs 2n-k cuts but has only n, so 'previous plan fails' and 'need different Xiang strategy to upper bound', ending with a plan to brute-force n=2. No universal Xiang reply is constructed anywhere; moreover the targeted bound (n+1)/(2n+1) is not the correct value 2^n/(2^{n+1}-1), so no local edit repairs it. L3.2 is not established.",
+  "affected_statement_note": null
+ },
+ "elsewhere_anchor": null
+}

@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4353,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004453,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 936,
+    "cacheReadInputTokens": 2097,
+    "cacheCreationInputTokens": 5141,
+    "webSearchRequests": 0,
+    "costUSD": 0.0758685,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 609,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 5141,
+   "cache_read_input_tokens": 2097,
+   "output_tokens": 936,
+   "output_tokens_details": {
+    "thinking_tokens": 609
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 5141,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 936,
+     "cache_read_input_tokens": 2097,
+     "cache_creation_input_tokens": 5141,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 5141
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 12296,
+  "is_error": false,
+  "elapsed_seconds": 13.0,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"affected_statement\": \"L1.1\", \"objection_correct\": \"yes\", \"established_elsewhere\": \"no\", \"elsewhere_quote\": null, \"status_as_written\": \"false_display\", \"repair_distance\": \"symbol\", \"explanation\": \"The objection is right that \\\"ell = m+n\\\" is false: for g=1 one has ell = lcm(m,n)/g = mn (m=2,n=3 gives ell=6, not 5). But this is a misprint standing beside the correct argument: the same sentence concludes \\\"the pair (m,n) is replaced by (1, mn)\\\", which is exactly right, and the two facts actually used (ell = mn >= 4 > 1, so P is unchanged since g=1 and z increases by 1) are correct and stated. Step 2 likewise uses the correct \\\"ell = mn >= 4\\\". The Type B bound (at most N such moves) and the termination count are unaffected. Repair: change \\\"+\\\" to a product.\", \"wrong_answer_stated\": false}"
+   }
+  ]
+ }
+}

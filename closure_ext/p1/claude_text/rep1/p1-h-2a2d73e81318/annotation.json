@@ -1,0 +1,71 @@
+{
+  "id": "p1-h-2a2d73e81318",
+  "problem": "1",
+  "sha256": "2a2d73e81318d6d4f6ccaa597dad8f82824416c67d27dea6967a53a3391542ee",
+  "path": "checkpoint_inputs_ext/2a2d73e81318d6d4f6ccaa597dad8f82824416c67d27dea6967a53a3391542ee.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 4,
+  "record_ids": [
+    "p1-gpt-5.6-sol-xhigh-main-t004",
+    "p1-deedy-gpt-5.6-sol-xhigh-final"
+  ],
+  "bytes": 5362,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4375,
+        "output_tokens": 542,
+        "output_tokens_details": {
+          "thinking_tokens": 256
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 542,
+            "cache_read_input_tokens": 4375,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "product monovariant + count of nonunits (lexicographic descent), plus 'each move leaves an output > 1'",
+    "upper_bound_mechanism": "per-prime invariance of gcd of p-adic valuations via gcd(a, b-a) = gcd(a,b)",
+    "wrong_answer_stated": false,
+    "notes": "Complete: explicit M = prod p^{gcd v_p(x_i)}; move's valuation effect (min, |a-b|) and no-two-ones stated; termination via product then count argument, with nonemptiness of nonunits; invariance covers zero and equal-valuation cases by convention gcd(0,r)=r and a<=b. Numerical check explicitly excluded from proof."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

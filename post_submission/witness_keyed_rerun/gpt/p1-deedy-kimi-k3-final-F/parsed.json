@@ -1,0 +1,55 @@
+{
+ "gate": "witness",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p1-deedy-kimi-k3-final-F",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "F",
+ "problem": "1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 62.5,
+  "input_tokens": 18462,
+  "output_tokens": 1821,
+  "reasoning_output_tokens": 1536,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_but_invalid",
+    "quote": "A positive integer that never increases and starts above $1$ can never reach $1$; hence\n$P > 1$ after any number of moves.",
+    "witness": "NON-SEQUITUR: The established premises are that $P$ is a positive integer, is non-increasing, and initially exceeds $1$. These do not imply that $P$ cannot reach $1$; for example, the positive-integer sequence $2,1$ is non-increasing, starts above $1$, and reaches $1$.",
+    "load_bearing": "Step 2 uses this inference to prove that at least one entry remains greater than $1$. That fact is then explicitly invoked to conclude that the terminal board has exactly one such entry."
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": true,
+  "notes": "The explicit formula and valuation invariant are correct. Termination is valid, but the full proof’s survivor argument relies on the specifically false monotonicity lemma quoted above, even though an earlier summary gestures toward the correct no-two-ones argument."
+ },
+ "anchors": {
+  "lower_bound": {
+   "anchored": true,
+   "length": 122,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    4541,
+    4663
+   ]
+  }
+ }
+}

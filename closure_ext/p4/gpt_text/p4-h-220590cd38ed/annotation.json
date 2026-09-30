@@ -1,0 +1,44 @@
+{
+  "id": "p4-h-220590cd38ed",
+  "problem": "4",
+  "sha256": "220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181",
+  "path": "checkpoint_inputs_ext/220590cd38edd694bdee0d3907b3fd0ef89c683573c7a8121c359b6116497181.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 2,
+  "record_ids": [
+    "p4-muse-spark-1.1-main-t002"
+  ],
+  "bytes": 9420,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 18428,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 686,
+        "reasoning_output_tokens": 567
+      },
+      "sec": 20.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "integer-multiple induction and residue cut",
+    "upper_bound_mechanism": "safe-angle invariant",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. The multiple-angle induction makes both children winning; the divisor-case residue cut likewise forces a multiple in both children, with n=2 handled separately. For non-divisors, a safe initial triangle exists and the four-case argument proves Shan-Yu can preserve safety after every cut."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

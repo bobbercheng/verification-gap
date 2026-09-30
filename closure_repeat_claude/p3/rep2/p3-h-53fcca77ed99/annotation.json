@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-53fcca77ed99",
+  "problem": "3",
+  "sha256": "53fcca77ed99823742d5d7e54be1df6e408d7e1877ca083dbd0e51803bffac96",
+  "path": "checkpoint_inputs/53fcca77ed99823742d5d7e54be1df6e408d7e1877ca083dbd0e51803bffac96.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 2,
+  "record_ids": [
+    "claude-fable-5-main-t002"
+  ],
+  "bytes": 1220,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1918,
+        "output_tokens": 421,
+        "output_tokens_details": {
+          "thinking_tokens": 215
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 421,
+            "cache_read_input_tokens": 1918,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 7.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "geometric division 1:2:...:2^n (named only; n=1 by hand)",
+    "upper_bound_mechanism": "none",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula appears only as a conjecture, verified by hand for n=1 and slated for brute force. Reduction to odd-ranked sorted sum is asserted without proof. Liu's geometric division is named but no argument against arbitrary Xiang replies. No upper-bound work at all."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

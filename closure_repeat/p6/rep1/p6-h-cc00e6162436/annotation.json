@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-cc00e6162436",
+  "problem": "6",
+  "sha256": "cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a",
+  "path": "checkpoint_inputs/cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 6,
+  "record_ids": [
+    "p6-gpt-5.6-sol-pro-main-t006"
+  ],
+  "bytes": 9581,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1157,
+        "output_tokens": 6677,
+        "cache_read_input_tokens": 2240,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 79.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "weight descent on minimal supports + infinite sunflower lemma",
+    "upper_bound_mechanism": "residue-class counting mod L (T accepted classes per length-L window)",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. Greedy-scan characterization, support-only dependence, and self-duality are fully argued (C). Finiteness of relevant primes proven for all cases via Lemma 2 weight descent (squarefree kernel rejected gives smaller witness) plus Lemma 1 sunflower bounded-size finiteness. Global periodicity from n=1 with T counted in a window of length L; no false lemmas."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

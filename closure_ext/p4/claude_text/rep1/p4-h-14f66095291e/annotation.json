@@ -1,0 +1,71 @@
+{
+  "id": "p4-h-14f66095291e",
+  "problem": "4",
+  "sha256": "14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed",
+  "path": "checkpoint_inputs_ext/14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 2,
+  "record_ids": [
+    "p4-gpt-5.6-sol-pro-main-t002",
+    "p4-deedy-gpt-5.6-sol-pro-final"
+  ],
+  "bytes": 6485,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4933,
+        "output_tokens": 833,
+        "output_tokens_details": {
+          "thinking_tokens": 547
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 833,
+            "cache_read_input_tokens": 4933,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 13.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Integral-multiple induction (split k into 1 and k-1) plus a first cut making both children have integer angles k and N-k; N=2 case handled separately",
+    "upper_bound_mechanism": "Shan-Yu keeps a triangle with all angles nonintegral in units of theta (equilateral start); four-case parity/sum-difference check shows some child is safe",
+    "wrong_answer_stated": false,
+    "notes": "Complete on both directions. Cut formulas (1) derived with explicit existence of the cut ray; induction lemma covers both children; sufficiency handles arbitrary initial triangle including all-angles<1 forcing N=2; necessity's four-case argument uses s not an integer exactly where needed."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

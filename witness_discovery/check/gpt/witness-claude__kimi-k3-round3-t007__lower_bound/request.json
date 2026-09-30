@@ -1,0 +1,19 @@
+{
+ "checker": "gpt",
+ "transport": "codex-cli",
+ "model": "gpt-5.6-sol",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "kimi-k3-round3-t007",
+ "tag": "lower_bound",
+ "text_sha256": "15413cb68d86a2d234cc0acaad29c1956a8d7fefb87b818c1d7d6c61e460a3f3",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "lower_bound",
+  "status": "not_written",
+  "quote": "Part A (LB guarantee) proof sketched above via matching formula + component decomposition + block lemma — needs writing + numeric checks.",
+  "witness": "MISSING STATEMENT: a complete written proof that for the family a_i = 2^{i-1}/(2^{n+1}-1), i=1..n+1, EVERY subdivision by at most n cuts yields D >= 1/(2^{n+1}-1). The text presents the argument only as a compressed sketch that it itself flags as unwritten and unverified: the key matching identity 'sum p_{2k} = max_mu sum min(p,q)' is asserted 'by an exchange argument' with the argument omitted; the per-component inequality w_I <= cost(component) is compressed to a parenthetical '(algebra: ... then triangle ineq)'; the exclusion of odd-cycle components is justified by 'checked numerically by hand: triangle counterexample'; and the final specialization of the general super-increasing lemma to the geometric family with delta = 1/(2^{n+1}-1) is never carried out. A sketch whose lemmas are asserted rather than proved is not an all-cases argument.",
+  "load_bearing": "The lower bound c_n >= 2^n/(2^{n+1}-1) rests entirely on this Part A chain (matching formula -> slack counting -> tree component -> block lemma), and the text explicitly defers its writing and verification."
+ },
+ "started_utc": "2026-09-06 04:46:03 UTC"
+}

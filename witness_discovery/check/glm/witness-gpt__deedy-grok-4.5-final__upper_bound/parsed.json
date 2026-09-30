@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-grok-4.5-final",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 85.2,
+  "input_tokens": 6528,
+  "output_tokens": 885,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "The quoted step asserts Xiang can take the remainder 'as a single piece (using 0 cuts)' so D(R)=s=S_n−μ. But the remainder is already partitioned by Liu's marks; Xiang can only cut further, never merge. The witness L={4,1.5,1.5} (n=2, S=7, μ=4) satisfies the hypothesis 'some unique piece ≥τ=4': the existing remainder has D(R)=1.5−1.5=0, not 3, so the claimed inference fails verbatim. (Xiang can still win here by cutting μ into 2+2, but that contradicts the strategy's 'leave μ untouched' and is not the text's argument.) No alternative valid proof of the large-piece case appears: the surrounding text is self-contradictory ('wait:', 'This appears contradictory unless...'), and the later 'recursive dichotomy'/'binary greedy' paragraphs are sketches verified only for n≤2. Hence the upper-bound obligation remains unproved."
+ }
+}

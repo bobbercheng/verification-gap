@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-b249cd31eb8a",
+  "problem": "2",
+  "sha256": "b249cd31eb8ac33306b963e5e1d519fc323825b785ef12bbb1a1b6e2fd2ffb59",
+  "path": "checkpoint_inputs/b249cd31eb8ac33306b963e5e1d519fc323825b785ef12bbb1a1b6e2fd2ffb59.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p2-deedy-gpt-5.6-sol-pro-final"
+  ],
+  "bytes": 7787,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5140,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 8668,
+        "output_tokens_details": {
+          "thinking_tokens": 8294
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 5140,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 8668,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 5140,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 5140
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 96.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "compatibility relation PQ·sinU·sinV = sin(p+r)sin(p+q) plus proved factorization T = sin(x−y)(PQ sinU sinV − sin(p+r)sin(p+q))",
+    "upper_bound_mechanism": "vector circle equation |z|²=w·z: OM²−ON² = (c²−b²)/4 − (cd−be)/2, reduced to trig target (10)",
+    "wrong_answer_stated": false,
+    "notes": "Trig route, not the key-circle route, but self-contained: all three hypotheses encoded via sine rule in ABK/BMK, ACL/CNL, ACK/ABL; ray order AB,AK,AL,AC proved by affine coordinates; OM=ON reduced correctly to cd−be=(c²−b²)/2; factorization essentially executed. Minor gaps: numerator identity and two 'terms cancel in pairs' expansions asserted (spot-checks confirm them)."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

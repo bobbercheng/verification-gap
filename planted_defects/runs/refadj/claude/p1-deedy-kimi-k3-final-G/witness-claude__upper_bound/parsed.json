@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p1-deedy-kimi-k3-final-G",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "G",
+ "problem": "1",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 10.9,
+  "input_tokens": 2,
+  "output_tokens": 671,
+  "cache_read_input_tokens": 2097,
+  "cache_creation_input_tokens": 4932,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4214,
+    "outputTokens": 23,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0043289999999999995,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 671,
+    "cacheReadInputTokens": 2097,
+    "cacheCreationInputTokens": 4932,
+    "webSearchRequests": 0,
+    "costUSD": 0.0671535,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 225,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L1.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The write-up correctly identifies the move's effect on valuations, (α,β) ↦ (min(α,β), |α−β|), and correctly formulates the needed divisor equivalence, but then writes '(standard; details omitted)' and asserts 'In all cases $G_p$ is invariant' without treating any case: α=β, α or β zero, α>β vs α<β. No other passage supplies the argument: Step 4 only uses gcd(x,0)=x on the terminal tuple, and the Remarks are consistency checks on special boards, plus computer verification, which the rubric does not credit. So the invariance mechanism is named/sketched, not proved for all cases. A one-sentence proof (t | α, β ⇔ t | min, |α−β|, since each side is an integer combination of the other) repairs it."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

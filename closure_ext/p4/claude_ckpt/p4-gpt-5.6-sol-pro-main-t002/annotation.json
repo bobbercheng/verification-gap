@@ -1,0 +1,66 @@
+{
+  "id": "p4-gpt-5.6-sol-pro-main-t002",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 2,
+  "path": "checkpoint_inputs_ext/14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed.md",
+  "bytes": 6485,
+  "sha256": "14f66095291eae75c667bab45ebb9444d0f3e3be13df65c835c1c8be55619fed",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3429,
+        "cache_read_input_tokens": 1504,
+        "output_tokens": 994,
+        "output_tokens_details": {
+          "thinking_tokens": 734
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3429,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 994,
+            "cache_read_input_tokens": 1504,
+            "cache_creation_input_tokens": 3429,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3429
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "normalized angles (units of theta); integral-angle lemma by induction plus a cut making both children have integral angles k and N-k, with N=2 case handled",
+    "upper_bound_mechanism": "safe = all three normalized angles nonintegral; equilateral start; four-case check that some child stays safe, using s not an integer",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct on all four obligations: cut formula with existence of the cut point, induction on integer multiples covering both pieces, sufficiency argument handling all triangles including N=2, and Shan-Yu's nonintegrality invariant with the full four-case verification."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

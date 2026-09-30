@@ -1,0 +1,48 @@
+{
+  "id": "p3-h-ad98327771c2",
+  "problem": "3",
+  "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+  "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+  "lineage": "ours-kimi-R2",
+  "model": "kimi-k3",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "kimi-r2-c2",
+    "kimi-r2-c3",
+    "kimi-r2-c4"
+  ],
+  "bytes": 4134,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1884,
+        "output_tokens": 3262,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 39.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "dyadic division + toggle-set relaxation (crux inequality open)",
+    "upper_bound_mechanism": "set-game cancellation/toggle strategy",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form only as conjecture (grid values n≤3). Reduction to odd-sum stated but greedy lemma unwritten. LB: dyadic division given, yet key inequality g(n,k)≥g(n−1,k−1) explicitly OPEN; only reverse direction proved. UB: set-game numerics n≤3 plus hand strategies n=1,2; general covering argument missing."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

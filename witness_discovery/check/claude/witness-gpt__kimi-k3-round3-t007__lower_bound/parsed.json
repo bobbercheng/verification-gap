@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "kimi-k3-round3-t007",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 10.2,
+  "input_tokens": 2,
+  "output_tokens": 649,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 3388,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2947,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0030369999999999998,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 649,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 3388,
+    "webSearchRequests": 0,
+    "costUSD": 0.0507855,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 312,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quoted line appears verbatim under \"Matching formula\", and it is the entirety of the justification offered for D(M) = min_μ(∑|p-q| + ∑ unmatched). The identity ∑_k p_{2k} = max_μ ∑ min(p,q) is only asserted \"by an exchange argument\"; no exchange argument (nor any other proof) appears anywhere in the write-up. The subsequent Part A argument (components, tree slack counting, block lemma) begins by \"take optimal matching μ\" and bounds matching cost, so it yields a bound on D only via this unproved identity. The text itself labels Part A a \"SKETCH ... needs writing + numeric checks\", confirming the lower-bound obligation is not written out. Hence the all-n lower bound is not established as written."
+ }
+}

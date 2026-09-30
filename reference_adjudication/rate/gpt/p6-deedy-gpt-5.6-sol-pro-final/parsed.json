@@ -1,0 +1,55 @@
+{
+ "rater": "gpt",
+ "case": "p6-deedy-gpt-5.6-sol-pro-final",
+ "problem": "6",
+ "group": "E",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 50.4,
+  "input_tokens": 18033,
+  "output_tokens": 2541,
+  "reasoning_output_tokens": 2146,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "statements": {
+   "L6.1": {
+    "established": "yes",
+    "quote": "We have the following self-duality property:\n\\[\nS\\in\\mathcal F\n\\quad\\Longleftrightarrow\\quad\nS\\cap R\\ne\\varnothing\\text{ for every }R\\in\\mathcal F.\n\\tag{1}\n\\]",
+    "note": "This is precisely the support-form characterization, proved in both directions."
+   },
+   "L6.2": {
+    "established": "yes",
+    "quote": "If a prime $p$ occurs in any $C\\in\\mathcal C$, Lemma 2 supplies a terminal $D\\in\\mathcal C$ containing $p$. Therefore every prime occurring in any member of $\\mathcal C$ belongs to $P$. It follows that every member of $\\mathcal C$ is a subset of the finite set $P$, and hence $\\mathcal C$ itself is finite, as desired.",
+    "note": "An alternative all-cases descent and sunflower argument proves a finite relevant-prime set."
+   },
+   "L6.3": {
+    "established": "yes",
+    "quote": "Every half-open interval $(x,x+L]$ contains exactly one representative of each residue class modulo $L$, and therefore contains exactly $T$ accepted integers. Taking $x=a_n$ and using (6), the endpoint $a_n+L$ is accepted. It is consequently the $T$-th accepted integer after $a_n$, so\n\\[\na_{n+T}=a_n+L\n\\]\nfor every positive integer $n$.",
+    "note": "Modulo-$L$ invariance and residue counting yield periodicity from the first term."
+   }
+  },
+  "S_ref": 2,
+  "notes": "All three ledger requirements are fully proved. The finiteness obligation uses a valid alternative route rather than an explicit numerical large-prime cutoff."
+ },
+ "anchors": {
+  "L6.1": {
+   "anchored": true,
+   "length": 158,
+   "length_ok": true,
+   "reason": null
+  },
+  "L6.2": {
+   "anchored": true,
+   "length": 318,
+   "length_ok": true,
+   "reason": null
+  },
+  "L6.3": {
+   "anchored": true,
+   "length": 337,
+   "length_ok": true,
+   "reason": null
+  }
+ }
+}

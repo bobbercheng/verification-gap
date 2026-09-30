@@ -1,0 +1,71 @@
+{
+  "id": "p4-h-43ca23749f7e",
+  "problem": "4",
+  "sha256": "43ca23749f7ecdc084bc699e211e57eb73469d443e1b8b19ca2c45f7c7c5fb8e",
+  "path": "checkpoint_inputs_ext/43ca23749f7ecdc084bc699e211e57eb73469d443e1b8b19ca2c45f7c7c5fb8e.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 7,
+  "record_ids": [
+    "p4-gpt-5.6-sol-xhigh-main-t007",
+    "p4-deedy-gpt-5.6-sol-xhigh-final"
+  ],
+  "bytes": 8913,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5909,
+        "output_tokens": 1062,
+        "output_tokens_details": {
+          "thinking_tokens": 757
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1062,
+            "cache_read_input_tokens": 5909,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 15.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Complementary cut-point angles k(theta) and (n-k)theta via integer-between-partial-sums claim (handles n=2), plus Lemma 1 induction",
+    "upper_bound_mechanism": "Safe-triangle invariant: equilateral start, four-case check that every cut of a safe triangle has a safe child, using 180 not a multiple of theta",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Cut model with realizability of any x in (0,A) justified; Lemma 1 covers both pieces; sufficiency gives both children an integer multiple of theta so discard choice is irrelevant; necessity's four-case analysis is exhaustive and uses (8) exactly in case 4. Computer checks explicitly not used as proof."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

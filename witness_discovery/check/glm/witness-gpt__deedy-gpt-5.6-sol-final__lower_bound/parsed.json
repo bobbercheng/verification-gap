@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-gpt-5.6-sol-final",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 250.9,
+  "input_tokens": 48,
+  "output_tokens": 18725,
+  "cache_read_input_tokens": 3008
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "Splitting a column of height h=u+v changes N(t) by +1 on (0,min(u,v)), 0 on (min,max), -1 on (max,h): parity flips both below the shorter piece and in the top cap. The witness (2d cut into d/2+3d/2) has parity odd before, even on (0,d/2) after—a row interchange strictly below the cut level—so 'only above its level' is false; part (i)'s own wording ('below that level the two rows are interchanged') confirms flips can occur below. The sentence is the only control on adversarial cuts in the induction for Lemma (ii); e.g., cutting 4d into 2d+2d flips parity on the entire lower half without any cut among the first columns, so the preservation step is unjustified. Lemma (ii) is exactly what protects Liu's geometric partition in Section 3, and the text offers no other proof of it."
+ }
+}

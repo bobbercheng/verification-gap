@@ -1,0 +1,3402 @@
+{
+  "annotator": "glm-5.3",
+  "items": [
+    {
+      "id": "p2-h-a01c213d0d8e",
+      "problem": "2",
+      "sha256": "a01c213d0d8ee971569ab0bec863f466bbee94450d5b553a152af1f97ba46268",
+      "path": "checkpoint_inputs/a01c213d0d8ee971569ab0bec863f466bbee94450d5b553a152af1f97ba46268.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 6,
+      "record_ids": [
+        "p2-claude-fable-5-main-t006"
+      ],
+      "bytes": 2364,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1361,
+            "output_tokens": 12542,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 150.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "affine four-circle power identity (asserted, not proved)",
+        "upper_bound_mechanism": "powers at B,C plus median-length formula (sketched, not executed)",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file, not a proof: 'Full proof' section is empty. All key ideas are present and mathematically correct (X,Y concyclicity translation with tangency degeneracies; F affine-linear vanishing at A,K,L; power evaluations; median formula), but every step is asserted, none argued. Numeric verification is not creditable, so all mechanisms score as sketches only."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-395f0a044112",
+      "problem": "2",
+      "sha256": "395f0a04411246017ef8233aba7c446d136ba871a7e485f64d4979e5b3f3ab40",
+      "path": "checkpoint_inputs/395f0a04411246017ef8233aba7c446d136ba871a7e485f64d4979e5b3f3ab40.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 11,
+      "record_ids": [
+        "p2-claude-fable-5-main-t011"
+      ],
+      "bytes": 26960,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 11010,
+            "output_tokens": 16353,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 157.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "affine power identity F≡0 (power of a point w.r.t. ω, ωK, ωL, ω1)",
+        "upper_bound_mechanism": "computed powers of B and C plus median-length formula",
+        "wrong_answer_stated": false,
+        "notes": "Complete rigorous proof. X,Y defined via crossbar with barycentric sign analysis; all three concyclicities (BXYC, CMKX, BNLY) proved via directed angles incl. tangency cases X=M, Y=N. Affine identity F≡0 fully executed at A,K,L, giving pow(B,ω), pow(C,ω); median formula yields OM=ON. Only cosmetic garbles (P3 signs, F(A) chain); no false claims."
+      },
+      "S": 2,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-9fa7a3d46101",
+      "problem": "2",
+      "sha256": "9fa7a3d4610125b334747eb2060e6b7bb5422a4e418d80350727e58cf9e0800c",
+      "path": "checkpoint_inputs/9fa7a3d4610125b334747eb2060e6b7bb5422a4e418d80350727e58cf9e0800c.md",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-claude-fable-5-final"
+      ],
+      "bytes": 27968,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 11375,
+            "output_tokens": 9862,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 90.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "affine power identity F≡0 (combined power function of ω_K, ω_L, ω_1 identifies circle AKL)",
+        "upper_bound_mechanism": "computed powers of B and C plus median-length formula",
+        "wrong_answer_stated": false,
+        "notes": "Complete rigorous proof. All three concyclicities (B,C,X,Y; C,M,K,X; B,N,L,Y) proved via directed angles with sign analysis and tangency degenerate cases handled. Key circle step executed via the affine power identity, fully proved at A,K,L. Finish: pow(B,ω)−pow(C,ω)=(c²−b²)/2, median formula gives OM=ON. Rephrasing 'inside triangle ABL' as 'inside angle LBA' is a valid weakening."
+      },
+      "S": 2,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-406f7046d596",
+      "problem": "2",
+      "sha256": "406f7046d596b78b8322deac7357056641526dd07722717acc0ea918c3d5b2e3",
+      "path": "checkpoint_inputs/406f7046d596b78b8322deac7357056641526dd07722717acc0ea918c3d5b2e3.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-deepseek-v4-pro-final",
+        "p2-deepseek-v4-pro-main-t080"
+      ],
+      "bytes": 1981,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1286,
+            "output_tokens": 4829,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 54.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Complex setup M=0, N=1, B=-A, C=2-A with three explicit Im(...)=0 equations correctly encodes all three angle conditions (verified by direct argument computation), so the reduction stands. No key circle, no finish; 'Full proof' is TODO; only numeric evidence and an unexecuted ideal-membership plan. Earlier circumcenter bug corrected; no false claim remains."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-74cde2147129",
+      "problem": "2",
+      "sha256": "74cde2147129b498fb2a9c6e3d70e20be2d815e13bd15cac63a65b0ee57c316a",
+      "path": "checkpoint_inputs/74cde2147129b498fb2a9c6e3d70e20be2d815e13bd15cac63a65b0ee57c316a.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-gpt-5.6-sol-final",
+        "p2-gpt-5.6-sol-main-t019"
+      ],
+      "bytes": 5166,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2403,
+            "output_tokens": 24707,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 260.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "complex equal-power algebra (cancellation asserted, unexecuted)",
+        "upper_bound_mechanism": "equal powers of M,N wrt (AKL) imply OM=ON",
+        "wrong_answer_stated": false,
+        "notes": "Complex setup fully and correctly encodes all three angle conditions ((1)-(4) with ray-order justifications). Power setup (5)-(9) is correct, and the finish OM^2=ON^2=>OM=ON is complete. But the crux H=0 is only asserted: 'the numerator cancels in conjugate pairs', with listed pairs not cancelling termwise; author relied on external symbolic code. Core fact sketched, not executed."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-4efadec329eb",
+      "problem": "2",
+      "sha256": "4efadec329eb35343006fe8b233a7bb1cd42d5ba856d8e8ca9cf2ff9147d7c74",
+      "path": "checkpoint_inputs/4efadec329eb35343006fe8b233a7bb1cd42d5ba856d8e8ca9cf2ff9147d7c74.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-gpt-5.6-sol-max-final",
+        "p2-gpt-5.6-sol-max-main-t077"
+      ],
+      "bytes": 6534,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2597,
+            "output_tokens": 18916,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 191.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "circumcircle-coefficient polynomial certificate (identity asserted, not expanded)",
+        "wrong_answer_stated": false,
+        "notes": "Analytic proof: all three angle conditions correctly encoded via sine law into quadratics (13); intermediate identities (1)-(12), (15)-(21), (23) and the final OM^2-ON^2 computation check out. But no key circle through A is identified, and the central certificate (22) is only asserted as 'verified by direct expansion' — an unexecuted computation, so the finish is not fully written out."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-b249cd31eb8a",
+      "problem": "2",
+      "sha256": "b249cd31eb8ac33306b963e5e1d519fc323825b785ef12bbb1a1b6e2fd2ffb59",
+      "path": "checkpoint_inputs/b249cd31eb8ac33306b963e5e1d519fc323825b785ef12bbb1a1b6e2fd2ffb59.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-gpt-5.6-sol-pro-final"
+      ],
+      "bytes": 7787,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2854,
+            "output_tokens": 28382,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 259.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M and N via directed lengths on circumcircle of AKL",
+        "wrong_answer_stated": false,
+        "notes": "Complete, correct trigonometric proof: all three angle hypotheses encoded via sine rule; OM=ON reduced to cd-be=(c^2-b^2)/2 by powers of M,N; factorization identity (12) verified in full via (13)-(18). No key-circle identification mechanism present, but the finish is rigorous."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-848a04cd9dd2",
+      "problem": "2",
+      "sha256": "848a04cd9dd2194c81c0c75b2395f7c1582513961751d667ecff82bbbc60356c",
+      "path": "checkpoint_inputs/848a04cd9dd2194c81c0c75b2395f7c1582513961751d667ecff82bbbc60356c.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-gpt-5.6-sol-xhigh-final"
+      ],
+      "bytes": 11389,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 4091,
+            "output_tokens": 30000,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 252.9,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4859,
+            "output_tokens": 983,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 14.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "complex power-difference determinant factorization (D = scalar·incidence determinant)",
+        "upper_bound_mechanism": "equal powers of M and N w.r.t. (AKL) via augmented determinant",
+        "wrong_answer_stated": false,
+        "notes": "Fully analytic complex-coordinate proof. (T): coordinates (2)-(5) encode all three angle hypotheses with ray orientations; incidence Q=0 correctly derived. Key step: proved factorization lemma with explicit coefficient check (30)-(32), remainders vanish via e(u-1)=p from (21); tangent cases handled by density/continuity. Finish: D=0 gives equal powers, hence OM=ON."
+      },
+      "S": 2,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-89e724008cfc",
+      "problem": "2",
+      "sha256": "89e724008cfc7a21f3f1eae1195591640c1ddd834a69c56e0bf7f51fad7db28c",
+      "path": "checkpoint_inputs/89e724008cfc7a21f3f1eae1195591640c1ddd834a69c56e0bf7f51fad7db28c.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-grok-4.5-final"
+      ],
+      "bytes": 974,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 317,
+            "output_tokens": 1164,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 14.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only: goal OM=ON restated (with typographic corruption) plus vague strategy ideas (O on perpendicular bisector of MN, Cartesian at midpoint of MN). No translation of the three angle conditions into concyclicities or coordinates; no key circle; no finish. Numerics/isosceles claims unexecuted; no false lemma asserted."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e2a57ad245a0",
+      "problem": "2",
+      "sha256": "e2a57ad245a0214768436fb0735a8f7318f18780348ea7a9b16afa0109348622",
+      "path": "checkpoint_inputs/e2a57ad245a0214768436fb0735a8f7318f18780348ea7a9b16afa0109348622.md",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-kimi-k3-final",
+        "p2-kimi-k3-main-t023"
+      ],
+      "bytes": 10275,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 4078,
+            "output_tokens": 30000,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 283.4,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4078,
+            "output_tokens": 520,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 7.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "coordinate solve for circle (AKL) equation with K, L on it, powers of B and C constrained by quadratics ConsP/ConsQ",
+        "upper_bound_mechanism": "Apollonius median formula: pow(M)=pow(B)/2−c²/4, pow(N)=pow(C)/2−b²/4, then pow(B)−pow(C)=(c²−b²)/2",
+        "wrong_answer_stated": false,
+        "notes": "Complete coordinate proof. All three angle hypotheses encoded via four law-of-sines relations and coordinates; elimination to ConsP/ConsQ written out; power identities (4),(5) verified by explicit monomial comparison including the nontrivial pq coefficient; finish via Apollonius rigorous."
+      },
+      "S": 2,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-bed5ff37042f",
+      "problem": "2",
+      "sha256": "bed5ff37042fc41f076d7ea10830cfd77a663ca190ae62674b83346ffd355651",
+      "path": "checkpoint_inputs/bed5ff37042fc41f076d7ea10830cfd77a663ca190ae62674b83346ffd355651.md",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": 99,
+      "turn": null,
+      "record_ids": [
+        "p2-deedy-muse-spark-1.1-final",
+        "p2-muse-spark-1.1-main-t007"
+      ],
+      "bytes": 3189,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 969,
+            "output_tokens": 1985,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 22.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file marked 'unsolved', proof 'TBD'. Correctly reduces OM=ON to Ox=0 with M=(-1,0), N=(1,0). Angle parametrization (alpha, beta, gamma) with consistency equations E1, E2 structurally encodes all three hypotheses but is never executed; no concyclicity translation. No key circle through A,K,L; no derivation of Ox=0, only 'numerically suspect'."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-6621627b3761",
+      "problem": "2",
+      "sha256": "6621627b3761bdb6305eb9e8f1ec02cb4da5ecf0d001e04bb2738d76c658f64c",
+      "path": "checkpoint_inputs/6621627b3761bdb6305eb9e8f1ec02cb4da5ecf0d001e04bb2738d76c658f64c.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 17,
+      "record_ids": [
+        "p2-deepseek-v4-pro-main-t017"
+      ],
+      "bytes": 2023,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 575,
+            "output_tokens": 1286,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 16.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file, no proof. Goal OM=ON restated with only vague strategy. Complex setup sketched (A=0,B=1,C=c) but just one equation derived, system unexecuted. Key circle and finish entirely absent; concyclicity of A,K,L,M,N only conjectured, never proved."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-4400f425eba3",
+      "problem": "2",
+      "sha256": "4400f425eba36f743236b18af8557ee6823ef59e952fad266139ad47c41b3803",
+      "path": "checkpoint_inputs/4400f425eba36f743236b18af8557ee6823ef59e952fad266139ad47c41b3803.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 33,
+      "record_ids": [
+        "p2-deepseek-v4-pro-main-t033"
+      ],
+      "bytes": 1827,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 576,
+            "output_tokens": 4841,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 53.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Complex setup M=0, N=1, B=-a, C=2-a is sound; Eq1–Eq3 (checked) correctly encode all three angle conditions, and OM=ON iff Re(O)=1/2 is right. But no proof: key circle only conjectured ('inversion or a circle'), finish is numerics only; interior conditions misquoted as angle containment."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-df3a329d15cb",
+      "problem": "2",
+      "sha256": "df3a329d15cb252aa3b97d10663db7e7a9d5928986896467c7ba31e40f6d1a12",
+      "path": "checkpoint_inputs/df3a329d15cb252aa3b97d10663db7e7a9d5928986896467c7ba31e40f6d1a12.md",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 52,
+      "record_ids": [
+        "p2-deepseek-v4-pro-main-t052"
+      ],
+      "bytes": 1724,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 559,
+            "output_tokens": 6636,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 78.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Complex setup M=0, N=1, B=-a, C=2-a with three Im=0 equations correctly encodes all three angle conditions (verified); OM=ON equated to Re(O)=1/2 correctly. But proof is TODO: no key circle, OM=ON only a 'working hypothesis' backed by numerics; Groebner timed out; 'A=0' in coordinate list is an internal typo."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-742d16ab0896",
+      "problem": "2",
+      "sha256": "742d16ab089699e0348679e51a3a71cd4ba86a2280c17bfec81c1b37db4b151c",
+      "path": "checkpoint_inputs/742d16ab089699e0348679e51a3a71cd4ba86a2280c17bfec81c1b37db4b151c.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "f823332e",
+      "turn": 1,
+      "record_ids": [
+        "p2-glm52-f823332e-v1"
+      ],
+      "bytes": 7547,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2550,
+            "output_tokens": 7943,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 82.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "antipode on perpendicular bisector of BC, closed by asserted external CAS certificate",
+        "wrong_answer_stated": false,
+        "notes": "Coordinate setup genuinely encodes all three hypotheses; sine-rule parametrizations of K,L are written and boxed constraints G1,G2 are correct (independently checked). Antipode reduction OM=ON iff A'·(C-B)=(b²-c²)/2 is correct. However the closing identity num(E)=Q·num(G2) is only asserted, with Q relegated to external files and 200-point numeric re-evaluation — not written out. No key circle through A,K,L is identified."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-548b8f8d8940",
+      "problem": "2",
+      "sha256": "548b8f8d8940c5f43bc467a72e1d100c63b040d8e950f4e34e80b1ff432d3f5f",
+      "path": "checkpoint_inputs/548b8f8d8940c5f43bc467a72e1d100c63b040d8e950f4e34e80b1ff432d3f5f.md",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "f823332e",
+      "turn": 2,
+      "record_ids": [
+        "p2-glm52-f823332e-v2"
+      ],
+      "bytes": 14439,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 4899,
+            "output_tokens": 11134,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 120.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "antipode reformulation plus asserted CAS divisibility identity (Q not displayed)",
+        "wrong_answer_stated": false,
+        "notes": "Translation genuinely done: additive orderings derived from interiors in §3.0, and G1/G2 derivations are shown and correct. Antipode reformulation of OM=ON is correct. But the closing identity num(E)=Q·num(G2) is machine-asserted with Q relegated to an external file—an unexecuted computation, not a written argument. No key circle or geometric mechanism. No false claims."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-5d29afda1d2b",
+      "problem": "2",
+      "sha256": "5d29afda1d2bb1d6799da99c142054073f8cefd7e2bfb147e7d56401b13cd548",
+      "path": "checkpoint_inputs/5d29afda1d2bb1d6799da99c142054073f8cefd7e2bfb147e7d56401b13cd548.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 1,
+      "record_ids": [
+        "p2-gpt-5.6-sol-main-t001"
+      ],
+      "bytes": 632,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 218,
+            "output_tokens": 1141,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 13.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "This is only a tracking file restating the problem and declaring it unsolved. No proof content: the angle conditions are never translated into concyclicities, no circle through A, K, L is identified, and no argument for OM = ON is attempted."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e6f6ee22da8d",
+      "problem": "2",
+      "sha256": "e6f6ee22da8d021cfadbc862a643359123a617458482494829285d805e8e99d8",
+      "path": "checkpoint_inputs/e6f6ee22da8d021cfadbc862a643359123a617458482494829285d805e8e99d8.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 6,
+      "record_ids": [
+        "p2-gpt-5.6-sol-main-t006"
+      ],
+      "bytes": 2162,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 722,
+            "output_tokens": 5395,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 64.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N w.r.t. (AKL)",
+        "wrong_answer_stated": false,
+        "notes": "Sine-rule coordinates for K,L are correct and encode ∠BMK=z, ∠CNL=y and the shared x, but ∠LBK=y and ∠LCK=z are never used; the key identity is not even formulated, only flagged. Equal-powers⇒OM=ON equivalence is correct but unexecuted. No key circle; problem restatement also weakens the triangle-inside conditions."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-f17298d06e65",
+      "problem": "2",
+      "sha256": "f17298d06e65d74749c2ec746b148e84511661eb3dd34631c51f33ab0744ac00",
+      "path": "checkpoint_inputs/f17298d06e65d74749c2ec746b148e84511661eb3dd34631c51f33ab0744ac00.md",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 15,
+      "record_ids": [
+        "p2-gpt-5.6-sol-main-t015"
+      ],
+      "bytes": 2607,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 880,
+            "output_tokens": 21254,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 211.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N w.r.t. circumcircle (AKL)",
+        "wrong_answer_stated": true,
+        "notes": "Sine-rule coordinates for K,L are genuinely derived and the BL reality condition is correct, but the 'corrected' CK direction α+π−x−z is still wrong (true direction α+π+x+z), contradicting the own L formula and K inside ABC. No key circle identified; the power-equality identity is left unexecuted; the powers⇒OM=ON implication is correctly stated."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-af2009c2ffbe",
+      "problem": "2",
+      "sha256": "af2009c2ffbed1c2198014e955e5cbe4db38efc9987ca3142e9fc7ef2a989cf9",
+      "path": "checkpoint_inputs/af2009c2ffbed1c2198014e955e5cbe4db38efc9987ca3142e9fc7ef2a989cf9.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 1,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t001"
+      ],
+      "bytes": 847,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 159,
+            "output_tokens": 1108,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 12.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only; explicitly unsolved. Goal OM=ON correctly stated, with one correct observation: OM=ON iff powers of M,N w.r.t. (AKL) are equal. No translation of the three angle conditions, no key circle through A,K,L, no finish. Hypothesis restatement slightly weakens interior conditions but target unchanged."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e2296fd466ad",
+      "problem": "2",
+      "sha256": "e2296fd466adef67a9a3975f41148438622c666a3d53558237b3a0d8b6f4ad55",
+      "path": "checkpoint_inputs/e2296fd466adef67a9a3975f41148438622c666a3d53558237b3a0d8b6f4ad55.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 6,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t006"
+      ],
+      "bytes": 2848,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 923,
+            "output_tokens": 9447,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 104.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "power of a point (circle-coefficient identity)",
+        "wrong_answer_stated": false,
+        "notes": "Correct angle parametrization x,y,z encodes all three hypotheses; sine-law formulas for BK, CL and the power-of-point reduction OM=ON iff 2bq-2cp=b^2-c^2 are correct (one justification label, ∠CBK=β-x-y, is garbled; formulas check out). No key circle through A,K,L identified; final identity left unproved, self-declared partial."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-5b84e722445e",
+      "problem": "2",
+      "sha256": "5b84e722445e57722cdd7ded4d105a6afc4b32c75b2bf06b7cb9c81276ecb6d1",
+      "path": "checkpoint_inputs/5b84e722445e57722cdd7ded4d105a6afc4b32c75b2bf06b7cb9c81276ecb6d1.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 11,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t011"
+      ],
+      "bytes": 4212,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1000,
+            "output_tokens": 8349,
+            "cache_read_input_tokens": 896,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 91.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N via oblique-coordinate circle equation; reduced to identity 2bq−2cp=b²−c², which is left unproven",
+        "wrong_answer_stated": false,
+        "notes": "Sine-law derivation of (1) is written out and genuinely encodes all three angle conditions; coordinates (2) and the power reformulation reducing OM=ON to (3) check out. However (3) is admitted open. No key circle through A containing K,L is identified or proved, and the finish is an unexecuted computation. No false lemmas."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-2cd1b6f5c206",
+      "problem": "2",
+      "sha256": "2cd1b6f5c206ae9702a75a3760e4bb1d9d51a85964cbe3e34fa2ec12faa17d3b",
+      "path": "checkpoint_inputs/2cd1b6f5c206ae9702a75a3760e4bb1d9d51a85964cbe3e34fa2ec12faa17d3b.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 16,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t016"
+      ],
+      "bytes": 4660,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2106,
+            "output_tokens": 6780,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 101.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N via circumcircle coefficients p,q",
+        "wrong_answer_stated": false,
+        "notes": "Sine-law formulas (1)-(2) and oblique coordinates (3) are correctly and fully derived, genuinely encoding all three angle hypotheses. OM^2-ON^2 is correctly reduced to identity (4), but the crucial implication from (2) to (4) is explicitly admitted unproven ('remaining algebraic lemma not yet proved'). No auxiliary key circle is identified; K,L lie on the circumcircle by definition only."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-3a8b9b531aef",
+      "problem": "2",
+      "sha256": "3a8b9b531aefc44ed961c19f481419e577ef1833ce1a93c4623252c4ce642a4f",
+      "path": "checkpoint_inputs/3a8b9b531aefc44ed961c19f481419e577ef1833ce1a93c4623252c4ce642a4f.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 21,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t021"
+      ],
+      "bytes": 4888,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1282,
+            "output_tokens": 15691,
+            "cache_read_input_tokens": 896,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 169.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N (linear identity (4) in circumcircle coefficients)",
+        "wrong_answer_stated": false,
+        "notes": "Angle-parametrized oblique-coordinate setup genuinely encodes all three hypotheses; sine-law identities (1), elimination quadratic (2), coordinates (3), and power equivalence (4) check out as correct. OM=ON correctly reduced to unexecuted identity (4) (Gröbner attempt failed, lemma admitted unproved). No key circle through A,K,L ever identified or proved; finish incomplete."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e2f41fa6f165",
+      "problem": "2",
+      "sha256": "e2f41fa6f165fd2089170dadf80fc5f85b38985afce36db670852653c943355a",
+      "path": "checkpoint_inputs/e2f41fa6f165fd2089170dadf80fc5f85b38985afce36db670852653c943355a.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 26,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t026"
+      ],
+      "bytes": 5140,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1317,
+            "output_tokens": 14382,
+            "cache_read_input_tokens": 960,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 154.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "circumcircle of AKL with generic coefficients p,q (membership tautological; p,q never solved)",
+        "upper_bound_mechanism": "equal powers of M,N reduced to identity (IV); (IV) left to a claimed Gröbner elimination",
+        "wrong_answer_stated": false,
+        "notes": "Sound analytic setup: all three angle hypotheses are encoded via sine-law identities (BMK/BCK, CLN/BCL), fully derived and correct; OM²−ON² is correctly reduced to coefficient identity (IV). But (IV) is established only by a claimed Gröbner computation (self-flagged gap), p,q are never determined, and no key-circle mechanism appears."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-2e75528ccfd1",
+      "problem": "2",
+      "sha256": "2e75528ccfd14f24a629b7e148b17e0e565560a6d9b2e1fffa16844879a99596",
+      "path": "checkpoint_inputs/2e75528ccfd14f24a629b7e148b17e0e565560a6d9b2e1fffa16844879a99596.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 31,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t031"
+      ],
+      "bytes": 4923,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1566,
+            "output_tokens": 18948,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 200.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "circumcircle-coefficient identity (V) reduced to unexecuted symbolic elimination",
+        "upper_bound_mechanism": "equal powers of M,N in oblique coordinates (OM²−ON² formula)",
+        "wrong_answer_stated": false,
+        "notes": "Sine-law translation of all three angle conditions into explicit quadratics (II) is written out and independently checks out; coordinates (III)–(IV), circle setup, and the OM²−ON² formula are correct. However, the central identity (V) is unproved (Gröbner 'certification' not written out), so the key-circle content and the finish are set up but never executed."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-afbde1fe8902",
+      "problem": "2",
+      "sha256": "afbde1fe8902f4860e7f202e5175d3272ca86658de261ec4fcfc218631c7dfa5",
+      "path": "checkpoint_inputs/afbde1fe8902f4860e7f202e5175d3272ca86658de261ec4fcfc218631c7dfa5.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 36,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t036"
+      ],
+      "bytes": 4711,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1520,
+            "output_tokens": 28518,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 273.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "circumcircle-coefficient identity (IV) via symbolic/script elimination only",
+        "upper_bound_mechanism": "equal powers of M and N (linear OM^2−ON^2 formula)",
+        "wrong_answer_stated": true,
+        "notes": "All three angle conditions are genuinely encoded: sine-law derivations (1)–(3) yielding (II), coordinates (III), (V) check out, as does OM²−ON²=−cp/2+bq/2+(c²−b²)/4, so (IV)⟹OM=ON is complete. But (IV) itself is only script-certified, no hand proof or key circle. The 'major advance' claim that 2Ub=cF(R) alone suffices is false (free D breaks (IV) numerically)."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-670170f5f67b",
+      "problem": "2",
+      "sha256": "670170f5f67b7ba8926ea3c0b93fbd131eaaee9fbd93716aff2d1fd9d0464d0e",
+      "path": "checkpoint_inputs/670170f5f67b7ba8926ea3c0b93fbd131eaaee9fbd93716aff2d1fd9d0464d0e.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 41,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t041"
+      ],
+      "bytes": 4600,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1433,
+            "output_tokens": 8430,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 89.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "unexecuted determinant/Gröbner test of circle-coefficient identity (V)",
+        "upper_bound_mechanism": "equal powers of M,N via oblique circle coefficients",
+        "wrong_answer_stated": false,
+        "notes": "Oblique-coordinate setup genuinely encodes all three angle conditions; sine-law derivation of (II) checks out (identities verified). Finish from equal-power condition (V) to OM=ON is correctly written. But (V) itself is unproved, left to a corrected-but-unrun script after a retracted SymPy bug; key-circle content is only reduced to an unexecuted computation."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-b8123d7dee48",
+      "problem": "2",
+      "sha256": "b8123d7dee48eb11733c379fb69e58314fbde44a411ed58da26abbd011dfa47d",
+      "path": "checkpoint_inputs/b8123d7dee48eb11733c379fb69e58314fbde44a411ed58da26abbd011dfa47d.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 46,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t046"
+      ],
+      "bytes": 5085,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1456,
+            "output_tokens": 17080,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 175.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N / linear circle-coefficient relation (V)",
+        "wrong_answer_stated": false,
+        "notes": "All three angle hypotheses are genuinely encoded via sine law into quadratics (I)–(II) (spot-checked correct), with coordinates (III)–(IV) and a correct power computation reducing OM=ON to relation (V). No key circle through A,K,L is ever identified. (V) itself is only claimed via CAS ideal-membership, never derived; finish incomplete. Earlier false resultant claim explicitly retracted."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e5f395377fa3",
+      "problem": "2",
+      "sha256": "e5f395377fa35095648c481c766bb9c1c8c61b4858be63f54aad827f565e7c3b",
+      "path": "checkpoint_inputs/e5f395377fa35095648c481c766bb9c1c8c61b4858be63f54aad827f565e7c3b.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 51,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t051"
+      ],
+      "bytes": 4718,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1451,
+            "output_tokens": 6941,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 74.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "coordinate power computation; target reduced to unverified identity (V)",
+        "wrong_answer_stated": false,
+        "notes": "Sine-law parametrization (1)–(2) genuinely encodes all three angle conditions; OM²−ON² correctly reduced to linear circle identity (V). No key circle through A,K,L is ever identified, and (V) is explicitly left as 'the remaining gap' with only Gröbner/numerical claims. No false lemmas stand; proof incomplete."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e1d12a8e7d2d",
+      "problem": "2",
+      "sha256": "e1d12a8e7d2d111778a6c1832d4bf4819e1929730bedf5921b8cb7930af17c84",
+      "path": "checkpoint_inputs/e1d12a8e7d2d111778a6c1832d4bf4819e1929730bedf5921b8cb7930af17c84.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 56,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t056"
+      ],
+      "bytes": 4805,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 1368,
+            "output_tokens": 30000,
+            "cache_read_input_tokens": 896,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 286.1,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2264,
+            "output_tokens": 446,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 7.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "coordinate polynomial reduction via T = A·E_R + B·E_D + H",
+        "wrong_answer_stated": false,
+        "notes": "Coordinate/sine-law setup correctly encodes all three angle conditions, with (1)-(3) derived in detail. But no key circle through A,K,L is identified. The finish is reduced to an unwritten factorization of residual H; Gröbner claim asserted, not executed."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-eb5dc17211c5",
+      "problem": "2",
+      "sha256": "eb5dc17211c56bd6c12af197b480a9a71205325ad395e19ff31f40b686ec0378",
+      "path": "checkpoint_inputs/eb5dc17211c56bd6c12af197b480a9a71205325ad395e19ff31f40b686ec0378.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 61,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t061"
+      ],
+      "bytes": 4769,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 1456,
+            "output_tokens": 30000,
+            "cache_read_input_tokens": 832,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 268.3,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1712,
+            "output_tokens": 765,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 12.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "algebraic certificate reducing target identity to constraints (unexecuted verification)",
+        "wrong_answer_stated": false,
+        "notes": "Sine-law translation of all three angle conditions into E_R=E_D=0 and coordinates (II) is written out. However the key circle insight is absent, and the finish rests on certificate (IV) whose verification script has not been run ('after final sign/scaling verification'), so the final step is only reduced to an unexecuted computation."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-088f590da6f5",
+      "problem": "2",
+      "sha256": "088f590da6f5c49d4cfb2725ddded1a12cfb095c95d65ef423fe73abe0f1fa1f",
+      "path": "checkpoint_inputs/088f590da6f5c49d4cfb2725ddded1a12cfb095c95d65ef423fe73abe0f1fa1f.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 66,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t066"
+      ],
+      "bytes": 7207,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2811,
+            "output_tokens": 16713,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 174.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "polynomial-identity certificate (23) for circle coefficients; expansion asserted, not executed",
+        "upper_bound_mechanism": "linear relation (24) on circumcircle coefficients yields OM^2-ON^2=0 directly",
+        "wrong_answer_stated": false,
+        "notes": "Sine-law derivation of (1)-(14) encodes all three angle conditions and checks out, as do coordinates (16)-(18) and Cramer step. Finish from (24) to OM=ON is fully executed with sign justifications. Crux identity (23) is displayed with explicit multipliers but its verification is left as an unexecuted expansion, so key-circle content is only a certificate, not a carried-out argument."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-4c4c04156f99",
+      "problem": "2",
+      "sha256": "4c4c04156f995a9a4c2f01d42c1eb7f6d39c54815446bbea397cbe05e3ee325e",
+      "path": "checkpoint_inputs/4c4c04156f995a9a4c2f01d42c1eb7f6d39c54815446bbea397cbe05e3ee325e.md",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 71,
+      "record_ids": [
+        "p2-gpt-5.6-sol-max-main-t071"
+      ],
+      "bytes": 6502,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2578,
+            "output_tokens": 19004,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 194.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Cramer-rule circumcircle coefficients; core identity (22) asserted with explicit certificate but expansion not executed (script-checked)",
+        "upper_bound_mechanism": "coordinate finish: OM^2-ON^2 linear in P,Q, killed by (23)",
+        "wrong_answer_stated": false,
+        "notes": "All three angle conditions are correctly encoded via sine law into (13) (steps verified independently). The finish from (23) to OM=ON is fully written with sign/positivity handled. However, the core polynomial identity (22) is displayed with certificate but its expansion is delegated to a script, so the key circle/power relation is reduced to an unexecuted computation."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-1347d4299caa",
+      "problem": "2",
+      "sha256": "1347d4299caa99f91c14adb456352c4d80a45f52b9a6d27e319e7aac6dee028a",
+      "path": "checkpoint_inputs/1347d4299caa99f91c14adb456352c4d80a45f52b9a6d27e319e7aac6dee028a.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 1,
+      "record_ids": [
+        "p2-gpt-5.6-sol-pro-main-t001"
+      ],
+      "bytes": 1111,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 272,
+            "output_tokens": 1601,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 20.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Self-declared unsolved tracking file. Only real content: parameters p,q,r named and a correct coordinate reformulation of the target (O·(c−b)=(|c|²−|b|²)/4) with circumcentre conditions. The three angle hypotheses are never encoded—no concyclicities, no equations for K,L. No key circle, no finish; no false lemmas."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-599287c3773b",
+      "problem": "2",
+      "sha256": "599287c3773b853f849c03d42aa7a8183853df8d9ecfa784377b5484c6cab59f",
+      "path": "checkpoint_inputs/599287c3773b853f849c03d42aa7a8183853df8d9ecfa784377b5484c6cab59f.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 6,
+      "record_ids": [
+        "p2-gpt-5.6-sol-pro-main-t006"
+      ],
+      "bytes": 3728,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1239,
+            "output_tokens": 10657,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 104.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "powers of M,N w.r.t. (AKL) via second intersections D,E; reduced to unexecuted trig identity",
+        "wrong_answer_stated": false,
+        "notes": "All three angle hypotheses are correctly encoded via sine rule (cot relations and eq. (1) check out). OM=ON is soundly reduced, via the circle equation/powers of M and N with directed lengths, to trig identity (6), which is admitted unproved. No key circle through A containing K,L is identified or proved. No false claims."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-91c3dd3f570c",
+      "problem": "2",
+      "sha256": "91c3dd3f570cbe4663adebe41ff36aff4b040f07d2ce998122ccf823e9ae3560",
+      "path": "checkpoint_inputs/91c3dd3f570cbe4663adebe41ff36aff4b040f07d2ce998122ccf823e9ae3560.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 11,
+      "record_ids": [
+        "p2-gpt-5.6-sol-pro-main-t011"
+      ],
+      "bytes": 4259,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1153,
+            "output_tokens": 10388,
+            "cache_read_input_tokens": 896,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 98.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "d,e projection (power) reduction to unproven trig identity (6)",
+        "wrong_answer_stated": false,
+        "notes": "Sine-rule parametrization genuinely encodes all three angle conditions; derivations of cot relations, (1), (C), (3), (4), (5) check out. OM=ON correctly reduced via circumcircle projections d,e to identity (6), but (6) is admitted unproven. Only the trivial circumcircle of AKL is used; no nontrivial key circle proved. Honest partial."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-b62914cc486d",
+      "problem": "2",
+      "sha256": "b62914cc486d8d1f93963b28191685878757b2ba601219a958ad21079da6be55",
+      "path": "checkpoint_inputs/b62914cc486d8d1f93963b28191685878757b2ba601219a958ad21079da6be55.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 16,
+      "record_ids": [
+        "p2-gpt-5.6-sol-pro-main-t016"
+      ],
+      "bytes": 4716,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1522,
+            "output_tokens": 7434,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 76.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "circumcircle second intersections D,E; OM=ON ⟺ cd−be=(c²−b²)/2, reduced to unproved trig identity (T)",
+        "wrong_answer_stated": false,
+        "notes": "Honest partial. All three angle conditions and midpoints fully encoded via sine rule into (A),(B),(C); chain OM=ON ⟺ (T) written out correctly (verified). No key circle through A containing K,L beyond the circumcircle by definition. Final identity (T) explicitly left unproved by the author; numerics supportive only."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-1d951116019b",
+      "problem": "2",
+      "sha256": "1d951116019b881bbd8dfcc9511692b4743059868a4d44f1ad574ace1abbc9b6",
+      "path": "checkpoint_inputs/1d951116019b881bbd8dfcc9511692b4743059868a4d44f1ad574ace1abbc9b6.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 22,
+      "record_ids": [
+        "p2-gpt-5.6-sol-pro-main-t022"
+      ],
+      "bytes": 4890,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1401,
+            "output_tokens": 12225,
+            "cache_read_input_tokens": 832,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 121.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "trig factorization lemma T = λC (numerically verified only)",
+        "wrong_answer_stated": false,
+        "notes": "All three angle hypotheses are genuinely encoded in (A),(B),(1); derivations of (A)-(7), including circle-intersection formulas (3), check out and are written out. But the decisive identity T = λC is only numerically checked and explicitly flagged as lacking hand proof, so the finish is an unexecuted computation. No auxiliary key circle: circumcircle of AKL used trivially."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-829c31b9b8bb",
+      "problem": "2",
+      "sha256": "829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b",
+      "path": "checkpoint_inputs/829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 28,
+      "record_ids": [
+        "p2-gpt-5.6-sol-pro-main-t028"
+      ],
+      "bytes": 4768,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "max_tokens",
+          "usage": {
+            "input_tokens": 1496,
+            "output_tokens": 30000,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 274.5,
+          "parsed": false
+        },
+        {
+          "attempt": 1,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2264,
+            "output_tokens": 558,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 9.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "circumcircle of AKL with second intersections D,E on AB,AC",
+        "upper_bound_mechanism": "algebraic equivalence OM=ON ⇔ cd−be=(c²−b²)/2, reduced to trig identity",
+        "wrong_answer_stated": false,
+        "notes": "All three angle conditions are genuinely encoded via sine-rule relations (A),(B),(1). Equivalence (2),(3) is derived, but the crucial factorization (F) and identity (8) are admitted gaps ('remains to be inserted'), so the finish is incomplete: a correct reduction to an unexecuted computation."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-5cdcc1266913",
+      "problem": "2",
+      "sha256": "5cdcc1266913c18480480bc73e3cb4ce33f42df0c721464952beb3566d34e22d",
+      "path": "checkpoint_inputs/5cdcc1266913c18480480bc73e3cb4ce33f42df0c721464952beb3566d34e22d.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 33,
+      "record_ids": [
+        "p2-gpt-5.6-sol-pro-main-t033"
+      ],
+      "bytes": 4695,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1719,
+            "output_tokens": 10630,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 110.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "circumcircle (AKL) meets AB,AC at D,E; OM=ON ⟺ cd−be=(c²−b²)/2; trig factorization T=sin(x−y)·(C residual) reduces to unexecuted identity (9)",
+        "wrong_answer_stated": false,
+        "notes": "Sine-rule encoding of all three angle conditions ((A'),(B'),(C)) is written out: reduction 2. Equivalence OM=ON ⟺ (2) via circle intersections D,E is correct and derived; factorization (F) is proven only for variable harmonics—constant term reduces to identity (9), numerically checked but unproven, so finish incomplete (upper_bound 1). No key circle through A with proved K,L membership: lower_bound 0."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-af4801711663",
+      "problem": "2",
+      "sha256": "af48017116631ef46e97e8c9579b4f775826b893475baa3f3ea1b7ab1e11c5b6",
+      "path": "checkpoint_inputs/af48017116631ef46e97e8c9579b4f775826b893475baa3f3ea1b7ab1e11c5b6.md",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 38,
+      "record_ids": [
+        "p2-gpt-5.6-sol-pro-main-t038"
+      ],
+      "bytes": 5861,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1936,
+            "output_tokens": 26891,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 244.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N w.r.t. circumcircle of AKL via directed second intersections D,E",
+        "wrong_answer_stated": false,
+        "notes": "Complete trigonometric proof. Sine-rule relations (1)-(2) encode all three angle conditions and both midpoints; OM=ON reduced to directed power identity cd-be=(c^2-b^2)/2, then proven via factorization T=sin(x-y)·compatibility residual with coefficient checks written out. No independently identified key circle through A,K,L (K is absent); finish (equal powers, directed lengths) fully executed."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-526071808bff",
+      "problem": "2",
+      "sha256": "526071808bff1b8a4d3b34a4d9380765958346807dcd93850d8d36034349c5aa",
+      "path": "checkpoint_inputs/526071808bff1b8a4d3b34a4d9380765958346807dcd93850d8d36034349c5aa.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 1,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t001"
+      ],
+      "bytes": 859,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 84,
+            "output_tokens": 2386,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 27.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file with no proof. Goal OM=ON restated and correctly reformulated (O on perpendicular bisector of MN, MN∥BC), but strategy only 'should admit a coordinate reformulation'. No translation of angle conditions into concyclicities/coordinates, no key circle through A,K,L, no finish. 'Approaches tried' names generic methods with no content."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-8a926d18aa5e",
+      "problem": "2",
+      "sha256": "8a926d18aa5ea5f2a16cc21b0c12ec99060ed90d412f3f42724236fdad4022f5",
+      "path": "checkpoint_inputs/8a926d18aa5ea5f2a16cc21b0c12ec99060ed90d412f3f42724236fdad4022f5.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 6,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t006"
+      ],
+      "bytes": 2561,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 596,
+            "output_tokens": 8629,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 89.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N w.r.t. (AKL); symbolic elimination asserted, not executed",
+        "wrong_answer_stated": false,
+        "notes": "Goal and strategy explicit and correct: OM=ON iff equal powers of M,N to (AKL), with verified-correct tangent coordinates for K,L encoding the angle conditions at A,B,M,C,N. But F,G are never displayed, the key H-factorization is only claimed via symbolic check, no key circle through A,K,L is identified, and the finish is unexecuted."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-7f0471d6656d",
+      "problem": "2",
+      "sha256": "7f0471d6656d9376c5db07d5370c46aa2c70c9ec700ac7de86b41c05fc926eb1",
+      "path": "checkpoint_inputs/7f0471d6656d9376c5db07d5370c46aa2c70c9ec700ac7de86b41c05fc926eb1.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 11,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t011"
+      ],
+      "bytes": 3187,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 809,
+            "output_tokens": 9893,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 107.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "unexecuted complex identity for equal powers of M,N w.r.t. (AKL)",
+        "wrong_answer_stated": false,
+        "notes": "Complex angle-parameter setup with explicit sine-law formulas for k,l and the reality condition r∈ℝ genuinely encodes all three angle hypotheses (ray/orientation signs left open). No key circle through A,K,L is identified or proved. OM=ON is only reduced to an unexecuted factorization, supported by SymPy/numerical evidence. No false intermediate claims."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-71e1ad802f8a",
+      "problem": "2",
+      "sha256": "71e1ad802f8ab54a85c2a419cf23ad97a53b9ade801bf6808e4139442186c116",
+      "path": "checkpoint_inputs/71e1ad802f8ab54a85c2a419cf23ad97a53b9ade801bf6808e4139442186c116.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 16,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t016"
+      ],
+      "bytes": 3322,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 812,
+            "output_tokens": 10599,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 114.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N to circle (AKL)",
+        "wrong_answer_stated": false,
+        "notes": "Sine-law complex setup (k, l formulas, l=2−te^{-i(x+y)}, r real) correctly and explicitly encodes all three angle conditions. But the central identity target=R·(r−r̄) is only computer-asserted with R not presented; no key circle or equivalent proved; equal-power finish reduced to an unexecuted computation; angle-range/sign handling deferred."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-9a5214101452",
+      "problem": "2",
+      "sha256": "9a52141014522913ba62567f2188e98d98b562459e43c1607cb0cfa684deb9ab",
+      "path": "checkpoint_inputs/9a52141014522913ba62567f2188e98d98b562459e43c1607cb0cfa684deb9ab.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 21,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t021"
+      ],
+      "bytes": 2961,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 774,
+            "output_tokens": 11923,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 136.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal powers of M,N via determinant identity (CAS-asserted, unproved)",
+        "wrong_answer_stated": false,
+        "notes": "Tangent parametrization of K, L, lambda and incidence Q correctly encodes all three angle hypotheses (formulas check out). Core boxed identity D = cQ is only computer-asserted; write-up itself flags it as needing a hand proof and right-angle cases as open. No key circle mechanism. Finish (equal powers to OM = ON) written but conditional."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-39cf7712ee2a",
+      "problem": "2",
+      "sha256": "39cf7712ee2a14582f0ab955e513a22773f996ced8465fa017d39f1bf398a205",
+      "path": "checkpoint_inputs/39cf7712ee2a14582f0ab955e513a22773f996ced8465fa017d39f1bf398a205.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 26,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t026"
+      ],
+      "bytes": 2994,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 739,
+            "output_tokens": 13353,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 151.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "determinant identity D = c·Q (computer-checked, hand proof admitted open)",
+        "upper_bound_mechanism": "equal powers of M and N w.r.t. circumcircle (AKL)",
+        "wrong_answer_stated": false,
+        "notes": "Correct analytic strategy: tangent coordinates encoding all three angle conditions (K from BK/MK, L from BL plus λN from LNC, Q from LCK), determinant D equivalent to equal powers, then OM=ON. But K/L derivations, sine-law and CK-incidence steps are asserted; boxed identity only symbolically checked, exceptional tangent cases unhandled; finish conditional."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-38dd9ba75e4e",
+      "problem": "2",
+      "sha256": "38dd9ba75e4ed03676f68723ce36a310167cfa1ad758a0d1fdcfc21dbe097459",
+      "path": "checkpoint_inputs/38dd9ba75e4ed03676f68723ce36a310167cfa1ad758a0d1fdcfc21dbe097459.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 31,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t031"
+      ],
+      "bytes": 2968,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 741,
+            "output_tokens": 14775,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 165.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "equal-power determinant D = c·Q, identity asserted not proved",
+        "wrong_answer_stated": false,
+        "notes": "Status report, not finished proof. Trig-coordinate setup is explicit and correctly encodes all three angle conditions (sine-law K, L; Q=0 for CK direction), though L formula is garbled. Central boxed identity D=c·Q only claimed 'verified', no written proof. No key circle mechanism. Finish D=0 implying equal powers hence OM=ON is sketched but contingent on unexecuted computation."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e7f36f71794b",
+      "problem": "2",
+      "sha256": "e7f36f71794b302b59dec32af063cd2094adb32723cff20faea67f5ca9795a0f",
+      "path": "checkpoint_inputs/e7f36f71794b302b59dec32af063cd2094adb32723cff20faea67f5ca9795a0f.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 36,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t036"
+      ],
+      "bytes": 2928,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 686,
+            "output_tokens": 24525,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 279.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "power-determinant factorization D=cQ (boxed, asserted)",
+        "upper_bound_mechanism": "equal powers of M,N to circle (AKL)",
+        "wrong_answer_stated": false,
+        "notes": "Sound strategy: prove D=0 (equal powers of M,N to (AKL)) via factorization into the CK-incidence Q. Complex parametrization of K,L,N with angle ranges correctly encodes all three hypotheses. But the crux identity D=cQ is only boxed and 'verified' elsewhere, never executed here; finish 'equal powers give OM=ON' is conditional and asserted. No false claims."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-5e0ec43edbc3",
+      "problem": "2",
+      "sha256": "5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296",
+      "path": "checkpoint_inputs/5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round1",
+      "turn": 41,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round1-t041"
+      ],
+      "bytes": 2685,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 655,
+            "output_tokens": 17471,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 181.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "determinant factorization D = c·Q (stated, numerically verified, proof deferred)",
+        "upper_bound_mechanism": "equality of powers of M and N w.r.t. (0KL) via D = 0 (asserted)",
+        "wrong_answer_stated": false,
+        "notes": "Complex setup with A=0,B=2,M=1 is explicit and genuinely encodes all three angle conditions (Q=0 = third condition); strategy 'equal powers ⇒ OM=ON' is correct. But the boxed identity D=cQ is only verified symbolically/numerically, proof admitted as an unexecuted computation, and the power-determinant identification is asserted, not derived."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-d24eb433ad81",
+      "problem": "2",
+      "sha256": "d24eb433ad814a5eec3b1f224fa75dd8a61a9102622e2c20a6de8ff3a17dc423",
+      "path": "checkpoint_inputs/d24eb433ad814a5eec3b1f224fa75dd8a61a9102622e2c20a6de8ff3a17dc423.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round2",
+      "turn": 5,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round2-t005"
+      ],
+      "bytes": 5597,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1684,
+            "output_tokens": 14033,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 152.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "determinant factorization D = c·Q (stated, unverified)",
+        "upper_bound_mechanism": "equal powers of M, N via 3x3 determinant",
+        "wrong_answer_stated": false,
+        "notes": "Complex setup rigorously encodes all three angle conditions (Eqs 2-5 with orientation checks), so translation is complete. Finish D=0 => equal powers of M,N => OM=ON is fully and correctly written. But the core factorization D = c·Q is precisely stated yet its verification is explicitly left 'to be completed' — reduced to an unexecuted expansion. No key circle; no false claims."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e8412b5d5afe",
+      "problem": "2",
+      "sha256": "e8412b5d5afe103f4663077da0336bcba14d348e2b61ae97060e5d099651fcd2",
+      "path": "checkpoint_inputs/e8412b5d5afe103f4663077da0336bcba14d348e2b61ae97060e5d099651fcd2.md",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-round2",
+      "turn": 10,
+      "record_ids": [
+        "p2-gpt-5.6-sol-xhigh-round2-t010"
+      ],
+      "bytes": 6622,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2352,
+            "output_tokens": 10514,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 131.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "determinant factorization D = c·Q (stated, verification unexecuted)",
+        "upper_bound_mechanism": "equal powers of M and N via 3x3 determinant",
+        "wrong_answer_stated": false,
+        "notes": "Complex setup (2)-(5) correctly and completely encodes all three angle hypotheses with orientations; the finish (D=0 implies equal powers of M,N, hence OM=ON) is fully written. The central factorization lemma (6) is explicitly stated and reduced to tangent coordinates (10)-(11), but the final coefficient comparison is admittedly left unexecuted, so the key step is unproved."
+      },
+      "S": 1,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-2808cf1a29f0",
+      "problem": "2",
+      "sha256": "2808cf1a29f0a5f23ce65831df61f606d0fcae706c0a53fa6a1956f772dfb4a8",
+      "path": "checkpoint_inputs/2808cf1a29f0a5f23ce65831df61f606d0fcae706c0a53fa6a1956f772dfb4a8.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": "212c6c54",
+      "turn": 1,
+      "record_ids": [
+        "p2-gpt56-212c6c54-v1"
+      ],
+      "bytes": 808,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 215,
+            "output_tokens": 858,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 9.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Only a trivial correct coordinate reformulation of OM=ON via midpoint coordinates; the 'strategy' is a vague intention. No translation of the three angle hypotheses, no key circle through A,K,L, no finish; all substantive steps are explicitly listed as open work."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-4ed2348c5f6d",
+      "problem": "2",
+      "sha256": "4ed2348c5f6d91bfe88beff330c24997f02a510d997b994453a82c781fa1bb69",
+      "path": "checkpoint_inputs/4ed2348c5f6d91bfe88beff330c24997f02a510d997b994453a82c781fa1bb69.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": "d8fdf9d1",
+      "turn": 1,
+      "record_ids": [
+        "p2-gpt56-d8fdf9d1-v1"
+      ],
+      "bytes": 6986,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2258,
+            "output_tokens": 10442,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 110.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "power of a point / radical axis of (BLN), (CKM) against circle with diameter AZ (Z centre of (BCEF))",
+        "upper_bound_mechanism": "O is midpoint of AZ; midpoint vectors give OM=ZB/2, ON=ZC/2, and ZB=ZC",
+        "wrong_answer_stated": false,
+        "notes": "Complete, correct proof. E=BK∩AC, F=CL∩AB; (BCEF) concyclic, E∈(BLN), F∈(CKM) proved with directed angles, including E=N, F=M tangent multiplicity cases. Circle Ω with diameter AZ proved to contain K and L via signed power/radical-axis comparisons; O midpoint of AZ gives OM=ON from ZB=ZC. Numerical audit explicitly unused."
+      },
+      "S": 2,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-eb189909d1bd",
+      "problem": "2",
+      "sha256": "eb189909d1bd39a515f56d6d78bba66b0a9e7d7a2b4334ebde0a4c8de6b02845",
+      "path": "checkpoint_inputs/eb189909d1bd39a515f56d6d78bba66b0a9e7d7a2b4334ebde0a4c8de6b02845.md",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": "d8fdf9d1",
+      "turn": 2,
+      "record_ids": [
+        "p2-gpt56-d8fdf9d1-v2"
+      ],
+      "bytes": 6393,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2177,
+            "output_tokens": 16367,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 178.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "circle with diameter AZ (Z centre of (BCEF)); K,L membership proved by power-of-a-point equalities at C,F and B,E, then radical axes CF and BE",
+        "upper_bound_mechanism": "O = midpoint of AZ; midline theorem gives OM = ZB/2, ON = ZC/2, equal as radii of (BCEF)",
+        "wrong_answer_stated": false,
+        "notes": "Complete and rigorous. Directed-angle translations of all three hypotheses into concyclicity of B,C,E,F; E on (BLN) and F on (CKM), including tangent degenerate cases E=N, F=M. Midpoints F',E' via power of A. K,L on circle with diameter AZ proved via explicit power equalities (8),(9),(11),(12) and radical axes, with signs/orders handled. Finish via midlines."
+      },
+      "S": 2,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-8f1d67f58d5c",
+      "problem": "2",
+      "sha256": "8f1d67f58d5ccf092a255eb99e87b79829e4ef0ebfdc849e1b7b5080dd6bcaed",
+      "path": "checkpoint_inputs/8f1d67f58d5ccf092a255eb99e87b79829e4ef0ebfdc849e1b7b5080dd6bcaed.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 8,
+      "record_ids": [
+        "p2-grok-4.5-main-t008"
+      ],
+      "bytes": 1525,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 434,
+            "output_tokens": 1659,
+            "cache_read_input_tokens": 640,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 18.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Partial tracking file. Only substantive content: correct angle unpacking (since M∈AB, N∈AC, triangles BMK and CNL have angles (α,γ) and (α,β)) sketching a parametrization; nothing executed. Numerics confirm OM=ON but no concyclicity translation, no key circle through A,K,L, no finish. Similarity claim left as a question, not a false lemma."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-6041cbc41a2a",
+      "problem": "2",
+      "sha256": "6041cbc41a2aabe5ea3464220fe7db40d13e71fca3874d96aa57888b8e55cefe",
+      "path": "checkpoint_inputs/6041cbc41a2aabe5ea3464220fe7db40d13e71fca3874d96aa57888b8e55cefe.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 15,
+      "record_ids": [
+        "p2-grok-4.5-main-t015"
+      ],
+      "bytes": 1746,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 501,
+            "output_tokens": 1722,
+            "cache_read_input_tokens": 640,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 18.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file, not a proof. Goal is correctly restated and reformulated with A at origin (OM=ON ⇔ O·(C−B)=(|C|²−|B|²)/4; O·K=|K|²/2), and the three angle equalities are unpacked into triangle angle data — but only as a sketch. No concyclicity derived, no key circle through A,K,L identified, no derivation of OM=ON beyond numerics; planned sympy computation unexecuted."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-0d0ef914fd70",
+      "problem": "2",
+      "sha256": "0d0ef914fd70f4abd5543f6ed619daa6c20052adec0a5fb01434bdaf36e10700",
+      "path": "checkpoint_inputs/0d0ef914fd70f4abd5543f6ed619daa6c20052adec0a5fb01434bdaf36e10700.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 20,
+      "record_ids": [
+        "p2-grok-4.5-main-t020"
+      ],
+      "bytes": 1723,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 503,
+            "output_tokens": 2477,
+            "cache_read_input_tokens": 640,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 29.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only: numeric confirmation, angle labels α,β,γ with triangle angle sums, and a correct vector reformulation of OM=ON as an explicitly open algebraic identity. No concyclicity translation executed, no key circle through A,K,L, no finish; coordinate/spiral-similarity attacks merely named as future work."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-9b04373c89a4",
+      "problem": "2",
+      "sha256": "9b04373c89a4341191091306c8c541cc7bb7a57854e8263019c96e192ec0c744",
+      "path": "checkpoint_inputs/9b04373c89a4341191091306c8c541cc7bb7a57854e8263019c96e192ec0c744.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 29,
+      "record_ids": [
+        "p2-grok-4.5-main-t029"
+      ],
+      "bytes": 3325,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 821,
+            "output_tokens": 1995,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 26.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only: numeric verification, α/β/γ parametrization of hypotheses (sketched, not executed), correct algebraic reformulation of the goal, and isosceles special case by symmetry. No concyclicity translation carried out, no key circle through A,K,L, no finish; full proof explicitly 'not yet written'."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-cf72f5fa0caa",
+      "problem": "2",
+      "sha256": "cf72f5fa0caa503ea74f4dbae6be4b6972b120d9bd7a4f96d66434d52054a584",
+      "path": "checkpoint_inputs/cf72f5fa0caa503ea74f4dbae6be4b6972b120d9bd7a4f96d66434d52054a584.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 34,
+      "record_ids": [
+        "p2-grok-4.5-main-t034"
+      ],
+      "bytes": 2023,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 554,
+            "output_tokens": 4002,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 43.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Correct angle data for △BMK/△CNL and correct coordinate form of OM=ON, but general proof admitted open. Trig/coordinate reduction only sketched ('two trig equations' never written/executed); no key circle through A,K,L identified; no finish. Numeric check and isosceles case are not proofs; spiral-similarity remark is speculative."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-2bf531e0e103",
+      "problem": "2",
+      "sha256": "2bf531e0e103e793697a105da0bab234b3708d06bcaa153e97f7fac8bd0b30ec",
+      "path": "checkpoint_inputs/2bf531e0e103e793697a105da0bab234b3708d06bcaa153e97f7fac8bd0b30ec.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 39,
+      "record_ids": [
+        "p2-grok-4.5-main-t039"
+      ],
+      "bytes": 1981,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 484,
+            "output_tokens": 3628,
+            "cache_read_input_tokens": 768,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 37.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only. Correct angle bookkeeping (α,β,γ; triangle angle sums; spiral-similarity ratios; BL/CK directions) and a correct vector reformulation of OM=ON, plus numeric check and isosceles sketch. No concyclicity translation executed, no circle through A,K,L identified, no finish; strategies only 'hoped for'."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-6b73d7c67751",
+      "problem": "2",
+      "sha256": "6b73d7c67751ee401f95142c17e19868c4549089f2be50a1aa6c135430e92165",
+      "path": "checkpoint_inputs/6b73d7c67751ee401f95142c17e19868c4549089f2be50a1aa6c135430e92165.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 44,
+      "record_ids": [
+        "p2-grok-4.5-main-t044"
+      ],
+      "bytes": 1248,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 439,
+            "output_tokens": 3774,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 43.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file, not a proof. Correct angle bookkeeping (△BMK, △CNL), sine-law spiral ratios, and a correct vector equivalence OM=ON ⇔ O·(C−B)=(|C|²−|B|²)/4. Only numeric evidence and isosceles case; no concyclicity/coordinate translation executed, no key circle through A,K,L, no finish."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-77ef858b4265",
+      "problem": "2",
+      "sha256": "77ef858b426521efa8ca72de51071b0eed3412ce286215479be391ba518376df",
+      "path": "checkpoint_inputs/77ef858b426521efa8ca72de51071b0eed3412ce286215479be391ba518376df.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 49,
+      "record_ids": [
+        "p2-grok-4.5-main-t049"
+      ],
+      "bytes": 3269,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 861,
+            "output_tokens": 3623,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 44.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file, no proof: 'Full proof (not yet)'. Correct angle notation and law-of-sines lengths, correct spiral-similarity observations and a correct linear reformulation of OM = ON, but the hypotheses are never fully encoded (unexecuted sympy attempts). Circle (AKL)/equal-power routes only listed, unproved. Numerics and isosceles symmetry are not creditable; 'Done for isosceles' overclaims since β≠γ solutions exist."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-50c03a4169f3",
+      "problem": "2",
+      "sha256": "50c03a4169f3a2df4535adeab33c871855139eba660a2a636d1c7cc9fdcc961b",
+      "path": "checkpoint_inputs/50c03a4169f3a2df4535adeab33c871855139eba660a2a636d1c7cc9fdcc961b.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 54,
+      "record_ids": [
+        "p2-grok-4.5-main-t054"
+      ],
+      "bytes": 1455,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 393,
+            "output_tokens": 2307,
+            "cache_read_input_tokens": 640,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 24.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file, not a proof. Goal OM=ON restated; strategy only vague ('implement complex form, check identity'). Complex parameterization K=B(1-(k/2)u) plus 'impose arg conditions' is an unexecuted sketch encoding hypotheses partially. Only numeric scipy check and isosceles special case; no key circle, no finish, full proof '(not yet)'."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-6116b44193ce",
+      "problem": "2",
+      "sha256": "6116b44193ce8b2e0a6f6a6e078aa85b54a1b4cb5aedab522d455b72b286f7a9",
+      "path": "checkpoint_inputs/6116b44193ce8b2e0a6f6a6e078aa85b54a1b4cb5aedab522d455b72b286f7a9.md",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 59,
+      "record_ids": [
+        "p2-grok-4.5-main-t059"
+      ],
+      "bytes": 907,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 280,
+            "output_tokens": 597,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 7.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file only: garbled problem restatement, numeric verification, isosceles special case, and vague plans (spiral sims/complex coordinates). No angle-to-concyclicity translation, no key circle, no finish; full proof explicitly marked 'not yet'."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-a408a87290a1",
+      "problem": "2",
+      "sha256": "a408a87290a166c3601cd0ed6ff94ad277cc104afa68b26659128e3cfaace543",
+      "path": "checkpoint_inputs/a408a87290a166c3601cd0ed6ff94ad277cc104afa68b26659128e3cfaace543.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "109446af",
+      "turn": 1,
+      "record_ids": [
+        "p2-nemotron-109446af-v1"
+      ],
+      "bytes": 5767,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2497,
+            "output_tokens": 22928,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 258.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "perpendicular-bisector via homothety H_{A,2}",
+        "wrong_answer_stated": true,
+        "notes": "No circle through A,K,L is ever produced. Complex translation has a sign error in condition 1 (encodes ∠KBA=−∠ACL; correct is z/((K−1)(L−z))∈ℝ) and conditions 2/3 are swapped; elimination never executed. The 'verified equivalence' (KA=KB, LA=LC ⟹ |O'−1|=|O'−z|) is false as stated. Only Lemma 1 and the homothety/perp-bisector reduction are sound; the cyclic CNK₁K deduction is invalid."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-7853dc79ae72",
+      "problem": "2",
+      "sha256": "7853dc79ae72c878c17df0e5c6336203e1c5683e1fd0972f9d750041847cb497",
+      "path": "checkpoint_inputs/7853dc79ae72c878c17df0e5c6336203e1c5683e1fd0972f9d750041847cb497.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "4e40fa30",
+      "turn": 1,
+      "record_ids": [
+        "p2-nemotron-4e40fa30-v1"
+      ],
+      "bytes": 6012,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2105,
+            "output_tokens": 18009,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 196.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Core Lemma 1 (S(K)∈CL) is false: in the write-up's own numeric configuration S(K) lies on the reflection of CL across CA (angles land on opposite sides), so Lemma 2 and Section 3 collapse; 'L1CK1N cyclic' is unjustified. No circle through A,K,L identified; finish left open (Section 6). Only sound step: OM=ON ⟺ O' on perpendicular bisector of BC."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-e4d71b5877f7",
+      "problem": "2",
+      "sha256": "e4d71b5877f7d8ad2c755b157aa5e06bd9d44826e5040b6640f1ef15443a95d9",
+      "path": "checkpoint_inputs/e4d71b5877f7d8ad2c755b157aa5e06bd9d44826e5040b6640f1ef15443a95d9.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "69253a90",
+      "turn": 1,
+      "record_ids": [
+        "p2-nemotron-69253a90-v1"
+      ],
+      "bytes": 6493,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2047,
+            "output_tokens": 10238,
+            "cache_read_input_tokens": 704,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 114.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "homothety O'=2O-A onto perpendicular bisector of BC (correct equivalence, finish only sketched)",
+        "wrong_answer_stated": true,
+        "notes": "Lemma 1 (S(K) on CL) is false: with the write-up's own coordinates S(K)=(0.329,2.220) is off line CL (rays S(BK) and CL lie on opposite sides of CA), so Lemmas 2-3 and the Section-3 cyclicity claims collapse. No key circle through A,K,L is produced; the finish is unexecuted; numeric check is not proof."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-2eb2ec5daa54",
+      "problem": "2",
+      "sha256": "2eb2ec5daa544ad4ab27109d392f176d185e7e879b3151f73e0d088d84ed5226",
+      "path": "checkpoint_inputs/2eb2ec5daa544ad4ab27109d392f176d185e7e879b3151f73e0d088d84ed5226.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "80085a35",
+      "turn": 1,
+      "record_ids": [
+        "p2-nemotron-80085a35-v1"
+      ],
+      "bytes": 4975,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 1636,
+            "output_tokens": 9580,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 102.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "complex-number computation, unexecuted",
+        "wrong_answer_stated": true,
+        "notes": "Complex setup correctly encodes all three angle conditions as reality conditions (minor factor-2 slip in OM=ON equivalence). But the decisive algebra is left as 'a direct lengthy computation'; spiral similarities S_L, S_K are conjectural ('if fully realized'), the inference OK=OM from a spiral ratio is false, and the Step 3 angle chase contains literal dots. No key circle through A,K,L is proved; no valid finish."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-7022b811ec74",
+      "problem": "2",
+      "sha256": "7022b811ec7499899e40ad37908f298d39b162dabff8e2cb6b7353e1ddf88748",
+      "path": "checkpoint_inputs/7022b811ec7499899e40ad37908f298d39b162dabff8e2cb6b7353e1ddf88748.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "9c3c93da",
+      "turn": 1,
+      "record_ids": [
+        "p2-nemotron-9c3c93da-v1"
+      ],
+      "bytes": 7237,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2460,
+            "output_tokens": 17356,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 192.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "homothety H(A,2) reduces OM=ON to O' on perpendicular bisector of BC; O'B=O'C only asserted via unexecuted complex computation",
+        "wrong_answer_stated": true,
+        "notes": "Core mechanism fails: S(ray BK) lies on the opposite side of CA from L, so Lemma 1 (S(K) on CL) is false. Concyclicity of C,N,K1,K uses angle at wrong vertex; CK=KK1 misderived; perpendicularities KA=KB, LA=LC only sketched; final complex implication asserted (in fact false). No key circle through A,K,L."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p2-h-ec1ad94b7a34",
+      "problem": "2",
+      "sha256": "ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a",
+      "path": "checkpoint_inputs/ec1ad94b7a342988bad04519b0efe82f5a82f887c8e46784f835ec0d4a2ca62a.md",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "9c3c93da",
+      "turn": 2,
+      "record_ids": [
+        "p2-nemotron-9c3c93da-v2"
+      ],
+      "bytes": 17780,
+      "annotator": "glm-5.3",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 6446,
+            "output_tokens": 14541,
+            "cache_read_input_tokens": 576,
+            "server_tool_use": {
+              "web_search_requests": 0
+            },
+            "service_tier": "standard"
+          },
+          "sec": 154.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Complex translations of all three angle conditions are correct, so reduction earns credit. But the core is asserted and false: the claimed factorization (2x-1)Q=0 fails (e.g. z=i, k=1/2+i/4), 'one checks Q≠0' is unexecuted, and the final implication Re(k)=1/2, Re(lz̄)=|z|²/2 ⇒ O'B=O'C is false (counterexample k=1/2+i, l=1/2+i/2 gives OM≠ON). Synthetic attempts (Claim 1, Lemma 4) visibly collapse; no key circle through A,K,L is proved; no valid finish."
+      },
+      "S": 0,
+      "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+      "path_base": "bundle root"
+    }
+  ]
+}

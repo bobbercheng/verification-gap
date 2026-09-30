@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-5749fe90f16d",
+  "problem": "6",
+  "sha256": "5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f",
+  "path": "checkpoint_inputs/5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "fb285ec4",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-fb285ec4-v1"
+  ],
+  "bytes": 8151,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5214,
+        "output_tokens": 957,
+        "output_tokens_details": {
+          "thinking_tokens": 708
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 957,
+            "cache_read_input_tokens": 5214,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 14.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 1,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "'essential primes' (infinitely-often primes) with hand-waved divergence/hitting-set-size argument",
+    "upper_bound_mechanism": "none (pigeonhole on prime-set tuples, then 'one can verify')",
+    "wrong_answer_stated": true,
+    "notes": "L = product of essential primes is roughly right, but Step 3's claim a_{n+1}=a_n+L eventually is false and contradicted by the author's own example (T=8, L=30). No characterization of membership, no rigorous finiteness lemma, and Step 4 is self-admittedly confused, ending in assertion."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

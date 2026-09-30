@@ -1,0 +1,2327 @@
+{
+  "annotator": "claude-opus-5",
+  "items": [
+    {
+      "id": "p5-claude-fable-5-main-t005",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": "claude-fable-5-main",
+      "turn": 5,
+      "path": "checkpoint_inputs_ext/c3411aff6e4a1f388b139a71a10d0ecc29dc2bf797b10dececb7017b3eb989de.md",
+      "bytes": 9276,
+      "sha256": "c3411aff6e4a1f388b139a71a10d0ecc29dc2bf797b10dececb7017b3eb989de",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 7650,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 2276,
+            "output_tokens_details": {
+              "thinking_tokens": 1953
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 7650,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2276,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 7650,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 7650
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 25.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM on u=x, v=y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "orbit AP + asymptotic sandwich d-d^2/4x <= g(x) <= d+d^2/(16x-4d), all positive gaps equal, then downward bootstrap x=y+d",
+        "wrong_answer_stated": false,
+        "notes": "Substitution x=f(y) gives the identity; positivity of orbits gives f(y)>=y. Sandwich estimates (E1),(E2) verified correct; Step 5 shows gaps stay positive on a half-line, Step 6 propagates downward to all x>0, so mixed fixed/non-fixed case is excluded. Sufficiency fully proved. Minor clumsy algebra in the upper-bound constant only."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-claude-fable-5-final",
+      "lineage": "deedy-claude-fable-5",
+      "model": "claude-fable-5",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/4d5351b57f712cf818b8c85b9a478da4c5b3c272c888bb884c957e4336745387.md",
+      "bytes": 9430,
+      "sha256": "4d5351b57f712cf818b8c85b9a478da4c5b3c272c888bb884c957e4336745387",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 7728,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 1663,
+            "output_tokens_details": {
+              "thinking_tokens": 1365
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 7728,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1663,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 7728,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 7728
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to u=x, v=y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "Orbit AP from f(f(y))=2f(y)-y + two-sided asymptotic sandwich (7) forcing all positive gaps equal and g>0 on a half-line, then downward bootstrap x=y+d",
+        "wrong_answer_stated": false,
+        "notes": "All obligations met: identity f(f(y))=2f(y)-y with d>=0; full sufficiency check; sandwich estimates (E1),(E2) verified correctly; Step 5 excludes fixed points beyond T, so mixed case handled; bootstrap induction covers all x>0; identity case c=0 addressed."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deepseek-v4-pro-main-t018",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 18,
+      "path": "checkpoint_inputs_ext/7bb0208a2a47625fef4bc4cf1687078b211f2f7b3672f7356fe53a84ca063f37.md",
+      "bytes": 19522,
+      "sha256": "a58cd6bf922671b83f5fbfd0c227c824b54e538e8621564f50c4876a7738d23f",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 13869,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 2053,
+            "output_tokens_details": {
+              "thinking_tokens": 1772
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 13869,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2053,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 13869,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 13869
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 26.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 2,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "QM-AM and AM-GM applied to the numbers x and y+c, plus c>=0 from positivity",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Answer family stated correctly. Sufficiency fully verified for both inequalities and all c>=0. Structural identity only asserted (in the incorrect form f(x+f(x))=2f(x)-x); substitution y=f(x) yields only inequalities f(x)^2>=x f(f(x)) and f(f(x))^2>=2f(x)^2-x^2, never the equality. Necessity absent: text wanders, retracts an f(x)=x error, and halts mid-computation."
+      },
+      "S": 1,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root",
+      "original_sha256": "7bb0208a2a47625fef4bc4cf1687078b211f2f7b3672f7356fe53a84ca063f37",
+      "original_bytes": 19578,
+      "input_anonymized": true
+    },
+    {
+      "id": "p5-deepseek-v4-pro-main-t025",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 25,
+      "path": "checkpoint_inputs_ext/d3725770ef392dcf1c4e6b988e60b5294f18df251b6364cf615e6b1b2c6f3459.md",
+      "bytes": 11440,
+      "sha256": "6542041052c426dc1011edf76fe6753a19b6e9158af2d242292c102e58f9a957",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 9109,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 1308,
+            "output_tokens_details": {
+              "thinking_tokens": 1051
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 9109,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1308,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 9109,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 9109
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Correct answer f(x)=x+c, c>=0 stated; substitution x=f(y) rigorously yields f(f(y))=2f(y)-y (d>=0 not shown). No verification that x+c satisfies both inequalities (only numerical search claimed). Necessity is an unfinished exploration: derives |(a-b)(a+b+2x+2y)|<=(x-y-g(y))^2 but repeatedly says 'not helpful', ends mid-computation with a sympy call; g constant never proved."
+      },
+      "S": 0,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root",
+      "original_sha256": "d3725770ef392dcf1c4e6b988e60b5294f18df251b6364cf615e6b1b2c6f3459",
+      "original_bytes": 11496,
+      "input_anonymized": true
+    },
+    {
+      "id": "p5-deepseek-v4-pro-main-t031",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 31,
+      "path": "checkpoint_inputs_ext/2b4b78de53565f9f364844de381cb628cf595665094bca6804376b0cdc665056.md",
+      "bytes": 7914,
+      "sha256": "2b4b78de53565f9f364844de381cb628cf595665094bca6804376b0cdc665056",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 6564,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 4650,
+            "output_tokens_details": {
+              "thinking_tokens": 4321
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6564,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 4650,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 6564,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 6564
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 61.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "QM-AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "|A-B|<=A+B inequality (7); AP orbits with rational/irrational density to kill two positive differences; separation |x-y|>c plus covering by y0+nc to kill mixed fixed/non-fixed case",
+        "wrong_answer_stated": false,
+        "notes": "Identity f(f(x))=2f(x)-x and g(x+g(x))=g(x) fully derived; sufficiency correct. Necessity has two gaps: negative values of g are never excluded (V⊆{0,c} asserted), and the key backward step 'y>c implies y-c in S_c' uses f^{-1} whose existence/surjectivity is unproved (circular), yet the covering argument depends on y0<=c."
+      },
+      "S": 1,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deepseek-v4-pro-main-t032",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 32,
+      "path": "checkpoint_inputs_ext/e37aef179cf7b21a670f0cf886fa6e262271996c4befb5580325c1d04c66fd3c.md",
+      "bytes": 9029,
+      "sha256": "e37aef179cf7b21a670f0cf886fa6e262271996c4befb5580325c1d04c66fd3c",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 7285,
+            "cache_read_input_tokens": 0,
+            "output_tokens": 5842,
+            "output_tokens_details": {
+              "thinking_tokens": 5497
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 7285,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 5842,
+                "cache_read_input_tokens": 0,
+                "cache_creation_input_tokens": 7285,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 7285
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 72.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "|A-B|<=A+B key inequality + orbit/density argument for unique positive difference + level-set separation |x-y|>c + covering by intervals",
+        "wrong_answer_stated": false,
+        "notes": "Identity f(f(x))=2f(x)-x and g(f(x))=g(x) fully derived; verification complete. Necessity gaps: negative values of g are never excluded (d>=0 unproved), yet V<={0,c} is asserted and used in Lemma 1; and in the rational subcase n=pt,m=qt gives nc1-mc2=(p^2/q-q)tc2, not 0 (needs n=qt,m=pt), so that case fails as written. Mixed/fixed-point case and covering are otherwise rigorous."
+      },
+      "S": 1,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deepseek-v4-pro-main-t033",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 33,
+      "path": "checkpoint_inputs_ext/cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523.md",
+      "bytes": 8326,
+      "sha256": "cd94261ef509029c1c3e87c752af9f4ab0b8846c7ec6c375e51c59c790c3d523",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 5547,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 4500,
+            "output_tokens_details": {
+              "thinking_tokens": 4170
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 5547,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 4500,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 5547,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 5547
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 55.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "orbit arithmetic progressions + inequality |A-B|<=A+B (7): rational/irrational density kills two positive differences; A(y,x)>=0 gives |x-y|>c separation; backward lemma to u in (0,c] plus interval covering empties the fixed-point set",
+        "wrong_answer_stated": false,
+        "notes": "f(f(x))=2f(x)-x derived correctly and orbits shown to be APs, but d(x)=f(x)-x>=0 is never proved; the step 'at most one positive value, hence V subset {0,c}' silently excludes negative g. Otherwise necessity (both distinct-difference and mixed fixed-point cases) and verification are complete and correct."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deepseek-v4-pro-main-t038",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 38,
+      "path": "checkpoint_inputs_ext/98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573.md",
+      "bytes": 8969,
+      "sha256": "98f919cec9ce8b25e96846b2d00edd0ca10307aa56473256a2edafa12aec1573",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 5966,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 6399,
+            "output_tokens_details": {
+              "thinking_tokens": 6045
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 5966,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 6399,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 5966,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 5966
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 80.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "Identity |A-B|<=A+B giving (7); orbit APs + rational/irrational density kill two positive differences; separation |x-y|>c plus covering of (0,inf) by intervals around an orbit kills mixed fixed/non-fixed case",
+        "wrong_answer_stated": false,
+        "notes": "Identity f(f(x))=2f(x)-x and g(x+g(x))=g(x) derived correctly from x=f(y), but d(x)=g(x)>=0 is never proved (orbit x+ng(x)>0 argument missing), so the dichotomy 'V subseteq {0,c}' silently excludes negative differences. Otherwise the two-positive-values elimination, Lemma 1, separation (12) and covering argument are complete and correct; verification is explicit."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deepseek-v4-pro-main-t039",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 39,
+      "path": "checkpoint_inputs_ext/24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931.md",
+      "bytes": 10024,
+      "sha256": "24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 6586,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 3688,
+            "output_tokens_details": {
+              "thinking_tokens": 3338
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6586,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 3688,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 6586,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 6586
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 40.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "Identity |A-B|<=A+B giving (7); orbits + rational/irrational (equidistribution) argument kills two positive differences; separation |x-y|>c between S_0 and S_c, descent lemma to u in (0,c], covering by intervals forces S_0 empty",
+        "wrong_answer_stated": false,
+        "notes": "Derivations verified: A+B=2(x-f(y))^2, A-B=-2(a-b)(a+b+2x+2y) both correct; f(f(y))=2f(y)-y from x=f(y) collapse; g>=0 via orbit; mixed fixed/non-fixed case fully excluded. Only a harmless typo (4cx vs 4cy) in the always-true inequality. Sufficiency verified for all c>=0."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deepseek-v4-pro-main-t043",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": "deepseek-v4-pro-main",
+      "turn": 43,
+      "path": "checkpoint_inputs_ext/24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931.md",
+      "bytes": 10024,
+      "sha256": "24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 7942,
+            "output_tokens": 3348,
+            "output_tokens_details": {
+              "thinking_tokens": 2997
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 3348,
+                "cache_read_input_tokens": 7942,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 36.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "Identities A+B=2(x-f(y))^2, A-B=-2(a-b)(...) giving |g(x)-g(y)|(g(x)+g(y)+2x+2y)<=(x-y-g(y))^2; orbit APs + rational/irrational density kill two positive values; separation |x-y|>c plus backward lemma and interval covering kill fixed points",
+        "wrong_answer_stated": false,
+        "notes": "All steps verified: (3) collapse at x=f(y), g>=0 via orbit, inequality (7) correct, both rational and irrational ratio cases handled, Lemma 1 backward step and covering argument correctly force S_0 empty. Only a harmless typo (4cx vs 4cy in A(x,y)). Verification complete."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-deepseek-v4-pro-final",
+      "lineage": "deedy-deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931.md",
+      "bytes": 10024,
+      "sha256": "24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 7942,
+            "output_tokens": 3442,
+            "output_tokens_details": {
+              "thinking_tokens": 3097
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 3442,
+                "cache_read_input_tokens": 7942,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 37.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to x and y+c, both inequalities, all c>=0",
+        "upper_bound_mechanism": "|A-B|<=A+B inequality (7) + orbit AP density (rational/irrational ratio) excludes two positive differences; level-set separation |x-y|>c plus backward lemma giving u in (0,c] and covering by intervals kills S_0",
+        "wrong_answer_stated": false,
+        "notes": "All obligations met: (S) f(f(x))=2f(x)-x with orbits AP and g>=0; (V) full QM-AM-GM check for all c>=0; (N) uniqueness of positive difference via density argument, plus rigorous exclusion of mixed fixed/non-fixed case via separation and covering. Identities (5)-(8) verified correct; only a harmless typo (4cx vs 4cy) in the always-true A(x,y)."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-gpt-5.6-sol-main-t001",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": "gpt-5.6-sol-main",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1.md",
+      "bytes": 6215,
+      "sha256": "434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4303,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 2142,
+            "output_tokens_details": {
+              "thinking_tokens": 1787
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4303,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2142,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 4303,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4303
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 23.9,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM on x and f(y)=y+c, using f(x)+y=x+f(y); both inequalities, all c>=0",
+        "upper_bound_mechanism": "Symmetrized substitution (x,y)=(f(u),v) & (f(v),u) giving |g(u)-g(v)| <= (sqrt f(u)-sqrt f(v))^2; then strict monotonicity, continuity, and a telescoping mesh argument forcing g constant",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct: iterate identity f(f(y))=2f(y)-y with g>=0 from positivity of orbits; quadratic comparison estimate proved for all u,v; monotonicity/continuity derived, not assumed; fixed points need no separate treatment. Verification of both inequalities included. Only trivial gap: left-limit case f(t)-J>0 unstated but immediate."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-gpt-5.6-sol-final",
+      "lineage": "deedy-gpt-5.6-sol",
+      "model": "gpt-5.6-sol",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1.md",
+      "bytes": 6215,
+      "sha256": "434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 5659,
+            "output_tokens": 2610,
+            "output_tokens_details": {
+              "thinking_tokens": 2299
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2610,
+                "cache_read_input_tokens": 5659,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 29.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to x and f(y), using f(x)+y = x+f(y)",
+        "upper_bound_mechanism": "symmetrized estimate |g(u)-g(v)| <= (sqrt f(u)-sqrt f(v))^2, giving strict monotonicity, continuity, then telescoping partition sum",
+        "wrong_answer_stated": false,
+        "notes": "All obligations met: iterate identity f(f(y))=2f(y)-y with g>=0; symmetric substitution (f(u),v)/(f(v),u) yields the two-sided quadratic bound; monotonicity, continuity, and mesh-refinement telescoping force g constant without extra hypotheses (fixed points included); both inequalities verified for f(x)=x+c, c>=0."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-gpt-5.6-sol-max-main-t001",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/edd956c8c5a1ce7898bc13b1451c2ee901815049b69fb97f40cdfba86456701f.md",
+      "bytes": 1386,
+      "sha256": "edd956c8c5a1ce7898bc13b1451c2ee901815049b69fb97f40cdfba86456701f",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1298,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 956,
+            "output_tokens_details": {
+              "thinking_tokens": 674
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1298,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 956,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 1298,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1298
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 13.4,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "asserted AM-GM/RMS-AM check of f(x)=x+c (not written out)",
+        "upper_bound_mechanism": "sketch: align arithmetic forward orbits to equate positive displacements; 'connectedness' to exclude coexistence of d=0 and d>0",
+        "wrong_answer_stated": false,
+        "notes": "Correct answer boxed with c>=0. The identity f(f(y))=2f(y)-y is stated with substitution named but not derived; sufficiency merely asserted 'by AM-GM and RMS-AM' with neither inequality checked; necessity is only a named framework ('appears to force', 'proof being developed'), with the fixed-point exclusion unproved."
+      },
+      "S": 0,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-gpt-5.6-sol-max-main-t002",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": "gpt-5.6-sol-max-main",
+      "turn": 2,
+      "path": "checkpoint_inputs_ext/66a2948b3fd5a27039c4d713c83fbff7da5163356cf3ad3fdaf211387420aacb.md",
+      "bytes": 5820,
+      "sha256": "66a2948b3fd5a27039c4d713c83fbff7da5163356cf3ad3fdaf211387420aacb",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3763,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1488,
+            "output_tokens_details": {
+              "thinking_tokens": 1183
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3763,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1488,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 3763,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3763
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 17.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to x and z=y+c, both inequalities, all c>=0",
+        "upper_bound_mechanism": "Orbit alignment (floor-index matching, Phi rationalization) gives p=q; then A/B both open + connectedness excludes mixed fixed/non-fixed case",
+        "wrong_answer_stated": false,
+        "notes": "Complete and correct: (S) f(f(y))=2f(y)-y with arithmetic orbits and d>=0; (N)(i) asymptotic alignment of two orbits forces equal positive displacements, with valid index choice and error bound q^2/(x+v); (N)(ii) mixed case excluded rigorously via openness of A and B and connectedness; (V) verified for all x,y and c>=0."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-gpt-5.6-sol-max-final",
+      "lineage": "deedy-gpt-5.6-sol-max",
+      "model": "gpt-5.6-sol-max",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/5323a7625b4d809f954c00362ee755e7f15b26e98877bd66cfcb782802b3b7fe.md",
+      "bytes": 6311,
+      "sha256": "5323a7625b4d809f954c00362ee755e7f15b26e98877bd66cfcb782802b3b7fe",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3964,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1261,
+            "output_tokens_details": {
+              "thinking_tokens": 948
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3964,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1261,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 3964,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3964
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "RMS-AM-GM applied to x and z=y+c for all c>=0, both inequalities",
+        "upper_bound_mechanism": "Orbit alignment (floor-index matching) forcing p=q, plus openness of {d=0},{d=c} via continuity of Phi and connectedness of R_{>0}",
+        "wrong_answer_stated": false,
+        "notes": "Complete: (S) via x=f(y) equality case giving arithmetic orbits and d>=0; (N) positive displacements equalized by asymptotic alignment with Phi(u,v)=(u-v)^2/(...)->0, then mixed fixed/non-fixed case excluded by open-set/connectedness argument; (V) verified for all x,y and c>=0. Checks of the index bounds and inequalities are valid."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-gpt-5.6-sol-pro-main-t001",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/7115bacba58e85e41d3cfb7a6e5241f314e093617278b1be9cb0d66cf8deb3dc.md",
+      "bytes": 1514,
+      "sha256": "7115bacba58e85e41d3cfb7a6e5241f314e093617278b1be9cb0d66cf8deb3dc",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1308,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1112,
+            "output_tokens_details": {
+              "thinking_tokens": 836
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1308,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1112,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 1308,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1308
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 14.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 1,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "RMS-AM-GM for f(x)=x+c (asserted, not written out)",
+        "upper_bound_mechanism": "orbit synchronization for equal displacements + no-mixing chain argument (sketched only)",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file, not a proof: correct answer f(x)=x+c, c>=0 stated (hedged as 'expected'). Substitution x=f(y) giving f(f(y))=2f(y)-y and AP orbits is asserted in one line without derivation. Sufficiency only 'checked' via RMS-AM-GM; necessity mechanisms named but no arguments written; 'proof draft pending'."
+      },
+      "S": 0,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-gpt-5.6-sol-pro-main-t002",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": "gpt-5.6-sol-pro-main",
+      "turn": 2,
+      "path": "checkpoint_inputs_ext/8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e.md",
+      "bytes": 5034,
+      "sha256": "8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3223,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1177,
+            "output_tokens_details": {
+              "thinking_tokens": 892
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3223,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1177,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 3223,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3223
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 15.1,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM on x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "squared inequality (5) + synchronized arithmetic orbits asymptotics forcing a=b; fixed-point separation |p-q|>c plus finite chain subdivision",
+        "wrong_answer_stated": false,
+        "notes": "Complete: derives f(f(y))=2f(y)-y from x=f(y), d>=0 from positivity of orbits, equality of positive displacements via limit of (5) along synchronized orbits, excludes mixed fixed/non-fixed points by separation plus subdivision chain, and verifies sufficiency for all c>=0 and both inequalities."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-gpt-5.6-sol-pro-final",
+      "lineage": "deedy-gpt-5.6-sol-pro",
+      "model": "gpt-5.6-sol-pro",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e.md",
+      "bytes": 5034,
+      "sha256": "8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4579,
+            "output_tokens": 1696,
+            "output_tokens_details": {
+              "thinking_tokens": 1397
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1696,
+                "cache_read_input_tokens": 4579,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 19.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "squared first inequality + synchronized arithmetic orbits (X_m-Y_m bounded, ratio->1) giving a=b; then fixed/non-fixed separation |p-q|>c plus finite chain subdivision",
+        "wrong_answer_stated": false,
+        "notes": "Complete: (S) from x=f(y) with d>=0 via positivity of iterates; (N) both the equality of positive displacements (asymptotic orbit comparison in both orders) and the exclusion of mixed fixed/non-fixed points via the separation bound and a fine subdivision chain; (V) verified for all x,y and c>=0."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-gpt-5.6-sol-xhigh-main-t001",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/b80a6935fe6bf68b50f195fd97b673037c2fb57241cd738f47c0f16ceff1d078.md",
+      "bytes": 675,
+      "sha256": "b80a6935fe6bf68b50f195fd97b673037c2fb57241cd738f47c0f16ceff1d078",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 992,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 382,
+            "output_tokens_details": {
+              "thinking_tokens": 187
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 992,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 382,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 992,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 992
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 6.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Status 'unsolved'. Claims the expected answer is f(x)=x only, missing the family f(x)=x+c. No proof of f(f(t))=2f(t)-t, no written verification (identity case only asserted via RMS-AM-GM), and no necessity argument; only ruled out f(x)=cx, c!=1."
+      },
+      "S": 0,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-gpt-5.6-sol-xhigh-main-t002",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": "gpt-5.6-sol-xhigh-main",
+      "turn": 2,
+      "path": "checkpoint_inputs_ext/4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b.md",
+      "bytes": 5533,
+      "sha256": "4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3553,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1427,
+            "output_tokens_details": {
+              "thinking_tokens": 1131
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3553,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1427,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 3553,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3553
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 17.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "orbit arithmetic progressions + asymptotic RMS-AM gap forcing a=b; then openness of fixed/shifted sets via first inequality + connectedness",
+        "wrong_answer_stated": false,
+        "notes": "Complete: (S) via x=f(y) forcing equality, orbits AP with d>=0; positive displacements shown equal by bounded-gap asymptotics with correct algebraic identity; mixed fixed/non-fixed case excluded by openness of A and B plus connectedness (limit gives 2L+c<=2L); sufficiency verified for all x,y and c>=0."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-gpt-5.6-sol-xhigh-final",
+      "lineage": "deedy-gpt-5.6-sol-xhigh",
+      "model": "gpt-5.6-sol-xhigh",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b.md",
+      "bytes": 5533,
+      "sha256": "4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 4909,
+            "output_tokens": 1340,
+            "output_tokens_details": {
+              "thinking_tokens": 1030
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1340,
+                "cache_read_input_tokens": 4909,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 16.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c, both inequalities verified for all x,y and c>=0",
+        "upper_bound_mechanism": "asymptotic RMS-AM gap comparison of two arithmetic orbits (a=b), plus openness of the fixed-point and c-displacement sets and connectedness of R_{>0} to exclude mixing",
+        "wrong_answer_stated": false,
+        "notes": "Substitution x=f(y) yields f(f(y))=2f(y)-y, orbits are APs with d>=0. Positive displacements shown equal via (p-q)^2/(...)→0 estimate with correct floor construction. Mixed case excluded rigorously by openness + connectedness; identity case covered. Sufficiency fully verified. All obligations met."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-grok-4.5-main-t003",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 3,
+      "path": "checkpoint_inputs_ext/f5979fee4e92b46f15a801d4b860c88d862a6adce0e52ff63a64d20f0be47598.md",
+      "bytes": 423,
+      "sha256": "f5979fee4e92b46f15a801d4b860c88d862a6adce0e52ff63a64d20f0be47598",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 894,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "thinking_tokens": 0
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 894,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 128,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 894,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 894
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 2.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": false,
+        "notes": "Tracking file marked 'unsolved' with no approaches tried and an empty proof section. No mathematical content whatsoever."
+      },
+      "S": 0,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-grok-4.5-main-t008",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": "grok-4.5-main",
+      "turn": 8,
+      "path": "checkpoint_inputs_ext/72f3ae519eb2c7e7ee5d768f2697068f3b2a36a55b5b344ec677e4c9630fb8bc.md",
+      "bytes": 1233,
+      "sha256": "72f3ae519eb2c7e7ee5d768f2697068f3b2a36a55b5b344ec677e4c9630fb8bc",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 1283,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1077,
+            "output_tokens_details": {
+              "thinking_tokens": 862
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1283,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1077,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 1283,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 1283
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 14.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 1,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Only f(x)=x identified; text explicitly aims to prove f=id is the unique solution, missing the family x+c. Substitution x=f(y) is made and yields the preimage relation y=2a-f(a), essentially the structural identity, but stated conditionally on surjectivity and without d(t)>=0 or the AP consequence. No sufficiency check for x+c, no necessity argument."
+      },
+      "S": 0,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-grok-4.5-final",
+      "lineage": "deedy-grok-4.5",
+      "model": "grok-4.5",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/72f3ae519eb2c7e7ee5d768f2697068f3b2a36a55b5b344ec677e4c9630fb8bc.md",
+      "bytes": 1233,
+      "sha256": "72f3ae519eb2c7e7ee5d768f2697068f3b2a36a55b5b344ec677e4c9630fb8bc",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 2639,
+            "output_tokens": 1007,
+            "output_tokens_details": {
+              "thinking_tokens": 814
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1007,
+                "cache_read_input_tokens": 2639,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 13.7,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 0,
+        "reduction": 1,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "none",
+        "upper_bound_mechanism": "none",
+        "wrong_answer_stated": true,
+        "notes": "Only f(x)=x is proposed (stated as unique target), missing the family x+c, c>=0. Substitution x=f(y) yields f(f(y))=2f(y)-y in preimage form, but no d(t)>=0 or AP structure. No verification of x+c and no necessity argument; 'full proof' is empty."
+      },
+      "S": 0,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-kimi-k3-main-t001",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": "kimi-k3-main",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/4213eec1d7f42f7b259d0d1ca1d9ee82dc37da7d8c1485bfd1cebc32c9f4a990.md",
+      "bytes": 7150,
+      "sha256": "4213eec1d7f42f7b259d0d1ca1d9ee82dc37da7d8c1485bfd1cebc32c9f4a990",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4700,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 2242,
+            "output_tokens_details": {
+              "thinking_tokens": 1900
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4700,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2242,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 4700,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4700
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 26.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to a=x, b=y+c since f(x)+y=x+f(y)",
+        "upper_bound_mechanism": "descent lemma (t-c has same increment) + forbidden-interval Q(X)=(X-A)^2-s^2 straddled by the c-orbit",
+        "wrong_answer_stated": false,
+        "notes": "Reformulation |(f(x)+y)^2-(x+f(y))^2|<=(x-f(y))^2 is correct; x=f(y) gives f(f(y))=2f(y)-y, orbits arithmetic, p>=0. Descent lemma verified (4t-c+e>3c+e>|c-e|). Constancy argument covers d=0 (fixed points) separately, with step c<2s ensuring the orbit lands in the forbidden interval. Sufficiency checks both inequalities for all c>=0."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-kimi-k3-final",
+      "lineage": "deedy-kimi-k3",
+      "model": "kimi-k3",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/4213eec1d7f42f7b259d0d1ca1d9ee82dc37da7d8c1485bfd1cebc32c9f4a990.md",
+      "bytes": 7150,
+      "sha256": "4213eec1d7f42f7b259d0d1ca1d9ee82dc37da7d8c1485bfd1cebc32c9f4a990",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6056,
+            "output_tokens": 2106,
+            "output_tokens_details": {
+              "thinking_tokens": 1781
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2106,
+                "cache_read_input_tokens": 6056,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 25.0,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM via f(x)+y=x+f(y)=a+b",
+        "upper_bound_mechanism": "descent lemma (t-c keeps increment) + c-orbit forced into forbidden interval (X-A)^2<s^2",
+        "wrong_answer_stated": false,
+        "notes": "Rewrites hypothesis as |(f(x)+y)^2-(x+f(y))^2|<=(x-f(y))^2; x=f(y) gives f(f(y))=2f(y)-y, iterates arithmetic, p>=0. Descent inequality |c-e|(4t-c+e)<=(c-e)^2 checked correctly; forbidden-interval step with c<2s valid, and d=0 (fixed point) case treated explicitly. Sufficiency verified for both inequalities, all c>=0."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-muse-spark-1.1-main-t001",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": "muse-spark-1.1-main",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/b31f33063abf487fbca988428d05166b26df3e13e12afac9d3cf92237c3d6b5e.md",
+      "bytes": 6326,
+      "sha256": "b31f33063abf487fbca988428d05166b26df3e13e12afac9d3cf92237c3d6b5e",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4940,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1670,
+            "output_tokens_details": {
+              "thinking_tokens": 1331
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4940,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1670,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 4940,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4940
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 20.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "AM-GM and QM-AM identity (x-y-c)^2>=0 for both inequalities, all c>=0",
+        "upper_bound_mechanism": "Local estimate |c(x)-c(y)|<=(x-f(y))^2/f(y); orbit approximation drives it to 0 so all positive c equal; mixed case excluded via B-inequality giving dist(Z,Q)>=p, then connectedness of (0,infty)",
+        "wrong_answer_stated": false,
+        "notes": "Correctly derives f(f(y))=2f(y)-y from the collapse at x=f(y), proves c>=0 via orbits, establishes a valid two-sided local bound, kills unequal positive differences by orbit near-coincidence with denominator going to infinity, and excludes coexisting fixed/non-fixed points by a separation/connectedness argument. Verification complete."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-deedy-muse-spark-1.1-final",
+      "lineage": "deedy-muse-spark-1.1",
+      "model": "muse-spark-1.1",
+      "context": 99,
+      "turn": null,
+      "path": "checkpoint_inputs_ext/b31f33063abf487fbca988428d05166b26df3e13e12afac9d3cf92237c3d6b5e.md",
+      "bytes": 6326,
+      "sha256": "b31f33063abf487fbca988428d05166b26df3e13e12afac9d3cf92237c3d6b5e",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 6296,
+            "output_tokens": 1909,
+            "output_tokens_details": {
+              "thinking_tokens": 1531
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1909,
+                "cache_read_input_tokens": 6296,
+                "cache_creation_input_tokens": 0,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 0
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 22.3,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "Direct verification of both inequalities for f(x)=x+c via AM-GM and RMS-AM, both reducing to (x-y-c)^2>=0",
+        "upper_bound_mechanism": "Local quadratic bound |c(x)-c(y)|<=(x-f(y))^2/f(y); orbit approximation with A_n->infinity forces all positive differences equal; B-inequality gives dist(Z,Q)>=p, then connectedness of (0,infty) excludes mixed case",
+        "wrong_answer_stated": false,
+        "notes": "Complete: identity f(f(y))=2f(y)-y from alpha+beta=2(x-f(y))^2 at x=f(y); c>=0 by orbit positivity; two-sided envelope (12) correctly derived and bounded; orbit-density argument equates positive constants; fixed-point/non-fixed-point coexistence excluded rigorously via separation plus connectedness. Verification covers both inequalities for all c>=0."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-glm52-e7798221-v1",
+      "lineage": "ours-glm52",
+      "model": "glm-5.2",
+      "context": "e7798221",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/d2bc30e7b324192299406c9fff3549976d778099a44193a96fd512d1da47f66b.md",
+      "recorded_mtime_utc": "2026-07-24T18:44:26Z",
+      "bytes": 3740,
+      "sha256": "d2bc30e7b324192299406c9fff3549976d778099a44193a96fd512d1da47f66b",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3048,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1490,
+            "output_tokens_details": {
+              "thinking_tokens": 1178
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3048,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1490,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 3048,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3048
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 17.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "direct squaring; both inequalities reduce to (x-y-c)^2 >= 0 for all x,y and c>=0",
+        "upper_bound_mechanism": "master quadratic bound D(v) <= D(s) + (v-s)^2/(4f(s)) via completing the square with u=f(s), then continuity + telescoping over n equal subintervals gives D constant",
+        "wrong_answer_stated": false,
+        "notes": "Step 1 gives f(f(t))=2f(t)-t; Step 2 orbit AP forces D>=0. Step 3's completion of the square and substitution u=f(s) check out algebraically; Steps 4-5 derive continuity and constancy rigorously, covering fixed points without extra assumptions. Numerical remark is decorative, not load-bearing."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-gpt56-7324ef70-v1",
+      "lineage": "ours-gpt56sol-ultra",
+      "model": "gpt-5.6-sol",
+      "context": "7324ef70",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/3090f2134de489ae871a8f0defc0d228317ab58974a2fa8e2479cf583a09662c.md",
+      "recorded_mtime_utc": "2026-07-20T21:28:39Z",
+      "bytes": 4645,
+      "sha256": "3090f2134de489ae871a8f0defc0d228317ab58974a2fa8e2479cf583a09662c",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3161,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1693,
+            "output_tokens_details": {
+              "thinking_tokens": 1365
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3161,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1693,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 3161,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3161
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 17.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "RMS-AM-GM applied to x and y+C, verifying both inequalities for all C>=0",
+        "upper_bound_mechanism": "quadratic local estimate |d(y)-d(t)| <= (y-t)^2/(4 min{t,y}) from both inequalities at x=f(t), then telescoping partition with n -> infinity",
+        "wrong_answer_stated": false,
+        "notes": "All algebraic expansions verified correct: (t-y)^2+4(t+c)(c-b) and (t-y)^2+2(b-c)(2y+b+c). Iterate law (1)-(3) and d>=0 via positivity of orbit are rigorous. The Lipschitz-squared bound holds for all t,y with no regularity assumptions, so fixed points and identity are covered automatically. Sufficiency covers both inequalities."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-nemotron-8edc6458-v1",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "8edc6458",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/bfe4b2a3f1e332ca276a20b503987c39b5d55ca9612ee224d90712aa11f87168.md",
+      "recorded_mtime_utc": "2026-07-20T18:00:56Z",
+      "bytes": 4047,
+      "sha256": "bfe4b2a3f1e332ca276a20b503987c39b5d55ca9612ee224d90712aa11f87168",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3101,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 1378,
+            "output_tokens_details": {
+              "thinking_tokens": 1103
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3101,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 1378,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 3101,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3101
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 17.5,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 0,
+        "lower_bound_mechanism": "QM-AM for left, (x-y-c)^2>=0 for right, all x,y and c>=0",
+        "upper_bound_mechanism": "invalid symmetry/sign comparison of (L^2)-(R^2)",
+        "wrong_answer_stated": true,
+        "notes": "Correct answer, correct structural identity f(f(y))=2f(y)-y with orbits and g>=0, and full verification of both inequalities. Section 6 is fallacious: the sign of (L^2)-(R^2) tracking g(y)-g(x) gives no contradiction; the claim that 'both differences must vanish' is asserted with an unsupported false lemma. No fixed-point case handled."
+      },
+      "S": 1,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-nemotron-2587b733-v1",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "2587b733",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0.md",
+      "recorded_mtime_utc": "2026-07-20T18:48:09Z",
+      "bytes": 2982,
+      "sha256": "27f4dde8c553896f712ced37e7b410fdd6c9f190475e3248972af963be690fa0",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 2395,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 3818,
+            "output_tokens_details": {
+              "thinking_tokens": 3487
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 2395,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 3818,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 2395,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 2395
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 45.6,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "expansion to (x-y-c)^2>=0 for both inequalities, but middle term written as (x+y+2c)/2 instead of (x+y+c)/2, making the displayed chain false",
+        "upper_bound_mechanism": "orbit comparison in expanded right inequality (all positive d equal) + connectedness/separation to kill mixed fixed/non-fixed case",
+        "wrong_answer_stated": false,
+        "notes": "S fully proved (x=f(y) forces equality; d>=0 via orbit positivity). Step 3's crux is asserted: with m fixed and n->infty the quadratic (cn-em)^2 dominates; the coupled choice m~cn/e needed for the claimed 4c(c-e)n coefficient is never stated. Step 4 (mixed case) is correct though terse. Verification has a wrong middle expression."
+      },
+      "S": 0,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-nemotron-2587b733-v2",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "2587b733",
+      "turn": 2,
+      "path": "checkpoint_inputs_ext/b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf.md",
+      "recorded_mtime_utc": "2026-07-20T19:00:06Z",
+      "bytes": 6189,
+      "sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 4044,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 5293,
+            "output_tokens_details": {
+              "thinking_tokens": 4920
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4044,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 5293,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 4044,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 4044
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 64.2,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 1,
+        "lower_bound_mechanism": "Substitute f(x)=x+c; both inequalities reduce to (x-y-c)^2>=0 (QM-AM-GM in x, y+c)",
+        "upper_bound_mechanism": "Orbit comparison in inequality (4) with rational/Dirichlet approximation of c/e, plus connectedness argument separating fixed and non-fixed points",
+        "wrong_answer_stated": false,
+        "notes": "S derived correctly (x=f(y) forces equality; d>=0 via orbit escaping R_{>0}). Verification correct for both inequalities and all c>=0. Mixed-case exclusion (fixed vs non-fixed) is rigorous via (7) and connectedness. But step (5) is asserted, not derived: the highlighted 4c(c-e)n term is the same order as the unquantified O(n+m) remainder; the needed cancellation (valid only when cn-em is bounded) is never computed, so the 'all positive d equal' half is a sketch."
+      },
+      "S": 1,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    },
+    {
+      "id": "p5-nemotron-dbcab3c5-v1",
+      "lineage": "ours-nemotron",
+      "model": "nemotron-3-ultra",
+      "context": "dbcab3c5",
+      "turn": 1,
+      "path": "checkpoint_inputs_ext/28cf6b5ebb024dc28091bd60d3256daed6a841d91b48cf06d85cc03a4ba4b0a6.md",
+      "recorded_mtime_utc": "2026-07-20T19:32:15Z",
+      "bytes": 5967,
+      "sha256": "28cf6b5ebb024dc28091bd60d3256daed6a841d91b48cf06d85cc03a4ba4b0a6",
+      "annotator": "claude-opus-5",
+      "attempts": [
+        {
+          "attempt": 0,
+          "status": 200,
+          "stop": "end_turn",
+          "usage": {
+            "input_tokens": 2,
+            "cache_creation_input_tokens": 3867,
+            "cache_read_input_tokens": 1356,
+            "output_tokens": 2464,
+            "output_tokens_details": {
+              "thinking_tokens": 2158
+            },
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": "standard",
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 3867,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "inference_geo": "not_available",
+            "iterations": [
+              {
+                "input_tokens": 2,
+                "output_tokens": 2464,
+                "cache_read_input_tokens": 1356,
+                "cache_creation_input_tokens": 3867,
+                "cache_creation": {
+                  "ephemeral_5m_input_tokens": 0,
+                  "ephemeral_1h_input_tokens": 3867
+                },
+                "type": "message"
+              }
+            ],
+            "speed": "standard"
+          },
+          "sec": 28.8,
+          "parsed": true
+        }
+      ],
+      "grades": {
+        "answer": 2,
+        "reduction": 2,
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "lower_bound_mechanism": "QM-AM-GM applied to x and y+c (both inequalities, all c>=0)",
+        "upper_bound_mechanism": "Exact squared-difference inequality |A-B|(2x+2y+A+B) <= (x-y-B)^2, orbit/unboundedness argument for two positive values, plus openness of level sets and connectedness for the mixed fixed-point case",
+        "wrong_answer_stated": false,
+        "notes": "S derived correctly via x=f(y); iterates give g>=0. Inequality (1) verified algebraically correct. Orbit argument (choice of m within B/2, LHS ~2nA|A-B|) is valid; mixed case excluded rigorously by openness of both level sets and connectedness. Verification complete via QM-AM-GM."
+      },
+      "S": 2,
+      "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+      "path_base": "bundle root"
+    }
+  ]
+}

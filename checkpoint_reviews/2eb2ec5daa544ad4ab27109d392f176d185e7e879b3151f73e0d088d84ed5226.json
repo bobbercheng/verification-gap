@@ -1,0 +1,51 @@
+{
+  "task_id": "imo-2026-p2",
+  "verdict": "reject",
+  "scores": {
+    "correctness": 1,
+    "completeness": 1,
+    "rigor": 1,
+    "self_contained": 2
+  },
+  "fatal_issues": [
+    "The core geometric mechanism is fundamentally incorrect: the candidate claims that ∠LBK = ∠LNC implies a spiral similarity centered at L sending B↦N and K↦C. A spiral similarity centered at L sending B→N and K→N B to N and K to C would require equal angles at L (∠BLN = ∠KLC) and equal ratios (LB/LN = LK/LC). The given condition ∠LBK = ∠LNC is an angle at B and N, NOT at the center L. These are completely different geometric conditions. The same error occurs for ∠LCK = ∠BMK and the claimed spiral similarity centered at K.",
+    "The candidate confuses two different triangle similarities: a spiral similarity centered at L sending B→N, K→C would imply △LBN ∼ △LKC (vertices corresponding: L↔L, B↔N, K↔C). The candidate instead claims △LBK ∼ △LNC, which is a different similarity (L↔L, B↔N, K↔C but triangles share different vertex sets). The given angle ∠LBK = ∠LNC matches ∠LBK in △LBK and ∠LNC in △LNC, but this is only one angle of the claimed similarity — the other two angles (∠BLK vs ∠NLC, ∠BKL vs ∠LCN) are neither given nor derived.",
+    "The composition argument assumes the spiral similarities exist as claimed and that their compositions S_K∘S_L and S_L∘S_K share the same center. Even if the spiral similarities were correctly identified, two spiral similarities generally have compositions with DIFFERENT centers unless they commute or share a fixed point. The claim that their common center is the circumcenter O of △AKL is asserted without any proof — the 'key angle chase' is entirely missing (represented only as '...').",
+    "The third angle condition ∠KBA = ∠ACL is not meaningfully integrated. The candidate states it 'likely enforces the ratio compatibility' but provides no derivation of how this angle at B and C relates to ratios at L and K.",
+    "The complex-number verification is not carried out. The candidate writes 'a direct (lengthy) algebraic computation shows the identity holds' but presents no computation, no elimination steps, and no verification. The manifest lists 'Verify the algebraic identity symbolically (e.g., with Gröbner bases)' as an open issue, confirming this is incomplete.",
+    "The interiority conditions (K strictly inside BMC, L strictly inside BNC, K ∈ △ABL, L ∈ △AKC) are listed as assumptions but never used in the proof. These are critical for directed angle conventions and to avoid degenerate configurations, yet the argument never references them."
+  ],
+  "required_fixes": [
+    "Completely re-identify the correct spiral similarities (if any) from the given angle conditions. The angles given are at B, N, C, M, B, C — not at the claimed centers L and K. A correct approach might find spiral similarities centered at other points (e.g., intersections of circles), or use a different transformation framework (Miquel points, spiral centers of cyclic quadrilaterals, etc.).",
+    "Prove that the three angle conditions together force specific triangle similarities with correct vertex correspondences. This requires deriving the missing angle equalities and ratio equalities from the configuration, using the interiority conditions and the midpoint properties.",
+    "If a spiral similarity composition argument is to work, rigorously prove: (a) the two spiral similarities exist with explicitly identified centers, angles, and ratios; (b) their compositions have the same center; (c) that center is the circumcenter O of △AKL.",
+    "Provide a complete angle chase or algebraic derivation showing O lies on the perpendicular bisectors of AK, AL, and KL, or equivalently that O is the center of the spiral similarity sending K↦M and L↦N.",
+    "Complete the complex-number computation or provide a synthetic proof with all steps justified.",
+    "Use the interiority conditions to justify directed angle equalities modulo π and to rule out degenerate boundary cases."
+  ],
+  "verified_claims": [
+    "The problem statement is correctly restated.",
+    "M and N are correctly identified as midpoints of AB and AC.",
+    "The complex coordinate setup (A=0, B=1, C=z, M=1/2, N=z/2) is a valid normalization.",
+    "The circumcenter formula O = (|K|²L - |L|²K) / (K̄L - K L̄) for triangle with A=0 is correct.",
+    "The condition OM = ON is correctly translated to |O - 1/2| = |O - z/2| ⇔ Re(2O(z̄ - 1)) = |z|² - 1."
+  ],
+  "unverified_claims": [
+    "∠LBK = ∠LNC implies spiral similarity centered at L sending B↦N, K↦C.",
+    "∠LCK = ∠BMK implies spiral similarity centered at K sending C↦M, L↦B.",
+    "△LBK ∼ △LNC and △KCL ∼ △KMB.",
+    "The composition S_K ∘ S_L sends K↦M and its center is O.",
+    "The composition S_L ∘ S_K sends L↦N and has the same center O.",
+    "OK = OM and OL = ON follow from O being the center of these spiral similarities.",
+    "The three complex reality conditions algebraically imply OM = ON.",
+    "The interiority conditions are satisfied by any solution of the angle conditions."
+  ],
+  "summary": "The candidate solution contains a fatal geometric error: it misidentifies the spiral similarities from the given angle conditions. The equal angles provided (∠LBK = ∠LNC, ∠LCK = ∠BMK) are at the 'endpoints' B,N and C,M respectively, not at the claimed centers L and K. A spiral similarity centered at L requires equal angles AT L (∠BLN = ∠KLC), which are neither given nor derived. The claimed triangle similarities (△LBK ∼ △LNC) are different from what a spiral similarity at L would produce (△LBN ∼ △LKC). The composition argument, the identification of O as the common center, and the complex-number verification are all built on this incorrect foundation and are either unjustified or incomplete. The solution does not prove the required result and cannot be repaired without a fundamentally different geometric insight.",
+  "transfer_assessment": [
+    "The idea of using spiral similarity compositions to relate midpoints and circumcenters is a valid and powerful technique for geometry problems (reusable mechanism).",
+    "The specific identification of spiral centers at K and L from the given angle conditions is INCORRECT and should NOT be transferred to other problems.",
+    "The complex-number setup with A=0, B=1, C=z is a standard and reusable normalization for triangle geometry problems.",
+    "The translation of OM=ON to a complex equation is correct and reusable.",
+    "The approach of using three angle conditions to eliminate degrees of freedom in K,L is sound in principle, but the execution here fails."
+  ]
+}

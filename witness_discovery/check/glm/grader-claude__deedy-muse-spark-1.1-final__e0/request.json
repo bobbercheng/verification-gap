@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "grader",
+ "source": "claude",
+ "case": "deedy-muse-spark-1.1-final",
+ "tag": "e0",
+ "text_sha256": "71a422af6fd1d951df4a1ddf18bc52d185785cca4fb2fba0f2ce598482cd2aaa",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "unspecified",
+  "status": "error reported by an ordinary grader",
+  "quote": "So seems this construction guarantees at least 3/5.",
+  "witness": "Wrong final answer. The proposed c=(n+1)/(2n+1) is not achievable for n=2: with Liu's own suggested cuts (0.4,0.4,0.2), Xiang uses a SINGLE cut splitting the 0.2 piece into 0.1+0.1, giving pieces {0.4,0.4,0.1,0.1}; Liu then gets only 0.4+0.1=0.5 < 0.6. The parity-changing option of using fewer than n cuts is never analysed.",
+  "load_bearing": null
+ },
+ "started_utc": "2026-09-06 05:36:35 UTC"
+}

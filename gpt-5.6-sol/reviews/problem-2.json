@@ -1,0 +1,31 @@
+{
+  "task_id": "imo-2026-p2",
+  "verdict": "pass",
+  "scores": {
+    "correctness": 4,
+    "completeness": 4,
+    "rigor": 4,
+    "self_contained": 4
+  },
+  "fatal_issues": [],
+  "required_fixes": [],
+  "verified_claims": [
+    "The four strict-interiority hypotheses imply the stated ray orders, put E and F in the open sides AC and AB with B-K-E and C-L-F, and ensure all circles used in the proof are nondegenerate where required.",
+    "The directed-angle signs are correct: the first angle equality makes B, C, E, F concyclic, while the second and third place E on (BLN) and F on (CKM).",
+    "When E=N or F=M, the displayed directed-angle equalities are exactly the relevant converse tangent-chord conditions, so the repeated intersections may validly be counted with multiplicity.",
+    "The signed power identities at A are correct and imply AF'=AF/2 and AE'=AE/2, hence the literal orders A-F'-F-B and A-E'-E-C and the exclusion of tangency at B or C.",
+    "For Z the centre of (BCEF), the circle with diameter AZ is nondegenerate; the chord midpoints P and Q lie on it, including the endpoint cases P=Z and Q=Z.",
+    "The equal-power calculations at C and F, and at B and E, have the correct signs. The auxiliary circles are distinct from the diameter circle, so the radical axes CF and BE validly force L and K onto it.",
+    "Since A, K, L are noncollinear, the diameter circle is their circumcircle and O is the midpoint of AZ. The midpoint vector identities reduce OM=ON to ZB=ZC, which holds because B and C lie on the circle centred at Z.",
+    "The proof contains no hidden limit or continuity step, quantifier change, circular argument, or reliance on numerical experiments."
+  ],
+  "unverified_claims": [],
+  "summary": "The proposed synthetic proof is correct, complete, self-contained, and robust in all identified degenerate cases. Independent re-derivation and counterexample searches found no fatal gap.",
+  "transfer_assessment": [
+    "Reusable: intersecting vertex rays with opposite sides converts matched-angle data into a cyclic quadrilateral whose centre controls the target metric relation.",
+    "Reusable: power-of-a-point comparisons combined with side-midpoint ratios manufacture literal midpoint intersections.",
+    "Reusable: chord-midpoint perpendiculars create a diameter circle, and equal-power comparisons then capture target points via radical axes.",
+    "Reusable: midpoint vector subtraction transfers the auxiliary radius equality ZB=ZC directly to OM=ON.",
+    "Caution: the method is reliable only after ray orders fix all directed-angle signs, coincident intersections are treated as tangencies with multiplicity, and distinctness is established before invoking a radical axis."
+  ]
+}

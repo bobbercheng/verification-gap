@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-8d1286ceedd9",
+  "problem": "6",
+  "sha256": "8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4",
+  "path": "checkpoint_inputs/8d1286ceedd9c22ec8b3512d6d4991cc86e743985dee50a31912024cff0c91a4.md",
+  "lineage": "deedy-muse-spark-1.1",
+  "model": "muse-spark-1.1",
+  "context": "muse-spark-1.1-main",
+  "turn": 12,
+  "record_ids": [
+    "p6-muse-spark-1.1-main-t012"
+  ],
+  "bytes": 135155,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 46144,
+        "output_tokens": 1830,
+        "output_tokens_details": {
+          "thinking_tokens": 1541
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1830,
+            "cache_read_input_tokens": 46144,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 28.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "clutter stabilization: blocker-intersecting = self-dual, pure-power multiples force change (incomplete; unbounded ground unresolved)",
+    "upper_bound_mechanism": "'sequence = multiples of D' verified on a1=35 example only",
+    "wrong_answer_stated": false,
+    "notes": "Exploratory scratchpad. Correctly states allowed-number characterization and proves a genuine clutter lemma (blocker intersecting iff every minimal transversal contains an edge). Finiteness/stabilization is explicitly listed as 'main missing'; new primes admitted possibly unbounded; text ends mid-sentence. Periodicity from n=1 only example-checked (a1=35, L=210)."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

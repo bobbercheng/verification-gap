@@ -1,0 +1,46 @@
+{
+  "id": "claude-fable-5-main-t013",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 13,
+  "ts": "2026-07-18T10:56:49.400988+00:00",
+  "path": "checkpoint_inputs/0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a.md",
+  "bytes": 15474,
+  "sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5961,
+        "output_tokens": 5946,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 81.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "tree-pairing / signed subset-sum on rank pairs (geometric division)",
+    "upper_bound_mechanism": "subset-sum pigeonhole + cross-pairing overlay cuts",
+    "wrong_answer_stated": false,
+    "notes": "Complete all-n proof. Lemma 2 rigorously establishes greedy value O(A)=(1+D)/2. Lemma 4 proves D≥u for every refinement via rank-pair multigraph, tree component, 2-coloring and signed subset-sum. Lemma 5 proves D≤u via pigeonhole gap and overlay construction producing equal pairs plus leftover Δ≤u; mark counts and distinctness verified."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "0df01e264dd8482af0e9302192e801798db1919910be5023ac0b2bb2cfeb648a",
+  "original_bytes": 15474,
+  "input_anonymized": false
+}

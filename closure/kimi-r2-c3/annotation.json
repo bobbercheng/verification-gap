@@ -1,0 +1,44 @@
+{
+  "id": "kimi-r2-c3",
+  "lineage": "ours-kimi-R2",
+  "model": "kimi-k3",
+  "context": 3,
+  "path": "checkpoint_inputs/ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1.md",
+  "bytes": 4134,
+  "sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1884,
+        "output_tokens": 1397,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 16.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "dyadic cuts (1:2:...:2^n) + symmetric-difference toggle game (crux inequality g(n,n)>=1 open)",
+    "upper_bound_mechanism": "set-game restriction with halve/clone/2-move-combo Xiang strategy (general covering argument open)",
+    "wrong_answer_stated": false,
+    "notes": "Correct form 2^n/(2^(n+1)-1) stated only as conjecture. Reduction, dyadic LB toggle argument, and UB set-game strategy are all sketched and numerically checked, but key lemmas (greedy draft lemma, g(n,n)>=1, general Xiang strategy) are explicitly listed as open; only n=1 (and n=2 UB) fully proved."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "ad98327771c2011b0dcfb1fcabc9f096edd3a57404700c9d7eae63efc9dbe1f1",
+  "original_bytes": 4134,
+  "input_anonymized": false
+}

@@ -1,0 +1,61 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__p5-nemotron-2587b733-v2__e0",
+ "case": "p5-nemotron-2587b733-v2",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 38.1,
+  "input_tokens": 2,
+  "output_tokens": 3395,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 4452,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3965,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004065,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 3395,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 4452,
+    "webSearchRequests": 0,
+    "costUSD": 0.130546,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2826,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.4",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "*Case 1: $c/e \\in \\mathbb{Q}$.* Write $c/e = p/q$ in lowest terms with $p,q \\in \\mathbb{N}$. Take $n_k = q k$, $m_k = p k$ for $k \\in \\mathbb{N}$. Then $c n_k - e m_k = 0$ for all $k$, so the quadratic term vanishes exactly. The linear term becomes $4c(c-e) q k$, which is negative for all sufficiently large $k$",
+  "status_as_written": "false_display",
+  "repair_distance": "sentence",
+  "explanation": "Expanding (4) at x=x_0+nc, y=y_0+me gives coefficient of n equal to 2c^2-4ce+2c(x_0-y_0) and of m equal to 2ce-2e(x_0-y_0), so display (5)'s separated term 4c(c-e)n is indeed not the raw n-coefficient, and the O(n+m) remainder as described swallows it: the display is misstated. But on the diagonal em=cn the (x_0-y_0) terms cancel and 2ce m = 2c^2 n, yielding exactly 4c(c-e)n; with |cn_k-em_k|<1 the same computation gives 4c(c-e)n_k+O(1). Both per-case coefficients stated in Cases 1 and 2 are therefore correct and carry the contradiction, so L5.4's argument is present beside a wrong display line.",
+  "affected_statement_note": null
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 312,
+  "length_ok": true,
+  "reason": null
+ }
+}

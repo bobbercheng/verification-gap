@@ -1,0 +1,34 @@
+{
+ "task_id": "imo-2026-p4",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Cut geometry: with P on open side AB and x = angle ACP, the children are (A, x, 180-A-x) and (B, C-x, A+x); the angle at P in the second child is 180-B-(C-x) = A+x, and every x in (0,C) is realized by an interior ray from C meeting the open segment AB.",
+  "Both children are nondegenerate for x in (0,C): 180-A-x > B > 0 and A+x < A+C < 180.",
+  "Lemma 1: from an angle mθ (1 ≤ m ≤ n-1), cutting from that vertex with x = θ gives one child containing θ and the other containing (m-1)θ; induction on m yields a forced win in at most m-1 cuts; the split is strict since 0 < θ < mθ.",
+  "Any angle mθ in a triangle with 180 = nθ automatically satisfies m ≤ n-1, so Lemma 1 always applies once an integral multiple appears.",
+  "Sufficiency for n ≥ 3: largest angle C ≥ 60 = nθ/3 ≥ θ, and since C is not a multiple of θ, C > θ; hence (A, A+C) has length > θ and k = floor(A/θ)+1 gives A < kθ ≤ A+θ < A+C and kθ < A+C < nθ, so 1 ≤ k ≤ n-1; with x = kθ-A in (0,C), the children contain (n-k)θ and kθ respectively; total ≤ n-1 cuts.",
+  "Sufficiency for n = 2 (θ = 90°): with two acute angles A,B and x = θ-A, the condition x < C is equivalent to B < θ, which holds; both children then have an angle equal to θ, winning in one cut.",
+  "Necessity: the equilateral start is clean when 180/θ is not an integer, since 60 = mθ would force 180 = 3mθ.",
+  "Necessity invariant: in a clean parent, A and B are not multiples of θ, so a non-clean child must have its multiple among {x, 180-A-x} (resp. {C-x, A+x}); the four pairings yield C, A, B, or 180 as an integral multiple of θ (differences/sums of positive multiples with positive results remain positive integral multiples), contradicting cleanliness or hypothesis (3); hence a clean child always survives and Shan-Yu can keep it forever, so Mulan never wins.",
+  "The answer set within 0 < θ < 180 is exactly θ = 180°/n for integers n ≥ 2 (n = 1 excluded by the range); the two directions cover all θ in the range.",
+  "The falsification examples are consistent with the theorem: θ = 180/√5 and θ = 72° have 180/θ non-integer (Shan-Yu wins), θ = 60° has n = 3 (Mulan wins)."
+ ],
+ "unverified_claims": [],
+ "summary": "The candidate gives a correct, complete, self-contained proof that Mulan guarantees a finite win iff θ = 180°/n for an integer n ≥ 2. The sufficiency direction (manufacture an integral multiple kθ via a largest-angle cut, then halve the multiplier by splitting off θ) and the necessity direction (equilateral start plus the clean-triangle invariant, verified by an exhaustive four-case pairing analysis) were independently re-derived and check out, including edge cases n = 2, n = 3, strictness of cuts, nondegeneracy of children, and the sign positivity in the difference arguments. Termination is uniformly bounded (≤ n-1 cuts), satisfying the 'finitely many steps' requirement. The grid computation is explicitly flagged as non-proof and the main argument does not rely on it.",
+ "transfer_assessment": [
+  "Reusable mechanism: representing a vertex cut by the split parameter x and deriving child angle triples (A, x, 180-A-x), (B, C-x, A+x) — a clean, general bookkeeping device for triangle-cutting games.",
+  "Reusable mechanism: the 'clean invariant' adversarial strategy — show every move from a good state produces a good successor via finite case analysis on sums/differences, a standard and sound technique for proving the opponent cannot be forced to lose.",
+  "Reusable mechanism: reducing a multiple mθ to θ by repeatedly splitting off θ, giving an explicit finite bound (induction on m).",
+  "Reusable mechanism: pigeonhole on (A, A+C) of length > θ to manufacture an integral multiple in one cut.",
+  "Potentially misleading if lifted out of context: the lattice/attractor computation over integer grids — it omits off-grid cuts and, while correctly quarantined here, cannot be used as evidence in continuous-angle games; it is not load-bearing and was not independently verified.",
+  "Minor presentation note (non-fatal): the hypotheses/falsification and computation sections are clearly separated from the proof, which is good practice; no reader could mistake them for premises."
+ ]
+}

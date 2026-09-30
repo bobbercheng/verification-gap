@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3886,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003986,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 5627,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 4361,
+    "webSearchRequests": 0,
+    "costUSD": 0.18543600000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 5211,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 4361,
+   "cache_read_input_tokens": 2282,
+   "output_tokens": 5627,
+   "output_tokens_details": {
+    "thinking_tokens": 5211
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 4361,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 5627,
+     "cache_read_input_tokens": 2282,
+     "cache_creation_input_tokens": 4361,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 4361
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 69356,
+  "is_error": false,
+  "elapsed_seconds": 70.0,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L5.4\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"sentence\",\n  \"explanation\": \"Expanding (4) at x=x_0+nc, y=y_0+me gives (cn-em)^2 + (2c-4e)c·n + 2ce·m + const; the raw n-coefficient is 2c(c-2e), not 4c(c-e), and the m-term 2ce·m is unbounded. The displayed 4c(c-e)n is correct only after substituting em = cn + (em-cn), i.e. 2c y_m = 2c y_0 + 2c^2 n + 2c(em-cn), so the residual is 2c(em-cn)+const = O(1) precisely along |cn-em|<1 (and =const in Case 1, using cq=ep). The write-up never performs this regrouping; it asserts \\\"+O(1)\\\" in Case 2 while (5) only guarantees O(n+m), which cannot be dominated by a linear negative term. Decisive step asserted, not proved; one added sentence repairs it.\",\n  \"objection_correct_note\": null\n}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "deedy-gpt-5.6-sol-xhigh-final-G",
+ "base_id": "deedy-gpt-5.6-sol-xhigh-final",
+ "type": "G",
+ "problem": "3",
+ "objection_key": "witness-claude__upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 13.7,
+  "input_tokens": 18616,
+  "output_tokens": 503,
+  "reasoning_output_tokens": 358,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "sentence",
+  "explanation": "The upper bound depends on the cut count (5), but the quoted passage explicitly omits that count and Section 5 merely invokes it. A short counting sentence would suffice: at most |B|-1 internal B-boundaries and the endpoint q require cuts in A, while at most |A|-1 internal A-boundaries require cuts in B; endpoint coincidences only reduce the number. Thus at most |A|+|B|-1 new cuts are needed."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "claude",
+ "tag": "upper_bound"
+}

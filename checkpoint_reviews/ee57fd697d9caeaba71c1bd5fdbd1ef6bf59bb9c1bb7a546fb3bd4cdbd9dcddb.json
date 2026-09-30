@@ -1,0 +1,62 @@
+{
+  "task_id": "imo-2026-p3",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 1,
+    "completeness": 1,
+    "rigor": 1,
+    "self_contained": 1
+  },
+  "fatal_issues": [
+    "Lower bound proof incomplete: The claim that for Liu's binary partition, any Xiang response yields A >= 1/D is asserted without proof. The 'careful accounting' is entirely missing; the Splitting Lemma only gives monotonicity per cut, not a global bound after n arbitrary cuts on odd-ranked pieces.",
+    "Upper bound proof incomplete: The greedy pairing strategy's inductive proof is sketchy and has unresolved gaps. Case 1 (z_1 >= 2z_2) claims the two equal halves 'will be split in a symmetric way' and 'paired together' without justification. The scaling argument for the residual game is not carried out. Case 2 assumes z_1 - z_2 >= z_3 without proof. The 'majorization' alternative is cited as 'standard in the literature' but not proven here.",
+    "Degenerate cases unhandled: Xiang's strategy fails when p_1 = p_2 (case 2 produces a piece of length 0, which is not a valid cut). Ties in piece lengths make the alternating sum ambiguous (depends on tie-breaking order), but the solution assumes a fixed sorted order without addressing how players choose among equal pieces.",
+    "Lemma 2 (Strategy-Stealing) proof is not rigorous: 'by continuity a small perturbation makes it strictly positive without changing the alternating sum significantly' is a hand-wavy limit argument. A proper proof requires showing that adding marks at the endpoint does not worsen the marker's guaranteed outcome in the discrete game, not just in a limit."
+  ],
+  "required_fixes": [
+    "Provide a rigorous proof that for Liu's binary partition (intervals 2^k/D), any distribution of Xiang's n cuts results in final alternating sum A >= 1/D. This likely requires a potential function or invariant tracking the 'excess' of odd-ranked over even-ranked pieces.",
+    "Complete the inductive proof of Xiang's greedy pairing strategy: handle the p_1 = p_2 degenerate case, prove the two equal halves remain paired through subsequent splits, rigorously establish the scaling property for the residual game in Case 1, and verify the sorting assumption z_1 - z_2 >= z_3 in Case 2 (or handle the alternative).",
+    "Address tie-breaking in the alternating sum: define the game value when pieces have equal lengths (players choose which to pick), and prove the greedy picking lemma holds under worst-case tie-breaking for the player.",
+    "Rewrite Lemma 2 with a rigorous discrete argument: show that if a player has a winning strategy with k < n marks, they can add n-k marks at the very end (creating pieces of length epsilon) and the resulting strategy guarantees at least the same value in the limit epsilon -> 0, using the fact that the picking phase is finite and the added pieces are picked last."
+  ],
+  "verified_claims": [
+    "The final answer c = 2^n / (2^{n+1} - 1) is correct (matches known IMO 2026 P3 solution).",
+    "Lemma 1 (Greedy Picking Optimality): proof by induction is correct.",
+    "Lemma 3 (Splitting Lemma): coefficient analysis proof is correct for strict inequalities; the inequalities are correctly oriented (odd-ranked split cannot increase A, even-ranked split cannot decrease A).",
+    "Liu's binary partition creates intervals of lengths 2^k/D for k=0..n, sorted descending as 2^n/D, 2^{n-1}/D, ..., 1/D.",
+    "Xiang's explicit response to Liu's binary partition (cuts at (3*2^{k-1}-1)/D) yields final pieces with n-1 paired equal lengths and three pieces of length 1/D, giving A = 1/D and L = 2^n/(2^{n+1}-1), proving tightness of the lower bound.",
+    "Base case n=1 of Xiang's upper bound strategy is correctly verified (A <= 1/3).",
+    "Small-n verification table (n=1,2,3,4) matches the formula."
+  ],
+  "unverified_claims": [
+    "For Liu's binary partition, any Xiang response yields A >= 1/D (lower bound).",
+    "Xiang's greedy pairing strategy guarantees A <= 1/D for any Liu play (upper bound).",
+    "The inductive step of the greedy pairing strategy holds for all cases including degenerate ones.",
+    "Lemma 2 (Strategy-Stealing) holds with a rigorous proof.",
+    "The alternating sum is well-defined and the greedy picking lemma holds when pieces have equal lengths (tie-breaking).",
+    "The potential function Phi(S) = sum (-1)^{i-1} min(s_i, 2^{n+1-i}/D) provides a unified proof (not worked out)."
+  ],
+  "summary": "The candidate solution correctly identifies the answer c = 2^n/(2^{n+1}-1) and outlines the standard approach (alternating sum reformulation, Liu's binary partition, Xiang's greedy pairing strategy). However, both the lower and upper bound proofs have fatal gaps: the lower bound lacks any proof that Xiang cannot force A < 1/D against Liu's strategy, and the upper bound's inductive proof is incomplete with unhandled degenerate cases (p_1 = p_2, ties). Lemma 2's continuity argument is not rigorous. The solution is not self-contained (references 'standard literature' for the upper bound). Significant work is needed to make the proof complete and rigorous.",
+  "transfer_assessment": [
+    {
+      "mechanism": "Alternating-sum reformulation",
+      "assessment": "Reusable: The reduction of the alternating pick game to maximizing/minimizing the alternating sum A = y_1 - y_2 + ... + y_{2n+1} with L = (1+A)/2 is a clean, general technique for zero-sum alternating pick games."
+    },
+    {
+      "mechanism": "Splitting Lemma",
+      "assessment": "Reusable: The lemma that splitting an odd-ranked element in a sorted list cannot increase the alternating sum (and even-ranked cannot decrease it) is a powerful monotonicity tool for partition refinement games. The coefficient-analysis proof is correct and generalizable."
+    },
+    {
+      "mechanism": "Liu's binary partition",
+      "assessment": "Reusable: The geometric progression partition (powers of 2) creating a specific alternating sum structure is a clever construction. The tightness example (Xiang's paired response) demonstrates how to force the alternating sum to a minimum."
+    },
+    {
+      "mechanism": "Xiang's greedy pairing strategy",
+      "assessment": "Potentially reusable but currently misleading: The adaptive strategy (split largest in half if >= 2x second largest, else split off a copy of the second largest) is a natural algorithm, but the proof of its correctness is incomplete. Without a rigorous proof, this mechanism cannot be trusted as a general upper-bound technique."
+    },
+    {
+      "mechanism": "Strategy-stealing for mark count",
+      "assessment": "Misleading as presented: The claim that players can assume all n marks are used is true, but the 'continuity/perturbation' proof given is not rigorous. A correct proof requires a discrete limit argument, not hand-waving about continuity."
+    }
+  ]
+}

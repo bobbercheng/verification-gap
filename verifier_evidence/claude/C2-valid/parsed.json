@@ -1,0 +1,18 @@
+{
+ "claim_id": "C2",
+ "condition": "valid",
+ "verifier": "claude",
+ "model": "claude-opus-5",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "The construction refutes it: a pairwise intersecting family of finite sets can have infinitely many inclusion-minimal finite transversals, since the intersecting condition constrains only pairs, not the whole family.",
+  "witness_valid": true,
+  "witness_reason": "All F_n are nonempty finite and share x_1, so pairwise intersecting. Each T_k meets F_n via y_n (n<k) or x_k (n>=k). Deleting y_i misses F_i; deleting x_k misses F_k, so T_k is minimal (upward monotonicity makes single-element checks suffice). The T_k are distinct."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": true
+ },
+ "elapsed_seconds": 11.3
+}

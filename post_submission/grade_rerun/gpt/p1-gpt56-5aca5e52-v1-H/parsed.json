@@ -1,0 +1,42 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p1-gpt56-5aca5e52-v1-H",
+ "base_id": "p1-gpt56-5aca5e52-v1",
+ "type": "H",
+ "problem": "1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 21.6,
+  "input_tokens": 16509,
+  "output_tokens": 531,
+  "reasoning_output_tokens": 388,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": false,
+  "main_gap": "none",
+  "errors": [
+   {
+    "description": "The displayed product calculation is wrong: lcm(m,n)=mn/g, not mn/g². The subsequent conclusion P'=P/g is nevertheless correct, so this is a local, straightforwardly repairable algebraic error.",
+    "quote": "g\\cdot\\frac{\\operatorname{lcm}(m,n)}g\n=\\operatorname{lcm}(m,n)=\\frac{mn}{g^{2}}."
+   }
+  ],
+  "notes": "Apart from this inconsistent equality, the lexicographic descent proves termination and the primewise gcd invariant correctly determines the unique terminal value."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 80,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    927,
+    1007
+   ]
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "p1-h-de44a94b0ce2",
+  "problem": "1",
+  "sha256": "de44a94b0ce22126c5e5d8068a9604c3d5436089aa890d09bed64478d993a262",
+  "path": "checkpoint_inputs_ext/de44a94b0ce22126c5e5d8068a9604c3d5436089aa890d09bed64478d993a262.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "a71e54bb",
+  "turn": 1,
+  "record_ids": [
+    "p1-nemotron-a71e54bb-v1"
+  ],
+  "bytes": 8075,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2678,
+        "output_tokens": 2650,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 37.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic monovariant (K, Ω); at-least-one-survivor via outputs never both 1",
+    "upper_bound_mechanism": "invariant gcd of p-adic valuations via Euclidean step gcd(a,b)=gcd(min,|a-b|)",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. Move gives v_p(gcd)=min(a,b), v_p(lcm/gcd)=|a-b|, uniformly handling equal/zero valuations. Termination: (K,Ω) strictly decreases lexicographically (g=1 vs g>1, m=n cases all checked); final K≤1 and K≥1 always. Invariance of G_p proved per prime; explicit M = ∏ p^{gcd_i v_p(a_i)} stated."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

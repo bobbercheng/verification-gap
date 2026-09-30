@@ -1,0 +1,31 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-H",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "H",
+ "problem": "6",
+ "objection_key": "grade-claude__e0",
+ "text_sha256": "91716928951912a6e0cd05b007e0ee152ca42c90562e94f4b2382602e0a0e786",
+ "text_path": "texts/p6-deedy-gpt-5.6-sol-pro-final/H.md",
+ "system_sha256": "99a10da9c448da05c7f3dba34ea78242f33b94637b415a33e3e1c4670dfe4b18",
+ "system": "You are an impartial grader of partial mathematical write-ups for IMO 2026 Problem 6:\n\n\"Let a_1, a_2, ... be an infinite sequence of integers greater than 1 such that for all n, a_{n+1} is the smallest integer greater than a_n with gcd(a_{n+1}, a_i) > 1 for every i <= n. Prove that there exist positive integers T and L such that a_{n+T} = a_n + L for every positive integer n.\"\n\nA complete proof needs: (C) the characterization that an integer m >= a_1 is a term iff its prime support meets the prime support of every term (equivalently of every earlier term); (F) the FINITENESS / large-prime-erasure lemma: membership depends only on the primes in some finite set (e.g. primes <= a_1 or <= a_1^2), because any term divisible by a large prime is dominated by a smaller number with the same small-prime support that is itself a term -- proved for ALL terms, not checked on examples; (P) the PERIODICITY assembly: with L = product of the finitely many relevant primes, membership is invariant under m -> m+L for every m >= a_1 (from the first term, not merely eventually), and T is the number of terms in a window of length L, giving a_{n+T} = a_n + L for all n >= 1.\n\nGrade ONLY what is written in the text. Do not credit claims that are asserted, conjectured, numerically tested, or left as \"to do\". A mechanism scored 2 must be written out as an argument for all cases; a scored 1 mechanism is named/sketched or checked only on examples; 0 means absent or a wrong approach (e.g. relying on a false lemma such as \"each new term's prime support is a minimal hitting set\").\n\nField mapping for this problem: \"answer\" = the claimed structure (L a product of finitely many small primes, T a count of residues) is stated (2 correct and explicit, 1 vague, 0 absent/wrong); \"reduction\" = (C); \"lower_bound\" = (F) finiteness / large-prime erasure; \"upper_bound\" = (P) global periodicity from n=1; \"wrong_answer_stated\" = true if the text proves only eventual periodicity or relies on a false lemma.\n\nREFERENCE LEDGER (published-solution statements; see LEDGER.md):\n- L6.1: Characterization: x appears in the sequence iff gcd(x, a_i) > 1 for every i (equivalently for every earlier term, or every minimal term under a_m < a_n with rad a_m | rad a_n).\n- L6.2: Large-prime erasure, for all terms: if a_n is divisible by a prime larger than a_1^2 then a_n is not minimal (some q^k c with q | gcd(a_1, a_n) lies in [a_1, a_n) and is a term); hence membership depends only on the small primes (at most a_1^2). Pairwise intersection of the prime supports alone does not imply this: the family F_k = {x_1..x_k, y_k} is pairwise intersecting and has infinitely many minimal finite transversals.\n- L6.3: Periodicity from n = 1: the sequence is exactly the integers a >= a_1 whose small-prime support lies in the set of supports that occur; membership depends only on a mod L with L the product of the small primes; T is the number of residues that appear; a_{n+T} = a_n + L for every n >= 1.\n\nTASK: reference-anchored adjudication of one objection. Below is a reference ledger: statements that every complete proof of this problem establishes (from the published solutions; a text may follow a different route, but each ledger statement, or an equivalent covering the same cases, must be established somewhere in it). An objection has been raised against a step of the write-up (a quote and an objection text). The objection's own opinion of severity, if it states one, is not evidence: decide from the write-up and the ledger only.\n\nReturn ONLY a JSON object with these fields:\n- \"affected_statement\": the ledger id the objection bears on (e.g. \"L5.3\"), or \"none\" if the objection does not concern any required statement.\n- \"objection_correct\": \"yes\" | \"no\" | \"unclear\": is the objection's local claim correct (the counterexample valid, the inference invalid as written, or the statement indeed missing at the quoted place)?\n- \"established_elsewhere\": \"yes\" | \"no\": does the write-up establish the affected statement, for all cases and as written (no repair by you), somewhere other than the quoted place? If \"yes\", give \"elsewhere_quote\": a verbatim excerpt (40-400 characters) of that passage; else null.\n- \"status_as_written\": \"established\" (the affected statement is established as written, the objection notwithstanding) | \"not_established\" (the write-up does not establish it as written) | \"false_display\" (a false line or misprint stands beside an argument in the text that does establish the statement; the argument is present, the line is wrong) | \"not_applicable\" (affected_statement is \"none\").\n- \"repair_distance\": \"symbol\" | \"sentence\" | \"lemma\" | \"none\": the smallest edit that would make the write-up establish the statement (\"none\" if no local edit does, or not applicable).\n- \"explanation\": at most 120 words with the decisive check.\n",
+ "ledger_version": "v1 (reference_adjudication.LEDGER as used in v7, unedited)",
+ "ledger_sha256": "ee10d3b87f7737b076c9fe365d6b5087a4ac8a34e12be77c6285a01a04250ed0",
+ "objection": {
+  "key": "grade-claude__e0",
+  "source_gate": "grade",
+  "source_model": "claude",
+  "tag": "e0",
+  "obligation": "unspecified",
+  "status": "error reported by an ordinary grader",
+  "quote": "2^{|D|}\\le w(D\\setminus\\{p\\})<a_1",
+  "objection": "Minor arithmetic slip bounding terminal sets: since |D\\{p}| = |D|-1, one has 2^{|D|-1} ≤ w(D\\{p}), not 2^{|D|}. The conclusion (|D| bounded, e.g. |D| ≤ a_1) is unaffected.",
+  "load_bearing": null
+ },
+ "user_chars": 10009,
+ "started_utc": "2026-09-06 19:30:55 UTC"
+}

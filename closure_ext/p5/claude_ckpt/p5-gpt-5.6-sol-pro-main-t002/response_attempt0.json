@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-5",
+ "cli": "claude",
+ "cli_model_usage": {
+  "claude-haiku-4-5-20251001": {
+   "inputTokens": 2981,
+   "outputTokens": 21,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.003086,
+   "contextWindow": 200000,
+   "maxOutputTokens": 32000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-4-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 2,
+   "outputTokens": 1177,
+   "cacheReadInputTokens": 1356,
+   "cacheCreationInputTokens": 3223,
+   "webSearchRequests": 0,
+   "costUSD": 0.06234300000000001,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 892,
+   "canonicalModel": "claude-opus-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3223,
+  "cache_read_input_tokens": 1356,
+  "output_tokens": 1177,
+  "output_tokens_details": {
+   "thinking_tokens": 892
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3223,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "not_available",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1177,
+    "cache_read_input_tokens": 1356,
+    "cache_creation_input_tokens": 3223,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3223
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "num_turns": 1,
+ "duration_ms": 14343,
+ "is_error": false,
+ "elapsed_seconds": 15.1,
+ "content": [
+  {
+   "type": "text",
+   "text": "{\"answer\": 2, \"reduction\": 2, \"lower_bound\": 2, \"upper_bound\": 2, \"lower_bound_mechanism\": \"QM-AM-GM on x and y+c (both inequalities, all c>=0)\", \"upper_bound_mechanism\": \"squared inequality (5) + synchronized arithmetic orbits asymptotics forcing a=b; fixed-point separation |p-q|>c plus finite chain subdivision\", \"wrong_answer_stated\": false, \"notes\": \"Complete: derives f(f(y))=2f(y)-y from x=f(y), d>=0 from positivity of orbits, equality of positive displacements via limit of (5) along synchronized orbits, excludes mixed fixed/non-fixed points by separation plus subdivision chain, and verifies sufficiency for all c>=0 and both inequalities.\"}"
+  }
+ ]
+}

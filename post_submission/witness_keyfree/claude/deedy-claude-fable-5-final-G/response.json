@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 6782,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.006867,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 5837,
+    "cacheReadInputTokens": 1224,
+    "cacheCreationInputTokens": 8374,
+    "webSearchRequests": 0,
+    "costUSD": 0.23028700000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 5081,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 8374,
+   "cache_read_input_tokens": 1224,
+   "output_tokens": 5837,
+   "output_tokens_details": {
+    "thinking_tokens": 5081
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 8374,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 5837,
+     "cache_read_input_tokens": 1224,
+     "cache_creation_input_tokens": 8374,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 8374
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 65268,
+  "is_error": false,
+  "elapsed_seconds": 66.0,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"obligations\": {\"reduction\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null},\n \"lower_bound\": {\"status\": \"not_written\", \"quote\": \"there is a set $V_T\\\\subseteq\\\\{0,\\\\dots,n\\\\}$ and signs $s:V_T\\\\to\\\\{\\\\pm1\\\\}$ such that the signed sum $\\\\Xi:=\\\\sum_{j\\\\in V_T}s(j)\\\\,q_j$ satisfies $|\\\\Xi|\\\\le\\\\sum_i\\\\varepsilon_i+[M\\\\text{ odd}]\\\\,a_M$ (standard; details omitted).\", \"witness\": \"Missing statement: for every refinement A of the geometric pieces (2^n u,...,u) by at most n cuts, with the consecutive pairs P_i of the sorted parts viewed as edges on the original pieces, one must construct (for all n and all refinements) a nonempty vertex set V_T and signs s such that |sum_{j in V_T} s(j) q_j| <= sum_i eps_i + [M odd] a_M. This is the entire content of Lemma 4 (the only nontrivial step connecting the pairing slack to the signed subset-sum property (3.1)); the text merely names a 'tree-component argument' and explicitly omits the details. Numerical checks (brute force n<=4, Monte Carlo) do not substitute for the argument.\", \"load_bearing\": \"The lower-bound conclusion D(A) >= u, hence Liu Bang's guarantee of (1+u)/2 = c, rests entirely on Lemma 4, whose only substantive inequality is the omitted one.\"},\n \"upper_bound\": {\"status\": \"written_and_valid\", \"quote\": null, \"witness\": null, \"load_bearing\": null}},\n \"S_valid\": 1,\n \"wrong_answer_stated\": false,\n \"notes\": \"Answer 2^n/(2^{n+1}-1) stated. Lemma 2 (greedy value = odd-rank sum) and Lemma 5 (subset-sum pigeonhole + cross-pairing cuts) are fully argued and check out. Lemma 4's key inequality is asserted as 'standard; details omitted', so the lower bound is not written.\"}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "gate": "grade_im",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 23.2,
+  "input_tokens": 2,
+  "output_tokens": 1553,
+  "cache_read_input_tokens": 3426,
+  "cache_creation_input_tokens": 4672,
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1553,
+    "cacheReadInputTokens": 3426,
+    "cacheCreationInputTokens": 4672,
+    "webSearchRequests": 0,
+    "costUSD": 0.087268,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1044,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 1,
+  "complete": false,
+  "main_gap": "The key Lemma (for every term x, the set of prime divisors of x that are at most a_1 already meets the support of every term) is asserted with proof 'standard; details omitted'. This is the entire difficulty of the problem.",
+  "errors": [
+   {
+    "description": "The Lemma is the heart of the proof: it is what allows replacing the infinite prime-support constraint family by the finitely many primes ≤ a_1. No argument is given; the 'Rp^k construction' alluded to later is never carried out. Without it, equivalence (3), periodicity (4), and the conclusion all rest on an unproved claim.",
+    "quote": "**Proof.** Induction over the sequence terms in increasing order (standard; details omitted). \\(\\square\\)"
+   },
+   {
+    "description": "Section 4, item 4 mentions a strategy ('The construction \\(Rp^k\\) repairs this boundary issue') but this is a description of an intended approach, not a proof; it earns no credit.",
+    "quote": "The construction \\(Rp^k\\) repairs this boundary issue while preserving exactly the small-prime support; the lemma proves the strengthened hypothesis."
+   }
+  ],
+  "notes": "Correct and easy parts: unboundedness with gaps ≤ a_1, characterization (1) of terms via good supports, and the deduction of a_{n+T}=a_n+L from periodicity of the term set modulo L. These are a reduction with the main argument absent. Computational evidence and self-checks earn nothing."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 105,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    1316,
+    1419
+   ]
+  },
+  {
+   "anchored": true,
+   "length": 149,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    4255,
+    4404
+   ]
+  }
+ ],
+ "parse_path": "strict",
+ "run_dir": "grade_im",
+ "run_tag": "",
+ "transport_choice": "cli"
+}

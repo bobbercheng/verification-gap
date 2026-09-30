@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-513b242ad9b4",
+  "problem": "3",
+  "sha256": "513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7",
+  "path": "checkpoint_inputs/513b242ad9b43c944af7bd251b6c160309f2cfd2f26702f94c46ab47bb02eda7.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c2"
+  ],
+  "bytes": 9799,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5893,
+        "output_tokens": 570,
+        "output_tokens_details": {
+          "thinking_tokens": 313
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 570,
+            "cache_read_input_tokens": 5893,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 2^n:...:1 division; proved only n=1, induction/merge inequality sketched as open",
+    "upper_bound_mechanism": "n=1 hand argument (Xiang marks 1/3); halving response only vs geometric config; no general construction",
+    "wrong_answer_stated": false,
+    "notes": "Correct formula stated explicitly but self-labelled conjecture for n>=2. Claim-phase reduction to odd-rank sum is fully and correctly proved for all n. Both universal directions admitted open, supported only by exact-grid (n<=3) and float search (n<=5); merge inequality named but unproved."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

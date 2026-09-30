@@ -1,0 +1,42 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-gpt56-ours-G",
+ "base_id": "p6-gpt56-ours",
+ "type": "G",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 19.7,
+  "input_tokens": 16222,
+  "output_tokens": 585,
+  "reasoning_output_tokens": 377,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "grade": 3,
+  "complete": false,
+  "main_gap": "The central large-prime-erasure lemma is asserted without proof; the claimed induction and boundary-handling construction are entirely absent.",
+  "errors": [
+   {
+    "description": "This lemma is the essential nontrivial step establishing dependence on finitely many primes. Calling its proof a standard induction supplies neither an induction hypothesis nor the argument for removing primes greater than A, so all subsequent periodicity is only conditional.",
+    "quote": "**Lemma.** For every sequence term \\(x\\), the set \\(\\sigma(x)\\) is good.\n\n**Proof.** Induction over the sequence terms in increasing order (standard; details omitted). \\(\\square\\)"
+   }
+  ],
+  "notes": "The scan characterization (1) is correct, and the deduction of global translation-periodicity from the lemma is coherent. However, the omitted lemma contains the proof’s main difficulty; later references to an \\(Rp^k\\) construction do not provide that argument."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 179,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    1242,
+    1419
+   ]
+  }
+ ]
+}

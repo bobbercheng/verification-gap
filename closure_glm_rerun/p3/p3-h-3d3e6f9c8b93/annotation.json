@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-3d3e6f9c8b93",
+  "problem": "3",
+  "sha256": "3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a",
+  "path": "checkpoint_inputs/3d3e6f9c8b93b598c96399731cf1d1c2133f894a6ded1bd75797b19e722a508a.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 6,
+  "record_ids": [
+    "gpt-5.6-sol-pro-main-t006"
+  ],
+  "bytes": 3652,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1490,
+        "output_tokens": 3070,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 40.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "n=1-only median analysis (Liu picks a=2/3)",
+    "upper_bound_mechanism": "n=1-only Xiang reply (halve/cut large piece)",
+    "wrong_answer_stated": false,
+    "notes": "Only n=1 solved correctly (c_1=2/3). Claiming-phase reduction to alternating sum D and layer-cake integral stated, but rigorous induction/exchange proof explicitly deferred, so only a sketch. No all-n lower bound, no all-n upper bound, no general closed form stated or conjectured."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

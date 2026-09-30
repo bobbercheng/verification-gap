@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-e3e333cc4847",
+  "problem": "3",
+  "sha256": "e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb",
+  "path": "checkpoint_inputs/e3e333cc484719ccebc6a5548f8b6c163dddb915e809349911f34a738ea993cb.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "deedy-gpt-5.6-sol-final"
+  ],
+  "bytes": 7191,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4355,
+        "output_tokens": 1540,
+        "output_tokens_details": {
+          "thinking_tokens": 1249
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1540,
+            "cache_read_input_tokens": 4355,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 21.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n partition + column/strip parity induction (uncancelled odd d-strip survives ≤n cuts)",
+    "upper_bound_mechanism": "column-sweep with cancellation: one cut halves residual imbalance, induction on s giving Δ ≤ T/(2^{s+1}-1)",
+    "wrong_answer_stated": false,
+    "notes": "Correct c_n stated; claiming phase reduced rigorously via matching longest-piece strategies and Δ formula. Both bounds rest on a general-n refinement lemma with a level-sweep/cancellation proof, given for all n but compressed—several steps (block counts, (T-d)/2 halving) asserted rather than fully justified."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

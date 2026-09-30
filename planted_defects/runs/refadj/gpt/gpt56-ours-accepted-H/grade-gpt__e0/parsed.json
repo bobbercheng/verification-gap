@@ -1,0 +1,38 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 11.2,
+  "input_tokens": 18884,
+  "output_tokens": 297,
+  "reasoning_output_tokens": 116,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L3.3",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "Liu uses exactly \\(n\\) marks to create, in order, the interval lengths\n\n\\[\n\\delta,2\\delta,4\\delta,\\ldots,2^n\\delta.\n\\]",
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The objection correctly computes the cumulative marks as \\((2^j-1)\\delta\\), not \\(2^j\\delta\\). However, the preceding sentence explicitly specifies the intended binary interval lengths, and the subsequent subset-sum argument establishes the universal lower bound from those lengths. Thus L3.3 is established despite the erroneous displayed endpoint formula. Inserting “\\(-1\\)” repairs it."
+ },
+ "elsewhere_anchor": {
+  "anchored": false,
+  "length": 118,
+  "length_ok": true,
+  "reason": "not found"
+ },
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

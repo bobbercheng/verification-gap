@@ -1,0 +1,56 @@
+{
+ "gate": "grade",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 115.6,
+  "input_tokens": 2,
+  "output_tokens": 10194,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 9787,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7275,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.00738,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 10194,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 9787,
+    "webSearchRequests": 0,
+    "costUSD": 0.35273000000000004,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 9941,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "grade": 7,
+  "complete": true,
+  "main_gap": "none",
+  "errors": [],
+  "notes": "Answer 2^n/(2^{n+1}-1). Picking-phase reduction (greedy/alternating-sum) proved correctly via (2.1),(2.2). Lower bound: pairing multigraph on n+1 pieces with ≤n edges forces an acyclic component, 2-colouring plus the binary signed-sum bound gives D≥u. Upper bound: subset-sum pigeonhole plus a clean cross-pairing cut construction with a valid mark count m−1≤n. All edge cases (loops, single-vertex component, Δ=0, m≤n) are handled. Numerical remarks are decorative but the proof is self-contained."
+ },
+ "anchors": []
+}

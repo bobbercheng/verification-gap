@@ -1,0 +1,63 @@
+{
+  "id": "p2-h-e2a57ad245a0",
+  "problem": "2",
+  "sha256": "e2a57ad245a0214768436fb0735a8f7318f18780348ea7a9b16afa0109348622",
+  "path": "checkpoint_inputs/e2a57ad245a0214768436fb0735a8f7318f18780348ea7a9b16afa0109348622.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p2-deedy-kimi-k3-final",
+    "p2-kimi-k3-main-t023"
+  ],
+  "bytes": 10275,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 4078,
+        "output_tokens": 30000,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 283.4,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4078,
+        "output_tokens": 520,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 7.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "coordinate solve for circle (AKL) equation with K, L on it, powers of B and C constrained by quadratics ConsP/ConsQ",
+    "upper_bound_mechanism": "Apollonius median formula: pow(M)=pow(B)/2−c²/4, pow(N)=pow(C)/2−b²/4, then pow(B)−pow(C)=(c²−b²)/2",
+    "wrong_answer_stated": false,
+    "notes": "Complete coordinate proof. All three angle hypotheses encoded via four law-of-sines relations and coordinates; elimination to ConsP/ConsQ written out; power identities (4),(5) verified by explicit monomial comparison including the nontrivial pq coefficient; finish via Apollonius rigorous."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

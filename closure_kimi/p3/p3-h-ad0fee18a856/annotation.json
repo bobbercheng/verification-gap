@@ -1,0 +1,38 @@
+{
+  "id": "p3-h-ad0fee18a856",
+  "problem": "3",
+  "sha256": "ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb",
+  "path": "checkpoint_inputs/ad0fee18a856e7729d478cbc98a7dc1d3670d13b863a1a7f74cd39177658ebdb.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "glm53-c1"
+  ],
+  "bytes": 7842,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 59.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "explicit partition + exhaustive refinement case-check (n=1 fully; n=2 partial)",
+    "upper_bound_mechanism": "named Xiang cut strategies with max-min balancing (n=1; partial n=2)",
+    "wrong_answer_stated": true,
+    "notes": "Reduction to odd-sum proved via greedy optimality. Only n=1 fully solved (2/3, correct). Conjectured c_2=5/9 is wrong (true 4/7): the claimed proved bound min(S_3,S_4,S_5)<=5/9 fails for (4/7,2/7,1/7), so S_3 is erroneous. No general-n Liu construction or subset-sum pigeonhole upper bound; no formula found."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

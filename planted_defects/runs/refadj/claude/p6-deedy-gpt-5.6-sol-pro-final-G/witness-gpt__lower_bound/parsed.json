@@ -1,0 +1,64 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-G",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "G",
+ "problem": "6",
+ "objection_key": "witness-gpt__lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 7.6,
+  "input_tokens": 2,
+  "output_tokens": 443,
+  "cache_read_input_tokens": 1736,
+  "cache_creation_input_tokens": 4605,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3853,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003948,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 443,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 4605,
+    "webSearchRequests": 0,
+    "costUSD": 0.05800299999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 122,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "Lemma 2 is the write-up's sole vehicle for large-prime erasure (L6.2): it is what forces every prime of every minimal support into the finite set P, and hence makes C finite and L well-defined. Its proof is literally 'This follows by a descent on the weight w (standard; details omitted)', supplying no construction of D, no proof that p survives, no strict decrease, no termination. Nowhere else does the text bound primes: the approaches list only asserts the same descent, and Lemma 1 handles bounded-size families given the bound. So the ledger statement is unestablished; supplying the full descent argument is a lemma-sized repair.",
+  "objection_correct_reason": null
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "witness",
+ "source_model": "gpt",
+ "tag": "lower_bound"
+}

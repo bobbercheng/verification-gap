@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-ee57fd697d9c",
+  "problem": "3",
+  "sha256": "ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb",
+  "path": "checkpoint_inputs/ee57fd697d9caeaba71c1bd5fdbd1ef6bf59bb9c1bb7a546fb3bd4cdbd9dcddb.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "nemotron-p3-2"
+  ],
+  "bytes": 15901,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 9089,
+        "output_tokens": 876,
+        "output_tokens_details": {
+          "thinking_tokens": 581
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 876,
+            "cache_read_input_tokens": 9089,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 17.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "1:2:4:...:2^n division + parity 'splitting lemma' (final accounting asserted)",
+    "upper_bound_mechanism": "greedy pairing/halving split strategy (proved only n=1)",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form; Lemma 1 reduction to odd-rank alternating sum adequately proved. Splitting Lemma proof ignores parity shift of subsequent elements, and the decisive claim 'A >= 1/D for any Xiang distribution' is asserted via 'careful accounting'. Upper bound induction collapses into 'one can show', 'standard in the literature', omitted bookkeeping; only n=1 verified. No subset-sum pigeonhole."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

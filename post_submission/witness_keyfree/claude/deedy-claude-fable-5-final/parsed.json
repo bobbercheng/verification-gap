@@ -1,0 +1,74 @@
+{
+ "gate": "witness_blind",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "deedy-claude-fable-5-final",
+ "base_id": "deedy-claude-fable-5-final",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 59.4,
+  "input_tokens": 2,
+  "output_tokens": 5275,
+  "cache_read_input_tokens": 1224,
+  "cache_creation_input_tokens": 9027,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 7275,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0073750000000000005,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 5275,
+    "cacheReadInputTokens": 1224,
+    "cacheCreationInputTokens": 9027,
+    "webSearchRequests": 0,
+    "costUSD": 0.222767,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 4948,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Answer 2^n/(2^{n+1}-1) stated and boxed. Lemma 2 (greedy picking, inequalities (2.1),(2.2)) checked correct. Lemma 4 tree-component/2-colouring argument with (3.1) verified for all n. Lemma 5 subset-sum pigeonhole plus cross-pairing cuts checked: mark count ≤ n, grids coincide on [0,β_q], leftover sum Δ ≤ u."
+ },
+ "anchors": {}
+}

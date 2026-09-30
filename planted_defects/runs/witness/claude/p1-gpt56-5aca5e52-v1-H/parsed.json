@@ -1,0 +1,74 @@
+{
+ "gate": "witness",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p1-gpt56-5aca5e52-v1-H",
+ "base_id": "p1-gpt56-5aca5e52-v1",
+ "type": "H",
+ "problem": "1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 35.6,
+  "input_tokens": 2,
+  "output_tokens": 2619,
+  "cache_read_input_tokens": 2094,
+  "cache_creation_input_tokens": 3368,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 2969,
+    "outputTokens": 12,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003029,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2619,
+    "cacheReadInputTokens": 2094,
+    "cacheCreationInputTokens": 3368,
+    "webSearchRequests": 0,
+    "costUSD": 0.100212,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2296,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Move description (min, |a-b|) and the 'never two 1s' fact are both proved. Termination uses the lex pair (P,K) with correct two-case analysis and the at-most-one/at-least-one endgame. Invariance uses gcd(a,b)=gcd(min,|a-b|) with zero and equal cases addressed. Minor slip: 'lcm(m,n)=mn/g^2' (should be mn/g), but the used conclusion P'=P/g and both cases are unaffected."
+ },
+ "anchors": {}
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-d31e74d07a68",
+  "problem": "6",
+  "sha256": "d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1",
+  "path": "checkpoint_inputs/d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "turn": 1,
+  "record_ids": [
+    "p6-gpt56-ours"
+  ],
+  "bytes": 6345,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3604,
+        "cache_read_input_tokens": 901,
+        "output_tokens": 1506,
+        "output_tokens_details": {
+          "thinking_tokens": 1153
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3604,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1506,
+            "cache_read_input_tokens": 901,
+            "cache_creation_input_tokens": 3604,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3604
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 19.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Large-prime erasure: for any term x, build m=Rp^k with P(m)=σ(x)=P(x)∩{p≤a_1}, a_1≤m<x; induct on terms to show m is a term, so σ(x) is good",
+    "upper_bound_mechanism": "L=∏_{p≤a_1}p makes σ(m+L)=σ(m), so membership is L-periodic on all of [a_1,∞); T = #terms in [a_1,a_1+L-1], each length-L window has T terms and a_n+L is a term",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: characterization, erasure lemma (fully proved by induction with the R·p^k construction handling the m<a_1 boundary), and global periodicity from n=1 with T,L identified. Numerics explicitly labeled non-essential. Bounds m<x verified in both k=0 and k>0 cases."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

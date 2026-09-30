@@ -1,0 +1,66 @@
+{
+  "id": "p5-deedy-gpt-5.6-sol-final",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1.md",
+  "bytes": 6215,
+  "sha256": "434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5659,
+        "output_tokens": 2610,
+        "output_tokens_details": {
+          "thinking_tokens": 2299
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2610,
+            "cache_read_input_tokens": 5659,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 29.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to x and f(y), using f(x)+y = x+f(y)",
+    "upper_bound_mechanism": "symmetrized estimate |g(u)-g(v)| <= (sqrt f(u)-sqrt f(v))^2, giving strict monotonicity, continuity, then telescoping partition sum",
+    "wrong_answer_stated": false,
+    "notes": "All obligations met: iterate identity f(f(y))=2f(y)-y with g>=0; symmetric substitution (f(u),v)/(f(v),u) yields the two-sided quadratic bound; monotonicity, continuity, and mesh-refinement telescoping force g constant without extra hypotheses (fixed points included); both inequalities verified for f(x)=x+c, c>=0."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "p6-deedy-deepseek-v4-pro-final",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs/1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897.md",
+  "bytes": 4597,
+  "sha256": "1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 1289,
+        "output_tokens": 12000,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 207.4,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 9,
+        "output_tokens": 730,
+        "cache_read_input_tokens": 1920,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 14.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "minimal transversal stabilization (asserted, 'one shows')",
+    "upper_bound_mechanism": "finite union of residue classes mod lcm (unfinished)",
+    "wrong_answer_stated": false,
+    "notes": "Outline only; no completed arguments. Step 3 (characterization) is a one-line sketch; the key finiteness lemma (step 6) is asserted ('one shows') not proven; step 7 explicitly admits periodicity from n=1 is not derived. Full proof section empty."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "1a17db06150890d96091e48b4f80b7808d82ff4faa46880299317e4fba55c897",
+  "original_bytes": 4597,
+  "input_anonymized": false
+}

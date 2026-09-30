@@ -1,0 +1,46 @@
+{
+  "id": "p4-h-dcc0680e3d90",
+  "problem": "4",
+  "sha256": "dcc0680e3d90f47f49d2d2f14bc8c5509e52af15e4e23cd97ece850ef207a14f",
+  "path": "checkpoint_inputs_ext/dcc0680e3d90f47f49d2d2f14bc8c5509e52af15e4e23cd97ece850ef207a14f.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 8,
+  "record_ids": [
+    "p4-gpt-5.6-sol-max-main-t008"
+  ],
+  "bytes": 3690,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 962,
+        "output_tokens": 7204,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 118.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "recursive kt-reduction lemma (proved); complementary-grid-angle initialization only sketched, grid-point existence gap",
+    "upper_bound_mechanism": "acute/non-obtuse retention for θ>90° only",
+    "wrong_answer_stated": false,
+    "notes": "Correct set θ=180°/n stated only as a conjecture. Recursive kt-lemma is fully proved by induction, both children carry multiples of t and both discard choices handled. Winning direction lacks universal initialization (grid-point existence and n=2 open). Avoidance is a one-line acute-retention claim for θ>90° only; safe-angle invariant absent, main case admitted unsolved."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

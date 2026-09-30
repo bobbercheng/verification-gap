@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-a2a14ff8b369",
+  "problem": "3",
+  "sha256": "a2a14ff8b36953a77fa3fe426c8b070371a6c14a11fcd9260ac9e81489827c18",
+  "path": "checkpoint_inputs/a2a14ff8b36953a77fa3fe426c8b070371a6c14a11fcd9260ac9e81489827c18.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 7,
+  "record_ids": [
+    "claude-fable-5-main-t007"
+  ],
+  "bytes": 3325,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2261,
+        "cache_read_input_tokens": 742,
+        "output_tokens": 526,
+        "output_tokens_details": {
+          "thinking_tokens": 255
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2261,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 526,
+            "cache_read_input_tokens": 742,
+            "cache_creation_input_tokens": 2261,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2261
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 8.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric 1:2:...:2^n division with parity-measure/integrality sketch (open gap)",
+    "upper_bound_mechanism": "XY cut operations (halve largest, subtract-pair cancellation) recursion; only verified m<=3",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form but explicitly labeled CONJECTURED, backed only by brute force n<=4. Lemma A (reduction) asserted 'to be proved'. Lower bound gives right construction with two proof ideas, both marked OPEN GAP. Upper bound names sound operations but induction fails; verified by hand only m<=3. No completed argument for general n."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

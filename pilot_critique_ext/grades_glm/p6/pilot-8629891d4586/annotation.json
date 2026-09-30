@@ -1,0 +1,42 @@
+{
+  "id": "pilot-8629891d4586",
+  "lineage": "pilot",
+  "model": "pilot",
+  "context": null,
+  "turn": null,
+  "path": "pilot_critique_ext/p6-mid-C-r1/output.md",
+  "bytes": 10066,
+  "sha256": "8629891d458639118d9465fe18c5a0f01675e0c675cc841f0093090ade261f64",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4220,
+        "output_tokens": 7990,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 85.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "greedy killing -> permanent with cofactor <= a_1 (Lemma 7) -> finiteness via antichain/self-duality",
+    "upper_bound_mechanism": "L = lcm of finitely many permanents; T = count of members in [a_1, a_1+L)",
+    "wrong_answer_stated": false,
+    "notes": "Complete, correct proof. Lemmas 1-2 give the full membership characterization; Lemmas 6-7 plus the Theorem prove finiteness of permanents via greedy killing and an antichain contradiction (all cases, not examples); Lemma 8 yields a_{n+T}=a_n+L from n=1. Minor wording: 'exactly' in Lemma 3(c) should read 'finite minimal transversals'; the proof only uses valid directions."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

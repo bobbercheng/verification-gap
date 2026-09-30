@@ -1,0 +1,44 @@
+{
+  "id": "p1-h-cedf6cf88069",
+  "problem": "1",
+  "sha256": "cedf6cf880693797f9a5e2b3c897fa442dbbb9302c303791c708cd6b17468356",
+  "path": "checkpoint_inputs_ext/cedf6cf880693797f9a5e2b3c897fa442dbbb9302c303791c708cd6b17468356.md",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": "gpt-5.6-sol-max-main",
+  "turn": 2,
+  "record_ids": [
+    "p1-gpt-5.6-sol-max-main-t002"
+  ],
+  "bytes": 1665,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 15602,
+        "cached_input_tokens": 10624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 466,
+        "reasoning_output_tokens": 331
+      },
+      "sec": 15.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic descent of (P,r)",
+    "upper_bound_mechanism": "prime-adic valuation gcd invariant",
+    "wrong_answer_stated": false,
+    "notes": "The formula for M and valuation-gcd invariant are correctly stated, including the all-zero convention. Termination via lexicographic descent is valid, but the write-up merely asserts exactly one nonunit without proving that the board cannot become all 1s. It also omits the corresponding no-two-1s output argument from the elementary move description."
+  },
+  "S": 1,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

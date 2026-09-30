@@ -1,0 +1,44 @@
+{
+  "id": "p5-h-b2b39d07c157",
+  "problem": "5",
+  "sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+  "path": "checkpoint_inputs_ext/b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "2587b733",
+  "turn": 2,
+  "record_ids": [
+    "p5-nemotron-2587b733-v2"
+  ],
+  "bytes": 6189,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 17541,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1537,
+        "reasoning_output_tokens": 1399
+      },
+      "sec": 41.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "algebraic verification with incorrect substitution",
+    "upper_bound_mechanism": "orbit approximation and connectedness separation",
+    "wrong_answer_stated": true,
+    "notes": "Necessity is complete: the orbit identity gives nonnegative deviations; Diophantine approximation equates positive deviations; connectedness excludes mixing fixed and non-fixed points. Verification contains a substantive error: the middle term should be (x+y+c)/2, not (x+y+2c)/2, so its claimed square equivalence is false for c>0."
+  },
+  "S": 1,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

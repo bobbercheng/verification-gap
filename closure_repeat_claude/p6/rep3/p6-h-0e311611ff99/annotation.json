@@ -1,0 +1,70 @@
+{
+  "id": "p6-h-0e311611ff99",
+  "problem": "6",
+  "sha256": "0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780",
+  "path": "checkpoint_inputs/0e311611ff991dab2378dd3b9c33edc3355e4fe14224582712bffe37dde9f780.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "8828b58a",
+  "turn": 2,
+  "record_ids": [
+    "p6-nemotron-8828b58a-v2"
+  ],
+  "bytes": 16700,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 10076,
+        "output_tokens": 1183,
+        "output_tokens_details": {
+          "thinking_tokens": 899
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1183,
+            "cache_read_input_tokens": 10076,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 16.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "CRT construction of a coprime witness (logically broken); no large-prime erasure",
+    "upper_bound_mechanism": "eventual merge of progressions + 'uniqueness of greedy sequence' backward induction (invalid)",
+    "wrong_answer_stated": true,
+    "notes": "Builds on the false 'P(a_{n+1}) is a minimal hitting set' lemma, contradicted by its own example (42={2,3,7}). Lemma 1's CRT witness is coprime to earlier terms, so no contradiction arises. Lemma 3 is admittedly hand-wavy; Lemma 6's backward step misuses forward uniqueness. Only eventual periodicity is (partially) argued."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

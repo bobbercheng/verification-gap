@@ -1,0 +1,67 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 904,
+    "cacheReadInputTokens": 3484,
+    "cacheCreationInputTokens": 6630,
+    "webSearchRequests": 0,
+    "costUSD": 0.090652,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 598,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6630,
+   "cache_read_input_tokens": 3484,
+   "output_tokens": 904,
+   "output_tokens_details": {
+    "thinking_tokens": 598
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 6630,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 904,
+     "cache_read_input_tokens": 3484,
+     "cache_creation_input_tokens": 6630,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 6630
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 11118,
+  "is_error": false,
+  "elapsed_seconds": 12.7,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"grade\": 7, \"complete\": true, \"main_gap\": \"none\",\n \"errors\": [{\"description\": \"Typo in the Type B case: ℓ is written as m+n instead of mn. The surrounding text immediately uses the correct value (1, mn) and the bound mn ≥ 4 holds, so the argument is unaffected.\", \"quote\": \"Then $\\\\ell = m+n \\\\ge 2\\\\cdot 2 = 4 > 1$, so the pair $(m,n)$ is replaced by $(1, mn)$\"}],\n \"notes\": \"Termination via product P (halves on g≥2) and count of 1's (strictly increases on g=1, never decreases) is rigorous. Existence of a surviving entry >1 is proved. Invariance of gcd of p-adic valuations under (α,β)→(min,|α−β|) is correctly shown, including the all-zero case, and yields M explicitly. Complete.\"}"
+   }
+  ]
+ }
+}

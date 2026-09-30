@@ -1,0 +1,74 @@
+{
+ "gate": "witness_blind",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "O",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 46.6,
+  "input_tokens": 2,
+  "output_tokens": 4163,
+  "cache_read_input_tokens": 1280,
+  "cache_creation_input_tokens": 4947,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4138,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004233,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 4163,
+    "cacheReadInputTokens": 1280,
+    "cacheCreationInputTokens": 4947,
+    "webSearchRequests": 0,
+    "costUSD": 0.154195,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 3845,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Mapping: reduction = greedy-scan reformulation, support-only acceptance, self-duality (1)/(2), and derivation of a_{n+T}=a_n+L from finiteness of C; lower_bound = Lemma 1 (bounded-size minimal supports finite via infinite sunflower + self-duality); upper_bound = Lemma 2 (weight descent bounding size of a minimal support through each prime). All steps checked; no gaps found."
+ },
+ "anchors": {}
+}

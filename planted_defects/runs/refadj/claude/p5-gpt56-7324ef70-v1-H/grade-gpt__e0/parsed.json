@@ -1,0 +1,63 @@
+{
+ "gate": "refadj",
+ "checker": "claude",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p5-gpt56-7324ef70-v1-H",
+ "base_id": "p5-gpt56-7324ef70-v1",
+ "type": "H",
+ "problem": "5",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 15.3,
+  "input_tokens": 2,
+  "output_tokens": 1138,
+  "cache_read_input_tokens": 2282,
+  "cache_creation_input_tokens": 3442,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3080,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0031799999999999997,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1138,
+    "cacheReadInputTokens": 2282,
+    "cacheCreationInputTokens": 3442,
+    "webSearchRequests": 0,
+    "costUSD": 0.064021,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 821,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L5.1",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "symbol",
+  "explanation": "The middle term of the chain is (f(x)+y)/2 = (x+C+y)/2, so the displayed \"(x+y+2C)/2\" is a misprint; as printed the left inequality is false (x=y=C=1 gives sqrt(2.5)≈1.58 < 2). However, the same sentence supplies the correct argument: \"which is RMS--AM--GM for the positive numbers x and y+C\", which is exactly the valid verification of both inequalities for all x,y>0 and all C>=0 once the middle term is written (x+y+C)/2. Hence a false display line standing beside a correct argument; the repair is the single symbol 2C -> C."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

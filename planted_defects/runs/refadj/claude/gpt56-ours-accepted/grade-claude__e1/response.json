@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 5047,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005142,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1316,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 6075,
+    "webSearchRequests": 0,
+    "costUSD": 0.0944815,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 967,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6075,
+   "cache_read_input_tokens": 1643,
+   "output_tokens": 1316,
+   "output_tokens_details": {
+    "thinking_tokens": 967
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 6075,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1316,
+     "cache_read_input_tokens": 1643,
+     "cache_creation_input_tokens": 6075,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 6075
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 16114,
+  "is_error": false,
+  "elapsed_seconds": 16.8,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L3.3\",\n  \"objection_correct\": \"no\",\n  \"established_elsewhere\": \"yes\",\n  \"elsewhere_quote\": \"Since every connected multigraph has \\\\(e_C\\\\ge v_C-1\\\\), this component has \\\\(e_C=v_C-1\\\\) and is a tree (an isolated vertex counts as a tree).\",\n  \"status_as_written\": \"established\",\n  \"repair_distance\": \"none\",\n  \"explanation\": \"The write-up does not merely allow loops and forget them: immediately after the counting step it concludes that the chosen component satisfies e_C = v_C - 1 and is a tree. A connected multigraph with a loop (or parallel edge) has e_C >= v_C, so the deduction e_C < v_C together with e_C >= v_C - 1 forces e_C = v_C - 1 and hence a loopless, simple tree; the bipartition and the sign expansion then apply. The needed fact is therefore stated, not implicit, and no edit is required.\",\n  \"objection_severity\": \"none\"\n}"
+   }
+  ]
+ }
+}

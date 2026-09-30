@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "p5-nemotron-2587b733-v2",
+ "tag": "e1",
+ "text_sha256": "b2b39d07c15768898e2fec5011ceb4a759cf3065fd2f71451507e8cc2106b7bf",
+ "system_sha256": "a36040ef8ad0bc15ea3dc1d6fe9b635e68c3d938c53063af0874e036ad4de792",
+ "objection": {
+  "obligation": "unspecified",
+  "status": "error reported by an ordinary grader",
+  "quote": "For $f(x) = x + c$ ($c \\ge 0$) the chain becomes\n$$\n\\sqrt{\\frac{x^2 + (y+c)^2}{2}} \\;\\ge\\; \\frac{x + y + 2c}{2} \\;\\ge\\; \\sqrt{x(y+c)}.\n$$",
+  "witness": "The verification substitutes the middle expression incorrectly: it should be (x+y+c)/2, not (x+y+2c)/2. The subsequent square identity is correct only for the former, so this is a repairable typo.",
+  "load_bearing": null
+ },
+ "started_utc": "2026-09-06 05:47:23 UTC"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "p2-gpt-5.6-sol-xhigh-round1-t041",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-round1",
+  "turn": 41,
+  "path": "checkpoint_inputs/5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296.md",
+  "bytes": 2685,
+  "sha256": "5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 655,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 106.8,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 655,
+        "output_tokens": 403,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 8.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "power-of-a-point determinant D=0 (equality of powers of M,N w.r.t. (AKL))",
+    "wrong_answer_stated": false,
+    "notes": "Correct target and a coherent complex/determinant strategy; K and L parametrized by x,y,z with third condition as Q=0. However the boxed identity D ∝ Q is only 'verified' computationally, not proved—the write-up itself flags this gap—so the finish is reduced to an unexecuted computation. No key-circle mechanism."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "5e0ec43edbc366132322d87a5dadaaa14c25f34ad85592e70aab7761102c7296",
+  "original_bytes": 2685,
+  "input_anonymized": false
+}

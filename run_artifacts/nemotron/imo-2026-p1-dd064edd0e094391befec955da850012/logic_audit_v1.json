@@ -1,0 +1,82 @@
+{
+  "task_id": "imo-2026-p1",
+  "verdict": "confirm",
+  "implication_checks": [
+    {
+      "location": "Lemma 1 (Lexicographic descent), lines 37-60",
+      "premises": [
+        "State defined as (K, S) where K = count of integers > 1, S = sum of Ω(x) (total prime factors with multiplicity)",
+        "Lexicographic order on ℕ²: (K₁,S₁) < (K₂,S₂) iff K₁ < K₂ or (K₁ = K₂ and S₁ < S₂)",
+        "Move replaces m,n > 1 with g = gcd(m,n) and L = mn/g²",
+        "For each prime p, exponents (a,b) become (min(a,b), |a-b|), sum decreases by min(a,b) = v_p(g)"
+      ],
+      "conclusion": "Every legal move strictly decreases (K, S) lexicographically",
+      "assessment": "Valid. Case analysis exhaustive: (1) g=1 → S unchanged, K decreases by 1 (since L=mn>1, g=1); (2) g>1, m≠n → S decreases by Ω(g)≥1, L>1 (since some |a-b|>0), K unchanged; (3) g>1, m=n → S decreases, L=1, K decreases by 1. In all cases (K,S) strictly decreases."
+    },
+    {
+      "location": "Termination argument, lines 62-64",
+      "premises": [
+        "Initial state: K=2026, S≥2026",
+        "State space ℕ² with well-founded lexicographic order",
+        "Lemma 1: every move strictly decreases state"
+      ],
+      "conclusion": "Process terminates after finitely many moves",
+      "assessment": "Valid. Standard well-foundedness argument: strictly decreasing sequence in a well-founded order must be finite."
+    },
+    {
+      "location": "Final state K=1, lines 66-76",
+      "premises": [
+        "At termination no move possible → cannot have two integers >1 → K ≤ 1",
+        "Initially K=2026 ≥ 1",
+        "Each move on m,n>1 produces g,L with at least one >1 (proved by cases: g=1 ⇒ L>1; g>1 ⇒ g>1 and at least one of m/g, n/g ≥2 unless m=n=g where g>1)"
+      ],
+      "conclusion": "K never drops below 1; at termination K=1 exactly, so exactly one integer M>1 remains",
+      "assessment": "Valid. Inductive preservation of K≥1: base K=2026≥1; step removes two >1, adds at least one >1, so K decreases by at most 1. Since moves only allowed when K≥2, K stays ≥1. At termination K≤1 and K≥1 ⇒ K=1."
+    },
+    {
+      "location": "Invariant G_p = gcd of p-adic valuations, lines 82-96",
+      "premises": [
+        "For fixed prime p, multiset of exponents {v_p(x)} on board",
+        "Move replaces a=v_p(m), b=v_p(n) with min(a,b), |a-b|",
+        "gcd(a,b) = gcd(min(a,b), |a-b|) (Euclidean algorithm step)",
+        "Other elements unchanged"
+      ],
+      "conclusion": "G_p := gcd({v_p(x)}) is invariant throughout the process",
+      "assessment": "Valid. gcd of full multiset = gcd(gcd(rest), gcd(a,b)) = gcd(gcd(rest), gcd(min(a,b),|a-b|)) = gcd of new multiset. Holds for all primes independently."
+    },
+    {
+      "location": "Determination of final p-adic valuation, lines 106-114",
+      "premises": [
+        "Part 1: process terminates with exactly one M>1, all other 2025 integers = 1",
+        "For prime p, v_p(1)=0, so final multiset = {v_p(M), 0, ..., 0} (2025 zeros)",
+        "gcd(v_p(M), 0, ..., 0) = v_p(M)",
+        "G_p is invariant (from previous step)"
+      ],
+      "conclusion": "v_p(M) = G_p = gcd(v_p(a₁), ..., v_p(a_{2026})) for every prime p",
+      "assessment": "Valid. Direct consequence of termination structure and invariant. gcd(x,0,...,0)=x holds for x=0 as well (gcd(0,0)=0)."
+    },
+    {
+      "location": "Final integer M, lines 118-125",
+      "premises": [
+        "v_p(M) = G_p for all primes p",
+        "M = ∏ p^{v_p(M)} (unique prime factorization)",
+        "G_p depends only on initial multiset {a₁,...,a_{2026}}"
+      ],
+      "conclusion": "M = ∏ p^{G_p} is uniquely determined by initial multiset, independent of move choices",
+      "assessment": "Valid. Prime factorization is unique; each G_p is a function of initial data only."
+    }
+  ],
+  "invalid_inferences": [],
+  "counterexample_search": [
+    {"initial": [2, 2], "predicted_M": 2, "verdict": "match"},
+    {"initial": [4, 8], "predicted_M": 2, "verdict": "match"},
+    {"initial": [6, 10], "predicted_M": 30, "verdict": "match"},
+    {"initial": [6, 10, 15], "predicted_M": 30, "verdict": "match"},
+    {"initial": [4, 9], "predicted_M": 36, "verdict": "match"},
+    {"initial": [8, 12], "predicted_M": 6, "verdict": "match"},
+    {"initial": [8, 18], "predicted_M": 18, "verdict": "match"},
+    {"initial": [12, 18], "predicted_M": 6, "verdict": "match"}
+  ],
+  "required_fixes": [],
+  "summary": "The proof is complete and correct. Part 1 establishes termination via the well-founded lexicographic measure (K, Ω) where K = count of integers >1 and Ω = total prime factors with multiplicity, and proves K=1 at termination by showing K never drops below 1. Part 2 identifies the invariant G_p = gcd of p-adic valuations (which equals the gcd of initial exponents for each prime), and uses the Part 1 termination result (exactly one M>1, rest are 1) to conclude v_p(M) = G_p. The final integer M = ∏ p^{G_p} is uniquely determined by the initial multiset. All load-bearing implications are valid; the redundant per-prime sum-decrease argument in 'Behaviour of p-adic valuations' does not create a logical gap because the core deduction uses the already-proved global termination. No invalid inferences found; no fixes required."
+}

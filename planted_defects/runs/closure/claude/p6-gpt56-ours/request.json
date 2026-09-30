@@ -1,0 +1,17 @@
+{
+ "gate": "closure",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p6-gpt56-ours",
+ "base_id": "p6-gpt56-ours",
+ "type": "O",
+ "problem": "6",
+ "text_sha256": "d31e74d07a68c601108007d03eef439d334e0e3e7d0e07bcd0d92a8b934424f1",
+ "text_path": "texts/p6-gpt56-ours/original.md",
+ "system_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+ "system": "You are an impartial grader of partial mathematical write-ups for IMO 2026 Problem 6:\n\n\"Let a_1, a_2, ... be an infinite sequence of integers greater than 1 such that for all n, a_{n+1} is the smallest integer greater than a_n with gcd(a_{n+1}, a_i) > 1 for every i <= n. Prove that there exist positive integers T and L such that a_{n+T} = a_n + L for every positive integer n.\"\n\nA complete proof needs: (C) the characterization that an integer m >= a_1 is a term iff its prime support meets the prime support of every term (equivalently of every earlier term); (F) the FINITENESS / large-prime-erasure lemma: membership depends only on the primes in some finite set (e.g. primes <= a_1 or <= a_1^2), because any term divisible by a large prime is dominated by a smaller number with the same small-prime support that is itself a term -- proved for ALL terms, not checked on examples; (P) the PERIODICITY assembly: with L = product of the finitely many relevant primes, membership is invariant under m -> m+L for every m >= a_1 (from the first term, not merely eventually), and T is the number of terms in a window of length L, giving a_{n+T} = a_n + L for all n >= 1.\n\nGrade ONLY what is written in the text. Do not credit claims that are asserted, conjectured, numerically tested, or left as \"to do\". A mechanism scored 2 must be written out as an argument for all cases; a scored 1 mechanism is named/sketched or checked only on examples; 0 means absent or a wrong approach (e.g. relying on a false lemma such as \"each new term's prime support is a minimal hitting set\").\n\nReturn ONLY a JSON object:\n{\"answer\": 0|1|2, \"reduction\": 0|1|2, \"lower_bound\": 0|1|2, \"upper_bound\": 0|1|2,\n \"lower_bound_mechanism\": \"<short name or 'none'>\", \"upper_bound_mechanism\": \"<short name or 'none'>\",\n \"wrong_answer_stated\": true|false, \"notes\": \"<=60 words\"}\nField mapping for this problem: \"answer\" = the claimed structure (L a product of finitely many small primes, T a count of residues) is stated (2 correct and explicit, 1 vague, 0 absent/wrong); \"reduction\" = (C); \"lower_bound\" = (F) finiteness / large-prime erasure; \"upper_bound\" = (P) global periodicity from n=1; \"wrong_answer_stated\" = true if the text proves only eventual periodicity or relies on a false lemma.\n",
+ "prompt_source": "closure_rubric_p6.txt",
+ "user_chars": 6367,
+ "started_utc": "2026-09-06 19:16:12 UTC"
+}

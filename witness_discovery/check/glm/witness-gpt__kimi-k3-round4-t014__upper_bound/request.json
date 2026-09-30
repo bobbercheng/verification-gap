@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "kimi-k3-round4-t014",
+ "tag": "upper_bound",
+ "text_sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "written_but_invalid",
+  "quote": "So the hypothesis of Lemma 4.1(b) holds, and some ordering of $P\\cup N$ has chain value $g\\le\\frac{S}{2^m-1}$.",
+  "witness": "NON-SEQUITUR: chain value was defined using decreasing order, but Lemma 4.1 proves only that some possibly different ordering has the desired residue. Order matters: for {10,9,8,7,5}, decreasing order has residue 5, whereas order 10,8,7,9,5 has residue 1. Indeed P={8,7,5}, N={10,9} satisfy sums 20 and 19 with no subset sum strictly between them, so the lemma's premises hold while the decreasing residue of P∪N is 5. No argument shows decreasing order preserves or lowers the residue.",
+  "load_bearing": "The subsequent XY strategy explicitly takes B={b_1≥⋯≥b_r} with the decreasing-order chain value supplied by Theorem 4.2. The proof has not established the existence of such a B, so the all-n counterstrategy is unsupported as written."
+ },
+ "started_utc": "2026-09-06 05:39:21 UTC"
+}

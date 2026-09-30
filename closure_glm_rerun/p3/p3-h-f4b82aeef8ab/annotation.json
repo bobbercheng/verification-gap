@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-f4b82aeef8ab",
+  "problem": "3",
+  "sha256": "f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00",
+  "path": "checkpoint_inputs/f4b82aeef8ab54ee901122f00fb6bf775c9cc32e38c36b111c6ba374764b6e00.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round3",
+  "turn": 14,
+  "record_ids": [
+    "kimi-k3-round3-t014"
+  ],
+  "bytes": 2892,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1347,
+        "output_tokens": 3316,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 41.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "geometric division + matching formula/block lemma",
+    "upper_bound_mechanism": "pigeonhole on signed subset sums + halving cancellation",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form stated as answer. Reduction to alternating sum asserted, not written out. Part A (lower bound) declared 'proved modulo write-up' with only compressed sketch; block lemma sketched, tree inequality unproven. Part B (upper bound) merely sketched and numerically verified for n≤4; needed chain theorem unproven. No fully written all-n argument."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

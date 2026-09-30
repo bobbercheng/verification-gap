@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-7a92204a1295",
+  "problem": "3",
+  "sha256": "7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29",
+  "path": "checkpoint_inputs/7a92204a12953ce9675e17ee85eb49c3fd09eef819b1089b8aeb68b59f073f29.md",
+  "lineage": "ours-gpt56sol-ultra",
+  "model": "gpt-5.6-sol",
+  "context": 1,
+  "turn": null,
+  "record_ids": [
+    "gpt56-ours-timeout"
+  ],
+  "bytes": 8900,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3165,
+        "output_tokens": 8452,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 111.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "rank-pair multigraph bipartite-component argument",
+    "upper_bound_mechanism": "subset-sum pigeonhole + overlay cancellation into equal pairs",
+    "wrong_answer_stated": false,
+    "notes": "Complete solution. Drafting lemma proved by induction (minor typo in one display, but case analysis is correct). Lower bound: pairing/graph argument handles arbitrary interleaving, odd/even counts, and fewer cuts. Upper bound: pigeonhole gap plus overlay construction with verified cut count. Correct answer stated."
+  },
+  "S": 2,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

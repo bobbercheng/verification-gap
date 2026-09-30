@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1872,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0019619999999999998,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1057,
+    "cacheReadInputTokens": 1736,
+    "cacheCreationInputTokens": 2002,
+    "webSearchRequests": 0,
+    "costUSD": 0.047323000000000004,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 737,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 2002,
+   "cache_read_input_tokens": 1736,
+   "output_tokens": 1057,
+   "output_tokens_details": {
+    "thinking_tokens": 737
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 2002,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1057,
+     "cache_read_input_tokens": 1736,
+     "cache_creation_input_tokens": 2002,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 2002
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 15527,
+  "is_error": false,
+  "elapsed_seconds": 16.2,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\n  \"affected_statement\": \"L6.2\",\n  \"objection_correct\": \"yes\",\n  \"established_elsewhere\": \"no\",\n  \"elsewhere_quote\": null,\n  \"status_as_written\": \"not_established\",\n  \"repair_distance\": \"none\",\n  \"explanation\": \"The quote is accurate: the \\\"Full proof\\\" section reads \\\"(Not yet complete.)\\\". Elsewhere the document only records computational exploration for particular a_1 (15, 35, prime powers), labels the finiteness of the relevant prime set a \\\"Conjecture\\\", and explicitly writes \\\"Need a rigorous proof that (1) only finitely many primes can ever be forced\\\". So the large-prime erasure lemma L6.2 is stated as an open conjecture backed by \\\"computational evidence\\\", not proved for all terms. Likewise L6.1's characterization is asserted without argument and L6.3 is only claimed \\\"empirically\\\". No local edit supplies the missing argument.\"\n}"
+   }
+  ]
+ }
+}

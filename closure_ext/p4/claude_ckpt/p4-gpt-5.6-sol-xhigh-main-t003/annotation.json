@@ -1,0 +1,66 @@
+{
+  "id": "p4-gpt-5.6-sol-xhigh-main-t003",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 3,
+  "path": "checkpoint_inputs_ext/404415785358dca16deb9d46aaf4a986fc13762ffa665b1ee87492fb1940fdad.md",
+  "bytes": 2487,
+  "sha256": "404415785358dca16deb9d46aaf4a986fc13762ffa665b1ee87492fb1940fdad",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1678,
+        "cache_read_input_tokens": 1504,
+        "output_tokens": 1718,
+        "output_tokens_details": {
+          "thinking_tokens": 1417
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1678,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1718,
+            "cache_read_input_tokens": 1504,
+            "cache_creation_input_tokens": 1678,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1678
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 22.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "cut splitting 180=n*theta into k*theta and (n-k)*theta at the cut point, both children multiples of theta",
+    "upper_bound_mechanism": "safe-triangle invariant (no angle an integer multiple of theta); at least one child stays safe",
+    "wrong_answer_stated": false,
+    "notes": "Correct boxed answer. Reduction (k*theta winning) only asserted as induction sketch, cut-point existence not shown. Sufficiency relies on an 'interval lemma' the text explicitly leaves unproved; n=2 (theta=90, no angle >=90) unaddressed, no altitude step. Necessity invariant named with key identity 180=(m+n)theta but case analysis and existence of an initial safe triangle not written out."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

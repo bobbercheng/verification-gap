@@ -1,0 +1,45 @@
+{
+  "task_id": "imo-2026-p6",
+  "verdict": "revise",
+  "scores": {
+    "correctness": 2,
+    "completeness": 1,
+    "rigor": 2,
+    "self_contained": 1
+  },
+  "fatal_issues": [
+    "Lemma 2 (finiteness of P* = union of all prime divisors) is unproven. This is the core bottleneck; the entire conditional structure (Lemmas 3-6) collapses without it. The candidate provides only a proof sketch, not a rigorous argument.",
+    "Lemma 7 (backward extension of periodicity to all n >= 1) is unproven. The candidate correctly identifies that gcd(x+L, y+L) != gcd(x,y) in general, so translation invariance of the hitting condition is nontrivial. The uniqueness-of-greedy-sequence argument is only sketched and does not establish that the shifted sequence satisfies the same recurrence for early indices.",
+    "Lemma 5 (eventually P(a_n) equals a minimal hitting set exactly) is only conditionally argued with a gap: the claim that 'extra prime factors would force skipping valid candidates' needs a rigorous proof that the greedy merge of progressions cannot produce terms with extra prime factors. The bounded-gap argument is plausible but not fully executed."
+  ],
+  "required_fixes": [
+    "Provide a complete minimality-contradiction proof for Lemma 2: assuming infinitely many distinct primes appear, let p_k be the k-th new prime at index n_k. Show that a_{n_k} must be a multiple of some m_H for H a minimal hitting set of {P_1,...,P_{n_k-1}} containing p_k. Then construct a valid candidate using only the first k-1 primes that is smaller than a_{n_k}, contradicting minimality. This must handle the case where P(a_{n_k}) is not minimal (as noted in the candidate's own correction).",
+    "Prove Lemma 5 rigorously: once M_n stabilizes to M and the tail follows the merge of A_H = {k * m_H}, show that every term a_n for large n has P(a_n) in M exactly. Use that the maximum gap between consecutive elements of the merge is at most max_H m_H <= L. If some a_n had an extra prime factor q, then a_n is a multiple of m_H * q for some H, so it skips at least one multiple of m_H that would be a valid candidate, contradicting the greedy choice.",
+    "Resolve Lemma 7: establish that the hitting condition 'P(m) hits {P_1,...,P_n}' is translation-invariant modulo L for the stabilized regime, and that non-essential primes (those in P* \\ E) appear only finitely often and thus do not affect the tail. Then prove that the shifted sequence b_n = a_{n+T} - L satisfies the same greedy recurrence with initial condition b_1 = a_{1+T} - L, and by uniqueness of the greedy sequence given a_1, the periodicity propagates backward. This requires showing that for all n, the valid-candidate set for b_{n+1} relative to {b_1,...,b_n} is exactly the valid-candidate set for a_{n+T} relative to {a_1,...,a_{n+T}} shifted by -L.",
+    "Verify the exact period parameters: prove T = |R| where R = union_{H in M} {multiples of m_H mod L}, and L = lcm{m_H | H in M}. Confirm that L divides prod_{p in E} p but may be strictly smaller (as seen in a_1=105 where L=69, prod E = 2*3*5*7=210)."
+  ],
+  "verified_claims": [
+    "Lemma 1: E (essential primes) is nonempty. Proof by pigeonhole on the finite set P(a_1) is correct and rigorous.",
+    "Key Observation: a_{n+1} is the smallest integer > a_n that is a multiple of m_H for some minimal hitting set H in M_n. The equivalence gcd(m, a_i) > 1 for all i <= n iff P(m) hits {P_1,...,P_n} iff m is a multiple of m_H for some H in M_n is correctly established.",
+    "Correction: P(a_{n+1}) is a hitting set but not necessarily minimal. The counterexample a_1=6, a_2=8, a_3=10 (P(a_3)={2,5} vs minimal hitting set {2}) is valid.",
+    "Conditional structure: If P* is finite, then M_n stabilizes (Lemma 3), the tail is the merge of arithmetic progressions A_H (Lemma 4), and this merge is periodic modulo L = lcm{m_H} with period T = |R| (Lemma 6). The logical dependencies are correctly mapped.",
+    "Experimental verification: The merge-of-progressions periodicity holds for tested starting values (6, 15, 21, 30, 42, 105, 1155, 2310) with T = |R|, L = lcm{m_H}. The Ubiquitous Prime Lemma (intersection of M nonempty) is correctly falsified by a_1=15.",
+    "False lemmas from prior attempts are correctly identified and rejected: (1) Ubiquitous Prime Lemma, (2) P(a_{n+1}) is minimal hitting set, (3) CRT construction producing coprime numbers, (4) gcd(x+L, y+L) = gcd(x,y) identity."
+  ],
+  "unverified_claims": [
+    "Lemma 2: P* = union_n P_n is finite.",
+    "Lemma 3: M_n stabilizes (conditional on Lemma 2, but the stabilization argument assumes no new minimal hitting sets appear after some point; this needs a proof that the operation of taking minimal hitting sets of an expanding family on a finite ground set eventually stabilizes).",
+    "Lemma 5: Eventually P(a_n) equals a minimal hitting set exactly (no extra prime factors).",
+    "Lemma 7: Periodicity a_{n+T} = a_n + L extends to all n >= 1."
+  ],
+  "summary": "The candidate presents a clear and experimentally validated high-level framework (hitting sets -> stabilization -> merge of arithmetic progressions -> periodicity) that correctly identifies the structure of the sequence. However, two fatal gaps remain unproven: (1) finiteness of the set of all primes appearing (Lemma 2), which is the core difficulty of the problem, and (2) backward extension of periodicity to all indices (Lemma 7). Several conditional lemmas (3, 5) also have gaps in their execution. The proof is partial and cannot be considered complete; it requires substantial work on the two main lemmas to reach a full solution.",
+  "transfer_assessment": [
+    "REUSABLE: The hitting set framework (gcd condition <=> hitting set <=> multiple of m_H for minimal H) is a correct and powerful reformulation that reduces the number-theoretic problem to combinatorial set systems.",
+    "REUSABLE: The merge-of-arithmetic-progressions characterization of the tail once M_n stabilizes is correct and leads directly to periodicity modulo L = lcm{m_H}.",
+    "REUSABLE: The period parameters T = |R| (number of covered residues modulo L) and L = lcm{m_H} are correctly identified; the sum of steps in one cycle equals L.",
+    "REUSABLE: The explicit falsification of the Ubiquitous Prime Lemma (intersection of all minimal hitting sets) via a_1=15 saves future effort; periodicity does not require a prime dividing all tail terms.",
+    "MISLEADING: The CRT construction attempted for Lemma 2 (x_k = 0 mod p_k, x_k = 1 mod p_i for i<k) produces a number coprime to all previous terms, which is the opposite of a valid candidate. This construction should not be reused.",
+    "MISLEADING: The identity gcd(x+L, y+L) = gcd(x,y) is false in general even when L contains all relevant prime factors; translation invariance of the hitting condition requires a more subtle argument using the structure of minimal hitting sets modulo L.",
+    "MISLEADING: Assuming P(a_{n+1}) is a minimal hitting set is false (counterexample provided); proofs must work with the fact that it is only guaranteed to be a hitting set."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "p6-nemotron-cab6a0da-v2",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "cab6a0da",
+  "turn": 2,
+  "path": "checkpoint_inputs/961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671.md",
+  "bytes": 11627,
+  "sha256": "961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3719,
+        "output_tokens": 7434,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 79.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "minimality/erasure contradiction at first appearance of new prime (sketch only, admitted open)",
+    "upper_bound_mechanism": "merge of APs, residues mod L with T=|R| (conditional, eventual only)",
+    "wrong_answer_stated": true,
+    "notes": "Structure stated explicitly and correctly (L=lcm of m_H, T=|R|); candidate/hitting-set equivalence written out. Finiteness lemma (F) explicitly open—only sketched, with a flawed minimality detail. Periodicity proved only conditionally and only for the tail; backward extension to all n is conjectured, so the required global statement is unproven."
+  },
+  "S": 0,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root",
+  "original_sha256": "961eadba7a8348b8b00be3998c33a8341c21284dc3d1edfbd12f52070ef65671",
+  "original_bytes": 11627,
+  "input_anonymized": false
+}

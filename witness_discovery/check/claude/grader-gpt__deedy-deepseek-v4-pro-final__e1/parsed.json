@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "deedy-deepseek-v4-pro-final",
+ "tag": "e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 9.9,
+  "input_tokens": 2,
+  "output_tokens": 730,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 1692,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1607,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001702,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 730,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 1692,
+    "webSearchRequests": 0,
+    "costUSD": 0.035850499999999993,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 362,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "missing_justification",
+  "fatal": "yes",
+  "explanation": "The quote appears verbatim and, in context, describes only Xiang Yu's reply to Liu's specific proposed marking at k/(2n+1). An upper bound requires, for EVERY Liu division, a Xiang reply with at most n cuts capping Liu's total; analyzing one Liu configuration establishes nothing universal (and 'seems to be' is not even a proof for that one). The rest of the text confirms the gap: it explicitly asks 'Upper bound: Xiang Yu can limit Liu Bang to at most (n+1)/(2n+1). Strategy for X?' and the 'Full proof' section reads '(To be completed)'. So no general upper-bound mechanism (e.g. subset-sum pigeonhole plus cancellation) is written anywhere. The obligation (U) is entirely unmet; indeed the conjectured value itself is wrong for n>=2 versus 2^n/(2^{n+1}-1)."
+ }
+}

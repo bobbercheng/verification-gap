@@ -1,0 +1,47 @@
+{
+  "id": "p1-h-2a2d73e81318",
+  "problem": "1",
+  "sha256": "2a2d73e81318d6d4f6ccaa597dad8f82824416c67d27dea6967a53a3391542ee",
+  "path": "checkpoint_inputs_ext/2a2d73e81318d6d4f6ccaa597dad8f82824416c67d27dea6967a53a3391542ee.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 4,
+  "record_ids": [
+    "p1-gpt-5.6-sol-xhigh-main-t004",
+    "p1-deedy-gpt-5.6-sol-xhigh-final"
+  ],
+  "bytes": 5362,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1422,
+        "output_tokens": 2094,
+        "cache_read_input_tokens": 1088,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 26.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "lexicographic monovariant (product, count of nonunits)",
+    "upper_bound_mechanism": "invariance of gcd of p-adic valuations",
+    "wrong_answer_stated": false,
+    "notes": "Complete. (E): v_p(gcd)=min, v_p(lcm/gcd)=|a-b| for every prime, and never-two-1s argued in both cases. (T): product nonincreasing, strictly down when d>1; K drops when d=1; at-least-one-survivor via outputs. (I): gcd(a,b-a)=gcd(a,b) with gcd(0,r) conventions; M formula explicit."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

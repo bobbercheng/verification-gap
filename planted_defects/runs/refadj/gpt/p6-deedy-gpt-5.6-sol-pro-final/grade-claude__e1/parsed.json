@@ -1,0 +1,42 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "O",
+ "problem": "6",
+ "objection_key": "grade-claude__e1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 18.1,
+  "input_tokens": 18336,
+  "output_tokens": 719,
+  "reasoning_output_tokens": 503,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "yes",
+  "elsewhere_quote": "If a prime $p$ occurs in any $C\\in\\mathcal C$, Lemma 2 supplies a terminal $D\\in\\mathcal C$ containing $p$. Therefore every prime occurring in any member of $\\mathcal C$ belongs to $P$. It follows that every member of $\\mathcal C$ is a subset of the finite set $P$, and hence $\\mathcal C$ itself is finite",
+  "status_as_written": "established",
+  "repair_distance": "none",
+  "explanation": "The quoted induction leaves two routine details implicit: after applying induction to the deleted sets, restore the deleted element to the common core; deleting a common element preserves distinctness. These follow immediately and do not create a gap. The resulting bounded-size finiteness lemma, together with Lemma 2 and the terminal-member argument, proves the required finite-prime dependence for all accepted supports."
+ },
+ "elsewhere_anchor": {
+  "anchored": true,
+  "length": 305,
+  "length_ok": true,
+  "reason": null,
+  "span": [
+   8431,
+   8736
+  ]
+ },
+ "source_gate": "grade",
+ "source_model": "claude",
+ "tag": "e1"
+}

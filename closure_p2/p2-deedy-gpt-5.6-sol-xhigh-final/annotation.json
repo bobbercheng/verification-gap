@@ -1,0 +1,61 @@
+{
+  "id": "p2-deedy-gpt-5.6-sol-xhigh-final",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs/848a04cd9dd2194c81c0c75b2395f7c1582513961751d667ecff82bbbc60356c.md",
+  "bytes": 11389,
+  "sha256": "848a04cd9dd2194c81c0c75b2395f7c1582513961751d667ecff82bbbc60356c",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "max_tokens",
+      "usage": {
+        "input_tokens": 4091,
+        "output_tokens": 9000,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 95.2,
+      "parsed": false
+    },
+    {
+      "attempt": 1,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4091,
+        "output_tokens": 556,
+        "cache_read_input_tokens": 768,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 8.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "complex coordinate setup with fully proved determinant factorization lemma (tangent substitution + continuity for exceptional cases)",
+    "upper_bound_mechanism": "equal powers of M and N w.r.t. (AKL) via vanishing augmented determinant => OM=ON",
+    "wrong_answer_stated": false,
+    "notes": "Complete analytic proof. All three angle hypotheses encoded in coordinates (2)-(5); factorization lemma proved in full with explicit coefficient check and continuity handling; finish derives OM=ON from equality of powers via determinant."
+  },
+  "S": 2,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root",
+  "original_sha256": "848a04cd9dd2194c81c0c75b2395f7c1582513961751d667ecff82bbbc60356c",
+  "original_bytes": 11389,
+  "input_anonymized": false
+}

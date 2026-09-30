@@ -1,0 +1,46 @@
+{
+  "id": "p4-h-bc0c538d972f",
+  "problem": "4",
+  "sha256": "bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e",
+  "path": "checkpoint_inputs_ext/bc0c538d972f87bf3a1b29b640b1c814db8ecb869e427e5857153a89618b644e.md",
+  "lineage": "ours-glm52",
+  "model": "glm-5.2",
+  "context": "0d682cd0",
+  "turn": 1,
+  "record_ids": [
+    "p4-glm52-0d682cd0-v1"
+  ],
+  "bytes": 7667,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2749,
+        "output_tokens": 5009,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 83.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "kθ-induction lemma (both pieces winning) + interval cut placing a θ-multiple in each piece, with n=2 special case",
+    "upper_bound_mechanism": "safe-triangle trap (all angles non-θ-multiples), equilateral start, four-case sum/difference closure",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct. The kθ lemma is proved by strong induction with both pieces winning, so every discard is covered; Case B's interval argument and the n=2 case handle all triangles. Shan-Yu's trap is fully verified, using θ∤180 exactly. Numerics are correctly labelled as non-proof evidence."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

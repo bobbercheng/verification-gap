@@ -1,0 +1,71 @@
+{
+  "id": "p5-h-4f7baed6471b",
+  "problem": "5",
+  "sha256": "4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b",
+  "path": "checkpoint_inputs_ext/4f7baed6471b90714f2dcf06092e94ac1ff9e0839591c5a1610bf96451b9ab9b.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 2,
+  "record_ids": [
+    "p5-gpt-5.6-sol-xhigh-main-t002",
+    "p5-deedy-gpt-5.6-sol-xhigh-final"
+  ],
+  "bytes": 5533,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4909,
+        "output_tokens": 1315,
+        "output_tokens_details": {
+          "thinking_tokens": 950
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1315,
+            "cache_read_input_tokens": 4909,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 16.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c, both inequalities verified for all x,y and all c>=0",
+    "upper_bound_mechanism": "Orbit AP + asymptotic RMS-AM gap comparison forces all positive displacements equal; then separation inequality (r-s)^2 >= 2c(r+s)+c^2 makes A={d=0}, B={d=c} both open, connectedness of R_{>0} excludes mixing; f=id handled as c=0",
+    "wrong_answer_stated": false,
+    "notes": "All four obligations met. (1) f(f(y))=2f(y)-y from x=f(y) with d>=0 via positivity; orbits are APs. Equality of positive displacements proved rigorously via bounded-difference far-out terms. Mixed fixed/non-fixed case excluded by openness+connectedness, using the first inequality; identity case explicitly included. Sufficiency verified for both inequalities."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

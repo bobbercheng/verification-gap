@@ -1,0 +1,70 @@
+{
+  "id": "p5-h-c3411aff6e4a",
+  "problem": "5",
+  "sha256": "c3411aff6e4a1f388b139a71a10d0ecc29dc2bf797b10dececb7017b3eb989de",
+  "path": "checkpoint_inputs_ext/c3411aff6e4a1f388b139a71a10d0ecc29dc2bf797b10dececb7017b3eb989de.md",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": "claude-fable-5-main",
+  "turn": 5,
+  "record_ids": [
+    "p5-claude-fable-5-main-t005"
+  ],
+  "bytes": 9276,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7650,
+        "output_tokens": 2125,
+        "output_tokens_details": {
+          "thinking_tokens": 1773
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2125,
+            "cache_read_input_tokens": 7650,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 24.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to u=x, v=y+c, both inequalities, all c>=0",
+    "upper_bound_mechanism": "orbit sandwich via nearest AP point (E1/E2 sqrt estimates) forcing all positive gaps equal and g>0 on a half-line, plus downward bootstrap x=y+d; g≡0 case handled separately",
+    "wrong_answer_stated": false,
+    "notes": "Complete and correct: (S) from x=f(y) in both squared inequalities; sufficiency verified for both inequalities and all c>=0; necessity via two-sided estimate d-d^2/(4x) <= g(x) <= d+d^2/(16x-4d), equality of positive gaps by x->infinity, no fixed points beyond a+d, then induction downward. Identity case explicitly covered. One garbled sentence in the upper-bound constant chase, but the bound is valid."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

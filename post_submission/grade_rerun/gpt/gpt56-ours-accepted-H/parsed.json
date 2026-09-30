@@ -1,0 +1,42 @@
+{
+ "gate": "grade",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "gpt56-ours-accepted-H",
+ "base_id": "gpt56-ours-accepted",
+ "type": "H",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 59.5,
+  "input_tokens": 18188,
+  "output_tokens": 1729,
+  "reasoning_output_tokens": 1552,
+  "cached_input_tokens": 10624
+ },
+ "parsed": {
+  "grade": 6,
+  "complete": false,
+  "main_gap": "The stated locations of Liu’s marks do not produce the claimed binary interval lengths; replacing them by the cumulative sums fixes the proof.",
+  "errors": [
+   {
+    "description": "For interval lengths δ,2δ,…,2^nδ, the marks must be at (2^j−1)δ, not 2^jδ. The preceding sentence defines a valid strategy, so this is a localized, straightforwardly repairable error.",
+    "quote": "Thus his marks are \\(2^j\\delta\\) for \\(1\\le j\\le n\\), all distinct and strictly inside the stick."
+   }
+  ],
+  "notes": "Apart from this incorrect mark formula, the drafting lemma, refinement lemma, subset-sum upper bound, and matching binary lower bound form a coherent and essentially complete proof."
+ },
+ "anchors": [
+  {
+   "anchored": true,
+   "length": 97,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    6887,
+    6984
+   ]
+  }
+ ]
+}

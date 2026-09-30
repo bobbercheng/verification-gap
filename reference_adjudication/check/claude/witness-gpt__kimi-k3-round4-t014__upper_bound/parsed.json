@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "witness-gpt__kimi-k3-round4-t014__upper_bound",
+ "case": "kimi-k3-round4-t014",
+ "procedure": "witness",
+ "source": "gpt",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 26.6,
+  "input_tokens": 2,
+  "output_tokens": 1867,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 11733,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9553,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009648,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1867,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 11733,
+    "webSearchRequests": 0,
+    "costUSD": 0.1648365,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1488,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "false_display",
+  "repair_distance": "sentence",
+  "explanation": "Chain value v(B) is defined via the decreasing order, but Lemma 4.1 only produces some ordering with nested value g; the objection's example ({10,9,8,7,5}, P={8,7,5}, N={10,9}, all subset sums integral so none strictly between 19 and 20, decreasing residue 5 ≠ 1) shows order matters, so Theorem 4.2 as literally stated is not proved. However the substantive upper-bound machinery (pigeonhole on 2^{n+1} subset sums, greedy realizability, the running-piece cut construction, cut count (r-1)+(n+1-r)=n, and pairwise cancellation) is order-agnostic and complete; only the definition/sort convention is wrong. Repair: define v(B) as the nested value over the ordering supplied by Lemma 4.1 (one sentence)."
+ },
+ "elsewhere_anchor": null
+}

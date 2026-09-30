@@ -1,0 +1,38 @@
+{
+  "id": "p6-h-cc00e6162436",
+  "problem": "6",
+  "sha256": "cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a",
+  "path": "checkpoint_inputs/cc00e6162436a8d5168a53fd686a447465551de1ee08d551589a5e43cd770e5a.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 6,
+  "record_ids": [
+    "p6-gpt-5.6-sol-pro-main-t006"
+  ],
+  "bytes": 9581,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 48.9,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "sunflower lemma (bounded-size finiteness) + weight descent to terminal minimal supports with w(D\\{p})<a_1",
+    "upper_bound_mechanism": "T = number of accepted residue classes mod L; a_n+L is the T-th accepted integer after a_n",
+    "wrong_answer_stated": false,
+    "notes": "Complete correct proof. Support-only acceptance and self-duality proved; C shown finite via sunflower lemma and rigorous weight descent using rejected witnesses; L=product of the finitely many relevant primes gives support-periodicity from m>=a_1, yielding global a_{n+T}=a_n+L for all n>=1, not merely eventual."
+  },
+  "S": 2,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

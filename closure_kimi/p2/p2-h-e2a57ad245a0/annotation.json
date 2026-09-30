@@ -1,0 +1,39 @@
+{
+  "id": "p2-h-e2a57ad245a0",
+  "problem": "2",
+  "sha256": "e2a57ad245a0214768436fb0735a8f7318f18780348ea7a9b16afa0109348622",
+  "path": "checkpoint_inputs/e2a57ad245a0214768436fb0735a8f7318f18780348ea7a9b16afa0109348622.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": 99,
+  "turn": null,
+  "record_ids": [
+    "p2-deedy-kimi-k3-final",
+    "p2-kimi-k3-main-t023"
+  ],
+  "bytes": 10275,
+  "annotator": "kimi-k3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "stop",
+      "usage": null,
+      "sec": 240.4,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "coordinates: powers of B,C w.r.t. circle (AKL) forced by quadratics ConsP/ConsQ on p=BK, q=CL",
+    "upper_bound_mechanism": "Apollonius median identity pow(M)=pow(B)/2-c^2/4, equal-power finish",
+    "wrong_answer_stated": false,
+    "notes": "Non-synthetic trig/algebra route. All three angle conditions provably encoded via four law-of-sines relations R1-R4 with correct interiority bookkeeping; elimination to ConsP/ConsQ and the key power identities (4),(5) are set up fully but the decisive expansions are asserted ('agree immediately', 'everything simplifies') plus CAS-checked, not executed. Apollonius reduction and final subtraction fully proved. No false claims."
+  },
+  "S": 1,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

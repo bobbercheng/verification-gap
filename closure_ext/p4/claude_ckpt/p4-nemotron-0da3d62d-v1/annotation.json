@@ -1,0 +1,67 @@
+{
+  "id": "p4-nemotron-0da3d62d-v1",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "0da3d62d",
+  "turn": 1,
+  "path": "checkpoint_inputs_ext/442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8.md",
+  "recorded_mtime_utc": "2026-07-20T18:02:36Z",
+  "bytes": 4231,
+  "sha256": "442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2751,
+        "cache_read_input_tokens": 1504,
+        "output_tokens": 3709,
+        "output_tokens_details": {
+          "thinking_tokens": 3426
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2751,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3709,
+            "cache_read_input_tokens": 1504,
+            "cache_creation_input_tokens": 2751,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2751
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 48.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none (false one-move 'cut beta = theta' claim based on incorrect angle bookkeeping)",
+    "upper_bound_mechanism": "invariant 'all angles < theta, two angles >= 180-theta', only for theta > 90, with faulty piece formulas",
+    "wrong_answer_stated": true,
+    "notes": "States wrong answer theta <= 90. Core error: second piece's angles written as (180-B-beta, B, beta) instead of (B, C-beta, A+beta), so the claim that both pieces carry theta is false. No multiple-of-theta lemma. Defense covers only theta > 90 and its split-A case uses the wrong formulas, so the invariant isn't shown preserved."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

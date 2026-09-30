@@ -1,0 +1,66 @@
+{
+  "id": "p5-deedy-claude-fable-5-final",
+  "lineage": "deedy-claude-fable-5",
+  "model": "claude-fable-5",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/4d5351b57f712cf818b8c85b9a478da4c5b3c272c888bb884c957e4336745387.md",
+  "bytes": 9430,
+  "sha256": "4d5351b57f712cf818b8c85b9a478da4c5b3c272c888bb884c957e4336745387",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 7728,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 1663,
+        "output_tokens_details": {
+          "thinking_tokens": 1365
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 7728,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1663,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 7728,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 7728
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 19.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM applied to u=x, v=y+c (both inequalities, all c>=0)",
+    "upper_bound_mechanism": "Orbit AP from f(f(y))=2f(y)-y + two-sided asymptotic sandwich (7) forcing all positive gaps equal and g>0 on a half-line, then downward bootstrap x=y+d",
+    "wrong_answer_stated": false,
+    "notes": "All obligations met: identity f(f(y))=2f(y)-y with d>=0; full sufficiency check; sandwich estimates (E1),(E2) verified correctly; Step 5 excludes fixed points beyond T, so mixed case handled; bootstrap induction covers all x>0; identity case c=0 addressed."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

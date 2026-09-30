@@ -1,0 +1,71 @@
+{
+  "id": "p5-h-8ef6ff5fdef4",
+  "problem": "5",
+  "sha256": "8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e",
+  "path": "checkpoint_inputs_ext/8ef6ff5fdef44b2273f624f253b198a44bd61a35cce21a77e51f81fab8a9e51e.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 2,
+  "record_ids": [
+    "p5-gpt-5.6-sol-pro-main-t002",
+    "p5-deedy-gpt-5.6-sol-pro-final"
+  ],
+  "bytes": 5034,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4579,
+        "output_tokens": 1599,
+        "output_tokens_details": {
+          "thinking_tokens": 1309
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1599,
+            "cache_read_input_tokens": 4579,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 18.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM on x and y+c, both inequalities, all c>=0",
+    "upper_bound_mechanism": "squared inequality (5) + synchronized arithmetic orbits limit (a=b) + separation |p-q|>c with finite chain to exclude mixing",
+    "wrong_answer_stated": false,
+    "notes": "Complete: (1) f(f(y))=2f(y)-y, d(f(y))=d(y), orbits force d>=0; squared first inequality yields (5); limiting comparison along synchronized orbits gives equality of positive displacements; mixed 0/c case killed by separation plus a subdivision chain. Sufficiency verified for both inequalities. Answer with c>=0 explicit."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

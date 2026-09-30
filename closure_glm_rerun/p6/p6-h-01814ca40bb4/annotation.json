@@ -1,0 +1,46 @@
+{
+  "id": "p6-h-01814ca40bb4",
+  "problem": "6",
+  "sha256": "01814ca40bb47cfc5ce9166ce02789daaecec123cc5191e5f7baab1795f5d41c",
+  "path": "checkpoint_inputs/01814ca40bb47cfc5ce9166ce02789daaecec123cc5191e5f7baab1795f5d41c.md",
+  "lineage": "deedy-kimi-k3",
+  "model": "kimi-k3",
+  "context": "kimi-k3-round3",
+  "turn": 9,
+  "record_ids": [
+    "p6-kimi-k3-round3-t009"
+  ],
+  "bytes": 15786,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 5186,
+        "output_tokens": 4652,
+        "cache_read_input_tokens": 640,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 49.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "peeling + compactness via killing property (K)",
+    "upper_bound_mechanism": "lcm-of-minimal-elements period, T = count per window",
+    "wrong_answer_stated": false,
+    "notes": "Steps 1–3 rigorous: (C) fully proved via enumeration of S_infty; periodicity assembly with L=lcm of finitely many minimal elements and T=count per window proved from n=1, but conditional on finiteness of minimal elements. That finiteness is an explicitly flagged open gap: peeling complete, killing-property compactness only sketched ((C1) derived, routes (i)–(iv) inconclusive)."
+  },
+  "S": 1,
+  "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719",
+  "path_base": "bundle root"
+}

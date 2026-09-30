@@ -1,0 +1,44 @@
+{
+  "id": "p4-h-442b65045661",
+  "problem": "4",
+  "sha256": "442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8",
+  "path": "checkpoint_inputs_ext/442b6504566113a5583695a322c5d301f2c689f70e3e92360dabea2dc2e9f0d8.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "0da3d62d",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-0da3d62d-v1"
+  ],
+  "bytes": 4231,
+  "annotator": "gpt-5.6-sol",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 16578,
+        "cached_input_tokens": 12672,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1802,
+        "reasoning_output_tokens": 1662
+      },
+      "sec": 49.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 0,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 0,
+    "lower_bound_mechanism": "incorrect split-angle strategy",
+    "upper_bound_mechanism": "non-preserved two-large-angles invariant",
+    "wrong_answer_stated": true,
+    "notes": "The stated answer is wrong. The cut reformulation falsely places the same angle β in both pieces; the two portions should be β and C−β. Consequently the winning argument ignores Shan-Yu’s effective discard choice. No integer-multiple lemma appears. The avoidance invariant is not preserved, and its maintenance uses the false implication C<θ ⇒ 180−C−θ<0."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

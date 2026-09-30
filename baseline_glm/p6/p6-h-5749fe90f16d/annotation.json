@@ -1,0 +1,42 @@
+{
+  "id": "p6-h-5749fe90f16d",
+  "problem": "6",
+  "sha256": "5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f",
+  "path": "checkpoint_inputs/5749fe90f16dd1f5d81e2500ebc3d6fb55db38285182631d092bbef73faf122f.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "fb285ec4",
+  "turn": 1,
+  "record_ids": [
+    "p6-nemotron-fb285ec4-v1"
+  ],
+  "bytes": 8151,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3026,
+        "output_tokens": 9286,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 139.7,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 2,
+    "complete": false,
+    "main_gap": "Core lemma (Step 2) is false: an essential prime need not divide all large terms. Steps 4-5 assert the periodicity without proof. The claimed eventual structure P_n = E, a_{n+1}=a_n+L is wrong.",
+    "notes": "Counterexample a_1=15: the true sequence is 15,18,20,24,30,36,40,42,45,... (write-up omits 45); prime 3 is essential yet fails to divide a_{8k+3} (20,50,80,...), refuting Step 2 and hence Steps 3-5. Step 1's claim is true but its argument is hand-waving. Steps 4-5 are 'one proves by induction' assertions with no argument."
+  },
+  "S": null,
+  "rubric_sha256": "9cafa93fbf53083af4565819e3a6e8b15c24a54a71599dbb5ea89c998c3c5f14",
+  "path_base": "bundle root"
+}

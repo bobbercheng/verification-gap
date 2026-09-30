@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "deedy-gpt-5.6-sol-final",
+ "tag": "lower_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 59.3,
+  "input_tokens": 2,
+  "output_tokens": 4608,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 3963,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 3398,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.003503,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 4608,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 3963,
+    "webSearchRequests": 0,
+    "costUSD": 0.1555105,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 4251,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "counterexample",
+  "fatal": "yes",
+  "explanation": "In the column model, splitting a column of height u+v (u<=v) into u and v changes N(t) by +1 on (0,u) and by -1 on (v,u+v). So parity is flipped in a low band (0,min) as well as in a high band (max,sum); it is never merely 'interchanged above the cut's level'. The objector's instance is legal in the setting of (ii) (take s>=1, cut the column of height 2d into d/2 and 3d/2): before, N=1 on (0,2d); after, N=2 on (0,d/2), so parity flips strictly below d/2, and also flips on (3d/2,2d). Under any reading of 'its level' (d/2 or 3d/2) the stated one-sidedness fails. The induction for (ii) ('adding the next column ... plus one parity interchange') rests on this directional claim, and no other proof of (ii) appears in the text, so the lower bound is unproved as written."
+ }
+}

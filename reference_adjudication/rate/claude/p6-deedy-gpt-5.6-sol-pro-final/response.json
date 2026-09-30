@@ -1,0 +1,81 @@
+{
+ "status": 200,
+ "response": {
+  "model": "claude-opus-5",
+  "cli": "claude",
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4138,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004233,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 3657,
+    "cacheReadInputTokens": 1451,
+    "cacheCreationInputTokens": 4946,
+    "webSearchRequests": 0,
+    "costUSD": 0.1416205,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 3058,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 4946,
+   "cache_read_input_tokens": 1451,
+   "output_tokens": 3657,
+   "output_tokens_details": {
+    "thinking_tokens": 3058
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 4946,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 3657,
+     "cache_read_input_tokens": 1451,
+     "cache_creation_input_tokens": 4946,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 4946
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "duration_ms": 41582,
+  "is_error": false,
+  "elapsed_seconds": 42.2,
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"statements\": {\"L6.1\": {\"established\": \"yes\", \"quote\": \"Every accepted integer smaller than $x$ has support in $\\\\mathcal F$, and thus is noncoprime to $x$. Hence the greedy scan accepts $x$, proving $S\\\\in\\\\mathcal F$.\", \"note\": \"Self-duality (1) plus (2) gives the membership characterization for all m >= a_1.\"}, \"L6.2\": {\"established\": \"yes\", \"quote\": \"Let $P$ be the union of all terminal members. It is a finite set of primes. If a prime $p$ occurs in any $C\\\\in\\\\mathcal C$, Lemma 2 supplies a terminal $D\\\\in\\\\mathcal C$ containing $p$. Therefore every prime occurring in any member of $\\\\mathcal C$ belongs to $P$.\", \"note\": \"Different route (sunflower Lemma 1 + weight descent Lemma 2) but proves finiteness of relevant primes for all terms.\"}, \"L6.3\": {\"established\": \"yes\", \"quote\": \"Taking $x=a_n$ and using (6), the endpoint $a_n+L$ is accepted. It is consequently the $T$-th accepted integer after $a_n$, so\\n\\\\[\\na_{n+T}=a_n+L\\n\\\\]\\nfor every positive integer $n$.\", \"note\": \"Periodicity valid from n=1; membership invariance mod L proved for all m >= a_1.\"}}, \"S_ref\": 2, \"notes\": \"Complete alternative proof: self-duality of accepted supports, sunflower argument bounding minimal supports of bounded size, and an arithmetic weight descent using a_1 to force every prime into a finite terminal set. Checked each step; no reliance on mere pairwise intersection, and periodicity holds from n=1.\"}"
+   }
+  ]
+ }
+}

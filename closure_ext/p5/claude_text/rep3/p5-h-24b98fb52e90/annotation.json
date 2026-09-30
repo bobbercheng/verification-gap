@@ -1,0 +1,72 @@
+{
+  "id": "p5-h-24b98fb52e90",
+  "problem": "5",
+  "sha256": "24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931",
+  "path": "checkpoint_inputs_ext/24b98fb52e90d5e1fa47e10785c7b2a8fa381858b504ca9e78786c1578143931.md",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": "deepseek-v4-pro-main",
+  "turn": 39,
+  "record_ids": [
+    "p5-deepseek-v4-pro-main-t039",
+    "p5-deepseek-v4-pro-main-t043",
+    "p5-deedy-deepseek-v4-pro-final"
+  ],
+  "bytes": 10024,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7942,
+        "output_tokens": 3495,
+        "output_tokens_details": {
+          "thinking_tokens": 3140
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 3495,
+            "cache_read_input_tokens": 7942,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 38.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM and AM-GM applied to x and y+c, both inequalities, all c>=0",
+    "upper_bound_mechanism": "|A-B|<=A+B inequality (7) on orbits: rational/irrational density kills two positive differences; separation |x-y|>c between level sets, backward descent to u in (0,c], covering by intervals forces S_0 empty",
+    "wrong_answer_stated": false,
+    "notes": "Complete: (S) f(f(y))=2f(y)-y from x=f(y), orbits AP, g>=0. Key identities A+B=2(x-f(y))^2, A-B=-2(a-b)(a+b+2x+2y) verified correct. Uniqueness of positive value via equidistribution; mixed fixed/non-fixed case excluded rigorously via Lemma 1 and covering. Only a harmless typo (4cx vs 4cy) in a nonnegative expression."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

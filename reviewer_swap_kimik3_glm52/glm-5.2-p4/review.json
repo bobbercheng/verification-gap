@@ -1,0 +1,32 @@
+{
+ "task_id": "imo-2026-p4",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Move mechanics: cutting from P on the side opposite the c-vertex splits c=c1+c2 and yields pieces {a,c1,b+c2} and {b,c2,a+c1}, with the two angles at P supplementary ((a+c1)+(b+c2)=180). Re-derived independently; correct, and every c1 in (0,c) is attainable by moving P continuously along the side.",
+  "Game-theoretic recursion (T winning iff theta is an angle of T, or Mulan has a cut with both pieces winning) matches the actual move order: Mulan cuts, Shan-Yu selects the piece, and the stop condition is checked before each cut including on the initial triangle.",
+  "Necessity trap: for theta not dividing 180, the equilateral triangle lies in S (60=k*theta would force 180/theta=3k integer), and the four-case table correctly shows that after any cut of a triangle in S, at least one piece remains in S (cases: c1,c2 multiples => c multiple; c1,a+c1 => a multiple; b+c2,c2 => b multiple; b+c2,a+c1 => 180 multiple => theta|180, contradiction). This gives Shan-Yu a valid initial triangle plus an indefinite defense, so Mulan cannot guarantee a win.",
+  "Sufficiency lemma: any triangle with an angle k*theta (1<=k<=n-1) is winning, by induction splitting k*theta into theta + (k-1)*theta; both pieces contain theta and (k-1)*theta respectively. Split is valid (0<theta<k*theta) and pieces non-degenerate.",
+  "Case B, n>=3: largest angle c>=60>=theta and c not a multiple forces c>theta; the open interval (a,a+c) of length c>theta contains a multiple m*theta (gap argument checked, m>=1 since a>0); m*theta<a+c=180-b<180 gives m<=n-1; choosing c1=m*theta-a in (0,c) puts m*theta in one piece and (n-m)*theta in the other, both indices in {1,...,n-1}, so both pieces are winning by the lemma.",
+  "Case B, n=2 (theta=90): b<90 in all subcases (c>90 => a+b<90; c<90 => all angles<90), so a<90<180-b=a+c, c1=90-a in (0,c), and both pieces contain 90=theta. Verified.",
+  "Uniform step bound n-1 cuts (lemma uses <=k-1 cuts for a k*theta angle; Case B adds one cut), so the finiteness guarantee is uniform over all Shan-Yu play including the initial triangle.",
+  "Answer set {180/n : n>=2} is exactly the set of theta in (0,180) dividing 180, all <=90; irrational theta and theta>90 non-divisors are covered by the trap.",
+  "Spot-checks: theta=36 from equilateral, cut c1=12 gives angles 72=2*36 and 108=3*36 (both winning); theta=90 from equilateral, cut c1=30 gives two 90-angles; theta=70 trap leaves a piece free of 70/140 after any cut. All consistent with the theorem."
+ ],
+ "unverified_claims": [],
+ "summary": "The characterization theta=180/n (n>=2) is correct and the proof is complete and rigorous. Necessity uses a clean invariant/trap argument: when theta does not divide 180, the set S of triangles with no theta-multiple angle is nonempty (equilateral) and Shan-Yu can keep the state in S forever via a four-case parity-of-multiples argument. Sufficiency combines an induction showing any k*theta angle is winning with a cut that places complementary multiples m*theta and (n-m)*theta into the two pieces; the n>=3 case uses that an open interval longer than theta contains a multiple, and n=2 is handled separately and correctly. Degenerate cuts (c1 in (0,c)), the initial-triangle quantifier, the stop-before-cut rule, and a uniform finite bound (n-1 cuts) are all addressed. The numerical section was not re-executed, but it is explicitly fenced off as evidence, its conclusions follow from the proven theorem, and its spot-checks verify by hand; the proof does not depend on it. Only cosmetic blemishes (e.g., the table's 'c in S' shorthand, the unformalized fixed-point phrasing of the winning region, neither load-bearing).",
+ "transfer_assessment": [
+  "Reusable mechanic: the angle-split identity {a,c1,b+c2}/{b,c2,a+c1} with supplementary angles at the cut point — the fundamental bookkeeping tool for cevian-cut triangle games.",
+  "Reusable method (defense): a 'trap' set closed under the opponent's selection (show any move leaves at least one option inside the set) plus an explicitly closed initial configuration gives impossibility of a guaranteed win — a standard but well-executed invariant defense.",
+  "Reusable method (offense): induction reducing k*theta to (k-1)*theta + theta, and the complementary-multiples cut producing m*theta and (n-m)*theta simultaneously because the two new angles sum to 180=n*theta — exploits the divisor hypothesis exactly where needed.",
+  "Reusable fact: an open interval of length > theta contains a multiple of theta, with index bounds inherited from the interval endpoints.",
+  "Potentially misleading if lifted out of context: the side observation that for theta not dividing 180 the winning set is exactly triangles containing a theta-multiple — true here only because the k*theta lemma needs no divisibility; it is specific to this game, and the grid computations should never be treated as a proof substitute (the submission itself fences them correctly)."
+ ]
+}

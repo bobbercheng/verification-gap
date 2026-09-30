@@ -1,0 +1,33 @@
+{
+ "gate": "refadj",
+ "checker": "gpt",
+ "model": "gpt",
+ "transport": "codex-cli",
+ "model_name": "gpt-5.6-sol",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final-F",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "F",
+ "problem": "6",
+ "objection_key": "grade-gpt__e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 14.7,
+  "input_tokens": 18406,
+  "output_tokens": 561,
+  "reasoning_output_tokens": 378,
+  "cached_input_tokens": 12672
+ },
+ "parsed": {
+  "affected_statement": "L6.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "lemma",
+  "explanation": "The asserted infinite sunflower fact is false: the nested family {1,…,n} has no infinite subfamily with constant pairwise intersection, and the given induction does not terminate. This invalidates Lemma 1 as stated; indeed, its unbounded conclusion is false in general. The proof later needs only finiteness of minimal transversals of bounded cardinality, but that bounded sunflower argument is not written elsewhere. Since Lemma 1 is essential to proving that the terminal members, hence the relevant primes, are finite, L6.2 is not established as written. Repair requires replacing the lemma and its proof with a correct bounded-size version."
+ },
+ "elsewhere_anchor": null,
+ "source_gate": "grade",
+ "source_model": "gpt",
+ "tag": "e0"
+}

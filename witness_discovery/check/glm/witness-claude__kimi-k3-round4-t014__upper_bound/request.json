@@ -1,0 +1,19 @@
+{
+ "checker": "glm",
+ "transport": "anthropic",
+ "model": "glm-5.3",
+ "procedure": "witness",
+ "source": "claude",
+ "case": "kimi-k3-round4-t014",
+ "tag": "upper_bound",
+ "text_sha256": "ea4551d940174ea8d30530fb2028c4928b02bb273e08c18fe25cd6bbdb70019b",
+ "system_sha256": "f3c1f5e7c500777123108473cd9b3dd98e18736a6479ea4d5f3634fcd91b8963",
+ "objection": {
+  "obligation": "upper_bound",
+  "status": "written_but_invalid",
+  "quote": "So the hypothesis of Lemma 4.1(b) holds, and some ordering of $P\\cup N$ has chain value $g\\le\\frac{S}{2^m-1}$.",
+  "witness": "NON-SEQUITUR. The text defines the chain value of a multiset B by the DECREASING ordering: v(B)=|...||b_1-b_2|-b_3|...-b_r| with b_1>=...>=b_r, and Theorem 4.2 asserts v(B)<=S/(2^m-1). What the quoted step (via Lemma 4.1) establishes is only that SOME ordering of P∪N has nested absolute difference g. The nested absolute difference is order-dependent, so this does not yield the decreasing-order value: for B={8,7,6,5,4} the decreasing order gives ||||8-7|-6|-5|-4| = |||1-6|-5|-4| = ||5-5|-4| = 4, whereas the ordering 8,6,5,7,4 (exactly the greedy ordering of Lemma 4.1 with P={8,7}, N={6,5,4}) gives |8-6|=2, |2-5|=3, |3-7|=4, |4-4|=0. Thus 'some ordering has value g' does not imply 'v(B)=g', and nothing in the text proves the decreasing order is optimal.",
+  "load_bearing": "XY's strategy is explicitly written as taking B={b_1>=...>=b_r} and processing b_2,...,b_r in that decreasing order, so the leftover final running piece equals the decreasing-order value v(B); the conclusion D(M)=v(B)<=T_n therefore requires exactly the sorted-order statement of Theorem 4.2, which the proof does not establish."
+ },
+ "started_utc": "2026-09-06 05:40:01 UTC"
+}

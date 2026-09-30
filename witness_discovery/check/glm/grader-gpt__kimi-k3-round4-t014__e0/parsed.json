@@ -1,0 +1,21 @@
+{
+ "checker": "glm",
+ "procedure": "grader",
+ "source": "gpt",
+ "case": "kimi-k3-round4-t014",
+ "tag": "e0",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 89.9,
+  "input_tokens": 7122,
+  "output_tokens": 5948,
+  "cache_read_input_tokens": 1024
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "yes",
+  "explanation": "The quote is verbatim from the Xiang Yu guarantee in Lemma 1.1. Turns alternate with LB first, so after LB takes $p_j$ and XY takes $\\ell$, the next move is LB's: LB moves first on $M''$ (the LB part of the same proof correctly says 'on which LB moves first'). The induction hypothesis gives the mover who plays first $\\operatorname{odd}$ and the second player $\\operatorname{even}$, so XY is entitled only to $\\operatorname{even}(M'')$, not $\\operatorname{odd}(M'')$; the stated inference is invalid. The lemma is true and repairable ($j=1$: $p_2+\\operatorname{even}(M'')=\\operatorname{even}(M)$; $j\\ge2$: $p_1+\\operatorname{even}(M'')\\ge\\operatorname{even}(M)$ via consecutive differences), but this repair appears nowhere in the text, and Lemma 1.1 underpins the reduction to alternating sums, so the proof is invalid as written."
+ }
+}

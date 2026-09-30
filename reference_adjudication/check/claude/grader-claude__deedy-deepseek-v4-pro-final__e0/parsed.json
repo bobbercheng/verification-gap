@@ -1,0 +1,55 @@
+{
+ "checker": "claude",
+ "objection_key": "grader-claude__deedy-deepseek-v4-pro-final__e0",
+ "case": "deedy-deepseek-v4-pro-final",
+ "procedure": "grader",
+ "source": "claude",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 23.1,
+  "input_tokens": 2,
+  "output_tokens": 1898,
+  "cache_read_input_tokens": 1643,
+  "cache_creation_input_tokens": 1829,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1696,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001796,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1898,
+    "cacheReadInputTokens": 1643,
+    "cacheCreationInputTokens": 1829,
+    "webSearchRequests": 0,
+    "costUSD": 0.0665715,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1524,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "affected_statement": "L3.2",
+  "objection_correct": "yes",
+  "established_elsewhere": "no",
+  "elsewhere_quote": null,
+  "status_as_written": "not_established",
+  "repair_distance": "none",
+  "explanation": "The write-up's answer (n+1)/(2n+1) disagrees with the correct value 2^n/(2^{n+1}-1) for all n>=2 (n=2: 3/5 vs 4/7). The objection's n=2 refutation is sound: with Liu's segments a>=b>=c, Xiang halving the two largest leaves odd-ranked total 1/2+c/2, forcing c>=1/5 for 3/5, and halving the smallest gives a+c/2, and the resulting forced values a=2/5,b=c=3/10 are then beaten by halving a, giving Xiang 1/2. So 3/5 is unattainable, contradicting the write-up's claim. The text contains no upper-bound argument anywhere (\"Full proof (To be completed)\"), so L3.2 is nowhere established and no local edit repairs it."
+ },
+ "elsewhere_anchor": null
+}

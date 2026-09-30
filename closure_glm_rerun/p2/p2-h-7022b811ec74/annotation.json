@@ -1,0 +1,46 @@
+{
+  "id": "p2-h-7022b811ec74",
+  "problem": "2",
+  "sha256": "7022b811ec7499899e40ad37908f298d39b162dabff8e2cb6b7353e1ddf88748",
+  "path": "checkpoint_inputs/7022b811ec7499899e40ad37908f298d39b162dabff8e2cb6b7353e1ddf88748.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9c3c93da",
+  "turn": 1,
+  "record_ids": [
+    "p2-nemotron-9c3c93da-v1"
+  ],
+  "bytes": 7237,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2460,
+        "output_tokens": 17356,
+        "cache_read_input_tokens": 576,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 192.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 0,
+    "lower_bound": 0,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "none",
+    "upper_bound_mechanism": "homothety H(A,2) reduces OM=ON to O' on perpendicular bisector of BC; O'B=O'C only asserted via unexecuted complex computation",
+    "wrong_answer_stated": true,
+    "notes": "Core mechanism fails: S(ray BK) lies on the opposite side of CA from L, so Lemma 1 (S(K) on CL) is false. Concyclicity of C,N,K1,K uses angle at wrong vertex; CK=KK1 misderived; perpendicularities KA=KB, LA=LC only sketched; final complex implication asserted (in fact false). No key circle through A,K,L."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

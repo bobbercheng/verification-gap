@@ -1,0 +1,74 @@
+{
+ "gate": "witness_blind",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "gpt56-ours-accepted",
+ "base_id": "gpt56-ours-accepted",
+ "type": "O",
+ "problem": "3",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 107.7,
+  "input_tokens": 2,
+  "output_tokens": 9413,
+  "cache_read_input_tokens": 1224,
+  "cache_creation_input_tokens": 5950,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4950,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.005050000000000001,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 9413,
+    "cacheReadInputTokens": 1224,
+    "cacheCreationInputTokens": 5950,
+    "webSearchRequests": 0,
+    "costUSD": 0.295447,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 9087,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 2,
+  "wrong_answer_stated": false,
+  "notes": "Drafting lemma (Liu gets (1+D)/2) proved by induction with explicit sign bookkeeping. Refinement lemma: tree-component/bipartition argument gives D>=Gamma for any <=q-1 cuts; overlay construction gives D<=Gamma within q-1 cuts. Pigeonhole on 2^{n+1} subset sums yields upper bound; powers-of-two lengths give matching lower bound. All steps checked, no gaps found."
+ },
+ "anchors": {}
+}

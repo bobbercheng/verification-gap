@@ -1,0 +1,48 @@
+{
+ "gate": "closure",
+ "model": "glm",
+ "transport": "anthropic",
+ "model_name": "glm-5.3",
+ "text_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "base_id": "p6-deedy-gpt-5.6-sol-pro-final",
+ "type": "O",
+ "problem": "6",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 59.1,
+  "input_tokens": 3438,
+  "output_tokens": 5766,
+  "cache_read_input_tokens": 0
+ },
+ "parsed": {
+  "answer": 2,
+  "reduction": 2,
+  "lower_bound": 2,
+  "upper_bound": 2,
+  "lower_bound_mechanism": "minimal-support weight descent + infinite sunflower erasure",
+  "upper_bound_mechanism": "membership periodic mod L, T = accepted residue classes, global from n=1",
+  "wrong_answer_stated": false,
+  "notes": "Complete correct proof. Greedy-scan/support characterization and self-duality (C) fully proved; finiteness (F) proved for all terms via squarefree domination descent terminating at bounded weight, plus sunflower lemma for bounded-size minimal supports; periodicity (P) assembled mod L with T counted in a window, valid from n=1."
+ },
+ "attempts": [
+  {
+   "attempt": 0,
+   "status": 200,
+   "stop": "end_turn",
+   "usage": {
+    "input_tokens": 3438,
+    "output_tokens": 5766,
+    "cache_read_input_tokens": 0,
+    "server_tool_use": {
+     "web_search_requests": 0
+    },
+    "service_tier": "standard"
+   },
+   "sec": 59.1,
+   "parsed": true
+  }
+ ],
+ "lenient_parse": false,
+ "S": 2,
+ "rubric_sha256": "269da96705d0782a02f3c61244c20f70c6016aef4670154f427e5b60ba721719"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "p3-h-d84ec9b247fc",
+  "problem": "3",
+  "sha256": "d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8",
+  "path": "checkpoint_inputs/d84ec9b247fccc8a6a9e78f2e73a25c77a0e425c07ce46b844df9ef1a7fe70f8.md",
+  "lineage": "ours-glm52-simple",
+  "model": "glm-5.2",
+  "context": 4,
+  "turn": null,
+  "record_ids": [
+    "glm52-simple-c4"
+  ],
+  "bytes": 19101,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 9098,
+        "cache_read_input_tokens": 670,
+        "output_tokens": 721,
+        "output_tokens_details": {
+          "thinking_tokens": 527
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 9098,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 721,
+            "cache_read_input_tokens": 670,
+            "cache_creation_input_tokens": 9098,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 9098
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 11.5,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "grade": 2,
+    "complete": false,
+    "main_gap": "Both minimax directions open for n≥2: no proof that the geometric config guarantees 2^n/(2^{n+1}−1), nor that every Liu config is capped there.",
+    "notes": "Correct and cleanly proved draft-game lemma (odd-rank sum), correct sup/inf formalization, complete n=1 case, and an exact matched-pair construction giving only a one-sided bound. The general answer is explicitly labeled conjecture backed by numerics; conjectures and finite searches earn no credit."
+  },
+  "S": null,
+  "rubric_sha256": "a740b5d0b5525475716e42b562a396e900df201e2c926410d7df7f02fdbd5859",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,18 @@
+{
+ "claim_id": "C3",
+ "condition": "invalid",
+ "verifier": "glm",
+ "model": "glm-5.3",
+ "status": 200,
+ "parsed": {
+  "claim_true": false,
+  "claim_reason": "The greedy rule forces only that a_{n+1} share some prime with each earlier term, not that its prime set be minimal. With a_1=2 the sequence is 2,4,6,...; P(6)={2,3} while {2} already hits {{2},{2}}, so minimality fails. With a_1=6: 6,8,10,12,14,... and P(14)={2,7}, though {2} suffices.",
+  "witness_valid": false,
+  "witness_reason": "The witness violates the hypothesis: a_3=9 shares no prime factor with a_2=8, so (6,8,9) is not a valid greedy sequence. The least integer >8 sharing a prime with both 6 and 8 is 10, not 9."
+ },
+ "expected": {
+  "claim_true": false,
+  "witness_valid": false
+ },
+ "elapsed_seconds": 80.4
+}

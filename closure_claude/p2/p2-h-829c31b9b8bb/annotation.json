@@ -1,0 +1,70 @@
+{
+  "id": "p2-h-829c31b9b8bb",
+  "problem": "2",
+  "sha256": "829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b",
+  "path": "checkpoint_inputs/829c31b9b8bb787cdf771121f0a54c22232e367fdfefb2dd8a40ae06442a9a1b.md",
+  "lineage": "deedy-gpt-5.6-sol-pro",
+  "model": "gpt-5.6-sol-pro",
+  "context": "gpt-5.6-sol-pro-main",
+  "turn": 28,
+  "record_ids": [
+    "p2-gpt-5.6-sol-pro-main-t028"
+  ],
+  "bytes": 4768,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3300,
+        "cache_read_input_tokens": 947,
+        "output_tokens": 2439,
+        "output_tokens_details": {
+          "thinking_tokens": 2073
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3300,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 2439,
+            "cache_read_input_tokens": 947,
+            "cache_creation_input_tokens": 3300,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 3300
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 33.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "trig factorization T = sin(x−y)[PQ sinU sinV − sin(p+r)sin(p+q)] — constant-term identity (8) unproved (numeric only)",
+    "upper_bound_mechanism": "circle |z|²=w·z through A,K,L meets AB,AC at D,E; OM=ON ⟺ cd−be=(c²−b²)/2 (expansions asserted, not executed)",
+    "wrong_answer_stated": false,
+    "notes": "Goal and strategy correct. All three angle hypotheses are genuinely encoded via sine rule (cot x = cot p + 2 cot r, etc.) and compatibility (C) — solid reduction. No synthetic key circle; the crux is the claimed factorization (F), whose constant term (identity (8)) is only numerically checked and explicitly flagged as an open gap. Finish steps (2)–(5) stated but derivations elided; sign/configuration handling only nominal."
+  },
+  "S": 0,
+  "rubric_sha256": "ce41d59efdf2bf1f8a3a74a863b483450e3f5df100b872c22511915a013b6706",
+  "path_base": "bundle root"
+}

@@ -1,0 +1,33 @@
+{
+ "task_id": "imo-2026-p3",
+ "verdict": "pass",
+ "scores": {
+  "correctness": 4,
+  "completeness": 4,
+  "rigor": 4,
+  "self_contained": 4
+ },
+ "fatal_issues": [],
+ "required_fixes": [],
+ "verified_claims": [
+  "Lemma 1 (draft value of the alternating claiming game equals p1+p3+...; both the greedy lower bound via the 2k-2 vs 2k-1 count and the matching upper bound via Xiang's greedy play are correct).",
+  "Lemma 2: pieces count m ≤ 2n+1 gives ≤ n pairs; the multigraph on n+1 vertices with ≤ n edges has a tree component T; every piece from a T-block is an edge endpoint or the leftover; bipartite signing yields |Σσ_v a_v| ≤ Σ deficits + z ≤ Δ, with at least one nonzero coefficient.",
+  "Liu's marks x_j=(2^j-1)/D produce blocks 1/D,2/D,...,2^n/D (the last block has length (D-(2^n-1))/D = 2^n/D).",
+  "Uniqueness of binary representation implies every nontrivial signed sum of {2^0,...,2^n} has absolute value ≥ 1, hence Δ ≥ 1/D and Liu gets ≥ (1+1/D)/2 = 2^n/D.",
+  "Pigeonhole: 2^{n+1}=D+1 subset sums in [0,1] give two subsets whose difference is ≤ 1/D; deleting the intersection yields disjoint P,Q with difference δ ≤ 1/D.",
+  "Equal pairs cancel: inserting two equal pieces at adjacent positions in the sorted order preserves the alternating advantage, so advantage ≤ total of unpaired remainder.",
+  "Case 1 mark count: each refinement coordinate is an endpoint on at least one side, so it requires at most one new mark (the coordinate L needs at most one, in the Q block containing it); total ≤ (p-1)+(q-1)+1 = p+q-1, and overall (r-p-q)+(p+q-1) = r-1 ≤ n.",
+  "Case 1 refinement produces a common partition of [0,L] on both rulers, hence equal pairs, plus unpaired Q-side pieces of total exactly δ.",
+  "Case 2 sub-cases: k≥1 uses r−k ≤ n marks; k=0 forces some padded zero index to be selected, hence r ≤ n, so halving all r blocks is legal.",
+  "Edge cases n=1 (c=2/3 verified directly), Liu marking fewer points, m=1 in Lemma 2, and degenerate P/Q all check out."
+ ],
+ "unverified_claims": [],
+ "summary": "The solution correctly establishes c(n) = 2^n/(2^{n+1}-1). The lower bound combines a clean graph-theoretic lemma (a tree component of the pair-graph yields a signed block sum bounded by the alternating advantage) with the binary-uniqueness property of Liu's dyadic blocks. The upper bound is a genuine constructive strategy: pigeonhole on subset sums selects two nearly-equal subfamilies, equal halves cancel in the alternating sum, and the common-refinement trick pairs up the remaining pieces within the mark budget; mark counts and degenerate cases (empty sides, zero padding) are handled correctly. No gaps found.",
+ "transfer_assessment": [
+  "Reusable: exact evaluation of alternating draft value as p1+p3+... and the 'equal pairs cancel' invariance of the alternating advantage.",
+  "Reusable: graph/forest argument extracting a signed sum of block lengths bounded by pairing deficits — a general tool for refinement problems.",
+  "Reusable: pigeonhole on 2^{n+1} subset sums in [0,1] with gap 1/(2^{n+1}-1), plus disjointification by deleting the intersection.",
+  "Reusable: two-ruler common-refinement trick to create equal piece pairs with p+q-1 cuts (each coordinate is an endpoint on at least one side, so costs at most one mark).",
+  "Not misleading: the dyadic block choice is matched exactly to the subset-sum gap; the argument is tight, not a coincidence."
+ ]
+}

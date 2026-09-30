@@ -1,0 +1,78 @@
+{
+ "model": "claude-opus-5",
+ "cli": "claude",
+ "cli_model_usage": {
+  "claude-haiku-4-5-20251001": {
+   "inputTokens": 1791,
+   "outputTokens": 20,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.001891,
+   "contextWindow": 200000,
+   "maxOutputTokens": 32000,
+   "thinkingTokens": 0,
+   "canonicalModel": "claude-haiku-4-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 2,
+   "outputTokens": 752,
+   "cacheReadInputTokens": 947,
+   "cacheCreationInputTokens": 1848,
+   "webSearchRequests": 0,
+   "costUSD": 0.0377635,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 494,
+   "canonicalModel": "claude-opus-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1848,
+  "cache_read_input_tokens": 947,
+  "output_tokens": 752,
+  "output_tokens_details": {
+   "thinking_tokens": 494
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1848,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "not_available",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 752,
+    "cache_read_input_tokens": 947,
+    "cache_creation_input_tokens": 1848,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1848
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard"
+ },
+ "stop_reason": "end_turn",
+ "num_turns": 1,
+ "duration_ms": 10917,
+ "is_error": false,
+ "elapsed_seconds": 11.6,
+ "content": [
+  {
+   "type": "text",
+   "text": "{\"answer\": 1, \"reduction\": 1, \"lower_bound\": 0, \"upper_bound\": 1, \"lower_bound_mechanism\": \"none\", \"upper_bound_mechanism\": \"equal powers of M,N w.r.t. (AKL) via circle equation X^2+Y^2+DX+EY=0\", \"wrong_answer_stated\": false, \"notes\": \"Goal correct; purely computational route. Coordinates for K,L displayed but derivation and the two incidence equations F,G are never written out, so the three hypotheses are not fully encoded on paper. No key circle through A,K,L. Finish reduces OM=ON to equal powers correctly, but closure rests on an asserted unexecuted symbolic elimination; signs/denominators admittedly unhandled.\"}"
+  }
+ ]
+}

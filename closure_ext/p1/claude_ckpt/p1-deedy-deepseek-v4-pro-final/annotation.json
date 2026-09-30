@@ -1,0 +1,66 @@
+{
+  "id": "p1-deedy-deepseek-v4-pro-final",
+  "lineage": "deedy-deepseek-v4-pro",
+  "model": "deepseek-v4-pro",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/1d52d4fe1b749925ad678a27bc1ef9eef82a148ad2791631d15dba9ed1d75996.md",
+  "bytes": 7302,
+  "sha256": "1d52d4fe1b749925ad678a27bc1ef9eef82a148ad2791631d15dba9ed1d75996",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5803,
+        "output_tokens": 884,
+        "output_tokens_details": {
+          "thinking_tokens": 593
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 884,
+            "cache_read_input_tokens": 5803,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 12.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Monovariant Phi = K + sum Omega strictly decreases; K drops by at most 1 per move so K=0 unreachable, ending at K=1",
+    "upper_bound_mechanism": "gcd of p-adic valuation multiset invariant under (a,b) -> (min, |a-b|), proved in both divisibility directions including zeros/equal case",
+    "wrong_answer_stated": false,
+    "notes": "Complete: explicit M = prod p^{gcd_i v_p(a_i)}; move's valuation action and 'at most one 1 produced' case analysis given; termination via K+Omega monovariant with correct 'exactly one survivor' argument; invariance lemma proved generally including zero and equal-valuation cases."
+  },
+  "S": 2,
+  "rubric_sha256": "7af4e7cfbf30eaed890f0cb7e8d16a085812664d78351a02cebd16b11ed8ffb8",
+  "path_base": "bundle root"
+}

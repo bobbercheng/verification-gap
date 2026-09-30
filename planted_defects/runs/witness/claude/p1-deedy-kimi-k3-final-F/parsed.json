@@ -1,0 +1,85 @@
+{
+ "gate": "witness",
+ "model": "claude",
+ "transport": "claude-cli",
+ "model_name": "claude-opus-5",
+ "text_id": "p1-deedy-kimi-k3-final-F",
+ "base_id": "p1-deedy-kimi-k3-final",
+ "type": "F",
+ "problem": "1",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 30.9,
+  "input_tokens": 2,
+  "output_tokens": 2389,
+  "cache_read_input_tokens": 0,
+  "cache_creation_input_tokens": 6956,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 4130,
+    "outputTokens": 21,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.004235,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2389,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 6956,
+    "webSearchRequests": 0,
+    "costUSD": 0.12929500000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 1789,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "obligations": {
+   "reduction": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   },
+   "lower_bound": {
+    "status": "written_but_invalid",
+    "quote": "A positive integer that never increases and starts above 1 can never reach 1; hence",
+    "witness": "NON-SEQUITUR / false lemma. Premises established: P is a positive integer, P_0 > 1, and each move sends P to P/g so P never increases. Conclusion drawn: P can never equal 1. This does not follow: a non-increasing sequence of positive integers starting above 1 may perfectly well reach 1 (e.g. 4, 2, 1). Nothing in Step 1 or Step 2 excludes the board becoming all 1's; the needed fact (each move leaves at least one output > 1, since g >= 2 in Type A and ell = mn >= 4 in Type B) is asserted only in the summary ('no move can produce two 1's') and is never used or proved in the full proof.",
+    "load_bearing": "Step 2 is the sole justification in the full proof that at least one entry exceeds 1, and the Conclusion of (a) cites Step 2 for the 'at least one' half of 'exactly one integer M > 1'."
+   },
+   "upper_bound": {
+    "status": "written_and_valid",
+    "quote": null,
+    "witness": null,
+    "load_bearing": null
+   }
+  },
+  "S_valid": 1,
+  "wrong_answer_stated": true,
+  "notes": "Move description (min, |alpha-beta|) and Type A/B split are correct; termination bound is valid; invariance of G_p is proved for all cases including equal and zero valuations. The 'at least one entry > 1' step rests on the false lemma that a non-increasing positive integer starting above 1 cannot reach 1. Final formula for M is correct."
+ },
+ "anchors": {
+  "lower_bound": {
+   "anchored": true,
+   "length": 83,
+   "length_ok": true,
+   "reason": null,
+   "span": [
+    4541,
+    4628
+   ]
+  }
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "p3-h-19dc570c8774",
+  "problem": "3",
+  "sha256": "19dc570c877417736d49a79851fa50a2d5776e505d4429b0a14628bdaf53c793",
+  "path": "checkpoint_inputs/19dc570c877417736d49a79851fa50a2d5776e505d4429b0a14628bdaf53c793.md",
+  "lineage": "deedy-gpt-5.6-sol-xhigh",
+  "model": "gpt-5.6-sol-xhigh",
+  "context": "gpt-5.6-sol-xhigh-main",
+  "turn": 5,
+  "record_ids": [
+    "gpt-5.6-sol-xhigh-main-t005"
+  ],
+  "bytes": 2550,
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2419,
+        "output_tokens": 704,
+        "output_tokens_details": {
+          "thinking_tokens": 459
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 704,
+            "cache_read_input_tokens": 2419,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 9.8,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "1:2:4:...:2^n division + tree-component bipartition imbalance (sketch)",
+    "upper_bound_mechanism": "subset-sum pigeonhole + sparse transportation matching/cancellation (sketch)",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form asserted. Reduction to alternating sorted sum stated without proof. Both bounds are outlines: multigraph/tree argument and subset-sum pigeonhole are named with key ideas but pairing, transportation, and cut-realization details explicitly left as remaining work; no full proof written."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

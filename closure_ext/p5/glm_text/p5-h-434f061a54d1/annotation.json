@@ -1,0 +1,47 @@
+{
+  "id": "p5-h-434f061a54d1",
+  "problem": "5",
+  "sha256": "434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1",
+  "path": "checkpoint_inputs_ext/434f061a54d1661980a9840643b37c49fe825081b7de48545b88f1e2a744f6e1.md",
+  "lineage": "deedy-gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "context": "gpt-5.6-sol-main",
+  "turn": 1,
+  "record_ids": [
+    "p5-gpt-5.6-sol-main-t001",
+    "p5-deedy-gpt-5.6-sol-final"
+  ],
+  "bytes": 6215,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2382,
+        "output_tokens": 6376,
+        "cache_read_input_tokens": 896,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 67.3,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "QM-AM-GM on x and f(y)=y+c",
+    "upper_bound_mechanism": "symmetric quadratic estimate |g(u)-g(v)|<=(sqrt f(u)-sqrt f(v))^2, then monotonicity, continuity, partition/telescoping to constant g",
+    "wrong_answer_stated": false,
+    "notes": "Complete proof. (S) derived from x=f(y) with g>=0. Necessity: estimate (7) proved for all u,v; forces f strictly increasing, g nondecreasing, then continuous; uniform-continuity partition gives g constant, covering fixed points. Sufficiency verified for all c>=0. Only a trivially fillable detail (J<f(t) in left-continuity) left implicit."
+  },
+  "S": 2,
+  "rubric_sha256": "07f4125c226de71fff49e1f80f5da76b828d7854dda615482225c2d1be31bd26",
+  "path_base": "bundle root"
+}

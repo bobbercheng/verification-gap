@@ -1,0 +1,66 @@
+{
+  "id": "p4-deedy-gpt-5.6-sol-max-final",
+  "lineage": "deedy-gpt-5.6-sol-max",
+  "model": "gpt-5.6-sol-max",
+  "context": 99,
+  "turn": null,
+  "path": "checkpoint_inputs_ext/788aced15a042ec790b8827c4f5b5a4e9f64f8298c61007f6bfab1fa3eeecb1d.md",
+  "bytes": 7827,
+  "sha256": "788aced15a042ec790b8827c4f5b5a4e9f64f8298c61007f6bfab1fa3eeecb1d",
+  "annotator": "claude-opus-5",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 5601,
+        "output_tokens": 1386,
+        "output_tokens_details": {
+          "thinking_tokens": 1099
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 1386,
+            "cache_read_input_tokens": 5601,
+            "cache_creation_input_tokens": 0,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "sec": 20.2,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 2,
+    "reduction": 2,
+    "lower_bound": 2,
+    "upper_bound": 2,
+    "lower_bound_mechanism": "Interval/pigeonhole choice of m with C < m/n < A+C; cut gives both children angles m/n and (n-m)/n, then induction on k reducing k/n",
+    "upper_bound_mechanism": "Safe-triangle invariant (no angle a positive integer multiple of t), four-case check that some child is safe, equilateral start",
+    "wrong_answer_stated": false,
+    "notes": "Correct answer with complete transition model, explicit attainability of every cut parameter x in (0,A), separate n=2 handling, integer-in-interval existence argument, both children shown to carry multiples of t, full induction lemma, and an exhaustive four-case safety invariant using 1=(r+s)t exactly where needed."
+  },
+  "S": 2,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

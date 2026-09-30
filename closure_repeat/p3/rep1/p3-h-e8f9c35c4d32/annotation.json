@@ -1,0 +1,46 @@
+{
+  "id": "p3-h-e8f9c35c4d32",
+  "problem": "3",
+  "sha256": "e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d",
+  "path": "checkpoint_inputs/e8f9c35c4d3291e5d4c32e6a3f5ebe21c030c3628981433711ca8919590ee26d.md",
+  "lineage": "ours-glm53-thin",
+  "model": "glm-5.3",
+  "context": 2,
+  "turn": null,
+  "record_ids": [
+    "glm53-c2"
+  ],
+  "bytes": 11002,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 4468,
+        "output_tokens": 3518,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 47.0,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "Conjecture L: geometric 1:2:...:2^n partition, superincreasing A≥d via pairing/merge lemmas; rigorously proved only for n≤2",
+    "upper_bound_mechanism": "all-n halving bound V≤1/2+δ/2 (non-tight) plus unproved Conjecture X; tight exhaustive arguments only for n≤2",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form 2^n/(2^{n+1}-1) is stated only as a conjecture for n≥3; rigorous two-direction proofs exist solely for n=1,2. Reduction to odd-position/alternating sum is asserted as 'standard', not proved. General-n lower (Conjecture L) and upper (Conjecture X) are formulated with partial lemmas; interleaving case open. Earlier 5/9 guess disproved in-text."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root"
+}

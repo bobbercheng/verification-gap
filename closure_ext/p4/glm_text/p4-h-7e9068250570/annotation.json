@@ -1,0 +1,46 @@
+{
+  "id": "p4-h-7e9068250570",
+  "problem": "4",
+  "sha256": "7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8",
+  "path": "checkpoint_inputs_ext/7e906825057047c314b4f758cc700b5ac46effd7384d7b214898433a4ed791a8.md",
+  "lineage": "ours-nemotron",
+  "model": "nemotron-3-ultra",
+  "context": "9a63b14e",
+  "turn": 1,
+  "record_ids": [
+    "p4-nemotron-9a63b14e-v1"
+  ],
+  "bytes": 12849,
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 3964,
+        "output_tokens": 4676,
+        "cache_read_input_tokens": 960,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 69.1,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "explicit case analysis: θ=90° (split C with x=90−A) and θ=60° (3 cases) only",
+    "upper_bound_mechanism": "equilateral start + max-angle<θ invariant, proved only for θ>90°",
+    "wrong_answer_stated": false,
+    "notes": "Only special angles proved: θ=90° and θ=60° Mulan wins (both children carry θ, discard choice handled, valid); θ>90° Shan-Yu invariant (correct). Intervals (0°,60°)∪(60°,90°) honestly declared open; no general k·θ induction, no n≥4, no safe-angle/multiple-of-θ invariant; remaining hypotheses flagged untested."
+  },
+  "S": 0,
+  "rubric_sha256": "5d0afbbe1c3d822377f98e5c4cc5dfc35f53c34b9b2c05de3891b71c2c89d1c8",
+  "path_base": "bundle root"
+}

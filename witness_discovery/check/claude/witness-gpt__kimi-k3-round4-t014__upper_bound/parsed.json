@@ -1,0 +1,52 @@
+{
+ "checker": "claude",
+ "procedure": "witness",
+ "source": "gpt",
+ "case": "kimi-k3-round4-t014",
+ "tag": "upper_bound",
+ "status": 200,
+ "usage": {
+  "elapsed_seconds": 33.1,
+  "input_tokens": 2,
+  "output_tokens": 2583,
+  "cache_read_input_tokens": 1341,
+  "cache_creation_input_tokens": 11795,
+  "cli_model_usage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 9640,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.009729999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 2583,
+    "cacheReadInputTokens": 1341,
+    "cacheCreationInputTokens": 11795,
+    "webSearchRequests": 0,
+    "costUSD": 0.1832055,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 2165,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  }
+ },
+ "parsed": {
+  "quote_faithful": "yes",
+  "verdict": "confirmed",
+  "evidence_kind": "invalid_inference",
+  "fatal": "no",
+  "explanation": "The text defines v(B) via the decreasing order |...||b1-b2|-b3|...|, while Lemma 4.1 only produces SOME ordering of P∪N with nested difference g. The objector's example is correct: for P={8,7,5}, N={10,9} the sums 20,19 differ by 1 and no subset sum lies strictly between (all integers), so 4.1(b) applies, yet the decreasing order 10,9,8,7,5 gives |10-9|=1, |1-8|=7, |7-7|=0, |0-5|=5. So the step as stated (decreasing-order chain value ≤ g) does not follow; Theorem 4.2's conclusion is proved only for some ordering. But this is a notational mismatch, not a substantive gap: XY's strategy processes b_1,...,b_r sequentially, cutting 'the larger of the two pieces {v_run,b_k}', which is order-agnostic and yields final running value equal to the nested difference in whatever order is used. Applying it in Lemma 4.1's order gives D=g≤T_n. Upper bound survives."
+ }
+}

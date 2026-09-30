@@ -1,0 +1,44 @@
+{
+  "id": "kimi-r2-c1",
+  "lineage": "ours-kimi-R2",
+  "model": "kimi-k3",
+  "context": 1,
+  "path": "checkpoint_inputs/c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d.md",
+  "bytes": 3032,
+  "sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+  "annotator": "glm-5.3",
+  "attempts": [
+    {
+      "attempt": 0,
+      "status": 200,
+      "stop": "end_turn",
+      "usage": {
+        "input_tokens": 1449,
+        "output_tokens": 2924,
+        "cache_read_input_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0
+        },
+        "service_tier": "standard"
+      },
+      "sec": 57.6,
+      "parsed": true
+    }
+  ],
+  "grades": {
+    "answer": 1,
+    "reduction": 1,
+    "lower_bound": 1,
+    "upper_bound": 1,
+    "lower_bound_mechanism": "dyadic division (1:2:4:...:2^n) with toggle/symmetric-difference invariant (BFS-verified n<=3 only, invariant not found)",
+    "upper_bound_mechanism": "n=2 explicit attack case analysis (halve-largest, clone, etc.); no all-n strategy",
+    "wrong_answer_stated": false,
+    "notes": "Correct closed form appears only as a labeled CONJECTURE (numerics n<=3, n=2 claimed proved, details 'to write up'). Draft-game reduction to odd-sum is named, proof explicitly deferred. Lower bound: dyadic division stated, but resistance argument only BFS-tested; general invariant missing. Upper bound: nothing for general n; four n=2 attacks merely named. No all-n argument is written out."
+  },
+  "S": 0,
+  "rubric_sha256": "48ba4f115fc2e52cb94031a907b2ac922db9b9a56b47cf86bc9f1b34d72a79f7",
+  "path_base": "bundle root",
+  "original_sha256": "c2ce1631ca363ec958294ed5209b356376fb3a2352e47252d630dc14389a037d",
+  "original_bytes": 3032,
+  "input_anonymized": false
+}
