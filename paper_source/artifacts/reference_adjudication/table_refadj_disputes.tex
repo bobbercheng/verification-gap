@@ -1,0 +1,52 @@
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Text & Objection & Stmt & GPT & Claude & Repair G/C \\
+\midrule
+Kimi P3 round 3 & grader-gpt/e0 & L3.2 & not est. & not est. & lemma/lemma \\
+ & grader-gpt/e1 & L3.3 & not est. & not est. & lemma/lemma \\
+ & witness-gpt/lower & L3.3 & not est. & not est. & lemma/lemma \\
+ & witness-gpt/upper & L3.2 & not est. & not est. & lemma/lemma \\
+ & grader-claude/e0 & L3.2 & not est. & not est. & lemma/none \\
+ & grader-claude/e1 & L3.1 & not est. & not est. & lemma/lemma \\
+ & witness-claude/lower & L3.3 & not est. & not est. & lemma/lemma \\
+ & witness-claude/upper & L3.2 & not est. & not est. & lemma/lemma \\
+\addlinespace[2pt]
+Kimi P3 round 4 & grader-gpt/e0 & L3.1 & not est. & not est. & lemma/sentence \\
+ & grader-gpt/e1 & L3.2 & \textbf{not est.} & \textbf{false disp.} & sentence/sentence \\
+ & witness-gpt/upper & L3.2 & \textbf{not est.} & \textbf{false disp.} & sentence/sentence \\
+ & grader-claude/e0 & L3.2 & false disp. & false disp. & sentence/sentence \\
+ & witness-claude/upper & L3.2 & \textbf{not est.} & \textbf{false disp.} & sentence/sentence \\
+\addlinespace[2pt]
+Kimi P6 round 1 & grader-gpt/e0 & L6.2 & not est. & not est. & lemma/lemma \\
+ & grader-gpt/e1 & L6.1 & not est. & not est. & lemma/lemma \\
+ & witness-gpt/lower & L6.2 & not est. & not est. & lemma/lemma \\
+ & witness-gpt/upper & L6.3 & not est. & not est. & lemma/lemma \\
+ & grader-claude/e0 & L6.2 & not est. & not est. & lemma/lemma \\
+ & grader-claude/e1 & L6.2 & not est. & not est. & lemma/lemma \\
+ & witness-claude/lower & L6.2 & not est. & not est. & lemma/lemma \\
+ & witness-claude/upper & L6.3 & not est. & not est. & lemma/lemma \\
+\addlinespace[2pt]
+GLM P1 candidate & (no objection) & -- & -- & -- & -- \\
+\addlinespace[2pt]
+DeepSeek P5 t033 & grader-gpt/e0 & L5.3 & not est. & not est. & sentence/sentence \\
+ & grader-gpt/e1 & L5.5 & \textbf{not est.} & \textbf{est.} & sentence/none \\
+ & witness-gpt/upper & L5.3 & not est. & not est. & sentence/sentence \\
+ & grader-claude/e0 & L5.3 & not est. & not est. & sentence/sentence \\
+ & grader-claude/e1 & L5.5 & false disp. & false disp. & symbol/symbol \\
+ & witness-claude/upper & L5.3 & not est. & not est. & sentence/sentence \\
+\addlinespace[2pt]
+DeepSeek P5 t038 & grader-gpt/e0 & L5.3 & not est. & not est. & sentence/sentence \\
+ & grader-gpt/e1 & L5.5 & \textbf{not est.} & \textbf{est.} & sentence/sentence \\
+ & witness-gpt/upper & L5.3 & not est. & not est. & sentence/sentence \\
+ & grader-claude/e0 & L5.3 & not est. & not est. & sentence/sentence \\
+ & grader-claude/e1 & L5.5 & false disp. & false disp. & symbol/symbol \\
+ & witness-claude/upper & L5.3 & not est. & not est. & sentence/sentence \\
+\addlinespace[2pt]
+Nemotron P5 & grader-gpt/e0 & L5.4 & not est. & not est. & sentence/sentence \\
+ & grader-gpt/e1 & L5.1 & false disp. & false disp. & symbol/symbol \\
+ & witness-gpt/lower & L5.1 & false disp. & false disp. & symbol/symbol \\
+ & grader-claude/e0 & L5.4 & \textbf{est.} & \textbf{false disp.} & none/sentence \\
+ & grader-claude/e1 & L5.4 & est. & est. & none/none \\
+ & witness-claude/lower & L5.1 & \textbf{not est.} & \textbf{false disp.} & symbol/symbol \\
+\bottomrule
+\end{tabular}

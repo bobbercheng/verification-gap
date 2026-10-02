@@ -1,0 +1,782 @@
+\makeatletter
+\@ifundefined{CRNBases}{\input{gen/cr_macros}}{}
+\@ifundefined{CRAppNatProblems}{\input{gen/cr_app_macros}}{}
+\@ifundefined{CRBodyRepeatVarTexts}{\input{gen/cr_body_macros}}{}
+\providecommand{\CRsec}[2]{\@ifundefined{r@#1}{#2}{\S\ref{#1}}}
+\providecommand{\CRtab}[2]{\@ifundefined{r@#1}{#2}{Table~\ref{#1}}}
+\providecommand{\CRfig}[2]{\@ifundefined{r@#1}{#2}{Figure~\ref{#1}}}
+\newsavebox{\CRappfitbox}
+\providecommand{\CRfit}[1]{\sbox{\CRappfitbox}{#1}\ifdim\wd\CRappfitbox>\linewidth\resizebox{\linewidth}{!}{\usebox{\CRappfitbox}}\else\usebox{\CRappfitbox}\fi}
+\makeatother
+
+\appendix
+
+\section{Prior Campaign: IMO 2025 with an Open-Weight Model}
+\label{app:imo25}
+
+Before IMO 2026 we reproduced the verification-and-refinement pipeline of \citet{huang2025gold} with \texttt{gpt-oss-120b} \citep{openai2025gptoss} on IMO 2025. Three observations shaped the 2026 protocol.
+
+\paragraph{Effort and search.} Breadth-first best-of-3 generation with model-based verification at high reasoning effort produced verifier-accepted solutions for Problems~1--5; low and medium effort did not. Tree search (MCTS) showed no advantage at the sample sizes we could afford, and an adversarial-critic refinement loop exhibited \emph{answer lock}: it strengthened proofs of a wrong answer instead of revisiting the answer, timing out on every test case.
+
+\paragraph{Verifier integrity.} An externally reported low-effort success of the pipeline traced to a verifier bug that accepted invalid solutions; with the verifier fixed, no problem was solved at low effort. This incident motivated the separate second-order dependency audit of Appendix~\ref{app:rubric} and the negative-control discipline we recommend for any model-graded evaluation.
+
+\paragraph{Tool-assisted conjecturing.} On Problem~6 every search method produced plausible but wrong constructions. Enumerating small cases with a CP-SAT solver \citep{perron2023cpsat} ($n=4{:}\,5$ tiles, $n=9{:}\,12$, $n=16{:}\,21$) and asking the model to induce a closed form yielded $f(n,k)=n+2k-3$ and the correct final value $2112$ for $n=2025$, $k=45$, in 38 seconds. This is conjecture generation from verified data, not a proof: the lower bound remained unproved, and three points constrain a formula only through the model's prior over ``nice'' expressions.
+
+\section{Rubric and Gate Text}
+\label{app:rubric}
+
+The texts below are the prompts sent on 2026-07-20, copied from retained GPT-5.6-Sol invocation records with absolute run-directory paths abbreviated to \texttt{<run>/\allowbreak }. They contain no mathematics specific to any problem: the same reviewer and verifier text was used for all six problems of the GPT-5.6-Sol campaign (the other campaigns ran the same loop; Appendix~\ref{app:manifest}), and the only problem-specific input is the statement file. The gate is therefore portable by construction; the body's failure catalogue shows what such a gate cannot catch without problem knowledge or a witness. The reviewer and verifier run in fresh contexts. The verifier sees the structured review, but not the reviewer's private reasoning. These prompts request file operations; they did not restrict the available toolset (Appendix~\ref{app:network}).
+
+\paragraph{Reviewer-swap adaptation.} The later swaps use tool-free APIs and published proofs, without the original candidate manifests or a second-order audit. Their prompt retains the four rubric dimensions and the host pass predicate, replaces file operations with inline text and JSON output, explicitly requires empty \texttt{unverified\_claims}, and tells reviewers to put checked identities in \texttt{verified\_claims}. It also forbids using published solutions. This is an adapted prompt, not a verbatim replication; the bundle includes its exact text and per-request hashes.
+
+\paragraph{Attack role (adversarial review).}
+\begin{quote}\footnotesize\begin{verbatim}
+EXECUTE THIS REVIEW NOW. Do not ask what the user wants and do not stop after
+reading files.
+You are a fresh adversarial reviewer, not the author.
+
+Read the task at <run>/statement.md, the proposed result at <run>/candidate_v1.md,
+and its manifest at <run>/candidate_v1.json. Re-derive the critical steps
+independently. Search for counterexamples, hidden quantifier changes, unjustified
+limit/continuity claims, degenerate cases, circular arguments, and gaps between
+experiments and proof. Do not modify Claude Code configuration files.
+
+You MUST call the Write tool to create <run>/review_v1.json as JSON with exactly
+these fields:
+- task_id: 'imo-2026-p1'
+- verdict: one of "pass", "revise", "reject"
+- scores: object with correctness, completeness, rigor, self_contained;
+  each integer 0..4
+- fatal_issues: list
+- required_fixes: list
+- verified_claims: list
+- unverified_claims: list
+- summary: concise assessment
+- transfer_assessment: list of reusable or misleading mechanisms
+
+Use "pass" only when there is no known fatal gap and every score is at least 3.
+This is still a model review, not an official proof certificate.
+Before ending, use Read to confirm that <run>/review_v1.json exists and contains
+valid JSON. Your final response must be REVIEW_ARTIFACT_COMPLETE only. Do not
+return the JSON merely as chat text.
+\end{verbatim}\end{quote}
+
+\paragraph{Gate rule (host code, not model-visible).} A review clears the gate only if the host predicate below holds; the model's verdict alone is never sufficient. In particular a ``pass'' that lists any \texttt{unverified\_claims} is rejected and triggers a revision cycle, which is what happened to the first GPT-5.6-Sol candidate on Problem~2.
+\begin{quote}\footnotesize\begin{verbatim}
+def review_passes(review):
+    return bool(
+        review["verdict"] == "pass"
+        and not review["fatal_issues"]
+        and not review["unverified_claims"]
+        and all(score >= 3 for score in review["scores"].values())
+    )
+\end{verbatim}\end{quote}
+
+\paragraph{Verify role (second-order dependency audit).}
+\begin{quote}\footnotesize\begin{verbatim}
+EXECUTE A SECOND-ORDER AUDIT NOW. You are not the author and your job is to try
+to overturn a prior pass, not summarize it.
+Read <run>/statement.md, <run>/candidate_v1.md, and <run>/review_v1.json.
+Reconstruct the proof or technical dependency graph. Identify the single weakest
+inference, reverse every inequality implication, test existence/nonzero
+conclusions, check circular dependencies, and seek a concrete counterexample.
+Agreement with the first reviewer is not evidence.
+
+You MUST call Write to create <run>/verification_v1.json as JSON with exactly:
+- task_id: 'imo-2026-p1'
+- verdict: "confirm" or "overturn"
+- weakest_inference: nonempty string
+- counterexample_search: list
+- dependency_gaps: list
+- required_fixes: list
+- summary: string
+Use "confirm" only if dependency_gaps and required_fixes are empty after the
+attack. Then Read the JSON back. Reply VERIFICATION_ARTIFACT_COMPLETE only after
+it exists. Do not ask a question or return the JSON only in chat.
+\end{verbatim}\end{quote}
+The host accepts a verification only if \texttt{verdict == "confirm"} and both \texttt{dependency\_gaps} and \texttt{required\_fixes} are empty. A third, line-by-line implication audit with the same fail-closed shape was added on 2026-07-21 for the Nemotron campaign after its Problem-1 draft passed both gates with an invalid local inference (Appendix~\ref{app:manifest}); it was not part of the GPT-5.6-Sol acceptances.
+
+\paragraph{Planted-study prompts (6 September 2026).}\corr{Q14} The planted-defect study (Appendix~\ref{app:planted}) reads three rules from one grading response and runs two further gates with other system prompts. The grading prompt is reference-free: it carries the problem statement and the coordinator scale, asks the grader not to consult or recall a published solution or use a fixed list of required lemmas (which cannot remove what a model already knows), and names the \texttt{complete} field without defining it, while its scale calls 7 ``complete and correct'' and 5--6 ``essentially complete''. The witness and closure gates are reference-guided: their prompts carry the problem's closure rubric, a marking scheme derived from the published solution that lists the steps a complete proof needs and, on some problems, gives the answer and names example wrong approaches (Appendix~\ref{app:planted-arms}). The reviewed version's description of these two gates is corrected here (Appendix~\ref{app:changes}, row \texttt{Q14}). Printed below, verbatim from the stored requests, are the grading prompt's first line and instruction block, the witness gate's instruction block (which replaces the rubric's return block), and the P1 and P5 closure rubrics; the P3, P6 and P2 rubrics are in Appendix~\ref{app:closure}.
+\input{gen/cr_prompts}
+
+\section{Per-Problem Notes and Artifact Manifest}
+\label{app:manifest}
+
+\begin{table}[htbp]
+  \caption{Verification failures found in the audit; each row is a released artifact. Three further cases (a gate refusal for unverified manifest claims; a wrong cross-lab dissent on GPT's P2; two identical texts with different labels) are in Appendices~\ref{app:manifest} and~\ref{app:closure}.}
+  \label{tab:failures}
+  \centering\scriptsize\renewcommand{\arraystretch}{0.95}
+  \begin{tabular}{@{}p{3.5cm}p{2.5cm}p{2.6cm}p{3.9cm}@{}}
+    \toprule
+    Event & Accepted by & Caught by & Consequence \\
+    \midrule
+    Nemotron P1: nonincreasing product ``stays above one'' & attack review 4/4/4/4 and verify (confirm) & third line-by-line logic audit, next day & published proof edited in one sentence; fresh blind attempt passed all three \\
+    GLM-5.2 P2: decisive identity $\mathrm{num}(E)=Q\cdot\mathrm{num}(G_2)$ in external CAS files & gate with workspace access (4/4/3/4, confirm) & Kimi~K3 tool-free re-grade (fatal: certificate not in text) & gate pass $\ne$ self-contained proof \\
+    Public GPT default P6 (false finite-transversal lemma, two checkpoints) and P3 (both mechanisms sketched) & structural annotators: $S{=}2$ ``complete rigorous proof'' & public verifier 1/7 and 2/7 (counterexample; ``unverifiable sketch'') & written $\ne$ valid; validity layer \ADJPSIX\ and \ADJPTHREE \\
+    Public Kimi P6 round 2: self-dual-clutter theorem applied to a possibly infinite transversal & structural annotators $S{=}2$ & public verifier 3/7 (fatal); fixed after critique & same \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\paragraph{Editorial repair.} The accepted Nemotron Problem-1 proof replaces one local sentence: the draft inferred that a nonincreasing product stays above one; the sufficient argument is that every legal move retains a nonunit. Editing fixes typography and documented local gaps and never converts a rejected candidate into an accepted result.
+
+Table~\ref{tab:manifest} lists, for every accepted proof, the lineage that produced it, the number of attack/revise cycles, the rubric scores of the accepting review, the verifier verdict, and the first 16 hex digits of the SHA-256 digests of the candidate, review, and verification artifacts. Full digests for every file in the supplementary bundle are in its \texttt{MANIFEST.json}. The six published GPT-5.6-Sol proofs are byte-identical to the accepted run candidates.
+
+\begin{table}[htbp]
+  \caption{Artifact manifest for accepted proofs. Scores are correctness/completeness/rigor/self-containedness of the accepting review. Digests are SHA-256 prefixes of the run artifacts.}
+  \label{tab:manifest}
+  \centering
+  \scriptsize\setlength{\tabcolsep}{5.5pt}
+  \begin{tabular}{@{}llclc lll@{}}
+    \toprule
+    Route & P & Lineage & Cycles & Scores / verify & Candidate & Review & Verification \\
+    \midrule
+    GPT-5.6-Sol & 1 & \texttt{efd2737d} & 1 & 4/4/4/4, confirm & \texttt{cdc88080cd219cde} & \texttt{be0c06f7334e3089} & \texttt{85689a90d97f5c08} \\
+    GPT-5.6-Sol & 2 & \texttt{3c91a536} & 2 & 4/4/4/4, confirm & \texttt{eb189909d1bd39a5} & \texttt{ed46e718c6dbca35} & \texttt{43e95c9fa5f8bcfc} \\
+    GPT-5.6-Sol & 3 & \texttt{ffa748a9} & 1 & 4/4/4/4, confirm & \texttt{cb1bcbb2df8fa81b} & \texttt{50ee118353e5c1eb} & \texttt{d7a817dced330831} \\
+    GPT-5.6-Sol & 4 & \texttt{247f5b7c} & 1 & 4/4/4/4, confirm & \texttt{4d0a20e17bde3191} & \texttt{0c3ed2d97b8663ac} & \texttt{bb932d8de618b006} \\
+    GPT-5.6-Sol & 5 & \texttt{e26aacad} & 1 & 4/4/4/4, confirm & \texttt{3090f2134de489ae} & \texttt{e160a9286b0200cc} & \texttt{33bc43ad338e5f1a} \\
+    GPT-5.6-Sol & 6 & \texttt{3acd733f} & 1 & 4/4/4/4, confirm & \texttt{d31e74d07a68c601} & \texttt{50750125557778fb} & \texttt{045730c351052b59} \\
+    \midrule
+    Nemotron 3U & 1 & \texttt{2853f8e6} & 1 & 4/4/4/4, confirm & \texttt{1a10db6e23dca33d} & \texttt{eafd1f97c6a2cd84} & \texttt{631e3fa409d58dc1} \\
+    Nemotron 3U & 1$^{*}$ & \texttt{dd064edd} & 1 & 4/4/4/4, confirm & \texttt{f34c81fda467c0c6} & \texttt{b03adf252b32f492} & \texttt{9dc3e2d46672c524} \\
+    Nemotron 3U & 5 & \texttt{f3bd351b} & 1 & 4/4/4/4, confirm & \texttt{28cf6b5ebb024dc2} & \texttt{cbf2850544e3b88a} & \texttt{a200369d810a6368} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\paragraph{Per-problem notes.}
+\emph{P1.} Single cycle; the reviewer confirmed the $(P,K)$ descent and the Euclidean invariant on $p$-adic exponents. \emph{P2.} The first candidate (\texttt{4ed2348c\ldots}) passed the reviewer 4/4/4/4 but listed two unverified manifest claims---an undocumented symbolic factorization and random numerical tests---so the host gate refused it; cycle~2 removed the nonessential claims and the cleaned candidate cleared review and verification. This was evidence hygiene, not a proof repair. \emph{P3.} The first lineage (\texttt{5206d120}) timed out after writing a candidate and was not reviewed; the second lineage inherited it and passed both gates in one cycle. \emph{P4--P6.} Single cycle each. GLM-5.3's reviewer-swap dissent on P2 objects to a directed-angle step that is in fact immediate: $E$ lies on line $CA$, so $\measuredangle FCE=\measuredangle(CL,CA)$.
+
+\emph{Nemotron P1.} The 2026-07-20 acceptance (\texttt{2853f8e6}) passed review and verification, but the line-by-line logic audit added on 2026-07-21 overturned it on one local inference (a nonincreasing product was said to stay above one). A fresh blind attempt the same day (\texttt{dd064edd}$^{*}$) produced a corrected proof that passed review, verification, and the logic audit (\texttt{3f166924\ldots}). The published Nemotron P1 text is the first draft with that single sentence replaced, as disclosed above. \emph{Nemotron P5.} Accepted in one cycle after two earlier lineages were rejected; its later logic audit also confirmed (\texttt{f587f25e\ldots}). Published Nemotron copies are typographically edited, so their digests differ from the run artifacts listed here; the bundle carries both.
+
+
+\begin{table}[htbp]
+  \caption{Nemotron 3 Ultra rejections. Scores are the best review scores over all attempts (correctness / completeness / rigor / self-containedness, each out of 4).}
+  \label{tab:nemotron}
+  \centering
+  \footnotesize
+  \begin{tabular}{@{}clp{8.6cm}@{}}
+    \toprule
+    P & Best scores & Decisive defect \\
+    \midrule
+    2 & 1/1/1/2 & Spiral-similarity centers at $L$ and $K$ inferred from angle equalities at other vertices; the conditions at the centers were never derived, so later coordinate claims had no base. \\
+    3 & 1/1/1/1 & Correct value $2^n/(2^{n+1}-1)$ stated; upper-bound cuts did not span the stick for $n\ge2$, the lower bound failed at $n=2$, both refinement lemmas unproved. \\
+    4 & 1/1/1/2 & Strategies for $60^{\circ}$, $90^{\circ}$, and above sound; the claimed defensive cycle below $60^{\circ}$ fails at $30^{\circ}$; $60^{\circ}$--$90^{\circ}$ lacked the exhaustive invariant. \\
+    6 & 0/0/1/2 & False premise that each next term's prime support is a minimal hitting set ($6,8,10$ refutes it); the CRT construction yielded a coprime, not intersecting, number. Two revisions did not repair the foundation. \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Quote Localization}
+\label{app:cost}
+A decision is easier to check when its evidence names a place in the proof. \texttt{scripts/\allowbreak inspection\_cost.py} measures that from the stored objections with no model calls. A \emph{unit} is a heading-delimited section, the median proof having \COSTUNITS; every anchored quote is mapped to the unit containing it. On the 16 fatal-or-gap texts the ordinary grader's error quotes give a pointer on \COSTGRADERLOC, covering \COSTGRADERSEC\ sections of the median proof, and the witness objections give one on \COSTWITNESSLOC, covering \COSTWITNESSSEC; over all \PLANTN\ edits the counts are \COSTALLGRADERLOC\ and \COSTALLWITNESSLOC\ with medians of \COSTALLGRADERSEC\ and \COSTALLWITNESSSEC\ (Table~\ref{tab:cost}). Both rules therefore hand a reader a place to look, and they differ in how tightly they point.
+
+This is quote localization and nothing more. Locating a quote does not establish that the sections it does not touch are correct, so these counts are not estimates of verification work saved, and no claim in this paper rests on them. An earlier version of this analysis also reported dependency-closure sizes, downstream consumers, a prose-localization rate for the completeness verdict and a share of objections carrying a finite check; those rested on heuristics that mis-parse decimal equation labels, treat a lemma's mention as its definition, absorb prose into a generic heading and match the ordinary word ``set'', and were withdrawn rather than repaired (\texttt{DEVIATIONS.md}).
+\begin{table}[htbp]\centering\footnotesize
+\caption{Where each rule's evidence points, by population: how many texts receive at least one anchored quote, and the median number of distinct sections those quotes fall in among the texts that receive one.}
+\label{tab:cost}
+\COSTTABLE
+\end{table}
+
+\section{Network-Access Audit}
+\label{app:network}
+\textbf{Limitations.}\corr{Q27} The paper's limitations are stated in the body (\CRsec{sec:limitations}{in its closing section}); in the reviewed version they sat here, under this appendix's title. The appendix keeps its title and subject, the network-access audit below, and the further limitations that the body's list does not repeat.
+
+\paragraph{Further limitations.} The disagreement alarm is retrospective everywhere except on the planted texts. The completeness verdict is the more lab-dependent of the two fields of a grading response:\corr{Q24} in the first run the labs' completeness verdicts differ on \CRLabFlagDiffMutP\ of the \CRNMutants\ mutants and on \CRLabFlagDiffOrigP\ of the \CRNPerClass\ originals, and their pass-mark decisions on \CRLabPassDiffMutP\ of the \CRNMutants\ mutants. GPT-5.6-Sol also wrote five of the twenty witness texts. The closure rubric scores a wrong approach $0$, so $S$ measures written-mechanism adequacy rather than syntax alone. \corr{Q25}Checkers call almost every objection's local claim correct whichever lab produced it (same-lab \REFADJENDORSESAME, other-lab \REFADJENDORSEOTHER; the one exception was rejected by both); endorsement is not a verdict that the objection identifies a defect, so it shows no same-lab effect and does not rank objections. Seven adjudication statuses split with no human resolution. Lineages are single unmatched runs. Public grades are model grades (the public campaign's Claude-based verifier agents), not coordinator marks. The ledger as used has two domain omissions, corrected in \texttt{LEDGER\_v2.md}; no judgment used the corrected edition and no scored outcome depends on either correction, but the effect of showing models the corrected ledger is unmeasured, and a model check of 29 September 2026 found two further ledger issues that change no recorded judgment (Appendix~\ref{app:refadj}). The planted-defect comparison reads acceptance rules off one set of grading responses; it does not measure whether a model can find natural defects, and its intended labels were written by AI agents to the author's design (Appendix~\ref{app:planted-protocol}).
+
+Solver prompts forbade retrieving published solutions, but enforcement differed by route. The July~20 Codex route bypassed sandboxing and approvals; omitting a web-search flag did not remove its web tool. Nemotron's initial acceptances used Claude Code's default toolset, including WebSearch and WebFetch; those tools were removed on July~21. GLM-5.2 used restricted file/shell tools and, in later blind invocations, a hook rejecting network-capable command patterns. That hook was a software guard, not OS-level network isolation. Kimi~K3's shell used a container with networking disabled; GLM-5.3's direct messages requests exposed no tools to the model.
+
+The retained-stream audit covered 25 Codex, 216 Nemotron, and 1,865 GLM-5.2 streams. It found no Claude WebSearch/WebFetch calls and no network-capable shell commands, but one Codex \texttt{web\_search} page-open event: the P5 reviewer opened the official statement URL supplied in its task during 21:29--21:32 UTC on July~20. No additional query or solution retrieval was observed. The returned page body and two nested Nemotron agents' inner calls were not retained, so this is an observation about logged behavior, not proof of isolation or absence of contamination.
+
+\section{Structural Closure: Corpus, Annotation Layers, Adjudication, Agreement}
+\label{app:closure}
+
+\paragraph{Sample and units.} The corpus has 176 records (156 distinct input hashes) in 41 lineages, reproducible from the released annotations by \texttt{scripts/\allowbreak closure\_matrix.py}. Problem~3: 57 records in 17 lineages---20 local discovery snapshots, two local repair outputs, nine public final files, and 26 \texttt{write\_file current.md} snapshots reconstructed from the public logs. Problem~6: 42 records in 12 lineages (14 local, nine public finals, 19 public snapshots). Problem~2: 77 records in 12 lineages (11 local, nine public finals, 57 public snapshots). A public lineage is one model at one effort setting; our lineages aggregate attempts and harnesses and contribute only retained candidate files, so attempts that left no candidate count toward budgets but have no checkpoint (GLM-5.2's 24 reviewed P3 attempts left four retained candidates). The two Problem-3 repairs descend from Kimi~R1. Records are the retained texts, not an exhaustive census of edits or reasoning states: shell rewrites and files other than the tracking file are not observed, so a crossing located ``inside one context'' is bounded by sparse writes.
+
+\begin{table}[htbp]
+  \caption{Valid-layer $S$ of the last checkpoint\,/\,grade. Public: nine runs of one thin harness \citep{deedy2026imo}, grade = verifier first-pass grade (``$a{\to}b$'': repaired later); ours: gate outcome. xhigh/Pro/max/default/ultra: GPT-5.6-Sol effort settings; R1/R2: our Kimi runs; $^{*}$ $S{=}2$ with grade $<5$; $^{\ddagger}$ wrong answer; $^{\mathrm{r}}$ non-synthetic route (rubric N/A).}
+  \label{tab:matrix}
+  \centering\scriptsize\renewcommand{\arraystretch}{0.92}
+\MATRIXBODY
+\end{table}
+
+\paragraph{Five label layers.} Every distinct text carries five labels, all released in \texttt{closure\_adjudicated/\allowbreak labels.json} and produced by \texttt{scripts/\allowbreak closure\_adjudicate.py}. \emph{raw}: layer~0, GLM-5.3 (Z.ai, tool-free) on each of the 176 records with the per-problem rubric below and the checkpoint text alone, without author label or workspace; the script enabled thinking and retried without thinking if no JSON was parsed, which happened for 61 of 176 records (2/57, 18/42, 41/77 on Problems~3, 6, 2), always because the thinking call stopped at its output cap; where a text recurs under several record ids, the raw label is the majority over its records. \emph{glm}: a GLM-5.3 re-rating of each of the 156 distinct texts with thinking and a larger cap (\RERUNFB\ of 156 still fell back to a no-thinking call; all 156 re-ratings parsed, so the layer-0 fallback the script allows for a missing re-rating was never used). \emph{kimi}: Kimi~K3 (Moonshot, tool-free, same rubric) on each distinct text. \emph{written}: the conservative aggregation of glm and kimi, field by field: a mechanism counts~2 only if both annotators score it~2, otherwise it takes the lower score; if either rating were missing the label would be \emph{unknown}, never a silent fallback to layer~0 (at freeze all 156 texts have both ratings and none is unknown). \emph{valid}: the written label with independently refuted mechanisms set to~0 (next paragraph). $S$ counts the \texttt{lower\_bound} and \texttt{upper\_bound} fields scored~2; the preparatory field (\texttt{reduction}) and \texttt{answer} are recorded but not counted. The written layer is a model-score aggregation convention, not an expert adjudication, and the paper calls it that. Trajectory counts use the defect-corrected layer with the written layer alongside; Table~\ref{tab:sens} gives the headline counts under all five layers.
+
+\paragraph{Validity criterion.} A mechanism scored~2 by the instrument is set to~0 in the defect-corrected layer when an independent record shows that the written argument for it is invalid as written: an explicit counterexample to a lemma it relies on, or a fatal invalid step in that mechanism recorded by the public verifier or by our gate. The criterion is applied to every retained text carrying the same defect, not only to final files, and no entry rests on the author's mathematical judgement alone: \texttt{closure\_adjudicated/\allowbreak validity\_overrides.json} stores the criterion and, per entry, the reason and the record it cites. There are no author overrides. Three entries are in force, all on the Problem-6 finiteness mechanism. Two public GPT-5.6-Sol default texts (main-session turn~9 and the final file) rest on the lemma that every pairwise-intersecting family of finite sets has finitely many inclusion-minimal finite transversals, proved once by induction and once by a K\H{o}nig-tree argument. The lemma is false: with distinct symbols, $F_n=\{x_1,\dots,x_n,y_n\}$ ($n\ge1$) is pairwise intersecting (every member contains $x_1$), yet $T_k=\{y_1,\dots,y_{k-1},x_k\}$ is an inclusion-minimal finite transversal for every $k$ (it meets $F_n$ in $y_n$ for $n<k$ and in $x_k$ for $n\ge k$; dropping $y_j$ misses $F_j$, dropping $x_k$ misses $F_k$), so there are infinitely many. The public verifier's 1/7 grade records a machine-verified counterexample of the same kind. Both annotators credited the lemma in both texts (layer~0, the re-rating, and Kimi all score finiteness~2): written $S{=}2$, valid $S{=}1$ for both, and the $2\to1$ ``regression'' that v3 reported for this lineage, produced by correcting the final file alone, disappears. The third entry is public Kimi~K3's round-2 turn-7 file, whose finiteness proof extracts a minimal transversal by Zorn's lemma and applies a self-duality claim proved only for finite minimal transversals, so the step is circular in the case it needs. The statement it aims at is not refuted (the lineage later proved it by a compactness argument, re-graded 7/7), but the argument as written is: the public verifier's first pass recorded the step as the fatal defect (3/7), and the harness quoted it to the next session (``self-duality was only established for FINITE minimal transversals''). Written $S{=}2$, valid $S{=}1$; under the defect-corrected layer the lineage runs $0\to1\to1\to2\to2$ and the corpus has no regressing lineage. \corr{QA1}The step-by-step comparisons behind these entries, in \texttt{closure\_adjudicated/\allowbreak adjudication\_notes.md}, were written by a model (a Claude subagent in Claude Code) under the author's direction and reviewed by the author.
+
+\paragraph{Problem-2 route policy.} The Problem-2 rubric scores the synthetic route of the published solution (a key circle through $A$ proved to contain $K$ and $L$; $OM=ON$ from it). Before any count was regenerated, every Problem-2 lineage was classified by the route of its final retained text and both annotators' mechanism notes (\texttt{closure\_adjudicated/\allowbreak p2\_routes.json}, with evidence quotes), and the classification applies to every checkpoint of the lineage. The rubric applies to two lineages: public Claude Fable~5 (directed-angle translation of the hypotheses into concyclicities; an affine power identity vanishing at $A,K,L$ in place of the explicit circle; finish by the median-length formula) and our GPT-5.6-Sol ultra (the circle with diameter $AZ$ shown to contain $K$ and $L$ by radical axes; $O$ the midpoint of $AZ$). The other ten are route N/A, displayed in Table~\ref{tab:matrix} but excluded from agreement and transition counts: GPT-5.6-Sol Pro (trigonometric), GPT-5.6-Sol max (Cartesian coordinates with a polynomial certificate), GPT-5.6-Sol xhigh and default (complex coordinates), Kimi~K3 (law-of-sines and power-of-a-point coordinates), DeepSeek~V4 Pro (complex plan, unexecuted), Muse Spark~1.1 (coordinate reduction only), Grok~4.5 (no route executed), GLM-5.2 (sine-rule parametrisation with an external CAS certificate), and Nemotron (complex reality conditions and spiral similarity, unexecuted). Of the published material available to us only \citet{chen2026notes} covers Problem~2, with one synthetic solution; the other route classes are read off the texts, not matched to a published solution. Under this policy Problem~2 is nearly uninformative for the trajectory analysis (two lineages, both ending at $S{=}2$ with the crossing inside the record, no $S{=}1$ checkpoint), a limitation of a route-specific obligation set on a problem with several workable routes; v3's two Problem-2 ``disagreements'' (GPT-5.6-Sol max at $S{=}0$ with grade~7, Kimi~K3 at $S{=}1$ with grade~7) were non-synthetic proofs scored against synthetic obligations.
+
+\paragraph{Reliability.} \KAPPATXT; between the GLM-5.3 re-rating and Kimi~K3 by problem: \RELTXT. Problem~2 is where the rubric fits few texts. Layer-0 labels of repeated texts (the same bytes retained under two record ids) agree on \REPEATEDCONSISTENT; the \REPEATEDCONFLICTS\ conflicts are the Problem-2 GPT-5.6-Sol max and default final files against their last snapshots, which is why labels are per text rather than per record and why \texttt{closure\_matrix.py} refuses to report a transition between identical texts and fails if any hash carries two labels. \ADJCHANGES. \corr{Q28}These $\kappa$ values measure agreement between model raters on the trajectory corpus; on the \CRNTexts\ planted texts, in the planted study's closure gate (run once), GPT-5.6-Sol and Claude Opus~5 agree on $S$ with $\kappa = \CRClosureKappaGCP$, and $S$ has not been validated against an expert.
+
+\paragraph{Sensitivity by layer.} Table~\ref{tab:sens} reports, under each layer, the counts the paper's observations rest on: checkpoints at $S{=}1$, crossings to $S{=}2$ that lie inside the record, and lineages that lose a written mechanism. No Problem-3 checkpoint sits at $S{=}1$ under the GLM, written, or defect-corrected layers; under single evaluators the counts are \PTHREESONESINGLE\ (the round-3 turn-7 Kimi file, whose lower bound Kimi, Claude, and GPT score~2 and GLM~1; next paragraph), and the two-of-three majority gives \PTHREESONEMAJ. The defect-corrected layer adds the three refuted Problem-6 texts to the $S{=}1$ count and removes the only regression; crossings inside the record stay at four or five on Problems~3 and~6 in every layer (two, on the two synthetic Problem-2 lineages).
+\begin{table}[htbp]
+  \caption{Headline counts under each label layer. P2$^{\mathrm{s}}$: the two synthetic-route Problem-2 lineages only.}
+  \label{tab:sens}
+  \centering\scriptsize
+  \SENSTABLE
+\end{table}
+
+\paragraph{Reference-anchored adjudication.} Where a single label decides an observation, the text was compared step by step with a published argument or a recorded verifier rationale\corr{QA1} (by a model, a Claude subagent in Claude Code, under the author's direction, and reviewed by the author; the author does not act as an expert, and no independent mathematician checked the comparisons, which are released in \texttt{closure\_adjudicated/\allowbreak adjudication\_notes.md}). (i) The one Problem-3 text on which the annotators split, public Kimi's round-3 turn-7 tracking file, contains every step of the published tree-component lower bound \citep{chen2026notes} in outline: a multigraph on the pieces, a count forcing a tree component, the bipartite-sign inequality, and a proved estimate for super-increasing pieces. It asserts one supporting claim the published proof does not need (a min-cost matching formula, ``by an exchange argument'') and labels itself a sketch ``modulo write-up''. Under the rubric's written-out standard it is $S{=}0$ (written and defect-corrected layers); under Kimi's reading $S{=}1$. Read against the reference, the lower bound was in hand in outline one session before both mechanisms were written out (round~4), so the absence of $S{=}1$ states on Problem~3 is partly an artifact of the write-up standard; the record cannot separate ``not found'' from ``found but not written to standard''. (ii) The Problem-6 counterexample and the three refuted texts, above. (iii) The Problem-2 routes, above.
+
+\paragraph{Timing and scope.} \LINSTWO\ (defect-corrected layer; the other layers in Table~\ref{tab:sens}; layer-0 values are recoverable from the released annotations). Public GPT-5.6-Sol default on Problem~3 is $S{=}0$ at turn~11 and its final file is $S{=}0$ in the written and defect-corrected layers: layer~0 and the GLM re-rating score both mechanisms~2, Kimi scores both~1 (sketches), and the public verifier graded the file 2/7 as an ``unverifiable sketch''; the lineage never crosses. Public Kimi's round-4 turn-14 snapshot is $S{=}2$, but later shell edits changed the frozen 5/7 candidate, and its final file follows repair. Public Kimi on Problem~6 runs $0\to2\to1\to2\to2$ in the written layer and $0\to1\to1\to2\to2$ in the defect-corrected layer: the round-2 text's finiteness step is the refuted one, the round-3 file is $S{=}1$, and the next session's first read of the tracking file is byte-identical to that $S{=}1$ record; its prompt contained an explicit critique of that file (Appendix~\ref{app:traj2}). Full-run grades may consider supporting files omitted from a single-text annotation, so Table~\ref{tab:matrix} pairs run outcomes with sampled progress, not grades of identical bytes.
+
+\paragraph{Critique-associated gains and repairs.} Both recorded below-closure gains followed critique: GLM-5.2 on Problem~6 ($0\to1\to2$ over three reviewed revisions) and public Kimi~K3 on Problem~6, which crossed to a defect-corrected $S{=}2$ in the session whose prompt carried an explicit critique of an $S{=}1$ file byte-identical to its first read (Appendix~\ref{app:traj2}); neither had a no-critique control. All three recorded repairs from an $S{=}2$ text with reviewer-localized defects reached a blind 7/7 (two seeds, one problem; one repair by GLM-5.2, which never reached $S{=}2$ on Problem~3 alone).
+
+\paragraph{Agreement check and provenance classes.} Under the route policy 31 lineages are evaluable (17, 12, 2 on Problems~3, 6, 2) and ten Problem-2 lineages are route N/A; GLM-5.3's Problem-3 lane was never reviewed and is skipped. Public lineages use the campaign's verifier grades; where the last record is the final file and a repair session intervened, the final grade is the stage-matched grade, otherwise the first-pass grade. Our lineages use the gate outcome of the retained review \emph{and} verification receipt of a checkpoint where both exist, and otherwise the campaign's recorded outcome (Kimi~R1 6/7, Kimi~R2 1/7, GLM-5.2 2/7, both repairs 7/7); Kimi~R1's 6/7 is a retrospective record, its frozen defect review saying \texttt{revise} with a null score, and GLM-5.2's final simple-campaign receipt is also null-scored. The comparison rule is $S{=}2$ iff grade $\ge5$ or gate pass. Under the defect-corrected layer \AGREETXT\ (first-pass grades instead: \AGREEFP); under the written layer the GPT-5.6-Sol default Problem-6 final ($S{=}2$ written, grade~1) is the one disagreement. Both tallies are in the released \texttt{regularities.json}. This is retrospective agreement between two model-derived labels of heterogeneous provenance, not a validation of transitions and not calibration of a predictor. Budget, descriptively: median completion tokens of public lineages ending at $S{=}2$ vs.\ below are \BUDGETTXT; the direction depends on the label layer and totals mix repair and outage sessions with unmatched budgets, so no direction is drawn; large budgets did not guarantee written mechanisms (326k tokens at $S{=}0$).
+
+\paragraph{GLM-5.3 discovery budget.} The four original discovery calls used 64,000, 131,072, 131,072, and 131,072 output tokens: 457,216 total, all without candidate text. Four separate serializers extracted checkpoints from retained thinking and used 13,250 more output tokens (470,466 including serialization). The first result was recovered from its saved stream, not generated by an additional call. The bundle includes the per-call configuration and usage audit.
+
+\paragraph{Problem-3 rubric (verbatim).}
+\begin{quote}\footnotesize\begin{verbatim}
+You are an impartial grader of partial mathematical write-ups for IMO 2026
+Problem 3:
+
+"Let n be a positive integer. Liu Bang and Xiang Yu have a stick of length 1.
+Liu marks
+at most n points, then Xiang marks at most n points (all distinct); the stick is
+cut at
+all marks; they alternately claim pieces, Liu first, each maximizing own total.
+For each
+n determine the largest c such that Liu can guarantee at least c."
+
+The correct answer is c_n = 2^n/(2^(n+1)-1). A complete proof needs: (R) the
+reduction
+of the claiming phase to an alternating sum of sorted piece lengths; (L) an
+all-n LOWER
+bound: a Liu division (1:2:4:...:2^n) and an argument valid against EVERY Xiang
+reply
+(e.g. a pairing/tree argument on rank pairs, an even-position majorization, or
+an
+induction that handles arbitrary interleaving); (U) an all-n UPPER bound: for
+EVERY Liu
+division a Xiang reply with at most n cuts (e.g. subset-sum pigeonhole giving a
+gap <=
+1/(2^(n+1)-1) plus a cancellation/overlay construction).
+
+Grade ONLY what is written in the text. Do not credit claims that are asserted,
+conjectured, numerically tested, or left as "to do". A mechanism scored 2 must
+be
+written out as an argument for all n; a scored 1 mechanism is named/sketched or
+proved
+only for specific small n; 0 means absent or a wrong approach.
+
+Return ONLY a JSON object:
+{"answer": 0|1|2, "reduction": 0|1|2, "lower_bound": 0|1|2, "upper_bound":
+0|1|2,
+ "lower_bound_mechanism": "<short name or 'none'>", "upper_bound_mechanism":
+"<short
+name or 'none'>",
+ "wrong_answer_stated": true|false, "notes": "<=60 words"}
+Scoring key for answer: 2 = correct closed form stated as the answer; 1 =
+correct values
+for small n only or correct form stated as conjecture; 0 = absent or wrong.
+\end{verbatim}\end{quote}
+
+
+\paragraph{Problem-6 rubric (verbatim).}
+\begin{quote}\footnotesize\begin{verbatim}
+You are an impartial grader of partial mathematical write-ups for IMO 2026
+Problem 6:
+
+"Let a_1, a_2, ... be an infinite sequence of integers greater than 1 such that
+for all n, a_{n+1} is the smallest integer greater than a_n with gcd(a_{n+1},
+a_i) > 1 for every i <= n. Prove that there exist positive integers T and L such
+that a_{n+T} = a_n + L for every positive integer n."
+
+A complete proof needs: (C) the characterization that an integer m >= a_1 is a
+term iff its prime support meets the prime support of every term (equivalently
+of every earlier term); (F) the FINITENESS / large-prime-erasure lemma:
+membership depends only on the primes in some finite set (e.g. primes <= a_1 or
+<= a_1^2), because any term divisible by a large prime is dominated by a smaller
+number with the same small-prime support that is itself a term -- proved for ALL
+terms, not checked on examples; (P) the PERIODICITY assembly: with L = product
+of the finitely many relevant primes, membership is invariant under m -> m+L for
+every m >= a_1 (from the first term, not merely eventually), and T is the number
+of terms in a window of length L, giving a_{n+T} = a_n + L for all n >= 1.
+
+Grade ONLY what is written in the text. Do not credit claims that are asserted,
+conjectured, numerically tested, or left as "to do". A mechanism scored 2 must
+be written out as an argument for all cases; a scored 1 mechanism is
+named/sketched or checked only on examples; 0 means absent or a wrong approach
+(e.g. relying on a false lemma such as "each new term's prime support is a
+minimal hitting set").
+
+Return ONLY a JSON object:
+{"answer": 0|1|2, "reduction": 0|1|2, "lower_bound": 0|1|2, "upper_bound":
+0|1|2,
+ "lower_bound_mechanism": "<short name or 'none'>", "upper_bound_mechanism":
+"<short name or 'none'>",
+ "wrong_answer_stated": true|false, "notes": "<=60 words"}
+Field mapping for this problem: "answer" = the claimed structure (L a product of
+finitely many small primes, T a count of residues) is stated (2 correct and
+explicit, 1 vague, 0 absent/wrong); "reduction" = (C); "lower_bound" = (F)
+finiteness / large-prime erasure; "upper_bound" = (P) global periodicity from
+n=1; "wrong_answer_stated" = true if the text proves only eventual periodicity
+or relies on a false lemma.
+\end{verbatim}\end{quote}
+\paragraph{Problem-2 rubric (verbatim).}
+\begin{quote}\footnotesize\begin{verbatim}
+You are an impartial grader of partial mathematical write-ups for IMO 2026
+Problem 2:
+
+"Let ABC be a triangle, M and N the midpoints of AB and AC. Points K and L lie
+strictly inside triangles BMC and BNC respectively, with K strictly inside
+triangle ABL and L strictly inside triangle AKC, such that angle KBA = angle
+ACL, angle LBK = angle LNC, angle LCK = angle BMK. Let O be the circumcentre of
+AKL. Prove OM = ON."
+
+A complete proof needs: (T) TRANSLATION of the three angle conditions into
+concyclicities (e.g. with X = BK meets AC and Y = CL meets AB: B,Y,X,C
+concyclic; X,N,L,B concyclic; Y,M,K,C concyclic) or an equivalent
+coordinate/complex setup that actually encodes all three hypotheses; (K) the KEY
+CIRCLE: an explicit identification of a circle through A that is proved to
+contain both K and L (e.g. the circle through A and the midpoints of BY and CX,
+or the circle with diameter AZ where Z is the centre of (BCXY)), with the
+membership of K and L PROVED (power of a point / radical axis / directed
+angles), not asserted; (F) the FINISH: OM = ON derived from that circle (equal
+powers of M and N, or O identified as a midpoint so that MO and NO are half of
+equal radii), including handling of configuration/sign issues.
+
+Grade ONLY what is written. Do not credit claims that are asserted, conjectured,
+checked numerically, or left "to verify". A mechanism scored 2 must be written
+out as a complete argument; 1 means named/sketched or reduced to an unexecuted
+computation; 0 means absent or a wrong approach (e.g. spiral-similarity centres
+inferred from angles at the wrong vertices).
+
+Return ONLY a JSON object:
+{"answer": 0|1|2, "reduction": 0|1|2, "lower_bound": 0|1|2, "upper_bound":
+0|1|2,
+ "lower_bound_mechanism": "<short name or 'none'>", "upper_bound_mechanism":
+"<short name or 'none'>",
+ "wrong_answer_stated": true|false, "notes": "<=60 words"}
+Field mapping for this problem: "answer" = the target OM = ON is correctly
+stated as the goal with a correct overall strategy (2 explicit and correct, 1
+vague, 0 absent/wrong); "reduction" = (T); "lower_bound" = (K) key circle
+containing A, K, L proved; "upper_bound" = (F) finish OM = ON;
+"wrong_answer_stated" = true if the write-up claims a false intermediate lemma
+or a wrong construction.
+\end{verbatim}\end{quote}
+\corr{Q14}The P1 and P5 closure rubrics, used by the replication (Appendix~\ref{app:repl}) and by the planted study's witness and closure gates, are printed in Appendix~\ref{app:rubric}.
+
+\begin{table}[htbp]
+  \caption{Evaluator variation: the trajectory corpus of Appendix~\ref{app:closure} (left) and its replication on P1, P4, P5 (right); i / r / c = improved / regressed / first crossing.}
+  \label{tab:evalvar}
+  \centering\scriptsize
+\EVALVARTABLE
+\end{table}
+
+\section{Replication on Problems 1, 4, and 5}
+\label{app:repl}
+The evaluator-variation measurements of the trajectory corpus (Appendix~\ref{app:closure}) were repeated on the three problems the paper does not otherwise analyze, with rubrics anchored to the published solutions (\texttt{closure\_rubric\_p\{1,4,5\}.txt}; obligation choices in \texttt{replication\_ext/\allowbreak rubric\_notes.md}), the public campaign's per-turn tracking-file snapshots plus our retained candidates as texts, and a per-checkpoint pass, three per-text passes, and a second lab as raters (protocol written before the ratings: \texttt{replication\_ext/\allowbreak PROTOCOL.md}). \REPLCOVERAGE\ \REPLTXT
+
+\begin{table}[htbp]
+  \caption{Replication of the evaluator-variation measurements on P1, P4, P5, with the paper's P3/P6 values for reference.}
+  \label{tab:repl}
+  \centering\scriptsize\renewcommand{\arraystretch}{0.92}
+\REPLTABLE
+\end{table}
+
+\section{Verifier Response to Decisive Evidence: Claims and Protocol}
+\label{app:evidence}
+Four local claims taken from the audit were shown to four verifiers (GLM-5.3 via its API with thinking and Kimi~K3 via its API, both tool-free; Claude Opus~5 via its command-line interface with tools disabled; GPT-5.6-Sol via the Codex command-line interface in a read-only sandbox with web search disabled but not every tool disabled, so ``tool-free'' is exact for three verifiers and a sandbox statement for the fourth) in three conditions each: the claim alone, with a valid counterexample, and with a deliberately invalid one. The system prompt asks for the claim's truth and the witness's validity as separate JSON fields and forbids deferring to the proposer's confidence. Every request and response is released under \texttt{verifier\_evidence/\allowbreak }; three no-verdict calls were repeated once under \texttt{verifier\_evidence\_ext/\allowbreak }.\VEVEXT
+\begin{table}[htbp]
+  \caption{Verifier response to decisive evidence on four checkable claims.}
+  \label{tab:evidence}
+  \centering\scriptsize\renewcommand{\arraystretch}{0.92}
+\VEVTABLE
+\end{table}
+\VEVSYSTEM
+\VEVCLAIMS
+
+\clearpage
+\section{Conclusion Sensitivity Under Evaluator Replay}
+\label{app:sens}
+\paragraph{Reading guide.}\corr{Q29} This appendix asks whether a lineage's three trajectory conclusions (improved, regressed, first crossing) survive a change of evaluator or a replay of the same evaluator, and whether disagreement between evaluators flags defective texts (protocol: \texttt{closure\_repeat\_PROTOCOL.md}). Two cautions govern every figure. First, the reference is the defect-corrected layer, which reads no lineage as regressed, so a rule that always reports ``no regression'' reproduces every regression conclusion: a regression-survival figure equal to one says nothing, and only figures below one, spurious regressions under replay, carry information. Second, survival is agreement with that model-derived, partly corrected reference, not accuracy. The reviewed version printed the full survival, evaluator-choice, instability-source and grading-procedure tables and their paragraphs here; they are unchanged in the supplementary bundle (\texttt{conclusion\_sensitivity/\allowbreak }), and this version keeps the three parts the body relies on: same-text repeat variability, the replay null, and the alarm.
+
+\paragraph{Same-text repeat variability.} \REPLAYQTXT\ Claude Opus~5's \CRBodyRepeatDiffer\ differing pairs fall on \CRBodyRepeatVarTexts\ of its \CRBodyRepeatTexts\ texts.
+
+\paragraph{Replay null.} Under the replay null (independent same-model draws per checkpoint, texts fixed, exact enumeration), the probability of at least one apparent up-transition is zero for every lineage the GLM-5.3 pool covers and for all but \CRReplayNonzero\ of the \CRReplayCovered\ lineages the Claude Opus~5 pool covers (\CRReplayTop\ for P6 deedy-gpt-5.6-sol and \CRReplaySecond\ for P3 deedy-kimi-k3), a mean of \CRReplayMean\ over the covered lineages with at least three checkpoints: evaluator variation can masquerade as progress, but under replay it rarely does.
+
+\paragraph{Alarm target, coverage, and pair sensitivity.}\corr{Q27} The alarm is retrospective everywhere except on the planted texts. \ALARMTXT\ \ALARMPAIRTXT\ The three flags without a record were examined afterwards as group~C of Appendix~\ref{app:witness}: a localized concern or better on \WITNESSRESC\ of them under the witness procedure (grader \GRADERRESC) and a substantiated defect on \WITNESSSUBC\ (grader \GRADERSUBC).
+
+\begin{table}[htbp]
+  \caption{Cross-evaluator disagreement on $S$ as an alarm for credited-defective texts and all documented-defective texts (applicable lineages).}
+  \label{tab:alarm}
+  \centering\scriptsize\renewcommand{\arraystretch}{0.92}
+\ALARMTABLE
+\end{table}
+
+\begin{table}[htbp]
+  \caption{Pair sensitivity of the alarm: flags and hits of each evaluator pair, and of the full panel, on the credited-defective and documented-defective texts.}
+  \label{tab:alarmpairs}
+  \centering\scriptsize\renewcommand{\arraystretch}{0.92}
+\ALARMPAIRTABLE
+\end{table}
+
+\section{Witness Discovery on Disputed Texts}
+\label{app:witness}
+\textbf{Protocol.}\corr{Q7} \texttt{witness\_discovery/\allowbreak PROTOCOL.md} is prespecified and self-timestamped, not registered: its recorded writing time (04:21 UTC, 6 Sept 2026) precedes the first call (04:31 UTC), and Amendment~1 (04:29 UTC, before launch) added the evidence classes, the ordinary-grader baseline and the separate reporting of known-defect recovery, open disputes and controls, but these times are self-authored, and the first commit containing the protocol (07:08 UTC) postdates the first calls. \texttt{DEVIATIONS.md} logs everything that happened afterwards, including one transport change for the GLM checker (its first six checks exhausted a 16k-token cap in thinking; the cap was raised and the closure instrument's no-thinking retry added, and the failed checks redone). \textbf{Cases} (\WITNESSN). A, credited-defective (an independent record refutes a credited mechanism and at least one evaluator scored $S{=}2$): P6 GPT-default turn~9 and final (one shared false lemma), P6 Kimi round-2 turn~7, P3 GPT-default final. B, documented-defective and never credited (every evaluator $S{=}0$): the P3 finals of Grok~4.5, Muse Spark~1.1 and DeepSeek~V4 Pro, three of the nine such texts the systematic ascertainment of Appendix~\ref{app:sens} finds. C, alarm flags without a record: P3 Kimi round-3 turn~7 and round-4 turn~14, P6 Kimi round-1 turn~21. D, replication flips: the P1 GLM-5.2 candidate (GPT $S{=}1$ against Claude and GLM $S{=}2$), P5 DeepSeek turns 33 and 38 (crossing index differs by evaluator), the P5 Nemotron candidate whose three Claude passes read 1, 2, 0. E, high-grade agreement controls (public grade 7, unanimous $S{=}2$): P3 Claude Fable~5 and GPT xhigh finals, P6 GPT pro final, P1 Kimi final, P4 Claude final; their correctness is not established by those grades, and finding no witness does not establish it. F, low control: P6 Grok final. Authorship overlap is declared in the protocol (GPT-5.6-Sol wrote five of the texts, Claude Fable~5 two); \corr{Q14}proposers saw the problem's marking scheme and the text; graders saw the coordinator scale, which forbids consulting a solution or a lemma list, and the text (next paragraph).
+
+\textbf{Procedures and budget.} Witness procedure: one call per text and model (GPT-5.6-Sol through the Codex CLI in a read-only sandbox with web search disabled, reasoning effort high; Claude Opus~5 through the Claude Code CLI with no tools) with a system prompt that contains the problem's closure rubric (the marking scheme), its return block replaced by instructions to return, per obligation, \texttt{written\_and\_valid}, \texttt{written\_but\_invalid} or \texttt{not\_written}, a verbatim quote of 40--400 characters (matched mechanically to the text) and a witness. Ordinary grader: the same models and transports, one call per text, with the paper's 0--7 coordinator rubric extended to list up to three errors (description and optional quote). Each arm therefore made \WITNESSFIRSTCALLS\ first-stage calls (\WITNESSN\ texts, two models). \corr{Q14}The arms are matched only in first-stage call count and in the checking rule. They are not matched in information: the witness prompt contains the problem's marking scheme (\CRAppNatWitnessCharsMin--\CRAppNatWitnessCharsMax\ characters across the \CRAppNatProblems\ problems; it lists the steps a complete proof needs, states the answer on \CRAppNatAnswerProbs\ and names example wrong approaches on \CRAppNatWrongProbs), while the grader prompt (\CRAppNatGraderCharsMin--\CRAppNatGraderCharsMax\ characters) forbids consulting a published solution or a fixed list of required lemmas. Nor are they matched in instruction (the witness prompt says not to repair the argument for the author; the grade scale places a repairable error at 5--6), in tokens or in time. The reviewed version named only tokens and time as unmatched. The planted study's witness and grade gates use the same prompts (Appendix~\ref{app:planted-arms}). Checking: at most two objections per model, text and procedure (the proposer's lower/upper witnesses; the grader's two most severe errors) were judged by the two models that did not produce them (GPT's by Claude Opus~5 and GLM-5.3; Claude's by GPT-5.6-Sol and GLM-5.3) with the full text, returning \texttt{quote\_faithful}, \texttt{verdict}, \texttt{evidence\_kind} and \texttt{fatal}: \WITNESSCHECKSW\ checks in the witness arm and \WITNESSCHECKSG\ in the grader arm. The checker prompt shows the obligation, the quote, the objection and a \texttt{Claimed status} field, which carries the proposer's status (\texttt{written\_but\_invalid} or \texttt{not\_written}) for a witness objection and the fixed string ``error reported by an ordinary grader'' for a grader objection; checkers were therefore not told which model produced an objection but could read which procedure did. The protocol's statement that they saw neither is wrong, and every comparison of checker behaviour across procedures, in particular the unsupported-allegation counts (\WITNESSREJECTED\ against \GRADERREJECTED), is exploratory. Rule: substantiated if both confirm and both classify the evidence as a counterexample or an invalid inference; localized if both confirm otherwise; unsupported if both reject; unresolved otherwise; an objection whose second checker had not returned at the analysis freeze is classified from the returned checker and marked single-checker. The rule uses agreement on the verdict and the evidence kind and, as the protocol declared, ignores the \texttt{fatal} field; \texttt{quote\_faithful} is the checker's reading of the quote in context and is distinct from mechanical anchoring, which the rule does not enforce. Anchored quotes: \WITNESSANCHORED\ of \WITNESSTOTAL\ witness-procedure quotes and \GRADERANCHORED\ of \GRADERTOTAL\ grader quotes matched the text verbatim after whitespace and markup normalization.
+
+\textbf{Results.} Table~\ref{tab:witness-cases} gives every text; Table~\ref{tab:witness} the counts per group; \texttt{RESULTS.md} prints every quote, witness and checker explanation. \corr{Q23}Both procedures recovered every documented defect: \CRWitnessDistinctDefects\ distinct defects on \CRWitnessKnownTexts\ texts, the two P6 GPT-default texts sharing one false lemma. Proposer status agreement: \WITNESSAGREE\ obligation verdicts; delivery failures: \WITNESSFAILS. Objections checked: witness procedure \WITNESSTOTAL\ (\WITNESSSUBST\ substantiated, \WITNESSLOCAL\ localized, \WITNESSREJECTED\ unsupported, \WITNESSCONTESTED\ unresolved); grader \GRADERTOTAL\ (\GRADERSUBST, \GRADERLOCAL, \GRADERREJECTED). Recovery of a documented defect requires a substantiated or localized objection whose target coincides with the record (\texttt{recovery.json}\corr{QA1}: target-match judgments produced by a model, Claude in Claude Code, under the author's direction from the quotes before the checker verdicts were read, and reviewed by the author); the same file records, for each open dispute, which side of the earlier evaluator disagreement the objections support and which lineage conclusion changes if the defect is applied with the criterion of \texttt{validity\_overrides.json}. Executable checks for the finite counterexamples (P3 constructions by exact claiming value, the P6 transversal family, the P1 board, order dependence of a P3 chain value, the P5 verification chain) are in \texttt{scripts/\allowbreak witness\_checks.py}. The one unresolved witness-procedure objection is GPT's non-sequitur on the P6 GPT-default final's branch argument (Claude confirmed, GLM-5.3 rejected; Claude's own witness on the same step was confirmed by both); the grader's two unsupported allegations are on P5 texts (a case the text handles elsewhere; an imprecise but valid symmetry step).
+
+\textbf{Severity.} \WITNESSFATALTXT\ Per group (witness procedure / grader), texts with a substantiated defect that both checkers call fatal: A \WITNESSSUBFATA\,/\,\GRADERSUBFATA, B \WITNESSSUBFATB\,/\,\GRADERSUBFATB, C \WITNESSSUBFATC\,/\,\GRADERSUBFATC, D \WITNESSSUBFATD\,/\,\GRADERSUBFATD, E \WITNESSSUBFATE\,/\,\GRADERSUBFATE, F \WITNESSSUBFATF\,/\,\GRADERSUBFATF\ (second row of Table~\ref{tab:witness}; \texttt{results.json}, key \texttt{fatal\_layer}). Under this condition the grader arm loses P5 DeepSeek turn~38, where its only substantiated objection is Claude's $4cx$/$4cy$ expansion typo (nonfatal for both checkers), and the P5 Nemotron display; the witness arm loses nothing. On that display GPT's witness and GPT's grader error quote the identical formula: Claude Opus~5 and GLM-5.3 confirmed the error under both procedures and called it fatal when it arrived as a witness (\texttt{written\_but\_invalid}, with a load-bearing explanation) and nonfatal when it arrived as the grader's description of a repairable typo. The two objection texts differ in wording as well as in the procedure label, so the experiment does not isolate what caused the change; it is an observation that a confirmed local error does not carry a stable judgment of its consequence for the obligation. This layer is post hoc and diagnostic; the classification rule is the prespecified one.
+
+\textbf{Cost} (retained responses; \texttt{results.json}, key \texttt{cost}). \WITNESSCOSTTXT\ The untimed records are the smoke-test checks made before the GLM transport change; six early GLM checks exhausted a 16k-token cap in thinking and were redone after the cap was raised to 32k with a 12k thinking budget and the closure instrument's no-thinking retry (\texttt{DEVIATIONS.md}). The Claude CLI records a small auxiliary Haiku call beside each Opus~5 invocation, so ``one call'' is one CLI invocation, not one provider inference.
+
+
+\begin{table}[htbp]\centering\footnotesize
+\caption{Witness discovery: texts per group with each outcome, witness procedure / ordinary grader. A credited-defective; B documented-defective, never credited; C alarm flags without record; D replication flips; E high-grade agreement controls; F low control.}
+\label{tab:witness}
+\WITNESSSUMMARYTABLE
+\end{table}
+
+\begin{table}[htbp]\centering\footnotesize
+\caption{Witness discovery per text: $S_{\mathrm{valid}}$ (witness procedure) or grade (ordinary grader) followed by the class of the text's best objection: \textbf{S} substantiated defect, L localized concern, U unsupported allegation, ? unresolved, -- no objection.}
+\label{tab:witness-cases}
+\WITNESSTABLE
+\end{table}
+
+\section{Reference-Anchored Adjudication: Ledger, Protocol, Results}
+\label{app:refadj}
+\textbf{Ledger.} \texttt{reference\_adjudication/\allowbreak LEDGER.md} lists, for P1, P3, P5 and P6, the statements every complete proof establishes, produced by a model (Claude, in Claude Code) under the author's direction from \citet{chen2026notes} (version of 3 September 2026), with page references, and reviewed by the author\corr{QA1}, and the mapping of each v6 dispute to a statement. Cross-check: the AoPS wiki page for P5 (three community solutions) agrees with the notes on the answer and on the first three statements; two of its three solutions are invalid as written (one concludes $f(x)+y=f(y)+x$ from two inequalities that share a lower bound; one asserts injectivity without proof), and the single community solution on the P3 page assumes Xiang's only reply is to halve every larger segment (the false-guarantee failure mode of the model texts) and proves no upper bound, the P6 page's first solution asserts its finiteness lemma by pigeonhole while its second proves it by a key-terms argument equivalent to the notes' minimal terms, and the P1 page agrees on both statements; so the wiki confirms which statements are required and is used only where it agrees with the notes (the author saved the P3, P6 and P1 pages by hand because the site blocks automated access; the P5 page was fetched in a browser session). The ledger settles which statements are required and the truth of the claims the disputes turn on; it does not settle the convention for a false display beside a correct argument. \corr{QA2}A model check of 29 September 2026 (the double-check of Appendix~\ref{app:aiuse}) found two further ledger issues, neither of which changes a recorded judgment: in \texttt{LEDGER\_v2.md} the P6 entry L6.2 gives as ``equivalently'' a condition that is only sufficient for a fixed prime set (no judgment used that edition), and the explicit survivor argument of the P1 entry L1.1 is the ledger's own gloss, not Chen's text (\texttt{reference\_adjudication/\allowbreak ADDENDUM\_2026-09-29.md}).
+
+\textbf{Protocol}\corr{Q7} (\texttt{PROTOCOL.md}, prespecified and self-timestamped: its recorded writing time, 14:27 UTC on 6 September 2026, precedes the first call at 14:29 UTC, and the first commit containing it, at 15:09 UTC, follows the first calls; deviations in \texttt{DEVIATIONS.md}). Stage~1: each of the \REFADJN\ v6 objections (quote and objection text only; no procedure label, no claimed status, no proposer identity, no v6 verdicts) was judged by GPT-5.6-Sol and Claude Opus~5 with the closure rubric, the ledger and the full text, returning the affected statement, whether the objection's local claim is correct, whether the statement is established elsewhere (verbatim quote, anchored mechanically), the status as written (established / not established / false display) and a repair distance; the checker is told that the objection's own opinion of severity is not evidence. A checker may judge an objection produced by its own lab\corr{Q26}: the two checkers here, as in the planted study's reference gate, are the labs whose models produced the objections, so same-lab and other-lab agreement are reported separately. Stage~2: ledger-guided closure ratings of the 20 texts by GPT-5.6-Sol, Claude Opus~5 and GLM-5.3 (coverage \REFADJRATINGS). Rules: an objection's status is the two checkers' status when they agree, else split; a text's obligation is not established when an objection on it is adjudicated not established with a named statement; false display only when that is the only non-established outcome.
+
+\textbf{Aggregation (v8).} Per objection: a consensus status when both checkers agree, else a split with both statuses kept (\REFADJSPLITTYPES); the checkers named the same statement on \REFADJSAMESTMT\ of \REFADJN\ objections and endorsed the local objection on \REFADJENDORSE\ (same-lab checker \REFADJENDORSESAME, other-lab \REFADJENDORSEOTHER; this is endorsement, not agreement on severity). Per scored obligation, under each convention: not established (a consensus negative objection maps to it), unresolved (a split, or a statement with conflicting consensus judgments), established (a consensus positive objection with an anchored quote), or no objection, never merged with established. Two conventions: as written (AW), a false display counts against the statement; repair-tolerant (RT), it does not. \corr{Q5}This repair-tolerant convention is broader than the planted study's, under which only a false line that no later line cites is acceptable (a harmless edit): here a false display beside an argument that does establish the statement is tolerated, which can re-admit a fatal edit (Appendix~\ref{app:planted-results}). ``False display'' is an adjudication status, not the planted study's harmless class. $D$ counts obligations failed by consensus; splits make it an interval. \textbf{Results.} Objections both checked: \REFADJDONE\ of \REFADJN; same statement named by both \REFADJSAMESTMT\ (one objection was mapped to two statements and is attributed to both); same status \REFADJAGREE\ (\REFADJNOTEST\ not established, \REFADJFALSEDISP\ false display, \REFADJEST\ established); the \REFADJSPLIT\ splits are \REFADJSPLITTYPES\ (GPT/Claude), on \REFADJSPLITTEXTS\ texts, the stricter checker being \REFADJSTRICTER. Grouping judgments by checker, text and statement under two or more objections gives \REFADJWORDINGN\ groups; statuses varied across objections on the same statement in \REFADJWORDINGCHANGED\ (\REFADJWORDINGCHANGEDRT\ after collapsing to the repair-tolerant reading): defect content and framing were not held fixed and no objection was repeated verbatim, so this is variability across presentations, not a wording effect. Scored obligations (19 texts; the P4 control has no ledger statements): \REFADJOBLN, of which \REFADJOBLNOTESTAW\ not established as written and \REFADJOBLNOTESTRT\ repair-tolerant, \REFADJOBLMIXED\ mixed (consensus positive and consensus negative judgments on the same statement), unresolved \REFADJOBLUNRESAW\ as written and \REFADJOBLUNRESRT\ repair-tolerant, no objection \REFADJOBLNOOBJ, established by consensus \REFADJOBLEST. The not-contradicted score is the band $[2-D-U,\,2-D]$ with $D$ the obligations failed by consensus and $U$ the unresolved or mixed ones; ledger-guided ratings match its upper end on \REFADJRATEAGREEAW\ texts as written and \REFADJRATEAGREERT\ repair-tolerant, and fall inside the band on \REFADJRATEWITHINAW\ and \REFADJRATEWITHINRT. Anchoring: established-elsewhere quotes \REFADJANCHELSE; positive ledger-statement ratings with an anchored quote \REFADJANCHRATE\ (\REFADJANCHRATER; the denominator is every ``yes'' statement rating over the 96 rater-statement pairs). Per text: both DeepSeek P5 texts omit the nonnegative-difference step by consensus (four objections each), so their first $S{=}2$ crossing cannot be at turn 33 or 38 (turn 39, GPT's index, was not adjudicated); the P1 candidate drew no objection; Kimi P3 round~4's reduction step fails by consensus, and its upper bound drew four objections on one step (decreasing order versus the lemma's ordering): Claude false display on all four, GPT not established on three and false display on the one framed ``purely cosmetic''; Nemotron's sufficiency display is false display twice and split once, and its necessity step is not established, established and split across three objections. Disputed texts: fail a scored obligation as written \REFADJDISPFAILAW, repair-tolerant \REFADJDISPFAILRT\ (\REFADJDISPFAILRTSTRICT\ counting the mixed one), unresolved repair-tolerant: \REFADJDISPUNRESRT. Community solutions on the AoPS pages: eight checked (three P5, one P3, two P6, two P1); four contain invalid inferences as written (two P5, the P3 one, the first P6 one). \REFADJLEDGERTXT\ Effects of presenting the corrected ledger to the models are unmeasured. \texttt{RESULTS.md} prints every objection with both checkers' statements, statuses and explanations; Table~\ref{tab:refadj-disputes} lists every objection on the seven disputed texts.
+
+\begin{table}[htbp]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Same ledger statement, different presentations of the same defect (statuses as written; every objection on the seven disputed texts, both checkers and repair sizes: Appendix Table~\ref{tab:refadj-disputes}).}
+\label{tab:refadj-example}
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lllll@{}}
+\toprule
+Statement (step) & Objection & Presentation & GPT & Claude \\
+\midrule
+Nemotron P5, sufficiency & grader-gpt/e1 & ``repairable typo'', no example & false disp. & false disp. \\
+(middle term $(x{+}y{+}2c)/2$) & witness-gpt/lower & counterexample $x{=}y{=}c{=}1$ & false disp. & false disp. \\
+ & witness-claude/lower & $c{=}1,x{=}2,y{=}1$; ``does not verify the required chain'' & not est. & false disp. \\
+\addlinespace[2pt]
+Kimi P3 round 4, upper bound & grader-gpt/e1 & ``must explicitly process the constructed ordering'' & not est. & false disp. \\
+(decreasing vs.\ lemma's order) & witness-gpt/upper & $\{10,9,8,7,5\}$: residue 5 vs.\ 1 & not est. & false disp. \\
+ & grader-claude/e0 & ``purely cosmetic'' & false disp. & false disp. \\
+ & witness-claude/upper & $\{8,7,6,5,4\}$: value 4 vs.\ 0 & not est. & false disp. \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[htbp]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Every objection on the seven disputed texts: ledger statement(s) named, each checker's status as written, and repair distances.}
+\label{tab:refadj-disputes}
+\resizebox{\textwidth}{!}{\REFADJDISPUTETABLE}
+\end{table}
+
+\begin{table}[htbp]\centering\footnotesize
+\caption{Reference-anchored outcome per text and scored obligation under the as-written (AW) and repair-tolerant (RT) conventions: $\times$ not established by consensus, ? unresolved (split), m mixed, \checkmark established by consensus, -- no objection; $D$ = obligations failed; ledger-guided ratings $S_{\mathrm{ref}}$ by GPT / Claude / GLM; v6 $S_{\mathrm{valid}}$ and grades.}
+\label{tab:refadj}
+\REFADJTABLE
+\end{table}
+
+\clearpage
+\section{Planted Defects: Acceptance Gates Against Constructed Ground Truth}
+\label{app:planted}
+Figures are from the first run of the grade gate (P, 6 September 2026) unless the same-day re-query (R) is named; the witness, closure and reference gates were run once in this paper's protocol (Appendix~\ref{app:postsub} reports a later re-run of the witness gate). Broken means a fatal or gap edit; sound means an original or a harmless edit, sound only under the repair-tolerant convention.
+
+\subsection{Protocol, provenance and the status of each read}
+\label{app:planted-protocol}
+\textbf{Who made the texts.}\corr{Q8} The study design is the author's, with design options drafted with AI assistants at the author's request; AI agents implemented it, and the author wrote none of the edits. A coordinating agent in Claude Code (Claude Fable~5.1) selected the eight base proofs, wrote the specification of the three edit kinds and their intended labels (\texttt{PROTOCOL\_PLANTINGS.md}), and suggested candidate edits for each problem, among them the false monotone-quantity lemma of both P1 fatal edits and, word for word, the false finite-transversal lemma of the fatal edit on the public GPT-5.6-Sol pro P6 proof. Three Claude Fable~5.1 subagents, one per problem group, wrote every edit, every dependency argument, every intended label and all \CRNChecks\ executable checks (6 September 2026, 19:05--19:13 UTC). The author decided the design (three edit kinds per proof, each published as a diff with a dependency argument and a check, with the assistant doing the edits) before any edit existed, choosing to run it against the assistant's recommendation, and did not read or approve individual edits before the gates ran. Before launch only the assistant examined the edits: every check passed, and it spot-checked four of the \CRNMutants\ diffs. The first examination by anyone else was an internal model-run review that the author requested after the analysis freeze. The reviewed version's authorship wording is corrected accordingly (Appendix~\ref{app:changes}, row \texttt{Q8}); ``we'' in this paper means the study as a whole.
+
+\textbf{Protocol status.}\corr{Q7} \texttt{PROTOCOL\_PLANTINGS.md} is prespecified and self-timestamped, not registered. It was written before the mutant calls and committed at launch, \CRCommitLagSec~s after the earliest recorded mutant request, and neither it nor \texttt{plantings.json} has been edited since; every mutant request stored from the launch day, 6 September 2026 (grade, re-query, witness, closure and reference checks: every such file in \texttt{planted\_defects/\allowbreak runs/}), carries the text digest recorded for that mutant in \texttt{plantings.json} (\CRHashMatch\ of \CRMutantRequests). Smoke-test screenings of one original text (\CRSmokeScreens\ requests) preceded the protocol. Operational notes are in \texttt{DEVIATIONS.md}; the dated addendum \texttt{planted\_defects/\allowbreak ADDENDUM\_2026-09-29.md} corrects its wording where this appendix does.
+
+\textbf{Status of each read.}\corr{Q6} Prespecified in the protocol: the gates grade $\ge 5$ (the pass mark), closure, witness and witness-plus-reference; false accepts on the \CRNBroken\ fatal and gap texts and false rejects on the \CRNPerClass\ originals, per gate; harmless texts accepted per gate and convention; the quote locus; the certificate size; and a separate report for the GPT-authored bases. Added afterwards: the strict mark (grade $=7$), the completeness flag, the pass-mark sweep, the \CRNSound-text sound set (originals plus harmless edits), the fatal/gap split of the broken count, the area under the curve, the per-lab convention reversal and the routing reading, all read post hoc from the same stored responses with no new calls, and the re-query of the grade gate (\texttt{runs/\allowbreak grade\_rep2/\allowbreak }, 22:03--22:22 UTC, after the analysis freeze), which the v10 internal review did not request: a Claude Code subagent running Claude Sonnet~5 suggested it, Claude Opus~5 recommended it and the author approved it. ``Prespecified (self-timestamped)'' replaces the reviewed version's registration wording (row \texttt{Q6}).
+
+\textbf{Gates.}\corr{Q36} The pass mark, the strict mark and the completeness flag are read from one grading response; the completeness flag and the strict mark were added after the internal model-run reviews, with no additional calls. The closure gate requires $S{=}2$; the witness gate requires $S_{\mathrm{valid}}{=}2$, where $S_{\mathrm{valid}}$ counts the two scored fields of the marking scheme, \texttt{lower\_bound} and \texttt{upper\_bound} (the scheme's own obligations, which are a lower and an upper bound only on P3; \texttt{reduction} is not scored), returned as written and valid (Appendix~\ref{app:rubric}); the witness-plus-reference gate adjudicates witness objections against the ledger (accept iff no scored obligation has a consensus not-established objection and no split; the as-written convention also rejects on a consensus false display). GPT-5.6-Sol and Claude Opus~5 ran every gate on all \CRNMutants\ mutants and \CRNBases\ originals, GLM-5.3 the closure gate (\PLANTGLMCOV\ texts returned before the freeze); a combined gate accepts only if every model accepts. The prespecified comparator for the reference gate is the witness-only variant; the pooled variant, which adds the graders' own error lists, is reported for completeness. ``The reviews'' and ``a reviewer'' in the reviewed version and in \texttt{DEVIATIONS.md} are these internal pre-submission reviews run by language models (Appendix~\ref{app:aiuse}), not the workshop's referees.
+
+\subsection{Bases}
+\label{app:planted-bases}
+\corr{Q12}\corr{Q33}The eight base texts were accepted at selection (Table~\ref{tab:planted-bases}): four public texts carry the public campaign's first-pass verifier grade 7 (Claude-based verifier agents, not the IMO jury) and unanimous model closure ratings $S{=}2$ (P1 Kimi~K3, P3 Claude Fable~5 and GPT-5.6-Sol xhigh, P6 GPT-5.6-Sol pro), and four GPT-5.6-Sol ultra candidates from the author's campaign (P1, P3, P5, P6) passed GPT-5.6-Sol's own review-and-verify gate and unanimous model closure ratings. ``Accepted'' means those model verdicts and nothing more; for \CRBasesSameLabWord\ bases the accepting verdict came from the lab that wrote the base. GPT-5.6-Sol wrote \CRBasesGPTWord\ of the \CRNBasesWord, and the bases cover \CRNProblemsCoveredWord\ of the \CRNProblems\ problems. The coordinating agent chose them among texts every model evaluator accepted, so they are not a sample; a base's \CRTextsPerBaseWord\ texts share most of their content, so the \CRNTexts\ texts are not independent observations, and we report counts, not rates.
+
+\corr{Q13}The author compared the six GPT-5.6-Sol proofs of the author's campaign, four of which are bases here, with \citet{chen2026notes} and found them consistent; this was not a line-by-line or expert check, and no written record of it was kept. The reviewed version presented this comparison as a human check against the published solutions (row \texttt{Q13} quotes it). On 5 September 2026 a Claude model also compared those six proofs with the notes step by step, and drafts before the reviewed version described that model comparison as a human line-by-line read. On 29 September 2026 a model double-check (Claude Fable~5.1 agents, each followed by an adversarial verifier; a model check, not a human or expert review) compared the \CRBasesGPTWord\ GPT-5.6-Sol bases of this study, the author's four and the two public ones, with the notes (version of 27 September 2026) and found all of them consistent; the public P6 pro base has one minor scope slip (an interval count stated without the condition $x \ge a_1 - 1$, and applied only where it holds) that nothing depends on.
+
+The Kimi~K3 P1 original already carries an unused false closing remark (its characterization of the answer fails for primes that divide no $a_i$). GPT-5.6-Sol grades it 6, and four decision variants reject it: the strict mark with GPT-5.6-Sol alone or with both graders required, and the two as-written reference variants that use the graders' objections. Relabelling it reject under the as-written convention leaves the convention reversal of the first run intact (Appendix~\ref{app:planted-results}).
+
+\begin{table}[htbp]
+  \caption{The eight bases. Accepted by: the public campaign's first-pass verifier grade (Claude-based verifier agents, not the IMO jury) or the author's campaign's own GPT-5.6-Sol review-and-verify gate; every base also has unanimous model closure ratings $S{=}2$. Same lab: the accepting verdict came from the lab that wrote the base. Last column: each grader's grade of the original, first run / re-query.}
+  \label{tab:planted-bases}
+  \centering
+  \CRfit{\input{gen/cr_appL_bases}}
+\end{table}
+
+\subsection{Classes, checks and what they establish}
+\label{app:planted-classes}
+\corr{Q4}\corr{Q5}Each base received three single-edit mutations, one per class, generated by \texttt{make\_mutants.py} from search/replace specifications and published as diffs with their hashes and dependency arguments (\texttt{plantings.json}): \emph{fatal} (F: a statement a later line cites is made false, the consumer kept), \emph{gap} (G: the proof of a load-bearing step is deleted and replaced by a one-line assertion or a brief sketch, its statement kept), and \emph{harmless} (H: a false line nothing later uses, usually a display the next line silently corrects; one is an unused worked example). A fatal edit leaves the argument invalid as written, not necessarily the theorem false. ``Single-edit'' replaces the reviewed wording (row \texttt{Q4}): each mutant is one search/replace edit, but the published diff of \CRIdExampleF\ shows \CRExDiffHunks\ adjacent hunks. This gives \CRNMutants\ mutants and \CRNTexts\ texts. Intended labels, by construction: fatal and gap edits reject under both conventions, harmless edits reject as written and accept repair-tolerant, and originals accept. So broken means fatal or gap (\CRNBroken\ texts), and sound means an original or a harmless edit (\CRNSound\ texts), sound only under the repair-tolerant convention.
+
+\textbf{What the checks establish.}\corr{Q9} Every fatal and harmless edit has an executable check (\texttt{planted\_checks.py}; \CRNChecksPass\ of \CRNChecks\ pass), and the \CRNDeletions\ gap edits have none. A check certifies that the planted statement is false (for a harmless edit, also that the next line continues from the correct value). It does not show that a later line fails, and the dependency arguments are prose; at least three fatal checks confirm, in their own instance, that the consumer's conclusion still holds. P5 release note (the frozen check and dependency argument are unchanged): the check refutes the displayed expansion of \CRIdGptPfiveF\ as an algebraic identity (the correct expansion minus the planted one is $-8(b-c)(c+t)$); no admissible instance falsifies the displayed equality, since every solution has $b=c$; the planted error is an invalid step, and the quoted numeric point, also in the dependency argument, lies outside the hypotheses.
+
+\textbf{Announced deletions.}\corr{Q21} Every gap replacement contains the words ``(standard; details omitted)'' (\CRGapMarker\ of the \CRNPerClass\ gap texts, \CRGapMarkerOther\ of the other \CRNNonGap\ texts), so every deletion announces itself, although the marker does not always end the replacement; unannounced deletions were not tested. The planted edits are presumably easier than natural defects: each is one edit, and every gap edit announces its omission.
+
+\textbf{Re-planted natural defects and who saw what.}\corr{Q15} \CRReplantAll\ edits re-plant defects that the paper describes in natural proofs: both P1 fatal edits plant the false lemma of the Nemotron P1 draft (a quantity that starts above one and never increases stays above one, which the sequence \crlit{2, 1} refutes), the fatal edit on the public GPT-5.6-Sol pro P6 proof plants the false finite-transversal lemma of the public GPT-5.6-Sol default P6 run, and the harmless edit on the P5 base plants the $(x+y+2C)/2$ middle term of the Nemotron P5 display. The P1 closure rubric, written earlier the same day by an AI subagent, names the P1 lemma as an example of a wrong approach, and the P1/P5 planting subagent used it knowingly (\texttt{plantings.json} records ``named in the rubric as a wrong approach''). The witness and closure gates saw that rubric; the reference checkers saw the ledger, which calls the P6 transversal lemma false and pre-classifies the $(x+y+2c)/2$ display as a harmless false line; the grade gate saw neither.
+
+\subsection{The five disputed labels}
+\label{app:planted-disputed}
+\corr{Q10}\corr{Q11}Five intended labels, three fatal and two gap, are disputed: all four P1 fatal-or-gap edits and the P5 sign flip. They were recorded in \texttt{DEVIATIONS.md} after internal model-run reviews before submission, and Table~\ref{tab:planted-disputed} names them with each rule's decision. The labels and every count computed from them are unchanged: exclusions are sensitivities, and excluding them does not certify the labels that remain. The P5 sign flip \CRIdGptPfiveF, the reviewed version's only worked fatal example, is disputed for a sharper reason than a one-line repair: every solution has $b=c$, so the planted equality holds at every admissible instance, and the next line states the correct-sign bound; it is an invalid step that the next line silently corrects, the harmless shape. Excluding the disputed labels in the order they were recorded, the pass mark with both graders required accepts \CRLadderPassZeroP, \CRLadderPassThreeP, \CRLadderPassFourP\ and \CRLadderPassFiveP\ of \CRLadderNZero, \CRLadderNThree, \CRLadderNFour\ and \CRLadderNFive\ broken texts, identically in both runs; the strict mark accepts \CRLadderStrictZeroP\ and then \CRLadderStrictThreeP\ in both runs; the completeness flag accepts \CRLadderFlagZeroP, \CRLadderFlagThreeP, \CRLadderFlagFourP\ and \CRLadderFlagFiveP\ in the first run and \CRLadderFlagZeroR, \CRLadderFlagThreeR, \CRLadderFlagFourR\ and \CRLadderFlagFiveR\ in the re-query; and the witness gate, run once, accepts \CRLadderWitnessZeroP\ throughout. After the five exclusions the broken set covers \CRExclProblems\ problems. No exclusion figure is given for the closure gate, which accepts an undisputed gap edit.
+
+Stated against the cite rule, a fatal edit is fatal because a later line cites the falsified statement, not because no reader could repair it; the disputes instead ask whether a reader would repair the step in one line. By that criterion the undisputed fatal edits share the disputed feature too: in the first run at least one grader's response uses the word ``repair'' on \CRUndispFRepairAnyP\ of the \CRNUndispF\ undisputed fatal edits and both graders' on \CRUndispFRepairBothP\ (in the re-query \CRUndispFRepairAnyR\ and \CRUndispFRepairBothR; a keyword read, not a severity coding), \CRIdExampleF\ of \CRfig{fig:example}{the body} among them, whose inserted line restates a hypothesis that the proof's own closing section refutes. The narrower description of the dated addendum, a false statement whose needed special case is true, fits two of them: \CRIdProPsixF, whose needed bounded special case is true, and \CRIdFableF, whose check records that the lemma's conclusion still holds while its written argument breaks; it does not fit \CRIdExampleF, whose check shows that the edited proof's own conclusion fails. None of them is added as a disputed label, and no count excludes them.
+
+\begin{table}[htbp]
+  \caption{The five disputed labels (\texttt{DEVIATIONS.md}), with each rule's decision, both graders required: pass mark, strict mark and completeness flag as first run / re-query; the witness gate ran once. \CRacc\ accept, \CRrej\ reject. ``post-v12'' and ``post-v15'' name internal model-run reviews before submission.}
+  \label{tab:planted-disputed}
+  \centering
+  \CRfit{\input{gen/cr_appL_disputed}}
+\end{table}
+
+\subsection{Prompts}
+\label{app:planted-prompts}
+The grading prompt's first line and instruction block, the witness gate's instruction block and the P1 and P5 closure rubrics are printed verbatim in Appendix~\ref{app:rubric}; the P3 and P6 rubrics are in Appendix~\ref{app:closure}. The grading prompt's scale reads ``7 = complete and correct proof; 5-6 = essentially complete, with minor gaps or a small error that is straightforwardly repairable'', and it names the \texttt{complete} field without defining it.
+
+\subsection{What each arm is given}
+\label{app:planted-arms}
+\corr{Q14}\corr{Q15}The reviewed version's description of the closure and witness gates is corrected here (row \texttt{Q14}). Table~\ref{tab:planted-arms} gives, per problem, what each arm's system prompt contains. The grade arm is reference-free: its prompt carries no solution material and asks the grader not to consult or recall one, which cannot remove what a model knows. The witness and closure arms are reference-guided: their prompts carry the problem's solution-derived marking scheme, with the answer given on P3 and P5, the value of $M$ in P1's field mapping and the form of $L$ on P6. Every comparison between the witness or closure gate and a rule read from the grade response is therefore reference-guided against reference-free, not information-matched, and the witness gate's relative outcome cannot be attributed to obligation-by-obligation checking alone.
+
+On P1 the scheme meets the planted edits twice. First, both P1 fatal edits plant the false principle that the P1 rubric names as a wrong approach (near-verbatim on the Kimi base, reworded on the GPT base). On those two texts the strict mark and the completeness flag, read from graders that never saw the scheme, also reject in both runs, so this collision bears only on the comparison between the witness gate and the pass mark, which accepts both texts. The keyed closure gate's GPT-5.6-Sol rater accepted \CRIdKimiPoneF\ despite the named lemma (the closure pair rejects it), and the P1 scheme also gives the correct replacement argument for the survivor step. Second, the P1 rubric requires the Euclidean step $\gcd(x, y-x) = \gcd(x, y)$ with the cases $x=y$ and zero valuations handled, and both P1 gap edits delete exactly that step. This collision is the witness gate's whole broken-text margin over the strict mark and the flag: the one broken text that the strict mark and the flag accept in the first run is \CRIdGptPoneG, and in the re-query the flag accepts both P1 gap edits. Both collisions fall on the four P1 broken texts, all of them disputed, so the comparisons without the disputed labels contain no P1 text; the scheme's other asymmetries (answers on P3 and P5, named wrong approaches) still apply there.
+
+\begin{table}[htbp]
+  \caption{What each arm's system prompt contains, per problem (stored \texttt{request.json}; identical across graders and texts of a problem). Characters: system-prompt length. Answer given: ``value of $M$'' and ``form of $L$'' are given in the field mappings of P1 and P6. Solution ban: the grade prompt's ``Do not consult, recall, or compare against any published solution, and do not use a fixed list of required lemmas''.}
+  \label{tab:planted-arms}
+  \centering
+  \CRfit{\input{gen/cr_appL_arms}}
+\end{table}
+
+\subsection{Full results}
+\label{app:planted-results}
+\textbf{Prespecified gates} (Table~\ref{tab:planted}; \texttt{RESULTS.md} lists every decision and objection). Fatal-or-gap (broken) texts accepted: grade \PLANTFAGRADE\ (GPT \PLANTFAGRADEGPT, Claude \PLANTFAGRADECLAUDE; fatal \PLANTFAFGRADE, gap \PLANTFAGGRADE); closure \PLANTFACLOSUREGC\ for GPT and Claude combined (GPT \PLANTFACLOSUREGPT, Claude \PLANTFACLOSURECLAUDE, GLM \PLANTFACLOSUREGLM: the closure rating measures written mechanisms, and a false statement whose consumer is kept still reads as written); witness \PLANTFAWITNESS; witness plus reference \PLANTFAREFADJWIT\ repair-tolerant and \PLANTFAREFADJWITAW\ as written. Originals rejected: grade \PLANTFRGRADE, closure \PLANTFRCLOSUREGC, witness \PLANTFRWITNESS, reference \PLANTFRREFADJWIT\ (the pooled as-written variant rejects \PLANTFRREFADJAW, the Kimi~K3 P1 original). Harmless edits accepted: grade \PLANTHGRADE, closure \PLANTHCLOSUREGC, witness \PLANTHWITNESS\ (GPT \PLANTHWITNESSGPT, Claude \PLANTHWITNESSCLAUDE), so the witness gate refuses \PLANTHREFUSEWITNESS\ of the harmless edits; reference \PLANTHREFADJWIT\ repair-tolerant and \PLANTHREFADJWITAW\ as written. \corr{Q32}By base author, the prespecified separate report: on the six GPT-written bases the grade with both graders required accepted \PLANTFAGRADEGPTAUTH\ of the broken texts and the witness gate \PLANTFAWITNESSGPTAUTH; on the other two, \PLANTFAGRADEOTHER\ and \PLANTFAWITNESSOTHER; per grader and rule, for both runs, in Table~\ref{tab:planted-baselab}. GPT-5.6-Sol's own pass mark accepts \CRGPTPassBrokenAccGptBasesP\ of the \CRNBrokenGptBases\ broken texts on the bases it wrote and \CRGPTPassBrokenAccOtherBasesP\ of \CRNBrokenOtherBases\ on the others; two other-authored bases cannot separate self-preference, which is documented in general \citep{panickssery2024self}. Fatal texts were graded \PLANTFGRADERANGE\ by both models; of the fatal-or-gap texts the grade accepted, \PLANTNAMEDGRADE\ had the planted hunk quoted in at least one grader's error list. Objections whose quote falls inside the planted hunk: \PLANTLOCUS\ (witness \PLANTLOCUSWITNESS, grader \PLANTLOCUSGRADE). Certificate size against text length (medians over objections, so a text with several objections weighs more than once): a median objection of \CRCertWitnessChars\ characters for the witness gate (one run), on texts of median length \CRCertWitnessTextChars, and of \CRCertGradeChars\ for the grader in the first run, on texts of median length \CRCertGradeTextChars; the reviewed version set both against the first text median.
+
+\corr{Q18}Under the reading fixed in advance, the witness gate (one run) is ``positive'': it has fewer false accepts than the grade at pass mark 5 and rejects no more originals (\CRWitnessORejP\ of \CRNPerClass, as the pass mark), the protocol's false-reject endpoint. Counting the harmless edits as sound, as \CRtab{tab:rules}{the body's rules table} does, it rejects \CRWitnessSoundRejP\ of the \CRNSound\ sound texts against the pass mark's \CRPassSoundRejP\ (the witness gate was run once): a trade, not a dominance. The repair-tolerant reference convention re-admits two fatal texts (\PLANTFAREFADJWIT), both disputed labels (\CRIdKimiPoneF\ and \CRIdGptPfiveF), whose false statements the checkers judged repairable beside a correct continuation: the convention dependence of Appendix~\ref{app:refadj}, measured against the intended truth.
+
+\textbf{Decision-rule analysis} (added after the v12 internal model-run review; post hoc, offline, from the same stored responses). \CRtab{tab:rules}{The body's rules table} reports the pass mark, the strict mark and the completeness flag; Table~\ref{tab:rules-all} adds the closure and witness gates and the routing columns.
+
+\textbf{Threshold sweep.}\corr{Q2} The pass mark is swept over the whole scale with both graders required, counting acceptances among the \CRNBroken\ broken texts and rejections among the \CRNSound\ sound ones (Table~\ref{tab:planted-sweep}). The cutoff trades broken texts accepted for sound texts rejected, and no cutoff on this rubric keeps both low: in the first run a pass mark of 5 gives (\CRSweepFiveBrokenP, \CRSweepFiveSoundP) and 7 gives (\CRSweepSevenBrokenP, \CRSweepSevenSoundP), and in the re-query (\CRSweepFiveBrokenR, \CRSweepFiveSoundR) and (\CRSweepSevenBrokenR, \CRSweepSevenSoundR). The rubric places a small repairable error at 5--6, so the sweep bounds what a threshold achieves within this rubric, not across rubrics: the 5--6 band explicitly permits straightforward repair, so a pass at 5 is not a certificate that a proof is complete as written, and the mismatch is between a partial-credit scale and its use as a full-proof acceptance gate.
+
+\textbf{Strict mark and completeness flag.}\corr{Q1} The prompt names the \texttt{complete} field without defining it, while its scale calls 7 ``complete'' and 5--6 ``essentially complete''. In both runs the field is nested between the cuts at 6 and 7: in the first run all \CRGradeSevenP\ responses graded 7 set it and none of the \CRGradeLowP\ graded 5 or below does, and it departs from ``grade $=7$'' on \CRFlagDepartP\ of \CRNResponses\ responses in the first run and \CRFlagDepartR\ in the re-query, all of them GPT-5.6-Sol responses graded 6. As rules with both graders required, in the first run the strict mark accepts \CRStrictBrokenAccP\ broken text and rejects \CRStrictSoundRejP\ sound ones and the flag accepts \CRFlagBrokenAccP\ and rejects \CRFlagSoundRejP, a difference of \CRStrictFlagDiscordSoundP\ sound texts on \CRStrictFlagDiscordBasesP\ bases, all in the flag's favour; with \CRStrictFlagDiscordSoundP\ discordant texts, an exact two-sided McNemar test cannot fall below $p = \CRMcNemarMinP$ (one-sided: $0.125$). In the re-query the strict mark gives (\CRStrictBrokenAccR, \CRStrictSoundRejR) and the flag (\CRFlagBrokenAccR, \CRFlagSoundRejR), one discordant text each way, so in the re-query neither dominates. In the first run the strict mark's sound rejections are \CRStrictSoundRejHP\ harmless edits and \CRStrictSoundRejOP\ original (the Kimi~K3 P1 text with its own false remark), and the flag's are all harmless. The one broken text both rules accept in the first run is the disputed \CRIdGptPoneG; in the re-query the flag's \CRFlagBrokenAccR\ broken acceptances are both disputed P1 deletions.
+
+\textbf{GPT-5.6-Sol's flat 6 and the area under the curve.}\corr{Q3} In the first run GPT-5.6-Sol graded all \CRGPTFlatSixP\ fatal and harmless edits 6, so its scores had no variance across the two classes; in the re-query \CRGPTHSevenR\ harmless edit received a 7 (\CRGPTFlatSixR\ of the \CRNChecks\ at 6). This is not blindness: in the first run it quoted the harmless edit in \CRGPTHQuoteP\ of \CRNPerClass\ and, with each base as its own control, graded it one point below its own grade of the original on \CRGPTHBelowOrigP\ of \CRNPerClass\ bases (\CRGPTHBelowOrigR\ in the re-query), pricing a false line the same whether or not anything used it. Claude Opus~5 graded \CRClaudeHSevenP\ of the \CRNPerClass\ harmless edits 7 in the first run (\CRClaudeHSevenR\ in the re-query). The flat 6 also holds in the first run on the two bases GPT-5.6-Sol did not write (\CRGPTNonGptFlatP\ of \CRNNonGptFH\ fatal and harmless edits). The area under the curve for separating fatal from harmless edits by score, ties counted one half, is \CRAUCGPTP\ for GPT-5.6-Sol and \CRAUCClaudeP\ for Claude Opus~5 in the first run (\CRAUCGPTR\ and \CRAUCClaudeR\ in the re-query); for GPT-5.6-Sol, whose grades on these edits are all 6 or 7 in both runs, it equals one half plus half the difference between the shares of harmless and fatal edits graded 7, so it measures the repair-tolerant convention, not discrimination; for Claude Opus~5, which also graded a fatal edit 5 in each run, that identity holds only approximately.
+
+\textbf{Quotes and incomplete marks.}\corr{Q20} On the \CRPassBrokenAccP\ broken texts that the pass mark accepted with both graders required (in both runs), at least one grader quoted inside the edited passage on \CRQuoteAnyP\ (\CRQuoteAnyR\ in the re-query), and Claude Opus~5 on \CRQuoteClaudeP; GPT-5.6-Sol did so on \CRQuoteGPTExactP\ by exact anchoring and on \CRQuoteGPTTolP\ by tolerant anchoring, the two extra quotes differing from the edit only in their math delimiters. In both runs GPT-5.6-Sol's main gap named the planted error on \CRGPTFatalNamedP\ of the \CRNPerClass\ fatal edits and graded \CRGPTFatalSixP\ of them 6. On the \CRPassGAccP\ accepted gap edits GPT-5.6-Sol's main gap reads ``none'' on \CRGPTGapMainNoneP, and in the first run its notes call \CRGPTGapRoutineP\ of the omissions routine or adequately sketched (\CRGPTGapRoutineR\ in the re-query); the \CRGapRefusedP\ refused gap edits are those at least one grader scored below 5; in both runs they are the P6 deletions and the deletion in the Claude-written P3 base, and no P1 or P5 deletion was refused (per-mutant table, App.~\ref{app:permutant}), a post-hoc pattern confounded with problem, and no mechanism is claimed for the difference. In the first run at least one grader marked the text incomplete on \CRIncompleteAnyP\ of the \CRPassBrokenAccP\ accepted broken texts and both did on \CRIncompleteBothP; of the \CRNResponsesOnAcc\ responses on them, \CRSevensOnAccP\ were a 7 in the first run and \CRSevensOnAccR\ in the re-query.
+
+\textbf{Repair language.}\corr{Q34} The grading prompt's scale defines 5--6 as ``essentially complete, with minor gaps or a small error that is straightforwardly repairable''. In the first run, repair language (``repairable'', ``readily repaired'', ``easily fixed'', ``minor'', ``cosmetic'', ``does not affect'') appears in the main gap or error descriptions of \CRRepairResp\ of the \CRNBrokenResponses\ grading responses on the broken texts, covering \CRRepairTexts\ of the \CRNBroken\ texts, and in \CRRepairRespNotes\ responses on \CRRepairTextsNotes\ texts counting the free notes field. It is a keyword match, not a severity coding. Split by where the matching objection points, \PLANTREPAIRON\ responses quote inside the edited passage, \PLANTREPAIROFF\ quote a different step, and \PLANTREPAIRUNANCH\ carries the language only in the unanchored summary; position is not attribution.
+
+\textbf{Routing.}\corr{Q16}\corr{Q17} Read as accept on agreement, reject on agreement and refer on disagreement, each rule sends the texts its two graders dispute to a person; a referral is a count of texts, not timed, and what a referral takes was not measured. In the first run the pass mark refers \CRRoutePassRefP\ of the \CRNTexts\ texts, passing \CRRoutePassBrokenP\ broken texts and refusing \CRRoutePassSoundP\ sound ones (identical in the re-query); the flag refers \CRRouteFlagRefP, passing \CRRouteFlagBrokenP\ and refusing \CRRouteFlagSoundP\ (in the re-query \CRRouteFlagRefR, \CRRouteFlagBrokenR\ and \CRRouteFlagSoundR); the strict mark refers \CRRouteStrictRefP, passing \CRRouteStrictBrokenP\ and refusing \CRRouteStrictSoundP; and the witness rule, run once, refers \CRRouteWitnessRefP, passing \CRRouteWitnessBrokenP\ and refusing \CRRouteWitnessSoundP. In the first run the flag's referrals are \CRRouteFlagRefHP\ harmless edits, \CRRouteFlagRefGP\ announced deletions and \CRRouteFlagRefFP\ fatal edit (the disputed sign error), and the witness rule's are \CRRouteWitnessRefHP\ harmless edits. \corr{Q19}The witness rule's one refused sound text is the planted copy of the Nemotron P5 display (\CRIdGptPfiveH), sound only under the repair-tolerant convention and correctly refused as written. On broken texts the witness rule's gains over the flag (one run) are \CRWitnessGainFlagGapP\ gap edits that announce the omission, which its instructions class as not written, and \CRWitnessGainFlagFatalP\ disputed sign error; the rest of its fewer referrals are harmless edits. The witness rule is a comparator for the rules read from one grading response, not a proposed rule.
+
+\textbf{Witness plus reference.} The nearest in-paper analogue of reference-guided grading is the witness-plus-reference gate (a ledger of required statements written from a published solution, two checkers): repair-tolerant, in its one run it accepts \CRRefWitBrokenAccP\ of the \CRNBroken\ broken texts, both disputed labels (\CRRefWitBrokenAccDisputedP), and rejects \CRRefWitSoundRejP\ of the \CRNSound\ sound ones; the as-written variant accepts \CRRefWitAWBrokenAccP\ broken texts and rejects \CRRefWitAWSoundRejP\ sound ones, all harmless edits; and the pooled variant, which adds the graders' own error lists, accepts \CRRefAllBrokenAccP\ and rejects \CRRefAllSoundRejP. It is not a reimplementation of published reference-guided workflows, and its objections come from the witness prompt, which carried the marking scheme.
+
+\textbf{Convention reversal.} Counting each rule's disagreements with the intended truth per lab over the \CRNTexts\ texts, which lab has fewer errors reverses between the conventions in the first run under the strict mark, the flag and the witness gate, and in the re-query under the strict mark and the flag. Under the flag the GPT-5.6-Sol/Claude Opus~5 errors are RT \CRFlagErrRTGPTP/\CRFlagErrRTClaudeP\ and AW \CRFlagErrAWGPTP/\CRFlagErrAWClaudeP\ in the first run and RT \CRFlagErrRTGPTR/\CRFlagErrRTClaudeR\ and AW \CRFlagErrAWGPTR/\CRFlagErrAWClaudeR\ in the re-query; the strict-mark and witness-gate counts are in \S\ref{sec:convention}. With the Kimi~K3 P1 original relabelled reject as written, the as-written errors (GPT-5.6-Sol/Claude Opus~5) in the first run become \CRKimiRelabelStrictAWGPTP/\CRKimiRelabelStrictAWClaudeP\ for the strict mark, \CRKimiRelabelFlagAWGPTP/\CRKimiRelabelFlagAWClaudeP\ for the flag and \CRKimiRelabelWitnessAWGPTP/\CRKimiRelabelWitnessAWClaudeP\ for the witness gate (one run), against \CRStrictErrRTGPTP/\CRStrictErrRTClaudeP, \CRFlagErrRTGPTP/\CRFlagErrRTClaudeP\ and \CRWitnessErrRTGPTP/\CRWitnessErrRTClaudeP\ repair-tolerant, so in the first run the reversal survives the relabelling. With the \CRNDisputedWord\ disputed labels set aside (\CRNExclDisputedTexts\ texts), the errors are, under the strict mark, RT \CRExclErrStrictRTGPTP/\CRExclErrStrictRTClaudeP\ and AW \CRExclErrStrictAWGPTP/\CRExclErrStrictAWClaudeP\ in the first run and RT \CRExclErrStrictRTGPTR/\CRExclErrStrictRTClaudeR\ and AW \CRExclErrStrictAWGPTR/\CRExclErrStrictAWClaudeR\ in the re-query; under the flag, RT \CRExclErrFlagRTGPTP/\CRExclErrFlagRTClaudeP\ and AW \CRExclErrFlagAWGPTP/\CRExclErrFlagAWClaudeP\ in the first run and RT \CRExclErrFlagRTGPTR/\CRExclErrFlagRTClaudeR\ and AW \CRExclErrFlagAWGPTR/\CRExclErrFlagAWClaudeR\ in the re-query; and under the witness gate (one run), RT \CRExclErrWitnessRTGPTP/\CRExclErrWitnessRTClaudeP\ and AW \CRExclErrWitnessAWGPTP/\CRExclErrWitnessAWClaudeP. In each of these runs and rules the reversal survives. Later runs outside this protocol are in Appendix~\ref{app:postsub} (Table~\ref{tab:postsub-convention}); in its retest and instructed arm the flag's reversal does not recur.
+
+\textbf{What strictness gives up.} In the first run the completeness flag refuses \PLANTHREFUSEGRADEC\ of the harmless edits and the witness gate (one run) \PLANTHREFUSEWITNESS, so neither separates a false line nothing uses from a defect that matters. The repair-tolerant witness-plus-ledger rule refuses none of them, so the price belongs to particular rules and not to strictness as such; but that rule's convention defines a harmless edit as acceptable, so it is not an independent check on this point.
+
+\textbf{Worked-example candidates.} In the first run \CRExampleCandidates\ fatal texts meet the worked example's selection rule (both graders pass at 5, both mark the text incomplete, both quote inside the edit, a check exists, and the label is undisputed): \CRIdExampleF, shown in \CRfig{fig:example}{the body}, \CRIdFableF\ and \CRIdProPsixF. \CRIdFableF\ sits on a third-party base written by Claude Fable~5, the lab of the Claude grader and of the agents that wrote the edits, its check records that the lemma's conclusion still holds, and its diff would quote third-party lines; \CRIdProPsixF\ re-plants the natural P6 lemma of the public GPT-5.6-Sol default run, and its needed bounded special case is true. \CRIdExampleF\ is on the author's own GPT-5.6-Sol base, and its inserted line restates a hypothesis that the proof's own closing section refutes with the same $A=15$ example; every grader response on it, in both runs, cites the text's own statement of the correct set, so by the repair criterion of Appendix~\ref{app:planted-disputed} it shares the disputed feature. Its published diff shows \CRExDiffHunks\ hunks from one search/replace edit, and the P6 rubric the witness gate sees names the relevant prime bound, so that example does not illustrate the witness gate.
+
+\begin{table}[htbp]
+  \caption{Pass-mark sweep, both graders required, first run and re-query (broken texts accepted of \CRNBroken, sound texts rejected of \CRNSound; post hoc), with the completeness flag for comparison.}
+  \label{tab:planted-sweep}
+  \centering
+  \CRfit{\input{gen/cr_appL_sweep}}
+\end{table}
+
+\begin{table}[htbp]
+  \caption{The prespecified per-author report, per grader: broken texts accepted and sound texts rejected on the texts of the six GPT-authored bases and of the other two, first run / re-query (the strict mark and the flag are post hoc).}
+  \label{tab:planted-baselab}
+  \centering
+  \CRfit{\input{gen/cr_appL_baselab}}
+\end{table}
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{\RULESROWS\ rules over the \CRNBases\ originals and \CRNMutants\ mutants, both graders required, repair-tolerant convention (broken accepted, sound rejected; first run). Name map: score $\ge 5$ is the pass mark, score $=7$ the strict mark, the completeness verdict the completeness flag, closure rating $S{=}2$ the closure rule (a written-mechanism rule) and witness $S_{\mathrm{valid}}{=}2$ the witness rule. The closure and witness rows are reference-guided (their prompts carry the marking scheme; Appendix~\ref{app:planted-arms}) and are not information-matched to the rows above; both were run once. As binary gates the pass mark, closure and witness rules are prespecified and the strict mark and flag post hoc; the routing columns are post hoc. In the re-query the strict mark gives (\CRStrictBrokenAccR, \CRStrictSoundRejR) and the flag (\CRFlagBrokenAccR, \CRFlagSoundRejR); routed, the flag refers \CRRouteFlagRefR, passing \CRRouteFlagBrokenR\ broken and refusing \CRRouteFlagSoundR\ sound texts.}
+\label{tab:rules-all}
+\RULESTABLE
+\end{table}
+
+\begin{table}[htbp]\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\caption{Planted-defect gate comparison, every gate and model: false accepts on fatal and gap mutants, false rejects on originals, harmless edits accepted, and locus hits.}
+\label{tab:planted}
+\resizebox{\textwidth}{!}{\PLANTTABLE}
+\end{table}
+
+\clearpage
+\section{Paired Critique Pilot: Protocol and Delivery Outcomes}
+\label{app:pilot}
+\paragraph{Status of the protocol.} The pilot is \emph{protocol-first and exploratory}: its protocol was never registered, and it was issued in the same step as the launch command, not before it. The run records (\texttt{meta.json}, UTC) put the launch at about 21:44 on 2026-09-05, the four runs from the $S{=}2$ seed finishing 21:52--21:58, and the twelve others starting 22:05 after a restart with more parallel workers (the partial first-launch runs were lost). The times in the protocol's header (22:20) and in its extension note (22:40) were typed from memory and are wrong; the extension note was written at about 22:34, when 14 of 16 runs had finished. No immutable pre-run record exists: the first commit containing the file postdates every primary run. The hypotheses were not changed after any outcome was seen. A dated correction stating all this is appended to both released copies of the protocol (\texttt{pilot\_critique/\allowbreak PREREG.md}, \texttt{pilot\_critique\_ext/\allowbreak PREREG.md}); the original header is left in place. The four starting texts are hash-identified and their $S$ values are the corpus labels of Appendix~\ref{app:closure}, on which both annotators agree.
+
+\paragraph{Delivery outcomes.} Delivery (a write-up returned before the requested token cap), closure rating ($S$ of the returned text), and gate acceptance are separate endpoints, none of them validity; a run that ends inside its reasoning returns no text and is not scored $S{=}0$. \emph{Primary runs} (requested cap 60k tokens, Kimi~K3 via the Moonshot API, tool-free, one call each): 4 of 16 returned text, all four from the $S{=}2$ seed (\texttt{finish\_reason=stop}, 9--15\,kB each); the 12 continuations of the three $S{<}2$ texts all ended at the cap inside their reasoning (HTTP~200, \texttt{finish\_reason=length}, 155k--243k reasoning characters, no output). The reasoning text was not retained, only its length, so nothing about its mathematical content is observed. All four delivered texts were graded and read (Table~\ref{tab:pilot}). \emph{Post-hoc extension} (identical prompts; the twelve $S{<}2$ runs re-run into \texttt{pilot\_critique\_ext/\allowbreak }). \PILOTEXT; the missing gate review is one the provider never returned. Grading of the delivered extension texts (both annotators, the tool-free gate, and a read produced by a model under the author's direction and reviewed by the author\corr{QA1}) is otherwise complete; Table~\ref{tab:pilot} reports delivery, closure rating, and gate acceptance per seed and condition. The extension is a budget sensitivity check, not a primary outcome. Larger caps returned more texts; the sample establishes no critique advantage and cannot identify an absence of effect. From the closed seed the model's own rewrite found both defects, and one no-critique 200k continuation from the $S{=}0$ Problem-3 text produced a gate-accepted proof: discovery inside one continuation is rare here, not absent.
+
+\begin{table}[htbp]
+  \caption{Paired pilot: delivery, closure rating, and gate acceptance per start text and condition (60k runs; post-hoc 200k extension).}
+  \label{tab:pilot}
+  \centering\scriptsize\renewcommand{\arraystretch}{0.92}
+\PILOTBODY
+\end{table}
+
+\paragraph{Grading.} Outputs were graded under blind identifiers (a hash prefix of the output; neither case nor condition visible to the graders) by GLM-5.3 with thinking and by Kimi~K3 under the per-problem progress rubric, with $S{=}2$ requiring both annotators (the corpus's conservative rule), and by a tool-free GLM-5.3 review under the reviewer-swap rubric and the fail-closed predicate of Appendix~\ref{app:rubric}. Kimi~K3 grading its own outputs is a same-model comparison; GLM-5.3 is the cross-lab grader. The protocol, every prompt (redacted only by hashing the draft), every output, and every grade are released.
+
+\paragraph{Protocol.} The protocol as issued, with the dated corrections of its header times and of its ``author reads'' clause, is in the supplementary archive (\texttt{pilot\_critique/\allowbreak PREREG.md}, \texttt{pilot\_critique\_ext/\allowbreak PREREG.md} and the addenda \texttt{pilot\_critique/\allowbreak ADDENDUM\_2026-09-29.md} and \texttt{pilot\_critique\_ext/\allowbreak ADDENDUM\_2026-09-29.md}); the reviewed version printed it here.
+
+\section{Two Trajectories in Full}
+\label{app:traj2}
+The two public Kimi~K3 lineages that carry most of the trajectory observations, with every retained observation (sessions from the per-round logs \citep{deedy2026imo}; $S$ in the defect-corrected layer, shown as written\,/\,valid where the two differ; grades by the campaign's verifier). Gaps between rows are unobserved: the harness records the tracking file only when the model rewrites it.
+
+\begin{table}[htbp]
+  \centering\scriptsize\renewcommand{\arraystretch}{0.95}
+  \begin{tabular}{@{}llrrcp{6.6cm}@{}}
+    \toprule
+    Session & retained write & min & tokens (k) & $S$ & what changed \\
+    \midrule
+    \multicolumn{6}{@{}l}{\textbf{Problem 3} (first-pass 5/7, repaired to 7/7)} \\
+    round 1 & turn 8 & 115.5 & 228 & 0 & closed form stated as a conjecture from small-$n$ values; reduction asserted ``proved'' but not written; Liu's division given without argument \\
+    round 2 & --- & 117.0 & 225 & --- & no tracking-file write (exploration; time cap) \\
+    round 3 & turns 7, 14 & 108.1 & 243 & 0, 0 & closed form now stated as the answer; reduction still asserted; lower bound sketched ``modulo write-up''; upper bound open \\
+    round 4 & turn 14 & 44.9 & 87 & 2 & fresh session told ``the computational phase is over''; reduction proved by induction, tree-component lower bound and bisection upper bound written for all $n$; verifier 5/7 with two localized defects \\
+    round 5 & --- & 91.9 & 39 & --- & repair session; no tracking-file write retained \\
+    main & final file & 13.5 & 25 & 2 & re-grade 7/7 after both defects fixed \\
+    \midrule
+    \multicolumn{6}{@{}l}{\textbf{Problem 6} (first-pass 3/7, repaired to 7/7)} \\
+    round 1 & turn 21 & 131.3 & 154 & 0 & characterization and periodicity assembly asserted, not written; finiteness admitted as the unproved crux \\
+    round 2 & turn 7 & 69.8 & 146 & 2\,/\,1 & both mechanisms written and credited by both annotators (layer 0: ``complete, correct''); the finiteness step applies a self-duality claim proved for finite minimal transversals to a Zorn-extracted transversal that may be infinite, the fatal defect in the verifier's 3/7, so the defect-corrected layer scores finiteness 0 \\
+    round 3 & turn 9 & 91.8 & 22 & 1 & honest partial checkpoint: periodicity kept, finiteness marked not proved while being fixed; not a regression in the defect-corrected layer, since finiteness was never validly written \\
+    main & turn 5, final & 87.7 & 58 & 2, 2 & session prompt carried an explicit critique of the round-3 file; a new compactness argument (every transversal contains a finite one) closes the crux: the lineage's first valid $S{=}2$; re-grade 7/7 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Public Trajectory Statistics}
+\label{app:traj}
+Per-model totals over all sessions of the public campaign \citep{deedy2026imo} on the three hard problems, computed from its per-round tool-call logs. ``cur.md'' counts writes of the tracking file; ``no-write sessions'' counts sessions that ended (time cap, outage) without writing it. Grades are the campaign's first-pass verifier grades; Kimi's P3 and P6 were later repaired to 7.
+
+\begin{table}[htbp]
+  \centering\scriptsize
+  \begin{tabular}{@{}llrrrrrrr@{}}
+    \toprule
+    P & Model & sessions & compl.\ tokens (k) & tool calls & tok/call & cur.md writes & no-write sess. & grade \\
+    \midrule
+    2 & claude-fable-5 & 1 & 141 & 24 & 5890 & 2 & 0 & 7 \\
+    2 & gpt-5.6-sol-max & 1 & 93 & 80 & 1159 & 16 & 0 & 7 \\
+    2 & gpt-5.6-sol-pro & 1 & 254 & 55 & 4609 & 8 & 0 & 7 \\
+    2 & gpt-5.6-sol-xhigh & 4 & 113 & 132 & 858 & 11 & 2 & 7 \\
+    2 & kimi-k3 & 1 & 171 & 26 & 6589 & 1 & 0 & 7 \\
+    2 & gpt-5.6-sol & 1 & 18 & 19 & 940 & 4 & 0 & 4 \\
+    2 & deepseek-v4-pro & 1 & 296 & 80 & 3698 & 4 & 0 & 2 \\
+    2 & grok-4.5 & 1 & 127 & 83 & 1535 & 10 & 0 & 2 \\
+    2 & muse-spark-1.1 & 1 & 183 & 12 & 15283 & 1 & 0 & 2 \\
+    3 & claude-fable-5 & 2 & 331 & 25 & 13241 & 3 & 1 & 7 \\
+    3 & gpt-5.6-sol-xhigh & 1 & 43 & 19 & 2277 & 4 & 0 & 7 \\
+    3 & kimi-k3 & 6 & 847 & 118 & 7175 & 4 & 3 & 5$\to$7 \\
+    3 & gpt-5.6-sol & 1 & 17 & 16 & 1036 & 3 & 0 & 2 \\
+    3 & gpt-5.6-sol-pro & 1 & 58 & 13 & 4451 & 3 & 0 & 2 \\
+    3 & grok-4.5 & 1 & 273 & 81 & 3376 & 6 & 0 & 2 \\
+    3 & deepseek-v4-pro & 1 & 326 & 55 & 5936 & 1 & 0 & 1 \\
+    3 & gpt-5.6-sol-max & 1 & 1 & 1 & 982 & 1 & 0 & 1 \\
+    3 & muse-spark-1.1 & 1 & 224 & 24 & 9337 & 1 & 0 & 1 \\
+    6 & claude-fable-5 & 2 & 122 & 12 & 10160 & 1 & 1 & 7 \\
+    6 & gpt-5.6-sol-pro & 1 & 100 & 16 & 6263 & 2 & 0 & 7 \\
+    6 & gpt-5.6-sol-xhigh & 2 & 36 & 17 & 2121 & 4 & 0 & 7 \\
+    6 & kimi-k3 & 4 & 381 & 79 & 4824 & 4 & 0 & 3$\to$7 \\
+    6 & muse-spark-1.1 & 1 & 204 & 16 & 12771 & 2 & 0 & 2 \\
+    6 & deepseek-v4-pro & 1 & 639 & 56 & 11414 & 1 & 0 & 1 \\
+    6 & gpt-5.6-sol & 1 & 21 & 12 & 1785 & 2 & 0 & 1 \\
+    6 & gpt-5.6-sol-max & 1 & 6 & 6 & 1021 & 2 & 0 & 1 \\
+    6 & grok-4.5 & 1 & 7 & 11 & 641 & 1 & 0 & 1 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\clearpage
+\section{Use of AI Assistance and Provenance}
+\label{app:aiuse}
+Language models are the object of study in this paper: every grade, closure rating, witness, objection and adjudication reported here was produced by a model, and the prompts, transports and stored responses of these experiments are released, except as stated under Availability below. This appendix states what else AI systems did and what the author did, as far as the session records, the git history and the stored files show. No model is an author, and the author is responsible for the entire content.
+
+\paragraph{The planted-defect study.}\corr{Q8} The design of the planted-defect study is the author's; AI assistants helped draft design options, and an AI coding assistant (Claude Code) built the study under the author's direction. A coordinating Claude Fable~5.1 agent selected the bases, wrote the specification (\texttt{PROTOCOL\_PLANTINGS.md}) and suggested several of the edits; three Claude Fable~5.1 subagents wrote the \CRNMutants\ edits, their dependency arguments, their intended truth labels and the \CRNChecks\ executable checks; the coordinator launched the gate runs. The author decided the design (three edit kinds per proof, each published as a diff with a dependency argument and a check, with the assistant doing the edits), choosing to run it against the assistant's recommendation, and did not review individual edits before the gates ran (Appendix~\ref{app:planted-protocol}).
+
+\paragraph{The author's comparison with Chen's notes.}\corr{Q13} The author compared the six GPT-5.6-Sol proofs of the author's campaign with \citet{chen2026notes} and found them consistent; this was not a line-by-line or expert check, and no written record of it was kept. On 5 September 2026 a Claude model also compared each of the six proofs with the notes step by step and reported no conflict; drafts before the reviewed version described that model comparison as a human line-by-line read, and the reviewed version presented the author's comparison as a human check of the proofs (row \texttt{Q13}). The model comparison is in the session log, not in the released artifacts. On 29 September 2026 a second model check (Claude Fable~5.1 agents, each followed by an adversarial verifier) compared the six GPT-5.6-Sol bases of the planted study with the notes (version of 27 September 2026) and found all six consistent, with one minor scope slip in a public base that nothing depends on (Appendix~\ref{app:planted-bases}); it is a model check, not a human or expert review, and its record is not in the released archive either.
+
+\paragraph{Other records credited to the author.}\corr{QA1} The reference ledger (\texttt{reference\_adjudication/\allowbreak LEDGER.md} and \texttt{LEDGER\_v2.md}), the target-match judgments in \texttt{witness\_discovery/\allowbreak recovery.json}, the reads of the pilot outputs (\texttt{pilot\_critique/\allowbreak author\_read.md} and \texttt{pilot\_critique\_ext/\allowbreak author\_read.md}) and the step-by-step comparisons in \texttt{closure\_adjudicated/\allowbreak adjudication\_notes.md} were produced by a model (Claude, in Claude Code) under the author's direction and reviewed by the author. The reviewed version described them as the author's (``written by the author'', ``judged by the author'', ``author read'', ``we compared''); dated addenda next to each record now say the same as this paragraph. No independent mathematician checked any base, label, objection, rating or comparison.
+
+\paragraph{Internal pre-submission reviews.}\corr{Q36} Before submission, between 5 and 7 September 2026, the manuscript went through repeated rounds of internal acceptance review (labelled ``revised'' and v3 to v17 in the author's records). Language models ran every round, and no human reviewer took part. Each round was run at the author's request in the OpenAI Codex desktop application with the model gpt-6-astra; from the third round on, the main Codex agent reviewed each version against the previous one, a separately spawned Codex subagent without the conversation history wrote a fresh review, and further subagents audited the evidence and the supplementary bundle. The same setup also assessed workshop fit and commented on two revision plans, and Codex made consistency edits to the manuscript and to scripts on 5 September 2026; most revisions were made with Claude Code (Claude Fable~5.1, briefly Claude Opus~4.8, later Claude Opus~5), which also ran a few reviewer-role and brainstorming subagents and a literature-survey subagent on Claude Sonnet~5 (the one that suggested the re-query, Appendix~\ref{app:planted-protocol}). The author requested each round, passed most of the reports on, approved the resulting changes, and read and commented on drafts. In the reviewed version and in the supplement's dated records (\texttt{DEVIATIONS.md}, the protocols and the ledgers), ``the reviews'', ``a reviewer'', ``the vN review'' and ``post-vN review'' refer to these internal model-run reviews, not to the workshop's referees, whom this version calls referees; the review reports are not released. After submission, on 11 September 2026, a challenge panel of four Claude Opus~5 subagents run in Claude Code at the author's request found several of the issues this version corrects (the marking scheme in the witness and closure prompts, the run dependence of the strict-mark and flag comparison, and smaller repairs); the same Claude agent re-checked those findings against the released artifacts, and no person verified them independently.
+
+\paragraph{This version.} The camera-ready was prepared with Claude Code at the author's direction. A planning panel of Claude Fable~5.1 agents (29 September 2026) planned the corrections from the referees' reviews and an evidence dossier recomputed from the stored artifacts; at the author's request OpenAI Codex (gpt-6-astra) wrote an independent camera-ready proposal, which further Claude Fable~5.1 agents reconciled with the panel's plan item by item, adopting several of its points. AI agents in Claude Code traced the provenance stated in this appendix from the session records and the git history, and Claude Opus~5.5 agents recomputed every number from the stored artifacts, rewrote the text, prepared the supplement and checked the result. No grader or study model was called and no experiment was run for this version. The author approved the plan and answered its questions about provenance and licensing; nothing is uploaded without the author's review.
+
+\paragraph{Scripts, prose and checks.}\corr{Q31}\corr{Q37} Beyond these roles, the author used AI coding assistants (Claude Code with Claude Fable~5.1 and Claude Opus~5, and OpenAI Codex; see the paragraph on internal reviews for the other models) to draft and revise the analysis scripts and much of the prose, under the author's direction and review. What the paper's accuracy rests on, concretely: every count in the body is a macro that a script writes from the stored artifacts, and a literal check fails the build on any typed numeral in the body other than years, dates, problem and model names, the grading scale's cut points and formulas; the figures in these appendices are generated in the same way, apart from a few structural counts written in words; a claim guard, extended for this version (the supplement's \texttt{CHANGES.md}), checks sentence by sentence that each generated figure is printed with its population, its paired outcome, its run and its post-hoc status. Generation keeps a figure consistent with its computation, not with the sentence built around it. Each printed reference was checked against its source record: for the reviewed version by an AI assistant at the author's request (arXiv records for title and authorship, web sources for existence, title and date, the cited repository commit for its hash, author and date, and the social-media posts for author, date and content), and for the entries added in this version, on 29 September 2026, against their arXiv, ACL Anthology and OpenReview records.
+
+\paragraph{Availability and licence.}\corr{Q35} Code, data and the stored model responses of the experiments reported here, except the IMO 2025 campaign of Appendix~\ref{app:imo25} (the archive's \texttt{README.md} lists what is left out): \url{https://github.com/bobbercheng/verification-gap}. The supplementary archive re-checks every stored record and re-runs the paper's analyses offline (its \texttt{README.md} says how); the counts added in this version are read from the same stored responses, which it ships. It redistributes texts of the public IMO 2026 campaign \citep{deedy2026imo} only so that the numbers can be recomputed, with no licence granted (the cited repository states none at the cited commit), and it quotes the IMO problem statements and short passages of published solutions without relicensing them. The author's own material is licensed by its rights holder, Bobber Cheng, under CC BY 4.0. \texttt{NOTICE.md} in the archive says which files are which.
+
+\section{Changes Since the Reviewed Version}
+\label{app:changes}
+\textbf{Dated 29 September 2026.} This version corrects the one the workshop's referees read: the PDF submitted on 7 September 2026 (458,265 bytes, SHA-256 \texttt{7355ecd6c0395f57\allowbreak bb180b410743a7ea\allowbreak 0a2a8639cabba794\allowbreak e24711749d8f4c9f}) and its supplementary archive (18,059,371 bytes, SHA-256 \texttt{c96fab12d47524f4\allowbreak 921ef4459af1380a\allowbreak 4e0174da1ab79471\allowbreak 16c72a60063019c3}). Appendix letters A--P are unchanged; Q, R and S are new. Text corrections made on 2 October 2026 carry no identifier and are listed in the archive's \texttt{CHANGES.md}.
+
+\textbf{The corrections that change what a reader should conclude.} (1) The witness and closure gates were prompted with the problem's marking scheme, which the grade prompt forbids, so their comparison with the rules read from a grading response is reference-guided against reference-free, and on P1 the scheme meets the planted edits twice (rows Q14, Q15). (2) The comparison of the strict mark with the completeness flag depends on the run: the flag rejects fewer sound texts in the first run, and neither dominates in the re-query; ``no pass mark reaches the flag's operating point'' is removed (Q1, Q2). (3) The witness gate's false rejections have two denominators: none of the \CRNPerClass\ originals, the protocol's endpoint, but \CRWitnessSoundRejP\ of the \CRNSound\ texts that are sound under the repair-tolerant convention (Q18). (4) Five intended labels, not four, are disputed, and all five are named (Q10). (5) AI agents wrote the planted edits, their labels and checks; the author's comparison of the GPT-5.6-Sol proofs with Chen's notes was not a line-by-line read; and the internal reviews were model-run (Q8, Q13, Q36).
+
+\textbf{Reviewed abstract} (verbatim, as on OpenReview):
+\begin{quote}\footnotesize
+Frontier models solved every IMO 2026 problem within hours. Whether those proofs are correct is decided by a grader, so we broke eight accepted proofs on purpose to see what that decision rests on. One frontier grader gave the same score, 6, to every proof we made false and to every proof we merely made ugly, telling the two apart at chance (0.50 against 0.94 for the other) while quoting the edited passage in 7/13 of the fatal-or-gap texts both graders passed. A threshold can therefore pass a text whose own response quotes an objection to it and marks it incomplete, and that response carries a field that does not: over 24 published single-hunk mutants, 16 with an executable check, no pass mark on the 0--7 scale reaches the operating point of the completeness flag beside it, since 5 accepts 13 of 16 broken proofs while 7 accepts 1 but rejects 9 of 16 sound ones. We therefore ask what an operator can establish without a full expert regrade, and audit every retained artifact of our four-model campaigns and a public nine-run one, where two of our own gates accepted a claim the sequence 2,1 refutes. Relabelling only the cosmetic edits reverses which grader is the more accurate on all 3 strict rules, which agree pairwise on 27--29 of 32 texts. Referring only what two graders dispute costs 4/32 under an obligation-level witness rule, which passes 0/16 broken proofs but refuses 1/16 sound ones, against 10/32 and 1/16 for the flag the graders return for free. The response carried the objection; the number did not. We release the corpus, ratings, witnesses, certificates and ledger.
+\end{quote}
+\textbf{Reviewed TLDR} (verbatim):
+\begin{quote}\footnotesize
+We broke eight accepted IMO 2026 proofs on purpose: a pass mark accepts texts whose own grading response quotes an objection and marks them incomplete. The response carried the objection; the number did not.
+\end{quote}
+On OpenReview both are replaced by this version's abstract and the TLDR ``\CRTLDR''.
+
+\textbf{Full list.} Every corrected sentence carries an identifier (Q1--Q37, Q41--Q43, QA1--QA3); the row for each identifier gives the reviewed wording, what replaces it and where, and who raised it. The rows are in \texttt{corrections.pdf}, in the supplementary archive and at \url{https://github.com/bobbercheng/verification-gap/blob/main/corrections.pdf}.
+
+\textbf{Moved or removed.} The reviewed body was rebuilt around the planted-defect study; the supporting studies' details stay in Appendices~A--O under their reviewed letters, and the body no longer summarizes the verifier probes (App.~\ref{app:evidence}) or the critique pilot (App.~\ref{app:pilot}). The reviewed body's five-rule table is in App.~\ref{app:planted-results} (Table~\ref{tab:rules-all}) with a corrected caption. The limitations paragraph of App.~E moved to the body. App.~I's survival, evaluator-choice, instability-source and grading-procedure tables and their paragraphs, and App.~M's verbatim protocol, left the PDF; they are unchanged in the supplementary archive. The reviewed App.~L sentence listing individual gate decisions is replaced by the named statements of App.~\ref{app:planted-disputed} and \ref{app:planted-results}.
+
+\textbf{Added.} The author block, the acknowledgments and the page-1 footnote; the release address and \texttt{NOTICE.md}; five references on evaluating graders and proofs \citep{mahdavi2025brains,doddapaneni2024fbi,mcaleese2024criticgpt,dekoninck2025opc,panickssery2024self}; the worked example and the rules table of the body, generated from the stored files (\CRfig{fig:example}{a figure}, \CRtab{tab:rules}{a table}); App.~\ref{app:planted}'s subsections on protocol status, bases, checks, disputed labels, prompts and each arm's information; the printed prompts (App.~\ref{app:rubric}); this list (App.~Q); the per-mutant table (App.~\ref{app:permutant}); and runs made after submission, outside this paper's protocol (App.~\ref{app:postsub}). Every stored record of the reviewed archive is unchanged; corrections to records are dated addenda next to them (\texttt{*/\allowbreak ADDENDUM\_2026-09-29.md}).
+
+\clearpage
+\section{Per-Mutant Table}
+\label{app:permutant}
+Table~\ref{tab:permutant} lists every planted text by base: its class, the marking-scheme obligation the edit targets (the \texttt{lower\_bound} or \texttt{upper\_bound} field of \texttt{plantings.json}, printed under the problem scheme's own letter and name), whether its label is disputed, the planted change (read from \texttt{plantings.json} and checked against the texts), whether an executable check exists, each grader's grade, completeness field and in-edit quote in the first run and the re-query, and each rule's decision with both graders required. The strict-mark and flag decisions are post hoc (Appendix~\ref{app:planted-protocol}). These are per-text records, not rates; the mechanism labels of the fatal edits (Class column, as the body counts them) were coded post hoc from the same planted changes by the model panel that planned this version (Appendix~\ref{app:aiuse}), and no ranking of error types is claimed.
+
+\begin{table}[htbp]
+  \caption{Every planted text by base. Grades: first run / re-query, with T or F for the completeness field and a superscript q where that grader quoted inside the edited passage (exact anchoring). Decisions, both graders required: first run / re-query, \CRacc\ accept, \CRrej\ reject. Class: F rows carry the post-hoc mechanism label. Obligation: the marking-scheme field the edited step falls under, the two fields the witness gate scores, by the scheme's letter and name (Appendices~\ref{app:rubric} and~\ref{app:closure}): \texttt{lower\_bound} is (T) termination on P1, (L) the lower bound on P3, (V) sufficiency on P5 and (F) finiteness on P6, and \texttt{upper\_bound} is (I) invariance, (U) the upper bound, (N) necessity and (P) periodicity; only on P3 are the two fields a lower and an upper bound. Disp.: one of the five disputed labels. Check: the edit has an executable check of the planted falsity; deletions have none.}
+  \label{tab:permutant}
+  \centering
+  \CRfit{\input{gen/cr_appR}}
+\end{table}
+
+\section{Post-Submission Runs on the Planted Texts}
+\label{app:postsub}
+\textbf{Status.} These are runs made by the author after submission (the reviewed version was submitted on 7 September 2026), on the same \CRNTexts\ planted texts and with the same two graders, between \CRSepEightDateFirst\ and \CRRetestDateLast. They are post-submission and outside this paper's protocol: the texts, their labels and the reviewed results were known before any of these calls, so every figure in this appendix is post hoc, and nothing in the body rests on them. Their records, filtered to the \CRNTexts\ texts and copied byte for byte, are in the supplementary archive (\texttt{post\_submission/\allowbreak }, with \texttt{summary.json} and the script that recomputes it). There are \CRNPostSubArms\ runs: a re-run of the witness gate with the same recorded prompt (\CRKeyedRerunDateFirst\ to \CRKeyedRerunDateLast); a third run of the grade gate with the same recorded prompt (the later run, \CRSepEightDateFirst); a witness audit with the marking scheme removed (the answer-key-free arm, \CRKeyFreeDateFirst); the grade prompt with three sentences of the audit's instructions added (the instructed arm, \CRInstructedDateFirst); and a fourth run of the unmodified grade prompt, made in the same session right after the instructed arm (the retest, \CRRetestDateFirst). The rules are the paper's: the pass mark, the strict mark and the completeness flag for the grade runs, and $S_{\mathrm{valid}}{=}2$ for the witness runs, each with both graders required and per grader; broken means a fatal or gap edit, and sound means an original or a harmless edit, sound only under the repair-tolerant convention.
+
+\textbf{The grade runs.} Across the \CRNPlainRuns\ runs of the unmodified grade prompt (the first run, the re-query, the later run and the retest), the pass mark accepts between \CRPlainPassBrokenMin\ and \CRPlainPassBrokenMax\ of the \CRNBroken\ broken texts and rejects \CRPlainPassSoundPhrase\ of the \CRNSound\ sound ones, while the flag's broken acceptances range from \CRPlainFlagBrokenMin\ to \CRPlainFlagBrokenMax. This paper's pass-mark count stays \CRPassBrokenAccP\ of \CRNBroken\ in the first run and the re-query; the later run's \CRSepEightPassBrokenAcc\ comes from separate calls. In (broken accepted, sound rejected), the later run gives \CRSepEightPassBrokenAcc, \CRSepEightPassSoundRej\ for the pass mark, \CRSepEightStrictBrokenAcc, \CRSepEightStrictSoundRej\ for the strict mark and \CRSepEightFlagBrokenAcc, \CRSepEightFlagSoundRej\ for the flag, and the retest \CRRetestPassBrokenAcc, \CRRetestPassSoundRej; \CRRetestStrictBrokenAcc, \CRRetestStrictSoundRej; and \CRRetestFlagBrokenAcc, \CRRetestFlagSoundRej\ (Table~\ref{tab:postsub-grade}). In the retest Claude Opus~5's own flag accepts \CRRetestClaudeFlagBrokenAcc\ of the broken texts and rejects \CRRetestClaudeFlagSoundRej\ sound ones, so the flag is not a fixed comparator across sessions. Under the strict mark, which lab makes fewer errors reverses with the convention in every grade run here; under the flag it reverses in the first run, the re-query and the later run but not in the retest (per-lab errors, GPT-5.6-Sol/Claude Opus~5: repair-tolerant \CRRetestFlagErrRTGPT/\CRRetestFlagErrRTClaude, as written \CRRetestFlagErrAWGPT/\CRRetestFlagErrAWClaude) or the instructed arm (\CRInstructedFlagErrRTGPT/\CRInstructedFlagErrRTClaude\ and \CRInstructedFlagErrAWGPT/\CRInstructedFlagErrAWClaude; Table~\ref{tab:postsub-convention}). In every one of the \CRNestRuns\ stored grade runs of the two graders on these texts (\CRNestResponses\ responses), the flag is nested between the cuts at 6 and 7: \CRNestViolations\ responses are graded 7 without it or 5 or below with it.
+
+\textbf{The instructed arm.} The instructed arm adds one line to the grade prompt (``Judge only what is written. Do not use the length of the text, its confidence, or claims of completeness. Do not repair the argument for the author.'') and keeps the 5--6 band, so it is a partial instruction control, confounded with its session, and not the rubric requiring rejection of unresolved essential errors that a referee asked for. In this run the pass mark accepts \CRInstructedPassBrokenAcc\ of the broken texts and rejects \CRInstructedPassSoundRej\ of the sound ones, the strict mark gives \CRInstructedStrictBrokenAcc, \CRInstructedStrictSoundRej\ and the flag \CRInstructedFlagBrokenAcc, \CRInstructedFlagSoundRej; the strict mark's reversal holds in this run and the flag's does not.
+
+\textbf{The witness gate, re-run and without the marking scheme.} The re-run of the keyed witness gate reproduced every per-grader decision (\CRKeyedRerunChanged\ of \CRNResponses\ changed): it accepts \CRKeyedRerunBrokenAcc\ of the broken texts and rejects \CRKeyedRerunSoundRej\ of the sound ones, all harmless edits, so the gate this paper ran once is stable under a repeat of its prompt. The answer-key-free arm is not fully information-matched: the model chose its own obligations, the prompt keeps ``Do not repair the argument for the author'', and it was run once and never retested, so its own run-to-run variation is unmeasured. With both graders required it accepts \CRKeyFreeBrokenAcc\ of the \CRNBroken\ broken texts and rejects \CRKeyFreeSoundRej\ of the \CRNSound\ sound ones, all harmless edits. Neither grader alone achieves both zeros: GPT-5.6-Sol accepts \CRKeyFreeGPTBrokenAcc\ broken texts and rejects \CRKeyFreeGPTSoundRej\ sound ones, and Claude Opus~5 accepts \CRKeyFreeClaudeBrokenAcc\ broken text (the disputed \CRIdGptPoneG) and rejects \CRKeyFreeClaudeSoundRej\ sound ones. Routed, it refers \CRKeyFreeRouteRef\ texts, passing \CRKeyFreeRouteBroken\ broken and refusing \CRKeyFreeRouteSound\ sound ones; those zeros come from the split, since the referrals are the \CRKeyFreeRouteRefH\ harmless edits GPT-5.6-Sol rejects and the \CRKeyFreeRouteRefG\ gap edit Claude Opus~5 accepts. Relative to the keyed run, the key-free prompt, which also has the model choose its own obligations, changed \CRKeyFreePairChanges\ pair decisions, \CRKeyFreePairChangesH\ of them on harmless edits and \CRKeyFreePairChangesBroken\ on broken texts, and \CRKeyFreeModelChanges\ per-grader decisions, among them Claude Opus~5's on the disputed \CRIdGptPoneG\ (reject to accept). As a binary gate its counts equal the flag's in the first run once that deletion is set aside (\CRKeyFreeBrokenAccExclOne\ and \CRFlagBrokenAccExclOneP\ of \CRNBrokenExclOne\ broken texts accepted, \CRKeyFreeSoundRej\ and \CRFlagSoundRejP\ sound texts rejected), but the harmless edits they reject differ by one swap: the flag rejects \CRIdKimiPoneH\ and the key-free arm \CRIdXhighH; against the flag in the re-query (\CRFlagBrokenAccR\ broken accepted, \CRFlagSoundRejR\ sound rejected) there is no tie. On both P1 fatal edits, whose false lemma the P1 marking scheme names, both graders of the key-free arm also reject, as do the strict mark and the flag in both runs: the key did not decide the P1 outcomes, although it remains a comparability defect. The arm was run once on \CRNTexts\ non-independent texts from \CRNBases\ bases, so its zero is a count on these texts, not a rate, and it implies no advantage over the strict mark or the flag.
+
+\textbf{Input identity.} The recorded system prompt and text of the later run and the retest equal the first run's on every call (the instructed arm's system prompt differs by design), but the model input is not byte-identical: the command-line harness changed, and input-token counts differ, in the retest on every call for both graders (Table~\ref{tab:postsub-identity}).
+
+\begin{table}[htbp]
+  \caption{The three grade rules in each grade run, per grader and with both graders required: (broken texts accepted of \CRNBroken, sound texts rejected of \CRNSound). The first run and the re-query are this paper's; the other runs were made after submission, outside its protocol.}
+  \label{tab:postsub-grade}
+  \centering
+  \CRfit{\input{gen/cr_appS_grade}}
+\end{table}
+
+\begin{table}[htbp]
+  \caption{Per-lab disagreements with the intended truth over the \CRNTexts\ texts (GPT-5.6-Sol/Claude Opus~5) under the repair-tolerant (RT) and as-written (AW) conventions; ``reverses'': in each run, the lab with fewer errors under RT has more under AW. Witness rows: the keyed gate of the first run and the answer-key-free arm, both run once.}
+  \label{tab:postsub-convention}
+  \centering
+  \CRfit{\input{gen/cr_appS_convention}}
+\end{table}
+
+\begin{table}[htbp]
+  \caption{The witness-gate arms: as a binary gate (broken texts accepted, sound texts rejected) per grader and with both required, and routed (referred of \CRNTexts, broken passed, sound refused).}
+  \label{tab:postsub-witness}
+  \centering
+  \CRfit{\input{gen/cr_appS_witness}}
+\end{table}
+
+\begin{table}[htbp]
+  \caption{Input identity of the later grade runs against the first run: recorded text and system-prompt hashes, GPT-5.6-Sol input tokens and Claude Opus~5 total input tokens equal to the first run's (differences in tokens where not).}
+  \label{tab:postsub-identity}
+  \centering
+  \CRfit{\input{gen/cr_appS_identity}}
+\end{table}

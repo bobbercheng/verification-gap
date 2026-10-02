@@ -1,0 +1,125 @@
+\newcommand{\KAPPATXT}{Cohen's $\kappa$ on $S$: GLM--Kimi 0.81 ($n=156$), GLM--Claude 0.78, Kimi--Claude 0.78 ($n=156$), GLM--GPT 0.84 ($n=84$, P3/P6)}
+\newcommand{\RELTXT}{P3: $\kappa=0.88$, exact agreement 96\% on $S$ (43/48 and 40/48 on the two obligation fields); P6: $\kappa=0.95$, exact agreement 97\% on $S$ (31/36 and 32/36 on the two obligation fields); P2: $\kappa=0.64$, exact agreement 88\% on $S$ (58/72 and 62/72 on the two obligation fields). Overall $\kappa=0.81$, exact agreement 92\%; of 156 texts, 141 have both annotators agreeing on $S$, 12 were resolved by the conservative rule, 3 carry a validity entry, 0 are unknown (a rater missing)}
+\newcommand{\ADJCHANGES}{11 of 156 valid-layer labels differ from layer 0 (P3 deedy-gpt-5.6-sol-final: 2$\to$0 (conservative); P6 p6-gpt-5.6-sol-main-t009: 2$\to$1 (validity override); P6 p6-kimi-k3-round2-t007: 2$\to$1 (validity override); P6 p6-deedy-gpt-5.6-sol-final: 2$\to$1 (validity override); P2 p2-gpt-5.6-sol-pro-main-t022: 1$\to$0 (agree); P2 p2-gpt-5.6-sol-max-main-t071: 1$\to$0 (conservative); P2 p2-deedy-gpt-5.6-sol-max-final: 2/0$\to$0 (conservative); P2 p2-deedy-gpt-5.6-sol-final: 0/1$\to$0 (agree); P2 p2-gpt-5.6-sol-pro-main-t038: 2$\to$1 (conservative); P2 p2-gpt-5.6-sol-xhigh-round2-t005: 0$\to$1 (agree); P2 p2-deedy-kimi-k3-final: 2/2$\to$1 (conservative))}
+\newcommand{\RERUNFB}{9}
+\newcommand{\NUNKNOWN}{0}
+\newcommand{\ADJPSIX}{$S{=}1$}
+\newcommand{\ADJPTHREE}{$S{=}0$}
+\newcommand{\ADJFP}{$S{=}0$, sketches, and $S{=}1$, refuted lemma removed}
+\newcommand{\SENSTABLE}{\begin{tabular}{@{}llccc|ccc|ccc@{}}
+  \toprule
+  & & \multicolumn{3}{c|}{$S{=}1$ checkpoints} & \multicolumn{3}{c|}{crossings in record} & \multicolumn{3}{c}{regressing lineages} \\
+  Layer & rater(s) & P3 & P6 & P2$^{\mathrm{s}}$ & P3 & P6 & P2$^{\mathrm{s}}$ & P3 & P6 & P2$^{\mathrm{s}}$ \\
+  \midrule
+  raw & layer 0 (GLM-5.3, every checkpoint) & 0 & 4 & 0 & 5 & 5 & 2 & 0 & 1 & 0 \\
+  glm & GLM-5.3 re-rating & 0 & 4 & 0 & 5 & 5 & 2 & 0 & 1 & 0 \\
+  kimi & Kimi K3 & 1 & 5 & 0 & 4 & 4 & 2 & 1 & 1 & 0 \\
+  claude & Claude Opus 5 & 1 & 6 & 0 & 5 & 4 & 2 & 1 & 1 & 0 \\
+  gpt & GPT-5.6-Sol (P3/P6; authored some texts) & 2 & 7 & -- & 4 & 4 & -- & 1 & 0 & -- \\
+  written & GLM $\cap$ Kimi (conservative) & 0 & 4 & 0 & 4 & 5 & 2 & 0 & 1 & 0 \\
+  majority3 & 2 of 3 labs (GLM, Kimi, Claude) & 1 & 4 & 0 & 5 & 5 & 2 & 1 & 1 & 0 \\
+  valid & written, refuted mechanisms removed & 0 & 7 & 0 & 4 & 4 & 2 & 0 & 0 & 0 \\
+  rep1 & GLM-5.3 repeat 1 (same settings) & 0 & -- & -- & 5 & -- & -- & 0 & -- & -- \\
+  rep2 & GLM-5.3 repeat 2 & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+  rep3 & GLM-5.3 repeat 3 & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+  crep1 & Claude Opus 5 repeat 1 & 1 & 5 & -- & 4 & 5 & -- & 0 & 1 & -- \\
+  crep2 & Claude Opus 5 repeat 2 & 1 & 4 & -- & 4 & 5 & -- & 0 & 1 & -- \\
+  crep3 & Claude Opus 5 repeat 3 & 0 & 6 & -- & 5 & 4 & -- & 0 & 1 & -- \\
+  \bottomrule
+\end{tabular}}
+\newcommand{\ANSWERLIN}{11}
+\newcommand{\ANSWERZERO}{4}
+\newcommand{\SONE}{7}
+\newcommand{\LINSTWO}{15 of 31 applicable lineages end at $S=2$ (7/17, 6/12, 2/2 on Problems~3, 6, 2); 10 crossings lie inside the record (4, 4, 2); 0, 7, and 0 checkpoints sit at $S=1$; 0 lineages regress}
+\newcommand{\PTHREESONE}{0}
+\newcommand{\PTHREESONEKIMI}{1}
+\newcommand{\RAMPS}{two}
+\newcommand{\REGRESS}{zero}
+\newcommand{\REGRESSWRITTEN}{one}
+\newcommand{\CROSSINGS}{10}
+\newcommand{\ROUTENA}{10}
+\newcommand{\AGREETXT}{30 of 30 evaluable lineages agree (10 on other routes N/A, 1 without a grade or label)}
+\newcommand{\AGREEFP}{29 of 30}
+\newcommand{\BUDGETTXT}{P3 331k vs.\ 141k, P6 111k vs.\ 21k (valid layer; layer-0 labels gave 187k vs.\ 224k and 100k vs.\ 106k)}
+\newcommand{\MATRIXBODY}{\begin{tabular}{@{}lccc@{}}
+  \toprule
+  Model & P2 & P3 & P6 \\
+  \midrule
+    Claude Fable 5 & 2 / 7 & 2 / 7 & 2 / 7 \\
+    GPT-5.6-Sol xhigh & 2$^{\mathrm{r}}$ / 4$\to$7 & 2 / 7 & 2 / 7 \\
+    Kimi K3 & 1$^{\mathrm{r}}$ / 7 & 2 / 5$\to$7 & 2 / 3$\to$7 \\
+    GPT-5.6-Sol Pro & 1$^{\mathrm{r}}$ / 7 & 0 / 2 & 2 / 7 \\
+    GPT-5.6-Sol max & 0$^{\mathrm{r}}$ / 7 & 0 / 1 & 0 / 1 \\
+    GPT-5.6-Sol default & 0$^{\mathrm{r}}$ / 4 & 0 / 2 & 1 / 1 \\
+    Muse Spark 1.1 & 0$^{\mathrm{r}}$ / 2 & 0$^{\ddagger}$ / 1 & 1 / 2 \\
+    DeepSeek V4 Pro & 0$^{\mathrm{r}}$ / 2 & 0$^{\ddagger}$ / 1 & 0 / 1 \\
+    Grok 4.5 & 0$^{\mathrm{r}}$ / 2 & 0 / 2 & 0 / 1 \\
+    \midrule
+    GPT-5.6-Sol ultra & 2 / pass & 2 / pass & 2 / pass \\
+    Kimi K3 R1 & -- & 2 / 6$\to$7 & -- \\
+    Kimi K3 R2 & -- & 0 / 1 & -- \\
+    GLM-5.2 & 0$^{\mathrm{r}}$ / pass & 0 / 2 & 2 / pass \\
+    GLM-5.3 & -- & 0 / unreviewed & -- \\
+    Nemotron & 0$^{\mathrm{r}}$ / fail & 0$^{\ddagger}$ / fail & 0$^{\ddagger}$ / fail \\
+  \bottomrule
+\end{tabular}}
+\newcommand{\PILOTBODY}{\begin{tabular}{@{}lcc|cc|cc@{}}
+  \toprule
+  & \multicolumn{2}{c|}{delivered, 60k} & \multicolumn{2}{c|}{delivered, 200k} & \multicolumn{2}{c}{of delivered: closure $S{=}2$, gate accepted} \\
+  Start text & C & N & C & N & C & N \\
+  \midrule
+  Kimi P3 seed, $S{=}2$, local defects & 2/2 & 2/2 & -- & -- & 2/2, 2/2 & 2/2, 2/2 \\
+  GLM-5.2 P3 candidate, $S{=}0$ & 0/2 & 0/2 & 1/2 & 1/2 & 0/1, 0/1 & 1/1, 1/1 \\
+  public Kimi P6 file, $S{=}1$ & 0/2 & 0/2 & 1/2 & 2/2 & 1/1, 1/1 & 2/2, 1/2 (1 missing at freeze) \\
+  Nemotron P6 candidate, $S{=}0$ & 0/2 & 0/2 & 1/2 & 0/2 & 0/1, 0/1 & -- \\
+  \bottomrule
+\end{tabular}
+\par\smallskip\scriptsize C/N = with/without the frozen critique; delivered = write-up returned before the cap; closure rating $S{=}2$ by both blind annotators; gate = acceptance by a tool-free GLM-5.3 review (model judgments, not validity).}
+\newcommand{\PILOTHIGH}{all 4 continuations from the $S{=}2$ seed returned a proof and 4 of 4 were accepted by the gate (2/2 with the critique, 2/2 without)}
+\newcommand{\PILOTLOW}{12 of 12 continuations from $S{<}2$ texts returned no write-up within 60k tokens}
+\newcommand{\PILOTLOWSHORT}{the $S{<}2$ starts returned nothing at 60k (0 of 12) and 6 of 12 continuations at 200k}
+\newcommand{\PILOTEXT}{With a 200k budget (post-hoc extension), 6 of 12 runs from $S{<}2$ texts returned a write-up ($S{=}1$ start: 1/2 with critique, 2/2 without; the two $S{=}0$ starts: 2/4 and 1/4); of the 6 delivered texts, 4 are rated $S{=}2$ by both raters and 3 of 5 reviewed are accepted by the gate (1 gate review missing at freeze)}
+\newcommand{\PILOTRESULT}{From the $S{=}2$ seed all 4 continuations returned a proof and 4 of 4 passed the gate, critique or not; from the three $S{<}2$ texts 0 of 12 returned a write-up at 60k and 6 of 12 in a post-hoc 200k extension (4 rated $S{=}2$ by both annotators; gate 3 of 5 reviewed, 1 missing at freeze).}
+\newcommand{\PILOTTXT}{all 4 continuations from the $S{=}2$ seed returned a proof and 4 of 4 were accepted by the gate (2/2 with the critique, 2/2 without)}
+\newcommand{\BASELINETXT}{An ordinary 0--7 grade with no reference obligations (Appendix~\ref{app:closure}) at $\ge5$ agrees with defect-corrected $S{=}2$ on 80 of 84 (GLM-5.3) and 83 of 84 (Claude Opus 5) P3/P6 texts, every disagreement an $S{<}2$ text graded $\ge5$.}
+\newcommand{\BASELINETABLE}{}
+\newcommand{\PREREG}{\input{gen/prereg}}
+\newcommand{\REPEATTXT}{GLM-5.3 rated 73 texts twice under fixed settings (0 of 70 fixed-setting pairs differ on $S$); Claude Opus~5 rated 84 texts four times (14 of 504 pairs differ)}
+\newcommand{\REPEATQ}{0.00 / 0.03}
+\newcommand{\VEVTABLE}{\begin{tabular}{@{}llcccc@{}}
+  \toprule
+  Claim & truth & GLM-5.3 & Kimi K3 & Claude Opus 5 & GPT-5.6-Sol \\
+  \midrule
+  C1 nonincreasing $\Rightarrow$ stays $>1$ & false & \ok\,\ok\ok\,\ok\ok & \ok\,\ok\ok\,\ok\ok & \ok\,\ok\ok\,\ok\ok & \ok\,\ok\ok\,\ok\ok \\
+  C2 finitely many minimal transversals & false & $\varnothing$\,\ok\ok\,\ok\ok & $\varnothing$\,\ok\ok\,$\varnothing$$\varnothing$ & \ok\,\ok\ok\,\ok\ok & \ok\,\ok\ok\,\no\ok \\
+  C3 prime support is a minimal hitting set & false & \ok\,\ok\ok\,\ok\ok & \ok\,\ok\ok\,\ok\ok & \ok\,\ok\ok\,\ok\ok & \ok\,\ok\ok\,\ok\ok \\
+  C4 dyadic subset sums distinct & true & \ok\,--\,\ok\ok & \ok\,--\,\ok\ok & \ok\,--\,\ok\ok & \ok\,--\,\ok\ok \\
+  \bottomrule
+\end{tabular}
+\par\smallskip\scriptsize Per verifier: claim alone (one glyph), with a valid counterexample and with an invalid one (claim\,+\,witness glyphs); \ok\ judged correctly, \no\ wrongly, $\varnothing$ no verdict (output budget exhausted inside reasoning), -- not applicable.}
+\newcommand{\VEVTXT}{in 41 of 44 calls a verdict was returned; the claim's truth was judged correctly in 40 of them and the witness's validity in 27 of 27; the 3 calls without a verdict (GLM-5.3 1, Kimi K3 2) all concerned the false transversal lemma shown without a valid counterexample, where the verifier exhausted its output budget reasoning}
+\newcommand{\VEVEXT}{ With a four-times larger budget (post-hoc), GLM-5.3 C2-alone: no verdict again (timed out after 30 min); Kimi K3 C2-alone: claim judged correctly; Kimi K3 C2-invalid: claim judged correctly, witness judged correctly.}
+\newcommand{\KAPPASHORT}{$\kappa$ 0.78--0.81 between labs}
+\newcommand{\PTHREESONESINGLE}{GLM-5.3 0, Kimi K3 1, Claude Opus 5 1, GPT-5.6-Sol 2}
+\newcommand{\PTHREESONEMAJ}{1}
+\newcommand{\SENSSHORT}{The exceptions are concentrated: GLM-5.3's one same-text disagreement is a thinking-versus-fallback pair and Claude's 14 fall on 4 of its 84 texts; four lineages have imperfect replay survival under Claude, two of them at zero on at least one conclusion; under the replay null the apparent-progress probability is 0.03 on average but 0.38 for the P6 GPT-default lineage (remedies and the constant-$S{=}2$ baseline: Appendix~\ref{app:sens}).}
+\newcommand{\VEVCLAIMS}{\input{gen/vev_claims}}
+\newcommand{\VEVSYSTEM}{\input{gen/vev_system}}
+\newcommand{\REPLSHORT}{106 checkpoints (82 distinct texts, 36 lineages): identical texts changed score in 0 of 23 repeated texts under per-checkpoint rating, Claude's three per-text passes disagree on $S$ with $q=0.03$ (246 pairs), and the improved/regressed/crossing conclusions are identical across evaluators for 36/35/33 of 36 lineages}
+\newcommand{\ALARMSHORT}{\emph{Disagreement is an alarm}: across the 90 distinct texts of the applicable lineages, the four single evaluators plus the GLM-5.3 repeat where present disagree on $S$ for 7. It flags 4 of 4 credited texts with a documented defect (3 distinct defects), and 4 of 13 documented-defective texts overall; the nine it misses are public P3/P6 finals every evaluator already scores below $S{=}2$, which need no alarm. The 3 flags without a record were examined in \S\ref{sec:witness} (group~C). Which labs rate matters: the three without GPT-5.6-Sol flag 3 of 4, GLM--Kimi alone 1 (per pair: Appendix~\ref{app:sens}).}
+\newcommand{\REPEATEDCONSISTENT}{17 of 19 (8/8, 6/6, 3/5 on Problems~3, 6, 2)}
+\newcommand{\REPEATEDCONFLICTS}{two}
+\newcommand{\REPEATDESIGN}{the 84 P3/P6 texts three more times with Claude Opus~5 and 73 of them once more with GLM-5.3}
+\newcommand{\SURVIVALSHORT}{four lineages have imperfect replay survival under Claude, two of them at zero on at least one conclusion}
+\newcommand{\CLAUDEREPEATSPLIT}{Claude's repeats split (two of three rejecting closure on the turn-9 text, one of three on the final)}
+\newcommand{\EVALVARTABLE}{\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.1}\begin{tabular}{@{}p{4.7cm}p{4.35cm}p{4.35cm}@{}}
+  \toprule
+  Measure & P3, P6, synthetic P2 (\S\ref{sec:closure}) & P1, P4, P5 (Appendix~\ref{app:repl}) \\
+  \midrule
+  identical-text controls: score differs & 0 of 15 adjacent pairs (layer~0) & 0 of 23 repeated texts (Claude) \\
+  same-text repeat disagreement on $S$ & GLM 0/70; Claude 14/504 ($q{=}0.03$) & Claude 7/246 ($q{=}0.03$), 3 P5 texts \\
+  $\kappa$: GLM--Kimi / GLM--Claude / Kimi--Claude & 0.81 / 0.78 / 0.78 & Claude--GPT 0.79 / 1.00 / 0.82 (P1/P4/P5) \\
+  $\kappa$: GLM--GPT & 0.84 (P3/P6) & Claude--GLM 1.00 / 1.00 / 0.94 \\
+  conclusions identical, all evaluators (i/r/c) & 30 / 29 / 27 of 31 lineages & 36 / 35 / 33 of 36 lineages \\
+  \bottomrule
+\end{tabular}}
