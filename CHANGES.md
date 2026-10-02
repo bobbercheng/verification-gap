@@ -2,14 +2,15 @@
 
 The reviewers saw `supplementary.zip` of 2026-09-07 (18,059,371 bytes, 7,898 files, SHA-256
 c96fab12d47524f4921ef4459af1380a4e0174da1ab7947116c72a60063019c3), uploaded with the reviewed version of the paper. This is the
-camera-ready supplement (2026-09-29). It keeps every file of the reviewed archive; no stored request, response, parse, rating,
+camera-ready supplement (2026-09-29; `paper.pdf` and `MANIFEST.json` replaced on 2026-10-02, see Changed). It keeps every file of the reviewed archive; no stored request, response, parse, rating,
 label, check, result, table, protocol or log was edited, re-run or removed. Corrections to those records are dated addenda next
 to them. The release script checks that every file added, changed or removed since the reviewed archive is named here.
 
 ## Added
 
 - `paper.pdf`: the camera-ready paper, the same file as uploaded to OpenReview.
-- `corrections.pdf`: the full list of corrections since the reviewed version, one row per corrected sentence.
+- `corrections.pdf`: the corrections of 29 September 2026 since the reviewed version, one row per corrected sentence; the
+  text corrections of 2 October 2026 carry no identifier and are listed under Changed below.
 - `NOTICE.md`: licensing and attribution. The texts from the public IMO 2026 campaign (the repository and commit cited in the
   paper) are redistributed for reproduction only, with no licence granted; the IMO problem statements and quoted solutions are
   quotation; the author's own material is under CC BY 4.0. The reviewed archive had no licence notice.
@@ -17,6 +18,8 @@ to them. The release script checks that every file added, changed or removed sin
 - `THIRD_PARTY.json`: every file that reproduces a third-party text, found from the archive's own records; the verifier
   recomputes it and checks the counts `NOTICE.md` states.
 - `CHANGES.md`: this file.
+- `paper_source/`: the LaTeX source of the camera-ready paper as built on 2 October 2026 (the generated macro files it
+  includes are the ones that build was made from; the claim guard's registry is not included). Added on 2 October 2026.
 - Dated addenda of 2026-09-29, each next to the records it corrects:
   - `planted_defects/ADDENDUM_2026-09-29.md`: who wrote the planted edits (the study design is the author's; AI agents
     wrote the specification, edits, dependency arguments, intended labels and checks; the author read no individual edit
@@ -44,6 +47,7 @@ to them. The release script checks that every file added, changed or removed sin
 
 ## Changed
 
+- `paper.pdf` (added above) replaced on 2 October 2026 by the final camera-ready build (text corrections only: a sentence in §2 on the re-query and its counterpart in App. L.1, the mathematics of App. H, two duplicated clauses in App. F, the McNemar wording in App. L.7, a referee identifier in App. S, a macro name and a dating note in App. Q, the three S_valid row labels of Table 24, and three reference entries; the page break before App. I is restored; these corrections carry no identifier and have no row in `corrections.pdf`); `MANIFEST.json` regenerated for it. No stored record changed.
 - `README.md`: names the author and the release repository; says how to verify and what the verifier checks; points to
   `NOTICE.md`, `CHANGES.md`, the addenda and `post_submission/`; adds sections on the planted-defect study, the
   post-submission runs and the terms used in the dated records. In the reviewed text it corrects the attribution of

@@ -4,8 +4,12 @@ Bobber Cheng (Vexorium), bobber.cheng@gmail.com. Camera-ready supplement of the 
 Workshop on Mathematical Reasoning and AI at NeurIPS 2026. Public release: https://github.com/bobbercheng/verification-gap.
 
 - `paper.pdf`: the camera-ready paper, the same file as uploaded to OpenReview.
-- `corrections.pdf`: every corrected sentence since the reviewed version, one row per identifier (the paper's Appendix Q
-  summarizes them).
+- `corrections.pdf`: every corrected sentence since the reviewed version as of 29 September 2026, one row per identifier
+  (the paper's Appendix Q summarizes them); the text corrections of 2 October 2026 carry no identifier and are listed in
+  `CHANGES.md`.
+- `paper_source/`: the LaTeX source of the camera-ready paper as built on 2 October 2026 (`main.tex`, `appendix.tex`, `main.bbl`,
+  `neurips_2026.sty`, the generated macro and table files under `gen/` and `artifacts/`); `pdflatex main` three times
+  reproduces `paper.pdf`'s text (the claim guard's macro registry `gen/CR_MACROS.md` is not included).
 - `NOTICE.md`: what here is the author's (CC BY 4.0) and what is third-party material, redistributed for reproduction only
   (`THIRD_PARTY.json` lists every third-party text file).
 - `CHANGES.md`: every change from the supplement the reviewers saw.

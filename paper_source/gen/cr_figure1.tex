@@ -1,0 +1,24 @@
+\begingroup\small
+\fbox{\begin{minipage}{0.97\linewidth}\setlength{\parindent}{0pt}
+\textbf{Planted fatal edit} (\texttt{p6-gpt56-ours-F}; one edit shown as two diff hunks):\\[2pt]
+{\footnotesize\begin{tabular}{@{}l@{\ }p{0.93\linewidth}@{}}
+$-$ & $Q=\{p:p\text{ is prime and }p\le A\},$\\
+$+$ & $Q=\{p:p\text{ is prime and }p\mid A\},$\\
+$+$ & Only the primes dividing $A$ can matter here, because every term shares a prime factor with $A=a_1$.\\
+\end{tabular}}\\[3pt]
+Executable check, in the proof's notation ($P(x)$: the primes dividing $x$; $\sigma(x)=P(x)\cap Q$; key lemma: $\sigma$ of each term meets $P$ of every term): with $A=15$, $\sigma(18)=\{3\}$ misses $P(20)=\{2,5\}$, so the key lemma is false; its conclusion $a_{n+T}=a_n+L$ with $L=15$, $T=4$ fails: $a_{2}=18$ but $a_{2+4}=36\neq a_{2}+15$.\par\smallskip
+{\centering\begin{tabular}{@{}lcccc@{\hspace{1.2em}}ccc@{}}
+\toprule
+ & \multicolumn{2}{c}{GPT-5.6-Sol} & \multicolumn{2}{c}{Claude Opus 5} & \multicolumn{3}{c}{both graders required} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-8}
+Text & grade & complete & grade & complete & pass mark & strict mark & flag \\
+\midrule
+original & 7/7 & T/T & 7/7 & T/T & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+fatal & 6/6 & F/F & 5/6 & F/F & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+gap & 3/3 & F/F & 2/2 & F/F & \CRrej/\CRrej & \CRrej/\CRrej & \CRrej/\CRrej \\
+harmless & 6/7 & T/T & 7/7 & T/T & \CRacc/\CRacc & \CRrej/\CRacc & \CRacc/\CRacc \\
+\bottomrule
+\end{tabular}\par}\smallskip
+{\raggedright\footnotesize Each cell: first run / same-day re-query. complete: T = true, F = false. Decisions: \CRacc\ accept, \CRrej\ reject; pass mark = both graders at least 5, strict mark = both at 7, flag = both mark the text complete.\par}
+\end{minipage}}
+\endgroup
