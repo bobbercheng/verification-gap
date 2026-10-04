@@ -1,0 +1,24 @@
+\setlength{\tabcolsep}{4pt}\begin{tabular}{@{}lrrrrr@{}}
+  \toprule
+  & & & \multicolumn{3}{c}{flags among} \\
+  \cmidrule(lr){4-6}
+  Evaluator set & texts & flagged & credited & documented & no record \\
+  \midrule
+  GLM--Kimi & 90 & 3 & 1/4 & 1/13 & 2/77 \\
+  GLM--Claude & 90 & 3 & 2/4 & 2/13 & 1/77 \\
+  GLM--GPT & 84 & 6 & 4/4 & 4/13 & 2/71 \\
+  Kimi--Claude & 90 & 4 & 3/4 & 3/13 & 1/77 \\
+  Kimi--GPT & 84 & 5 & 3/4 & 3/13 & 2/71 \\
+  Claude--GPT & 84 & 3 & 2/4 & 2/13 & 1/71 \\
+  \midrule
+  GLM--Kimi--Claude & 90 & 5 & 3/4 & 3/13 & 2/77 \\
+  GLM--Kimi--GPT & 90 & 7 & 4/4 & 4/13 & 3/77 \\
+  GLM--Claude--GPT & 90 & 6 & 4/4 & 4/13 & 2/77 \\
+  Kimi--Claude--GPT & 90 & 6 & 4/4 & 4/13 & 2/77 \\
+  \midrule
+  four single evaluators & 90 & 7 & 4/4 & 4/13 & 3/77 \\
+  four single evaluators + GLM repeat (the rule above) & 90 & 7 & 4/4 & 4/13 & 3/77 \\
+  GLM re-rating against its repeat & 73 & 1 & 1/2 & 1/11 & 0/62 \\
+  \bottomrule
+\end{tabular}
+\par\vspace{1pt}{\raggedright\scriptsize A text counts for a set when at least two of its evaluators rated it (GPT-5.6-Sol rated the 84 P3/P6 texts, the GLM-5.3 repeat 73 texts, the others all 90), so a set containing GPT reduces to its other members on P2. Credited = flagged credited-defective texts / credited-defective texts the set rated; documented and no record likewise. Counts, not rates: with 4 credited-defective texts the differences between sets are a handful of texts.\par}

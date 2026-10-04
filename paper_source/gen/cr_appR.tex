@@ -1,0 +1,55 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lllp{5.4cm}lcccccc@{}}
+\toprule
+Class & Obligation & Disp. & Planted change & Check & GPT & Claude & Pass & Strict & Flag \\
+\midrule
+\multicolumn{10}{@{}l}{\textbf{\texttt{p1-deedy-kimi-k3-final}} (P1; base by Kimi K3, public campaign)} \\
+O & -- &  & \raggedright original (no edit) & -- & 6T/6T & 7T/7T & \CRacc/\CRacc & \CRrej/\CRrej & \CRacc/\CRacc \\
+F (false lemma) & (T) termination & yes & \raggedright false lemma: a non-increasing integer above 1 never reaches 1 & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 6F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+G & (I) invariance & yes & \raggedright proof of the Euclidean-step Claim deleted & deletion & 6T/6T & 6F\textsuperscript{q}/7T\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRacc \\
+H & (T) termination &  & \raggedright inline formula becomes $\ell=m+n$ instead of $\ell=mn$ & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 7T\textsuperscript{q}/7T\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+\midrule
+\multicolumn{10}{@{}l}{\textbf{\texttt{p1-gpt56-5aca5e52-v1}} (P1; base by GPT-5.6-Sol, author's campaign)} \\
+O & -- &  & \raggedright original (no edit) & -- & 7T/7T & 7T/7T & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+F (false lemma) & (T) termination & yes & \raggedright false lemma: a non-increasing nonnegative integer never reaches 0 & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 6F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+G & (I) invariance & yes & \raggedright Euclidean justification of identity (3) and zero-exponent case deleted & deletion & 7T/7T & 7T\textsuperscript{q}/7T\textsuperscript{q} & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+H & (T) termination &  & \raggedright display claims $\mathrm{lcm}(m,n)=mn/g^2$ & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 7T\textsuperscript{q}/7T\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+\midrule
+\multicolumn{10}{@{}l}{\textbf{\texttt{deedy-claude-fable-5-final}} (P3; base by Claude Fable 5, public campaign)} \\
+O & -- &  & \raggedright original (no edit) & -- & 7T/7T & 7T/7T & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+F (graph inference) & (L) lower bound &  & \raggedright false claim: $|E|<|V|$ rules out cycles and loops & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 6F\textsuperscript{q}/5F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+G & (L) lower bound &  & \raggedright proof of Lemma 4 (tree-component argument) deleted & deletion & 5F\textsuperscript{q}/6F\textsuperscript{q} & 4F\textsuperscript{q}/4F\textsuperscript{q} & \CRrej/\CRrej & \CRrej/\CRrej & \CRrej/\CRrej \\
+H & (U) upper bound &  & \raggedright display gives a wrong value for $(1-u)/2$ & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 7T/7T & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+\midrule
+\multicolumn{10}{@{}l}{\textbf{\texttt{deedy-gpt-5.6-sol-xhigh-final}} (P3; base by GPT-5.6-Sol, public campaign)} \\
+O & -- &  & \raggedright original (no edit) & -- & 7T/7T & 7T/7T & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+F (pigeonhole) & (U) upper bound &  & \raggedright pigeonhole run over nonempty proper subset sums only & check & 6F/6F & 6F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+G & (U) upper bound &  & \raggedright proof of the cutting fact (5) deleted & deletion & 7T/7T & 6F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+H & (L) lower bound &  & \raggedright inserted inline sum $1+\dots+2^{k-1}$ given as $2^k-2$ (true: $2^k-1$) & check & 6T\textsuperscript{q}/6F\textsuperscript{q} & 7T/7T & \CRacc/\CRacc & \CRrej/\CRrej & \CRacc/\CRrej \\
+\midrule
+\multicolumn{10}{@{}l}{\textbf{\texttt{gpt56-ours-accepted}} (P3; base by GPT-5.6-Sol, author's campaign)} \\
+O & -- &  & \raggedright original (no edit) & -- & 7T/7T & 7T/7T & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+F (graph inference) & (L) lower bound &  & \raggedright false claim: the rank graph has no cycle or loop & check & 6F/6F & 6F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+G & (U) upper bound &  & \raggedright overlay construction for nonempty $B$ deleted & deletion & 6F\textsuperscript{q}/6F\textsuperscript{q} & 6F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+H & (L) lower bound &  & \raggedright interval marks $2^j\delta$ in place of $(2^j-1)\delta$ & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 7T\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+\midrule
+\multicolumn{10}{@{}l}{\textbf{\texttt{p5-gpt56-7324ef70-v1}} (P5; base by GPT-5.6-Sol, author's campaign)} \\
+O & -- &  & \raggedright original (no edit) & -- & 7T/7T & 7T/7T & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+F (sign) & (N) necessity & yes & \raggedright sign flipped in an expansion: $(b-c)$ in place of $(c-b)$ & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 7T\textsuperscript{q}/7T\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+G & (N) necessity &  & \raggedright derivation of the quadratic estimate (7) deleted & deletion & 7T/7T & 5F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+H & (V) sufficiency &  & \raggedright sufficiency display gets the middle term $(x+y+2C)/2$ & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 7T\textsuperscript{q}/7T & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+\midrule
+\multicolumn{10}{@{}l}{\textbf{\texttt{p6-deedy-gpt-5.6-sol-pro-final}} (P6; base by GPT-5.6-Sol, public campaign)} \\
+O & -- &  & \raggedright original (no edit) & -- & 7T/7T & 7T/7T & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+F (false lemma) & (F) finiteness &  & \raggedright false lemma: finitely many minimal finite transversals & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 6F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+G & (F) finiteness &  & \raggedright proof of Lemma 2 (descent step) deleted & deletion & 5F\textsuperscript{q}/6F\textsuperscript{q} & 4F\textsuperscript{q}/3F\textsuperscript{q} & \CRrej/\CRrej & \CRrej/\CRrej & \CRrej/\CRrej \\
+H & (F) finiteness &  & \raggedright cardinality display's exponent raised from $|D|-1$ to $|D|$ & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 7T\textsuperscript{q}/7T\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+\midrule
+\multicolumn{10}{@{}l}{\textbf{\texttt{p6-gpt56-ours}} (P6; base by GPT-5.6-Sol, author's campaign)} \\
+O & -- &  & \raggedright original (no edit) & -- & 7T/7T & 7T/7T & \CRacc/\CRacc & \CRacc/\CRacc & \CRacc/\CRacc \\
+F (definition) & (F) finiteness &  & \raggedright prime set $Q$ redefined as the primes dividing $A$ & check & 6F\textsuperscript{q}/6F\textsuperscript{q} & 5F\textsuperscript{q}/6F\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRrej & \CRrej/\CRrej \\
+G & (F) finiteness &  & \raggedright proof of the key lemma deleted & deletion & 3F\textsuperscript{q}/3F\textsuperscript{q} & 2F\textsuperscript{q}/2F & \CRrej/\CRrej & \CRrej/\CRrej & \CRrej/\CRrej \\
+H & (F) finiteness &  & \raggedright unused worked example lists 22 as the third term & check & 6T\textsuperscript{q}/7T\textsuperscript{q} & 7T\textsuperscript{q}/7T\textsuperscript{q} & \CRacc/\CRacc & \CRrej/\CRacc & \CRacc/\CRacc \\
+\bottomrule
+\end{tabular}
+\endgroup
